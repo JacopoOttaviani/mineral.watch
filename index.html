@@ -5,7 +5,121 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>mineral.watch — Open Data on Strategic Minerals &amp; Rare Earths</title>
 <meta name="description" content="mineral.watch is an open data and data visualisation knowledge hub on strategic minerals and rare earths. Verified information and business intelligence, cross-referenced from USGS, BGS, UN Comtrade and IEA data.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="mineral.watch">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="https://mineral.watch/">
 <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="alternate icon" href="/brand/favicon.png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mineral.watch/">
+<meta property="og:site_name" content="mineral.watch">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="mineral.watch — Open Data on Strategic Minerals &amp; Rare Earths">
+<meta property="og:description" content="Open data and data visualisation on strategic minerals and rare earths — production, reserves, trade flows and refining concentration, cross-referenced from USGS, BGS, UN Comtrade and IEA data.">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="mineral.watch — open data on strategic minerals and rare earths">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="mineral.watch — Open Data on Strategic Minerals &amp; Rare Earths">
+<meta name="twitter:description" content="Open data and data visualisation on strategic minerals and rare earths, cross-referenced from USGS, BGS, UN Comtrade and IEA data.">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png">
+<meta name="twitter:image:alt" content="mineral.watch — open data on strategic minerals and rare earths">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://mineral.watch/#organization",
+      "name": "mineral.watch",
+      "url": "https://mineral.watch/",
+      "logo": "https://mineral.watch/brand/og-image.png",
+      "description": "Independent open-data knowledge hub on strategic minerals and rare earths.",
+      "email": "hello@mineral.watch"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://mineral.watch/#website",
+      "url": "https://mineral.watch/",
+      "name": "mineral.watch",
+      "description": "Open data and data visualisation on strategic minerals and rare earths, cross-referenced from USGS, BGS, UN Comtrade and IEA data.",
+      "publisher": { "@id": "https://mineral.watch/#organization" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://mineral.watch/#minerals",
+      "name": "Strategic minerals covered by mineral.watch",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Graphite", "url": "https://mineral.watch/graphite/" },
+        { "@type": "ListItem", "position": 2, "name": "Lithium" },
+        { "@type": "ListItem", "position": 3, "name": "Cobalt" },
+        { "@type": "ListItem", "position": 4, "name": "Nickel" },
+        { "@type": "ListItem", "position": 5, "name": "Rare earths" },
+        { "@type": "ListItem", "position": 6, "name": "Copper" },
+        { "@type": "ListItem", "position": 7, "name": "Manganese" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mineral.watch/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is mineral.watch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "mineral.watch is an independent, open-data knowledge hub on strategic minerals and rare earths. It cross-references verified data from USGS, BGS, UN Comtrade and the IEA to show who mines, refines and trades the materials behind batteries, magnets, chips and defence systems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which minerals does mineral.watch cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Graphite is live today, with dedicated dashboards for lithium, cobalt, nickel, rare earths, copper and manganese in development."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What data sources does mineral.watch use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Figures are cross-referenced from the USGS National Minerals Information Center, British Geological Survey World Mineral Statistics, UN Comtrade and IEA Critical Minerals data, cited and dated on each page."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is mineral.watch affiliated with any government or company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. mineral.watch is an independent project and holds no commercial position in the minerals it covers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I request custom research?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Email hello@mineral.watch for bespoke, source-cited research on supply-chain mapping, trade-flow analysis and commodity deep-dives."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 <style>
 :root{
   --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--ink:#e6edf3;--muted:#8b98a5;
@@ -122,6 +236,16 @@ a.mcard:hover{border-color:var(--accent);transform:translateY(-2px)}
 .sources li::before{content:"—";position:absolute;left:0;color:var(--accent)}
 .sources b{color:var(--ink)}
 
+/* faq */
+.faq{display:grid;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+.faq details[open]{border-color:var(--accent)}
+.faq summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.2rem;flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--muted);font-size:.88rem;margin-top:10px}
+
 /* about */
 .about-row{display:flex;align-items:center;gap:36px;width:100%}
 .about-box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px 28px;flex:1;min-width:0}
@@ -152,6 +276,7 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
     <a class="link" href="#why">Why it matters</a>
     <a class="link" href="#data">Data</a>
     <a class="link" href="#research">Research</a>
+    <a class="link" href="#faq">FAQ</a>
     <a class="link" href="#about">About</a>
     <a class="cta" href="/graphite/">Graphite →</a>
   </div>
@@ -397,6 +522,33 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
         </circle>
       </svg>
     </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="kicker">FAQ</div>
+  <h2 class="serif">Common questions</h2>
+  <div class="faq">
+    <details>
+      <summary>What is mineral.watch?</summary>
+      <p>mineral.watch is an independent, open-data knowledge hub on strategic minerals and rare earths. It cross-references verified data from USGS, BGS, UN Comtrade and the IEA to show who mines, refines and trades the materials behind batteries, magnets, chips and defence systems.</p>
+    </details>
+    <details>
+      <summary>Which minerals does mineral.watch cover?</summary>
+      <p>Graphite is live today, with dedicated dashboards for lithium, cobalt, nickel, rare earths, copper and manganese in development.</p>
+    </details>
+    <details>
+      <summary>What data sources does mineral.watch use?</summary>
+      <p>Figures are cross-referenced from the USGS National Minerals Information Center, British Geological Survey World Mineral Statistics, UN Comtrade and IEA Critical Minerals data, cited and dated on each page.</p>
+    </details>
+    <details>
+      <summary>Is mineral.watch affiliated with any government or company?</summary>
+      <p>No. mineral.watch is an independent project and holds no commercial position in the minerals it covers.</p>
+    </details>
+    <details>
+      <summary>How can I request custom research?</summary>
+      <p>Email <a href="mailto:hello@mineral.watch">hello@mineral.watch</a> for bespoke, source-cited research on supply-chain mapping, trade-flow analysis and commodity deep-dives.</p>
+    </details>
   </div>
 </section>
 

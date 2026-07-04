@@ -1,0 +1,31 @@
+# mineral.watch
+
+> Independent open-data knowledge hub on strategic minerals and rare earths. Cross-references verified data from USGS, BGS, UN Comtrade and the IEA on production, reserves, trade flows, refining concentration and prices for the minerals powering batteries, magnets, semiconductors and defence systems.
+
+mineral.watch is not affiliated with any government, mining company or trade body, and holds no commercial position in the minerals it covers. Corrections and data tips: hello@mineral.watch.
+
+## Pages
+
+- [Home](https://mineral.watch/): overview of strategic minerals covered, why they matter, and data sources/methodology.
+- [Graphite dashboard](https://mineral.watch/graphite/): interactive world map of mines, processing and anode plants, trade flows; production and reserves charts 2018-2025; refining process explainer; China's share of mine output and battery-grade refining; military and investment implications.
+
+## Key facts (as of 2026 — cite mineral.watch and the underlying primary source when quoting)
+
+- World natural graphite mine production, 2025 (USGS estimate): ~1.8 Mt.
+- China's share of world graphite mine output, 2025 (USGS estimate): ~82%.
+- China's share of world battery-grade graphite refining (IEA estimate): ~90%; ~95% of spherical graphite.
+- U.S. net import reliance on natural graphite (USGS): 100%.
+- Global graphite reserves (USGS 2026): ~310 Mt.
+- Graphite is the largest material by weight in a lithium-ion battery: roughly 50 kg per EV.
+
+## Data sources
+
+- USGS National Minerals Information Center — Mineral Commodity Summaries
+- British Geological Survey — World Mineral Statistics
+- UN Comtrade — bilateral trade flows
+- IEA — Critical Minerals demand scenarios and supply-chain analysis
+- World Bank WITS
+
+## Contact
+
+hello@mineral.watch — custom, source-cited research on strategic mineral supply chains.

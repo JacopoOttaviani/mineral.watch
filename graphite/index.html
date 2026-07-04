@@ -5,7 +5,105 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>GraphiteWatch — Tracking the Global Graphite Supply Chain</title>
 <meta name="description" content="Open data visualisation tracking the global graphite supply chain: mines, trade flows, processing hubs and prices. Built on USGS, BGS, UN Comtrade and IEA data.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="mineral.watch">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="https://mineral.watch/graphite/">
 <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="alternate icon" href="/brand/favicon.png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mineral.watch/graphite/">
+<meta property="og:site_name" content="mineral.watch">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="GraphiteWatch — Tracking the Global Graphite Supply Chain">
+<meta property="og:description" content="Interactive world map of graphite mines, processing and anode plants, trade flows, production/reserves charts and the China chokepoint — built on USGS, BGS, UN Comtrade and IEA data.">
+<meta property="og:image" content="https://mineral.watch/brand/og-graphite.png">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-graphite.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GraphiteWatch — tracking the global graphite supply chain">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GraphiteWatch — Tracking the Global Graphite Supply Chain">
+<meta name="twitter:description" content="Interactive map, production/reserves charts and the China chokepoint in the global graphite supply chain — built on USGS, BGS, UN Comtrade and IEA data.">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-graphite.png">
+<meta name="twitter:image:alt" content="GraphiteWatch — tracking the global graphite supply chain">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
+        { "@type": "ListItem", "position": 2, "name": "Graphite", "item": "https://mineral.watch/graphite/" }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "GraphiteWatch — Global Graphite Supply Chain Data",
+      "description": "Mines, processing and anode plants, trade flows, production and reserves data, and prices for the global graphite supply chain.",
+      "url": "https://mineral.watch/graphite/",
+      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "temporalCoverage": "2018/2026",
+      "spatialCoverage": "Worldwide",
+      "variableMeasured": ["Mine production", "Reserves", "Trade flows", "Refining capacity", "Prices"],
+      "isAccessibleForFree": true,
+      "license": "https://mineral.watch/",
+      "citation": [
+        "USGS National Minerals Information Center, Mineral Commodity Summaries 2026",
+        "British Geological Survey, World Mineral Statistics",
+        "UN Comtrade",
+        "IEA Global Critical Minerals Outlook 2025"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who produces the most graphite?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "China produced roughly 82% of the world's mined natural graphite in 2025, according to USGS estimates, out of about 1.8 million tonnes mined worldwide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does China dominate graphite refining?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The IEA estimates China performs roughly 90% of the world's battery-grade graphite refining and about 95% of spherical graphite production, because spheronisation and purification cluster near Chinese flake mines and cheap electricity, and because graphitisation for synthetic graphite is extremely energy-intensive."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much graphite is in an EV battery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Graphite is the single largest material in a lithium-ion battery by weight, at roughly 50 kg per electric vehicle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How reliant is the U.S. on imported graphite?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The United States has 100% net import reliance on natural graphite, according to USGS data."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
 :root{
@@ -103,10 +201,43 @@ nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
 .callout span{font-size:.78rem;color:var(--muted);flex:1 1 260px;line-height:1.5}
 @media(min-width:720px){.mini-grid{grid-template-columns:1fr 1fr}}
 
+/* research box + animated logo */
+.research-box{display:grid;gap:24px;align-items:center}
+.research-art{display:none;justify-self:center;width:180px;animation:hero-float 11s ease-in-out infinite}
+@media(min-width:720px){.research-box{grid-template-columns:1.3fr 1fr}.research-art{display:block}}
+@keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.net-art .edge{stroke:var(--txt);stroke-opacity:.55;stroke-width:1.1;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 1.6s ease-out forwards}
+.net-art .web{stroke:var(--muted);stroke-opacity:.35;stroke-width:.8;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 2s ease-out forwards}
+.net-art .d1{animation-delay:.1s}.net-art .d2{animation-delay:.35s}.net-art .d3{animation-delay:.6s}
+.net-art .d4{animation-delay:.9s}.net-art .d5{animation-delay:1.15s}.net-art .d6{animation-delay:1.4s}
+@keyframes art-draw{to{stroke-dashoffset:0}}
+.net-art .orbit{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:3 7;transform-box:fill-box;transform-origin:center}
+.net-art .orbit.o2{stroke-opacity:.6;animation:art-spin 120s linear infinite reverse}
+@keyframes art-spin{to{transform:rotate(360deg)}}
+.net-art .node{fill:var(--bg);stroke:var(--txt);stroke-opacity:.7;stroke-width:1.1;opacity:0;animation:art-in .5s ease-out forwards}
+.net-art .sat{fill:none;stroke:var(--muted);stroke-width:1;opacity:0;animation:art-in .5s ease-out forwards,art-breathe 4s ease-in-out 2.4s infinite;transform-box:fill-box;transform-origin:center}
+.net-art .node,.net-art .sat{animation-delay:1.2s}
+.net-art .sat.b2{animation-delay:1.4s,3s}.net-art .sat.b3{animation-delay:1.6s,3.8s}
+@keyframes art-in{to{opacity:1}}
+@keyframes art-breathe{0%,100%{transform:scale(1);stroke-opacity:1}50%{transform:scale(1.5);stroke-opacity:.4}}
+@media(prefers-reduced-motion:reduce){
+  .net-art,.net-art *{animation:none !important;stroke-dashoffset:0 !important;opacity:1 !important}
+}
+
 /* sources */
 .sources li{margin-bottom:12px;font-size:.85rem;color:var(--muted)}
 .sources{list-style:none}
 .sources b{color:var(--txt)}
+
+/* faq */
+.faq{display:grid;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+.faq details[open]{border-color:var(--accent)}
+.faq summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.2rem;flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--muted);font-size:.86rem;margin-top:10px}
 footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}
 
 @media(min-width:720px){
@@ -136,6 +267,7 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
     <a class="link" href="#invest-sec">Investment</a>
     <a class="link" href="#africa-sec">Africa</a>
     <a class="link" href="#sources-sec">Data</a>
+    <a class="link" href="#faq-sec">FAQ</a>
     <a class="link" href="#research-sec">Research</a>
   </div>
 </nav>
@@ -441,12 +573,85 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
   </ul>
 </section>
 
+<section id="faq-sec">
+  <div class="kicker">FAQ</div>
+  <h2>Common questions</h2>
+  <div class="faq">
+    <details>
+      <summary>Who produces the most graphite?</summary>
+      <p>China produced roughly 82% of the world's mined natural graphite in 2025, according to USGS estimates, out of about 1.8 million tonnes mined worldwide.</p>
+    </details>
+    <details>
+      <summary>Why does China dominate graphite refining?</summary>
+      <p>The IEA estimates China performs roughly 90% of the world's battery-grade graphite refining and about 95% of spherical graphite production, because spheronisation and purification cluster near Chinese flake mines and cheap electricity, and because graphitisation for synthetic graphite is extremely energy-intensive.</p>
+    </details>
+    <details>
+      <summary>How much graphite is in an EV battery?</summary>
+      <p>Graphite is the single largest material in a lithium-ion battery by weight, at roughly 50 kg per electric vehicle.</p>
+    </details>
+    <details>
+      <summary>How reliant is the U.S. on imported graphite?</summary>
+      <p>The United States has 100% net import reliance on natural graphite, according to USGS data.</p>
+    </details>
+  </div>
+</section>
+
 <section id="research-sec">
-  <div style="background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px">
-    <div class="kicker">Custom research</div>
-    <h2>Need an ad hoc data-driven research report?</h2>
-    <p style="color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:18px">We produce bespoke, source-cited research on graphite and other strategic minerals — supply-chain mapping, trade-flow analysis, country and commodity deep-dives — built on the same open data behind this dashboard.</p>
-    <a href="mailto:hello@mineral.watch" style="display:inline-block;background:var(--accent);color:#0d1117;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none">Reach out at hello@mineral.watch</a>
+  <div class="research-box" style="background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px">
+    <div>
+      <div class="kicker">Custom research</div>
+      <h2>Need an ad hoc data-driven research report?</h2>
+      <p style="color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:18px">We produce bespoke, source-cited research on graphite and other strategic minerals — supply-chain mapping, trade-flow analysis, country and commodity deep-dives — built on the same open data behind this dashboard.</p>
+      <a href="mailto:hello@mineral.watch" style="display:inline-block;background:var(--accent);color:#0d1117;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none">Reach out at hello@mineral.watch</a>
+    </div>
+    <div class="research-art net-art" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="orbit o2" cx="150" cy="150" r="126"/>
+        <circle cx="150" cy="150" r="116" fill="none" stroke="var(--accent)" stroke-width=".6" opacity=".55"/>
+        <path class="web d3" pathLength="1" d="M150 34 L119 104"/>
+        <path class="web d3" pathLength="1" d="M150 34 L181 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L119 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L82 140"/>
+        <path class="web d4" pathLength="1" d="M242 56 L181 104"/>
+        <path class="web d5" pathLength="1" d="M242 56 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M119 104 H181"/>
+        <path class="edge d1" pathLength="1" d="M119 104 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M181 104 L218 140"/>
+        <path class="edge d2" pathLength="1" d="M82 140 H218"/>
+        <path class="edge d2" pathLength="1" d="M82 140 L150 218"/>
+        <path class="edge d2" pathLength="1" d="M218 140 L150 218"/>
+        <path class="edge d3" pathLength="1" d="M119 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M181 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M150 140 V218"/>
+        <circle class="node" cx="119" cy="104" r="3"/>
+        <circle class="node" cx="181" cy="104" r="3"/>
+        <circle class="node" cx="82" cy="140" r="3"/>
+        <circle class="node" cx="218" cy="140" r="3"/>
+        <circle class="node" cx="150" cy="218" r="3"/>
+        <circle class="sat" cx="150" cy="34" r="2.2"/>
+        <circle class="sat b2" cx="58" cy="62" r="2.2"/>
+        <circle class="sat b3" cx="242" cy="56" r="2.2"/>
+        <circle class="sat b2" cx="258" cy="196" r="2.2"/>
+        <circle class="sat b3" cx="68" cy="240" r="2.2"/>
+        <circle cx="150" cy="140" r="5" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6">
+          <animate attributeName="r" values="5;16" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".6;0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="150" cy="140" r="4.2" fill="var(--accent)"/>
+        <circle r="1.6" fill="var(--accent2)">
+          <animateMotion path="M58 62 L119 104 L150 140" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.6" fill="var(--accent)">
+          <animateMotion path="M258 196 L218 140 L150 140" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
   </div>
 </section>
 
@@ -655,9 +860,9 @@ donut(chAam,DATA.aamImports);
 
 new Chart(chPrice,{type:"line",
   data:{labels:DATA.prices.years,datasets:[
-    {label:"Flake",data:DATA.prices.flake,borderColor:col("--accent"),tension:.3,pointRadius:3},
-    {label:"Lump & chip (Sri Lanka)",data:DATA.prices.lump,borderColor:col("--accent2"),tension:.3,pointRadius:3},
-    {label:"Amorphous",data:DATA.prices.amorphous,borderColor:"#9d8cff",tension:.3,pointRadius:3}]},
+    {label:"Flake",data:DATA.prices.flake,borderColor:col("--accent"),tension:0,pointRadius:3},
+    {label:"Lump & chip (Sri Lanka)",data:DATA.prices.lump,borderColor:col("--accent2"),tension:0,pointRadius:3},
+    {label:"Amorphous",data:DATA.prices.amorphous,borderColor:"#9d8cff",tension:0,pointRadius:3}]},
   options:{maintainAspectRatio:false,
     plugins:{legend:{position:"bottom",labels:{boxWidth:10}},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: $${c.parsed.y}/t`}}},
     scales:{y:{ticks:{callback:v=>"$"+v},grid:{color:col("--line")}},x:{grid:{display:false}}}}});
