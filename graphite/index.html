@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>GraphiteWatch — Tracking the Global Graphite Supply Chain</title>
+<meta name="description" content="Open data visualisation tracking the global graphite supply chain: mines, trade flows, processing hubs and prices. Built on USGS, BGS, UN Comtrade and IEA data.">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#ed8936;--accent2:#4cc9f0;
+  --mine:#ed8936;--proc:#4cc9f0;--dev:#9d8cff;
+  --radius:14px;--pad:16px;
+  font-size:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+h1,h2,h3{line-height:1.2;font-weight:700}
+section{padding:40px var(--pad);max-width:1100px;margin:0 auto}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;margin-bottom:8px}
+h2{font-size:1.5rem;margin-bottom:10px}
+.lede{color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:20px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1100px;margin:0 auto;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px}
+.brand span{color:var(--accent)}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap}
+nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
+
+/* hero */
+.hero{padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
+.hero h1{font-size:clamp(1.9rem,6.5vw,3.2rem);letter-spacing:-.02em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);max-width:560px;font-size:1rem}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.stat b{display:block;font-size:1.45rem;color:var(--accent);letter-spacing:-.01em}
+.stat span{font-size:.74rem;color:var(--muted)}
+
+/* map */
+#map{height:62vh;min-height:380px;border-radius:var(--radius);border:1px solid var(--line);z-index:1}
+.map-controls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:7px 14px;font-size:.8rem;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent}
+.chip.on{color:#0d1117;font-weight:700}
+.chip.on.c-mine{background:var(--mine);border-color:var(--mine)}
+.chip.on.c-proc{background:var(--proc);border-color:var(--proc)}
+.chip.on.c-dev{background:var(--dev);border-color:var(--dev)}
+.chip.on.c-flow{background:#e6edf3;border-color:#e6edf3}
+.legend{font-size:.74rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--card)}
+.leaflet-popup-content{font-size:.82rem;line-height:1.5;margin:12px 14px}
+.leaflet-popup-content b{color:var(--accent)}
+.pp-tag{display:inline-block;font-size:.66rem;padding:1px 8px;border-radius:99px;margin-bottom:4px;font-weight:700}
+
+/* journey */
+.journey{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 calc(-1*var(--pad));padding-left:var(--pad);padding-right:var(--pad)}
+.jcard{scroll-snap-align:start;flex:0 0 260px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative}
+.jcard .num{position:absolute;top:14px;right:16px;font-size:1.6rem;font-weight:800;color:var(--line)}
+.jcard .ico{font-size:1.6rem;margin-bottom:10px}
+.jcard h3{font-size:1rem;margin-bottom:6px}
+.jcard p{font-size:.8rem;color:var(--muted)}
+.jcard .fact{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.76rem;color:var(--accent)}
+.jhint{font-size:.72rem;color:var(--muted);margin-top:6px}
+
+/* charts */
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card h3{font-size:.95rem;margin-bottom:4px}
+.card .sub{font-size:.74rem;color:var(--muted);margin-bottom:12px}
+.chartbox{position:relative;height:280px}
+.src{font-size:.68rem;color:var(--muted);margin-top:10px}
+
+/* china section */
+.big{font-size:clamp(2.6rem,10vw,4.5rem);font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1}
+.bars{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.bar-row{display:grid;grid-template-columns:110px 1fr 44px;align-items:center;gap:10px;font-size:.78rem}
+.bar-row .track{background:var(--bg2);border-radius:99px;height:10px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#f7c56f);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar-row .val{text-align:right;color:var(--muted)}
+
+/* process flow */
+.flow-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+.flow-wrap svg{min-width:980px;display:block}
+
+/* mini cards (military / invest) */
+.mini-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.mini{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px}
+.mini h4{font-size:.86rem;margin-bottom:5px}
+.mini h4 .mi{margin-right:6px}
+.mini p{font-size:.78rem;color:var(--muted)}
+.note{font-size:.72rem;color:var(--muted);border-left:3px solid var(--accent);padding:8px 12px;background:var(--bg2);border-radius:0 8px 8px 0;margin-top:14px}
+.callout{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:14px;margin-top:14px}
+.callout b{font-size:1.5rem;color:var(--accent2);white-space:nowrap;line-height:1.2}
+.callout span{font-size:.78rem;color:var(--muted);flex:1 1 260px;line-height:1.5}
+@media(min-width:720px){.mini-grid{grid-template-columns:1fr 1fr}}
+
+/* sources */
+.sources li{margin-bottom:12px;font-size:.85rem;color:var(--muted)}
+.sources{list-style:none}
+.sources b{color:var(--txt)}
+footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}
+
+@media(min-width:720px){
+  :root{--pad:24px}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .grid2{grid-template-columns:1fr 1fr}
+  h2{font-size:1.9rem}
+  .jcard{flex-basis:300px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
+    <div class="brand">Graphite<span>Watch</span></div>
+    <a class="link" href="#map-sec">Map</a>
+    <a class="link" href="#journey-sec">Journey</a>
+    <a class="link" href="#production-sec">Production</a>
+    <a class="link" href="#refining-sec">Refining</a>
+    <a class="link" href="#energy-sec">Energy</a>
+    <a class="link" href="#trade-sec">Trade</a>
+    <a class="link" href="#prices-sec">Prices</a>
+    <a class="link" href="#china-sec">China</a>
+    <a class="link" href="#military-sec">Military</a>
+    <a class="link" href="#invest-sec">Investment</a>
+    <a class="link" href="#africa-sec">Africa</a>
+    <a class="link" href="#sources-sec">Data</a>
+    <a class="link" href="#research-sec">Research</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="kicker">Open data · critical minerals</div>
+  <h1>Who controls the world's <em>graphite</em>?</h1>
+  <p>Graphite is the single largest material in a lithium-ion battery — roughly 50&nbsp;kg per EV. This site tracks where it is mined, refined and traded, using open data from USGS, BGS, UN&nbsp;Comtrade and the IEA.</p>
+  <div class="stats">
+    <div class="stat"><b data-count="1.8">0</b><span>Mt mined worldwide, 2025 (USGS est.)</span></div>
+    <div class="stat"><b data-count="82" data-suffix="%">0</b><span>of world mine output from China, 2025</span></div>
+    <div class="stat"><b data-count="100" data-suffix="%">0</b><span>U.S. net import reliance on natural graphite</span></div>
+    <div class="stat"><b data-count="310">0</b><span>Mt global reserves (USGS 2026)</span></div>
+  </div>
+</header>
+
+<section id="map-sec">
+  <div class="kicker">Interactive map</div>
+  <h2>The graphite world map</h2>
+  <p class="lede">Producing mines, processing and anode plants, development projects, and major trade flows. Tap a marker for details; toggle layers below. Circle size ≈ scale of operation.</p>
+  <div class="map-controls">
+    <button class="chip c-mine on" data-layer="mines">⛏ Mines</button>
+    <button class="chip c-proc on" data-layer="processing">⚙ Processing &amp; anode</button>
+    <button class="chip c-dev on" data-layer="development">◐ Development</button>
+    <button class="chip c-flow on" data-layer="flows">→ Trade flows</button>
+  </div>
+  <div id="map"></div>
+  <div class="legend" style="margin-top:10px">
+    <span><i style="background:var(--mine)"></i>Mine (producing)</span>
+    <span><i style="background:var(--proc)"></i>Processing / anode plant</span>
+    <span><i style="background:var(--dev)"></i>Development project</span>
+    <span><i style="background:#e6edf3;border-radius:2px;height:3px;width:16px"></i>Trade flow (width ≈ share)</span>
+  </div>
+</section>
+
+<section id="journey-sec">
+  <div class="kicker">Mine to battery</div>
+  <h2>The journey of graphite</h2>
+  <p class="lede">From ore in the ground to the anode in your car battery, graphite typically crosses several borders — and almost always passes through China.</p>
+  <div class="journey" id="journey"></div>
+  <div class="jhint">← swipe →</div>
+</section>
+
+<section id="production-sec">
+  <div class="kicker">Production &amp; reserves</div>
+  <h2>Where graphite comes from</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Mine production by country, 2025</h3>
+      <div class="sub">Natural graphite, metric tons (USGS estimates)</div>
+      <div class="chartbox"><canvas id="chProd"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries 2026</div>
+    </div>
+    <div class="card">
+      <h3>Reserves by country</h3>
+      <div class="sub">Million metric tons (world total ≈ 310 Mt)</div>
+      <div class="chartbox"><canvas id="chRes"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries 2026</div>
+    </div>
+    <div class="card" style="grid-column:1/-1">
+      <h3>World mine production, 2018–2025</h3>
+      <div class="sub">Metric tons per year — production has roughly doubled since 2018, driven by battery demand</div>
+      <div class="chartbox"><canvas id="chTrend"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries (annual editions, approximate); long series 1970–2022 available from BGS World Mineral Statistics</div>
+    </div>
+  </div>
+</section>
+
+<section id="refining-sec">
+  <div class="kicker">Refining</div>
+  <h2>Where — and how — graphite is refined</h2>
+  <p class="lede">Mining is the easy part. The value, and the chokepoint, is in refining: turning flake or petroleum coke into battery-grade anode material. The IEA estimates China performs roughly 90% of the world's battery-grade graphite refining — ~95% of spherical graphite and ~90% of anode material.</p>
+  <div class="card">
+    <h3>Refining geography</h3>
+    <div class="sub">Two Chinese clusters dominate, for two different reasons</div>
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇨🇳</span>Heilongjiang (Jixi, Luobei)</h4><p>Spherical graphite is made next to the flake mines: milling, spheronisation and acid purification cluster around the ore to cut transport costs of a low-yield process (~50% of flake becomes spheres).</p></div>
+      <div class="mini"><h4><span class="mi">🇨🇳</span>Inner Mongolia, Sichuan, Yunnan</h4><p>Synthetic graphite plants follow cheap electricity, not ore. Graphitisation at ~3,000&nbsp;°C is so power-hungry that capacity was built where coal and hydro power are cheapest.</p></div>
+      <div class="mini"><h4><span class="mi">🌍</span>The ex-China 10%</h4><p>Vidalia (USA, natural route, fed from Mozambique), Chattanooga and Kellyton (USA), Herøya (Norway, hydropower), Luleå (Sweden), Sejong (South Korea), Ibaraki (Japan) and new Chinese-built plants in Indonesia.</p></div>
+      <div class="mini"><h4><span class="mi">⚠️</span>Why it matters</h4><p>Since December 2023 China requires export permits for high-purity graphite products, citing dual-use concerns — a lever on every battery and defense supply chain downstream.</p></div>
+    </div>
+    <div class="src">Sources: IEA Global Critical Minerals Outlook (2025); USGS MCS 2026.</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>The refining process, step by step</h3>
+    <div class="sub">Natural (top) and synthetic (bottom) routes converge at coating. Scroll sideways on mobile →</div>
+    <div class="flow-wrap">
+    <svg viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Graphite refining process flow">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8b98a5"/></marker>
+      </defs>
+      <style>
+        .fb{fill:#151b23;stroke:#2b3644;rx:10}
+        .ft{fill:#e6edf3;font:700 12px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fs{fill:#8b98a5;font:11px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fe{fill:#ed8936;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fl{stroke:#8b98a5;stroke-width:1.4;fill:none;marker-end:url(#ah)}
+        .lab{fill:#4cc9f0;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em}
+      </style>
+      <!-- route labels -->
+      <text x="10" y="24" class="lab">NATURAL ROUTE</text>
+      <text x="10" y="212" class="lab">SYNTHETIC ROUTE</text>
+      <!-- natural route boxes y=40..110 -->
+      <g>
+        <rect class="fb" x="10" y="40" width="150" height="78" rx="10"/>
+        <text x="20" y="62" class="ft">1 · Mining ⛏</text>
+        <text x="20" y="80" class="fs">Flake ore from open</text>
+        <text x="20" y="94" class="fs">pits, 2–10% carbon</text>
+
+        <rect class="fb" x="205" y="40" width="150" height="78" rx="10"/>
+        <text x="215" y="62" class="ft">2 · Flotation</text>
+        <text x="215" y="80" class="fs">Crush + float to flake</text>
+        <text x="215" y="94" class="fs">concentrate 94–97% C</text>
+        <text x="215" y="111" class="fe">near the mine</text>
+
+        <rect class="fb" x="400" y="40" width="150" height="78" rx="10"/>
+        <text x="410" y="62" class="ft">3 · Spheronise</text>
+        <text x="410" y="80" class="fs">Mill into spheres;</text>
+        <text x="410" y="94" class="fs">only ~50% yield</text>
+        <text x="410" y="111" class="fe">~95% done in China</text>
+
+        <rect class="fb" x="595" y="40" width="150" height="78" rx="10"/>
+        <text x="605" y="62" class="ft">4 · Purify</text>
+        <text x="605" y="80" class="fs">Acid (HF/HCl) or thermal</text>
+        <text x="605" y="94" class="fs">to 99.95% carbon</text>
+        <text x="605" y="111" class="fe">chemical waste risk</text>
+      </g>
+      <!-- synthetic route boxes y=222..292 -->
+      <g>
+        <rect class="fb" x="10" y="222" width="150" height="78" rx="10"/>
+        <text x="20" y="248" class="ft">Petroleum coke</text>
+        <text x="20" y="266" class="fs">Oil-refinery by-product,</text>
+        <text x="20" y="280" class="fs">calcined &amp; milled</text>
+
+        <rect class="fb" x="400" y="222" width="150" height="78" rx="10"/>
+        <text x="410" y="242" class="ft">Graphitise 🔥</text>
+        <text x="410" y="259" class="fs">2,800–3,000 °C,</text>
+        <text x="410" y="272" class="fs">Acheson furnaces</text>
+        <text x="410" y="286" class="fe">10–15 kWh/kg</text>
+      </g>
+      <!-- convergence box -->
+      <g>
+        <rect class="fb" x="790" y="120" width="180" height="90" rx="10" stroke="#ed8936"/>
+        <text x="800" y="144" class="ft">5 · Coat → AAM 🔋</text>
+        <text x="800" y="162" class="fs">Carbon coating ~1,100 °C;</text>
+        <text x="800" y="176" class="fs">active anode material,</text>
+        <text x="800" y="190" class="fs">ready for battery cells</text>
+        <text x="800" y="205" class="fe">$1,700–1,800+/t</text>
+      </g>
+      <!-- arrows -->
+      <path class="fl" d="M160 79 H200"/>
+      <path class="fl" d="M355 79 H395"/>
+      <path class="fl" d="M550 79 H590"/>
+      <path class="fl" d="M745 79 H768 V143 H785"/>
+      <path class="fl" d="M160 261 H395"/>
+      <path class="fl" d="M550 261 H700 V183 H785"/>
+    </svg>
+    </div>
+    <div class="src">Process parameters: USGS; RSC Environmental Science: Advances (2025) LCA of synthetic graphite anode production; industry sources.</div>
+  </div>
+</section>
+
+<section id="energy-sec">
+  <div class="kicker">Energy</div>
+  <h2>How much energy does refining take?</h2>
+  <p class="lede">Graphitisation is one of the most electricity-intensive steps in any battery supply chain — the reason synthetic capacity sits next to cheap power, and the reason low-carbon graphite now commands a price premium.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Electricity to make 1 kg of anode material</h3>
+      <div class="sub">kWh per kg, indicative ranges by route</div>
+      <div class="chartbox"><canvas id="chEnergy"></canvas></div>
+      <div class="src">Sources: RSC Env. Sci. Advances (2025); industry LCA data. Acheson = dominant Chinese furnace type; Castner = more efficient direct-heating design.</div>
+    </div>
+    <div class="card">
+      <h3>Carbon footprint per kg of anode material</h3>
+      <div class="sub">kg CO₂-eq per kg, indicative LCA ranges — the grid matters more than the route</div>
+      <div class="chartbox"><canvas id="chCO2"></canvas></div>
+      <div class="src">Sources: LCA studies incl. RSC Env. Sci. Advances (2025, ~29.7 kg CO₂-eq/kg for fossil-heavy grids); MDPI Batteries (2025) Québec natural-route LCA; producer disclosures (e.g. Vianode). Estimates vary widely.</div>
+    </div>
+  </div>
+  <div class="callout"><b>≈ 900 kWh</b><span>electricity to graphitise the ~60 kg of synthetic anode graphite in one EV battery (at ~15 kWh/kg) — roughly three months of a typical European household's electricity use.</span></div>
+</section>
+
+<section id="trade-sec">
+  <div class="kicker">Trade flows</div>
+  <h2>Who ships to whom</h2>
+  <p class="lede">Natural graphite trades under HS&nbsp;2504; processed anode material under HS&nbsp;3801/3824. China dominates exports of both raw flake and value-added spherical graphite (SPG).</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>China's natural graphite exports</h3>
+      <div class="sub">Share of destinations, Jan–Sep 2025</div>
+      <div class="chartbox"><canvas id="chCnExp"></canvas></div>
+      <div class="src">Source: USGS MCS 2026 (Chinese customs data)</div>
+    </div>
+    <div class="card">
+      <h3>China's spherical graphite (SPG) exports</h3>
+      <div class="sub">Share of destinations, Jan–Sep 2025 — 37,400 t total, +29% y/y</div>
+      <div class="chartbox"><canvas id="chSpg"></canvas></div>
+      <div class="src">Source: USGS MCS 2026</div>
+    </div>
+    <div class="card">
+      <h3>U.S. natural graphite import sources</h3>
+      <div class="sub">Average shares 2021–2024</div>
+      <div class="chartbox"><canvas id="chUsImp"></canvas></div>
+      <div class="src">Source: USGS MCS 2026 (U.S. Census Bureau trade data)</div>
+    </div>
+    <div class="card">
+      <h3>U.S. battery anode material imports</h3>
+      <div class="sub">Leading sources, 2025 — imports up ~54% y/y (Jan–Aug)</div>
+      <div class="chartbox"><canvas id="chAam"></canvas></div>
+      <div class="src">Source: USGS MCS 2026. In 2025 the U.S. set preliminary antidumping duties of 93.5% on Chinese anode material.</div>
+    </div>
+  </div>
+</section>
+
+<section id="prices-sec">
+  <div class="kicker">Prices</div>
+  <h2>A market under pressure</h2>
+  <p class="lede">Oversupply and competition from synthetic graphite pushed natural flake prices to historic lows by late 2025, even as battery demand kept growing.</p>
+  <div class="card">
+    <h3>Average U.S. import unit value, natural graphite</h3>
+    <div class="sub">USD per metric ton at foreign ports</div>
+    <div class="chartbox" style="height:300px"><canvas id="chPrice"></canvas></div>
+    <div class="src">Source: USGS MCS 2026. Reference points, early 2026: flake 94% C FOB China ≈ $750–770/t (Fastmarkets); spherical 99.95% ≈ $1,700–1,800/t.</div>
+  </div>
+</section>
+
+<section id="china-sec">
+  <div class="kicker">Concentration risk</div>
+  <h2>The China chokepoint</h2>
+  <p class="lede">Concentration is even higher downstream than at the mine. The IEA projects China will still supply around 80% of battery-grade graphite in 2035.</p>
+  <div class="card">
+    <div class="big" id="bigPct">82%</div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:6px">of world natural graphite mine production came from China in 2025. Its estimated share along the battery anode chain:</p>
+    <div class="bars" id="chinaBars"></div>
+    <div class="src">Sources: USGS MCS 2026; IEA Global Critical Minerals Outlook (2025). Downstream shares are IEA/industry estimates for battery-grade material.</div>
+  </div>
+</section>
+
+<section id="military-sec">
+  <div class="kicker">Dual use</div>
+  <h2>Graphite as a military material</h2>
+  <p class="lede">Graphite is not just a battery mineral. Its heat resistance (it sublimates above 3,600&nbsp;°C), conductivity and neutron-moderating properties make it a defense-critical material — which is why China's 2023 export controls on high-purity graphite explicitly cite dual-use concerns, and why the U.S. keeps it on the National Defense Stockpile list.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🚀</span>Missiles &amp; rockets</h4><p>Nozzles, nose cones and re-entry components: graphite withstands exhaust gases hotter than 3,000&nbsp;°C without deforming, so nearly every solid-fuel missile contains machined high-purity graphite.</p></div>
+      <div class="mini"><h4><span class="mi">☢️</span>Nuclear</h4><p>Nuclear-grade graphite moderates neutrons in reactors, including naval and research reactors. It requires extreme purity — one of the hardest grades to source.</p></div>
+      <div class="mini"><h4><span class="mi">✈️</span>Stealth &amp; armor</h4><p>Carbon/graphite composites reduce weight and radar signature in aircraft, drones, submarines and armor systems.</p></div>
+      <div class="mini"><h4><span class="mi">⚡</span>The "blackout bomb"</h4><p>Graphite filament munitions, used against power grids in Iraq (1991) and Serbia (1999), short-circuit transmission lines without destroying them.</p></div>
+      <div class="mini"><h4><span class="mi">🔧</span>Making other weapons</h4><p>Graphite electrodes are consumed in electrical-discharge machining and steelmaking for artillery, armor plate and precision defense components.</p></div>
+      <div class="mini"><h4><span class="mi">🔋</span>Military batteries</h4><p>Every drone, radio and electrified military vehicle carries graphite anodes — analysts estimate some defense applications could face shortages within 30–90 days of a full supply cutoff.</p></div>
+    </div>
+    <div class="src">Sources: U.S. DoD / Defense Production Act grant documentation; <a href="https://www.mining.com/graphites-war-fighting-capabilities/">MINING.com</a>; <a href="https://www.semcocarbon.com/blog/military-applications-for-carbon-graphite-materials">Semco Carbon</a>; <a href="https://discoveryalert.com.au/advanced-defense-materials-2026-military-applications/">Discovery Alert (2026)</a>.</div>
+  </div>
+</section>
+
+<section id="invest-sec">
+  <div class="kicker">Capital flows</div>
+  <h2>Where the graphite money is going</h2>
+  <p class="lede">A paradox market: flake prices at historic lows, yet record public money flowing into ex-China capacity. Four places where capital is concentrating — presented as observation, not investment advice.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇺🇸</span>The protected U.S. midstream</h4><p>93.5% preliminary antidumping duties on Chinese anode material (2025) plus IRA credits created a sheltered market. Graphite One's Alaska-to-Ohio chain has a $37.5M DoD grant and a $2.1B EXIM Bank loan invitation; Vidalia, Chattanooga and Kellyton are ramping.</p></div>
+      <div class="mini"><h4><span class="mi">🌍</span>African upstream</h4><p>Mozambique, Madagascar and Tanzania mine some of the world's cheapest flake and hold ~23% of known reserves. Assets are cheap at today's prices; the bet is on ex-China feedstock demand from U.S., Korean and European anode plants.</p></div>
+      <div class="mini"><h4><span class="mi">💧</span>Low-carbon refining</h4><p>Graphitisation is so power-hungry that clean, cheap electricity is itself the asset: buyers pay a reported €1,500–3,000/t premium for verified low-CO₂ anode material (Vianode in Norway, Nouveau Monde in Québec).</p></div>
+      <div class="mini"><h4><span class="mi">⚠️</span>The risks</h4><p>Chinese oversupply keeps prices below most Western projects' costs; synthetic graphite is taking share from natural; qualification with cell makers takes years (see Syrah–Tesla). Most projects only work with policy support.</p></div>
+    </div>
+    <div class="note">This section describes where capital is flowing, based on public data. It is not financial advice.</div>
+    <div class="src">Sources: <a href="https://www.mining.com/graphite-one-earmarked-for-325-million-loan-for-anode-manufacturing-plant/">MINING.com</a>; USGS MCS 2026; company disclosures; Fastmarkets price assessments.</div>
+  </div>
+</section>
+
+<section id="africa-sec">
+  <div class="kicker">The mapping gap</div>
+  <h2>Africa: rich in graphite, poor in maps</h2>
+  <p class="lede">The East African graphite belt — Mozambique, Tanzania, Madagascar — already holds about 23% of the world's known reserves. The real number is likely higher: much of the continent has never been systematically mapped at modern standards.</p>
+  <div class="card">
+    <div class="stats" style="margin-top:0">
+      <div class="stat"><b>~23%</b><span>of known world graphite reserves in Mozambique, Madagascar &amp; Tanzania (USGS 2026)</span></div>
+      <div class="stat"><b>~12%</b><span>of world mine production, 2025 — reserves far outpace output</span></div>
+      <div class="stat"><b>10.4%</b><span>Africa's share of global exploration spending in 2024, down from 16% in 2004 (S&amp;P/CSIS)</span></div>
+      <div class="stat"><b>—</b><span>no continent-wide geological map at modern resolution exists</span></div>
+    </div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:16px">Systematic geoscientific mapping is the public good that unlocks discovery: without airborne geophysics and modern geological maps, deposits stay invisible and exploration capital goes elsewhere. UN agencies and the African Union have flagged the mapping gap as a primary obstacle; programs like <a href="https://panafgeo.eurogeosurveys.org/about/">PanAfGeo</a> (EU–OAGS) train African geological surveys and co-fund mapping, but coverage remains a fraction of what Australia or Canada maintain as baseline infrastructure. For graphite specifically, known deposits cluster along the Mozambique Belt — a geological unit that runs through half a dozen more countries where equivalent rocks remain barely surveyed.</p>
+    <div class="src">Sources: <a href="https://www.csis.org/analysis/underexplored-and-undervalued-addressing-africas-mineral-exploration-gap">CSIS (2025)</a>; <a href="https://english.news.cn/20240610/2c1ee25834054b0fa4fa657fc8d3d528/c.html">UNECA via Xinhua</a>; <a href="https://panafgeo.eurogeosurveys.org/about/">PanAfGeo</a>; USGS MCS 2026.</div>
+  </div>
+</section>
+
+<section id="sources-sec">
+  <div class="kicker">Data &amp; methodology</div>
+  <h2>Open data sources</h2>
+  <ul class="sources">
+    <li><b><a href="https://www.usgs.gov/centers/national-minerals-information-center">USGS National Minerals Information Center</a></b> — Mineral Commodity Summaries 2026, graphite chapter: world production, reserves, U.S. trade statistics. Production figures for 2025 are estimates.</li>
+    <li><b><a href="https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/">British Geological Survey — World Mineral Statistics</a></b> — annual global graphite production, 1970–present.</li>
+    <li><b><a href="https://comtradeplus.un.org/">UN Comtrade</a></b> — bilateral trade flows: HS 2504 (natural graphite), HS 3801 (artificial graphite / prepared anode material).</li>
+    <li><b><a href="https://wits.worldbank.org/">World Bank WITS</a></b> — accessible interface over Comtrade data.</li>
+    <li><b><a href="https://www.iea.org/reports/global-critical-minerals-outlook-2025">IEA Global Critical Minerals Outlook</a></b> — battery-grade graphite supply chain analysis, demand scenarios and price context.</li>
+    <li><b><a href="https://pubs.rsc.org/en/content/articlehtml/2025/va/d5va00171d">RSC Environmental Science: Advances (2025)</a></b> — life-cycle analysis of synthetic graphite anode production: energy, GHG and water intensity; basis for the refining-energy charts, together with <a href="https://www.mdpi.com/2313-0105/12/2/68">MDPI Batteries (2025)</a> on the natural route in Québec.</li>
+    <li><b><a href="https://www.csis.org/analysis/underexplored-and-undervalued-addressing-africas-mineral-exploration-gap">CSIS — Addressing Africa's Mineral Exploration Gap</a></b> and <b><a href="https://panafgeo.eurogeosurveys.org/about/">PanAfGeo</a></b> — exploration spending trends and geological mapping initiatives in Africa.</li>
+    <li><b>Defense &amp; policy</b> — U.S. DoD Defense Production Act awards and <a href="https://www.mining.com/graphite-one-earmarked-for-325-million-loan-for-anode-manufacturing-plant/">EXIM Bank financing coverage (MINING.com)</a>; military-use overviews from <a href="https://www.mining.com/graphites-war-fighting-capabilities/">MINING.com</a> and <a href="https://www.semcocarbon.com/blog/military-applications-for-carbon-graphite-materials">Semco Carbon</a>.</li>
+    <li><b>Notes</b> — Trade-flow arcs on the map are indicative of major corridors, not exact tonnages. Mine and plant coordinates are approximate. Downstream (spherical/anode) shares are estimates; official statistics do not fully separate battery-grade material. Last data refresh: July 2026.</li>
+  </ul>
+</section>
+
+<section id="research-sec">
+  <div style="background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px">
+    <div class="kicker">Custom research</div>
+    <h2>Need an ad hoc data-driven research report?</h2>
+    <p style="color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:18px">We produce bespoke, source-cited research on graphite and other strategic minerals — supply-chain mapping, trade-flow analysis, country and commodity deep-dives — built on the same open data behind this dashboard.</p>
+    <a href="mailto:hello@mineral.watch" style="display:inline-block;background:var(--accent);color:#0d1117;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none">Reach out at hello@mineral.watch</a>
+  </div>
+</section>
+
+<footer>
+  GraphiteWatch · open data project · built with Leaflet &amp; Chart.js · data: USGS, BGS, UN Comtrade, IEA
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+/* ============ DATA (curated from USGS MCS 2026, BGS, UN Comtrade, IEA) ============ */
+const DATA = {
+  production2025: [ // tonnes, USGS estimates
+    ["China",1400000],["Madagascar",80000],["Tanzania",75000],["Brazil",65000],
+    ["Mozambique",60000],["Russia",25000],["India",17000],["Canada",8000],
+    ["North Korea",8000],["Norway",6600],["Sri Lanka",3200],["Turkey",2200],["Other",2900]
+  ],
+  reserves: [ // million tonnes
+    ["China",100],["Brazil",74],["Madagascar",27],["Mozambique",25],["Tanzania",18],
+    ["Russia",14],["Vietnam",9.7],["India",8.6],["Turkey",6.9],["Canada",5.9],["Other",20.9]
+  ],
+  trend: [ // world production, tonnes (USGS, approx.)
+    [2018,930000],[2019,1100000],[2020,966000],[2021,1060000],
+    [2022,1300000],[2023,1450000],[2024,1550000],[2025,1800000]
+  ],
+  cnExports:[["Japan",36],["Indonesia",22],["South Korea",10],["Germany",8],["Other",24]],
+  spgExports:[["South Korea",40],["Indonesia",33],["Japan",16],["United States",11]],
+  usImports:[["China",46],["Canada",13],["Mozambique",13],["Mexico",12],["Other",16]],
+  aamImports:[["China",55],["Indonesia",31],["South Korea",14]],
+  prices:{ years:[2021,2022,2023,2024,2025],
+    flake:[1330,1200,1080,1050,1000],
+    lump:[2010,2590,2380,2810,2600],
+    amorphous:[629,563,607,535,470] },
+  chinaShares:[ // stage, share %
+    ["Mining",82],["Spherical graphite",95],["Synthetic anode",90],["Anode material",90],["Battery cells",75]
+  ],
+  journey:[
+    {ico:"⛏",t:"1 · Mining",p:"Flake graphite is mined from open pits (China, Madagascar, Mozambique, Brazil) or vein deposits (Sri Lanka). Ore grades run 2–10% carbon.",f:"1.8 Mt mined in 2025 — 82% in China"},
+    {ico:"🏭",t:"2 · Concentration",p:"Crushing and flotation near the mine upgrade ore to 90–97% carbon flake concentrate — the form traded under HS 2504.",f:"Flake 94% C ≈ $750–770/t (early 2026)"},
+    {ico:"⚙️",t:"3 · Spheronisation & purification",p:"Flake is milled into potato-shaped spheres and purified to 99.95% C. Yields are ~50%; the rest becomes lower-value by-product.",f:"China makes ~95% of spherical graphite"},
+    {ico:"🧪",t:"4 · Coating & anode material",p:"Spherical graphite is carbon-coated to become active anode material (AAM). Synthetic graphite, made from petroleum coke, competes here.",f:"AAM ≈ $1,700–1,800/t and up"},
+    {ico:"🔋",t:"5 · Battery cell",p:"Anode material is coated onto copper foil and assembled into cells — mostly in China, South Korea and Japan, increasingly in the U.S. and EU.",f:"~50–70 kg graphite per EV battery"},
+    {ico:"🚗",t:"6 · EV & beyond",p:"Batteries now drive graphite demand growth; steelmaking refractories remain the traditional base. IEA expects demand to about double by 2040.",f:"China projected to supply ~80% of battery-grade graphite in 2035"}
+  ],
+  sites:[
+    // type: mine | processing | development ; size 1-3
+    {n:"Luobei / Hegang cluster",c:"China",ll:[47.6,130.8],ty:"mine",sz:3,d:"Heilongjiang flake graphite heartland — the world's largest mining district."},
+    {n:"Jixi cluster",c:"China",ll:[45.3,130.9],ty:"mine",sz:3,d:"Major flake mining and spherical graphite processing hub, Heilongjiang."},
+    {n:"Xinghe",c:"China",ll:[40.9,113.9],ty:"mine",sz:2,d:"Flake graphite mining, Inner Mongolia."},
+    {n:"Balama",c:"Mozambique",ll:[-13.35,38.60],ty:"mine",sz:3,d:"One of the world's largest flake graphite mines (Syrah Resources). Restarted mid-2025 after suspension."},
+    {n:"Ancuabe",c:"Mozambique",ll:[-13.0,39.8],ty:"mine",sz:1,d:"Flake graphite mine, Cabo Delgado."},
+    {n:"Molo",c:"Madagascar",ll:[-24.03,45.03],ty:"mine",sz:2,d:"Flake graphite mine near Fotadrevo (NextSource Materials)."},
+    {n:"Toamasina district",c:"Madagascar",ll:[-18.2,49.2],ty:"mine",sz:2,d:"Historic flake graphite mining region on the east coast."},
+    {n:"Lindi Jumbo",c:"Tanzania",ll:[-9.8,39.0],ty:"mine",sz:2,d:"High-grade flake mine; Tanzania's output more than doubled to 75,000 t in 2025."},
+    {n:"Mahenge / Epanko",c:"Tanzania",ll:[-8.68,36.72],ty:"mine",sz:2,d:"Flake graphite mines and projects, Morogoro region."},
+    {n:"Pedra Azul district",c:"Brazil",ll:[-16.0,-41.3],ty:"mine",sz:2,d:"Long-running flake operations (Nacional de Grafite), Minas Gerais."},
+    {n:"Santa Cruz",c:"Brazil",ll:[-12.3,-38.9],ty:"mine",sz:1,d:"New flake mine (South Star), ramping up since 2024."},
+    {n:"Lac des Îles",c:"Canada",ll:[46.35,-75.32],ty:"mine",sz:1,d:"North America's only long-producing graphite mine (Northern Graphite), Québec."},
+    {n:"Skaland",c:"Norway",ll:[69.45,17.30],ty:"mine",sz:1,d:"Europe's highest-grade operating flake mine, Senja island."},
+    {n:"Bogala / Kahatagaha",c:"Sri Lanka",ll:[7.0,80.3],ty:"mine",sz:1,d:"The world's only significant vein (lump) graphite mines — 99%+ carbon in the ground."},
+    {n:"Sonora",c:"Mexico",ll:[28.5,-110.5],ty:"mine",sz:1,d:"Amorphous graphite mining; most output goes to the U.S."},
+    {n:"Lao Cai",c:"Vietnam",ll:[22.4,104.0],ty:"mine",sz:1,d:"Flake graphite mining, northern Vietnam."},
+    {n:"Zavallia",c:"Ukraine",ll:[48.2,30.9],ty:"mine",sz:1,d:"Historic flake mine; output curtailed since 2022."},
+    {n:"Jharkhand / Odisha",c:"India",ll:[23.3,85.3],ty:"mine",sz:2,d:"India's main graphite mining belt (~17,000 t in 2025)."},
+    {n:"Soyuznoye",c:"Russia",ll:[47.9,131.0],ty:"mine",sz:1,d:"New Russian flake mine, started 2025, Jewish Autonomous Oblast."},
+    {n:"Jongchon",c:"North Korea",ll:[39.7,125.6],ty:"mine",sz:1,d:"Amorphous graphite production (~8,000 t/yr, estimated)."},
+    // processing / anode
+    {n:"Shenzhen (BTR)",c:"China",ll:[22.6,114.0],ty:"processing",sz:3,d:"World's largest anode material producer (BTR New Material)."},
+    {n:"Sichuan / Inner Mongolia synthetic cluster",c:"China",ll:[30.6,104.1],ty:"processing",sz:3,d:"Massive synthetic graphite anode capacity built 2021–2024, drawing on cheap power."},
+    {n:"Sejong (POSCO Future M)",c:"South Korea",ll:[36.5,127.3],ty:"processing",sz:2,d:"Korea's main graphite anode plant; imports Chinese and African feedstock."},
+    {n:"Ibaraki anode cluster",c:"Japan",ll:[36.3,140.4],ty:"processing",sz:2,d:"Japanese anode makers (Resonac and others) supplying Panasonic and Tesla."},
+    {n:"Vidalia (Syrah)",c:"United States",ll:[31.57,-91.43],ty:"processing",sz:2,d:"First large ex-China natural graphite AAM plant, Louisiana — fed from Balama, Mozambique."},
+    {n:"Chattanooga (Novonix)",c:"United States",ll:[35.05,-85.31],ty:"processing",sz:1,d:"Synthetic graphite anode plant, Tennessee."},
+    {n:"Kellyton (Westwater)",c:"United States",ll:[32.98,-85.90],ty:"processing",sz:1,d:"SPG qualification line commissioned 2025, Alabama."},
+    {n:"Herøya (Vianode)",c:"Norway",ll:[59.12,9.63],ty:"processing",sz:1,d:"Synthetic anode graphite plant using hydropower."},
+    {n:"Luleå (Talga)",c:"Sweden",ll:[65.58,22.15],ty:"processing",sz:1,d:"Anode plant fed by the Vittangi natural graphite project."},
+    {n:"Central Java SPG plant",c:"Indonesia",ll:[-7.0,110.4],ty:"processing",sz:2,d:"Chinese-built spherical graphite plant; behind Indonesia's jump in trade flows."},
+    // development
+    {n:"Graphite Creek",c:"United States",ll:[65.3,-166.0],ty:"development",sz:2,d:"Largest U.S. graphite deposit (Graphite One), Alaska. 2025 feasibility study: 175,000 t/yr concentrate over 20 years."},
+    {n:"Matawinie",c:"Canada",ll:[46.7,-73.9],ty:"development",sz:2,d:"Mine + anode project (Nouveau Monde Graphite), Québec."},
+    {n:"Kilbourne",c:"United States",ll:[44.6,-73.6],ty:"development",sz:1,d:"Graphite deposit under development next to a New York zinc mine; demo plant under construction."},
+    {n:"Vittangi",c:"Sweden",ll:[67.7,21.6],ty:"development",sz:1,d:"High-grade European flake project (Talga)."},
+    {n:"Coosa",c:"United States",ll:[32.9,-86.3],ty:"development",sz:1,d:"Alabama graphite project."},
+    {n:"Maniry",c:"Madagascar",ll:[-24.4,44.9],ty:"development",sz:1,d:"Flake graphite project (Evion), southern Madagascar."}
+  ],
+  flows:[ // [fromLL, toLL, label, weight 1-5]
+    {f:[45.3,130.9],t:[36.2,138.2],l:"China → Japan · 36% of Chinese natural graphite exports",w:4},
+    {f:[45.3,130.9],t:[-7.0,110.4],l:"China → Indonesia · 22% (flake + SPG for new anode plants)",w:3},
+    {f:[45.3,130.9],t:[36.5,127.9],l:"China → South Korea · 10% natural, 40% of SPG exports",w:3},
+    {f:[45.3,130.9],t:[51.1,10.4],l:"China → Germany · 8% of Chinese exports",w:2},
+    {f:[45.3,130.9],t:[39.0,-98.0],l:"China → USA · 46% of U.S. natural graphite imports",w:3},
+    {f:[-13.35,38.6],t:[31.57,-91.43],l:"Mozambique → USA · Balama feeds the Vidalia anode plant",w:2},
+    {f:[-18.9,47.5],t:[51.1,10.4],l:"Madagascar → Europe · fast-growing flake supplier",w:2},
+    {f:[-18.9,47.5],t:[35.9,104.2],l:"Madagascar → China · flake for processing",w:2},
+    {f:[46.35,-75.32],t:[39.0,-98.0],l:"Canada → USA · 13% of U.S. imports",w:2},
+    {f:[28.5,-110.5],t:[39.0,-98.0],l:"Mexico → USA · 12% of U.S. imports (amorphous)",w:1},
+    {f:[-15.8,-47.9],t:[51.1,10.4],l:"Brazil → Europe · flake concentrate",w:1},
+    {f:[-7.0,110.4],t:[39.0,-98.0],l:"Indonesia → USA · 31% of U.S. anode material imports",w:2},
+    {f:[36.5,127.9],t:[39.0,-98.0],l:"South Korea → USA · 14% of U.S. anode material imports",w:1}
+  ]
+};
+
+/* ============ helpers ============ */
+const C = getComputedStyle(document.documentElement);
+const col = v => C.getPropertyValue(v).trim();
+const PAL = ["#ed8936","#4cc9f0","#9d8cff","#6ee7b7","#f87171","#fbbf24","#94a3b8","#e879f9","#38bdf8","#a3e635","#64748b"];
+
+/* count-up hero stats */
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target, end=parseFloat(el.dataset.count), suf=el.dataset.suffix||"", dec=end%1?1:0;
+  const t0=performance.now();
+  (function tick(t){const p=Math.min((t-t0)/1200,1);
+    el.textContent=(end*(1-Math.pow(1-p,3))).toFixed(dec)+suf;
+    if(p<1)requestAnimationFrame(tick);})(t0);
+  io.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+
+/* ============ MAP ============ */
+const map = L.map("map",{scrollWheelZoom:false,worldCopyJump:true}).setView([20,20],2);
+L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",{
+  attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+  subdomains:"abcd",maxZoom:10
+}).addTo(map);
+map.on("click",()=>map.scrollWheelZoom.enable());
+
+const groups = {mines:L.layerGroup().addTo(map), processing:L.layerGroup().addTo(map),
+                development:L.layerGroup().addTo(map), flows:L.layerGroup().addTo(map)};
+const TYCOL={mine:col("--mine"),processing:col("--proc"),development:col("--dev")};
+const TYNAME={mine:"MINE",processing:"PROCESSING / ANODE",development:"DEVELOPMENT"};
+const TYGRP={mine:"mines",processing:"processing",development:"development"};
+
+DATA.sites.forEach(s=>{
+  const c=TYCOL[s.ty];
+  L.circleMarker(s.ll,{radius:4+s.sz*2.4,color:c,weight:1.5,fillColor:c,fillOpacity:.35})
+   .bindPopup(`<span class="pp-tag" style="background:${c}22;color:${c}">${TYNAME[s.ty]}</span><br><b>${s.n}</b> · ${s.c}<br>${s.d}`)
+   .addTo(groups[TYGRP[s.ty]]);
+});
+
+/* curved trade arcs */
+function arc(from,to,n=48){
+  const [la1,lo1]=from,[la2,lo2]=to;
+  const mx=(la1+la2)/2, myRaw=(lo1+lo2)/2;
+  const dx=la2-la1, dy=lo2-lo1, dist=Math.hypot(dx,dy);
+  const cx=mx-dy*0.18, cy=myRaw+dx*0.18; // control point offset perpendicular
+  const pts=[];
+  for(let i=0;i<=n;i++){const t=i/n;
+    pts.push([ (1-t)*(1-t)*la1+2*(1-t)*t*cx+t*t*la2,
+               (1-t)*(1-t)*lo1+2*(1-t)*t*cy+t*t*lo2 ]);}
+  return pts;
+}
+DATA.flows.forEach(fl=>{
+  L.polyline(arc(fl.f,fl.t),{color:"#e6edf3",weight:.6+fl.w*.7,opacity:.4,dashArray:"1 7",lineCap:"round"})
+   .bindPopup(`<b>Trade flow</b><br>${fl.l}`).addTo(groups.flows);
+  // arrowhead dot at destination
+  L.circleMarker(fl.t,{radius:2.5,color:"#e6edf3",weight:0,fillColor:"#e6edf3",fillOpacity:.55}).addTo(groups.flows);
+});
+
+/* layer toggles */
+document.querySelectorAll(".chip").forEach(ch=>ch.addEventListener("click",()=>{
+  const g=groups[ch.dataset.layer];
+  if(ch.classList.toggle("on")) map.addLayer(g); else map.removeLayer(g);
+}));
+
+/* ============ JOURNEY CARDS ============ */
+document.getElementById("journey").innerHTML = DATA.journey.map((j,i)=>`
+  <div class="jcard"><div class="num">${String(i+1).padStart(2,"0")}</div>
+    <div class="ico">${j.ico}</div><h3>${j.t}</h3><p>${j.p}</p>
+    <div class="fact">${j.f}</div></div>`).join("");
+
+/* ============ CHARTS ============ */
+Chart.defaults.color=col("--muted");
+Chart.defaults.borderColor=col("--line");
+Chart.defaults.font.size=11;
+const fmt=n=>n>=1e6?(n/1e6).toFixed(2)+" Mt":n>=1e3?(n/1e3).toFixed(0)+" kt":n+" t";
+const noLeg={plugins:{legend:{display:false}}};
+const donutOpts={maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+  tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}%`}}},cutout:"62%"};
+
+new Chart(chProd,{type:"bar",
+  data:{labels:DATA.production2025.map(d=>d[0]),
+    datasets:[{data:DATA.production2025.map(d=>d[1]),backgroundColor:DATA.production2025.map((d,i)=>i===0?col("--accent"):"#4cc9f088"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{type:"logarithmic",ticks:{callback:v=>[1e3,1e4,1e5,1e6].includes(v)?fmt(v):""},grid:{color:col("--line")}},y:{grid:{display:false}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmt(c.parsed.x)} (log scale)`}}}}});
+
+new Chart(chRes,{type:"doughnut",
+  data:{labels:DATA.reserves.map(d=>d[0]),datasets:[{data:DATA.reserves.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed} Mt`}}}}});
+
+new Chart(chTrend,{type:"line",
+  data:{labels:DATA.trend.map(d=>d[0]),
+    datasets:[{data:DATA.trend.map(d=>d[1]),borderColor:col("--accent"),backgroundColor:"#ed893622",fill:true,tension:0,pointRadius:3,pointBackgroundColor:col("--accent")}]},
+  options:{...noLeg,maintainAspectRatio:false,
+    scales:{y:{max:2000000,ticks:{callback:v=>fmt(v)},grid:{color:col("--line")}},x:{grid:{display:false}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmt(c.parsed.y)}`}}}}});
+
+const donut=(el,rows)=>new Chart(el,{type:"doughnut",
+  data:{labels:rows.map(d=>d[0]),datasets:[{data:rows.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:donutOpts});
+donut(chCnExp,DATA.cnExports);
+donut(chSpg,DATA.spgExports);
+donut(chUsImp,DATA.usImports);
+donut(chAam,DATA.aamImports);
+
+new Chart(chPrice,{type:"line",
+  data:{labels:DATA.prices.years,datasets:[
+    {label:"Flake",data:DATA.prices.flake,borderColor:col("--accent"),tension:.3,pointRadius:3},
+    {label:"Lump & chip (Sri Lanka)",data:DATA.prices.lump,borderColor:col("--accent2"),tension:.3,pointRadius:3},
+    {label:"Amorphous",data:DATA.prices.amorphous,borderColor:"#9d8cff",tension:.3,pointRadius:3}]},
+  options:{maintainAspectRatio:false,
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10}},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: $${c.parsed.y}/t`}}},
+    scales:{y:{ticks:{callback:v=>"$"+v},grid:{color:col("--line")}},x:{grid:{display:false}}}}});
+
+/* energy charts (floating bars = [min,max] ranges) */
+new Chart(chEnergy,{type:"bar",
+  data:{labels:["Natural route (total)","Synthetic — Castner furnace (graphitisation)","Synthetic — graphitisation step (typical)","Synthetic — integrated Acheson (China)"],
+    datasets:[{data:[[2.5,5],[3,4.4],[10,15],[15,18]],
+      backgroundColor:["#6ee7b7","#4cc9f0","#ed8936","#f87171"],borderRadius:4,borderSkipped:false}]},
+  options:{indexAxis:"y",maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.raw[0]}–${c.raw[1]} kWh/kg`}}},
+    scales:{x:{title:{display:true,text:"kWh per kg anode material"},grid:{color:col("--line")}},
+            y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}}}});
+
+new Chart(chCO2,{type:"bar",
+  data:{labels:["Natural route (hydro, Québec LCA)","Synthetic (low-carbon power)","Synthetic (fossil-heavy grid)"],
+    datasets:[{data:[[1,5],[3,9],[17,30]],
+      backgroundColor:["#6ee7b7","#4cc9f0","#f87171"],borderRadius:4,borderSkipped:false}]},
+  options:{indexAxis:"y",maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.raw[0]}–${c.raw[1]} kg CO₂-eq/kg`}}},
+    scales:{x:{title:{display:true,text:"kg CO₂-eq per kg anode material"},grid:{color:col("--line")}},
+            y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}}}});
+
+/* china bars */
+document.getElementById("chinaBars").innerHTML = DATA.chinaShares.map(([s,v])=>`
+  <div class="bar-row"><span>${s}</span><div class="track"><div class="fill" data-w="${v}"></div></div><span class="val">~${v}%</span></div>`).join("");
+const io2=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.w+"%");io2.unobserve(e.target);}
+}),{threshold:.4});
+io2.observe(document.getElementById("chinaBars"));
+
+/* nav active state */
+const secs=[...document.querySelectorAll("section[id],header")];
+const navLinks=[...document.querySelectorAll("nav a.link")];
+const io3=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}
+}),{rootMargin:"-40% 0px -55% 0px"});
+secs.forEach(s=>io3.observe(s));
+</script>
+</body>
+</html>

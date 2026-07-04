@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>mineral.watch — Open Data on Strategic Minerals &amp; Rare Earths</title>
+<meta name="description" content="mineral.watch is an open data and data visualisation knowledge hub on strategic minerals and rare earths. Verified information and business intelligence, cross-referenced from USGS, BGS, UN Comtrade and IEA data.">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<style>
+:root{
+  --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--ink:#e6edf3;--muted:#8b98a5;
+  --accent:#ed8936;--teal:#4cc9f0;--line:#2b3644;
+  --radius:14px;--pad:16px;
+  font-size:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--teal)}
+h1,h2,h3{line-height:1.15;font-weight:700;letter-spacing:-.015em}
+.serif{font-family:Georgia,"Times New Roman",serif}
+section{padding:56px var(--pad);max-width:1080px;margin:0 auto}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.15em;font-size:.72rem;font-weight:700;margin-bottom:10px}
+h2{font-size:1.7rem;margin-bottom:12px}
+.lede{color:var(--muted);font-size:.98rem;max-width:620px;margin-bottom:26px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:6px;padding:12px var(--pad);max-width:1080px;margin:0 auto;overflow-x:auto;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:1rem;white-space:nowrap;margin-right:auto;color:var(--ink);text-decoration:none;display:flex;align-items:center}
+.brand span{color:var(--accent)}
+.brand svg{flex:none;margin-right:8px}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.82rem;padding:6px 12px;border-radius:99px;white-space:nowrap}
+nav a.link:hover{color:var(--ink);background:var(--card)}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.82rem;padding:7px 14px;border-radius:99px;white-space:nowrap}
+
+/* hero */
+.hero{padding:72px var(--pad) 56px;max-width:1080px;margin:0 auto}
+.hero-inner{display:flex;align-items:center;gap:48px}
+.hero-copy{flex:1;min-width:0}
+.hero-art{display:none;flex:none;width:360px;animation:hero-float 9s ease-in-out infinite}
+@media(min-width:920px){.hero-art{display:block}}
+@keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.net-art .edge{stroke:var(--ink);stroke-opacity:.55;stroke-width:1.1;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 1.6s ease-out forwards}
+.net-art .web{stroke:var(--muted);stroke-opacity:.35;stroke-width:.8;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 2s ease-out forwards}
+.net-art .d1{animation-delay:.1s}.net-art .d2{animation-delay:.35s}.net-art .d3{animation-delay:.6s}
+.net-art .d4{animation-delay:.9s}.net-art .d5{animation-delay:1.15s}.net-art .d6{animation-delay:1.4s}
+@keyframes art-draw{to{stroke-dashoffset:0}}
+.net-art .orbit{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:3 7;transform-box:fill-box;transform-origin:center}
+.net-art .orbit.o1{animation:art-spin 80s linear infinite}
+.net-art .orbit.o2{stroke-opacity:.6;animation:art-spin 120s linear infinite reverse}
+@keyframes art-spin{to{transform:rotate(360deg)}}
+.net-art .node{fill:var(--bg);stroke:var(--ink);stroke-opacity:.7;stroke-width:1.1;opacity:0;animation:art-in .5s ease-out forwards}
+.net-art .node.teal{stroke:var(--teal)}
+.net-art .sat{fill:none;stroke:var(--muted);stroke-width:1;opacity:0;animation:art-in .5s ease-out forwards,art-breathe 4s ease-in-out 2.4s infinite;transform-box:fill-box;transform-origin:center}
+.net-art .node,.net-art .sat{animation-delay:1.2s}
+.net-art .sat.b2{animation-delay:1.4s,3s}.net-art .sat.b3{animation-delay:1.6s,3.8s}
+@keyframes art-in{to{opacity:1}}
+@keyframes art-breathe{0%,100%{transform:scale(1);stroke-opacity:1}50%{transform:scale(1.5);stroke-opacity:.4}}
+.feature-art{display:none;align-self:center;justify-self:center;width:220px;animation:hero-float 11s ease-in-out infinite}
+@media(min-width:720px){.feature-art{display:block}}
+@media(prefers-reduced-motion:reduce){
+  .net-art,.net-art *{animation:none !important;stroke-dashoffset:0 !important;opacity:1 !important}
+}
+.hero h1{font-size:clamp(2.1rem,6.5vw,3.6rem);max-width:800px;margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p{color:var(--muted);max-width:600px;font-size:1.05rem}
+.hero .actions{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px}
+.btn.primary{background:var(--accent);color:var(--bg)}
+.btn.ghost{border:1.5px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--ink)}
+
+/* featured graphite */
+.feature{background:var(--card);border:1px solid #ffffff;border-radius:16px;padding:36px 28px;color:var(--muted);display:grid;gap:24px;transition:border-color .2s,box-shadow .2s}
+.feature:hover{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 0 24px -4px var(--accent)}
+.feature .kicker{color:var(--accent);display:flex;align-items:center;gap:8px}
+.status-dot{width:8px;height:8px;border-radius:50%;background:#3fd67f;box-shadow:0 0 0 0 rgba(63,214,127,.7);animation:status-pulse 2s infinite}
+@keyframes status-pulse{
+  0%{box-shadow:0 0 0 0 rgba(63,214,127,.6)}
+  70%{box-shadow:0 0 0 6px rgba(63,214,127,0)}
+  100%{box-shadow:0 0 0 0 rgba(63,214,127,0)}
+}
+.feature h2{color:var(--ink)}
+.feature p{color:var(--muted);font-size:.95rem;max-width:560px}
+.feature .btn.primary{background:var(--accent);color:var(--bg);margin-top:18px}
+.fstats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;align-self:center}
+.fstat{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px}
+.fstat b{display:block;font-size:1.5rem;color:var(--accent);letter-spacing:-.01em}
+.fstat span{font-size:.72rem;color:var(--muted)}
+
+/* featured chart (world mine production) */
+.fchart{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:16px;align-self:center}
+.fchart .fchart-h{font-size:.72rem;color:var(--muted);margin-bottom:10px}
+.fchart .fchart-h b{color:var(--ink);font-weight:700}
+.fchart-box{position:relative;height:200px}
+.fchart-src{font-size:.66rem;color:var(--muted);margin-top:8px}
+
+/* minerals grid */
+.mgrid{display:grid;grid-template-columns:1fr;gap:14px}
+.mcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;position:relative;text-decoration:none;color:var(--ink);display:block;transition:.15s}
+a.mcard:hover{border-color:var(--accent);transform:translateY(-2px)}
+.mcard .sym{font-family:Georgia,serif;font-size:1.7rem;font-weight:700;color:var(--accent);display:inline-block;margin-bottom:8px}
+.mcard.soon .sym{color:var(--muted)}
+.mcard h3{font-size:1.05rem;margin-bottom:6px}
+.mcard p{font-size:.82rem;color:var(--muted)}
+.tag{position:absolute;top:16px;right:16px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:99px}
+.tag.live{background:#173325;color:#6ee7b7}
+.tag.soon{background:var(--bg2);color:var(--muted)}
+
+/* why it matters */
+.wgrid{display:grid;grid-template-columns:1fr;gap:14px}
+.wcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.wcard b{display:block;font-size:2rem;color:var(--accent);letter-spacing:-.02em;margin-bottom:4px}
+.wcard h3{font-size:.95rem;margin-bottom:6px}
+.wcard p{font-size:.82rem;color:var(--muted)}
+
+/* sources */
+.sources{list-style:none}
+.sources li{margin-bottom:14px;font-size:.9rem;color:var(--muted);padding-left:18px;position:relative}
+.sources li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+.sources b{color:var(--ink)}
+
+/* about */
+.about-row{display:flex;align-items:center;gap:36px;width:100%}
+.about-box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px 28px;flex:1;min-width:0}
+.about-box p{font-size:.95rem;color:var(--muted);margin-bottom:14px}
+.about-box p:last-child{margin-bottom:0}
+.about-box a{font-weight:600}
+.about-logo{flex-shrink:0;display:none}
+.about-logo svg{width:134px;height:134px}
+@media(min-width:860px){.about-logo{display:block}}
+
+footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:center;color:var(--muted);font-size:.76rem}
+
+@media(min-width:720px){
+  :root{--pad:24px}
+  .feature{grid-template-columns:1.3fr 1fr;padding:44px 40px}
+  .mgrid{grid-template-columns:repeat(3,1fr)}
+  .wgrid{grid-template-columns:repeat(3,1fr)}
+  h2{font-size:2rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="/"><svg width="22" height="22" viewBox="0 0 64 64" fill="none" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 H44"/><path d="M20 12 L6 26"/><path d="M44 12 L58 26"/><path d="M6 26 H58"/><path d="M6 26 L32 56"/><path d="M58 26 L32 56"/><path d="M20 12 L32 26"/><path d="M44 12 L32 26"/><path d="M32 26 V56"/></g><g fill="var(--bg)" stroke="var(--ink)" stroke-width="2.5"><circle cx="20" cy="12" r="4"/><circle cx="44" cy="12" r="4"/><circle cx="6" cy="26" r="4"/><circle cx="58" cy="26" r="4"/><circle cx="32" cy="56" r="4"/></g><circle cx="32" cy="26" r="5.5" fill="var(--accent)"/></svg>mineral<span>.watch</span></a>
+    <a class="link" href="#minerals">Minerals</a>
+    <a class="link" href="#why">Why it matters</a>
+    <a class="link" href="#data">Data</a>
+    <a class="link" href="#research">Research</a>
+    <a class="link" href="#about">About</a>
+    <a class="cta" href="/graphite/">Graphite →</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="kicker">Open data · strategic minerals &amp; rare earths</div>
+      <h1 class="serif">The go-to data site on <em>strategic minerals</em></h1>
+      <p>mineral.watch cross-references verified open data and business intelligence on the minerals powering batteries, magnets, chips and defence — who mines them, who refines them, and who depends on whom.</p>
+      <div class="actions">
+        <a class="btn primary" href="/graphite/">Explore Graphite</a>
+        <a class="btn ghost" href="#minerals">All minerals</a>
+      </div>
+    </div>
+    <div class="hero-art net-art" aria-hidden="true">
+      <svg viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- orbits -->
+        <circle class="orbit o1" cx="180" cy="180" r="148"/>
+        <circle class="orbit o2" cx="180" cy="180" r="170"/>
+        <circle cx="180" cy="180" r="159" fill="none" stroke="var(--accent)" stroke-width=".6" opacity=".55"/>
+        <!-- network threads to satellites -->
+        <path class="web d3" pathLength="1" d="M180 30 L139 122"/>
+        <path class="web d3" pathLength="1" d="M180 30 L221 122"/>
+        <path class="web d4" pathLength="1" d="M64 66 L139 122"/>
+        <path class="web d4" pathLength="1" d="M64 66 L92 170"/>
+        <path class="web d4" pathLength="1" d="M298 54 L221 122"/>
+        <path class="web d5" pathLength="1" d="M298 54 L332 116"/>
+        <path class="web d5" pathLength="1" d="M332 116 L268 170"/>
+        <path class="web d5" pathLength="1" d="M324 224 L268 170"/>
+        <path class="web d5" pathLength="1" d="M324 224 L276 306"/>
+        <path class="web d6" pathLength="1" d="M276 306 L180 272"/>
+        <path class="web d6" pathLength="1" d="M84 300 L180 272"/>
+        <path class="web d6" pathLength="1" d="M84 300 L92 170"/>
+        <path class="web d6" pathLength="1" d="M28 204 L92 170"/>
+        <path class="web d6" pathLength="1" d="M28 204 L64 66"/>
+        <!-- diamond facets -->
+        <path class="edge d1" pathLength="1" d="M139 122 H221"/>
+        <path class="edge d1" pathLength="1" d="M139 122 L92 170"/>
+        <path class="edge d1" pathLength="1" d="M221 122 L268 170"/>
+        <path class="edge d2" pathLength="1" d="M92 170 H268"/>
+        <path class="edge d2" pathLength="1" d="M92 170 L180 272"/>
+        <path class="edge d2" pathLength="1" d="M268 170 L180 272"/>
+        <path class="edge d3" pathLength="1" d="M139 122 L180 170"/>
+        <path class="edge d3" pathLength="1" d="M221 122 L180 170"/>
+        <path class="edge d3" pathLength="1" d="M180 170 V272"/>
+        <!-- diamond nodes -->
+        <circle class="node" cx="139" cy="122" r="3.5"/>
+        <circle class="node" cx="221" cy="122" r="3.5"/>
+        <circle class="node" cx="92" cy="170" r="3.5"/>
+        <circle class="node" cx="268" cy="170" r="3.5"/>
+        <circle class="node" cx="180" cy="272" r="3.5"/>
+        <!-- satellite nodes -->
+        <circle class="sat" cx="180" cy="30" r="2.5"/>
+        <circle class="sat b2" cx="64" cy="66" r="2.5"/>
+        <circle class="sat b3" cx="298" cy="54" r="2.5"/>
+        <circle class="sat b2" cx="332" cy="116" r="2.5"/>
+        <circle class="sat b3" cx="324" cy="224" r="2.5"/>
+        <circle class="sat" cx="276" cy="306" r="2.5"/>
+        <circle class="sat b2" cx="84" cy="300" r="2.5"/>
+        <circle class="sat b3" cx="28" cy="204" r="2.5"/>
+        <!-- centre: pulsing accent core -->
+        <circle cx="180" cy="170" r="6" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6">
+          <animate attributeName="r" values="6;20" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".6;0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="180" cy="170" r="5" fill="var(--accent)"/>
+        <!-- signals travelling along the network -->
+        <circle r="1.8" fill="var(--accent)">
+          <animateMotion path="M64 66 L139 122 L180 170" dur="5s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="5s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.8" fill="var(--teal)">
+          <animateMotion path="M298 54 L221 122 L180 170" dur="6.5s" begin="3.4s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6.5s" begin="3.4s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.8" fill="var(--teal)">
+          <animateMotion path="M180 272 L268 170 L332 116" dur="7.5s" begin="4.2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7.5s" begin="4.2s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section id="graphite-feature">
+  <div class="feature">
+    <div>
+      <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
+      <h2 class="serif">Graphite: who controls the anode?</h2>
+      <p>Interactive world map of mines, anode plants and trade flows, production and reserves charts, price trends and the China chokepoint — built on USGS, BGS, UN Comtrade and IEA data.</p>
+      <a class="btn primary" href="/graphite/">Open the Graphite dashboard →</a>
+    </div>
+    <div class="fchart">
+      <div class="fchart-h"><b>World mine production, 2018–2025</b><br>Metric tons per year — roughly doubled since 2018</div>
+      <div class="fchart-box"><canvas id="chHomeTrend"></canvas></div>
+      <div class="fchart-src">Source: USGS Mineral Commodity Summaries (approximate)</div>
+    </div>
+  </div>
+</section>
+
+<section id="minerals">
+  <div class="kicker">The minerals</div>
+  <h2 class="serif">One deep-dive per mineral</h2>
+  <p class="lede">Each mineral gets its own data dashboard: production, reserves, trade flows, prices and supply-chain concentration. Graphite is live; the rest are in the pipeline.</p>
+  <div class="mgrid">
+    <a class="mcard" href="/graphite/">
+      <span class="tag live">Live</span>
+      <span class="sym">C</span>
+      <h3>Graphite</h3>
+      <p>The single largest material in a lithium-ion battery. Mining, spherical processing and anode production, mapped and charted.</p>
+    </a>
+    <div class="mcard soon">
+      <span class="tag soon">Coming soon</span>
+      <span class="sym">Li</span>
+      <h3>Lithium</h3>
+      <p>The core of the battery economy: brine and hard-rock supply, conversion capacity and price cycles.</p>
+    </div>
+    <div class="mcard soon">
+      <span class="tag soon">Coming soon</span>
+      <span class="sym">Co</span>
+      <h3>Cobalt</h3>
+      <p>Concentrated mining in the DRC, refining in China, and the shift to lower-cobalt chemistries.</p>
+    </div>
+    <div class="mcard soon">
+      <span class="tag soon">Coming soon</span>
+      <span class="sym">Ni</span>
+      <h3>Nickel</h3>
+      <p>Indonesia's rise, class-1 vs class-2 supply, and the battery-grade squeeze.</p>
+    </div>
+    <div class="mcard soon">
+      <span class="tag soon">Coming soon</span>
+      <span class="sym">REE</span>
+      <h3>Rare earths</h3>
+      <p>Seventeen elements, one dominant refiner. Magnets, export controls and the race to diversify.</p>
+    </div>
+    <div class="mcard soon">
+      <span class="tag soon">Coming soon</span>
+      <span class="sym">Cu</span>
+      <h3>Copper</h3>
+      <p>The metal of electrification: grids, EVs and a looming supply gap.</p>
+    </div>
+    <div class="mcard soon">
+      <span class="tag soon">Coming soon</span>
+      <span class="sym">Mn</span>
+      <h3>Manganese</h3>
+      <p>From steel staple to battery cathode ingredient: high-purity supply under scrutiny.</p>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="kicker">Why it matters</div>
+  <h2 class="serif">Small markets, outsized leverage</h2>
+  <p class="lede">Strategic minerals are tiny markets compared with oil or iron ore, but everything downstream depends on them. Concentration in mining and, above all, refining makes them a lever of industrial and geopolitical power.</p>
+  <div class="wgrid">
+    <div class="wcard">
+      <b>2×</b>
+      <h3>Demand growth</h3>
+      <p>The IEA projects demand for key battery minerals to roughly double or more by 2040 in its base scenarios, driven by EVs, storage and grids.</p>
+    </div>
+    <div class="wcard">
+      <b>&gt;70%</b>
+      <h3>Refining concentration</h3>
+      <p>For several critical minerals, a single country refines the large majority of world supply — a tighter chokepoint than mining itself.</p>
+    </div>
+    <div class="wcard">
+      <b>50+</b>
+      <h3>Critical mineral lists</h3>
+      <p>The US, EU, Japan and others each maintain official critical-mineral lists; export controls and tariffs increasingly follow them.</p>
+    </div>
+  </div>
+</section>
+
+<section id="data">
+  <div class="kicker">Data &amp; methodology</div>
+  <h2 class="serif">Built on open, verifiable sources</h2>
+  <p class="lede">Every dashboard cross-references primary open datasets. Figures are cited to their source and dated; estimates are flagged as such.</p>
+  <ul class="sources">
+    <li><b><a href="https://www.usgs.gov/centers/national-minerals-information-center">USGS National Minerals Information Center</a></b> — Mineral Commodity Summaries: world production, reserves and US trade statistics, per commodity.</li>
+    <li><b><a href="https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/">British Geological Survey</a></b> — World Mineral Statistics, long-run production series from 1970.</li>
+    <li><b><a href="https://comtradeplus.un.org/">UN Comtrade</a></b> — bilateral trade flows by HS code, for mapping who ships to whom.</li>
+    <li><b><a href="https://www.iea.org/topics/critical-minerals">IEA Critical Minerals</a></b> — demand scenarios, supply-chain analysis and price context.</li>
+    <li><b><a href="https://wits.worldbank.org/">World Bank WITS</a></b> — accessible interface over Comtrade data.</li>
+    <li><b>Method notes</b> — map locations are approximate; trade arcs indicate major corridors, not exact tonnages; downstream (battery-grade) shares are estimates where official statistics do not separate them. Each page states its last data refresh.</li>
+  </ul>
+</section>
+
+<section id="research">
+  <div class="feature">
+    <div>
+      <div class="kicker">Custom research</div>
+      <h2 class="serif">Need an ad hoc data-driven research report?</h2>
+      <p>We produce bespoke, source-cited research on strategic minerals — supply-chain mapping, trade-flow analysis, country and commodity deep-dives — built on the same open, verifiable data behind this site.</p>
+      <a class="btn primary" href="mailto:hello@mineral.watch">Reach out at hello@mineral.watch</a>
+    </div>
+    <div class="feature-art net-art" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="orbit o2" cx="150" cy="150" r="126"/>
+        <circle cx="150" cy="150" r="116" fill="none" stroke="var(--accent)" stroke-width=".6" opacity=".55"/>
+        <path class="web d3" pathLength="1" d="M150 34 L119 104"/>
+        <path class="web d3" pathLength="1" d="M150 34 L181 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L119 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L82 140"/>
+        <path class="web d4" pathLength="1" d="M242 56 L181 104"/>
+        <path class="web d5" pathLength="1" d="M242 56 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M119 104 H181"/>
+        <path class="edge d1" pathLength="1" d="M119 104 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M181 104 L218 140"/>
+        <path class="edge d2" pathLength="1" d="M82 140 H218"/>
+        <path class="edge d2" pathLength="1" d="M82 140 L150 218"/>
+        <path class="edge d2" pathLength="1" d="M218 140 L150 218"/>
+        <path class="edge d3" pathLength="1" d="M119 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M181 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M150 140 V218"/>
+        <circle class="node" cx="119" cy="104" r="3"/>
+        <circle class="node" cx="181" cy="104" r="3"/>
+        <circle class="node" cx="82" cy="140" r="3"/>
+        <circle class="node" cx="218" cy="140" r="3"/>
+        <circle class="node" cx="150" cy="218" r="3"/>
+        <circle class="sat" cx="150" cy="34" r="2.2"/>
+        <circle class="sat b2" cx="58" cy="62" r="2.2"/>
+        <circle class="sat b3" cx="242" cy="56" r="2.2"/>
+        <circle class="sat b2" cx="258" cy="196" r="2.2"/>
+        <circle class="sat b3" cx="68" cy="240" r="2.2"/>
+        <circle cx="150" cy="140" r="5" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6">
+          <animate attributeName="r" values="5;16" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".6;0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="150" cy="140" r="4.2" fill="var(--accent)"/>
+        <circle r="1.6" fill="var(--teal)">
+          <animateMotion path="M58 62 L119 104 L150 140" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.6" fill="var(--accent)">
+          <animateMotion path="M258 196 L218 140 L150 140" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="kicker">About</div>
+  <h2 class="serif">An independent knowledge hub</h2>
+  <div class="about-row">
+    <div class="about-box">
+      <p>mineral.watch is an independent open-data project. It exists because reliable information on strategic minerals is scattered across agency reports, customs databases and paywalled market research — and because decisions about supply chains, industrial policy and investment deserve a shared, verifiable evidence base.</p>
+      <p>Corrections, data tips and collaboration ideas are welcome: <a href="mailto:hello@mineral.watch">hello@mineral.watch</a></p>
+    </div>
+    <div class="about-logo" aria-hidden="true">
+      <svg viewBox="0 0 64 64" fill="none"><g stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 H44"/><path d="M20 12 L6 26"/><path d="M44 12 L58 26"/><path d="M6 26 H58"/><path d="M6 26 L32 56"/><path d="M58 26 L32 56"/><path d="M20 12 L32 26"/><path d="M44 12 L32 26"/><path d="M32 26 V56"/></g><g fill="var(--bg)" stroke="var(--ink)" stroke-width="2"><circle cx="20" cy="12" r="3.5"/><circle cx="44" cy="12" r="3.5"/><circle cx="6" cy="26" r="3.5"/><circle cx="58" cy="26" r="3.5"/><circle cx="32" cy="56" r="3.5"/></g><circle cx="32" cy="26" r="5" fill="var(--accent)"/></svg>
+    </div>
+  </div>
+</section>
+
+<footer>
+  mineral.watch · open data on strategic minerals &amp; rare earths · sources: USGS, BGS, UN Comtrade, IEA
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+const trend = [[2018,930000],[2019,1100000],[2020,966000],[2021,1060000],
+  [2022,1300000],[2023,1450000],[2024,1550000],[2025,1800000]];
+const fmt = n => n>=1e6 ? (n/1e6).toFixed(2)+" Mt" : (n/1e3).toFixed(0)+" kt";
+let homeChartDrawn = false;
+function drawHomeTrend(){
+  if(homeChartDrawn) return;
+  homeChartDrawn = true;
+  const css = getComputedStyle(document.documentElement);
+  const accent = css.getPropertyValue("--accent").trim();
+  const line = css.getPropertyValue("--line").trim();
+  Chart.defaults.color = css.getPropertyValue("--muted").trim();
+  Chart.defaults.borderColor = line;
+  Chart.defaults.font.size = 11;
+  new Chart(document.getElementById("chHomeTrend"), {
+    type: "line",
+    data: {
+      labels: trend.map(d=>d[0]),
+      datasets: [{
+        data: trend.map(d=>d[1]),
+        borderColor: accent,
+        backgroundColor: accent+"22",
+        fill: true,
+        tension: 0,
+        pointRadius: 3,
+        pointBackgroundColor: accent
+      }]
+    },
+    options: {
+      maintainAspectRatio: false,
+      animation: { duration: 1400, easing: "easeOutCubic" },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: c => ` ${fmt(c.parsed.y)}` } }
+      },
+      scales: {
+        y: { max: 2000000, ticks: { callback: v => fmt(v) }, grid: { color: line } },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+}
+const homeChartObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) drawHomeTrend(); });
+}, { threshold: .3 });
+homeChartObserver.observe(document.getElementById("chHomeTrend"));
+</script>
+</body>
+</html>
