@@ -273,6 +273,7 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
   <div class="nav-inner">
     <a class="brand" href="/"><svg width="22" height="22" viewBox="0 0 64 64" fill="none" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 H44"/><path d="M20 12 L6 26"/><path d="M44 12 L58 26"/><path d="M6 26 H58"/><path d="M6 26 L32 56"/><path d="M58 26 L32 56"/><path d="M20 12 L32 26"/><path d="M44 12 L32 26"/><path d="M32 26 V56"/></g><g fill="var(--bg)" stroke="var(--ink)" stroke-width="2.5"><circle cx="20" cy="12" r="4"/><circle cx="44" cy="12" r="4"/><circle cx="6" cy="26" r="4"/><circle cx="58" cy="26" r="4"/><circle cx="32" cy="56" r="4"/></g><circle cx="32" cy="26" r="5.5" fill="var(--accent)"/></svg>mineral<span>.watch</span></a>
     <a class="link" href="#minerals">Minerals</a>
+    <a class="link" href="#supply-chain">Supply chain</a>
     <a class="link" href="#why">Why it matters</a>
     <a class="link" href="#data">Data</a>
     <a class="link" href="#research">Research</a>
@@ -425,6 +426,23 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
       <span class="sym">Mn</span>
       <h3>Manganese</h3>
       <p>From steel staple to battery cathode ingredient: high-purity supply under scrutiny.</p>
+    </div>
+  </div>
+</section>
+
+<section id="supply-chain">
+  <div class="feature">
+    <div>
+      <div class="kicker">Interactive map</div>
+      <h2 class="serif">Where it's mined vs where it's refined</h2>
+      <p>For most strategic minerals, the supply-chain risk isn't at the mine — it's at the refinery. Compare mine production against refined and smelter output, country by country, for cobalt, copper, nickel, lithium, graphite, rare earths and manganese, 1970–2024.</p>
+      <a class="btn primary" href="/supply-chain/">Open the Supply-Chain map →</a>
+    </div>
+    <div class="fstats">
+      <div class="fstat"><b>82%</b><span>of world refined cobalt comes from China, which mines under 1% of it</span></div>
+      <div class="fstat"><b>75%</b><span>of world mined cobalt comes from the DR Congo, which refines almost none</span></div>
+      <div class="fstat"><b>47%</b><span>of world refined copper is produced in China alone</span></div>
+      <div class="fstat"><b>7</b><span>strategic minerals mapped, mine vs refinery, 1970–2024</span></div>
     </div>
   </div>
 </section>
@@ -618,5 +636,6 @@ const homeChartObserver = new IntersectionObserver(entries => {
 }, { threshold: .3 });
 homeChartObserver.observe(document.getElementById("chHomeTrend"));
 </script>
+<script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Mined vs Refined — Strategic Mineral Supply-Chain Map | mineral.watch</title>
+<meta name="description" content="Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths and manganese, 1970–2024. Data from the British Geological Survey.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="mineral.watch">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="https://mineral.watch/supply-chain/">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="alternate icon" href="/brand/favicon.png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mineral.watch/supply-chain/">
+<meta property="og:site_name" content="mineral.watch">
+<meta property="og:title" content="Mined vs Refined — Strategic Mineral Supply-Chain Map">
+<meta property="og:description" content="Side-by-side world maps of where strategic minerals are mined and where they are refined. Cobalt, copper, nickel, lithium, graphite, rare earths and manganese, 1970–2024.">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mined vs Refined — Strategic Mineral Supply-Chain Map">
+<meta name="twitter:description" content="Where strategic minerals are mined vs where they are refined, mapped side by side. Built on BGS World Mineral Statistics.">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#ed8936;--accent2:#4cc9f0;
+  --radius:14px;--pad:16px;
+  font-size:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+h1,h2,h3{line-height:1.2;font-weight:700}
+section{padding:28px var(--pad) 40px;max-width:1200px;margin:0 auto}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;margin-bottom:8px}
+
+nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1200px;margin:0 auto;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px}
+.brand span{color:var(--accent)}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap}
+nav a.link:hover{color:var(--txt);background:var(--card)}
+
+.hero{padding:36px var(--pad) 20px;max-width:1200px;margin:0 auto}
+.hero h1{font-size:clamp(1.7rem,5.5vw,2.6rem);letter-spacing:-.02em;margin-bottom:10px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero h1 em.cy{color:var(--accent2)}
+.hero p{color:var(--muted);max-width:720px;font-size:1rem}
+
+/* controls */
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.chip-row{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:7px 14px;font-size:.8rem;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent;user-select:none}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#0d1117;font-weight:700}
+.chip.sm{padding:4px 11px;font-size:.72rem}
+.chip.sm.on{background:var(--accent2);border-color:var(--accent2)}
+
+.year-row{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.playbtn{background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:99px;width:38px;height:38px;font-size:.95rem;cursor:pointer;flex:none}
+.playbtn:hover{border-color:var(--accent)}
+input[type=range]{flex:1 1 220px;accent-color:var(--accent)}
+.year-label{font-weight:800;font-size:1.05rem;color:var(--accent);min-width:52px;text-align:center}
+
+/* chokepoint callout */
+.chokepoint{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-bottom:16px}
+.chokepoint .big{font-size:clamp(1rem,2.6vw,1.25rem);line-height:1.45}
+.chokepoint .big b.mine{color:var(--accent)}
+.chokepoint .big b.ref{color:var(--accent2)}
+.chokepoint .sub{font-size:.76rem;color:var(--muted);margin-top:6px}
+
+/* layer toggles */
+.layer-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.chip.layer{display:inline-flex;align-items:center;gap:7px;font-weight:700;background:var(--card);color:var(--muted)}
+.chip.layer .dot{width:10px;height:10px;border-radius:50%;flex:none;opacity:.35}
+.chip.layer.mine .dot{background:var(--accent)}
+.chip.layer.ref .dot{background:var(--accent2)}
+.chip.layer.on{background:var(--card);color:var(--txt)}
+.chip.layer.on .dot{opacity:1}
+.chip.layer.on.mine{border-color:var(--accent)}
+.chip.layer.on.ref{border-color:var(--accent2)}
+.chip.layer[disabled]{opacity:.4;pointer-events:none}
+
+/* map + side-by-side rankings */
+.mapdiv{height:56vh;min-height:420px;border-radius:var(--radius);border:1px solid var(--line);z-index:1;background:var(--bg2)}
+.duo{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px}
+@media(min-width:960px){.duo{grid-template-columns:1fr 1fr}}
+.pane h3{font-size:.95rem;margin-bottom:2px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pane h3 .dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:none}
+.pane .stage-sub{font-size:.74rem;color:var(--muted);margin-bottom:10px;min-height:1.2em}
+.noref{background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:12px 14px;font-size:.78rem;color:var(--muted);line-height:1.6}
+
+.mini-callout{display:flex;gap:12px;align-items:center;background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0}
+.mini-callout b{font-size:1.35rem;white-space:nowrap;line-height:1.2}
+.mini-callout span{font-size:.74rem;color:var(--muted);flex:1;line-height:1.45}
+
+.bars{display:flex;flex-direction:column;gap:9px}
+.bar-row{display:grid;grid-template-columns:22px 1fr 52px;align-items:center;gap:8px;font-size:.78rem;cursor:pointer}
+.bar-row .rank{color:var(--muted);text-align:right}
+.bar-row .name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:3px}
+.bar-row .track{background:var(--bg2);border-radius:99px;height:9px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:99px;width:0;transition:width .5s ease}
+.bar-row .val{text-align:right;color:var(--muted);font-size:.72rem}
+.bar-row:hover .name{color:var(--accent)}
+.empty-msg{color:var(--muted);font-size:.82rem;padding:14px 0}
+
+.leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--card)}
+.leaflet-popup-content{font-size:.82rem;line-height:1.5;margin:12px 14px}
+.leaflet-popup-content b{color:var(--accent)}
+.pp-share{color:var(--accent2);font-weight:700}
+
+.note{font-size:.72rem;color:var(--muted);border-left:3px solid var(--accent);padding:8px 12px;background:var(--bg2);border-radius:0 8px 8px 0;margin-top:20px}
+footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
+    <div class="brand">Supply<span>Chain</span></div>
+    <a class="link" href="../graphite/">Graphite</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="kicker">Interactive map · BGS World Mineral Statistics</div>
+  <h1>Where it's <em>mined</em> vs where it's <em class="cy">refined</em></h1>
+  <p>For most strategic minerals the supply-chain risk isn't at the mine — it's at the refinery. Pick a mineral and toggle the <b style="color:var(--accent)">mined</b> and <b style="color:var(--accent2)">refined</b> layers to compare, country by country, where ore comes out of the ground and where it is turned into usable material.</p>
+</header>
+
+<section id="sc-sec">
+  <div class="controls">
+    <div class="chip-row" id="mineralChips"></div>
+  </div>
+
+  <div class="year-row">
+    <button class="playbtn" id="playBtn" title="Play">▶</button>
+    <input type="range" id="yearSlider" min="1970" max="2024" step="1" value="2024">
+    <div class="year-label" id="yearLabel">2024</div>
+  </div>
+
+  <div class="chokepoint" id="chokepoint" style="display:none">
+    <div class="big" id="chokeText"></div>
+    <div class="sub" id="chokeSub"></div>
+  </div>
+
+  <div class="layer-row">
+    <button class="chip layer mine on" id="layerMineBtn"><span class="dot"></span>Mined</button>
+    <button class="chip layer ref on" id="layerRefBtn"><span class="dot"></span>Refined</button>
+    <span class="chip-row" id="refStageChips"></span>
+  </div>
+
+  <div class="mapdiv" id="map"></div>
+
+  <div class="duo">
+    <div class="pane">
+      <h3><span class="dot" style="background:var(--accent)"></span>Top miners</h3>
+      <div class="stage-sub" id="mineSub"></div>
+      <div class="mini-callout">
+        <b style="color:var(--accent)" id="mineTop3">–</b>
+        <span id="mineTop3Label">of world mine production comes from the top 3 countries.</span>
+      </div>
+      <div class="bars" id="mineBars"></div>
+    </div>
+
+    <div class="pane">
+      <h3><span class="dot" style="background:var(--accent2)"></span>Top refiners</h3>
+      <div class="stage-sub" id="refSub"></div>
+      <div class="noref" id="refNone" style="display:none"></div>
+      <div class="mini-callout" id="refCallout">
+        <b style="color:var(--accent2)" id="refTop3">–</b>
+        <span id="refTop3Label">of world refined production comes from the top 3 countries.</span>
+      </div>
+      <div class="bars" id="refBars"></div>
+    </div>
+  </div>
+
+  <div class="note">
+    Data: <a href="https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/" target="_blank" rel="noopener">British Geological Survey, World Mineral Statistics</a>.
+    Mine-stage figures for cobalt, copper and nickel are metal content; refined/smelter-stage figures are gross tonnes — compare <b>shares</b> across the two layers, not absolute volumes.
+    Refined output can also draw on stocks, scrap and intermediate imports, so world totals differ between stages.
+    Circle position is each country's geographic centroid, not a mine or plant location.
+  </div>
+</section>
+
+<footer>mineral.watch · built on open data from BGS, USGS, UN Comtrade and IEA</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  const RMIN = 3, RMAX = 30;
+
+  // Featured strategic minerals (mineral.watch dashboard set).
+  // BGS publishes a true refined/smelter stage only for cobalt, copper and nickel;
+  // for the others the right-hand map explains the gap instead of showing nothing.
+  const MINERALS = [
+    {
+      key:"cobalt", name:"Cobalt",
+      mine:{slug:"cobalt-mine", label:"Mine production", unit:"tonnes (metal content)"},
+      refined:[{slug:"cobalt-refined", label:"Refined production", unit:"tonnes"}]
+    },
+    {
+      key:"copper", name:"Copper",
+      mine:{slug:"copper-mine", label:"Mine production", unit:"tonnes (metal content)"},
+      refined:[
+        {slug:"copper-refined", label:"Refined production", unit:"tonnes", chip:"Refined"},
+        {slug:"copper-smelter", label:"Smelter production", unit:"tonnes", chip:"Smelter"}
+      ]
+    },
+    {
+      key:"nickel", name:"Nickel",
+      mine:{slug:"nickel-mine", label:"Mine production", unit:"tonnes (metal content)"},
+      refined:[{slug:"nickel-smelter-refinery", label:"Smelter/refinery production", unit:"tonnes"}]
+    },
+    {
+      key:"lithium", name:"Lithium",
+      mine:{slug:"lithium-minerals", label:"Mine production (lithium minerals)", unit:"tonnes"},
+      noRefined:"BGS does not publish a country-level series for refined lithium chemicals (carbonate/hydroxide). Chemical conversion is heavily concentrated in China — see the <a href='https://www.iea.org/data-and-statistics/data-tools/critical-minerals-data-explorer' target='_blank' rel='noopener'>IEA Critical Minerals Data Explorer</a>."
+    },
+    {
+      key:"graphite", name:"Graphite",
+      mine:{slug:"graphite", label:"Mine production (natural graphite)", unit:"tonnes"},
+      noRefined:"BGS does not publish a country-level series for processed graphite. Spherical-graphite and anode processing take place almost entirely in China — see our <a href='../graphite/'>Graphite dashboard</a> and the <a href='https://www.iea.org/data-and-statistics/data-tools/critical-minerals-data-explorer' target='_blank' rel='noopener'>IEA</a>."
+    },
+    {
+      key:"rare-earths", name:"Rare earths",
+      mine:{slug:"rare-earth-oxides", label:"Mine production (REO content)", unit:"tonnes"},
+      noRefined:"BGS does not publish a country-level series for separated and refined rare-earth oxides or metals. Separation capacity is overwhelmingly concentrated in China — see the <a href='https://www.iea.org/data-and-statistics/data-tools/critical-minerals-data-explorer' target='_blank' rel='noopener'>IEA Critical Minerals Data Explorer</a>."
+    },
+    {
+      key:"manganese", name:"Manganese",
+      mine:{slug:"manganese-ore", label:"Mine production (manganese ore)", unit:"tonnes"},
+      noRefined:"BGS does not publish a country-level series for refined manganese products. Battery-grade refining (high-purity manganese sulphate) is heavily concentrated in China — see the <a href='https://www.iea.org/data-and-statistics/data-tools/critical-minerals-data-explorer' target='_blank' rel='noopener'>IEA Critical Minerals Data Explorer</a>."
+    }
+  ];
+
+  // display-name overrides for ambiguous BGS country labels
+  const NAME_OVERRIDES = { COD: "DR Congo" };
+
+  let countries = null;
+  let currentMineral = MINERALS[0];
+  let currentRefIdx = 0;            // index into mineral.refined[]
+  let currentYear = 2024;
+  let playTimer = null;
+  const dataCache = {};             // slug -> {year:{iso3:qty}}  (Production only)
+  const maxCache = {};              // slug -> max qty across years
+
+  const el = id => document.getElementById(id);
+  const cname = iso3 => NAME_OVERRIDES[iso3] || countries[iso3].name;
+  const fmtNum = n => new Intl.NumberFormat("en", {notation:"compact", maximumFractionDigits:1}).format(n);
+  const fmtPct = n => (n*100).toFixed(n < 0.01 ? 2 : 1) + "%";
+
+  function makeMap(id){
+    const m = L.map(id, {scrollWheelZoom:false, worldCopyJump:true, minZoom:1, maxZoom:6}).setView([18,10], 1);
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+      attribution: "&copy; OpenStreetMap, &copy; CARTO", maxZoom:6, minZoom:1
+    }).addTo(m);
+    return m;
+  }
+  const map = makeMap("map");
+  const layerMine = L.featureGroup().addTo(map);   // added first: refined draws on top
+  const layerRef  = L.featureGroup().addTo(map);
+  let showMine = true, showRef = true;
+
+  function applyLayers(){
+    const hasRef = !!currentMineral.refined;
+    if (showMine) map.addLayer(layerMine); else map.removeLayer(layerMine);
+    if (showRef && hasRef) map.addLayer(layerRef); else map.removeLayer(layerRef);
+  }
+
+  function showError(err){
+    const box = el("chokepoint");
+    box.style.display = "block";
+    el("chokeText").innerHTML = "Couldn't load the map data.";
+    el("chokeSub").textContent = String(err) + " — this page needs /map_data/ to be reachable over HTTP (it won't work from file:// or if map_data isn't deployed).";
+  }
+
+  function loadSlug(slug){
+    if (dataCache[slug]) return Promise.resolve(dataCache[slug]);
+    return fetch(`../map_data/data/${slug}.json`).then(r => {
+      if (!r.ok) throw new Error(`map_data/data/${slug}.json: HTTP ${r.status}`);
+      return r.json();
+    }).then(d => {
+      const prod = d.Production || {};
+      dataCache[slug] = prod;
+      let max = 0;
+      for (const y in prod) for (const iso3 in prod[y]) max = Math.max(max, prod[y][iso3]);
+      maxCache[slug] = max || 1;
+      return prod;
+    });
+  }
+
+  function entriesFor(slug, year){
+    const yearData = (dataCache[slug] || {})[String(year)] || {};
+    return Object.entries(yearData)
+      .filter(([iso3, q]) => countries[iso3] && q > 0)
+      .sort((a,b) => b[1]-a[1]);
+  }
+
+  function sparklineSVG(slug, iso3){
+    const byYear = dataCache[slug] || {};
+    const series = [];
+    Object.keys(byYear).sort().forEach(y => {
+      if (byYear[y][iso3] !== undefined) series.push(byYear[y][iso3]);
+    });
+    if (series.length < 2) return "";
+    const w=150,h=32,pad=2;
+    const max = Math.max(...series, 1);
+    const step = (w-2*pad)/(series.length-1);
+    const pts = series.map((v,i)=>{
+      const x = pad + i*step;
+      const y = h-pad - v/max * (h-2*pad);
+      return x.toFixed(1)+","+y.toFixed(1);
+    }).join(" ");
+    return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="display:block;margin-top:6px"><polyline points="${pts}" fill="none" stroke="#4cc9f0" stroke-width="1.6"/></svg>`;
+  }
+
+  function drawStage(layer, stage, color, entries, total){
+    layer.clearLayers();
+    const maxQty = maxCache[stage.slug] || 1;
+    entries.forEach(([iso3, qty]) => {
+      const c = countries[iso3];
+      const share = total > 0 ? qty/total : 0;
+      const radius = RMIN + (RMAX-RMIN) * Math.sqrt(qty/maxQty);
+      const popupHtml = `
+        <b>${cname(iso3)}</b><br>
+        ${currentMineral.name} — ${stage.label}, ${currentYear}<br>
+        ${fmtNum(qty)} ${stage.unit}<br>
+        Share of world total: <span class="pp-share">${fmtPct(share)}</span>
+        ${sparklineSVG(stage.slug, iso3)}
+      `;
+      L.circleMarker([c.lat, c.lon], {
+        radius, weight:1.2, color, fillColor:color, fillOpacity:.55
+      }).bindPopup(popupHtml).addTo(layer);
+    });
+  }
+
+  function renderBars(containerId, entries, total, fillCss){
+    const wrap = el(containerId);
+    if (!entries.length){
+      wrap.innerHTML = '<div class="empty-msg">No data for this year.</div>';
+      return;
+    }
+    const top = entries.slice(0,5);
+    const topQty = top[0][1];
+    wrap.innerHTML = top.map(([iso3, qty], i) => {
+      const share = total > 0 ? qty/total : 0;
+      const width = (qty/topQty*100).toFixed(1);
+      return `<div class="bar-row" data-iso3="${iso3}">
+        <div class="rank">${i+1}</div>
+        <div>
+          <div class="name">${cname(iso3)}</div>
+          <div class="track"><div class="fill" style="width:${width}%;background:${fillCss}"></div></div>
+        </div>
+        <div class="val">${fmtPct(share)}</div>
+      </div>`;
+    }).join("");
+    [...wrap.children].forEach(row => {
+      row.onclick = () => {
+        const c = countries[row.dataset.iso3];
+        if (c) map.flyTo([c.lat, c.lon], 4, {duration:.6});
+      };
+    });
+  }
+
+  function top3Share(entries, total){
+    return entries.slice(0,3).reduce((s,[,q]) => s + (total>0 ? q/total : 0), 0);
+  }
+
+  function renderChokepoint(mineEntries, mineTotal, refEntries, refTotal, refStage){
+    const box = el("chokepoint");
+    if (!refStage || !refEntries.length || !mineEntries.length){
+      box.style.display = "none";
+      return;
+    }
+    const mineShare = {};
+    mineEntries.forEach(([iso3,q]) => mineShare[iso3] = mineTotal>0 ? q/mineTotal : 0);
+    const [refIso, refQty] = refEntries[0];
+    const refShare = refTotal>0 ? refQty/refTotal : 0;
+    const refName = cname(refIso);
+    const refMineShare = mineShare[refIso] || 0;
+    const [mineIso, mineQty] = mineEntries[0];
+    const topMineName = cname(mineIso);
+    const topMineShare = mineTotal>0 ? mineQty/mineTotal : 0;
+
+    let html = `In ${currentYear}, <b class="ref">${refName}</b> produced <b class="ref">${fmtPct(refShare)}</b> of the world's ${refStage.label.toLowerCase()} of ${currentMineral.name.toLowerCase()}`;
+    html += refMineShare < refShare
+      ? `, while mining just <b class="mine">${fmtPct(refMineShare)}</b> of it.`
+      : ` and <b class="mine">${fmtPct(refMineShare)}</b> of mine production.`;
+    if (mineIso !== refIso){
+      const e = refEntries.find(([i]) => i === mineIso);
+      const topMineRefShare = e && refTotal>0 ? e[1]/refTotal : 0;
+      html += ` The top miner, <b class="mine">${topMineName}</b> (<b class="mine">${fmtPct(topMineShare)}</b> of mine production), `;
+      html += topMineRefShare > 0
+        ? `accounts for just ${fmtPct(topMineRefShare)} of the ${refStage.label.toLowerCase()}.`
+        : `reports no ${refStage.label.toLowerCase()} at all.`;
+    }
+    el("chokeText").innerHTML = html;
+    el("chokeSub").textContent = "Shares are computed within each stage; mine and refined stages are reported in different units.";
+    box.style.display = "block";
+  }
+
+  function render(){
+    const m = currentMineral;
+    const mineEntries = entriesFor(m.mine.slug, currentYear);
+    const mineTotal = mineEntries.reduce((s,[,q]) => s+q, 0);
+
+    el("mineSub").textContent = `${m.name} · ${m.mine.label} · ${currentYear} · ${m.mine.unit}`;
+    drawStage(layerMine, m.mine, "#ed8936", mineEntries, mineTotal);
+    renderBars("mineBars", mineEntries, mineTotal, "linear-gradient(90deg,#ed8936,#f7c56f)");
+    el("mineTop3").textContent = mineEntries.length ? fmtPct(top3Share(mineEntries, mineTotal)) : "–";
+
+    const refStage = m.refined ? m.refined[currentRefIdx] : null;
+    const refBtn = el("layerRefBtn");
+    if (refStage){
+      refBtn.removeAttribute("disabled");
+      el("refNone").style.display = "none";
+      el("refCallout").style.display = "flex";
+      const refEntries = entriesFor(refStage.slug, currentYear);
+      const refTotal = refEntries.reduce((s,[,q]) => s+q, 0);
+      el("refSub").textContent = `${m.name} · ${refStage.label} · ${currentYear} · ${refStage.unit}`;
+      drawStage(layerRef, refStage, "#4cc9f0", refEntries, refTotal);
+      renderBars("refBars", refEntries, refTotal, "linear-gradient(90deg,#2b7a9e,#4cc9f0)");
+      el("refTop3").textContent = refEntries.length ? fmtPct(top3Share(refEntries, refTotal)) : "–";
+      renderChokepoint(mineEntries, mineTotal, refEntries, refTotal, refStage);
+    } else {
+      layerRef.clearLayers();
+      refBtn.setAttribute("disabled", "");
+      el("refSub").textContent = `${m.name} · no refined-stage country series in BGS`;
+      el("refNone").innerHTML = m.noRefined;
+      el("refNone").style.display = "block";
+      el("refCallout").style.display = "none";
+      el("refBars").innerHTML = "";
+      el("chokepoint").style.display = "none";
+    }
+    applyLayers();
+  }
+
+  function yearRange(){
+    const slugs = [currentMineral.mine.slug];
+    if (currentMineral.refined) slugs.push(currentMineral.refined[currentRefIdx].slug);
+    let ymin = Infinity, ymax = -Infinity;
+    slugs.forEach(slug => {
+      Object.keys(dataCache[slug] || {}).forEach(y => {
+        ymin = Math.min(ymin, Number(y)); ymax = Math.max(ymax, Number(y));
+      });
+    });
+    if (!isFinite(ymin)) return [1970, 2024];
+    return [ymin, ymax];
+  }
+
+  function applyYearRange(keepYear){
+    const [ymin, ymax] = yearRange();
+    el("yearSlider").min = ymin; el("yearSlider").max = ymax;
+    currentYear = keepYear ? Math.min(Math.max(currentYear, ymin), ymax) : ymax;
+    el("yearSlider").value = currentYear;
+    el("yearLabel").textContent = currentYear;
+  }
+
+  function buildRefStageChips(){
+    const wrap = el("refStageChips");
+    wrap.innerHTML = "";
+    const stages = currentMineral.refined || [];
+    if (stages.length < 2) return;
+    stages.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.className = "chip sm" + (i === currentRefIdx ? " on" : "");
+      b.textContent = s.chip || s.label;
+      b.onclick = () => {
+        currentRefIdx = i;
+        [...wrap.children].forEach((x,j) => x.classList.toggle("on", j===i));
+        applyYearRange(true);
+        render();
+      };
+      wrap.appendChild(b);
+    });
+  }
+
+  function selectMineral(m){
+    currentMineral = m;
+    currentRefIdx = 0;
+    [...el("mineralChips").children].forEach(b => b.classList.toggle("on", b.dataset.key === m.key));
+    const slugs = [m.mine.slug, ...(m.refined || []).map(s => s.slug)];
+    Promise.all(slugs.map(loadSlug)).then(() => {
+      buildRefStageChips();
+      applyYearRange(true);
+      render();
+    }).catch(err => { showError(err); console.error(err); });
+  }
+
+  function initControls(){
+    const wrap = el("mineralChips");
+    MINERALS.forEach(m => {
+      const b = document.createElement("button");
+      b.className = "chip" + (m === currentMineral ? " on" : "");
+      b.textContent = m.name;
+      b.dataset.key = m.key;
+      b.onclick = () => selectMineral(m);
+      wrap.appendChild(b);
+    });
+
+    const mineBtn = el("layerMineBtn"), refBtn = el("layerRefBtn");
+    mineBtn.onclick = () => {
+      showMine = !showMine;
+      mineBtn.classList.toggle("on", showMine);
+      applyLayers();
+    };
+    refBtn.onclick = () => {
+      showRef = !showRef;
+      refBtn.classList.toggle("on", showRef);
+      applyLayers();
+    };
+
+    el("yearSlider").oninput = () => {
+      currentYear = Number(el("yearSlider").value);
+      el("yearLabel").textContent = currentYear;
+      render();
+    };
+
+    el("playBtn").onclick = () => {
+      if (playTimer){
+        clearInterval(playTimer); playTimer = null;
+        el("playBtn").textContent = "▶";
+        return;
+      }
+      el("playBtn").textContent = "❙❙";
+      playTimer = setInterval(() => {
+        const slider = el("yearSlider");
+        let y = Number(slider.value) + 1;
+        if (y > Number(slider.max)) y = Number(slider.min);
+        slider.value = y;
+        currentYear = y;
+        el("yearLabel").textContent = y;
+        render();
+      }, 700);
+    };
+  }
+
+  fetch("../map_data/countries.json").then(r => {
+    if (!r.ok) throw new Error(`map_data/countries.json: HTTP ${r.status}`);
+    return r.json();
+  }).then(c => {
+    countries = c;
+    initControls();
+    selectMineral(currentMineral);
+  }).catch(err => { showError(err); console.error(err); });
+
+})();
+</script>
+</body>
+</html>
