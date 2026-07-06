@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Mineral Explorer — World Production &amp; Trade Map | mineral.watch</title>
+<meta name="description" content="Interactive world map of mineral production, imports and exports for 111 commodities, 1970–2024, with a supply-concentration view. Data from the British Geological Survey.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="mineral.watch">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="https://mineral.watch/explorer/">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="alternate icon" href="/brand/favicon.png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mineral.watch/explorer/">
+<meta property="og:site_name" content="mineral.watch">
+<meta property="og:title" content="Mineral Explorer — World Production &amp; Trade Map">
+<meta property="og:description" content="Interactive world map of mineral production, imports and exports for 111 commodities, 1970–2024, with a supply-concentration view. Data from the British Geological Survey.">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mineral Explorer — World Production &amp; Trade Map">
+<meta name="twitter:description" content="111 commodities, 190 countries, 1970–2024 — volume and supply-concentration views, built on BGS World Mineral Statistics.">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#ed8936;--accent2:#4cc9f0;
+  --radius:14px;--pad:16px;
+  font-size:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+h1,h2,h3{line-height:1.2;font-weight:700}
+section{padding:28px var(--pad) 40px;max-width:1200px;margin:0 auto}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;margin-bottom:8px}
+h2{font-size:1.5rem;margin-bottom:10px}
+.lede{color:var(--muted);font-size:.95rem;max-width:680px;margin-bottom:18px}
+
+nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1200px;margin:0 auto;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px}
+.brand span{color:var(--accent)}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap}
+nav a.link:hover{color:var(--txt);background:var(--card)}
+
+.hero{padding:36px var(--pad) 20px;max-width:1200px;margin:0 auto}
+.hero h1{font-size:clamp(1.7rem,5.5vw,2.6rem);letter-spacing:-.02em;margin-bottom:10px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);max-width:680px;font-size:1rem}
+
+/* controls */
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.controls select{background:var(--card);color:var(--txt);border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:.85rem;min-width:220px;max-width:100%}
+.chip-row{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:7px 14px;font-size:.8rem;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent;user-select:none}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#0d1117;font-weight:700}
+.chip[disabled]{opacity:.35;pointer-events:none}
+.chip.view-on{background:var(--accent2);border-color:var(--accent2)}
+
+.year-row{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.playbtn{background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:99px;width:38px;height:38px;font-size:.95rem;cursor:pointer;flex:none}
+.playbtn:hover{border-color:var(--accent)}
+input[type=range]{flex:1 1 220px;accent-color:var(--accent)}
+.year-label{font-weight:800;font-size:1.05rem;color:var(--accent);min-width:52px;text-align:center}
+
+/* layout */
+.explorer-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:960px){.explorer-grid{grid-template-columns:2.1fr 1fr}}
+
+#map{height:56vh;min-height:420px;border-radius:var(--radius);border:1px solid var(--line);z-index:1;background:var(--bg2)}
+.legend{font-size:.72rem;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+
+.leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--card)}
+.leaflet-popup-content{font-size:.82rem;line-height:1.5;margin:12px 14px}
+.leaflet-popup-content b{color:var(--accent)}
+.pp-share{color:var(--accent2);font-weight:700}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card h3{font-size:.95rem;margin-bottom:2px}
+.card .sub{font-size:.74rem;color:var(--muted);margin-bottom:14px}
+
+.callout{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:14px;margin-bottom:16px}
+.callout b{font-size:1.6rem;color:var(--accent2);white-space:nowrap;line-height:1.2}
+.callout span{font-size:.78rem;color:var(--muted);flex:1 1 200px;line-height:1.5}
+
+.bars{display:flex;flex-direction:column;gap:9px}
+.bar-row{display:grid;grid-template-columns:22px 1fr 52px;align-items:center;gap:8px;font-size:.78rem;cursor:pointer}
+.bar-row .rank{color:var(--muted);text-align:right}
+.bar-row .name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:3px}
+.bar-row .track{background:var(--bg2);border-radius:99px;height:9px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#f7c56f);width:0;transition:width .5s ease}
+.bar-row .val{text-align:right;color:var(--muted);font-size:.72rem}
+.bar-row:hover .name{color:var(--accent)}
+
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}
+@media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.stat b{display:block;font-size:1.3rem;color:var(--accent);letter-spacing:-.01em}
+.stat span{font-size:.72rem;color:var(--muted)}
+
+.note{font-size:.72rem;color:var(--muted);border-left:3px solid var(--accent);padding:8px 12px;background:var(--bg2);border-radius:0 8px 8px 0;margin-top:16px}
+.empty-msg{color:var(--muted);font-size:.82rem;text-align:center;padding:20px}
+footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
+    <div class="brand">Mineral<span>Explorer</span></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="kicker">Interactive map · BGS World Mineral Statistics</div>
+  <h1>Who produces and trades the world's <em>minerals</em>?</h1>
+  <p>Pick a commodity and a year to see production, imports or exports by country — either as raw <b>volume</b> or as <b>supply concentration</b> (how dominant the top producers are). 111 commodities, 190 countries, 1970–2024.</p>
+</header>
+
+<section id="explorer-sec">
+  <div class="controls">
+    <select id="commoditySelect" aria-label="Commodity"></select>
+    <div class="chip-row" id="statChips"></div>
+    <div class="chip-row" id="viewChips">
+      <button class="chip view-on" data-view="volume">● Volume</button>
+      <button class="chip" data-view="concentration">◆ Concentration</button>
+    </div>
+  </div>
+
+  <div class="year-row">
+    <button class="playbtn" id="playBtn" title="Play">▶</button>
+    <input type="range" id="yearSlider" min="1970" max="2024" step="1" value="2024">
+    <div class="year-label" id="yearLabel">2024</div>
+  </div>
+
+  <div class="explorer-grid">
+    <div>
+      <div id="map"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+
+    <div class="card">
+      <h3 id="panelTitle">Top producers</h3>
+      <div class="sub" id="panelSub"></div>
+      <div class="callout" id="concentrationCallout" style="display:none">
+        <b id="topShareValue">–</b>
+        <span id="topShareLabel"></span>
+      </div>
+      <div class="bars" id="topList"></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b id="statWorldTotal">–</b><span id="statWorldTotalLabel">World total</span></div>
+    <div class="stat"><b id="statCountryCount">–</b><span>Countries reporting</span></div>
+    <div class="stat"><b id="statTopCountry">–</b><span>Leading country</span></div>
+    <div class="stat"><b id="statTopShare">–</b><span>Its share of world total</span></div>
+  </div>
+
+  <div class="note">Data: <a href="https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/" target="_blank" rel="noopener">British Geological Survey, World Mineral Statistics</a>, downloaded via the BGS OGC API Features service. Figures for a given country/commodity/year are summed across sub-commodity breakdowns. Circle position is each country's geographic centroid, not a mine or port location.</div>
+</section>
+
+<footer>mineral.watch · built on open data from BGS, USGS, UN Comtrade and IEA</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  const RMIN = 3, RMAX = 32;
+  const CONC_BUCKETS = [
+    {max:0.10, color:"#2b7a9e", label:"<10%"},
+    {max:0.25, color:"#4cc9f0", label:"10–25%"},
+    {max:0.45, color:"#f7c56f", label:"25–45%"},
+    {max:0.65, color:"#ed8936", label:"45–65%"},
+    {max:Infinity, color:"#d64545", label:">65%"}
+  ];
+  const STAT_ORDER = ["Production","Imports","Exports"];
+
+  let meta = null, countries = null;
+  let commodityData = null;   // {stat: {year: {iso3: qty}}}
+  let maxQtyByStat = {};      // stat -> max qty across all years (for stable bubble scale)
+  let currentStat = "Production";
+  let currentView = "volume";
+  let currentYear = 2024;
+  let playTimer = null;
+  let hasFitBounds = false;
+
+  const map = L.map("map", {scrollWheelZoom:false, worldCopyJump:true, minZoom:1, maxZoom:6}).setView([15,10], 1);
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+    attribution: "&copy; OpenStreetMap, &copy; CARTO",
+    maxZoom: 6, minZoom: 1
+  }).addTo(map);
+  const markerLayer = L.featureGroup().addTo(map);
+
+  const el = id => document.getElementById(id);
+  const fmtNum = n => new Intl.NumberFormat("en", {notation:"compact", maximumFractionDigits:1}).format(n);
+  const fmtPct = n => (n*100).toFixed(n < 0.01 ? 2 : 1) + "%";
+
+  function concColor(share){
+    for (const b of CONC_BUCKETS) if (share < b.max) return b.color;
+    return CONC_BUCKETS[CONC_BUCKETS.length-1].color;
+  }
+
+  function sparklineSVG(series){
+    if (series.length < 2) return "";
+    const w=150,h=32,pad=2;
+    const max = Math.max(...series.map(d=>d[1]), 1);
+    const min = 0;
+    const step = (w-2*pad)/(series.length-1);
+    const pts = series.map((d,i)=>{
+      const x = pad + i*step;
+      const y = h-pad - (d[1]-min)/(max-min||1) * (h-2*pad);
+      return x.toFixed(1)+","+y.toFixed(1);
+    }).join(" ");
+    return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="display:block;margin-top:6px"><polyline points="${pts}" fill="none" stroke="#4cc9f0" stroke-width="1.6"/></svg>`;
+  }
+
+  function computeMaxQty(stat){
+    let max = 0;
+    const byYear = commodityData[stat] || {};
+    for (const y in byYear) for (const iso3 in byYear[y]) max = Math.max(max, byYear[y][iso3]);
+    return max || 1;
+  }
+
+  function yearRangeForStat(stat){
+    const byYear = commodityData[stat] || {};
+    const years = Object.keys(byYear).map(Number);
+    if (!years.length) return [meta.years.min, meta.years.max];
+    return [Math.min(...years), Math.max(...years)];
+  }
+
+  function buildStatChips(){
+    const available = STAT_ORDER.filter(s => commodityData[s]);
+    const wrap = el("statChips");
+    wrap.innerHTML = "";
+    available.forEach(s => {
+      const b = document.createElement("button");
+      b.className = "chip" + (s===currentStat ? " on" : "");
+      b.textContent = s;
+      b.dataset.stat = s;
+      b.onclick = () => { currentStat = s; onStatChanged(); };
+      wrap.appendChild(b);
+    });
+    if (!available.includes(currentStat)) currentStat = available[0];
+  }
+
+  function onStatChanged(){
+    [...el("statChips").children].forEach(b => b.classList.toggle("on", b.dataset.stat === currentStat));
+    maxQtyByStat[currentStat] = maxQtyByStat[currentStat] || computeMaxQty(currentStat);
+    const [ymin, ymax] = yearRangeForStat(currentStat);
+    el("yearSlider").min = ymin; el("yearSlider").max = ymax;
+    currentYear = Math.min(Math.max(currentYear, ymin), ymax);
+    el("yearSlider").value = currentYear;
+    el("yearLabel").textContent = currentYear;
+    render();
+  }
+
+  function unitFor(commodityName, stat){
+    return (meta.units[commodityName] && meta.units[commodityName][stat]) || "";
+  }
+
+  function render(){
+    const commodityName = el("commoditySelect").value;
+    const yearData = (commodityData[currentStat] || {})[String(currentYear)] || {};
+    const entries = Object.entries(yearData).filter(([iso3,q]) => countries[iso3] && q > 0);
+    const total = entries.reduce((s,[,q]) => s+q, 0);
+    const maxQty = maxQtyByStat[currentStat] || 1;
+
+    markerLayer.clearLayers();
+
+    entries.sort((a,b) => b[1]-a[1]);
+
+    entries.forEach(([iso3, qty]) => {
+      const c = countries[iso3];
+      const share = total > 0 ? qty/total : 0;
+      const radius = RMIN + (RMAX-RMIN) * Math.sqrt(qty/maxQty);
+      const color = currentView === "concentration" ? concColor(share) : "#ed8936";
+
+      const series = [];
+      const byYear = commodityData[currentStat] || {};
+      Object.keys(byYear).sort().forEach(y => {
+        if (byYear[y][iso3] !== undefined) series.push([Number(y), byYear[y][iso3]]);
+      });
+
+      const unit = unitFor(commodityName, currentStat);
+      const popupHtml = `
+        <b>${c.name}</b><br>
+        ${commodityName} — ${currentStat}, ${currentYear}<br>
+        ${fmtNum(qty)} ${unit}<br>
+        Share of world total: <span class="pp-share">${fmtPct(share)}</span>
+        ${sparklineSVG(series)}
+      `;
+
+      L.circleMarker([c.lat, c.lon], {
+        radius, weight: 1.2, color, fillColor: color, fillOpacity: 0.55
+      }).bindPopup(popupHtml).addTo(markerLayer);
+    });
+
+    renderLegend(maxQty);
+    renderPanel(entries, total, commodityName, unitFor(commodityName, currentStat));
+    renderStats(entries, total, commodityName);
+
+    if (!hasFitBounds && entries.length){
+      hasFitBounds = true;
+      map.fitBounds(markerLayer.getBounds(), {padding:[24,24], maxZoom:3});
+    }
+
+    if (!entries.length){
+      el("topList").innerHTML = '<div class="empty-msg">No data for this selection/year.</div>';
+    }
+  }
+
+  function renderLegend(maxQty){
+    const wrap = el("legend");
+    if (currentView === "concentration"){
+      wrap.innerHTML = CONC_BUCKETS.map(b => `<span><i style="background:${b.color}"></i>${b.label} of world total</span>`).join("");
+    } else {
+      const refs = [0.25, 0.6, 1].map(f => Math.round(maxQty*f));
+      wrap.innerHTML = refs.map(v => `<span><i style="background:#ed8936"></i>${fmtNum(v)}</span>`).join("") +
+        `<span style="color:var(--muted)">circle area ≈ quantity</span>`;
+    }
+  }
+
+  function renderPanel(entries, total, commodityName, unit){
+    el("panelSub").textContent = `${commodityName} · ${currentStat} · ${currentYear}`;
+    const top = entries.slice(0, 10);
+    const topQty = top.length ? top[0][1] : 1;
+
+    el("topList").innerHTML = top.map(([iso3, qty], i) => {
+      const c = countries[iso3];
+      const share = total > 0 ? qty/total : 0;
+      const width = (qty/topQty*100).toFixed(1);
+      return `<div class="bar-row" data-iso3="${iso3}">
+        <div class="rank">${i+1}</div>
+        <div>
+          <div class="name">${c.name}</div>
+          <div class="track"><div class="fill" style="width:${width}%"></div></div>
+        </div>
+        <div class="val">${fmtPct(share)}</div>
+      </div>`;
+    }).join("");
+
+    [...el("topList").children].forEach(row => {
+      row.onclick = () => {
+        const iso3 = row.dataset.iso3;
+        const c = countries[iso3];
+        if (c) { map.flyTo([c.lat, c.lon], 4, {duration:.6}); }
+      };
+    });
+
+    const top3Share = entries.slice(0,3).reduce((s,[,q]) => s + (total>0? q/total:0), 0);
+    const showConc = currentView === "concentration" && entries.length > 0;
+    el("concentrationCallout").style.display = showConc ? "flex" : "none";
+    if (showConc){
+      el("topShareValue").textContent = fmtPct(top3Share);
+      el("topShareLabel").textContent = `of world ${currentStat.toLowerCase()} for ${commodityName} in ${currentYear} comes from just the top 3 countries.`;
+    }
+  }
+
+  function renderStats(entries, total, commodityName){
+    const unit = unitFor(commodityName, currentStat);
+    el("statWorldTotal").textContent = total > 0 ? fmtNum(total) : "–";
+    el("statWorldTotalLabel").textContent = `World ${currentStat.toLowerCase()} (${unit || currentYear})`;
+    el("statCountryCount").textContent = entries.length;
+    if (entries.length){
+      const [iso3, qty] = entries[0];
+      el("statTopCountry").textContent = countries[iso3].name;
+      el("statTopShare").textContent = fmtPct(total>0? qty/total:0);
+    } else {
+      el("statTopCountry").textContent = "–";
+      el("statTopShare").textContent = "–";
+    }
+  }
+
+  function loadCommodity(slug){
+    return fetch(`../map_data/data/${slug}.json`).then(r => r.json()).then(data => {
+      commodityData = data;
+      maxQtyByStat = {};
+      buildStatChips();
+      maxQtyByStat[currentStat] = computeMaxQty(currentStat);
+      const [ymin, ymax] = yearRangeForStat(currentStat);
+      el("yearSlider").min = ymin; el("yearSlider").max = ymax;
+      currentYear = ymax;
+      el("yearSlider").value = currentYear;
+      el("yearLabel").textContent = currentYear;
+      render();
+    });
+  }
+
+  function initControls(){
+    const sel = el("commoditySelect");
+    meta.commodities.forEach(c => {
+      const opt = document.createElement("option");
+      opt.value = c.slug; opt.textContent = c.name;
+      if (c.name === "graphite") opt.selected = true;
+      sel.appendChild(opt);
+    });
+    sel.onchange = () => loadCommodity(sel.value);
+
+    [...el("viewChips").children].forEach(b => {
+      b.onclick = () => {
+        currentView = b.dataset.view;
+        [...el("viewChips").children].forEach(x => x.classList.toggle("view-on", x===b));
+        render();
+      };
+    });
+
+    el("yearSlider").oninput = () => {
+      currentYear = Number(el("yearSlider").value);
+      el("yearLabel").textContent = currentYear;
+      render();
+    };
+
+    el("playBtn").onclick = () => {
+      if (playTimer){
+        clearInterval(playTimer); playTimer = null;
+        el("playBtn").textContent = "▶";
+        return;
+      }
+      el("playBtn").textContent = "❙❙";
+      playTimer = setInterval(() => {
+        const slider = el("yearSlider");
+        let y = Number(slider.value) + 1;
+        if (y > Number(slider.max)) y = Number(slider.min);
+        slider.value = y;
+        currentYear = y;
+        el("yearLabel").textContent = y;
+        render();
+      }, 700);
+    };
+  }
+
+  Promise.all([
+    fetch("../map_data/meta.json").then(r => r.json()),
+    fetch("../map_data/countries.json").then(r => r.json())
+  ]).then(([m, c]) => {
+    meta = m; countries = c;
+    initControls();
+    return loadCommodity("graphite");
+  }).catch(err => {
+    el("topList").innerHTML = `<div class="empty-msg">Failed to load data: ${err}</div>`;
+    console.error(err);
+  });
+
+})();
+</script>
+</body>
+</html>

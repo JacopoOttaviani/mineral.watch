@@ -1,0 +1,6 @@
+.DS_Store
+.claude/
+
+# raw BGS source dump (138MB, exceeds GitHub's 100MB limit) — not served
+# by the site; map_data/*.json (generated from this) is what pages fetch
+world_mineral_statistics.csv

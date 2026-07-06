@@ -131,6 +131,7 @@ nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-fi
 .brand span{color:var(--accent)}
 nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap}
 nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto}
 
 /* hero */
 .hero{padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
@@ -150,7 +151,6 @@ nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
 .chip.on.c-mine{background:var(--mine);border-color:var(--mine)}
 .chip.on.c-proc{background:var(--proc);border-color:var(--proc)}
 .chip.on.c-dev{background:var(--dev);border-color:var(--dev)}
-.chip.on.c-flow{background:#e6edf3;border-color:#e6edf3}
 .legend{font-size:.74rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
 .leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
@@ -261,7 +261,6 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
     <a class="link" href="#refining-sec">Refining</a>
     <a class="link" href="#energy-sec">Energy</a>
     <a class="link" href="#trade-sec">Trade</a>
-    <a class="link" href="#prices-sec">Prices</a>
     <a class="link" href="#china-sec">China</a>
     <a class="link" href="#military-sec">Military</a>
     <a class="link" href="#invest-sec">Investment</a>
@@ -269,6 +268,7 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
     <a class="link" href="#sources-sec">Data</a>
     <a class="link" href="#faq-sec">FAQ</a>
     <a class="link" href="#research-sec">Research</a>
+    <a class="cta" href="#research-sec">Contact us</a>
   </div>
 </nav>
 
@@ -287,19 +287,17 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
 <section id="map-sec">
   <div class="kicker">Interactive map</div>
   <h2>The graphite world map</h2>
-  <p class="lede">Producing mines, processing and anode plants, development projects, and major trade flows. Tap a marker for details; toggle layers below. Circle size ≈ scale of operation.</p>
+  <p class="lede">Producing mines, processing and anode plants, and development projects. Tap a marker for details; toggle layers below. Circle size ≈ scale of operation.</p>
   <div class="map-controls">
     <button class="chip c-mine on" data-layer="mines">⛏ Mines</button>
     <button class="chip c-proc on" data-layer="processing">⚙ Processing &amp; anode</button>
     <button class="chip c-dev on" data-layer="development">◐ Development</button>
-    <button class="chip c-flow on" data-layer="flows">→ Trade flows</button>
   </div>
   <div id="map"></div>
   <div class="legend" style="margin-top:10px">
     <span><i style="background:var(--mine)"></i>Mine (producing)</span>
     <span><i style="background:var(--proc)"></i>Processing / anode plant</span>
     <span><i style="background:var(--dev)"></i>Development project</span>
-    <span><i style="background:#e6edf3;border-radius:2px;height:3px;width:16px"></i>Trade flow (width ≈ share)</span>
   </div>
 </section>
 
@@ -484,18 +482,6 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
   </div>
 </section>
 
-<section id="prices-sec">
-  <div class="kicker">Prices</div>
-  <h2>A market under pressure</h2>
-  <p class="lede">Oversupply and competition from synthetic graphite pushed natural flake prices to historic lows by late 2025, even as battery demand kept growing.</p>
-  <div class="card">
-    <h3>Average U.S. import unit value, natural graphite</h3>
-    <div class="sub">USD per metric ton at foreign ports</div>
-    <div class="chartbox" style="height:300px"><canvas id="chPrice"></canvas></div>
-    <div class="src">Source: USGS MCS 2026. Reference points, early 2026: flake 94% C FOB China ≈ $750–770/t (Fastmarkets); spherical 99.95% ≈ $1,700–1,800/t.</div>
-  </div>
-</section>
-
 <section id="china-sec">
   <div class="kicker">Concentration risk</div>
   <h2>The China chokepoint</h2>
@@ -569,7 +555,7 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
     <li><b><a href="https://pubs.rsc.org/en/content/articlehtml/2025/va/d5va00171d">RSC Environmental Science: Advances (2025)</a></b> — life-cycle analysis of synthetic graphite anode production: energy, GHG and water intensity; basis for the refining-energy charts, together with <a href="https://www.mdpi.com/2313-0105/12/2/68">MDPI Batteries (2025)</a> on the natural route in Québec.</li>
     <li><b><a href="https://www.csis.org/analysis/underexplored-and-undervalued-addressing-africas-mineral-exploration-gap">CSIS — Addressing Africa's Mineral Exploration Gap</a></b> and <b><a href="https://panafgeo.eurogeosurveys.org/about/">PanAfGeo</a></b> — exploration spending trends and geological mapping initiatives in Africa.</li>
     <li><b>Defense &amp; policy</b> — U.S. DoD Defense Production Act awards and <a href="https://www.mining.com/graphite-one-earmarked-for-325-million-loan-for-anode-manufacturing-plant/">EXIM Bank financing coverage (MINING.com)</a>; military-use overviews from <a href="https://www.mining.com/graphites-war-fighting-capabilities/">MINING.com</a> and <a href="https://www.semcocarbon.com/blog/military-applications-for-carbon-graphite-materials">Semco Carbon</a>.</li>
-    <li><b>Notes</b> — Trade-flow arcs on the map are indicative of major corridors, not exact tonnages. Mine and plant coordinates are approximate. Downstream (spherical/anode) shares are estimates; official statistics do not fully separate battery-grade material. Last data refresh: July 2026.</li>
+    <li><b>Notes</b> — Mine and plant coordinates are approximate. Downstream (spherical/anode) shares are estimates; official statistics do not fully separate battery-grade material. Last data refresh: July 2026.</li>
   </ul>
 </section>
 
@@ -736,21 +722,6 @@ const DATA = {
     {n:"Vittangi",c:"Sweden",ll:[67.7,21.6],ty:"development",sz:1,d:"High-grade European flake project (Talga)."},
     {n:"Coosa",c:"United States",ll:[32.9,-86.3],ty:"development",sz:1,d:"Alabama graphite project."},
     {n:"Maniry",c:"Madagascar",ll:[-24.4,44.9],ty:"development",sz:1,d:"Flake graphite project (Evion), southern Madagascar."}
-  ],
-  flows:[ // [fromLL, toLL, label, weight 1-5]
-    {f:[45.3,130.9],t:[36.2,138.2],l:"China → Japan · 36% of Chinese natural graphite exports",w:4},
-    {f:[45.3,130.9],t:[-7.0,110.4],l:"China → Indonesia · 22% (flake + SPG for new anode plants)",w:3},
-    {f:[45.3,130.9],t:[36.5,127.9],l:"China → South Korea · 10% natural, 40% of SPG exports",w:3},
-    {f:[45.3,130.9],t:[51.1,10.4],l:"China → Germany · 8% of Chinese exports",w:2},
-    {f:[45.3,130.9],t:[39.0,-98.0],l:"China → USA · 46% of U.S. natural graphite imports",w:3},
-    {f:[-13.35,38.6],t:[31.57,-91.43],l:"Mozambique → USA · Balama feeds the Vidalia anode plant",w:2},
-    {f:[-18.9,47.5],t:[51.1,10.4],l:"Madagascar → Europe · fast-growing flake supplier",w:2},
-    {f:[-18.9,47.5],t:[35.9,104.2],l:"Madagascar → China · flake for processing",w:2},
-    {f:[46.35,-75.32],t:[39.0,-98.0],l:"Canada → USA · 13% of U.S. imports",w:2},
-    {f:[28.5,-110.5],t:[39.0,-98.0],l:"Mexico → USA · 12% of U.S. imports (amorphous)",w:1},
-    {f:[-15.8,-47.9],t:[51.1,10.4],l:"Brazil → Europe · flake concentrate",w:1},
-    {f:[-7.0,110.4],t:[39.0,-98.0],l:"Indonesia → USA · 31% of U.S. anode material imports",w:2},
-    {f:[36.5,127.9],t:[39.0,-98.0],l:"South Korea → USA · 14% of U.S. anode material imports",w:1}
   ]
 };
 
@@ -780,7 +751,7 @@ L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",{
 map.on("click",()=>map.scrollWheelZoom.enable());
 
 const groups = {mines:L.layerGroup().addTo(map), processing:L.layerGroup().addTo(map),
-                development:L.layerGroup().addTo(map), flows:L.layerGroup().addTo(map)};
+                development:L.layerGroup().addTo(map)};
 const TYCOL={mine:col("--mine"),processing:col("--proc"),development:col("--dev")};
 const TYNAME={mine:"MINE",processing:"PROCESSING / ANODE",development:"DEVELOPMENT"};
 const TYGRP={mine:"mines",processing:"processing",development:"development"};
@@ -790,25 +761,6 @@ DATA.sites.forEach(s=>{
   L.circleMarker(s.ll,{radius:4+s.sz*2.4,color:c,weight:1.5,fillColor:c,fillOpacity:.35})
    .bindPopup(`<span class="pp-tag" style="background:${c}22;color:${c}">${TYNAME[s.ty]}</span><br><b>${s.n}</b> · ${s.c}<br>${s.d}`)
    .addTo(groups[TYGRP[s.ty]]);
-});
-
-/* curved trade arcs */
-function arc(from,to,n=48){
-  const [la1,lo1]=from,[la2,lo2]=to;
-  const mx=(la1+la2)/2, myRaw=(lo1+lo2)/2;
-  const dx=la2-la1, dy=lo2-lo1, dist=Math.hypot(dx,dy);
-  const cx=mx-dy*0.18, cy=myRaw+dx*0.18; // control point offset perpendicular
-  const pts=[];
-  for(let i=0;i<=n;i++){const t=i/n;
-    pts.push([ (1-t)*(1-t)*la1+2*(1-t)*t*cx+t*t*la2,
-               (1-t)*(1-t)*lo1+2*(1-t)*t*cy+t*t*lo2 ]);}
-  return pts;
-}
-DATA.flows.forEach(fl=>{
-  L.polyline(arc(fl.f,fl.t),{color:"#e6edf3",weight:.6+fl.w*.7,opacity:.4,dashArray:"1 7",lineCap:"round"})
-   .bindPopup(`<b>Trade flow</b><br>${fl.l}`).addTo(groups.flows);
-  // arrowhead dot at destination
-  L.circleMarker(fl.t,{radius:2.5,color:"#e6edf3",weight:0,fillColor:"#e6edf3",fillOpacity:.55}).addTo(groups.flows);
 });
 
 /* layer toggles */
@@ -829,6 +781,33 @@ Chart.defaults.borderColor=col("--line");
 Chart.defaults.font.size=11;
 const fmt=n=>n>=1e6?(n/1e6).toFixed(2)+" Mt":n>=1e3?(n/1e3).toFixed(0)+" kt":n+" t";
 const noLeg={plugins:{legend:{display:false}}};
+
+/* draw a total in the center of doughnut charts */
+Chart.register({
+  id:"centerText",
+  afterDraw(chart){
+    const opts=chart.options.plugins&&chart.options.plugins.centerText;
+    if(!opts||!opts.enabled) return;
+    if(!chart.chartArea) return;
+    const total=chart.data.datasets[0].data.reduce((a,b)=>a+b,0);
+    const {ctx,chartArea:{left,right,top,bottom}}=chart;
+    const cx=(left+right)/2, cy=(top+bottom)/2;
+    const line1=Math.round(total)+" "+(opts.unit||"");
+    ctx.save();
+    ctx.textAlign="center";
+    ctx.textBaseline="middle";
+    ctx.fillStyle=col("--txt");
+    ctx.font="700 19px -apple-system,Segoe UI,Roboto,sans-serif";
+    ctx.fillText(line1, cx, cy-(opts.label?9:0));
+    if(opts.label){
+      ctx.font="600 9.5px -apple-system,Segoe UI,Roboto,sans-serif";
+      ctx.fillStyle=col("--muted");
+      ctx.fillText(opts.label, cx, cy+10);
+    }
+    ctx.restore();
+  }
+});
+
 const donutOpts={maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
   tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}%`}}},cutout:"62%"};
 
@@ -841,7 +820,8 @@ new Chart(chProd,{type:"bar",
 
 new Chart(chRes,{type:"doughnut",
   data:{labels:DATA.reserves.map(d=>d[0]),datasets:[{data:DATA.reserves.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
-  options:{...donutOpts,plugins:{...donutOpts.plugins,tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed} Mt`}}}}});
+  options:{...donutOpts,plugins:{...donutOpts.plugins,tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed} Mt`}},
+    centerText:{enabled:true,label:"world total",unit:"Mt"}}}});
 
 new Chart(chTrend,{type:"line",
   data:{labels:DATA.trend.map(d=>d[0]),
@@ -857,15 +837,6 @@ donut(chCnExp,DATA.cnExports);
 donut(chSpg,DATA.spgExports);
 donut(chUsImp,DATA.usImports);
 donut(chAam,DATA.aamImports);
-
-new Chart(chPrice,{type:"line",
-  data:{labels:DATA.prices.years,datasets:[
-    {label:"Flake",data:DATA.prices.flake,borderColor:col("--accent"),tension:0,pointRadius:3},
-    {label:"Lump & chip (Sri Lanka)",data:DATA.prices.lump,borderColor:col("--accent2"),tension:0,pointRadius:3},
-    {label:"Amorphous",data:DATA.prices.amorphous,borderColor:"#9d8cff",tension:0,pointRadius:3}]},
-  options:{maintainAspectRatio:false,
-    plugins:{legend:{position:"bottom",labels:{boxWidth:10}},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: $${c.parsed.y}/t`}}},
-    scales:{y:{ticks:{callback:v=>"$"+v},grid:{color:col("--line")}},x:{grid:{display:false}}}}});
 
 /* energy charts (floating bars = [min,max] ranges) */
 new Chart(chEnergy,{type:"bar",
@@ -902,5 +873,6 @@ const io3=new IntersectionObserver(es=>es.forEach(e=>{
 }),{rootMargin:"-40% 0px -55% 0px"});
 secs.forEach(s=>io3.observe(s));
 </script>
+<script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
