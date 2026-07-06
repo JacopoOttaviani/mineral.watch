@@ -204,6 +204,10 @@ nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decorati
 .fstat b{display:block;font-size:1.5rem;color:var(--accent);letter-spacing:-.01em}
 .fstat span{font-size:.72rem;color:var(--muted)}
 
+/* embedded supply-chain map */
+.map-embed{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
+.map-embed iframe{width:100%;display:block;border:0;height:640px;transition:height .2s ease}
+
 /* featured chart (world mine production) */
 .fchart{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:16px;align-self:center}
 .fchart .fchart-h{font-size:.72rem;color:var(--muted);margin-bottom:10px}
@@ -279,7 +283,7 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
     <a class="link" href="#research">Research</a>
     <a class="link" href="#faq">FAQ</a>
     <a class="link" href="#about">About</a>
-    <a class="cta" href="/graphite/">Graphite →</a>
+    <a class="cta" href="#research">Contact us</a>
   </div>
 </nav>
 
@@ -431,19 +435,14 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
 </section>
 
 <section id="supply-chain">
-  <div class="feature">
-    <div>
-      <div class="kicker">Interactive map</div>
-      <h2 class="serif">Where it's mined vs where it's refined</h2>
-      <p>For most strategic minerals, the supply-chain risk isn't at the mine — it's at the refinery. Compare mine production against refined and smelter output, country by country, for cobalt, copper, nickel, lithium, graphite, rare earths and manganese, 1970–2024.</p>
-      <a class="btn primary" href="/supply-chain/">Open the Supply-Chain map →</a>
-    </div>
-    <div class="fstats">
-      <div class="fstat"><b>82%</b><span>of world refined cobalt comes from China, which mines under 1% of it</span></div>
-      <div class="fstat"><b>75%</b><span>of world mined cobalt comes from the DR Congo, which refines almost none</span></div>
-      <div class="fstat"><b>47%</b><span>of world refined copper is produced in China alone</span></div>
-      <div class="fstat"><b>7</b><span>strategic minerals mapped, mine vs refinery, 1970–2024</span></div>
-    </div>
+  <div class="kicker">Interactive map</div>
+  <h2 class="serif">Where it's mined vs where it's refined</h2>
+  <p class="lede">For most strategic minerals, the supply-chain risk isn't at the mine — it's at the refinery. Pick a mineral and compare mine production against refined and smelter output, country by country, for cobalt, copper, nickel, lithium, graphite, rare earths and manganese, 1970–2024.</p>
+  <div class="map-embed">
+    <iframe id="scEmbed" src="/supply-chain/?embed=1" title="Interactive map: where strategic minerals are mined vs refined" loading="lazy"></iframe>
+  </div>
+  <div class="actions" style="margin-top:18px">
+    <a class="btn ghost" href="/supply-chain/">Open full-screen →</a>
   </div>
 </section>
 
@@ -635,6 +634,14 @@ const homeChartObserver = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) drawHomeTrend(); });
 }, { threshold: .3 });
 homeChartObserver.observe(document.getElementById("chHomeTrend"));
+
+window.addEventListener("message", e => {
+  if (e.origin !== window.location.origin) return;
+  if (e.data && e.data.type === "mineralwatch-embed-height"){
+    const f = document.getElementById("scEmbed");
+    if (f) f.style.height = Math.max(e.data.height, 500) + "px";
+  }
+});
 </script>
 <script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

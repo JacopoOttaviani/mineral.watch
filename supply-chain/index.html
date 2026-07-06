@@ -24,6 +24,7 @@
 <meta name="twitter:description" content="Where strategic minerals are mined vs where they are refined, mapped side by side. Built on BGS World Mineral Statistics.">
 <meta name="twitter:image" content="https://mineral.watch/brand/og-image.png">
 
+<script>if(/(?:^|[?&])embed=1(?:&|$)/.test(location.search)) document.documentElement.setAttribute("data-embed", "1");</script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
 :root{
@@ -118,6 +119,13 @@ input[type=range]{flex:1 1 220px;accent-color:var(--accent)}
 
 .note{font-size:.72rem;color:var(--muted);border-left:3px solid var(--accent);padding:8px 12px;background:var(--bg2);border-radius:0 8px 8px 0;margin-top:20px}
 footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}
+
+/* embedded (iframe) mode: hide page chrome, keep just the map widget */
+html[data-embed] nav,html[data-embed] .hero,html[data-embed] footer{display:none}
+html[data-embed] #sc-sec{padding-top:0}
+/* fixed (not vh-based) map height when embedded: the iframe is auto-sized to this
+   page's own scrollHeight, so a vh unit here would create a resize feedback loop */
+html[data-embed] .mapdiv{height:420px;min-height:0}
 </style>
 </head>
 <body>
@@ -444,6 +452,21 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
       el("chokepoint").style.display = "none";
     }
     applyLayers();
+    reportHeight();
+  }
+
+  // when framed (e.g. the homepage embed), tell the parent our real height so it can size the iframe
+  function reportHeight(){
+    if (window.parent === window) return;
+    window.parent.postMessage({type:"mineralwatch-embed-height", height: document.documentElement.scrollHeight}, window.location.origin);
+  }
+  // a plain window "resize" listener doesn't fire reliably when only the iframe's
+  // own box size changes (e.g. the parent page reflowing at a new breakpoint), so
+  // watch the actual rendered size instead
+  if (window.parent !== window && "ResizeObserver" in window){
+    let roTimer;
+    new ResizeObserver(() => { clearTimeout(roTimer); roTimer = setTimeout(reportHeight, 100); })
+      .observe(document.documentElement);
   }
 
   function yearRange(){
