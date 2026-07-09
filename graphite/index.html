@@ -54,7 +54,7 @@
       "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
       "temporalCoverage": "2018/2026",
       "spatialCoverage": "Worldwide",
-      "variableMeasured": ["Mine production", "Reserves", "Trade flows", "Refining capacity", "Prices"],
+      "variableMeasured": ["Mine production", "Reserves", "Trade flows", "Refining capacity", "Prices", "Companies"],
       "isAccessibleForFree": true,
       "license": "https://mineral.watch/",
       "citation": [
@@ -109,7 +109,7 @@
 :root{
   --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
   --txt:#e6edf3;--muted:#8b98a5;--accent:#ed8936;--accent2:#4cc9f0;
-  --mine:#ed8936;--proc:#4cc9f0;--dev:#9d8cff;
+  --mine:#ed8936;--proc:#4cc9f0;--dev:#9d8cff;--ind:#6ee7b7;
   --radius:14px;--pad:16px;
   font-size:16px;
 }
@@ -151,6 +151,7 @@ nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decorati
 .chip.on.c-mine{background:var(--mine);border-color:var(--mine)}
 .chip.on.c-proc{background:var(--proc);border-color:var(--proc)}
 .chip.on.c-dev{background:var(--dev);border-color:var(--dev)}
+.chip.on.c-ind{background:var(--ind);border-color:var(--ind)}
 .legend{font-size:.74rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
 .leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
@@ -188,6 +189,23 @@ nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decorati
 /* process flow */
 .flow-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
 .flow-wrap svg{min-width:980px;display:block}
+
+/* company tracker */
+.co-search{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.co-search input{flex:1 1 200px;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;color:var(--txt);font-size:.8rem;outline:none;-webkit-appearance:none}
+.co-search input:focus{border-color:var(--accent)}
+.co-search input::placeholder{color:var(--muted)}
+.co-count{font-size:.72rem;color:var(--muted)}
+.co-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+table.co{width:100%;min-width:900px;border-collapse:collapse;font-size:.79rem}
+.co th{text-align:left;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.co td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted);line-height:1.45}
+.co td:first-child{min-width:170px}
+.co td b{color:var(--txt);font-size:.82rem}
+.co td b a{color:var(--txt);text-decoration:none;border-bottom:1px dashed var(--line)}
+.co td b a:hover{color:var(--accent2);border-bottom-color:var(--accent2)}
+.co .tik{font-size:.68rem;color:var(--muted);margin-top:2px;white-space:nowrap}
+.co .pp-tag{white-space:nowrap;margin-bottom:0}
 
 /* mini cards (military / invest) */
 .mini-grid{display:grid;grid-template-columns:1fr;gap:12px}
@@ -264,6 +282,7 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
     <a class="link" href="#china-sec">China</a>
     <a class="link" href="#military-sec">Military</a>
     <a class="link" href="#invest-sec">Investment</a>
+    <a class="link" href="#companies-sec">Companies</a>
     <a class="link" href="#africa-sec">Africa</a>
     <a class="link" href="#sources-sec">Data</a>
     <a class="link" href="#faq-sec">FAQ</a>
@@ -527,6 +546,30 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
   </div>
 </section>
 
+<section id="companies-sec">
+  <div class="kicker">Company tracker</div>
+  <h2>The companies that move graphite</h2>
+  <p class="lede">The main producers, refiners and developers across the chain. Chinese flake mining itself is fragmented across dozens of local operators — the concentration is downstream, where six Chinese anode makers supply roughly 70% of the world's anode material. Filter by segment or search.</p>
+  <div class="map-controls" id="coFilters">
+    <button class="chip c-mine on" data-seg="mine">⛏ Miners</button>
+    <button class="chip c-proc on" data-seg="anode">⚙ Anode &amp; battery</button>
+    <button class="chip c-ind on" data-seg="ind">🏭 Electrodes &amp; industrial</button>
+    <button class="chip c-dev on" data-seg="dev">◐ Developers</button>
+  </div>
+  <div class="co-search">
+    <input id="coSearch" type="search" placeholder="Search company, asset, country…" aria-label="Search companies">
+    <span class="co-count" id="coCount"></span>
+  </div>
+  <div class="co-wrap">
+    <table class="co">
+      <thead><tr><th>Company</th><th>Segment</th><th>Key assets</th><th>Status &amp; recent signals</th></tr></thead>
+      <tbody id="coBody"></tbody>
+    </table>
+  </div>
+  <div class="note">Company status reflects public disclosures as of July 2026. This is an observational tracker, not investment advice.</div>
+  <div class="src">Sources: company disclosures &amp; filings; USGS MCS 2026; IEA; <a href="https://www.exim.gov/">EXIM Bank</a>, <a href="https://www.dfc.gov/media/press-releases/dfc-opens-pathway-secure-strategic-equity-interest-syrah-owner-balama-graphite">U.S. DFC</a> and <a href="https://www.energy.gov/lpo/loan-programs-office">DOE LPO</a> announcements; trade press (MINING.com, Fastmarkets, TanzaniaInvest).</div>
+</section>
+
 <section id="africa-sec">
   <div class="kicker">The mapping gap</div>
   <h2>Africa: rich in graphite, poor in maps</h2>
@@ -682,6 +725,121 @@ const DATA = {
     {ico:"🔋",t:"5 · Battery cell",p:"Anode material is coated onto copper foil and assembled into cells — mostly in China, South Korea and Japan, increasingly in the U.S. and EU.",f:"~50–70 kg graphite per EV battery"},
     {ico:"🚗",t:"6 · EV & beyond",p:"Batteries now drive graphite demand growth; steelmaking refractories remain the traditional base. IEA expects demand to about double by 2040.",f:"China projected to supply ~80% of battery-grade graphite in 2035"}
   ],
+  companies:[
+    // seg: mine | anode | ind | dev
+    // --- miners (producing) ---
+    {n:"Syrah Resources",u:"https://www.syrahresources.com.au/",hq:"Australia",tik:"ASX: SYR",seg:"mine",
+     a:"Balama mine (Mozambique) — largest flake mine outside China, ~350 kt/yr nameplate; Vidalia anode plant (Louisiana)",
+     s:"Balama restarted mid-2025 after insurrection-related suspension. 2026: U.S. DFC converting debt to equity plus A$104M raise; first commercial anode sales from Vidalia targeted H2 2026."},
+    {n:"Nacional de Grafite",u:"https://www.grafite.com/",hq:"Brazil",tik:"private",seg:"mine",
+     a:"Three flake mines in Minas Gerais, ~70 kt/yr capacity",
+     s:"Long-standing largest producer in the Americas; supplies flake and specialty graphite worldwide."},
+    {n:"NextSource Materials",u:"https://www.nextsourcematerials.com/",hq:"Canada",tik:"TSX: NEXT",seg:"mine",
+     a:"Molo mine (Madagascar), Phase 1 ~17 kt/yr SuperFlake",
+     s:"First commercial shipments late 2024 to the U.S. and Germany; Phase 2 expansion and downstream anode plans under study."},
+    {n:"Walkabout Resources",u:"https://wkt.com.au/",hq:"Australia",tik:"ASX: WKT",seg:"mine",
+     a:"Lindi Jumbo mine (Tanzania), ~40 kt/yr design capacity",
+     s:"First shipments 2024; ramp-up continuing under balance-sheet pressure from weak flake prices."},
+    {n:"Northern Graphite",u:"https://www.northerngraphite.com/",hq:"Canada",tik:"TSXV: NGC",seg:"mine",
+     a:"Lac des Îles (Québec) — North America's only producing graphite mine; Okanjande (Namibia, idle); Baie-Comeau plant concept",
+     s:"Acquired Imerys' graphite mines in 2022; output constrained by weak prices while it seeks growth financing."},
+    {n:"South Star Battery Metals",u:"https://southstarbatterymetals.com/",hq:"Canada",tik:"TSXV: STS",seg:"mine",
+     a:"Santa Cruz mine (Bahia, Brazil), Phase 1 ~12 kt/yr; BamaStar project (Alabama)",
+     s:"Brazil's first new graphite mine in decades, ramping since 2024."},
+    {n:"Mineral Commodities",u:"https://www.mineralcommodities.com/",hq:"Australia",tik:"ASX: MRC",seg:"mine",
+     a:"Skaland mine (Norway) — Europe's only producing flake mine",
+     s:"Highest-grade operating flake mine in Europe; strategic options for the asset under review."},
+    {n:"Tirupati Graphite",u:"https://www.tirupatigraphite.co.uk/",hq:"United Kingdom",tik:"LSE: TGR",seg:"mine",
+     a:"Sahamamy & Vatomina mines (Madagascar)",
+     s:"Operations curtailed since late 2024 amid weak prices; expansion plans under review."},
+    {n:"AMG Critical Materials",u:"https://amg-nv.com/",hq:"Netherlands",tik:"AMS: AMG",seg:"mine",
+     a:"Graphit Kropfmühl: vein graphite (Bogala, Sri Lanka) and high-purity processing (Germany)",
+     s:"Niche supplier of high-purity natural graphite for industrial applications."},
+    // --- anode & battery materials ---
+    {n:"BTR New Material Group",u:"https://www.btrchina.com/",hq:"China",tik:"BSE: 835185",seg:"anode",
+     a:"World's largest anode producer (~25% of global supply); natural SPG at Jixi/Shenzhen plus synthetic; plants in Indonesia and Morocco",
+     s:"Supplies CATL, BYD and Panasonic; building overseas capacity to serve ex-China cell plants around trade barriers."},
+    {n:"Ningbo Shanshan",u:"https://www.ssgf.net/",hq:"China",tik:"SSE: 600884",seg:"anode",
+     a:"Top-2 anode maker; synthetic bases in Inner Mongolia, Sichuan and Yunnan",
+     s:"Planned Finland plant would be the first Chinese-owned anode base in Europe."},
+    {n:"Shanghai Putailai",u:"https://www.putailai.com/",hq:"China",tik:"SSE: 603659",seg:"anode",
+     a:"Top-3 anode maker via subsidiary Jiangxi Zichen; graphitisation in Inner Mongolia",
+     s:"Sweden blocked its planned 100 kt/yr Sundsvall plant on national-security grounds (2024)."},
+    {n:"Shangtai Technology",u:"http://www.sthfcl.com/",hq:"China",tik:"SZSE: 001301",seg:"anode",
+     a:"Major synthetic anode producer; integrated graphitisation in Inner Mongolia",
+     s:"Fast riser on low-cost integrated graphitisation capacity."},
+    {n:"Zhongke Electric (Shinzoom)",u:"http://www.zkdq.cc/",hq:"China",tik:"SZSE: 300035",seg:"anode",
+     a:"Synthetic anode under the Shinzoom brand; plants in Hunan and southwest China",
+     s:"Top-five anode supplier to major Chinese cell makers."},
+    {n:"Kaijin New Energy",u:"https://www.kaijinenergy.com/",hq:"China",tik:"private",seg:"anode",
+     a:"Synthetic anode; Guangdong base with Inner Mongolia graphitisation",
+     s:"Top-five anode producer; among CATL's largest anode suppliers."},
+    {n:"POSCO Future M",u:"https://www.poscofuturem.com/",hq:"South Korea",tik:"KRX: 003670",seg:"anode",
+     a:"Sejong natural-graphite anode plants; synthetic anode via Pohang affiliates",
+     s:"The only producer of natural-graphite anode at scale outside China; investor in Tanzania's Mahenge mine and diversifying feedstock to Africa."},
+    {n:"Mitsubishi Chemical Group",u:"https://www.mcgc.com/",hq:"Japan",tik:"TYO: 4188",seg:"anode",
+     a:"Natural and synthetic anode material, plants in Japan",
+     s:"Long-time anode supplier to Japanese cell makers."},
+    {n:"Novonix",u:"https://www.novonixgroup.com/",hq:"Australia / U.S.",tik:"NASDAQ: NVX",seg:"anode",
+     a:"Riverside synthetic anode plant (Chattanooga, Tennessee); second U.S. plant planned",
+     s:"Conditional US$755M DOE loan for the new Tennessee plant; offtake agreements with Panasonic and PowerCo."},
+    {n:"Anovion",u:"https://anovionbattery.com/",hq:"United States",tik:"private",seg:"anode",
+     a:"Synthetic anode graphite, Sanborn (New York); Bainbridge (Georgia) plant planned",
+     s:"US$117M DOE grant; decades of U.S. graphitisation experience behind the buildout."},
+    {n:"Vianode",u:"https://www.vianode.com/",hq:"Norway",tik:"private (Elkem / Hydro / Altor)",seg:"anode",
+     a:"Herøya synthetic anode plant, run on hydropower; large-scale plant planned in St. Thomas (Ontario)",
+     s:"Sells verified low-CO₂ anode at a premium; GM supply agreement anchors the North American expansion."},
+    {n:"Epsilon Advanced Materials",u:"https://www.epsilonam.com/",hq:"India",tik:"private",seg:"anode",
+     a:"Anode plants in Karnataka (India); Brunswick County (North Carolina) plant announced",
+     s:"India's first merchant anode maker, part of the Epsilon Carbon group."},
+    // --- electrodes & industrial ---
+    {n:"Resonac",u:"https://www.resonac.com/",hq:"Japan",tik:"TYO: 4004",seg:"ind",
+     a:"Graphite electrodes (world top-3, ex-Showa Denko) plus battery anode materials",
+     s:"Electrode heavyweight supplying electric-arc steelmaking; anode business serves Japanese cell makers."},
+    {n:"GrafTech International",u:"https://www.graftech.com/",hq:"United States",tik:"NYSE: EAF",seg:"ind",
+     a:"Graphite electrodes; Seadrift needle-coke plant (Texas)",
+     s:"One of the few vertically integrated electrode makers outside China — needle coke is also the synthetic-anode feedstock."},
+    {n:"HEG",u:"https://hegltd.com/",hq:"India",tik:"NSE: HEG",seg:"ind",
+     a:"World's largest single-site electrode plant (Madhya Pradesh); ~20 kt anode plant via The Advanced Carbons Company",
+     s:"Diversifying from steel electrodes into battery anode material."},
+    {n:"Graphite India",u:"https://www.graphiteindia.com/",hq:"India",tik:"NSE: GRAPHITE",seg:"ind",
+     a:"Graphite electrodes, ~98 kt/yr capacity across India and Germany",
+     s:"Major electrode supplier to electric-arc steelmaking."},
+    {n:"Tokai Carbon",u:"https://www.tokaicarbon.co.jp/en/",hq:"Japan",tik:"TYO: 5301",seg:"ind",
+     a:"Electrodes, carbon black and specialty graphite (Japan, U.S., Europe)",
+     s:"Supplies EAF steel and semiconductor industries."},
+    {n:"SGL Carbon",u:"https://www.sglcarbon.com/",hq:"Germany",tik:"ETR: SGL",seg:"ind",
+     a:"Specialty graphite and carbon fibres (Germany, Poland, U.S.)",
+     s:"Key supplier of isostatic graphite for semiconductors and industrial uses."},
+    {n:"Imerys",u:"https://www.imerys.com/",hq:"France",tik:"EPA: NK",seg:"ind",
+     a:"Imerys Graphite & Carbon: synthetic and specialty graphite (Switzerland, Belgium, Japan)",
+     s:"Specialty carbons for batteries and industry; sold its graphite mines to Northern Graphite in 2022."},
+    // --- developers ---
+    {n:"Graphite One",u:"https://www.graphiteoneinc.com/",hq:"United States",tik:"TSXV: GPH",seg:"dev",
+     a:"Graphite Creek (Alaska) — largest U.S. deposit, 175 kt/yr planned; anode plant planned in Warren (Ohio)",
+     s:"US$2.07B in EXIM Bank letters of interest (Dec 2025) plus DoD grants; formal loan application expected in 2026."},
+    {n:"Nouveau Monde Graphite",u:"https://nmg.com/",hq:"Canada",tik:"NYSE: NMG · TSX: NOU",seg:"dev",
+     a:"Matawinie mine (Québec, ~106 kt/yr) + Bécancour anode plant (13 kt/yr, Panasonic-anchored)",
+     s:"FID confirmed and construction started May 2026 on a US$645M package, with a 7-year Government of Canada offtake; Bécancour FID targeted H2 2026."},
+    {n:"Talga Group",u:"https://www.talgagroup.com/",hq:"Australia / Sweden",tik:"ASX: TLG",seg:"dev",
+     a:"Vittangi mine + Luleå anode plant (Sweden)",
+     s:"Europe's most advanced integrated natural-anode project; permits upheld, now in project financing."},
+    {n:"Westwater Resources",u:"https://westwaterresources.net/",hq:"United States",tik:"NYSE-A: WWR",seg:"dev",
+     a:"Kellyton plant (Alabama), Phase I 12.5 kt/yr; Coosa deposit",
+     s:"Qualification line commissioned 2025, but Stellantis' offtake termination (Nov 2025) paused debt syndication; EXIM letter of interest in hand."},
+    {n:"Black Rock Mining",u:"https://blackrockmining.com.au/",hq:"Australia",tik:"ASX: BKT",seg:"dev",
+     a:"Mahenge mine (Tanzania), Module 1",
+     s:"POSCO-backed; early works near complete mid-2026, full-funding FID pending on a ~US$179M package."},
+    {n:"EcoGraf",u:"https://www.ecograf.com.au/",hq:"Australia",tik:"ASX: EGR",seg:"dev",
+     a:"Epanko mine (Tanzania), ~60–73 kt/yr planned; proprietary HF-free purification",
+     s:"Updated feasibility study Feb 2026; German-government-supported US$105M loan facility advancing."},
+    {n:"Renascor Resources",u:"https://renascor.com.au/",hq:"Australia",tik:"ASX: RNU",seg:"dev",
+     a:"Siviour deposit (South Australia) + planned purified spherical graphite plant",
+     s:"Backed by an A$185M Australian government loan facility."},
+    {n:"Evion Group",u:"https://eviongroup.com/",hq:"Australia",tik:"ASX: EVG",seg:"dev",
+     a:"Maniry project (Madagascar); graphite-products JV in India",
+     s:"DFS-stage developer of southern Madagascar flake."}
+  ],
   sites:[
     // type: mine | processing | development ; size 1-3
     {n:"Luobei / Hegang cluster",c:"China",ll:[47.6,130.8],ty:"mine",sz:3,d:"Heilongjiang flake graphite heartland — the world's largest mining district."},
@@ -764,7 +922,7 @@ DATA.sites.forEach(s=>{
 });
 
 /* layer toggles */
-document.querySelectorAll(".chip").forEach(ch=>ch.addEventListener("click",()=>{
+document.querySelectorAll(".chip[data-layer]").forEach(ch=>ch.addEventListener("click",()=>{
   const g=groups[ch.dataset.layer];
   if(ch.classList.toggle("on")) map.addLayer(g); else map.removeLayer(g);
 }));
@@ -774,6 +932,37 @@ document.getElementById("journey").innerHTML = DATA.journey.map((j,i)=>`
   <div class="jcard"><div class="num">${String(i+1).padStart(2,"0")}</div>
     <div class="ico">${j.ico}</div><h3>${j.t}</h3><p>${j.p}</p>
     <div class="fact">${j.f}</div></div>`).join("");
+
+/* ============ COMPANY TRACKER ============ */
+const SEGMETA={
+  mine:{label:"Miner",color:col("--mine")},
+  anode:{label:"Anode & battery",color:col("--proc")},
+  ind:{label:"Electrodes & industrial",color:col("--ind")},
+  dev:{label:"Developer",color:col("--dev")}
+};
+const coState={segs:new Set(Object.keys(SEGMETA)),q:""};
+function renderCo(){
+  const q=coState.q.trim().toLowerCase();
+  const rows=DATA.companies.filter(c=>coState.segs.has(c.seg)&&
+    (!q||[c.n,c.hq,c.tik,c.a,c.s].join(" ").toLowerCase().includes(q)));
+  document.getElementById("coBody").innerHTML=rows.map(c=>{
+    const m=SEGMETA[c.seg];
+    return `<tr>
+      <td><b><a href="${c.u}" target="_blank" rel="noopener">${c.n}</a></b>
+        <div class="tik">${c.hq} · ${c.tik}</div></td>
+      <td><span class="pp-tag" style="background:${m.color}22;color:${m.color}">${m.label}</span></td>
+      <td>${c.a}</td>
+      <td>${c.s}</td></tr>`;
+  }).join("")||`<tr><td colspan="4" style="text-align:center;padding:24px">No companies match.</td></tr>`;
+  document.getElementById("coCount").textContent=`${rows.length} of ${DATA.companies.length} companies`;
+}
+document.querySelectorAll("#coFilters .chip").forEach(ch=>ch.addEventListener("click",()=>{
+  const s=ch.dataset.seg;
+  if(ch.classList.toggle("on")) coState.segs.add(s); else coState.segs.delete(s);
+  renderCo();
+}));
+document.getElementById("coSearch").addEventListener("input",e=>{coState.q=e.target.value;renderCo();});
+renderCo();
 
 /* ============ CHARTS ============ */
 Chart.defaults.color=col("--muted");

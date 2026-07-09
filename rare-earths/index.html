@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>RareEarthWatch — Tracking the Global Rare Earth Supply Chain</title>
+<meta name="description" content="Open data visualisation tracking the global rare earth supply chain: mines, separation plants, magnet factories, export controls and prices. Built on USGS, IEA and trade data.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="mineral.watch">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="https://mineral.watch/rare-earths/">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="alternate icon" href="/brand/favicon.png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mineral.watch/rare-earths/">
+<meta property="og:site_name" content="mineral.watch">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="RareEarthWatch — Tracking the Global Rare Earth Supply Chain">
+<meta property="og:description" content="Interactive world map of rare earth mines, separation plants and magnet factories, the 17 elements explained, China's export controls timeline and the refining chokepoint — built on USGS, IEA and trade data.">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="RareEarthWatch — tracking the global rare earth supply chain">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RareEarthWatch — Tracking the Global Rare Earth Supply Chain">
+<meta name="twitter:description" content="Interactive map, the 17 elements explained, production and reserves charts, the export-controls timeline and the China chokepoint in rare earths — built on USGS, IEA and trade data.">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png">
+<meta name="twitter:image:alt" content="RareEarthWatch — tracking the global rare earth supply chain">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
+        { "@type": "ListItem", "position": 2, "name": "Rare earths", "item": "https://mineral.watch/rare-earths/" }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "RareEarthWatch — Global Rare Earth Supply Chain Data",
+      "description": "Mines, separation and refining plants, magnet factories, production and reserves data, export controls and prices for the global rare earth supply chain.",
+      "url": "https://mineral.watch/rare-earths/",
+      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "temporalCoverage": "2018/2026",
+      "spatialCoverage": "Worldwide",
+      "variableMeasured": ["Mine production", "Reserves", "Separation capacity", "Magnet capacity", "Prices", "Export controls", "Companies"],
+      "isAccessibleForFree": true,
+      "license": "https://mineral.watch/",
+      "citation": [
+        "USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Rare Earths; Rare Earths, Heavy)",
+        "IEA Global Critical Minerals Outlook 2025",
+        "Argus Media / Asian Metal price assessments (via USGS)",
+        "Company disclosures and government announcements"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are rare earths actually rare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — cerium is about as abundant in the Earth's crust as copper. What is rare is finding them concentrated enough to mine economically, and the industrial capacity to separate 17 chemically near-identical elements from each other. The whole world mined only about 390,000 tonnes of rare-earth oxide in 2025."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who produces the most rare earths?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "China mined about 270,000 of the world's 390,000 tonnes of rare-earth oxide in 2025 — roughly 69% — according to USGS estimates. Much of the rest, including Myanmar's heavy-rare-earth output, is still refined in China."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does China dominate rare earth refining?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The IEA estimates China performed about 91% of the world's rare earth refining and made about 94% of sintered NdFeB magnets in 2024. Decades of state investment, tolerance of the radioactive and chemical waste from separation, the scale of Bayan Obo, and a 2023 ban on exporting separation and magnet-making technology all entrench the position."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are rare earths used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The leading global use is permanent magnets — NdFeB magnets in EV motors, wind turbines, electronics and defence systems. Other uses include catalysts, polishing, phosphors, lasers, fibre optics and medical imaging."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What did China's 2025 rare earth export controls do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In April 2025 China imposed export licences on samarium, gadolinium, terbium, dysprosium, lutetium, scandium and yttrium and on magnets containing them, briefly halting car production lines worldwide. An October 2025 expansion was suspended for one year in November, but the April controls remain, and outside China dysprosium and terbium have traded at four to five times Chinese domestic prices."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#a78bfa;--accent2:#2dd4bf;
+  --mine:#a78bfa;--proc:#2dd4bf;--mag:#fbbf24;--dev:#f472b6;
+  --radius:14px;--pad:16px;
+  font-size:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+h1,h2,h3{line-height:1.2;font-weight:700}
+section{padding:40px var(--pad);max-width:1100px;margin:0 auto}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;margin-bottom:8px}
+h2{font-size:1.5rem;margin-bottom:10px}
+.lede{color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:20px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1100px;margin:0 auto;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px}
+.brand span{color:var(--accent)}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap}
+nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto}
+
+/* hero */
+.hero{padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
+.hero h1{font-size:clamp(1.9rem,6.5vw,3.2rem);letter-spacing:-.02em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);max-width:560px;font-size:1rem}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.stat b{display:block;font-size:1.45rem;color:var(--accent);letter-spacing:-.01em}
+.stat span{font-size:.74rem;color:var(--muted)}
+
+/* map */
+#map{height:62vh;min-height:380px;border-radius:var(--radius);border:1px solid var(--line);z-index:1}
+.map-controls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:7px 14px;font-size:.8rem;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent}
+.chip.on{color:#0d1117;font-weight:700}
+.chip.on.c-mine{background:var(--mine);border-color:var(--mine)}
+.chip.on.c-proc{background:var(--proc);border-color:var(--proc)}
+.chip.on.c-mag{background:var(--mag);border-color:var(--mag)}
+.chip.on.c-dev{background:var(--dev);border-color:var(--dev)}
+.legend{font-size:.74rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--card)}
+.leaflet-popup-content{font-size:.82rem;line-height:1.5;margin:12px 14px}
+.leaflet-popup-content b{color:var(--accent)}
+.pp-tag{display:inline-block;font-size:.66rem;padding:1px 8px;border-radius:99px;margin-bottom:4px;font-weight:700}
+
+/* elements grid */
+.el-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:8px;margin-top:8px}
+.el{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 6px 8px;cursor:pointer;text-align:center;transition:.15s;position:relative;-webkit-tap-highlight-color:transparent}
+.el:hover{border-color:var(--accent)}
+.el.sel{border-color:var(--accent);background:#a78bfa14}
+.el b{display:block;font-size:1.15rem}
+.el span{font-size:.58rem;color:var(--muted);display:block;margin-top:1px}
+.el .z{position:absolute;top:4px;left:7px;font-size:.56rem;color:var(--muted)}
+.el .dot{position:absolute;top:6px;right:6px;width:7px;height:7px;border-radius:50%}
+.el .dot.apr{background:var(--mag)}
+.el .dot.oct{border:1.5px solid var(--mag)}
+.el.gL b{color:var(--accent2)}
+.el.gH b{color:var(--accent)}
+.el.gS b{color:var(--muted)}
+.el-legend{font-size:.72rem;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.el-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.el-detail{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.el-detail h3{font-size:1.05rem;margin-bottom:2px}
+.el-detail h3 small{color:var(--muted);font-weight:400;font-size:.78rem}
+.el-detail .tags{margin:6px 0 10px;display:flex;gap:6px;flex-wrap:wrap}
+.el-detail p{font-size:.85rem;color:var(--muted)}
+.el-detail .price{margin-top:10px;font-size:.78rem;color:var(--accent);border-top:1px dashed var(--line);padding-top:8px}
+
+/* journey */
+.journey{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 calc(-1*var(--pad));padding-left:var(--pad);padding-right:var(--pad)}
+.jcard{scroll-snap-align:start;flex:0 0 260px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative}
+.jcard .num{position:absolute;top:14px;right:16px;font-size:1.6rem;font-weight:800;color:var(--line)}
+.jcard .ico{font-size:1.6rem;margin-bottom:10px}
+.jcard h3{font-size:1rem;margin-bottom:6px}
+.jcard p{font-size:.8rem;color:var(--muted)}
+.jcard .fact{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.76rem;color:var(--accent)}
+.jhint{font-size:.72rem;color:var(--muted);margin-top:6px}
+
+/* charts */
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card h3{font-size:.95rem;margin-bottom:4px}
+.card .sub{font-size:.74rem;color:var(--muted);margin-bottom:12px}
+.chartbox{position:relative;height:280px}
+.src{font-size:.68rem;color:var(--muted);margin-top:10px}
+
+/* china section */
+.big{font-size:clamp(2.6rem,10vw,4.5rem);font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1}
+.bars{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.bar-row{display:grid;grid-template-columns:150px 1fr 44px;align-items:center;gap:10px;font-size:.78rem}
+.bar-row .track{background:var(--bg2);border-radius:99px;height:10px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#c4b5fd);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar-row .val{text-align:right;color:var(--muted)}
+
+/* process flow */
+.flow-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+.flow-wrap svg{min-width:980px;display:block}
+
+/* timeline */
+.tl{position:relative;margin-top:6px;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding-bottom:22px}
+.tl-item::before{content:"";position:absolute;left:-24px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl-item.hot::before{background:var(--accent)}
+.tl-date{font-size:.7rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.tl-item h4{font-size:.92rem;margin:3px 0 4px}
+.tl-item p{font-size:.8rem;color:var(--muted);max-width:640px}
+
+/* company tracker */
+.co-search{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.co-search input{flex:1 1 200px;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;color:var(--txt);font-size:.8rem;outline:none;-webkit-appearance:none}
+.co-search input:focus{border-color:var(--accent)}
+.co-search input::placeholder{color:var(--muted)}
+.co-count{font-size:.72rem;color:var(--muted)}
+.co-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+table.co{width:100%;min-width:900px;border-collapse:collapse;font-size:.79rem}
+.co th{text-align:left;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.co td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted);line-height:1.45}
+.co td:first-child{min-width:170px}
+.co td b{color:var(--txt);font-size:.82rem}
+.co td b a{color:var(--txt);text-decoration:none;border-bottom:1px dashed var(--line)}
+.co td b a:hover{color:var(--accent2);border-bottom-color:var(--accent2)}
+.co .tik{font-size:.68rem;color:var(--muted);margin-top:2px;white-space:nowrap}
+.co .pp-tag{white-space:nowrap;margin-bottom:0}
+
+/* mini cards (military / invest) */
+.mini-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.mini{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px}
+.mini h4{font-size:.86rem;margin-bottom:5px}
+.mini h4 .mi{margin-right:6px}
+.mini p{font-size:.78rem;color:var(--muted)}
+.note{font-size:.72rem;color:var(--muted);border-left:3px solid var(--accent);padding:8px 12px;background:var(--bg2);border-radius:0 8px 8px 0;margin-top:14px}
+.callout{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:14px;margin-top:14px}
+.callout b{font-size:1.5rem;color:var(--accent2);white-space:nowrap;line-height:1.2}
+.callout span{font-size:.78rem;color:var(--muted);flex:1 1 260px;line-height:1.5}
+@media(min-width:720px){.mini-grid{grid-template-columns:1fr 1fr}}
+
+/* research box + animated logo */
+.research-box{display:grid;gap:24px;align-items:center}
+.research-art{display:none;justify-self:center;width:180px;animation:hero-float 11s ease-in-out infinite}
+@media(min-width:720px){.research-box{grid-template-columns:1.3fr 1fr}.research-art{display:block}}
+@keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.net-art .edge{stroke:var(--txt);stroke-opacity:.55;stroke-width:1.1;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 1.6s ease-out forwards}
+.net-art .web{stroke:var(--muted);stroke-opacity:.35;stroke-width:.8;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 2s ease-out forwards}
+.net-art .d1{animation-delay:.1s}.net-art .d2{animation-delay:.35s}.net-art .d3{animation-delay:.6s}
+.net-art .d4{animation-delay:.9s}.net-art .d5{animation-delay:1.15s}.net-art .d6{animation-delay:1.4s}
+@keyframes art-draw{to{stroke-dashoffset:0}}
+.net-art .orbit{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:3 7;transform-box:fill-box;transform-origin:center}
+.net-art .orbit.o2{stroke-opacity:.6;animation:art-spin 120s linear infinite reverse}
+@keyframes art-spin{to{transform:rotate(360deg)}}
+.net-art .node{fill:var(--bg);stroke:var(--txt);stroke-opacity:.7;stroke-width:1.1;opacity:0;animation:art-in .5s ease-out forwards}
+.net-art .sat{fill:none;stroke:var(--muted);stroke-width:1;opacity:0;animation:art-in .5s ease-out forwards,art-breathe 4s ease-in-out 2.4s infinite;transform-box:fill-box;transform-origin:center}
+.net-art .node,.net-art .sat{animation-delay:1.2s}
+.net-art .sat.b2{animation-delay:1.4s,3s}.net-art .sat.b3{animation-delay:1.6s,3.8s}
+@keyframes art-in{to{opacity:1}}
+@keyframes art-breathe{0%,100%{transform:scale(1);stroke-opacity:1}50%{transform:scale(1.5);stroke-opacity:.4}}
+@media(prefers-reduced-motion:reduce){
+  .net-art,.net-art *{animation:none !important;stroke-dashoffset:0 !important;opacity:1 !important}
+}
+
+/* sources */
+.sources li{margin-bottom:12px;font-size:.85rem;color:var(--muted)}
+.sources{list-style:none}
+.sources b{color:var(--txt)}
+
+/* faq */
+.faq{display:grid;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+.faq details[open]{border-color:var(--accent)}
+.faq summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.2rem;flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--muted);font-size:.86rem;margin-top:10px}
+footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}
+
+@media(min-width:720px){
+  :root{--pad:24px}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .grid2{grid-template-columns:1fr 1fr}
+  h2{font-size:1.9rem}
+  .jcard{flex-basis:300px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
+    <div class="brand">RareEarth<span>Watch</span></div>
+    <a class="link" href="#map-sec">Map</a>
+    <a class="link" href="#elements-sec">Elements</a>
+    <a class="link" href="#journey-sec">Journey</a>
+    <a class="link" href="#production-sec">Production</a>
+    <a class="link" href="#refining-sec">Separation</a>
+    <a class="link" href="#magnets-sec">Magnets</a>
+    <a class="link" href="#controls-sec">Export controls</a>
+    <a class="link" href="#trade-sec">Trade</a>
+    <a class="link" href="#china-sec">China</a>
+    <a class="link" href="#military-sec">Military</a>
+    <a class="link" href="#invest-sec">Investment</a>
+    <a class="link" href="#companies-sec">Companies</a>
+    <a class="link" href="#sources-sec">Data</a>
+    <a class="link" href="#faq-sec">FAQ</a>
+    <a class="link" href="#research-sec">Research</a>
+    <a class="cta" href="#research-sec">Contact us</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="kicker">Open data · critical minerals</div>
+  <h1>Who controls the world's <em>rare earths</em>?</h1>
+  <p>Seventeen obscure metals sit inside every EV motor, wind turbine, fighter jet and smartphone — and one country separates nine-tenths of them. This site tracks where rare earths are mined, separated and turned into magnets, using open data from USGS, the IEA and trade records.</p>
+  <div class="stats">
+    <div class="stat"><b data-count="390">0</b><span>kt REO mined worldwide, 2025 (USGS est.)</span></div>
+    <div class="stat"><b data-count="69" data-suffix="%">0</b><span>of world mine output from China, 2025</span></div>
+    <div class="stat"><b data-count="91" data-suffix="%">0</b><span>of refining &amp; separation done in China (IEA, 2024)</span></div>
+    <div class="stat"><b data-count="94" data-suffix="%">0</b><span>of sintered NdFeB magnets made in China (2024)</span></div>
+  </div>
+</header>
+
+<section id="map-sec">
+  <div class="kicker">Interactive map</div>
+  <h2>The rare earth world map</h2>
+  <p class="lede">Producing mines, separation and refining plants, magnet factories and development projects. Tap a marker for details; toggle layers below. Circle size ≈ scale of operation.</p>
+  <div class="map-controls">
+    <button class="chip c-mine on" data-layer="mines">⛏ Mines</button>
+    <button class="chip c-proc on" data-layer="processing">⚗ Separation &amp; refining</button>
+    <button class="chip c-mag on" data-layer="magnets">🧲 Magnet plants</button>
+    <button class="chip c-dev on" data-layer="development">◐ Development</button>
+  </div>
+  <div id="map"></div>
+  <div class="legend" style="margin-top:10px">
+    <span><i style="background:var(--mine)"></i>Mine (producing)</span>
+    <span><i style="background:var(--proc)"></i>Separation / refining</span>
+    <span><i style="background:var(--mag)"></i>Magnet plant</span>
+    <span><i style="background:var(--dev)"></i>Development project</span>
+  </div>
+</section>
+
+<section id="elements-sec">
+  <div class="kicker">The 17 elements</div>
+  <h2>Not one mineral — seventeen</h2>
+  <p class="lede">"Rare earths" are the 15 lanthanides plus scandium and yttrium: chemically so similar they occur together in the same ores and must be painstakingly separated. A handful — neodymium, praseodymium, dysprosium, terbium — carry most of the market's value. Tap an element.</p>
+  <div class="el-grid" id="elGrid"></div>
+  <div class="el-legend">
+    <span><i style="background:var(--accent2)"></i>Light rare earth</span>
+    <span><i style="background:var(--accent)"></i>Heavy rare earth</span>
+    <span><i style="background:var(--mag)"></i>Export-controlled by China (Apr 2025)</span>
+    <span><i style="background:transparent;border:1.5px solid var(--mag)"></i>Oct 2025 controls (suspended Nov 2025)</span>
+  </div>
+  <div class="el-detail" id="elDetail"></div>
+</section>
+
+<section id="journey-sec">
+  <div class="kicker">Mine to magnet</div>
+  <h2>The journey of a rare earth</h2>
+  <p class="lede">From ore in the ground to the magnet in an EV motor, rare earths pass through some of the most concentrated industrial chokepoints in any supply chain — nearly all of them in China.</p>
+  <div class="journey" id="journey"></div>
+  <div class="jhint">← swipe →</div>
+</section>
+
+<section id="production-sec">
+  <div class="kicker">Production &amp; reserves</div>
+  <h2>Where rare earths come from</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Mine production by country, 2025</h3>
+      <div class="sub">Metric tons of rare-earth-oxide (REO) equivalent, log scale (USGS estimates)</div>
+      <div class="chartbox"><canvas id="chProd"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries 2026. Myanmar's output is estimated from Chinese import data.</div>
+    </div>
+    <div class="card">
+      <h3>Reserves by country</h3>
+      <div class="sub">Million metric tons REO (world total &gt; 75 Mt)</div>
+      <div class="chartbox"><canvas id="chRes"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries 2026. Reserves for Burma, India, Madagascar, Nigeria and Thailand not available.</div>
+    </div>
+    <div class="card" style="grid-column:1/-1">
+      <h3>World mine production, 2018–2025</h3>
+      <div class="sub">Metric tons REO per year — output has roughly doubled since 2018, driven by magnet demand</div>
+      <div class="chartbox"><canvas id="chTrend"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries (annual editions, approximate)</div>
+    </div>
+  </div>
+</section>
+
+<section id="refining-sec">
+  <div class="kicker">Separation</div>
+  <h2>Where — and how — rare earths are separated</h2>
+  <p class="lede">Mining is the easy part. Because the 17 elements are chemically near-identical, splitting them into pure oxides takes hundreds of solvent-extraction stages, radioactive waste handling and decades of process know-how. The IEA estimates China performed ~91% of the world's rare earth refining in 2024 — and until Lynas started in 2025, essentially 100% of heavy-rare-earth separation.</p>
+  <div class="card">
+    <h3>Separation geography</h3>
+    <div class="sub">Two Chinese clusters dominate, for two different reasons</div>
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇨🇳</span>Baotou &amp; the north</h4><p>Bayan Obo's light-REE concentrate feeds the world's largest processing complex at Baotou, Inner Mongolia — separation, metal-making and magnet alloys at a scale no other country approaches, run by China Northern Rare Earth.</p></div>
+      <div class="mini"><h4><span class="mi">🇨🇳</span>Ganzhou &amp; the south</h4><p>Ion-adsorption clays across Jiangxi and neighbouring provinces yield the heavy rare earths (Dy, Tb). Separation clusters around Ganzhou under the state-owned China Rare Earth Group — along with a costly legacy of in-situ leaching pollution.</p></div>
+      <div class="mini"><h4><span class="mi">🌍</span>The ex-China ~9%</h4><p>Lynas (Kuantan, Malaysia — most of it), Solvay's La Rochelle (France), Neo's Silmet (Estonia), Energy Fuels' White Mesa (Utah) and MP's Mountain Pass. New capacity is coming: Caremag (France), REEtec (Norway), Ucore (Louisiana), Iluka's Eneabba refinery (Australia, 2027).</p></div>
+      <div class="mini"><h4><span class="mi">⚠️</span>Why it matters</h4><p>In December 2023 China banned the export of rare-earth extraction, separation and magnet-making technology. The 2025 export controls then weaponised the separation chokepoint itself — licences now gate every shipment of controlled heavy rare earths.</p></div>
+    </div>
+    <div class="src">Sources: IEA Global Critical Minerals Outlook (2025); USGS MCS 2026.</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>From ore to magnet, step by step</h3>
+    <div class="sub">Primary route (top) and recycling (bottom) converge at separation. Scroll sideways on mobile →</div>
+    <div class="flow-wrap">
+    <svg viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rare earth processing flow from ore to magnet">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8b98a5"/></marker>
+      </defs>
+      <style>
+        .fb{fill:#151b23;stroke:#2b3644;rx:10}
+        .ft{fill:#e6edf3;font:700 12px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fs{fill:#8b98a5;font:11px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fe{fill:#a78bfa;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fl{stroke:#8b98a5;stroke-width:1.4;fill:none;marker-end:url(#ah)}
+        .lab{fill:#2dd4bf;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em}
+      </style>
+      <!-- route labels -->
+      <text x="10" y="24" class="lab">PRIMARY ROUTE</text>
+      <text x="10" y="212" class="lab">RECYCLING</text>
+      <!-- primary route boxes y=40..118 -->
+      <g>
+        <rect class="fb" x="10" y="40" width="150" height="78" rx="10"/>
+        <text x="20" y="62" class="ft">1 · Mining ⛏</text>
+        <text x="20" y="80" class="fs">Bastnaesite, monazite</text>
+        <text x="20" y="94" class="fs">or ionic clays, 0.05–8% REO</text>
+
+        <rect class="fb" x="205" y="40" width="150" height="78" rx="10"/>
+        <text x="215" y="62" class="ft">2 · Crack &amp; leach</text>
+        <text x="215" y="80" class="fs">Roast or acid-bake to a</text>
+        <text x="215" y="94" class="fs">mixed RE carbonate</text>
+        <text x="215" y="111" class="fe">radioactive Th residue</text>
+
+        <rect class="fb" x="400" y="40" width="150" height="78" rx="10"/>
+        <text x="410" y="62" class="ft">3 · Separate ⚗</text>
+        <text x="410" y="80" class="fs">Solvent extraction in</text>
+        <text x="410" y="94" class="fs">100s of mixer-settlers</text>
+        <text x="410" y="111" class="fe">~91% done in China</text>
+
+        <rect class="fb" x="595" y="40" width="150" height="78" rx="10"/>
+        <text x="605" y="62" class="ft">4 · Metallise 🔥</text>
+        <text x="605" y="80" class="fs">Molten-salt electrolysis</text>
+        <text x="605" y="94" class="fs">→ Nd, Pr, Dy metal</text>
+        <text x="605" y="111" class="fe">almost entirely in China</text>
+      </g>
+      <!-- recycling route boxes y=222..300 -->
+      <g>
+        <rect class="fb" x="10" y="222" width="150" height="78" rx="10"/>
+        <text x="20" y="248" class="ft">Recycling ♻</text>
+        <text x="20" y="266" class="fs">Magnet swarf, HDDs,</text>
+        <text x="20" y="280" class="fs">motors, e-waste</text>
+
+        <rect class="fb" x="400" y="222" width="150" height="78" rx="10"/>
+        <text x="410" y="242" class="ft">Re-separate</text>
+        <text x="410" y="259" class="fs">Same chemistry, cleaner</text>
+        <text x="410" y="272" class="fs">feed — Apple/MP route</text>
+        <text x="410" y="286" class="fe">&lt;1% of supply, growing</text>
+      </g>
+      <!-- convergence box -->
+      <g>
+        <rect class="fb" x="790" y="120" width="180" height="90" rx="10" stroke="#a78bfa"/>
+        <text x="800" y="144" class="ft">5 · Alloy → magnet 🧲</text>
+        <text x="800" y="162" class="fs">Strip-cast, jet-mill, press,</text>
+        <text x="800" y="176" class="fs">sinter; Dy/Tb grain-boundary</text>
+        <text x="800" y="190" class="fs">diffusion for heat tolerance</text>
+        <text x="800" y="205" class="fe">~94% made in China</text>
+      </g>
+      <!-- arrows -->
+      <path class="fl" d="M160 79 H200"/>
+      <path class="fl" d="M355 79 H395"/>
+      <path class="fl" d="M550 79 H590"/>
+      <path class="fl" d="M745 79 H768 V143 H785"/>
+      <path class="fl" d="M160 261 H395"/>
+      <path class="fl" d="M550 261 H700 V183 H785"/>
+    </svg>
+    </div>
+    <div class="src">Process descriptions: USGS; IEA; industry sources. Solvent-extraction separation of adjacent lanthanides can require over 100 stages per split.</div>
+  </div>
+</section>
+
+<section id="magnets-sec">
+  <div class="kicker">Magnets</div>
+  <h2>The magnet is the market</h2>
+  <p class="lede">Permanent magnets are the leading global end use of rare earths and carry most of the market's value. Sintered NdFeB — neodymium-iron-boron, doped with dysprosium or terbium for heat tolerance — is the strongest magnet ever commercialised, and there is no drop-in substitute.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🚗</span>EVs &amp; hybrids</h4><p>A typical EV traction motor uses roughly 1–3&nbsp;kg of NdFeB magnets. Most EVs on the road use permanent-magnet motors — the biggest single driver of rare earth demand growth.</p></div>
+      <div class="mini"><h4><span class="mi">🌬️</span>Wind turbines</h4><p>Direct-drive offshore turbines carry the largest magnets of all — on the order of 600&nbsp;kg of NdFeB per megawatt, several tonnes per turbine.</p></div>
+      <div class="mini"><h4><span class="mi">📱</span>Electronics</h4><p>Speakers, haptics, camera autofocus, hard-disk actuators: grams per device, but billions of devices. Apple alone signed a $500M deal for US-made recycled magnets.</p></div>
+      <div class="mini"><h4><span class="mi">🤖</span>Robots &amp; drones</h4><p>Every joint in a humanoid robot is a magnet motor. Robotics and drones are widely projected to be the next structural source of NdFeB demand after EVs.</p></div>
+    </div>
+    <div class="callout"><b>94%</b><span>of the world's sintered NdFeB magnets were made in China in 2024 (IEA). Japan makes most of the rest; every announced US and European plant together adds a few percent of world supply.</span></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>The Western magnet buildout</h3>
+    <div class="sub">Sintered NdFeB capacity at new US &amp; European plants, tonnes per year — operating vs announced targets</div>
+    <div class="chartbox"><canvas id="chMagCap"></canvas></div>
+    <div class="src">Sources: company disclosures (MP Materials, e-VAC Magnetics, Neo Performance, USA Rare Earth, Noveon). For scale: China's sintered NdFeB output is measured in hundreds of thousands of tonnes.</div>
+  </div>
+</section>
+
+<section id="controls-sec">
+  <div class="kicker">Geopolitics</div>
+  <h2>The export-controls timeline</h2>
+  <p class="lede">Rare earths went from trade commodity to geopolitical instrument. What began as a two-month embargo against Japan in 2010 became, by 2025, a licensing regime covering half the periodic table's bottom row.</p>
+  <div class="card">
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-date">Sep 2010</div>
+        <h4>The Senkaku embargo</h4>
+        <p>After a fishing-boat collision near the disputed Senkaku/Diaoyu islands, China halts rare earth shipments to Japan for about two months. Prices spike as much as tenfold; Japan bankrolls Lynas to build the first major ex-China supply chain.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2014–2015</div>
+        <h4>WTO ends export quotas</h4>
+        <p>The US, EU and Japan win a WTO case against China's rare earth export quotas. China scraps them — but keeps production quotas and consolidates the industry into state-owned groups.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Dec 2023</div>
+        <h4>The technology ban</h4>
+        <p>China bans the export of rare-earth extraction, separation and magnet-manufacturing technology — locking in the know-how moat just as Western separation projects seek engineers and flowsheets.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Apr 2025</div>
+        <h4>Seven elements go under licence</h4>
+        <p>Answering US tariffs, China imposes export licences on samarium, gadolinium, terbium, dysprosium, lutetium, scandium and yttrium — and on magnets containing them. Shipments stall for weeks; Ford halts an Explorer line in Chicago; automakers worldwide fly in engineers to redesign around missing magnets.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Jun–Aug 2025</div>
+        <h4>Licences thaw, Washington answers</h4>
+        <p>A London framework restarts licence approvals for civilian users. The US Department of Defense takes a $400M stake in MP Materials with a $110/kg NdPr price floor and a 10-year magnet offtake — the Pentagon becomes a rare earth investor.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Oct 2025</div>
+        <h4>The 50% rule</h4>
+        <p>China adds europium, holmium, erbium, thulium and ytterbium — all heavy rare earths — plus an extraterritorial rule covering foreign-made goods containing Chinese rare earth content, and controls on magnet-making equipment. The escalation lands weeks before the APEC summit.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Nov 2025</div>
+        <h4>The Busan truce</h4>
+        <p>After the Trump–Xi meeting, China suspends the October package for one year (to 10 November 2026). The April controls stay in force, with "general licences" issued to selected exporters for civilian trade.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2026</div>
+        <h4>A two-price world</h4>
+        <p>Civilian flows resume under general licences, but defence-linked buyers remain effectively embargoed. Outside China, dysprosium trades around 4–5× and yttrium at over 100× Chinese domestic prices — a standing subsidy for every ex-China separation project.</p>
+      </div>
+    </div>
+    <div class="src">Sources: USGS MCS 2026; MOFCOM announcements via White &amp; Case and China Briefing; IEA; press reports (Reuters, MINING.com).</div>
+  </div>
+</section>
+
+<section id="trade-sec">
+  <div class="kicker">Trade &amp; prices</div>
+  <h2>Who ships to whom — and at what price</h2>
+  <p class="lede">The US now mines more rare earths than it did at any point since the 1990s — yet still imported 67% of the compounds and metals it consumed in 2025, and 100% of its heavy rare earths.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>US import sources, rare-earth compounds &amp; metals</h3>
+      <div class="sub">Average shares 2021–2024. Malaysian, Japanese and Estonian material is largely separated from Australian and other ore.</div>
+      <div class="chartbox"><canvas id="chUsImp"></canvas></div>
+      <div class="src">Source: USGS MCS 2026 (China includes Hong Kong)</div>
+    </div>
+    <div class="card">
+      <h3>Benchmark prices, 2021–2025</h3>
+      <div class="sub">Average $/kg of oxide, log scale — the magnet metals vs the heavy additives</div>
+      <div class="chartbox"><canvas id="chPrices"></canvas></div>
+      <div class="src">Source: USGS MCS 2026 (Argus / Asian Metal assessments, Chinese FOB)</div>
+    </div>
+    <div class="card">
+      <h3>The two-price world</h3>
+      <div class="sub">Chinese domestic vs ex-China prices after the 2025 export controls</div>
+      <div class="mini-grid">
+        <div class="mini"><h4>Dysprosium oxide</h4><p>$239/kg average in 2025 (Chinese FOB) → roughly <b style="color:var(--accent)">$1,450/kg</b> outside China by May 2026.</p></div>
+        <div class="mini"><h4>Terbium oxide</h4><p>$1,010/kg average in 2025 → around <b style="color:var(--accent)">$4,500/kg</b> outside China by May 2026.</p></div>
+        <div class="mini"><h4>Yttrium oxide</h4><p>A cheap workhorse — until controls hit. Ex-China prices rose over <b style="color:var(--accent)">100-fold</b>, approaching $1,100/kg in May 2026.</p></div>
+        <div class="mini"><h4>NdPr — the exception</h4><p>Never controlled, but rallying anyway: Chinese NdPr alloy hit <b style="color:var(--accent)">~$133/kg</b> in July 2026, up over 80% year-on-year, as magnet demand outruns quota growth.</p></div>
+      </div>
+      <div class="src">Sources: USGS MCS 2026; The Oregon Group; SMM/Trading Economics benchmarks (July 2026).</div>
+    </div>
+    <div class="card">
+      <h3>The hidden supplier: Myanmar</h3>
+      <div class="sub">China's heavy-rare-earth feedstock comes largely from across the border</div>
+      <p style="font-size:.85rem;color:var(--muted)">Kachin State's ion-adsorption clay mines — over 300 sites, up from ~130 in 2020 — supply the bulk of China's imported heavy-rare-earth feedstock, an estimated 22,000&nbsp;t REO in 2025. Since October 2024 the mining belt has been controlled by the Kachin Independence Army, which taxes exports at a negotiated ~35,000 yuan per tonne. Every border closure and levy dispute whipsaws the dysprosium and terbium supply that the world's EV motors depend on.</p>
+      <div class="callout"><b>~22 kt</b><span>REO mined in Myanmar in 2025 (USGS estimate from Chinese import data) — the world's third-largest producer, with no functioning state oversight.</span></div>
+      <div class="src">Sources: USGS MCS 2026; Stimson Center; Jamestown Foundation; Risk Advisory.</div>
+    </div>
+  </div>
+</section>
+
+<section id="china-sec">
+  <div class="kicker">Concentration risk</div>
+  <h2>The China chokepoint</h2>
+  <p class="lede">Concentration deepens at every step downstream from the mine — and the IEA expects China to remain the dominant refiner well into the 2030s, even if every announced Western project delivers.</p>
+  <div class="card">
+    <div class="big" id="bigPct">91%</div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:6px">of the world's rare earth refining happened in China in 2024 (IEA). Its estimated share along the mine-to-magnet chain:</p>
+    <div class="bars" id="chinaBars"></div>
+    <div class="src">Sources: USGS MCS 2026 (mining, 2025); IEA Global Critical Minerals Outlook 2025 (refining, magnets, 2024). Heavy-REE separation was ~100% China until Lynas Malaysia began producing Dy and Tb in mid-2025.</div>
+  </div>
+</section>
+
+<section id="military-sec">
+  <div class="kicker">Dual use</div>
+  <h2>Rare earths as military materials</h2>
+  <p class="lede">Precision-guided weapons, radar, sonar, jet engines and night vision all depend on rare earths — which is why China's export-control rules explicitly target defence supply chains, and why the Pentagon has become the industry's anchor investor.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">✈️</span>Fighter jets</h4><p>An F-35 contains roughly 400&nbsp;kg of rare earth materials — in magnets for actuators and generators, radar components and engine coatings. Yttria thermal-barrier coatings keep turbine blades alive.</p></div>
+      <div class="mini"><h4><span class="mi">🚢</span>Submarines &amp; ships</h4><p>A Virginia-class submarine carries an estimated 4+ tonnes of rare earth materials. Sonar transducers use Terfenol-D, a terbium-dysprosium-iron alloy with no substitute.</p></div>
+      <div class="mini"><h4><span class="mi">🚀</span>Missiles &amp; munitions</h4><p>Samarium-cobalt magnets drive fin actuators and seekers in precision-guided munitions — they keep working at temperatures where NdFeB fails, which is why samarium led China's April 2025 control list.</p></div>
+      <div class="mini"><h4><span class="mi">🔦</span>Lasers &amp; optics</h4><p>Nd:YAG rangefinders and target designators, erbium and holmium battlefield lasers, lanthanum in night-vision optics — rare earth photonics run modern targeting.</p></div>
+      <div class="mini"><h4><span class="mi">📦</span>The stockpile</h4><p>The US National Defense Stockpile's FY2025 shopping list included 300&nbsp;t of NdPr oxide, 450&nbsp;t of NdFeB magnet block and 60&nbsp;t of samarium-cobalt alloy (USGS).</p></div>
+      <div class="mini"><h4><span class="mi">🚫</span>The licence gap</h4><p>China's 2026 general export licences ease civilian trade — but defence-linked end users remain effectively embargoed, leaving Western primes reliant on stockpiles and the still-tiny ex-China heavy-rare-earth supply.</p></div>
+    </div>
+    <div class="src">Sources: US DoD / Congressional Research Service figures widely cited for F-35 and Virginia-class REE content; USGS MCS 2026; press reports.</div>
+  </div>
+</section>
+
+<section id="invest-sec">
+  <div class="kicker">Capital flows</div>
+  <h2>Where the rare earth money is going</h2>
+  <p class="lede">2025–26 rewired the sector: for the first time, Western governments stopped writing reports and started writing cheques — equity, price floors and offtakes. Four places where capital is concentrating — presented as observation, not investment advice.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇺🇸</span>Price-floor capitalism</h4><p>The DoD's MP Materials package — $400M of equity, a $110/kg NdPr floor and a 10-year magnet offtake — created a template: Washington has since extended a $96M purchase intent to Lynas on similar terms, plus loans for heavy separation and recycling.</p></div>
+      <div class="mini"><h4><span class="mi">🧲</span>The magnet buildout</h4><p>Well over $2B is flowing into US magnet plants: MP's $1.25B 10X campus in Texas (Apple-anchored), e-VAC's Sumter plant, USA Rare Earth's Stillwater, Noveon's San Marcos. Qualification with automakers and primes still takes years.</p></div>
+      <div class="mini"><h4><span class="mi">⚗️</span>The heavy-REE gap</h4><p>Dysprosium and terbium at 4–5× Chinese prices make heavy separation the scarcest, best-rewarded asset: Lynas Malaysia, MP's DoW-funded circuit, Caremag in France, Serra Verde's $465M DFC loan in Brazil, and Ucore's Louisiana plant all chase it.</p></div>
+      <div class="mini"><h4><span class="mi">⚠️</span>The risks</h4><p>NdPr prices are still set in China and can be flooded at will; ionic-clay economics are unproven outside Asia; the Busan truce could reverse either way; most Western projects only pencil with policy support — remove the floor and the old cycle returns.</p></div>
+    </div>
+    <div class="note">This section describes where capital is flowing, based on public data. It is not financial advice.</div>
+    <div class="src">Sources: company and government disclosures; USGS MCS 2026; MINING.com; Reuters.</div>
+  </div>
+</section>
+
+<section id="companies-sec">
+  <div class="kicker">Company tracker</div>
+  <h2>The companies that move rare earths</h2>
+  <p class="lede">Producers, separators, magnet makers and developers across the chain. In China two state groups control mining quotas; the concentration deepens downstream, where a handful of magnet makers supply the world. Filter by segment or search.</p>
+  <div class="map-controls" id="coFilters">
+    <button class="chip c-mine on" data-seg="mine">⛏ Miners</button>
+    <button class="chip c-proc on" data-seg="sep">⚗ Separation &amp; refining</button>
+    <button class="chip c-mag on" data-seg="mag">🧲 Magnets</button>
+    <button class="chip c-dev on" data-seg="dev">◐ Developers</button>
+  </div>
+  <div class="co-search">
+    <input id="coSearch" type="search" placeholder="Search company, asset, country…" aria-label="Search companies">
+    <span class="co-count" id="coCount"></span>
+  </div>
+  <div class="co-wrap">
+    <table class="co">
+      <thead><tr><th>Company</th><th>Segment</th><th>Key assets</th><th>Status &amp; recent signals</th></tr></thead>
+      <tbody id="coBody"></tbody>
+    </table>
+  </div>
+  <div class="note">Company status reflects public disclosures as of July 2026. This is an observational tracker, not investment advice.</div>
+  <div class="src">Sources: company disclosures &amp; filings; USGS MCS 2026; IEA; DoD, EXIM, DFC and DOE announcements; trade press (MINING.com, Reuters, Fastmarkets).</div>
+</section>
+
+<section id="sources-sec">
+  <div class="kicker">Data &amp; methodology</div>
+  <h2>Open data sources</h2>
+  <ul class="sources">
+    <li><b><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf">USGS Mineral Commodity Summaries 2026 — Rare Earths</a></b> — world production, reserves, US trade and prices. Production figures for 2025 are estimates; Myanmar, Madagascar, Malaysia, Thailand and Vietnam output estimated from Chinese import data.</li>
+    <li><b><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths-heavy.pdf">USGS MCS 2026 — Rare Earths (Heavy)</a></b> — heavy-rare-earth prices (Tb, Dy, Ho, Er, Yb, Lu), import sources and 100% US net import reliance.</li>
+    <li><b><a href="https://www.iea.org/reports/global-critical-minerals-outlook-2025">IEA Global Critical Minerals Outlook 2025</a></b> and <a href="https://www.iea.org/reports/rare-earth-elements/executive-summary">IEA rare earths analysis</a> — refining share (~91%, 2024), sintered NdFeB magnet share (~94%, 2024) and demand scenarios.</li>
+    <li><b><a href="https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/">British Geological Survey — World Mineral Statistics</a></b> — long-run rare earth production series.</li>
+    <li><b>Prices</b> — Argus Media / Asian Metal assessments via USGS (2021–2025 averages); 2026 spot context from <a href="https://theoregongroup.com/commodities/rare-earths/rare-earth-prices-surge-as-china-keeps-export-restrictions/">The Oregon Group</a> and SMM/Trading Economics benchmarks.</li>
+    <li><b>Export controls</b> — MOFCOM announcements analysed by <a href="https://www.whitecase.com/insight-alert/china-imposes-extraterritorial-jurisdiction-and-50-rule-export-controls-rare-earth">White &amp; Case</a> and <a href="https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/">China Briefing</a>; USGS MCS 2026 events summary.</li>
+    <li><b>Myanmar</b> — <a href="https://www.stimson.org/2025/rare-earths-and-realpolitik-future-of-mediation-myanmar/">Stimson Center</a>, <a href="https://jamestown.org/militias-assist-prc-based-ventures-mining-rare-earth-elements-in-myanmar/">Jamestown Foundation</a> and <a href="https://www.riskadvisory.com/news/civil-war-warlords-and-rare-earths-myanmars-mines-in-global-supply-chains/">Risk Advisory</a> on Kachin State mining.</li>
+    <li><b>Companies &amp; policy</b> — <a href="https://mpmaterials.com/news/mp-materials-announces-transformational-public-private-partnership-with-the-department-of-defense-to-accelerate-u-s-rare-earth-magnet-independence/">MP Materials–DoD partnership</a>; <a href="https://www.mining.com/lynas-becomes-first-producer-of-heavy-rare-earths-outside-china/">Lynas heavy-REE milestones (MINING.com)</a>; <a href="https://www.mining.com/neo-performance-opens-europes-first-rare-earth-magnet-plant/">Neo's Narva plant (MINING.com)</a>; company filings.</li>
+    <li><b>Notes</b> — Mine and plant coordinates are approximate. Refining and magnet shares are IEA/industry estimates; official statistics do not fully separate magnet-grade material. Last data refresh: July 2026.</li>
+  </ul>
+</section>
+
+<section id="faq-sec">
+  <div class="kicker">FAQ</div>
+  <h2>Common questions</h2>
+  <div class="faq">
+    <details>
+      <summary>Are rare earths actually rare?</summary>
+      <p>No — cerium is about as abundant in the Earth's crust as copper. What is rare is finding them concentrated enough to mine economically, and the industrial capacity to separate 17 chemically near-identical elements from each other. The whole world mined only about 390,000 tonnes of rare-earth oxide in 2025.</p>
+    </details>
+    <details>
+      <summary>Who produces the most rare earths?</summary>
+      <p>China mined about 270,000 of the world's 390,000 tonnes of rare-earth oxide in 2025 — roughly 69% — according to USGS estimates. Much of the rest, including Myanmar's heavy-rare-earth output, is still refined in China.</p>
+    </details>
+    <details>
+      <summary>Why does China dominate rare earth refining?</summary>
+      <p>The IEA estimates China performed about 91% of the world's rare earth refining and made about 94% of sintered NdFeB magnets in 2024. Decades of state investment, tolerance of the radioactive and chemical waste from separation, the scale of Bayan Obo, and a 2023 ban on exporting separation and magnet-making technology all entrench the position.</p>
+    </details>
+    <details>
+      <summary>What are rare earths used for?</summary>
+      <p>The leading global use is permanent magnets — NdFeB magnets in EV motors, wind turbines, electronics and defence systems. Other uses include catalysts, polishing, phosphors, lasers, fibre optics and medical imaging.</p>
+    </details>
+    <details>
+      <summary>What did China's 2025 rare earth export controls do?</summary>
+      <p>In April 2025 China imposed export licences on samarium, gadolinium, terbium, dysprosium, lutetium, scandium and yttrium and on magnets containing them, briefly halting car production lines worldwide. An October 2025 expansion was suspended for one year in November, but the April controls remain, and outside China dysprosium and terbium have traded at four to five times Chinese domestic prices.</p>
+    </details>
+  </div>
+</section>
+
+<section id="research-sec">
+  <div class="research-box" style="background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px">
+    <div>
+      <div class="kicker">Custom research</div>
+      <h2>Need an ad hoc data-driven research report?</h2>
+      <p style="color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:18px">We produce bespoke, source-cited research on rare earths and other strategic minerals — supply-chain mapping, trade-flow analysis, country and commodity deep-dives — built on the same open data behind this dashboard.</p>
+      <a href="mailto:hello@mineral.watch" style="display:inline-block;background:var(--accent);color:#0d1117;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none">Reach out at hello@mineral.watch</a>
+    </div>
+    <div class="research-art net-art" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="orbit o2" cx="150" cy="150" r="126"/>
+        <circle cx="150" cy="150" r="116" fill="none" stroke="var(--accent)" stroke-width=".6" opacity=".55"/>
+        <path class="web d3" pathLength="1" d="M150 34 L119 104"/>
+        <path class="web d3" pathLength="1" d="M150 34 L181 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L119 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L82 140"/>
+        <path class="web d4" pathLength="1" d="M242 56 L181 104"/>
+        <path class="web d5" pathLength="1" d="M242 56 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M119 104 H181"/>
+        <path class="edge d1" pathLength="1" d="M119 104 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M181 104 L218 140"/>
+        <path class="edge d2" pathLength="1" d="M82 140 H218"/>
+        <path class="edge d2" pathLength="1" d="M82 140 L150 218"/>
+        <path class="edge d2" pathLength="1" d="M218 140 L150 218"/>
+        <path class="edge d3" pathLength="1" d="M119 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M181 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M150 140 V218"/>
+        <circle class="node" cx="119" cy="104" r="3"/>
+        <circle class="node" cx="181" cy="104" r="3"/>
+        <circle class="node" cx="82" cy="140" r="3"/>
+        <circle class="node" cx="218" cy="140" r="3"/>
+        <circle class="node" cx="150" cy="218" r="3"/>
+        <circle class="sat" cx="150" cy="34" r="2.2"/>
+        <circle class="sat b2" cx="58" cy="62" r="2.2"/>
+        <circle class="sat b3" cx="242" cy="56" r="2.2"/>
+        <circle class="sat b2" cx="258" cy="196" r="2.2"/>
+        <circle class="sat b3" cx="68" cy="240" r="2.2"/>
+        <circle cx="150" cy="140" r="5" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6">
+          <animate attributeName="r" values="5;16" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".6;0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="150" cy="140" r="4.2" fill="var(--accent)"/>
+        <circle r="1.6" fill="var(--accent2)">
+          <animateMotion path="M58 62 L119 104 L150 140" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.6" fill="var(--accent)">
+          <animateMotion path="M258 196 L218 140 L150 140" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<footer>
+  RareEarthWatch · open data project · built with Leaflet &amp; Chart.js · data: USGS, IEA, BGS, company disclosures
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+/* ============ DATA (curated from USGS MCS 2026, IEA GCMO 2025, company disclosures) ============ */
+const DATA = {
+  production2025: [ // tonnes REO, USGS estimates
+    ["China",270000],["United States",51000],["Australia",29000],["Myanmar",22000],
+    ["Thailand",4800],["India",2900],["Madagascar",2700],["Russia",2600],
+    ["Brazil",2000],["Nigeria",1500],["Vietnam",150],["Malaysia",110],["Other",550]
+  ],
+  reserves: [ // million tonnes REO
+    ["China",44],["Brazil",11],["Australia",6.3],["Russia",3.8],["Vietnam",3.5],
+    ["United States",1.9],["Greenland",1.5],["Tanzania",0.89],["South Africa",0.86],
+    ["Canada",0.83],["Malaysia",0.71]
+  ],
+  trend: [ // world production, tonnes REO (USGS, approx.)
+    [2018,190000],[2019,220000],[2020,240000],[2021,290000],
+    [2022,300000],[2023,350000],[2024,380000],[2025,390000]
+  ],
+  usImports:[["China",71],["Malaysia",13],["Japan",5],["Estonia",5],["Other",6]],
+  prices:{ years:[2021,2022,2023,2024,2025],
+    ndpr:[92,124,75,55,69],
+    dy:[410,382,330,257,239],
+    tb:[1340,2050,1300,812,1010] },
+  magCap:{ // Western magnet plants, t/yr NdFeB
+    labels:["MP Materials (Fort Worth + 10X, TX)","e-VAC Magnetics (Sumter, SC)","Neo Performance (Narva, Estonia)","Noveon Magnetics (San Marcos, TX)","USA Rare Earth (Stillwater, OK)"],
+    now:[1000,2000,2000,2000,1200],
+    target:[10000,null,5000,null,4800] },
+  chinaShares:[ // stage, share %
+    ["Mining",69],["Refining & separation",91],["Heavy-REE separation",99],["Sintered NdFeB magnets",94]
+  ],
+  journey:[
+    {ico:"⛏",t:"1 · Mining",p:"Hard-rock bastnaesite and monazite (Bayan Obo, Mountain Pass, Mt Weld) or ion-adsorption clays (southern China, Myanmar, Brazil). Ore grades run from 8% REO down to 0.05% in clays.",f:"390 kt REO mined in 2025 — 69% in China"},
+    {ico:"🧪",t:"2 · Cracking & leaching",p:"Concentrate is roasted or acid-baked into a mixed rare-earth carbonate. Monazite carries radioactive thorium — the waste problem that pushed the industry to China in the 1990s.",f:"Western ore long shipped to China for this step"},
+    {ico:"⚗️",t:"3 · Separation",p:"Solvent extraction splits 17 near-identical elements across hundreds of mixer-settler stages into individual high-purity oxides. This is the chokepoint step.",f:"China: ~91% of world refining (IEA, 2024)"},
+    {ico:"🔥",t:"4 · Metals & alloys",p:"Molten-salt electrolysis turns oxides into neodymium and praseodymium metal, then NdFeB or SmCo alloy — a step done almost entirely in China.",f:"Nd metal ≈ $145/kg mid-2026, up ~80% y/y"},
+    {ico:"🧲",t:"5 · Magnet making",p:"Alloy is strip-cast, jet-milled, pressed and sintered; dysprosium or terbium is diffused along grain boundaries so magnets survive motor temperatures.",f:"China made ~94% of sintered NdFeB in 2024"},
+    {ico:"🚗",t:"6 · EV & beyond",p:"Magnets go into EV motors, wind turbines, electronics, robots and weapons. Demand is projected to roughly double by 2040; recycling is starting to close the loop.",f:"~1–3 kg per EV motor; ~600 kg per MW of direct-drive wind"}
+  ],
+  elements:[
+    {z:21,s:"Sc",n:"Scandium",g:"S",use:"Alloys & fuel cells",ctrl:"apr",
+     d:"Technically a rare earth but found apart from the others. Aluminium-scandium alloys shave weight off aerospace frames; scandia-stabilised zirconia runs solid-oxide fuel cells. Tiny market, mostly a by-product.",pr:null},
+    {z:39,s:"Y",n:"Yttrium",g:"H",use:"Coatings & lasers",ctrl:"apr",
+     d:"Thermal-barrier coatings on jet-engine blades, YAG laser crystals, phosphors and semiconductor plasma-etch components. A cheap workhorse until April 2025 — ex-China prices then rose over 100-fold.",pr:"ex-China ≈ $1,100/kg (May 2026)"},
+    {z:57,s:"La",n:"Lanthanum",g:"L",use:"Catalysts & optics",ctrl:null,
+     d:"Fluid-catalytic-cracking catalysts in oil refineries — the leading US end use of rare earths — plus NiMH batteries and high-index camera lenses.",pr:"$1.00/kg oxide (2025 av.)"},
+    {z:58,s:"Ce",n:"Cerium",g:"L",use:"Polishing & catalysts",ctrl:null,
+     d:"The most abundant rare earth — about as common in the crust as copper. Glass polishing, autocatalysts, UV filters. So plentiful it's nearly given away to get at the neodymium in the same ore.",pr:"$1.71/kg oxide (2025 av.)"},
+    {z:59,s:"Pr",n:"Praseodymium",g:"L",use:"Magnets",ctrl:null,
+     d:"Blended with neodymium as NdPr oxide, the magnet feedstock traded as the industry benchmark. Also colours glass yellow and hardens aircraft alloys. Notably never export-controlled — China sells the light REEs and controls the heavy ones.",pr:"$74/kg oxide (2025 av.)"},
+    {z:60,s:"Nd",n:"Neodymium",g:"L",use:"Magnets",ctrl:null,
+     d:"The magnet metal. Nd₂Fe₁₄B is the strongest permanent magnet ever commercialised — the core of EV motors, wind generators, speakers and hard drives. The single most valuable rare earth market.",pr:"$73/kg oxide (2025 av.); metal ≈ $145/kg mid-2026"},
+    {z:61,s:"Pm",n:"Promethium",g:"L",use:"Radioactive",ctrl:null,
+     d:"No stable isotope — essentially absent from ores and not commercially mined. Trace uses in nuclear batteries and research.",pr:null},
+    {z:62,s:"Sm",n:"Samarium",g:"L",use:"SmCo magnets",ctrl:"apr",
+     d:"Samarium-cobalt magnets keep working at temperatures where NdFeB fails — which puts them in missile fin actuators, jet engines and radar. That's why samarium led China's April 2025 control list.",pr:"$2.82/kg oxide (2025 av.)"},
+    {z:63,s:"Eu",n:"Europium",g:"H",use:"Phosphors",ctrl:"oct",
+     d:"Red and blue phosphors in displays and LEDs, and the fluorescent anti-counterfeiting inks in euro banknotes. Once the most precious rare earth; LED efficiency collapsed demand.",pr:"$27/kg oxide (2025 av.)"},
+    {z:64,s:"Gd",n:"Gadolinium",g:"H",use:"Medical & nuclear",ctrl:"apr",
+     d:"MRI contrast agents, neutron-absorbing fuel additives in reactors, magnetic refrigeration research. Controlled since April 2025.",pr:"$30/kg oxide (2025 av.)"},
+    {z:65,s:"Tb",n:"Terbium",g:"H",use:"Magnet additive",ctrl:"apr",
+     d:"Diffused into NdFeB grain boundaries to boost heat tolerance — gram for gram the most expensive ingredient in an EV motor. Also green phosphors and Terfenol-D sonar alloy. The US imported 100% of it from China (2021–24).",pr:"$1,010/kg (2025 av.); ex-China ≈ $4,500/kg (May 2026)"},
+    {z:66,s:"Dy",n:"Dysprosium",g:"H",use:"Magnet additive",ctrl:"apr",
+     d:"The standard coercivity additive that keeps EV and wind magnets working hot. Supply hangs on southern Chinese clays and Myanmar's war-zone mines — the single most supply-critical element in the electric transition.",pr:"$239/kg (2025 av.); ex-China ≈ $1,450/kg (May 2026)"},
+    {z:67,s:"Ho",n:"Holmium",g:"H",use:"Lasers & magnetics",ctrl:"oct",
+     d:"The strongest magnetic moment of any element: flux concentrators, magnetic-field research, and holmium surgical lasers for urology.",pr:"$70/kg oxide (2025 av.)"},
+    {z:68,s:"Er",n:"Erbium",g:"H",use:"Fibre optics",ctrl:"oct",
+     d:"Erbium-doped fibre amplifiers regenerate the signal in essentially every long-haul internet cable. Also pink glass and dental lasers.",pr:"$46/kg oxide (2025 av.)"},
+    {z:69,s:"Tm",n:"Thulium",g:"H",use:"Portable X-ray",ctrl:"oct",
+     d:"The rarest stable rare earth. Irradiated thulium powers portable X-ray sources; thulium fibre lasers are gaining in surgery.",pr:null},
+    {z:70,s:"Yb",n:"Ytterbium",g:"H",use:"Fibre lasers",ctrl:"oct",
+     d:"Ytterbium fibre lasers do most of the world's industrial metal cutting and welding; ytterbium lattice clocks are the most accurate timekeepers built.",pr:"$15/kg oxide (2025 av.)"},
+    {z:71,s:"Lu",n:"Lutetium",g:"H",use:"Medical imaging",ctrl:"apr",
+     d:"LYSO scintillator crystals in PET scanners and Lu-177 cancer radiotherapy. The heaviest, scarcest lanthanide — and among the priciest.",pr:"$888/kg oxide (2025 av.)"}
+  ],
+  companies:[
+    // seg: mine | sep | mag | dev
+    // --- miners (producing) ---
+    {n:"China Northern Rare Earth",u:"https://www.reht.com/",hq:"China",tik:"SSE: 600111",seg:"mine",
+     a:"Bayan Obo mine & Baotou complex (Inner Mongolia) — the world's largest rare earth operation, light REEs mined with iron ore",
+     s:"Holds the bulk of China's light-REE mining quota; one of the two state groups the industry was consolidated into. Roughly half of world REO supply passes through its system."},
+    {n:"China Rare Earth Group",u:"http://www.crecgroup.cn/",hq:"China",tik:"state-owned",seg:"mine",
+     a:"Southern ionic-clay operations (Jiangxi, Guangdong, Fujian) and Sichuan mines; heavy-REE separation cluster around Ganzhou",
+     s:"2021 merger of Chinalco, Minmetals and southern assets; controls the medium/heavy-REE quota and, through it, world Dy/Tb supply."},
+    {n:"MP Materials",u:"https://mpmaterials.com/",hq:"United States",tik:"NYSE: MP",seg:"mine",
+     a:"Mountain Pass mine + separation (California); Independence magnet plant (Fort Worth); 10X magnet campus (Northlake, TX)",
+     s:"51 kt REO mined 2025. DoD holds $400M preferred equity with a $110/kg NdPr floor and 10-yr magnet offtake; Apple $500M recycled-magnet deal; $150M DoW loan for heavy separation; 10X targets 10 kt magnets ~2028."},
+    {n:"Lynas Rare Earths",u:"https://lynasrareearths.com/",hq:"Australia",tik:"ASX: LYC",seg:"mine",
+     a:"Mt Weld mine + Kalgoorlie cracking (WA); Kuantan separation plant (Malaysia); Seadrift Texas plant planned",
+     s:"Largest ex-China producer. First to separate Dy (May 2025) and Tb (Jun 2025) outside China; Sm oxide added Mar 2026; expanding Malaysian heavy-REE circuit; US$96M US purchase LOI with $110/kg NdPr floor."},
+    {n:"Serra Verde",u:"https://serraverde.com/",hq:"Brazil",tik:"private",seg:"mine",
+     a:"Pela Ema ionic-clay mine (Goiás) — the only scaled ion-adsorption operation outside Asia, with elevated Dy/Tb",
+     s:"Ramping since 2024; US DFC approved a $465M loan (Nov 2025) to expand heavy-rare-earth output."},
+    {n:"IREL (India)",u:"https://www.irel.co.in/",hq:"India",tik:"state-owned",seg:"mine",
+     a:"Monazite from Odisha beach sands (OSCOM) and Kerala; rare-earth extraction plant at Aluva",
+     s:"~2.9 kt REO in 2025. Feedstock anchor for India's National Critical Mineral Mission and nascent magnet programme."},
+    {n:"Energy Fuels",u:"https://www.energyfuels.com/",hq:"United States",tik:"NYSE-A: UUUU",seg:"sep",
+     a:"White Mesa mill (Utah): monazite cracking + separated NdPr since 2024; heavy-REE line planned; Donald (Australia) and Toliara (Madagascar) feedstock projects",
+     s:"The uranium mill turned rare-earth processor — one of the few US separation assets actually running; produced heavy-REE samples (Dy, Sm) in 2025."},
+    {n:"Shenghe Resources",u:"https://www.shengheres.com/",hq:"China",tik:"SSE: 600392",seg:"sep",
+     a:"Separation and metallurgy plants in Sichuan; global trading arm; stakes in projects from Tanzania to Greenland",
+     s:"Long the offtaker of Mountain Pass concentrate; moved to acquire Peak Rare Earths (Ngualla, Tanzania) in 2025 — China's commercial bridgehead into ex-China supply."},
+    // --- separation & refining ---
+    {n:"Solvay",u:"https://www.solvay.com/",hq:"France",tik:"EBR: SOLB",seg:"sep",
+     a:"La Rochelle plant — Europe's incumbent rare-earth separation site, running since 1948",
+     s:"Restarted NdPr production for magnets in April 2025; partnering with Carester on magnet recycling; capacity expansion hinges on EU offtake support."},
+    {n:"Neo Performance Materials",u:"https://neomaterials.com/",hq:"Canada",tik:"TSX: NEO",seg:"sep",
+     a:"Silmet separation plant (Sillamäe, Estonia); Narva magnet plant; processing plants in China and Thailand",
+     s:"Opened Europe's first commercial sintered NdFeB plant at Narva (Sep 2025), ramping toward 2 kt/yr with 5 kt planned; Silmet is one of Europe's only two separators."},
+    {n:"Carester / Caremag",u:"https://carester.fr/",hq:"France",tik:"private",seg:"sep",
+     a:"Caremag separation & magnet-recycling plant under construction at Lacq — ~5 kt/yr concentrate, 2 kt/yr magnet recycling, Dy/Tb focus",
+     s:"~€216M package from the French state, JOGMEC and Iwatani; commissioning from late 2026 — Europe's first purpose-built heavy-REE separator."},
+    {n:"REEtec",u:"https://www.reetec.no/",hq:"Norway",tik:"private",seg:"sep",
+     a:"Compact solvent-extraction separation plant at Herøya; NdPr focus",
+     s:"First commercial module ramping; feedstock agreements include Vietnamese and Norwegian sources; positions as low-footprint European separation."},
+    {n:"Ucore Rare Metals",u:"https://ucore.com/",hq:"Canada",tik:"TSXV: UCU",seg:"sep",
+     a:"RapidSX separation technology; Louisiana Strategic Metals Complex planned; Bokan Mountain deposit (Alaska)",
+     s:"US DoD-funded demonstration complete; supply alliance with Vacuumschmelze/e-VAC for rare-earth oxides; Louisiana buildout in progress."},
+    {n:"Australian Strategic Materials",u:"https://asm-au.com/",hq:"Australia",tik:"ASX: ASM",seg:"sep",
+     a:"Dubbo polymetallic REE project (NSW); Korean Metals Plant (Ochang) making NdFeB alloy and metals",
+     s:"One of the only ex-China converters of oxide to magnet alloy; scaling Korean output while Dubbo awaits financing."},
+    // --- magnets ---
+    {n:"JL Mag Rare-Earth",u:"https://www.jlmag.com/",hq:"China",tik:"SZSE: 300748 · HKEX: 6680",seg:"mag",
+     a:"World's largest sintered NdFeB producer (Ganzhou, Baotou, Ningbo); supplies Tesla, BYD, Goldwind",
+     s:"Among the first magnet makers granted general export licences under the 2026 regime — a designated chokepoint franchise."},
+    {n:"Zhong Ke San Huan",u:"http://www.san-huan.com.cn/",hq:"China",tik:"SZSE: 000970",seg:"mag",
+     a:"Top-tier Chinese NdFeB maker; plants across China",
+     s:"Long-time supplier to global auto and electronics; historically licensed under the old Hitachi patent pool."},
+    {n:"Ningbo Yunsheng",u:"http://www.yunsheng.com.cn/",hq:"China",tik:"SSE: 600366",seg:"mag",
+     a:"Major sintered NdFeB producer, Ningbo cluster (Zhejiang)",
+     s:"Key magnet supplier to EV drivetrain makers."},
+    {n:"Proterial (ex-Hitachi Metals)",u:"https://www.proterial.com/",hq:"Japan",tik:"private (Bain-led)",seg:"mag",
+     a:"NEOMAX sintered NdFeB — the original NdFeB patent holder; plants in Japan, China, US",
+     s:"The technology wellspring of the industry; Japan remains the main non-Chinese magnet supplier."},
+    {n:"Shin-Etsu Chemical",u:"https://www.shinetsu.co.jp/en/",hq:"Japan",tik:"TYO: 4063",seg:"mag",
+     a:"Sintered NdFeB magnets (Fukui, Japan; Vietnam plant)",
+     s:"Vertically integrated from metal to finished magnet; expanding ex-China capacity for Western customers."},
+    {n:"TDK",u:"https://www.tdk.com/",hq:"Japan",tik:"TYO: 6762",seg:"mag",
+     a:"NdFeB and ferrite magnets; plants in Japan and China",
+     s:"Shifting NdFeB capacity to serve customers seeking non-Chinese supply."},
+    {n:"Vacuumschmelze / e-VAC",u:"https://vacuumschmelze.com/",hq:"Germany / United States",tik:"private (Ara Partners)",seg:"mag",
+     a:"Hanau (Germany) magnet plant — Europe's incumbent; e-VAC Magnetics plant in Sumter, South Carolina (~2 kt/yr)",
+     s:"Sumter came online end-2025 with a $111.9M US tax credit and a Defense Logistics Agency contract; GM supply agreement; oxide supply alliance with Ucore."},
+    {n:"USA Rare Earth",u:"https://usare.com/",hq:"United States",tik:"NASDAQ: USAR",seg:"mag",
+     a:"Stillwater (Oklahoma) magnet plant; Round Top (Texas) heavy-REE deposit",
+     s:"Commissioned Phase 1a magnet production March 2026 (~1.2 kt/yr, targeting 4.8 kt); Round Top would add heavy-REE feedstock if developed."},
+    {n:"Noveon Magnetics",u:"https://noveon.co/",hq:"United States",tik:"private",seg:"mag",
+     a:"San Marcos (Texas) sintered NdFeB plant (~2 kt/yr), recycled + virgin feedstock",
+     s:"The first US NdFeB plant of the current wave; magnet-to-magnet recycling cuts feedstock exposure to China."},
+    // --- developers ---
+    {n:"Arafura Rare Earths",u:"https://www.arultd.com/",hq:"Australia",tik:"ASX: ARU",seg:"dev",
+     a:"Nolans project (NT) — integrated mine + phosphate + NdPr refinery",
+     s:"~A$1B Australian government debt package; offtakes with Hyundai/Kia and Siemens Gamesa; FID targeted 2026."},
+    {n:"Iluka Resources",u:"https://iluka.com/",hq:"Australia",tik:"ASX: ILU",seg:"dev",
+     a:"Eneabba refinery (WA) — Australia's first fully integrated rare earth refinery, fed by monazite stockpile and third-party ore",
+     s:"Backed by an A$1.65B Australian government loan; engineering ~95% complete, commissioning targeted 2027."},
+    {n:"Pensana",u:"https://pensana.co.uk/",hq:"United Kingdom",tik:"LSE: PRE",seg:"dev",
+     a:"Longonjo mine (Angola) + Saltend separation hub (UK)",
+     s:"Longonjo construction advancing with Angolan sovereign backing; Saltend awaits project finance and feedstock certainty."},
+    {n:"Peak Rare Earths",u:"https://peakrareearths.com/",hq:"Australia",tik:"ASX: PEK",seg:"dev",
+     a:"Ngualla project (Tanzania) — one of the world's highest-grade undeveloped bastnaesite deposits",
+     s:"Shenghe offtake in place; Shenghe moved to acquire the company in 2025, putting a flagship African deposit in Chinese hands."},
+    {n:"Rainbow Rare Earths",u:"https://www.rainbowrareearths.com/",hq:"United Kingdom",tik:"LSE: RBW",seg:"dev",
+     a:"Phalaborwa (South Africa) — rare earths from phosphogypsum waste stacks; Uberaba (Brazil) analogue",
+     s:"No mining required — reprocessing fertiliser waste; pilot complete, heading toward DFS and project finance."},
+    {n:"Lindian Resources",u:"https://lindianresources.com.au/",hq:"Australia",tik:"ASX: LIN",seg:"dev",
+     a:"Kangankunde (Malawi) — among the world's highest-grade monazite deposits",
+     s:"Stage 1 construction under way toward first concentrate; low-radioactivity monazite is the selling point."},
+    {n:"Meteoric Resources",u:"https://www.meteoric.com.au/",hq:"Australia",tik:"ASX: MEI",seg:"dev",
+     a:"Caldeira ionic-clay project (Minas Gerais, Brazil) — high-grade ionic clays outside Asia",
+     s:"US EXIM letter of interest (~US$250M); feasibility work advancing on a staged, low-capex start."},
+    {n:"American Rare Earths",u:"https://americanrareearths.com.au/",hq:"Australia / US",tik:"ASX: ARR",seg:"dev",
+     a:"Halleck Creek (Wyoming) — one of the largest REE deposits in the US",
+     s:"Wyoming state loan support; scoping a staged development with allanite processing."},
+    {n:"Ramaco Resources",u:"https://www.ramacoresources.com/",hq:"United States",tik:"NASDAQ: METC",seg:"dev",
+     a:"Brook Mine (Wyoming) — coal-hosted rare earths plus gallium and germanium",
+     s:"Ribbon-cut July 2025 as the first new US rare earth mine in ~70 years; pilot processing facility in development."},
+    {n:"Critical Metals Corp",u:"https://www.criticalmetalscorp.com/",hq:"United States",tik:"NASDAQ: CRML",seg:"dev",
+     a:"Tanbreez (Greenland) — one of the world's largest rare earth deposits, eudialyte-hosted",
+     s:"US EXIM letter of interest (~$120M); Greenland's permitting politics now a geopolitical storyline of its own."}
+  ],
+  sites:[
+    // type: mine | proc | mag | dev ; size 1-3
+    // mines
+    {n:"Bayan Obo",c:"China",ll:[41.80,109.97],ty:"mine",sz:3,d:"The world's largest rare earth mine — light REEs mined alongside iron ore; roughly half of world REO output originates here."},
+    {n:"Southern ionic clays (Ganzhou)",c:"China",ll:[25.20,115.00],ty:"mine",sz:3,d:"Ion-adsorption clay mining across Jiangxi, Guangdong and Fujian — the heartland of heavy rare earths (Dy, Tb)."},
+    {n:"Maoniuping (Mianning)",c:"China",ll:[28.55,102.17],ty:"mine",sz:2,d:"China's second-largest light-REE mine, Sichuan bastnaesite belt."},
+    {n:"Weishan",c:"China",ll:[34.79,117.13],ty:"mine",sz:1,d:"Light-REE bastnaesite mine, Shandong."},
+    {n:"Kachin mining belt",c:"Myanmar",ll:[26.30,98.50],ty:"mine",sz:3,d:"300+ ionic-clay mine sites around Chipwi and Pangwa feeding Chinese separators — under Kachin Independence Army control since Oct 2024. ~22 kt REO in 2025."},
+    {n:"Mountain Pass",c:"United States",ll:[35.47,-115.53],ty:"mine",sz:3,d:"The only US rare earth mine (MP Materials): 51 kt REO in 2025, separation on site, heavy-REE circuit funded by a $150M DoW loan."},
+    {n:"Mount Weld",c:"Australia",ll:[-28.86,122.55],ty:"mine",sz:3,d:"One of the richest rare earth orebodies on Earth (Lynas); concentrate is cracked at Kalgoorlie and separated in Malaysia."},
+    {n:"Pela Ema (Serra Verde)",c:"Brazil",ll:[-13.54,-48.24],ty:"mine",sz:2,d:"The only scaled ionic-clay mine outside Asia, with elevated Dy/Tb; $465M US DFC loan to expand."},
+    {n:"Lovozero",c:"Russia",ll:[67.85,34.65],ty:"mine",sz:1,d:"Loparite mining on the Kola Peninsula — Russia's main rare earth source (~2.6 kt REO)."},
+    {n:"OSCOM (Odisha)",c:"India",ll:[19.90,86.15],ty:"mine",sz:1,d:"IREL monazite from beach sands (~2.9 kt REO in 2025)."},
+    {n:"Southeastern US monazite",c:"United States",ll:[31.90,-82.40],ty:"mine",sz:1,d:"Monazite recovered from heavy-mineral-sand mines in Georgia and Florida; shipped to White Mesa, Utah for processing."},
+    {n:"Madagascar mineral sands",c:"Madagascar",ll:[-23.40,43.70],ty:"mine",sz:1,d:"Monazite from heavy-mineral sands (~2.7 kt REO in 2025)."},
+    {n:"Nigeria monazite belt",c:"Nigeria",ll:[9.00,8.70],ty:"mine",sz:1,d:"Largely artisanal monazite production (~1.5 kt REO), mostly exported to China."},
+    {n:"Brook Mine",c:"United States",ll:[44.83,-106.99],ty:"mine",sz:1,d:"First new US rare earth mine in ~70 years (Ramaco, opened July 2025) — coal-hosted REE plus gallium and germanium."},
+    // separation / refining
+    {n:"Baotou processing hub",c:"China",ll:[40.66,109.84],ty:"proc",sz:3,d:"The world's largest rare earth processing complex — separation, metal-making and magnet alloys (China Northern Rare Earth)."},
+    {n:"Ganzhou / Longnan separation",c:"China",ll:[24.78,114.79],ty:"proc",sz:3,d:"Heavy-REE separation cluster; base of the state-owned China Rare Earth Group."},
+    {n:"Kuantan (Lynas)",c:"Malaysia",ll:[3.97,103.42],ty:"proc",sz:2,d:"The largest separation plant outside China; first ex-China Dy and Tb (2025); heavy-REE expansion under way."},
+    {n:"Kalgoorlie (Lynas)",c:"Australia",ll:[-30.75,121.47],ty:"proc",sz:1,d:"Cracking & leaching plant processing Mt Weld concentrate."},
+    {n:"Sillamäe (Neo Silmet)",c:"Estonia",ll:[59.40,27.74],ty:"proc",sz:1,d:"One of Europe's only two commercial separation plants (Neo Performance Materials)."},
+    {n:"La Rochelle (Solvay)",c:"France",ll:[46.16,-1.15],ty:"proc",sz:1,d:"Europe's incumbent separation plant, running since 1948; restarted NdPr for magnets in April 2025."},
+    {n:"White Mesa (Energy Fuels)",c:"United States",ll:[37.53,-109.49],ty:"proc",sz:1,d:"Uranium mill turned rare-earth processor — separated NdPr from monazite since 2024; heavy-REE line planned."},
+    {n:"Herøya (REEtec)",c:"Norway",ll:[59.12,9.63],ty:"proc",sz:1,d:"Compact solvent-extraction separation plant; first commercial NdPr module ramping."},
+    {n:"Ochang (ASM)",c:"South Korea",ll:[36.72,127.44],ty:"proc",sz:1,d:"Korean Metals Plant — one of the only ex-China converters of oxide to NdFeB alloy and metal."},
+    // magnet plants
+    {n:"Ganzhou magnet cluster (JL Mag)",c:"China",ll:[25.86,114.90],ty:"mag",sz:3,d:"World's largest sintered NdFeB production base."},
+    {n:"Ningbo magnet cluster",c:"China",ll:[29.87,121.54],ty:"mag",sz:2,d:"Major NdFeB manufacturing hub (Yunsheng and others), Zhejiang."},
+    {n:"Japan magnet cluster",c:"Japan",ll:[35.90,136.17],ty:"mag",sz:2,d:"Proterial, Shin-Etsu and TDK plants — the main non-Chinese magnet supply for decades."},
+    {n:"Independence (MP Materials)",c:"United States",ll:[32.94,-97.31],ty:"mag",sz:1,d:"MP's Fort Worth plant — first US-made sintered NdFeB of the new wave; GM anchor customer."},
+    {n:"Stillwater (USA Rare Earth)",c:"United States",ll:[36.14,-97.03],ty:"mag",sz:1,d:"Phase 1a magnet production commissioned March 2026 (~1.2 kt/yr, targeting 4.8 kt)."},
+    {n:"Sumter (e-VAC)",c:"United States",ll:[33.94,-80.38],ty:"mag",sz:1,d:"e-VAC Magnetics plant online end-2025 (~2 kt/yr); Defense Logistics Agency contract."},
+    {n:"San Marcos (Noveon)",c:"United States",ll:[29.88,-97.93],ty:"mag",sz:1,d:"Recycling-based sintered NdFeB (~2 kt/yr) — the first US plant of the current wave."},
+    {n:"Narva (Neo)",c:"Estonia",ll:[59.38,28.17],ty:"mag",sz:1,d:"Europe's first commercial sintered NdFeB plant, opened September 2025."},
+    {n:"Hanau (Vacuumschmelze)",c:"Germany",ll:[50.13,8.92],ty:"mag",sz:1,d:"Europe's incumbent magnet maker."},
+    // development
+    {n:"Northlake 10X (MP)",c:"United States",ll:[33.09,-97.26],ty:"dev",sz:2,d:"$1.25B magnet campus targeting 10 kt/yr by ~2028 — DoD- and Apple-anchored."},
+    {n:"Nolans (Arafura)",c:"Australia",ll:[-22.61,133.24],ty:"dev",sz:2,d:"Integrated mine + NdPr refinery; ~A$1B government debt package; FID targeted 2026."},
+    {n:"Eneabba refinery (Iluka)",c:"Australia",ll:[-29.82,115.27],ty:"dev",sz:2,d:"Australia's first fully integrated rare earth refinery; A$1.65B government loan; commissioning 2027."},
+    {n:"Round Top",c:"United States",ll:[31.28,-105.47],ty:"dev",sz:1,d:"Heavy-REE-enriched rhyolite deposit (USA Rare Earth), West Texas."},
+    {n:"Halleck Creek",c:"United States",ll:[42.02,-105.28],ty:"dev",sz:1,d:"One of the largest US rare earth deposits (American Rare Earths), Wyoming."},
+    {n:"Louisiana SMC (Ucore)",c:"United States",ll:[31.19,-92.53],ty:"dev",sz:1,d:"RapidSX separation complex planned at Alexandria with US DoD backing."},
+    {n:"Tanbreez",c:"Greenland",ll:[60.88,-45.63],ty:"dev",sz:2,d:"One of the world's largest rare earth deposits (Critical Metals Corp); US EXIM letter of interest."},
+    {n:"Lacq (Caremag)",c:"France",ll:[43.42,-0.65],ty:"dev",sz:1,d:"Dy/Tb separation + magnet recycling plant under construction; commissioning from late 2026."},
+    {n:"Saltend (Pensana)",c:"United Kingdom",ll:[53.74,-0.24],ty:"dev",sz:1,d:"Planned UK separation hub; awaiting project finance."},
+    {n:"Longonjo (Pensana)",c:"Angola",ll:[-12.91,15.25],ty:"dev",sz:1,d:"NdPr mine under construction with Angolan sovereign backing."},
+    {n:"Kangankunde (Lindian)",c:"Malawi",ll:[-15.18,34.89],ty:"dev",sz:1,d:"Among the world's highest-grade monazite deposits; Stage 1 construction under way."},
+    {n:"Ngualla (Peak / Shenghe)",c:"Tanzania",ll:[-8.76,32.95],ty:"dev",sz:1,d:"High-grade bastnaesite deposit; Shenghe moved to acquire Peak in 2025."},
+    {n:"Phalaborwa (Rainbow)",c:"South Africa",ll:[-23.94,31.14],ty:"dev",sz:1,d:"Rare earths from phosphogypsum waste stacks — no mining required."},
+    {n:"Penco Module (Aclara)",c:"Chile",ll:[-36.73,-72.96],ty:"dev",sz:1,d:"Ionic-clay project with planned US separation link (Aclara Resources)."},
+    {n:"Caldeira (Meteoric)",c:"Brazil",ll:[-21.90,-46.40],ty:"dev",sz:1,d:"High-grade ionic-clay project, Minas Gerais; US EXIM letter of interest."},
+    {n:"Dong Pao",c:"Vietnam",ll:[22.28,103.57],ty:"dev",sz:1,d:"Vietnam's flagship deposit — reserves of 3.5 Mt REO but negligible output; development repeatedly stalled."},
+    {n:"Nechalacho",c:"Canada",ll:[62.10,-112.84],ty:"dev",sz:1,d:"Demonstration-scale mining in 2021; currently largely idle."}
+  ]
+};
+
+/* ============ helpers ============ */
+const C = getComputedStyle(document.documentElement);
+const col = v => C.getPropertyValue(v).trim();
+const PAL = ["#a78bfa","#2dd4bf","#fbbf24","#f472b6","#60a5fa","#f87171","#94a3b8","#e879f9","#38bdf8","#a3e635","#64748b"];
+
+/* count-up hero stats */
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target, end=parseFloat(el.dataset.count), suf=el.dataset.suffix||"", dec=end%1?1:0;
+  const t0=performance.now();
+  (function tick(t){const p=Math.min((t-t0)/1200,1);
+    el.textContent=(end*(1-Math.pow(1-p,3))).toFixed(dec)+suf;
+    if(p<1)requestAnimationFrame(tick);})(t0);
+  io.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+
+/* ============ MAP ============ */
+const map = L.map("map",{scrollWheelZoom:false,worldCopyJump:true}).setView([25,15],2);
+L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",{
+  attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+  subdomains:"abcd",maxZoom:10
+}).addTo(map);
+map.on("click",()=>map.scrollWheelZoom.enable());
+
+const groups = {mines:L.layerGroup().addTo(map), processing:L.layerGroup().addTo(map),
+                magnets:L.layerGroup().addTo(map), development:L.layerGroup().addTo(map)};
+const TYCOL={mine:col("--mine"),proc:col("--proc"),mag:col("--mag"),dev:col("--dev")};
+const TYNAME={mine:"MINE",proc:"SEPARATION / REFINING",mag:"MAGNET PLANT",dev:"DEVELOPMENT"};
+const TYGRP={mine:"mines",proc:"processing",mag:"magnets",dev:"development"};
+
+DATA.sites.forEach(s=>{
+  const c=TYCOL[s.ty];
+  L.circleMarker(s.ll,{radius:4+s.sz*2.4,color:c,weight:1.5,fillColor:c,fillOpacity:.35})
+   .bindPopup(`<span class="pp-tag" style="background:${c}22;color:${c}">${TYNAME[s.ty]}</span><br><b>${s.n}</b> · ${s.c}<br>${s.d}`)
+   .addTo(groups[TYGRP[s.ty]]);
+});
+
+/* layer toggles */
+document.querySelectorAll(".chip[data-layer]").forEach(ch=>ch.addEventListener("click",()=>{
+  const g=groups[ch.dataset.layer];
+  if(ch.classList.toggle("on")) map.addLayer(g); else map.removeLayer(g);
+}));
+
+/* ============ ELEMENTS GRID ============ */
+const GRPNAME={L:"Light rare earth",H:"Heavy rare earth",S:"Rare-earth-adjacent"};
+const elGrid=document.getElementById("elGrid"), elDetail=document.getElementById("elDetail");
+elGrid.innerHTML=DATA.elements.map((e,i)=>`
+  <button class="el g${e.g}" data-i="${i}" aria-label="${e.n}">
+    <span class="z">${e.z}</span>
+    ${e.ctrl?`<span class="dot ${e.ctrl}"></span>`:""}
+    <b>${e.s}</b><span>${e.n}</span>
+  </button>`).join("");
+function showEl(i){
+  const e=DATA.elements[i];
+  document.querySelectorAll(".el").forEach(el=>el.classList.toggle("sel",+el.dataset.i===i));
+  const grpCol=e.g==="L"?col("--accent2"):e.g==="H"?col("--accent"):col("--muted");
+  const ctrlTag=e.ctrl==="apr"
+    ?`<span class="pp-tag" style="background:${col("--mag")}22;color:${col("--mag")}">EXPORT-CONTROLLED · APR 2025</span>`
+    :e.ctrl==="oct"?`<span class="pp-tag" style="background:${col("--mag")}18;color:${col("--mag")}">OCT 2025 CONTROLS · SUSPENDED NOV 2025</span>`:"";
+  elDetail.innerHTML=`
+    <h3>${e.n} (${e.s}) <small>· atomic number ${e.z} · ${e.use}</small></h3>
+    <div class="tags">
+      <span class="pp-tag" style="background:${grpCol}22;color:${grpCol}">${GRPNAME[e.g].toUpperCase()}</span>
+      ${ctrlTag}
+    </div>
+    <p>${e.d}</p>
+    ${e.pr?`<div class="price">Price: ${e.pr}</div>`:""}`;
+}
+elGrid.addEventListener("click",ev=>{const b=ev.target.closest(".el");if(b)showEl(+b.dataset.i);});
+showEl(DATA.elements.findIndex(e=>e.s==="Nd"));
+
+/* ============ JOURNEY CARDS ============ */
+document.getElementById("journey").innerHTML = DATA.journey.map((j,i)=>`
+  <div class="jcard"><div class="num">${String(i+1).padStart(2,"0")}</div>
+    <div class="ico">${j.ico}</div><h3>${j.t}</h3><p>${j.p}</p>
+    <div class="fact">${j.f}</div></div>`).join("");
+
+/* ============ COMPANY TRACKER ============ */
+const SEGMETA={
+  mine:{label:"Miner",color:col("--mine")},
+  sep:{label:"Separation & refining",color:col("--proc")},
+  mag:{label:"Magnets",color:col("--mag")},
+  dev:{label:"Developer",color:col("--dev")}
+};
+const coState={segs:new Set(Object.keys(SEGMETA)),q:""};
+function renderCo(){
+  const q=coState.q.trim().toLowerCase();
+  const rows=DATA.companies.filter(c=>coState.segs.has(c.seg)&&
+    (!q||[c.n,c.hq,c.tik,c.a,c.s].join(" ").toLowerCase().includes(q)));
+  document.getElementById("coBody").innerHTML=rows.map(c=>{
+    const m=SEGMETA[c.seg];
+    return `<tr>
+      <td><b><a href="${c.u}" target="_blank" rel="noopener">${c.n}</a></b>
+        <div class="tik">${c.hq} · ${c.tik}</div></td>
+      <td><span class="pp-tag" style="background:${m.color}22;color:${m.color}">${m.label}</span></td>
+      <td>${c.a}</td>
+      <td>${c.s}</td></tr>`;
+  }).join("")||`<tr><td colspan="4" style="text-align:center;padding:24px">No companies match.</td></tr>`;
+  document.getElementById("coCount").textContent=`${rows.length} of ${DATA.companies.length} companies`;
+}
+document.querySelectorAll("#coFilters .chip").forEach(ch=>ch.addEventListener("click",()=>{
+  const s=ch.dataset.seg;
+  if(ch.classList.toggle("on")) coState.segs.add(s); else coState.segs.delete(s);
+  renderCo();
+}));
+document.getElementById("coSearch").addEventListener("input",e=>{coState.q=e.target.value;renderCo();});
+renderCo();
+
+/* ============ CHARTS ============ */
+Chart.defaults.color=col("--muted");
+Chart.defaults.borderColor=col("--line");
+Chart.defaults.font.size=11;
+const fmt=n=>n>=1e6?(n/1e6).toFixed(2)+" Mt":n>=1e3?(n/1e3).toFixed(0)+" kt":n+" t";
+const noLeg={plugins:{legend:{display:false}}};
+
+/* draw a total in the center of doughnut charts */
+Chart.register({
+  id:"centerText",
+  afterDraw(chart){
+    const opts=chart.options.plugins&&chart.options.plugins.centerText;
+    if(!opts||!opts.enabled) return;
+    if(!chart.chartArea) return;
+    const {ctx,chartArea:{left,right,top,bottom}}=chart;
+    const cx=(left+right)/2, cy=(top+bottom)/2;
+    ctx.save();
+    ctx.textAlign="center";
+    ctx.textBaseline="middle";
+    ctx.fillStyle=col("--txt");
+    ctx.font="700 19px -apple-system,Segoe UI,Roboto,sans-serif";
+    ctx.fillText(opts.text, cx, cy-(opts.label?9:0));
+    if(opts.label){
+      ctx.font="600 9.5px -apple-system,Segoe UI,Roboto,sans-serif";
+      ctx.fillStyle=col("--muted");
+      ctx.fillText(opts.label, cx, cy+10);
+    }
+    ctx.restore();
+  }
+});
+
+const donutOpts={maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+  tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}%`}}},cutout:"62%"};
+
+new Chart(chProd,{type:"bar",
+  data:{labels:DATA.production2025.map(d=>d[0]),
+    datasets:[{data:DATA.production2025.map(d=>d[1]),backgroundColor:DATA.production2025.map((d,i)=>i===0?col("--accent"):"#2dd4bf88"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{type:"logarithmic",ticks:{callback:v=>[100,1e3,1e4,1e5].includes(v)?fmt(v):""},grid:{color:col("--line")}},y:{grid:{display:false}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmt(c.parsed.x)} REO (log scale)`}}}}});
+
+new Chart(chRes,{type:"doughnut",
+  data:{labels:DATA.reserves.map(d=>d[0]),datasets:[{data:DATA.reserves.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed} Mt`}},
+    centerText:{enabled:true,text:">75 Mt",label:"world total"}}}});
+
+new Chart(chTrend,{type:"line",
+  data:{labels:DATA.trend.map(d=>d[0]),
+    datasets:[{data:DATA.trend.map(d=>d[1]),borderColor:col("--accent"),backgroundColor:"#a78bfa22",fill:true,tension:0,pointRadius:3,pointBackgroundColor:col("--accent")}]},
+  options:{...noLeg,maintainAspectRatio:false,
+    scales:{y:{max:450000,ticks:{callback:v=>fmt(v)},grid:{color:col("--line")}},x:{grid:{display:false}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmt(c.parsed.y)} REO`}}}}});
+
+new Chart(chUsImp,{type:"doughnut",
+  data:{labels:DATA.usImports.map(d=>d[0]),datasets:[{data:DATA.usImports.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:donutOpts});
+
+new Chart(chPrices,{type:"line",
+  data:{labels:DATA.prices.years,
+    datasets:[
+      {label:"NdPr oxide",data:DATA.prices.ndpr,borderColor:col("--accent"),pointBackgroundColor:col("--accent"),tension:0,pointRadius:3},
+      {label:"Dysprosium oxide",data:DATA.prices.dy,borderColor:col("--accent2"),pointBackgroundColor:col("--accent2"),tension:0,pointRadius:3},
+      {label:"Terbium oxide",data:DATA.prices.tb,borderColor:col("--mag"),pointBackgroundColor:col("--mag"),tension:0,pointRadius:3}
+    ]},
+  options:{maintainAspectRatio:false,
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+      tooltip:{callbacks:{label:c=>` ${c.dataset.label}: $${c.parsed.y.toLocaleString()}/kg`}}},
+    scales:{y:{type:"logarithmic",ticks:{callback:v=>[1,10,100,1000,10000].includes(v)?"$"+v.toLocaleString():""},grid:{color:col("--line")}},
+            x:{grid:{display:false}}}}});
+
+new Chart(chMagCap,{type:"bar",
+  data:{labels:DATA.magCap.labels,
+    datasets:[
+      {label:"Operating / commissioning 2026",data:DATA.magCap.now,backgroundColor:col("--accent2"),borderRadius:4},
+      {label:"Announced target",data:DATA.magCap.target,backgroundColor:"#a78bfa66",borderRadius:4}
+    ]},
+  options:{indexAxis:"y",maintainAspectRatio:false,
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+      tooltip:{callbacks:{label:c=>c.parsed.x==null?"":` ${c.dataset.label}: ${c.parsed.x.toLocaleString()} t/yr`}}},
+    scales:{x:{title:{display:true,text:"tonnes NdFeB per year"},grid:{color:col("--line")}},
+            y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}}}});
+
+/* china bars */
+document.getElementById("chinaBars").innerHTML = DATA.chinaShares.map(([s,v])=>`
+  <div class="bar-row"><span>${s}</span><div class="track"><div class="fill" data-w="${v}"></div></div><span class="val">~${v}%</span></div>`).join("");
+const io2=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.w+"%");io2.unobserve(e.target);}
+}),{threshold:.4});
+io2.observe(document.getElementById("chinaBars"));
+
+/* nav active state */
+const secs=[...document.querySelectorAll("section[id],header")];
+const navLinks=[...document.querySelectorAll("nav a.link")];
+const io3=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}
+}),{rootMargin:"-40% 0px -55% 0px"});
+secs.forEach(s=>io3.observe(s));
+</script>
+<script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

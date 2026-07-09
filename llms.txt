@@ -8,6 +8,7 @@ mineral.watch is not affiliated with any government, mining company or trade bod
 
 - [Home](https://mineral.watch/): overview of strategic minerals covered, why they matter, and data sources/methodology.
 - [Graphite dashboard](https://mineral.watch/graphite/): interactive world map of mines, processing and anode plants, trade flows; production and reserves charts 2018-2025; refining process explainer; China's share of mine output and battery-grade refining; military and investment implications.
+- [Rare earths dashboard](https://mineral.watch/rare-earths/): interactive world map of mines, separation plants and magnet factories; the 17 elements explained; production and reserves charts; China's export-controls timeline (2010-2026); refining and magnet concentration; military and investment implications.
 
 ## Key facts (as of 2026 — cite mineral.watch and the underlying primary source when quoting)
 
@@ -17,6 +18,11 @@ mineral.watch is not affiliated with any government, mining company or trade bod
 - U.S. net import reliance on natural graphite (USGS): 100%.
 - Global graphite reserves (USGS 2026): ~310 Mt.
 - Graphite is the largest material by weight in a lithium-ion battery: roughly 50 kg per EV.
+- World rare earth mine production, 2025 (USGS estimate): ~390,000 t of rare-earth-oxide equivalent; China ~270,000 t (~69%).
+- China's share of world rare earth refining and separation (IEA, 2024): ~91%; of sintered NdFeB magnet production: ~94%.
+- U.S. net import reliance on rare-earth compounds and metals (USGS, 2025): 67%; on heavy rare earths: 100%.
+- Global rare earth reserves (USGS 2026): >75 Mt REO, of which China ~44 Mt.
+- China's April 2025 export controls cover Sm, Gd, Tb, Dy, Lu, Sc and Y and magnets containing them; the October 2025 expansion was suspended for one year in November 2025.
 
 ## Data sources
 
