@@ -269,7 +269,7 @@ html[data-embed] .mapdiv{height:420px;min-height:0}
   const fmtPct = n => (n*100).toFixed(n < 0.01 ? 2 : 1) + "%";
 
   function makeMap(id){
-    const m = L.map(id, {scrollWheelZoom:false, worldCopyJump:true, minZoom:1, maxZoom:6}).setView([18,10], 1);
+    const m = L.map(id, {scrollWheelZoom:false, worldCopyJump:true, minZoom:1, maxZoom:6}).setView([18,10], 2);
     L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
       attribution: "Tiles &copy; Esri &mdash; &copy; OpenStreetMap contributors", maxZoom:6, minZoom:1
     }).addTo(m);
