@@ -108,8 +108,8 @@
 <style>
 :root{
   --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
-  --txt:#e6edf3;--muted:#8b98a5;--accent:#ed8936;--accent2:#4cc9f0;
-  --mine:#ed8936;--proc:#4cc9f0;--dev:#9d8cff;--ind:#6ee7b7;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#fbbf24;--accent2:#4cc9f0;
+  --mine:#fbbf24;--proc:#4cc9f0;--dev:#9d8cff;--ind:#6ee7b7;
   --radius:14px;--pad:16px;
   font-size:16px;
 }
@@ -191,7 +191,7 @@ nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
 .bars{margin-top:18px;display:flex;flex-direction:column;gap:10px}
 .bar-row{display:grid;grid-template-columns:110px 1fr 44px;align-items:center;gap:10px;font-size:.78rem}
 .bar-row .track{background:var(--bg2);border-radius:99px;height:10px;overflow:hidden}
-.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#f7c56f);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#fde68a);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
 .bar-row .val{text-align:right;color:var(--muted)}
 
 /* process flow */
@@ -391,7 +391,7 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
         .fb{fill:#151b23;stroke:#2b3644;rx:10}
         .ft{fill:#e6edf3;font:700 12px -apple-system,Segoe UI,Roboto,sans-serif}
         .fs{fill:#8b98a5;font:11px -apple-system,Segoe UI,Roboto,sans-serif}
-        .fe{fill:#ed8936;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fe{fill:#fbbf24;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif}
         .fl{stroke:#8b98a5;stroke-width:1.4;fill:none;marker-end:url(#ah)}
         .lab{fill:#4cc9f0;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em}
       </style>
@@ -438,7 +438,7 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
       </g>
       <!-- convergence box -->
       <g>
-        <rect class="fb" x="790" y="120" width="180" height="90" rx="10" stroke="#ed8936"/>
+        <rect class="fb" x="790" y="120" width="180" height="90" rx="10" stroke="#fbbf24"/>
         <text x="800" y="144" class="ft">5 · Coat → AAM 🔋</text>
         <text x="800" y="162" class="fs">Carbon coating ~1,100 °C;</text>
         <text x="800" y="176" class="fs">active anode material,</text>
@@ -896,7 +896,7 @@ const DATA = {
 /* ============ helpers ============ */
 const C = getComputedStyle(document.documentElement);
 const col = v => C.getPropertyValue(v).trim();
-const PAL = ["#ed8936","#4cc9f0","#9d8cff","#6ee7b7","#f87171","#fbbf24","#94a3b8","#e879f9","#38bdf8","#a3e635","#64748b"];
+const PAL = ["#fbbf24","#4cc9f0","#9d8cff","#6ee7b7","#f87171","#ed8936","#94a3b8","#e879f9","#38bdf8","#a3e635","#64748b"];
 
 /* count-up hero stats */
 const io = new IntersectionObserver(es=>es.forEach(e=>{
@@ -1027,7 +1027,7 @@ new Chart(chRes,{type:"doughnut",
 
 new Chart(chTrend,{type:"line",
   data:{labels:DATA.trend.map(d=>d[0]),
-    datasets:[{data:DATA.trend.map(d=>d[1]),borderColor:col("--accent"),backgroundColor:"#ed893622",fill:true,tension:0,pointRadius:3,pointBackgroundColor:col("--accent")}]},
+    datasets:[{data:DATA.trend.map(d=>d[1]),borderColor:col("--accent"),backgroundColor:"#fbbf2422",fill:true,tension:0,pointRadius:3,pointBackgroundColor:col("--accent")}]},
   options:{...noLeg,maintainAspectRatio:false,
     scales:{y:{max:2000000,ticks:{callback:v=>fmt(v)},grid:{color:col("--line")}},x:{grid:{display:false}}},
     plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmt(c.parsed.y)}`}}}}});
