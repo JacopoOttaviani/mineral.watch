@@ -867,7 +867,7 @@ const DATA = {
      d:"LYSO scintillator crystals in PET scanners and Lu-177 cancer radiotherapy. The heaviest, scarcest lanthanide — and among the priciest.",pr:"$888/kg oxide (2025 av.)"}
   ],
   companies:[
-    // seg: mine | sep | mag | dev
+    // seg: mine | sep | mag | dev (space-separated for companies spanning segments)
     // --- miners (producing) ---
     {n:"China Northern Rare Earth",u:"https://www.reht.com/",hq:"China",tik:"SSE: 600111",seg:"mine",
      a:"Bayan Obo mine & Baotou complex (Inner Mongolia) — the world's largest rare earth operation, light REEs mined with iron ore",
@@ -897,8 +897,8 @@ const DATA = {
     {n:"Solvay",u:"https://www.solvay.com/",hq:"France",tik:"EBR: SOLB",seg:"sep",
      a:"La Rochelle plant — Europe's incumbent rare-earth separation site, running since 1948",
      s:"Restarted NdPr production for magnets in April 2025; partnering with Carester on magnet recycling; capacity expansion hinges on EU offtake support."},
-    {n:"Neo Performance Materials",u:"https://neomaterials.com/",hq:"Canada",tik:"TSX: NEO",seg:"sep",
-     a:"Silmet separation plant (Sillamäe, Estonia); Narva magnet plant; processing plants in China and Thailand",
+    {n:"Neo Performance Materials",u:"https://neomaterials.com/",hq:"Canada",tik:"TSX: NEO",seg:"sep mag",
+     a:"Two separate Estonian plants ~40 km apart: Silmet separation & refining plant (concentrate to oxides) in Sillamäe, and a sintered NdFeB magnet plant in Narva; processing plants in China and Thailand",
      s:"Opened Europe's first commercial sintered NdFeB plant at Narva (Sep 2025), ramping toward 2 kt/yr with 5 kt planned; Silmet is one of Europe's only two separators."},
     {n:"Carester / Caremag",u:"https://carester.fr/",hq:"France",tik:"private",seg:"sep",
      a:"Caremag separation & magnet-recycling plant under construction at Lacq — ~5 kt/yr concentrate, 2 kt/yr magnet recycling, Dy/Tb focus",
@@ -1118,14 +1118,15 @@ const SEGMETA={
 const coState={segs:new Set(Object.keys(SEGMETA)),q:""};
 function renderCo(){
   const q=coState.q.trim().toLowerCase();
-  const rows=DATA.companies.filter(c=>coState.segs.has(c.seg)&&
+  const rows=DATA.companies.filter(c=>c.seg.split(" ").some(s=>coState.segs.has(s))&&
     (!q||[c.n,c.hq,c.tik,c.a,c.s].join(" ").toLowerCase().includes(q)));
   document.getElementById("coBody").innerHTML=rows.map(c=>{
-    const m=SEGMETA[c.seg];
+    const tags=c.seg.split(" ").map(s=>{const m=SEGMETA[s];
+      return `<span class="pp-tag" style="background:${m.color}22;color:${m.color}">${m.label}</span>`;}).join(" ");
     return `<tr>
       <td><b><a href="${c.u}" target="_blank" rel="noopener">${c.n}</a></b>
         <div class="tik">${c.hq} · ${c.tik}</div></td>
-      <td><span class="pp-tag" style="background:${m.color}22;color:${m.color}">${m.label}</span></td>
+      <td>${tags}</td>
       <td>${c.a}</td>
       <td>${c.s}</td></tr>`;
   }).join("")||`<tr><td colspan="4" style="text-align:center;padding:24px">No companies match.</td></tr>`;
