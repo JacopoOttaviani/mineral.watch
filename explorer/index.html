@@ -28,7 +28,7 @@
 <style>
 :root{
   --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
-  --txt:#e6edf3;--muted:#8b98a5;--accent:#ed8936;--accent2:#4cc9f0;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#c8ff6b;--accent2:#4cc9f0;
   --radius:14px;--pad:16px;
   font-size:16px;
 }
@@ -97,7 +97,7 @@ input[type=range]{flex:1 1 220px;accent-color:var(--accent)}
 .bar-row .rank{color:var(--muted);text-align:right}
 .bar-row .name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:3px}
 .bar-row .track{background:var(--bg2);border-radius:99px;height:9px;overflow:hidden}
-.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#f7c56f);width:0;transition:width .5s ease}
+.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#e5ffb8);width:0;transition:width .5s ease}
 .bar-row .val{text-align:right;color:var(--muted);font-size:.72rem}
 .bar-row:hover .name{color:var(--accent)}
 
@@ -288,7 +288,7 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
       const c = countries[iso3];
       const share = total > 0 ? qty/total : 0;
       const radius = RMIN + (RMAX-RMIN) * Math.sqrt(qty/maxQty);
-      const color = currentView === "concentration" ? concColor(share) : "#ed8936";
+      const color = currentView === "concentration" ? concColor(share) : "#c8ff6b";
 
       const series = [];
       const byYear = commodityData[currentStat] || {};
@@ -330,7 +330,7 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
       wrap.innerHTML = CONC_BUCKETS.map(b => `<span><i style="background:${b.color}"></i>${b.label} of world total</span>`).join("");
     } else {
       const refs = [0.25, 0.6, 1].map(f => Math.round(maxQty*f));
-      wrap.innerHTML = refs.map(v => `<span><i style="background:#ed8936"></i>${fmtNum(v)}</span>`).join("") +
+      wrap.innerHTML = refs.map(v => `<span><i style="background:#c8ff6b"></i>${fmtNum(v)}</span>`).join("") +
         `<span style="color:var(--muted)">circle area ≈ quantity</span>`;
     }
   }

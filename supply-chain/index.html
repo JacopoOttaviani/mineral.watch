@@ -29,7 +29,7 @@
 <style>
 :root{
   --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
-  --txt:#e6edf3;--muted:#8b98a5;--accent:#ed8936;--accent2:#4cc9f0;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#c8ff6b;--accent2:#4cc9f0;
   --radius:14px;--pad:16px;
   font-size:16px;
 }
@@ -427,8 +427,8 @@ html[data-embed] .mapdiv{height:420px;min-height:0}
     const mineTotal = mineEntries.reduce((s,[,q]) => s+q, 0);
 
     el("mineSub").textContent = `${m.name} · ${m.mine.label} · ${currentYear} · ${m.mine.unit}`;
-    drawStage(layerMine, m.mine, "#ed8936", mineEntries, mineTotal);
-    renderBars("mineBars", mineEntries, mineTotal, "linear-gradient(90deg,#ed8936,#f7c56f)");
+    drawStage(layerMine, m.mine, "#c8ff6b", mineEntries, mineTotal);
+    renderBars("mineBars", mineEntries, mineTotal, "linear-gradient(90deg,#c8ff6b,#e5ffb8)");
     el("mineTop3").textContent = mineEntries.length ? fmtPct(top3Share(mineEntries, mineTotal)) : "–";
 
     const refStage = m.refined ? m.refined[currentRefIdx] : null;
