@@ -142,13 +142,21 @@ h2{font-size:1.5rem;margin-bottom:10px}
 
 /* nav */
 nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1100px;margin:0 auto;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.nav-inner::-webkit-scrollbar{display:none}
-.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1100px;margin:0 auto}
+.nav-links{display:flex;align-items:center;gap:8px;flex:1;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px;flex:none}
 .brand span{color:var(--accent)}
-nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap;flex:none}
 nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
-nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto;flex:none;position:relative;overflow:hidden;z-index:0}
+nav a.cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){nav a.cta::before{transition:none}}
+.research-cta{display:inline-block;background:var(--accent);color:var(--bg);font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none;position:relative;overflow:hidden;z-index:0}
+.research-cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+.research-cta:hover::before,.research-cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){.research-cta::before{transition:none}}
 
 /* hero */
 .hero{padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
@@ -321,6 +329,7 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
   <div class="nav-inner">
     <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
     <div class="brand">Copper<span>Watch</span></div>
+    <div class="nav-links">
     <a class="link" href="#map-sec">Map</a>
     <a class="link" href="#forms-sec">The metal</a>
     <a class="link" href="#journey-sec">Journey</a>
@@ -336,6 +345,7 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
     <a class="link" href="#sources-sec">Data</a>
     <a class="link" href="#faq-sec">FAQ</a>
     <a class="link" href="#research-sec">Research</a>
+    </div>
     <a class="cta" href="#research-sec">Contact us</a>
   </div>
 </nav>
@@ -758,7 +768,7 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
       <div class="kicker">Custom research</div>
       <h2>Need an ad hoc data-driven research report?</h2>
       <p style="color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:18px">We produce bespoke, source-cited research on copper and other strategic minerals — supply-chain mapping, trade-flow analysis, country and commodity deep-dives — built on the same open data behind this dashboard.</p>
-      <a href="mailto:hello@mineral.watch" style="display:inline-block;background:var(--accent);color:#0d1117;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none">Reach out at hello@mineral.watch</a>
+      <a class="research-cta" href="mailto:hello@mineral.watch">Reach out at hello@mineral.watch</a>
     </div>
     <div class="research-art net-art" aria-hidden="true">
       <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
