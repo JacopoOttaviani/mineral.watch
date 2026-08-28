@@ -147,7 +147,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,.92);backdrop-fil
 .brand svg{flex:none;margin-right:8px}
 nav a.link{color:var(--muted);text-decoration:none;font-size:.82rem;padding:6px 12px;border-radius:99px;white-space:nowrap}
 nav a.link:hover{color:var(--ink);background:var(--card)}
-nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.82rem;padding:7px 14px;border-radius:99px;white-space:nowrap}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.82rem;padding:7px 14px;border-radius:99px;white-space:nowrap;flex:none}
 
 /* hero */
 .hero{padding:72px var(--pad) 56px;max-width:1080px;margin:0 auto}
@@ -184,7 +184,14 @@ nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decorati
 .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px}
 .btn.primary{background:var(--accent);color:var(--bg)}
 .btn.ghost{border:1.5px solid var(--line);color:var(--ink)}
-.btn.ghost:hover{border-color:var(--ink)}
+.btn.ghost:hover{border-color:var(--ink);color:var(--bg)}
+
+/* sliding hover on CTAs */
+nav a.cta,.btn{position:relative;overflow:hidden;z-index:0;transition:color .3s ease,border-color .3s ease}
+nav a.cta::before,.btn::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--ink);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+nav a.cta:hover::before,.btn:hover::before,
+nav a.cta:focus-visible::before,.btn:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){nav a.cta::before,.btn::before{transition:none}}
 
 /* featured graphite */
 .feature{background:var(--card);border:1px solid #ffffff;border-radius:16px;padding:36px 28px;color:var(--muted);display:grid;gap:24px;transition:border-color .2s,box-shadow .2s}
