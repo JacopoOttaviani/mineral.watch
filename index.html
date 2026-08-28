@@ -271,14 +271,21 @@ a.mcard:hover{border-color:var(--accent);transform:translateY(-2px)}
 .faq p{color:var(--muted);font-size:.88rem;margin-top:10px}
 
 /* about */
-.about-row{display:flex;align-items:center;gap:36px;width:100%}
+.about-row{display:flex;flex-direction:column;align-items:stretch;gap:36px;width:100%}
+@media(min-width:860px){.about-row{flex-direction:row}}
 .about-box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px 28px;flex:1;min-width:0}
 .about-box p{font-size:.95rem;color:var(--muted);margin-bottom:14px}
 .about-box p:last-child{margin-bottom:0}
 .about-box a{font-weight:600}
-.about-logo{flex-shrink:0;display:none}
-.about-logo svg{width:134px;height:134px}
-@media(min-width:860px){.about-logo{display:block}}
+.about-box .btn{margin-top:16px}
+.about-form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px 28px;flex:1;min-width:0;color-scheme:dark}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-grid .full{grid-column:1/-1}
+.about-form input,.about-form select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:var(--ink);font:inherit;font-size:.88rem}
+.about-form input::placeholder{color:var(--muted)}
+.about-form input:focus,.about-form select:focus{outline:none;border-color:var(--accent)}
+.about-form button.btn{width:100%;border:none;cursor:pointer;font:inherit;font-weight:700;margin-top:14px}
+.form-note{font-size:.74rem;color:var(--muted);margin-top:12px;text-align:center}
 
 footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:center;color:var(--muted);font-size:.76rem}
 
@@ -640,14 +647,39 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
 
 <section id="about">
   <div class="kicker">About</div>
-  <h2 class="serif">We are a knowledge hub with academic expertise: work with us</h2>
+  <h2 class="serif">Introduce yourself and subscribe for updates</h2>
   <div class="about-row">
     <div class="about-box">
-      <p>mineral.watch is an independent open-data project. It exists because reliable information on strategic minerals is scattered across agency reports, customs databases and paywalled market research — and because decisions about supply chains, industrial policy and investment deserve a shared, verifiable evidence base.</p>
-      <p>Corrections, data tips and collaboration ideas are welcome: <a href="mailto:hello@mineral.watch">hello@mineral.watch</a></p>
+      <p>mineral.watch is an independent open-data project, and it grows with the people who use it. Introduce yourself and we'll let you know when new dashboards, datasets and research go live — no noise, just what's new.</p>
+      <p>Telling us your sector and organisation helps too: it shows us who relies on this data — analysts, policymakers, journalists, researchers — and shapes what we build next, from new minerals to custom research.</p>
+      <p>Prefer to talk directly? Corrections, data tips and collaboration ideas are always welcome.</p>
+      <a class="btn ghost" href="mailto:hello@mineral.watch">Reach out to us</a>
     </div>
-    <div class="about-logo" aria-hidden="true">
-      <svg viewBox="0 0 64 64" fill="none"><g stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 H44"/><path d="M20 12 L6 26"/><path d="M44 12 L58 26"/><path d="M6 26 H58"/><path d="M6 26 L32 56"/><path d="M58 26 L32 56"/><path d="M20 12 L32 26"/><path d="M44 12 L32 26"/><path d="M32 26 V56"/></g><g fill="var(--bg)" stroke="var(--ink)" stroke-width="2"><circle cx="20" cy="12" r="3.5"/><circle cx="44" cy="12" r="3.5"/><circle cx="6" cy="26" r="3.5"/><circle cx="58" cy="26" r="3.5"/><circle cx="32" cy="56" r="3.5"/></g><circle cx="32" cy="26" r="5" fill="var(--accent)"/></svg>
+    <div class="about-form">
+      <form action="https://formspree.io/f/mljeedkq" method="POST">
+        <input type="hidden" name="_subject" value="New mineral.watch subscriber">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-grid">
+          <input type="text" name="first_name" placeholder="First name *" aria-label="First name" autocomplete="given-name" required>
+          <input type="text" name="last_name" placeholder="Last name *" aria-label="Last name" autocomplete="family-name" required>
+          <input type="email" name="email" class="full" placeholder="Email *" aria-label="Email" autocomplete="email" required>
+          <input type="text" name="organisation" class="full" placeholder="Organisation" aria-label="Organisation" autocomplete="organization">
+          <select name="sector" class="full" aria-label="Sector">
+            <option value="" selected>Sector</option>
+            <option>Government &amp; policy</option>
+            <option>Mining &amp; industry</option>
+            <option>Finance &amp; investment</option>
+            <option>Research &amp; academia</option>
+            <option>Media &amp; journalism</option>
+            <option>NGO / civil society</option>
+            <option>Other</option>
+          </select>
+          <input type="text" name="linkedin" placeholder="LinkedIn" aria-label="LinkedIn profile">
+          <input type="tel" name="whatsapp" placeholder="WhatsApp (+code)" aria-label="WhatsApp number">
+        </div>
+        <button type="submit" class="btn primary">Subscribe for updates</button>
+        <p class="form-note">We'll only use your details to send you mineral.watch updates. No spam, unsubscribe anytime.</p>
+      </form>
     </div>
   </div>
 </section>
