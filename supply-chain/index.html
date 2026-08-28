@@ -270,8 +270,11 @@ html[data-embed] .mapdiv{height:420px;min-height:0}
 
   function makeMap(id){
     const m = L.map(id, {scrollWheelZoom:false, worldCopyJump:true, minZoom:1, maxZoom:6}).setView([18,10], 1);
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-      attribution: "&copy; OpenStreetMap, &copy; CARTO", maxZoom:6, minZoom:1
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
+      attribution: "Tiles &copy; Esri &mdash; &copy; OpenStreetMap contributors", maxZoom:6, minZoom:1
+    }).addTo(m);
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {
+      maxZoom:6, minZoom:1
     }).addTo(m);
     return m;
   }

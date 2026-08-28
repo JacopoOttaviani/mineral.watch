@@ -197,8 +197,11 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
   let hasFitBounds = false;
 
   const map = L.map("map", {scrollWheelZoom:false, worldCopyJump:true, minZoom:1, maxZoom:6}).setView([15,10], 1);
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-    attribution: "&copy; OpenStreetMap, &copy; CARTO",
+  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
+    attribution: "Tiles &copy; Esri &mdash; &copy; OpenStreetMap contributors",
+    maxZoom: 6, minZoom: 1
+  }).addTo(map);
+  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {
     maxZoom: 6, minZoom: 1
   }).addTo(map);
   const markerLayer = L.featureGroup().addTo(map);
