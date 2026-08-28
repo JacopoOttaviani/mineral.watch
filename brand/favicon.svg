@@ -6,5 +6,5 @@
     <path d="M20 12 L32 26 L44 12"/>
     <path d="M32 26 V56"/>
   </g>
-  <circle cx="32" cy="26" r="6" fill="#ed8936"/>
+  <circle cx="32" cy="26" r="6" fill="#c8ff6b"/>
 </svg>
