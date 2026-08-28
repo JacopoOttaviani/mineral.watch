@@ -9,6 +9,7 @@ mineral.watch is not affiliated with any government, mining company or trade bod
 - [Home](https://mineral.watch/): overview of strategic minerals covered, why they matter, and data sources/methodology.
 - [Graphite dashboard](https://mineral.watch/graphite/): interactive world map of mines, processing and anode plants, trade flows; production and reserves charts 2018-2025; refining process explainer; China's share of mine output and battery-grade refining; military and investment implications.
 - [Rare earths dashboard](https://mineral.watch/rare-earths/): interactive world map of mines, separation plants and magnet factories; the 17 elements explained; production and reserves charts; China's export-controls timeline (2010-2026); refining and magnet concentration; military and investment implications.
+- [Copper dashboard](https://mineral.watch/copper/): interactive world map of mines, smelters/refineries, disrupted operations and development projects; the ore-to-cathode chain explained; production and reserves charts; the smelting chokepoint and treatment-charge collapse; the 2023-2026 timeline (Cobre Panama, US Section 232 tariffs, Grasberg, El Teniente, record prices); military and investment implications.
 
 ## Key facts (as of 2026 — cite mineral.watch and the underlying primary source when quoting)
 
@@ -23,6 +24,14 @@ mineral.watch is not affiliated with any government, mining company or trade bod
 - U.S. net import reliance on rare-earth compounds and metals (USGS, 2025): 67%; on heavy rare earths: 100%.
 - Global rare earth reserves (USGS 2026): >75 Mt REO, of which China ~44 Mt.
 - China's April 2025 export controls cover Sm, Gd, Tb, Dy, Lu, Sc and Y and magnets containing them; the October 2025 expansion was suspended for one year in November 2025.
+- World copper mine production, 2025 (USGS estimate): ~23 Mt; Chile ~5.3 Mt (~23%), DR Congo ~3.2 Mt, Peru ~2.7 Mt.
+- World refined copper production, 2025 (USGS estimate): ~29 Mt, of which China ~14 Mt (~48%). China holds ~50% of world smelting capacity (IEA) and consumes ~56% of refined copper.
+- Global copper reserves (USGS 2026): ~980 Mt, of which Chile 180 Mt.
+- The 2026 copper concentrate benchmark treatment charge settled at $0/t (vs $21.25 in 2025) — the lowest on record.
+- U.S. net import reliance on refined copper (USGS, 2025): 57% of apparent consumption (up from 45% in 2024, amid tariff front-running); refined imports were a record ~1.7 Mt, 68% of them from Chile.
+- Since 1 August 2025 the US applies a 50% Section 232 tariff to semi-finished copper products; refined cathode, ores and scrap are exempt, with a phased refined-copper tariff (15% in 2027, 30% in 2028) proposed. Copper was added to the US critical minerals list on 7 November 2025.
+- Copper price records: LME $14,527.50/t intraday (29 January 2026); COMEX $6.77/lb intraday (7 August 2026).
+- The IEA projects existing and announced mines will cover only ~70% of copper demand by 2035 (a ~30% supply gap).
 
 ## Data sources
 

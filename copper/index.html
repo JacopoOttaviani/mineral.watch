@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>CopperWatch — Tracking the Global Copper Supply Chain</title>
+<meta name="description" content="Open data visualisation tracking the global copper supply chain: mines, smelters, refineries, tariffs, the smelting chokepoint and record prices. Built on USGS, ICSG, IEA and BGS data.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="mineral.watch">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="https://mineral.watch/copper/">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="alternate icon" href="/brand/favicon.png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mineral.watch/copper/">
+<meta property="og:site_name" content="mineral.watch">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="CopperWatch — Tracking the Global Copper Supply Chain">
+<meta property="og:description" content="Interactive world map of copper mines, smelters and refineries, the ore-to-cathode chain explained, the smelting chokepoint, the tariff timeline and record prices — built on USGS, ICSG, IEA and BGS data.">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CopperWatch — tracking the global copper supply chain">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CopperWatch — Tracking the Global Copper Supply Chain">
+<meta name="twitter:description" content="Interactive map, production and reserves charts, the smelting chokepoint, the US tariff timeline and record copper prices — built on USGS, ICSG, IEA and BGS data.">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png">
+<meta name="twitter:image:alt" content="CopperWatch — tracking the global copper supply chain">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
+        { "@type": "ListItem", "position": 2, "name": "Copper", "item": "https://mineral.watch/copper/" }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "CopperWatch — Global Copper Supply Chain Data",
+      "description": "Mines, smelters and refineries, production and reserves data, trade flows, tariffs and prices for the global copper supply chain.",
+      "url": "https://mineral.watch/copper/",
+      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "temporalCoverage": "2018/2026",
+      "spatialCoverage": "Worldwide",
+      "variableMeasured": ["Mine production", "Refinery production", "Smelter production", "Reserves", "Prices", "Treatment charges", "Tariffs", "Companies"],
+      "isAccessibleForFree": true,
+      "license": "https://mineral.watch/",
+      "citation": [
+        "USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Copper)",
+        "International Copper Study Group (ICSG) statistics and market forecasts",
+        "IEA Global Critical Minerals Outlook 2025",
+        "British Geological Survey, World Mineral Statistics",
+        "LME and COMEX price data; company disclosures and government announcements"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the world running out of copper?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. USGS puts global reserves at 980 million tonnes, with identified and undiscovered resources above 5 billion tonnes. The squeeze is about pace, not endowment: average ore grades have fallen to roughly 0.6% copper, a new mine takes about 17 years from discovery to production, and the IEA projects that existing and announced mines will cover only about 70% of copper demand by 2035 — a 30% supply gap."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which country produces the most copper?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Chile mined about 5.3 of the world's 23 million tonnes in 2025 — roughly 23% — ahead of the Democratic Republic of the Congo (3.2 Mt) and Peru (2.7 Mt), according to USGS estimates. But China dominates the next step: it produced about 48% of the world's refined copper in 2025 and consumes well over half of it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is smelting the chokepoint if copper mining is so spread out?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Copper mining is geographically diverse, but China built over 90% of the growth in global smelting capacity since 2005 and now holds about half of it. That overcapacity, colliding with stalled mine supply, pushed the 2026 benchmark fee smelters charge miners to $0 per tonne — the lowest ever — with spot fees deeply negative. Outside China, custom smelters are closing or on state support, and the United States has only two primary copper smelters left."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What did the 2025 US copper tariffs do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The July 2025 announcement of a 50% copper tariff sent New York futures up 13% in a day — the largest gain since 1968 — and pulled record volumes of cathode to the US. When the final proclamation exempted refined cathode and applied the 50% duty only to semi-finished products from 1 August 2025, COMEX crashed by about a fifth in a day. The US still imported a record 1.7 million tonnes of refined copper in 2025, net import reliance jumped from 45% to 57%, and a phased tariff on refined copper (15% in 2027, 30% in 2028) remains proposed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is copper used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wiring the world: building construction (42% of US use), electrical and electronic products (23%) and transportation (18%) lead. Power grids are the biggest growth market, a battery-electric vehicle uses roughly 83 kg of copper versus 23 kg in a petrol car, and a single large AI data centre can contain up to 50,000 tonnes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did copper prices hit records in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A run of 2025 supply shocks — the Grasberg mud rush, the El Teniente collapse and flooding at Kamoa-Kakula — collided with tariff-driven US stockpiling that drained exchange warehouses elsewhere, surging grid and AI demand, and smelting fees at zero. LME copper hit an all-time high of $14,527.50 per tonne on 29 January 2026, and COMEX printed a record $6.77 per pound on 7 August 2026."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#e8926a;--accent2:#34d399;
+  --mine:#e8926a;--proc:#34d399;--dis:#fbbf24;--dev:#f472b6;
+  --radius:14px;--pad:16px;
+  font-size:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+h1,h2,h3{line-height:1.2;font-weight:700}
+section{padding:40px var(--pad);max-width:1100px;margin:0 auto}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;margin-bottom:8px}
+h2{font-size:1.5rem;margin-bottom:10px}
+.lede{color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:20px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1100px;margin:0 auto;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px}
+.brand span{color:var(--accent)}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap}
+nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto}
+
+/* hero */
+.hero{padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
+.hero h1{font-size:clamp(1.9rem,6.5vw,3.2rem);letter-spacing:-.02em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);max-width:560px;font-size:1rem}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.stat b{display:block;font-size:1.45rem;color:var(--accent);letter-spacing:-.01em}
+.stat span{font-size:.74rem;color:var(--muted)}
+
+/* map */
+#map{height:62vh;min-height:380px;border-radius:var(--radius);border:1px solid var(--line);z-index:1}
+.map-controls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:7px 14px;font-size:.8rem;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent}
+.chip.on{color:#0d1117;font-weight:700}
+.chip.on.c-mine{background:var(--mine);border-color:var(--mine)}
+.chip.on.c-proc{background:var(--proc);border-color:var(--proc)}
+.chip.on.c-dis{background:var(--dis);border-color:var(--dis)}
+.chip.on.c-dev{background:var(--dev);border-color:var(--dev)}
+.legend{font-size:.74rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--card)}
+.leaflet-popup-content{font-size:.82rem;line-height:1.5;margin:12px 14px}
+.leaflet-popup-content b{color:var(--accent)}
+.pp-tag{display:inline-block;font-size:.66rem;padding:1px 8px;border-radius:99px;margin-bottom:4px;font-weight:700}
+
+/* forms grid (ore → cathode) */
+.el-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px;margin-top:8px}
+.el{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 6px 10px;cursor:pointer;text-align:center;transition:.15s;position:relative;-webkit-tap-highlight-color:transparent}
+.el:hover{border-color:var(--accent)}
+.el.sel{border-color:var(--accent);background:#e8926a14}
+.el b{display:block;font-size:.98rem;letter-spacing:-.01em}
+.el span{font-size:.6rem;color:var(--muted);display:block;margin-top:2px}
+.el .z{position:absolute;top:4px;left:7px;font-size:.56rem;color:var(--muted)}
+.el.gU b{color:var(--accent)}
+.el.gM b{color:var(--accent2)}
+.el.gD b{color:var(--dis)}
+.el.gC b{color:var(--muted)}
+.el-legend{font-size:.72rem;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.el-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.el-detail{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.el-detail h3{font-size:1.05rem;margin-bottom:2px}
+.el-detail h3 small{color:var(--muted);font-weight:400;font-size:.78rem}
+.el-detail .tags{margin:6px 0 10px;display:flex;gap:6px;flex-wrap:wrap}
+.el-detail p{font-size:.85rem;color:var(--muted)}
+.el-detail .price{margin-top:10px;font-size:.78rem;color:var(--accent);border-top:1px dashed var(--line);padding-top:8px}
+
+/* journey */
+.journey{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 calc(-1*var(--pad));padding-left:var(--pad);padding-right:var(--pad)}
+.jcard{scroll-snap-align:start;flex:0 0 260px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative}
+.jcard .num{position:absolute;top:14px;right:16px;font-size:1.6rem;font-weight:800;color:var(--line)}
+.jcard .ico{font-size:1.6rem;margin-bottom:10px}
+.jcard h3{font-size:1rem;margin-bottom:6px}
+.jcard p{font-size:.8rem;color:var(--muted)}
+.jcard .fact{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.76rem;color:var(--accent)}
+.jhint{font-size:.72rem;color:var(--muted);margin-top:6px}
+
+/* charts */
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card h3{font-size:.95rem;margin-bottom:4px}
+.card .sub{font-size:.74rem;color:var(--muted);margin-bottom:12px}
+.chartbox{position:relative;height:280px}
+.src{font-size:.68rem;color:var(--muted);margin-top:10px}
+
+/* china section */
+.big{font-size:clamp(2.6rem,10vw,4.5rem);font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1}
+.bars{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.bar-row{display:grid;grid-template-columns:150px 1fr 44px;align-items:center;gap:10px;font-size:.78rem}
+.bar-row .track{background:var(--bg2);border-radius:99px;height:10px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#f4b896);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar-row .val{text-align:right;color:var(--muted)}
+
+/* process flow */
+.flow-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+.flow-wrap svg{min-width:980px;display:block}
+
+/* timeline */
+.tl{position:relative;margin-top:6px;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding-bottom:22px}
+.tl-item::before{content:"";position:absolute;left:-24px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl-item.hot::before{background:var(--accent)}
+.tl-date{font-size:.7rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.tl-item h4{font-size:.92rem;margin:3px 0 4px}
+.tl-item p{font-size:.8rem;color:var(--muted);max-width:640px}
+
+/* company tracker */
+.co-search{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.co-search input{flex:1 1 200px;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;color:var(--txt);font-size:.8rem;outline:none;-webkit-appearance:none}
+.co-search input:focus{border-color:var(--accent)}
+.co-search input::placeholder{color:var(--muted)}
+.co-count{font-size:.72rem;color:var(--muted)}
+.co-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+table.co{width:100%;min-width:900px;border-collapse:collapse;font-size:.79rem}
+.co th{text-align:left;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.co td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted);line-height:1.45}
+.co td:first-child{min-width:170px}
+.co td b{color:var(--txt);font-size:.82rem}
+.co td b a{color:var(--txt);text-decoration:none;border-bottom:1px dashed var(--line)}
+.co td b a:hover{color:var(--accent2);border-bottom-color:var(--accent2)}
+.co .tik{font-size:.68rem;color:var(--muted);margin-top:2px;white-space:nowrap}
+.co .pp-tag{white-space:nowrap;margin-bottom:0}
+
+/* mini cards (military / invest) */
+.mini-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.mini{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px}
+.mini h4{font-size:.86rem;margin-bottom:5px}
+.mini h4 .mi{margin-right:6px}
+.mini p{font-size:.78rem;color:var(--muted)}
+.note{font-size:.72rem;color:var(--muted);border-left:3px solid var(--accent);padding:8px 12px;background:var(--bg2);border-radius:0 8px 8px 0;margin-top:14px}
+.callout{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:14px;margin-top:14px}
+.callout b{font-size:1.5rem;color:var(--accent2);white-space:nowrap;line-height:1.2}
+.callout span{font-size:.78rem;color:var(--muted);flex:1 1 260px;line-height:1.5}
+@media(min-width:720px){.mini-grid{grid-template-columns:1fr 1fr}}
+
+/* research box + animated logo */
+.research-box{display:grid;gap:24px;align-items:center}
+.research-art{display:none;justify-self:center;width:180px;animation:hero-float 11s ease-in-out infinite}
+@media(min-width:720px){.research-box{grid-template-columns:1.3fr 1fr}.research-art{display:block}}
+@keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.net-art .edge{stroke:var(--txt);stroke-opacity:.55;stroke-width:1.1;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 1.6s ease-out forwards}
+.net-art .web{stroke:var(--muted);stroke-opacity:.35;stroke-width:.8;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 2s ease-out forwards}
+.net-art .d1{animation-delay:.1s}.net-art .d2{animation-delay:.35s}.net-art .d3{animation-delay:.6s}
+.net-art .d4{animation-delay:.9s}.net-art .d5{animation-delay:1.15s}.net-art .d6{animation-delay:1.4s}
+@keyframes art-draw{to{stroke-dashoffset:0}}
+.net-art .orbit{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:3 7;transform-box:fill-box;transform-origin:center}
+.net-art .orbit.o2{stroke-opacity:.6;animation:art-spin 120s linear infinite reverse}
+@keyframes art-spin{to{transform:rotate(360deg)}}
+.net-art .node{fill:var(--bg);stroke:var(--txt);stroke-opacity:.7;stroke-width:1.1;opacity:0;animation:art-in .5s ease-out forwards}
+.net-art .sat{fill:none;stroke:var(--muted);stroke-width:1;opacity:0;animation:art-in .5s ease-out forwards,art-breathe 4s ease-in-out 2.4s infinite;transform-box:fill-box;transform-origin:center}
+.net-art .node,.net-art .sat{animation-delay:1.2s}
+.net-art .sat.b2{animation-delay:1.4s,3s}.net-art .sat.b3{animation-delay:1.6s,3.8s}
+@keyframes art-in{to{opacity:1}}
+@keyframes art-breathe{0%,100%{transform:scale(1);stroke-opacity:1}50%{transform:scale(1.5);stroke-opacity:.4}}
+@media(prefers-reduced-motion:reduce){
+  .net-art,.net-art *{animation:none !important;stroke-dashoffset:0 !important;opacity:1 !important}
+}
+
+/* sources */
+.sources li{margin-bottom:12px;font-size:.85rem;color:var(--muted)}
+.sources{list-style:none}
+.sources b{color:var(--txt)}
+
+/* faq */
+.faq{display:grid;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+.faq details[open]{border-color:var(--accent)}
+.faq summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.2rem;flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--muted);font-size:.86rem;margin-top:10px}
+footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}
+
+@media(min-width:720px){
+  :root{--pad:24px}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .grid2{grid-template-columns:1fr 1fr}
+  h2{font-size:1.9rem}
+  .jcard{flex-basis:300px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
+    <div class="brand">Copper<span>Watch</span></div>
+    <a class="link" href="#map-sec">Map</a>
+    <a class="link" href="#forms-sec">The metal</a>
+    <a class="link" href="#journey-sec">Journey</a>
+    <a class="link" href="#production-sec">Production</a>
+    <a class="link" href="#smelting-sec">Smelting</a>
+    <a class="link" href="#demand-sec">Demand</a>
+    <a class="link" href="#timeline-sec">Timeline</a>
+    <a class="link" href="#trade-sec">Trade</a>
+    <a class="link" href="#china-sec">China</a>
+    <a class="link" href="#military-sec">Military</a>
+    <a class="link" href="#invest-sec">Investment</a>
+    <a class="link" href="#companies-sec">Companies</a>
+    <a class="link" href="#sources-sec">Data</a>
+    <a class="link" href="#faq-sec">FAQ</a>
+    <a class="link" href="#research-sec">Research</a>
+    <a class="cta" href="#research-sec">Contact us</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="kicker">Open data · critical minerals</div>
+  <h1>Who keeps the world <em>wired</em>?</h1>
+  <p>Copper is the metal of electrification — every grid, motor, chip and data centre runs on it. Mining it is a global business; smelting it increasingly is not. This site tracks where copper is mined, smelted and refined, and how tariffs, disasters and record prices are rewiring the trade — using open data from USGS, ICSG, the IEA and BGS.</p>
+  <div class="stats">
+    <div class="stat"><b data-count="23" data-suffix=" Mt">0</b><span>copper mined worldwide, 2025 (USGS est.)</span></div>
+    <div class="stat"><b data-count="48" data-suffix="%">0</b><span>of the world's refined copper made in China, 2025</span></div>
+    <div class="stat"><b data-count="30" data-suffix="%">0</b><span>supply gap projected for 2035 (IEA base case)</span></div>
+    <div class="stat"><b data-count="14527" data-prefix="$">0</b><span>per tonne — LME all-time high, 29 Jan 2026</span></div>
+  </div>
+</header>
+
+<section id="map-sec">
+  <div class="kicker">Interactive map</div>
+  <h2>The copper world map</h2>
+  <p class="lede">Major producing mines, smelters and refineries, disrupted operations and development projects. Tap a marker for details; toggle layers below. Circle size ≈ scale of operation.</p>
+  <div class="map-controls">
+    <button class="chip c-mine on" data-layer="mines">⛏ Mines</button>
+    <button class="chip c-proc on" data-layer="processing">🏭 Smelters &amp; refineries</button>
+    <button class="chip c-dis on" data-layer="disrupted">⚠ Disrupted &amp; suspended</button>
+    <button class="chip c-dev on" data-layer="development">◐ Development</button>
+  </div>
+  <div id="map"></div>
+  <div class="legend" style="margin-top:10px">
+    <span><i style="background:var(--mine)"></i>Mine (producing)</span>
+    <span><i style="background:var(--proc)"></i>Smelter / refinery</span>
+    <span><i style="background:var(--dis)"></i>Disrupted / suspended</span>
+    <span><i style="background:var(--dev)"></i>Development project</span>
+  </div>
+</section>
+
+<section id="forms-sec">
+  <div class="kicker">From ore to cathode</div>
+  <h2>One metal, many products</h2>
+  <p class="lede">Copper trades in a ladder of forms — from rock that is 99.4% waste to cathode that is 99.99% metal. Each rung is a different market with its own price, and the chokepoints sit between the rungs. Tap a stage.</p>
+  <div class="el-grid" id="elGrid"></div>
+  <div class="el-legend">
+    <span><i style="background:var(--accent)"></i>Upstream (mine)</span>
+    <span><i style="background:var(--accent2)"></i>Midstream (smelt &amp; refine)</span>
+    <span><i style="background:var(--dis)"></i>Downstream (fabrication)</span>
+    <span><i style="background:var(--muted)"></i>Circular (scrap)</span>
+  </div>
+  <div class="el-detail" id="elDetail"></div>
+</section>
+
+<section id="journey-sec">
+  <div class="kicker">Mine to wire</div>
+  <h2>The journey of a tonne of copper</h2>
+  <p class="lede">From a gram of metal per kilogram of rock to the wire in an EV motor, copper passes through a chain where the geography narrows at every step — and the margins have moved downstream.</p>
+  <div class="journey" id="journey"></div>
+  <div class="jhint">← swipe →</div>
+</section>
+
+<section id="production-sec">
+  <div class="kicker">Production &amp; reserves</div>
+  <h2>Where copper comes from</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Mine production by country, 2025</h3>
+      <div class="sub">Thousand metric tons of copper content, log scale (USGS estimates)</div>
+      <div class="chartbox"><canvas id="chProd"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries 2026. World total ~23 Mt; 2025 figures are estimates.</div>
+    </div>
+    <div class="card">
+      <h3>Reserves by country</h3>
+      <div class="sub">Million metric tons of copper (world total ~980 Mt)</div>
+      <div class="chartbox"><canvas id="chRes"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries 2026. Identified + undiscovered resources exceed 5 billion tonnes.</div>
+    </div>
+    <div class="card" style="grid-column:1/-1">
+      <h3>World production, 2018–2025: mining vs refining</h3>
+      <div class="sub">Million tonnes per year — refined output (much of it new Chinese capacity plus scrap) has grown twice as fast as mine supply</div>
+      <div class="chartbox"><canvas id="chTrend"></canvas></div>
+      <div class="src">Sources: BGS World Mineral Statistics (2018–2024); USGS MCS 2026 estimates for 2025. Mine figures are metal content.</div>
+    </div>
+  </div>
+  <div class="note">Compare where copper is <b>mined</b> against where it is <b>refined</b>, country by country since 1970, on the <a href="/supply-chain/">mined-vs-refined supply-chain map</a>.</div>
+</section>
+
+<section id="smelting-sec">
+  <div class="kicker">Smelting &amp; refining</div>
+  <h2>The chokepoint is the smelter</h2>
+  <p class="lede">Copper mining is spread across five continents — no country mines more than a quarter of it. The concentration comes one step later: China has built over 90% of the world's new smelting capacity since 2005 and now smelts about half of all copper. In 2026 the fee smelters charge miners hit $0 for the first time ever.</p>
+  <div class="card">
+    <h3>Smelting geography</h3>
+    <div class="sub">Overcapacity in China, retreat almost everywhere else</div>
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇨🇳</span>The Chinese fleet</h4><p>From ~15% of world smelting capacity in 2005 to ~50% today: Guixi (the world's largest smelter), the Tongling cluster, Daye, Jinchuan and dozens more — built faster than mines could feed them, and now competing for every tonne of concentrate on Earth.</p></div>
+      <div class="mini"><h4><span class="mi">📉</span>The $0 fee</h4><p>Treatment charges — what miners pay smelters to process concentrate — collapsed from a $80/t benchmark in 2024 to $21.25 in 2025 to <b style="color:var(--accent)">$0 for 2026</b>, with spot fees deeply negative. Smelters now survive on sulfuric acid and gold by-product credits; China's top smelters agreed to cut output over 10% in 2026.</p></div>
+      <div class="mini"><h4><span class="mi">🌍</span>The new entrants</h4><p>Resource-holders are forcing the value chain home: Indonesia's concentrate-export ban built Freeport's Manyar smelter (2024), Ivanhoe fired up Africa's largest smelter at Kamoa-Kakula (Dec 2025), Adani's Kutch plant anchors India's push, and Uzbekistan is expanding Almalyk.</p></div>
+      <div class="mini"><h4><span class="mi">⚠️</span>The Western retreat</h4><p>Outside China, custom smelting is an endangered business: Glencore mothballed the Philippines' PASAR refinery in 2025 and sought state support for Australia's Mount Isa smelter. The US is down to two primary smelters — which is why Washington now classes smelting capacity as a strategic asset.</p></div>
+    </div>
+    <div class="src">Sources: IEA commentary on copper smelting (2026); ICSG; USGS MCS 2026; Reuters; company disclosures.</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Refined production by country, 2025</h3>
+    <div class="sub">Thousand tonnes of refined copper — the step where the market concentrates</div>
+    <div class="chartbox"><canvas id="chRefined"></canvas></div>
+    <div class="src">Source: USGS Mineral Commodity Summaries 2026 (2025 estimates). World total ~29 Mt.</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>From ore to wire, step by step</h3>
+    <div class="sub">Sulfide route (top), leach and scrap routes (bottom) converge at cathode. Scroll sideways on mobile →</div>
+    <div class="flow-wrap">
+    <svg viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copper processing flow from ore to wire">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8b98a5"/></marker>
+      </defs>
+      <style>
+        .fb{fill:#151b23;stroke:#2b3644;rx:10}
+        .ft{fill:#e6edf3;font:700 12px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fs{fill:#8b98a5;font:11px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fe{fill:#e8926a;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fl{stroke:#8b98a5;stroke-width:1.4;fill:none;marker-end:url(#ah)}
+        .lab{fill:#34d399;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em}
+      </style>
+      <!-- route labels -->
+      <text x="10" y="24" class="lab">SULFIDE ROUTE (~80%)</text>
+      <text x="10" y="212" class="lab">LEACH &amp; SCRAP ROUTES</text>
+      <!-- sulfide route boxes y=40..118 -->
+      <g>
+        <rect class="fb" x="10" y="40" width="150" height="78" rx="10"/>
+        <text x="20" y="62" class="ft">1 · Mining ⛏</text>
+        <text x="20" y="80" class="fs">Porphyry &amp; sediment ores,</text>
+        <text x="20" y="94" class="fs">~0.5–1% copper</text>
+        <text x="20" y="111" class="fe">grades halved since 1990s</text>
+
+        <rect class="fb" x="205" y="40" width="150" height="78" rx="10"/>
+        <text x="215" y="62" class="ft">2 · Concentrate</text>
+        <text x="215" y="80" class="fs">Crush, grind &amp; float to</text>
+        <text x="215" y="94" class="fs">~25–30% Cu powder</text>
+        <text x="215" y="111" class="fe">the world's traded feedstock</text>
+
+        <rect class="fb" x="400" y="40" width="150" height="78" rx="10"/>
+        <text x="410" y="62" class="ft">3 · Smelt 🏭</text>
+        <text x="410" y="80" class="fs">Flash-smelt to matte, then</text>
+        <text x="410" y="94" class="fs">blister copper ~99%</text>
+        <text x="410" y="111" class="fe">~50% done in China</text>
+
+        <rect class="fb" x="595" y="40" width="150" height="78" rx="10"/>
+        <text x="605" y="62" class="ft">4 · Refine ⚡</text>
+        <text x="605" y="80" class="fs">Electrorefine anodes to</text>
+        <text x="605" y="94" class="fs">99.99% cathode</text>
+        <text x="605" y="111" class="fe">48% of output from China</text>
+      </g>
+      <!-- leach & scrap route boxes y=222..300 -->
+      <g>
+        <rect class="fb" x="10" y="222" width="150" height="78" rx="10"/>
+        <text x="20" y="244" class="ft">Leach &amp; SX-EW</text>
+        <text x="20" y="262" class="fs">Acid heap-leach of oxide ore</text>
+        <text x="20" y="276" class="fs">→ cathode at the mine</text>
+        <text x="20" y="292" class="fe">~1/5 of mine output</text>
+
+        <rect class="fb" x="400" y="222" width="150" height="78" rx="10"/>
+        <text x="410" y="244" class="ft">Scrap ♻</text>
+        <text x="410" y="262" class="fs">Wire, motors, demolition —</text>
+        <text x="410" y="276" class="fs">re-smelted or direct-melted</text>
+        <text x="410" y="292" class="fe">~1/3 of all copper used</text>
+      </g>
+      <!-- convergence box -->
+      <g>
+        <rect class="fb" x="790" y="120" width="180" height="90" rx="10" stroke="#e8926a"/>
+        <text x="800" y="144" class="ft">5 · Rod &amp; semis 🔌</text>
+        <text x="800" y="162" class="fs">Cathode cast to 8&nbsp;mm rod,</text>
+        <text x="800" y="176" class="fs">drawn to wire; tube, sheet,</text>
+        <text x="800" y="190" class="fs">strip for everything else</text>
+        <text x="800" y="205" class="fe">US 50% tariff since Aug 2025</text>
+      </g>
+      <!-- arrows -->
+      <path class="fl" d="M160 79 H200"/>
+      <path class="fl" d="M355 79 H395"/>
+      <path class="fl" d="M550 79 H590"/>
+      <path class="fl" d="M745 79 H768 V143 H785"/>
+      <path class="fl" d="M160 261 H395"/>
+      <path class="fl" d="M550 261 H700 V183 H785"/>
+    </svg>
+    </div>
+    <div class="src">Process shares: ICSG, USGS. SX-EW = solvent extraction–electrowinning, used for oxide and low-grade ores; new leach technologies aim to extend it to sulfides.</div>
+  </div>
+</section>
+
+<section id="demand-sec">
+  <div class="kicker">Demand</div>
+  <h2>The wiring of everything</h2>
+  <p class="lede">No other industrial metal touches as much of the economy. Copper demand was long a proxy for construction in China; it is now being re-based on power grids, EVs and — since 2024 — AI data centres, none of which can substitute away from it at scale.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">⚡</span>Power grids</h4><p>The biggest growth market. The IEA expects some 80 million km of grid lines to be built or refurbished by 2040 — a copper order book measured in decades. Grid and line hardware already anchors the "electrical" share of demand everywhere.</p></div>
+      <div class="mini"><h4><span class="mi">🏗️</span>Construction</h4><p>Still the base load: building wire, plumbing and HVAC took 42% of US copper in 2025 (Copper Development Association via USGS). Every square metre of built space carries kilograms of copper behind the walls.</p></div>
+      <div class="mini"><h4><span class="mi">🚗</span>Electric vehicles</h4><p>A battery-electric car uses roughly 83&nbsp;kg of copper against ~23&nbsp;kg in a petrol car (S&amp;P Global) — plus the charger, plus the grid upgrade behind the charger. Motors, busbars, harnesses and batteries all draw on it.</p></div>
+      <div class="mini"><h4><span class="mi">🖥️</span>Data centres &amp; AI</h4><p>The demand shock nobody modelled in 2020: J.P. Morgan estimates a single large AI data centre can contain up to 50,000&nbsp;t of copper — power distribution, busways, cooling — with the sector drawing roughly 400–600&nbsp;kt a year through the late 2020s.</p></div>
+    </div>
+    <div class="callout"><b>30%</b><span>the copper supply gap the IEA projects for 2035: existing and announced mines would meet only ~70% of demand (Global Critical Minerals Outlook 2025). S&amp;P Global sees demand growing from ~28 Mt today to ~42 Mt by 2040.</span></div>
+  </div>
+</section>
+
+<section id="timeline-sec">
+  <div class="kicker">Geopolitics</div>
+  <h2>From commodity to critical mineral</h2>
+  <p class="lede">For a century copper was the well-behaved commodity: liquid, global, boring. Between 2023 and 2026 a court ruling, three mine disasters, a tariff whipsaw and a smelting-fee collapse turned it into contested strategic territory.</p>
+  <div class="card">
+    <div class="tl">
+      <div class="tl-item hot">
+        <div class="tl-date">Nov 2023</div>
+        <h4>Panama switches off 1.5% of world supply</h4>
+        <p>After weeks of mass protests, Panama's Supreme Court rules First Quantum's contract unconstitutional and Cobre Panamá — ~350,000 t/yr, about 5% of the country's GDP — is ordered shut. The biggest single copper supply loss in years, and a warning that permits can be revoked as fast as they are granted.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2024</div>
+        <h4>The smelter glut builds</h4>
+        <p>China keeps commissioning smelters as mine growth stalls; spot treatment charges begin sliding toward zero. New plants outside China — Freeport's Manyar in Indonesia (built under Jakarta's concentrate-export ban), Adani's Kutch in India — join the scramble for concentrate.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Feb 2025</div>
+        <h4>Section 232</h4>
+        <p>Washington opens a national-security investigation into copper imports. COMEX starts pricing a tariff premium over the LME, and the world's cathode begins sailing to America.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">May 2025</div>
+        <h4>Kamoa-Kakula floods</h4>
+        <p>Seismic activity floods part of the Kakula mine in the DRC — the world's highest-grade major copper mine. Ivanhoe cuts 2025 guidance by roughly 150,000 t; dewatering and a rebuilt mine plan follow.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Jul 2025</div>
+        <h4>The tariff whipsaw</h4>
+        <p>Jul 8: Trump announces a 50% copper tariff; COMEX jumps 13% in a day — the biggest gain since 1968 — and trades at a ~24% premium to London. Jul 30: the proclamation exempts cathode, ores and scrap, applying 50% only to semi-finished products from Aug 1. COMEX crashes by about a fifth in a day. A phased refined-copper tariff — 15% in 2027, 30% in 2028 — is left on the table.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Jul 31 2025</div>
+        <h4>El Teniente collapses</h4>
+        <p>A seismic event collapses tunnels at Codelco's El Teniente, the world's largest underground copper mine, killing six workers. 2025 output falls 13% to ~310,000 t, the Andes Norte expansion is suspended, and Codelco posts its lowest production in almost three decades.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Sep 2025</div>
+        <h4>Black September</h4>
+        <p>Sep 8: a mud rush inundates Grasberg's Block Cave in Indonesia — the world's No. 2 copper mine — killing seven. Freeport declares force majeure; ~35% of planned 2026 output is lost and full capacity recedes to early 2028. The next day, Anglo American and Teck announce a $53B merger of equals to form Anglo Teck. In one month, copper loses ~3% of near-term mine supply and gains a new top-five producer.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Nov–Dec 2025</div>
+        <h4>Critical mineral, zero fee</h4>
+        <p>Nov 7: copper is added to the US critical minerals list for the first time. December: Chinese smelters settle the 2026 concentrate benchmark at $0/t (vs $21.25 in 2025) — the lowest ever — and China's top smelters agree to cut 2026 output by more than 10%. Kamoa-Kakula's on-site smelter, Africa's largest, fires up.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Jan 2026</div>
+        <h4>The record</h4>
+        <p>Jan 29: LME three-month copper spikes to an all-time high of $14,527.50/t in a Shanghai-led surge — the biggest daily move since 2008 — before closing lower. The era of $9,000 copper looks over.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Apr–Aug 2026</div>
+        <h4>Squeeze and stalemate</h4>
+        <p>Panama authorises First Quantum to export stockpiled concentrate (30,000–40,000 t of copper in 2026) while restart talks over ownership and taxes drag on; a June audit finds the mine broadly compliant. Grasberg begins its phased underground restart. Aug 7: COMEX prints a record $6.77/lb; LME spreads hit their widest backwardation since January as US-bound metal drains exchange warehouses. Washington's decision on the refined-copper tariff is still pending.</p>
+      </div>
+    </div>
+    <div class="src">Sources: USGS MCS 2026; Congressional Research Service (IN12614); company disclosures (Freeport-McMoRan, Codelco, Ivanhoe, First Quantum, Anglo American/Teck); Reuters, Bloomberg, MINING.com, Fastmarkets.</div>
+  </div>
+</section>
+
+<section id="trade-sec">
+  <div class="kicker">Trade &amp; prices</div>
+  <h2>Who ships to whom — and at what price</h2>
+  <p class="lede">The US mines a million tonnes a year yet became the story of the 2025–26 copper market: tariff front-running pulled in a record 1.7 Mt of refined imports, lifted net import reliance from 45% to 57%, and left almost half a million tonnes sitting in American warehouses while the rest of the world tightened.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>US refined-copper import sources</h3>
+      <div class="sub">Average shares 2021–2024 — the Americas supply nearly all of it, which is why the cathode tariff was shelved</div>
+      <div class="chartbox"><canvas id="chUsImp"></canvas></div>
+      <div class="src">Source: USGS MCS 2026. Refined copper is 88% of US unmanufactured copper imports.</div>
+    </div>
+    <div class="card">
+      <h3>Benchmark prices, 2021–2025</h3>
+      <div class="sub">Annual average $/lb — New York (COMEX) decoupled from London (LME) the moment tariffs entered the picture</div>
+      <div class="chartbox"><canvas id="chPrices"></canvas></div>
+      <div class="src">Source: USGS MCS 2026 (annual averages). 2026 spot: LME record $14,527.50/t (Jan 29); COMEX record $6.77/lb (Aug 7).</div>
+    </div>
+    <div class="card">
+      <h3>A two-price world</h3>
+      <div class="sub">What the 2025–26 tariff arbitrage did to a single global market</div>
+      <div class="mini-grid">
+        <div class="mini"><h4>The premium</h4><p>New York traded up to <b style="color:var(--accent)">~24% above London</b> in July 2025 as traders raced cathode to the US ahead of tariffs — then the cathode exemption erased the gap in a day, the largest one-day fall on record.</p></div>
+        <div class="mini"><h4>The stockpile</h4><p>US yearend refined stocks hit <b style="color:var(--accent)">~450,000 t</b> in 2025 — nearly four times the year before — while LME warehouses drained, flipping London into its steepest backwardation since 2021.</p></div>
+        <div class="mini"><h4>The reliance</h4><p>Chile alone supplies <b style="color:var(--accent)">68%</b> of US refined imports. The proposed 2027–28 refined tariff would tax the very supply chain the US grid buildout depends on — one reason it keeps being deferred.</p></div>
+        <div class="mini"><h4>The exchanges</h4><p>Three benchmarks now price copper — LME, COMEX and Shanghai — and the spreads between them have become the market's real story, driving metal across oceans in pursuit of a paper premium.</p></div>
+      </div>
+      <div class="src">Sources: USGS MCS 2026; CRS; Bloomberg, Reuters, MINING.com (2025–26).</div>
+    </div>
+    <div class="card">
+      <h3>The quiet giant: the DRC</h3>
+      <div class="sub">The world's No. 2 producer barely refines a sheet of its own copper into wire</div>
+      <p style="font-size:.85rem;color:var(--muted)">The Democratic Republic of the Congo overtook Peru in 2023 and mined ~3.2 Mt in 2025 — more than tripling in a decade on the back of Kamoa-Kakula (Ivanhoe/Zijin) and CMOC's Tenke Fungurume and Kisanfu. The large majority of that output is Chinese-owned or Chinese-financed and ships east. Washington's counter-move is infrastructure: the US-backed Lobito rail corridor to the Atlantic, and a 2025 US–DRC minerals agreement. Ivanhoe's new on-site smelter — Africa's largest — is the first serious attempt to keep the value added at home.</p>
+      <div class="callout"><b>~3.2 Mt</b><span>DRC mine production in 2025 (USGS est.) — 14% of world supply, up from ~1 Mt in 2015. Copper has made it Africa's largest copper producer and the fastest-growing source of new supply anywhere.</span></div>
+      <div class="src">Sources: USGS MCS 2026; BGS; company disclosures; press reports.</div>
+    </div>
+  </div>
+</section>
+
+<section id="china-sec">
+  <div class="kicker">Concentration risk</div>
+  <h2>The China chokepoint</h2>
+  <p class="lede">China mines 8% of the world's copper — and processes about half of it. Unlike rare earths, the dominance isn't geological; it was built, smelter by smelter, in two decades. Concentration now deepens at every step from the mine to the wire.</p>
+  <div class="card">
+    <div class="big" id="bigPct">48%</div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:6px">of the world's refined copper was produced in China in 2025 (USGS). Its estimated share along the mine-to-wire chain:</p>
+    <div class="bars" id="chinaBars"></div>
+    <div class="src">Sources: USGS MCS 2026 (mining, refining, 2025); IEA copper commentary 2026 (smelting capacity ~50%); ICSG / SMM (refined consumption ~56%, 2025). Chinese companies also own or finance the majority of DRC output.</div>
+  </div>
+</section>
+
+<section id="military-sec">
+  <div class="kicker">Dual use</div>
+  <h2>Copper as a military material</h2>
+  <p class="lede">Every round fired, every ship launched and every radar switched on consumes copper. The rearmament wave since 2022 has collided with electrification demand — and unlike most critical minerals, the US keeps no government stockpile of it.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🔫</span>Ammunition</h4><p>Cartridge brass is ~70% copper; artillery shells ride on copper driving bands. The scramble to multiply 155&nbsp;mm shell production in the US and Europe has made ammunition plants competing buyers for the same rod and strip as the grid.</p></div>
+      <div class="mini"><h4><span class="mi">💥</span>Precision munitions</h4><p>Shaped-charge warheads — from Javelins to artillery submunitions — use high-purity copper liners that form the penetrating jet. No practical substitute exists at the price.</p></div>
+      <div class="mini"><h4><span class="mi">🚢</span>Ships &amp; submarines</h4><p>Copper-nickel alloys carry seawater through every naval vessel; propellers are copper-alloy castings; a warship contains hundreds of kilometres of copper cable. Electric-drive ships raise the intensity further.</p></div>
+      <div class="mini"><h4><span class="mi">✈️</span>Aircraft, drones &amp; EW</h4><p>Wiring harnesses, electric actuators, motor windings in drones, radar and electronic-warfare systems — the electrification of the battlefield is, materially, a copper story.</p></div>
+      <div class="mini"><h4><span class="mi">📦</span>No stockpile</h4><p>The US National Defense Stockpile holds no copper (USGS, 2026) — the Pentagon has historically treated it as freely traded. China's State Reserve Bureau, by contrast, is widely reported to have been building reserves through 2025–26.</p></div>
+      <div class="mini"><h4><span class="mi">🏛️</span>Now officially critical</h4><p>Copper joined the US critical minerals list in November 2025 and the EU's strategic raw materials list in 2023 — unlocking permitting fast-tracks, Defense Production Act tools and trade measures on both sides of the Atlantic.</p></div>
+    </div>
+    <div class="src">Sources: USGS MCS 2026 (stockpile, critical minerals list); Federal Register 90 FR 50494; CRS; press reports.</div>
+  </div>
+</section>
+
+<section id="invest-sec">
+  <div class="kicker">Capital flows</div>
+  <h2>Where the copper money is going</h2>
+  <p class="lede">With discovery-to-production averaging seventeen years and ore grades falling, the industry has concluded it is cheaper to buy copper on the stock exchange than to find it in the ground. Four places capital is concentrating — presented as observation, not investment advice.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🤝</span>Buying beats building</h4><p>Anglo American and Teck's $53B merger — Anglo Teck, a top-five, ~1.2 Mt/yr producer — awaits Beijing's sign-off after BHP twice ran at Anglo in 2024. Nearly every major's strategy now leads with copper exposure, and the pool of acquirable pounds keeps shrinking.</p></div>
+      <div class="mini"><h4><span class="mi">🏗️</span>The megaproject pipeline</h4><p>Reko Diq (Pakistan), Resolution (Arizona), the BHP-Lundin Vicuña district (Argentina/Chile), Freeport's ~$7.5B El Abra expansion, Tía María (Peru): each multi-billion, none delivering meaningful tonnes before the late 2020s — the gap the IEA keeps warning about.</p></div>
+      <div class="mini"><h4><span class="mi">🧪</span>The technology frontier</h4><p>Sulfide leaching (Rio Tinto's Nuton, Jetti) aims to pull cathode from waste rock at existing mines; Taseko's Florence proved in-situ recovery in 2025; KoBold's AI exploration found Mingomba in Zambia. Incremental tonnes today — transformative if any of it scales.</p></div>
+      <div class="mini"><h4><span class="mi">⚠️</span>The risks</h4><p>ICSG still sees the refined market near balance into 2027 — the shortage thesis rests on demand forecasts. High prices invite aluminium substitution and scrap surges; tariff rules can whipsaw premiums overnight; and Panama, Peru, the DRC and Zambia all showed how fast resource nationalism can erase supply — or restore it.</p></div>
+    </div>
+    <div class="note">This section describes where capital is flowing, based on public data. It is not financial advice.</div>
+    <div class="src">Sources: company and government disclosures; ICSG forecasts; IEA GCMO 2025; Reuters; MINING.com.</div>
+  </div>
+</section>
+
+<section id="companies-sec">
+  <div class="kicker">Company tracker</div>
+  <h2>The companies that move copper</h2>
+  <p class="lede">Miners, smelter-refiners and developers across the chain. The top ten producers mine roughly half the world's copper; a different, more Chinese, top ten refines it. Filter by segment or search.</p>
+  <div class="map-controls" id="coFilters">
+    <button class="chip c-mine on" data-seg="mine">⛏ Miners</button>
+    <button class="chip c-proc on" data-seg="sep">🏭 Smelting &amp; refining</button>
+    <button class="chip c-dev on" data-seg="dev">◐ Developers</button>
+  </div>
+  <div class="co-search">
+    <input id="coSearch" type="search" placeholder="Search company, asset, country…" aria-label="Search companies">
+    <span class="co-count" id="coCount"></span>
+  </div>
+  <div class="co-wrap">
+    <table class="co">
+      <thead><tr><th>Company</th><th>Segment</th><th>Key assets</th><th>Status &amp; recent signals</th></tr></thead>
+      <tbody id="coBody"></tbody>
+    </table>
+  </div>
+  <div class="note">Company status reflects public disclosures as of August 2026. This is an observational tracker, not investment advice.</div>
+  <div class="src">Sources: company disclosures &amp; filings; USGS MCS 2026; ICSG; trade press (Reuters, MINING.com, Fastmarkets, Northern Miner).</div>
+</section>
+
+<section id="sources-sec">
+  <div class="kicker">Data &amp; methodology</div>
+  <h2>Open data sources</h2>
+  <ul class="sources">
+    <li><b><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-copper.pdf">USGS Mineral Commodity Summaries 2026 — Copper</a></b> — world mine and refinery production, reserves, US trade, prices and end-use shares. 2025 figures are estimates.</li>
+    <li><b><a href="https://icsg.org/">International Copper Study Group (ICSG)</a></b> — World Copper Factbook, monthly supply-demand bulletins and the twice-yearly market forecasts used here for refined-balance and consumption context.</li>
+    <li><b><a href="https://www.iea.org/reports/global-critical-minerals-outlook-2025">IEA Global Critical Minerals Outlook 2025</a></b> and the IEA commentary <a href="https://www.iea.org/commentaries/copper-prices-have-hit-record-highs-but-smelters-face-mounting-strategic-pressures">on copper smelting pressures</a> — the 2035 supply-gap projection and smelting-concentration estimates.</li>
+    <li><b><a href="https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/">British Geological Survey — World Mineral Statistics</a></b> — long-run mine, smelter and refinery production series (1970–2024), also behind this site's <a href="/supply-chain/">supply-chain map</a>.</li>
+    <li><b>Prices</b> — LME and COMEX annual averages via USGS MCS 2026; 2026 records from exchange data as reported by Bloomberg, Reuters and <a href="https://www.mining.com/copper-price-holds-near-record-as-london-warehouse-bidding-war-looms/">MINING.com</a>.</li>
+    <li><b>Tariffs &amp; policy</b> — the August 2025 presidential proclamation on copper imports, analysed by the <a href="https://www.congress.gov/crs-product/IN12614">Congressional Research Service (IN12614)</a>; Federal Register 90 FR 50494 (2025 US critical minerals list).</li>
+    <li><b>Supply disruptions</b> — company disclosures: <a href="https://investors.fcx.com/">Freeport-McMoRan</a> (Grasberg force majeure and restart), <a href="https://www.codelco.com/">Codelco</a> (El Teniente), <a href="https://www.ivanhoemines.com/">Ivanhoe Mines</a> (Kamoa-Kakula and smelter), <a href="https://www.first-quantum.com/">First Quantum</a> and Panama government statements (Cobre Panamá).</li>
+    <li><b>Companies &amp; M&amp;A</b> — <a href="https://www.angloamerican.com/investors/anglo-american-teck-merger">Anglo American–Teck merger documents</a>; company filings; trade press (Reuters, Fastmarkets, Northern Miner, MINING.com).</li>
+    <li><b>Notes</b> — mine and plant coordinates are approximate. Smelting, refining and consumption shares are USGS/ICSG/IEA estimates; treatment-charge levels are industry benchmarks reported by price agencies. Last data refresh: August 2026.</li>
+  </ul>
+</section>
+
+<section id="faq-sec">
+  <div class="kicker">FAQ</div>
+  <h2>Common questions</h2>
+  <div class="faq">
+    <details>
+      <summary>Is the world running out of copper?</summary>
+      <p>No. USGS puts global reserves at 980 million tonnes, with identified and undiscovered resources above 5 billion tonnes. The squeeze is about pace, not endowment: average ore grades have fallen to roughly 0.6% copper, a new mine takes about 17 years from discovery to production, and the IEA projects that existing and announced mines will cover only about 70% of copper demand by 2035 — a 30% supply gap.</p>
+    </details>
+    <details>
+      <summary>Which country produces the most copper?</summary>
+      <p>Chile mined about 5.3 of the world's 23 million tonnes in 2025 — roughly 23% — ahead of the Democratic Republic of the Congo (3.2 Mt) and Peru (2.7 Mt), according to USGS estimates. But China dominates the next step: it produced about 48% of the world's refined copper in 2025 and consumes well over half of it.</p>
+    </details>
+    <details>
+      <summary>Why is smelting the chokepoint if copper mining is so spread out?</summary>
+      <p>Copper mining is geographically diverse, but China built over 90% of the growth in global smelting capacity since 2005 and now holds about half of it. That overcapacity, colliding with stalled mine supply, pushed the 2026 benchmark fee smelters charge miners to $0 per tonne — the lowest ever — with spot fees deeply negative. Outside China, custom smelters are closing or on state support, and the United States has only two primary copper smelters left.</p>
+    </details>
+    <details>
+      <summary>What did the 2025 US copper tariffs do?</summary>
+      <p>The July 2025 announcement of a 50% copper tariff sent New York futures up 13% in a day — the largest gain since 1968 — and pulled record volumes of cathode to the US. When the final proclamation exempted refined cathode and applied the 50% duty only to semi-finished products from 1 August 2025, COMEX crashed by about a fifth in a day. The US still imported a record 1.7 million tonnes of refined copper in 2025, net import reliance jumped from 45% to 57%, and a phased tariff on refined copper (15% in 2027, 30% in 2028) remains proposed.</p>
+    </details>
+    <details>
+      <summary>What is copper used for?</summary>
+      <p>Wiring the world: building construction (42% of US use), electrical and electronic products (23%) and transportation (18%) lead. Power grids are the biggest growth market, a battery-electric vehicle uses roughly 83&nbsp;kg of copper versus 23&nbsp;kg in a petrol car, and a single large AI data centre can contain up to 50,000 tonnes.</p>
+    </details>
+    <details>
+      <summary>Why did copper prices hit records in 2026?</summary>
+      <p>A run of 2025 supply shocks — the Grasberg mud rush, the El Teniente collapse and flooding at Kamoa-Kakula — collided with tariff-driven US stockpiling that drained exchange warehouses elsewhere, surging grid and AI demand, and smelting fees at zero. LME copper hit an all-time high of $14,527.50 per tonne on 29 January 2026, and COMEX printed a record $6.77 per pound on 7 August 2026.</p>
+    </details>
+  </div>
+</section>
+
+<section id="research-sec">
+  <div class="research-box" style="background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px">
+    <div>
+      <div class="kicker">Custom research</div>
+      <h2>Need an ad hoc data-driven research report?</h2>
+      <p style="color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:18px">We produce bespoke, source-cited research on copper and other strategic minerals — supply-chain mapping, trade-flow analysis, country and commodity deep-dives — built on the same open data behind this dashboard.</p>
+      <a href="mailto:hello@mineral.watch" style="display:inline-block;background:var(--accent);color:#0d1117;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none">Reach out at hello@mineral.watch</a>
+    </div>
+    <div class="research-art net-art" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="orbit o2" cx="150" cy="150" r="126"/>
+        <circle cx="150" cy="150" r="116" fill="none" stroke="var(--accent)" stroke-width=".6" opacity=".55"/>
+        <path class="web d3" pathLength="1" d="M150 34 L119 104"/>
+        <path class="web d3" pathLength="1" d="M150 34 L181 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L119 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L82 140"/>
+        <path class="web d4" pathLength="1" d="M242 56 L181 104"/>
+        <path class="web d5" pathLength="1" d="M242 56 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M119 104 H181"/>
+        <path class="edge d1" pathLength="1" d="M119 104 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M181 104 L218 140"/>
+        <path class="edge d2" pathLength="1" d="M82 140 H218"/>
+        <path class="edge d2" pathLength="1" d="M82 140 L150 218"/>
+        <path class="edge d2" pathLength="1" d="M218 140 L150 218"/>
+        <path class="edge d3" pathLength="1" d="M119 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M181 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M150 140 V218"/>
+        <circle class="node" cx="119" cy="104" r="3"/>
+        <circle class="node" cx="181" cy="104" r="3"/>
+        <circle class="node" cx="82" cy="140" r="3"/>
+        <circle class="node" cx="218" cy="140" r="3"/>
+        <circle class="node" cx="150" cy="218" r="3"/>
+        <circle class="sat" cx="150" cy="34" r="2.2"/>
+        <circle class="sat b2" cx="58" cy="62" r="2.2"/>
+        <circle class="sat b3" cx="242" cy="56" r="2.2"/>
+        <circle class="sat b2" cx="258" cy="196" r="2.2"/>
+        <circle class="sat b3" cx="68" cy="240" r="2.2"/>
+        <circle cx="150" cy="140" r="5" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6">
+          <animate attributeName="r" values="5;16" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".6;0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="150" cy="140" r="4.2" fill="var(--accent)"/>
+        <circle r="1.6" fill="var(--accent2)">
+          <animateMotion path="M58 62 L119 104 L150 140" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.6" fill="var(--accent)">
+          <animateMotion path="M258 196 L218 140 L150 140" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<footer>
+  CopperWatch · open data project · built with Leaflet &amp; Chart.js · data: USGS, ICSG, IEA, BGS, company disclosures
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+/* ============ DATA (curated from USGS MCS 2026, ICSG, IEA, BGS, company disclosures) ============ */
+const DATA = {
+  production2025: [ // thousand tonnes copper content, USGS estimates
+    ["Chile",5300],["DR Congo",3200],["Peru",2700],["China",1800],
+    ["Russia",1300],["United States",1000],["Zambia",940],["Australia",730],
+    ["Indonesia",710],["Kazakhstan",710],["Mexico",690],["Canada",500],
+    ["Poland",410],["Other",3000]
+  ],
+  refined2025: [ // thousand tonnes refined, USGS estimates
+    ["China",14000],["DR Congo",2800],["Chile",1700],["Japan",1400],
+    ["Russia",950],["United States",850],["India",620],["Germany",610],
+    ["South Korea",610],["Poland",560],["Other",4900]
+  ],
+  reserves: [ // million tonnes copper
+    ["Chile",180],["Australia",100],["Peru",85],["DR Congo",80],["Russia",80],
+    ["Mexico",53],["United States",47],["China",41],["Poland",33],
+    ["Indonesia",21],["Zambia",21],["Kazakhstan",20],["Other",219]
+  ],
+  trend: { // million tonnes per year (BGS 2018–2024; USGS 2025e)
+    years:[2018,2019,2020,2021,2022,2023,2024,2025],
+    mine:[20.6,20.6,20.8,21.3,22.1,22.7,22.9,23.0],
+    refined:[23.9,24.4,24.8,25.2,25.9,27.6,28.8,29.0]
+  },
+  usImports:[["Chile",68],["Canada",16],["Peru",7],["Mexico",6],["Other",3]],
+  prices:{ years:[2021,2022,2023,2024,2025],
+    comex:[4.24,4.01,3.86,4.22,4.80],
+    lme:[4.23,4.00,3.85,4.15,4.40] },
+  chinaShares:[ // stage, share %
+    ["Mine production",8],["Smelting capacity",50],["Refinery output",48],["Refined consumption",56]
+  ],
+  journey:[
+    {ico:"⛏",t:"1 · Mining",p:"Vast open pits and block caves work porphyry ores averaging ~0.6% copper — a tonne of rock for 6 kg of metal. Grades have halved in a generation, so moving more rock for less copper is the industry's baseline.",f:"23 Mt mined in 2025 — Chile 23%, DRC 14% (USGS)"},
+    {ico:"🌀",t:"2 · Concentrating",p:"Crushing, grinding and froth flotation upgrade ore roughly 40-fold into 25–30% copper concentrate. Over 99% of the mined rock stays behind as tailings.",f:"Concentrate is the world's traded copper feedstock"},
+    {ico:"🏭",t:"3 · Smelting",p:"Flash furnaces turn concentrate into matte, then blister copper (~99%), throwing off sulfuric acid as a by-product. This is the step China dominates — and where fees hit $0 in 2026.",f:"China smelts ~half the world's copper"},
+    {ico:"⚡",t:"4 · Refining",p:"Electrorefining dissolves anodes and replates the metal as 99.99% cathode — the LME- and COMEX-deliverable unit of the world copper price. SX-EW mines skip straight to this stage.",f:"48% of refined output made in China (2025)"},
+    {ico:"🔌",t:"5 · Fabrication",p:"Rod mills cast cathode into 8 mm rod and draw it into wire; brass mills roll tube, sheet and strip. It is these 'semis' — not cathode — that the US 50% tariff has covered since August 2025.",f:"Wire and cable take well over half of all copper"},
+    {ico:"♻️",t:"6 · Use & recycling",p:"Grids, buildings, EVs, data centres — then back again: copper recycles endlessly without losing conductivity, and scrap already covers about a third of world use. The 'urban mine' is the largest orebody nobody maps.",f:"~30% of US copper supply came from scrap in 2025"}
+  ],
+  forms:[
+    {s:"0.6%",n:"Ore",g:"U",use:"In the ground",
+     d:"Porphyry deposits — giant, low-grade halos around ancient volcanic intrusions — supply most copper, with sediment-hosted ores (DRC, Poland) richer but rarer. The average head grade at major mines has slid to roughly 0.6% copper, from 2–3% a century ago: the same metal now costs far more rock, energy and water.",pr:null},
+    {s:"~28%",n:"Concentrate",g:"U",use:"The traded feedstock",
+     d:"Flotation turns ore into a dark powder of copper-iron-sulfide minerals, ~25–30% copper. Concentrate is what crosses oceans — from Chile, Peru and Indonesia to smelters in East Asia — and the fees for processing it (TC/RCs) are the market's barometer of smelter overcapacity.",pr:"2026 benchmark treatment charge: $0/t — the lowest ever"},
+    {s:"~63%",n:"Matte",g:"M",use:"Intermediate melt",
+     d:"Flash smelting melts concentrate with oxygen: iron reports to slag, sulfur leaves as SO₂ (captured as sulfuric acid — now a key smelter revenue line), and a copper-sulfide matte of ~60% copper moves to converting.",pr:null},
+    {s:"99%",n:"Blister & anode",g:"M",use:"Smelter output",
+     d:"Converting blows the matte to blister copper (~98.5–99.5%), which is fire-refined and cast into flat anodes ready for electrolysis. Blister and anode trade internationally when smelting and refining sit in different countries.",pr:null},
+    {s:"99.99%",n:"Cathode",g:"M",use:"The exchange unit",
+     d:"Electrorefining replates the metal as Grade A cathode, 99.99% pure — the form deliverable against LME, COMEX and Shanghai contracts, and the reference every headline 'copper price' describes. Cathode is what raced across the Atlantic ahead of US tariffs in 2025.",pr:"LME record $14,527.50/t (Jan 2026); COMEX record $6.77/lb (Aug 2026)"},
+    {s:"SX-EW",n:"Leach cathode",g:"M",use:"The shortcut",
+     d:"About a fifth of mine output skips smelting entirely: acid heap-leaching of oxide and low-grade ore, solvent extraction, then electrowinning straight to cathode at the mine site. New sulfide-leaching ventures (Nuton, Jetti) and in-situ recovery at Florence, Arizona aim to widen this shortcut.",pr:null},
+    {s:"rod",n:"Wire rod & semis",g:"D",use:"Fabrication",
+     d:"Rod mills cast and roll cathode into 8 mm wire rod — the feedstock for every wire and cable plant — while brass mills make tube, sheet and strip. Semi-finished products are where the US 50% Section 232 tariff has applied since August 2025, and where China's fabrication capacity leads the world.",pr:null},
+    {s:"♻",n:"Scrap",g:"C",use:"The urban mine",
+     d:"Copper recycles forever without losing conductivity. Old wire, motors and demolition metal — plus new manufacturing offcuts — cover about a third of world copper use. The US exports much of its scrap; a proposed rule would force 25% of high-quality scrap to be sold domestically from 2027.",pr:"~30% of US copper supply came from scrap in 2025 (USGS)"}
+  ],
+  companies:[
+    // seg: mine | sep | dev (space-separated when spanning segments)
+    // --- miners ---
+    {n:"Codelco",u:"https://www.codelco.com/",hq:"Chile",tik:"state-owned",seg:"mine sep",
+     a:"El Teniente, Chuquicamata, Radomiro Tomic, Andina, Salvador; Chuquicamata & Caletones smelters; lithium ventures",
+     s:"Still the world's largest producer (~1.31 Mt in 2025) but at its lowest in almost three decades after the fatal El Teniente collapse; Andes Norte suspended ~2 years; the state backed it with a $2.4B reinvestment."},
+    {n:"BHP",u:"https://www.bhp.com/",hq:"Australia",tik:"ASX: BHP · NYSE: BHP",seg:"mine",
+     a:"Escondida (57.5%) — the world's largest copper mine (~1.3 Mt FY2025), Spence, Olympic Dam, Antamina (33.75%); Vicuña JV (50%) with Lundin",
+     s:"Copper is the growth pillar: ~2 Mt group output, a South Australian smelting hub study, and the Vicuña district after 2024's failed runs at Anglo American."},
+    {n:"Freeport-McMoRan",u:"https://fcx.com/",hq:"United States",tik:"NYSE: FCX",seg:"mine sep",
+     a:"Grasberg (Indonesia), Morenci, Bagdad, Safford (US), Cerro Verde (Peru), El Abra (Chile); Miami smelter; new Manyar smelter (Indonesia)",
+     s:"Grasberg's Sept 2025 mud rush forced force majeure: 2026 district output ~35% below plan, phased restart under way, full ramp early 2028. Weighing a ~$7.5B El Abra expansion; leach innovation adds low-cost US tonnes."},
+    {n:"Glencore",u:"https://www.glencore.com/",hq:"Switzerland",tik:"LSE: GLEN",seg:"mine sep",
+     a:"Collahuasi (44%), Antamina (33.75%), KCC & Mutanda (DRC), Mount Isa; Altonorte, Horne & CCR smelter-refineries; world's largest metals trader",
+     s:"~0.9 Mt mined plus a dominant cathode book. Mothballed PASAR (Philippines) in 2025 and negotiated state support for the Mount Isa smelter — exhibit A of the ex-China smelting squeeze."},
+    {n:"Southern Copper (Grupo México)",u:"https://www.southerncoppercorp.com/",hq:"Mexico / Peru",tik:"NYSE: SCCO",seg:"mine sep",
+     a:"Buenavista & La Caridad (Mexico), Toquepala & Cuajone (Peru); Ilo and La Caridad smelters; Tía María project",
+     s:"~1 Mt/yr at the industry's lowest costs and the largest reserves of any listed producer; Tía María finally in construction after a decade of protests, first cathode targeted 2027."},
+    {n:"Zijin Mining",u:"https://www.zijinmining.com/",hq:"China",tik:"SSE: 601899 · HKEX: 2899",seg:"mine",
+     a:"Kamoa-Kakula (39.6%), Julong (Tibet), Čukaru Peki (Serbia), Kolwezi (DRC); gold and lithium arms",
+     s:"China's champion and the fastest-growing major: ~1.1 Mt+ mined in 2025 and rising as Julong Phase 2 ramps — the spearhead of Chinese ownership across the copper belt."},
+    {n:"CMOC Group",u:"https://www.cmocgroup.com/",hq:"China",tik:"SSE: 603993 · HKEX: 3993",seg:"mine",
+     a:"Tenke Fungurume & Kisanfu (DRC); IXM trading arm",
+     s:"The DRC's biggest producer (~0.7 Mt in 2025, from near zero in 2019) and the world's largest cobalt miner — the clearest expression of China's Congo strategy."},
+    {n:"Ivanhoe Mines",u:"https://www.ivanhoemines.com/",hq:"Canada",tik:"TSX: IVN",seg:"mine sep",
+     a:"Kamoa-Kakula (DRC, with Zijin) + Africa's largest smelter; Western Foreland exploration; Platreef (South Africa)",
+     s:"388,838 t in 2025 despite the May 2025 Kakula flooding; guidance 380–420 kt for 2026, ~500–540 kt in 2027; on-site smelter started Dec 2025, ramping toward a 500 kt/yr run-rate."},
+    {n:"Antofagasta",u:"https://www.antofagasta.co.uk/",hq:"Chile / UK",tik:"LSE: ANTO",seg:"mine",
+     a:"Los Pelambres, Centinela, Antucoya, Zaldívar (Chile); Twin Metals (US, stalled)",
+     s:"~660 kt and growing: the $4.4B second Centinela concentrator is the largest committed new copper project in Chile, first output targeted 2027."},
+    {n:"Anglo American + Teck (Anglo Teck)",u:"https://www.angloamerican.com/investors/anglo-american-teck-merger",hq:"UK / Canada",tik:"LSE: AAL · TSX: TECK",seg:"mine",
+     a:"Collahuasi (44%), Los Bronces, Quellaveco (Anglo); Quebrada Blanca, Highland Valley (Teck)",
+     s:"$53B merger of equals announced Sept 2025 → Anglo Teck plc, HQ Vancouver: a top-five, ~1.2 Mt/yr producer with a planned Collahuasi–QB integration. Shareholders and Canada cleared it; Beijing's approval is the last gate (close expected late 2026–early 2027)."},
+    {n:"Rio Tinto",u:"https://www.riotinto.com/",hq:"UK / Australia",tik:"LSE: RIO · ASX: RIO",seg:"mine sep dev",
+     a:"Kennecott (integrated US mine-smelter-refinery), Oyu Tolgoi (Mongolia), Escondida (30%), Resolution (55%), La Granja; Nuton leach venture",
+     s:"Oyu Tolgoi's block cave is ramping toward ~500 kt/yr average from 2028 — the biggest single addition to non-African supply this decade. Resolution finally cleared its Supreme Court hurdle in 2025."},
+    {n:"First Quantum Minerals",u:"https://www.first-quantum.com/",hq:"Canada",tik:"TSX: FM",seg:"mine",
+     a:"Cobre Panamá (suspended), Kansanshi + S3 expansion, Sentinel (Zambia)",
+     s:"Cobre Panamá shut since Nov 2023; Panama approved stockpile exports in Apr 2026 (30–40 kt this year) and a June audit found the mine broadly compliant — but restart terms, taxes and a possible state stake are still being negotiated. 2026 guidance raised to 405–475 kt."},
+    {n:"KGHM Polska Miedź",u:"https://kghm.com/",hq:"Poland",tik:"WSE: KGH",seg:"mine sep",
+     a:"Polish underground mines + Głogów/Legnica smelters; Sierra Gorda (55%, Chile); Robinson (US)",
+     s:"Europe's largest miner-refiner (~0.7 Mt refined), fully integrated from its own sediment-hosted ores — the EU's main hedge against import dependence."},
+    {n:"Norilsk Nickel",u:"https://nornickel.com/",hq:"Russia",tik:"MCX: GMKN",seg:"mine sep",
+     a:"Polar Division & Talnakh (Arctic Russia), Bystrinsky (Trans-Baikal)",
+     s:"~0.4 Mt of copper alongside nickel and PGMs; sanctions have redirected sales east and complicated equipment supply. Russia's overall output jumped to ~1.3 Mt in 2025 as Udokan ramped."},
+    {n:"Vale Base Metals",u:"https://vale.com/",hq:"Brazil",tik:"NYSE: VALE",seg:"mine",
+     a:"Salobo & Sossego (Carajás, Brazil); Canadian copper-nickel operations",
+     s:"Salobo is Brazil's largest copper mine; the carved-out base-metals unit (with a Saudi Manara stake) is rebuilding output and weighing further separation from the iron-ore parent."},
+    {n:"MMG",u:"https://www.mmg.com/",hq:"Australia / China",tik:"HKEX: 1208",seg:"mine",
+     a:"Las Bambas (Peru), Khoemacau (Botswana), Kinsevere (DRC)",
+     s:"China Minmetals' offshore arm: Las Bambas (~390 kt) still faces recurring road blockades; Khoemacau, bought in 2024, is expanding toward 130 kt."},
+    {n:"Boliden",u:"https://www.boliden.com/",hq:"Sweden",tik:"STO: BOL",seg:"mine sep",
+     a:"Aitik (Europe's largest copper open pit); Rönnskär & Harjavalta smelters; Neves-Corvo and Zinkgruvan (acquired 2025)",
+     s:"The Nordic integrated model: own mines, own smelters, heavy recycling feed — increasingly framed as strategic European capacity."},
+    {n:"Amman Mineral",u:"https://ammanmineral.com/",hq:"Indonesia",tik:"IDX: AMMN",seg:"mine sep",
+     a:"Batu Hijau copper-gold mine + new Sumbawa smelter; Elang development (one of the world's largest undeveloped porphyries)",
+     s:"Indonesia's other copper giant, now smelting on-site under the export-ban policy; Elang would extend the story into the 2030s."},
+    {n:"Barrick Mining",u:"https://www.barrick.com/",hq:"Canada",tik:"NYSE: B",seg:"mine dev",
+     a:"Lumwana (Zambia) + $2B Super Pit expansion; Reko Diq (50%, Pakistan); Zaldívar (50%)",
+     s:"The gold major rebranded around copper in 2025: Lumwana doubling toward ~240 kt by 2028, Reko Diq Phase 1 targeted for 2028 — the largest mining bet ever made in Pakistan."},
+    {n:"Hudbay Minerals",u:"https://hudbayminerals.com/",hq:"Canada",tik:"TSX: HBM",seg:"mine dev",
+     a:"Constancia (Peru), Copper Mountain (BC); Copper World (Arizona)",
+     s:"Mitsubishi bought 30% of Copper World in 2025, de-risking a ~90 kt/yr Phase 1 that would become one of the few new US copper mines with its own leach-to-cathode output."},
+    {n:"Lundin Mining",u:"https://lundinmining.com/",hq:"Canada",tik:"TSX: LUN",seg:"mine dev",
+     a:"Candelaria & Caserones (Chile); Vicuña JV (50%) with BHP — Filo del Sol & Josemaría (Argentina/Chile)",
+     s:"Sold its European zinc mines to focus the balance sheet on Vicuña, whose initial resource ranks among the largest copper-gold-silver systems ever defined; Argentina's RIGI incentives frame the build decision."},
+    {n:"Capstone Copper",u:"https://capstonecopper.com/",hq:"Canada",tik:"TSX: CS",seg:"mine dev",
+     a:"Mantoverde & Mantos Blancos (Chile), Pinto Valley (US); Santo Domingo project",
+     s:"Mid-tier consolidator of Chilean coastal-belt assets; Mantoverde's sulfide expansion delivered, Santo Domingo next."},
+    // --- smelting & refining ---
+    {n:"Jiangxi Copper",u:"http://www.jxcc.com/",hq:"China",tik:"SSE: 600362 · HKEX: 358",seg:"sep",
+     a:"Guixi — the world's largest copper smelter — plus mines and fabrication across Jiangxi",
+     s:"The world's biggest refiner (~2 Mt+ cathode a year). Like all Chinese custom smelters, now processing concentrate at zero-to-negative headline fees, surviving on acid and by-product credits."},
+    {n:"Tongling Nonferrous",u:"https://www.tlys.cn/",hq:"China",tik:"SZSE: 000630",seg:"sep",
+     a:"Tongling smelting cluster (Anhui), Mirador mine (Ecuador) via CRCC-Tongguan",
+     s:"China's other mega-refiner (~1.7 Mt/yr); a founding member of the CSPT smelter group that agreed >10% output cuts for 2026."},
+    {n:"Aurubis",u:"https://www.aurubis.com/",hq:"Germany",tik:"ETR: NDA",seg:"sep",
+     a:"Hamburg & Lünen (Germany), Pirdop (Bulgaria), Olen (Belgium); Richmond, Georgia multimetal recycling plant (2025)",
+     s:"Europe's largest refiner and the West's recycling champion — Richmond is the first major new US secondary smelting capacity in decades, feeding on the scrap the US used to export."},
+    {n:"JX Advanced Metals",u:"https://www.jx-nmm.com/",hq:"Japan",tik:"TYO: 5016",seg:"sep",
+     a:"Saganoseki & Hitachi smelter-refineries; Caserones legacy stake; semiconductor materials",
+     s:"IPO'd in 2025; Japan's smelters (with Sumitomo and Mitsubishi Materials) refine ~1.4 Mt/yr from imported concentrate — and are lobbying hard as $0 treatment charges gut custom-smelting economics."},
+    {n:"Sumitomo Metal Mining",u:"https://www.smm.co.jp/en/",hq:"Japan",tik:"TYO: 5713",seg:"sep",
+     a:"Toyo smelter-refinery (Ehime); stakes in Morenci and Cerro Verde; Quebrada Blanca partner",
+     s:"The integrated Japanese model — equity in the mines that feed its furnaces — which cushions the treatment-charge collapse better than pure custom smelters."},
+    {n:"LS MnM",u:"https://www.lsmnm.com/",hq:"South Korea",tik:"private (LS Group)",seg:"sep",
+     a:"Onsan — one of the world's largest single-site smelter-refineries (~0.6 Mt/yr)",
+     s:"Korea's copper backbone and a top-three exporter of cathode to the US in the tariff era."},
+    {n:"Adani (Kutch Copper)",u:"https://www.adanienterprises.com/",hq:"India",tik:"NSE: ADANIENT",seg:"sep",
+     a:"Greenfield 0.5 Mt/yr smelter-refinery at Mundra, Gujarat; doubling planned",
+     s:"The anchor of India's push to halve refined-copper import dependence — and one more furnace bidding for the world's scarce concentrate."},
+    // --- developers ---
+    {n:"McEwen Copper",u:"https://www.mcewencopper.com/",hq:"Argentina / Canada",tik:"NYSE: MUX (parent)",seg:"dev",
+     a:"Los Azules (San Juan, Argentina) — large high-Andes porphyry",
+     s:"Rio Tinto (Nuton) and Stellantis are investors; feasibility completed 2025 and Argentina's RIGI regime approved — one of the first big tests of the country's new mining framework."},
+    {n:"SolGold",u:"https://www.solgold.com.au/",hq:"Ecuador / UK",tik:"LSE: SOLG",seg:"dev",
+     a:"Cascabel / Alpala (Ecuador) — flagship copper-gold porphyry",
+     s:"Giant resource, chronic funding gap: the perennial candidate for a major to swallow as the industry hunts development-ready pounds."},
+    {n:"KoBold Metals",u:"https://www.koboldmetals.com/",hq:"United States",tik:"private",seg:"dev",
+     a:"Mingomba (Zambia) — billed as the highest-grade large undeveloped copper deposit; global AI-driven exploration portfolio",
+     s:"The Silicon Valley thesis applied to geology: Gates- and Bezos-backed, feasibility work under way at Mingomba with first production targeted for the early 2030s."},
+    {n:"Taseko Mines",u:"https://www.tasekomines.com/",hq:"Canada / US",tik:"TSX: TKO",seg:"mine dev",
+     a:"Gibraltar (BC); Florence Copper (Arizona) — in-situ recovery",
+     s:"Florence delivered first cathode in late 2025 — the 'new mine in Arizona' in USGS's 2026 summary — proving copper can be produced from wells rather than pits, at a fraction of the footprint."}
+  ],
+  sites:[
+    // type: mine | proc | dis | dev ; size 1-3
+    // --- mines (producing) ---
+    {n:"Escondida",c:"Chile",ll:[-24.27,-69.07],ty:"mine",sz:3,d:"The world's largest copper mine (BHP 57.5%): ~1.3 Mt in FY2025 — about 6% of world output — from the Atacama at 3,100 m."},
+    {n:"Collahuasi",c:"Chile",ll:[-20.98,-68.70],ty:"mine",sz:3,d:"Anglo American / Glencore / Mitsui JV; ~0.5 Mt but slipping on ore grades — earmarked for integration with neighbouring Quebrada Blanca under Anglo Teck."},
+    {n:"Chuquicamata & Radomiro Tomic",c:"Chile",ll:[-22.29,-68.90],ty:"mine",sz:3,d:"Codelco's century-old district: the great open pit is converting to underground block caving; includes one of Chile's main smelters."},
+    {n:"Los Pelambres",c:"Chile",ll:[-31.72,-70.49],ty:"mine",sz:2,d:"Antofagasta's flagship (~300 kt+), expanded with desalinated water — the template for Chilean mining's water pivot."},
+    {n:"Quebrada Blanca",c:"Chile",ll:[-21.00,-68.80],ty:"mine",sz:2,d:"Teck's QB2 — the newest large Chilean mine, still ramping toward full rates; a cornerstone asset of the coming Anglo Teck merger."},
+    {n:"Cerro Verde",c:"Peru",ll:[-16.54,-71.59],ty:"mine",sz:3,d:"Freeport-led; ~430 kt/yr through one of the world's largest concentrators, outside Arequipa."},
+    {n:"Antamina",c:"Peru",ll:[-9.54,-77.06],ty:"mine",sz:2,d:"BHP/Glencore copper-zinc giant at 4,300 m in the Andes; mine-life extension approved to 2036."},
+    {n:"Las Bambas",c:"Peru",ll:[-14.05,-72.33],ty:"mine",sz:2,d:"MMG (China Minmetals); ~390 kt — repeatedly halted by community blockades along its 400 km concentrate road."},
+    {n:"Quellaveco",c:"Peru",ll:[-17.03,-70.60],ty:"mine",sz:2,d:"Anglo American's newest major mine (2022), ~300 kt/yr, fully autonomous truck fleet."},
+    {n:"Toquepala & Cuajone",c:"Peru",ll:[-17.25,-70.63],ty:"mine",sz:2,d:"Southern Copper's Peruvian pair, feeding the Ilo smelter on the coast."},
+    {n:"Batu Hijau",c:"Indonesia",ll:[-8.97,116.87],ty:"mine",sz:2,d:"Amman Mineral's copper-gold pit on Sumbawa, now feeding an on-site smelter built under Indonesia's export-ban policy."},
+    {n:"Kamoa-Kakula",c:"DR Congo",ll:[-10.77,25.01],ty:"mine",sz:3,d:"The highest-grade major copper mine on Earth (Ivanhoe/Zijin): 389 kt in 2025 despite the May 2025 flooding at Kakula. Its on-site smelter — Africa's largest — fired up in Dec 2025."},
+    {n:"Tenke Fungurume & Kisanfu",c:"DR Congo",ll:[-10.62,26.19],ty:"mine",sz:3,d:"CMOC's pair: ~0.7 Mt of copper plus the world's largest cobalt output — the engine of the DRC's rise to No. 2 producer."},
+    {n:"Katanga & Mutanda (Glencore)",c:"DR Congo",ll:[-10.72,25.47],ty:"mine",sz:2,d:"Glencore's copper-cobalt complex around Kolwezi."},
+    {n:"Kansanshi",c:"Zambia",ll:[-12.10,26.43],ty:"mine",sz:2,d:"First Quantum's Zambian mainstay; the S3 expansion started up in 2025, part of Zambia's push back toward 1 Mt+ national output."},
+    {n:"Sentinel",c:"Zambia",ll:[-12.23,25.32],ty:"mine",sz:2,d:"First Quantum's Trident complex in NW Zambia (~230 kt)."},
+    {n:"Lumwana",c:"Zambia",ll:[-11.85,25.17],ty:"mine",sz:2,d:"Barrick's $2B Super Pit expansion aims to double output to ~240 kt by 2028."},
+    {n:"Oyu Tolgoi",c:"Mongolia",ll:[43.01,106.85],ty:"mine",sz:2,d:"Rio Tinto's underground block cave in the Gobi — ramping toward ~500 kt/yr average from 2028, the biggest new non-African supply this decade."},
+    {n:"Morenci",c:"United States",ll:[33.05,-109.36],ty:"mine",sz:2,d:"The largest US copper mine (Freeport); Arizona accounts for ~70% of US mine output."},
+    {n:"Bingham Canyon (Kennecott)",c:"United States",ll:[40.52,-112.15],ty:"mine",sz:2,d:"Rio Tinto's Utah complex — mine, smelter and refinery on one site, the most integrated copper chain in America."},
+    {n:"Buenavista & La Caridad",c:"Mexico",ll:[30.60,-110.00],ty:"mine",sz:2,d:"Grupo México's Sonora district: two big pits plus smelter and refinery."},
+    {n:"Norilsk (Polar Division)",c:"Russia",ll:[69.35,88.20],ty:"mine",sz:2,d:"Nornickel's Arctic copper-nickel-PGM complex; sanctions have redirected sales east."},
+    {n:"Udokan",c:"Russia",ll:[56.70,118.60],ty:"mine",sz:1,d:"Russia's big new copper start-up, ramping since 2023 — a key reason Russian output jumped to ~1.3 Mt in 2025."},
+    {n:"Aitik",c:"Sweden",ll:[67.07,20.95],ty:"mine",sz:1,d:"Boliden — Europe's largest open-pit copper mine, above the Arctic Circle."},
+    {n:"Olympic Dam",c:"Australia",ll:[-30.44,136.87],ty:"mine",sz:2,d:"BHP's copper-uranium-gold giant, hub of a planned South Australian copper-smelting province."},
+    {n:"Salobo",c:"Brazil",ll:[-5.79,-50.53],ty:"mine",sz:2,d:"Vale's largest copper mine, in the Carajás district."},
+    {n:"Florence",c:"United States",ll:[33.03,-111.44],ty:"mine",sz:1,d:"Taseko's in-situ recovery operation — copper from injection wells, first cathode late 2025; the low-footprint new face of US supply."},
+    // --- disrupted & suspended ---
+    {n:"Grasberg",c:"Indonesia",ll:[-4.06,137.11],ty:"dis",sz:3,d:"The world's No. 2 copper mine (Freeport / MIND ID). A Sept 2025 mud rush killed seven workers and triggered force majeure; ~35% of planned 2026 output lost, full capacity expected early 2028."},
+    {n:"El Teniente",c:"Chile",ll:[-34.08,-70.35],ty:"dis",sz:2,d:"The world's largest underground copper mine (Codelco). A July 2025 collapse killed six; 2025 output fell 13% to ~310 kt and the Andes Norte expansion is suspended."},
+    {n:"Cobre Panamá",c:"Panama",ll:[8.79,-80.65],ty:"dis",sz:2,d:"Shut by Panama's Supreme Court in Nov 2023 after mass protests — ~350 kt/yr (≈1.5% of world supply) offline. Stockpile exports resumed Apr 2026; restart terms still under negotiation."},
+    // --- smelters & refineries ---
+    {n:"Guixi",c:"China",ll:[28.29,117.21],ty:"proc",sz:3,d:"Jiangxi Copper's Guixi complex — the world's largest copper smelter."},
+    {n:"Tongling cluster",c:"China",ll:[30.95,117.79],ty:"proc",sz:3,d:"Tongling Nonferrous's Anhui smelting hub — one of several megatonne-scale Chinese clusters."},
+    {n:"Jinchuan (Gansu) & the northwest",c:"China",ll:[38.50,102.19],ty:"proc",sz:2,d:"Jinchuan Group's smelting base — part of the buildout that took China to ~50% of world smelting capacity."},
+    {n:"Saganoseki",c:"Japan",ll:[33.24,131.88],ty:"proc",sz:1,d:"JX Advanced Metals — one of Japan's biggest smelters; Japan refines ~1.4 Mt/yr, almost all from imported concentrate."},
+    {n:"Toyo (Niihama)",c:"Japan",ll:[33.96,133.27],ty:"proc",sz:1,d:"Sumitomo Metal Mining's flagship smelter-refinery, Ehime."},
+    {n:"Onsan",c:"South Korea",ll:[35.43,129.35],ty:"proc",sz:2,d:"LS MnM — one of the world's largest single-site smelter-refineries (~0.6 Mt/yr)."},
+    {n:"Manyar (Gresik)",c:"Indonesia",ll:[-7.10,112.60],ty:"proc",sz:2,d:"Freeport Indonesia's new smelter (2024), built under Jakarta's concentrate-export ban; back at full rates in 2025 after an Oct 2024 fire."},
+    {n:"Kutch Copper (Mundra)",c:"India",ll:[22.74,69.72],ty:"proc",sz:2,d:"Adani's greenfield 0.5 Mt/yr smelter-refinery — the anchor of India's plan to halve refined-copper import dependence."},
+    {n:"Dahej (Birla Copper)",c:"India",ll:[21.70,72.57],ty:"proc",sz:1,d:"Hindalco's incumbent Indian smelter-refinery."},
+    {n:"Hamburg (Aurubis)",c:"Germany",ll:[53.49,10.02],ty:"proc",sz:2,d:"Europe's largest refiner — increasingly fed by scrap rather than concentrate."},
+    {n:"Pirdop (Aurubis)",c:"Bulgaria",ll:[42.70,24.18],ty:"proc",sz:1,d:"Custom smelter for Balkan and seaborne concentrate."},
+    {n:"Głogów (KGHM)",c:"Poland",ll:[51.66,16.08],ty:"proc",sz:2,d:"KGHM's twin smelters — Europe's largest miner-refiner, fed by its own Polish mines."},
+    {n:"Ilo",c:"Peru",ll:[-17.64,-71.34],ty:"proc",sz:1,d:"Southern Copper's smelter-refinery on the Peruvian coast."},
+    {n:"Altonorte",c:"Chile",ll:[-23.77,-70.31],ty:"proc",sz:1,d:"Glencore's custom smelter near Antofagasta."},
+    {n:"Horne & CCR",c:"Canada",ll:[48.24,-79.02],ty:"proc",sz:1,d:"Glencore's Horne smelter (Québec) and CCR refinery (Montréal) — North America's recycling-heavy custom chain."},
+    {n:"Miami, Arizona",c:"United States",ll:[33.40,-110.87],ty:"proc",sz:1,d:"Freeport's smelter — one of just two primary copper smelters left in the US."},
+    {n:"Aurubis Richmond",c:"United States",ll:[33.37,-82.13],ty:"proc",sz:1,d:"The first major new US secondary smelter in decades (ramped 2025), turning scrap into blister copper in Georgia."},
+    {n:"Almalyk (AMMC)",c:"Uzbekistan",ll:[40.85,69.60],ty:"proc",sz:1,d:"Central Asia's big copper expansion — mining and smelting growth around the Yoshlik deposit."},
+    // --- development ---
+    {n:"Resolution",c:"United States",ll:[33.30,-111.10],ty:"dev",sz:2,d:"Rio Tinto/BHP block cave 2 km down — could supply a quarter of US demand. The Oak Flat land swap survived the Supreme Court in 2025, but first ore remains ~a decade out."},
+    {n:"Copper World",c:"United States",ll:[31.78,-111.05],ty:"dev",sz:1,d:"Hudbay's Arizona project; Mitsubishi bought 30% in 2025; Phase 1 targets ~90 kt/yr with on-site cathode."},
+    {n:"Reko Diq",c:"Pakistan",ll:[29.10,62.20],ty:"dev",sz:2,d:"Barrick's copper-gold giant in Balochistan — Phase 1 targeted for 2028; the biggest mining investment in Pakistan's history."},
+    {n:"Vicuña (Filo del Sol & Josemaría)",c:"Argentina / Chile",ll:[-28.45,-69.35],ty:"dev",sz:2,d:"BHP-Lundin JV straddling the border — an initial resource ranking among the largest copper-gold-silver systems ever defined."},
+    {n:"El Pachón",c:"Argentina",ll:[-31.75,-70.42],ty:"dev",sz:1,d:"Glencore's Argentine porphyry, revived under the RIGI incentive regime."},
+    {n:"Los Azules",c:"Argentina",ll:[-31.06,-70.22],ty:"dev",sz:1,d:"McEwen Copper; Rio Tinto (Nuton) and Stellantis are investors; feasibility completed 2025."},
+    {n:"Cascabel (Alpala)",c:"Ecuador",ll:[0.79,-78.27],ty:"dev",sz:1,d:"SolGold's flagship copper-gold porphyry — long on resource, short on finance."},
+    {n:"La Granja",c:"Peru",ll:[-6.36,-79.12],ty:"dev",sz:1,d:"First Quantum (55%) / Rio Tinto — one of the largest undeveloped copper resources anywhere."},
+    {n:"Tía María",c:"Peru",ll:[-17.02,-71.72],ty:"dev",sz:1,d:"Southern Copper's long-blocked project — construction finally under way, first cathode targeted 2027."},
+    {n:"Mingomba",c:"Zambia",ll:[-12.37,27.83],ty:"dev",sz:1,d:"KoBold Metals' AI-guided discovery — billed as the highest-grade large undeveloped copper deposit; feasibility under way."},
+    {n:"El Abra expansion",c:"Chile",ll:[-21.92,-68.84],ty:"dev",sz:1,d:"Freeport weighs a ~$7.5B concentrator to unlock one of the largest undeveloped sulfide resources."},
+    {n:"Tampakan",c:"Philippines",ll:[6.48,125.05],ty:"dev",sz:1,d:"The Philippines' stalled giant — capacity to rival Grasberg, blocked for two decades by moratoria and politics."}
+  ]
+};
+
+/* ============ helpers ============ */
+const C = getComputedStyle(document.documentElement);
+const col = v => C.getPropertyValue(v).trim();
+const PAL = ["#e8926a","#34d399","#fbbf24","#f472b6","#60a5fa","#f87171","#94a3b8","#e879f9","#38bdf8","#a3e635","#64748b","#c4b5fd","#fda4af"];
+
+/* count-up hero stats */
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target, end=parseFloat(el.dataset.count), suf=el.dataset.suffix||"", pre=el.dataset.prefix||"", dec=end%1?1:0;
+  const t0=performance.now();
+  (function tick(t){const p=Math.min(Math.max((t-t0)/1200,0),1), v=end*(1-Math.pow(1-p,3));
+    el.textContent=pre+(end>=1000?Math.round(v).toLocaleString("en-US"):v.toFixed(dec))+suf;
+    if(p<1)requestAnimationFrame(tick);})(t0);
+  io.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+
+/* ============ MAP ============ */
+const map = L.map("map",{scrollWheelZoom:false,worldCopyJump:true}).setView([18,15],2);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{
+  attribution:'Tiles &copy; Esri &mdash; &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom:10
+}).addTo(map);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",{
+  maxZoom:10
+}).addTo(map);
+map.on("click",()=>map.scrollWheelZoom.enable());
+
+const groups = {mines:L.layerGroup().addTo(map), processing:L.layerGroup().addTo(map),
+                disrupted:L.layerGroup().addTo(map), development:L.layerGroup().addTo(map)};
+const TYCOL={mine:col("--mine"),proc:col("--proc"),dis:col("--dis"),dev:col("--dev")};
+const TYNAME={mine:"MINE",proc:"SMELTER / REFINERY",dis:"DISRUPTED / SUSPENDED",dev:"DEVELOPMENT"};
+const TYGRP={mine:"mines",proc:"processing",dis:"disrupted",dev:"development"};
+
+DATA.sites.forEach(s=>{
+  const c=TYCOL[s.ty];
+  L.circleMarker(s.ll,{radius:4+s.sz*2.4,color:c,weight:1.5,fillColor:c,fillOpacity:.35})
+   .bindPopup(`<span class="pp-tag" style="background:${c}22;color:${c}">${TYNAME[s.ty]}</span><br><b>${s.n}</b> · ${s.c}<br>${s.d}`)
+   .addTo(groups[TYGRP[s.ty]]);
+});
+
+/* layer toggles */
+document.querySelectorAll(".chip[data-layer]").forEach(ch=>ch.addEventListener("click",()=>{
+  const g=groups[ch.dataset.layer];
+  if(ch.classList.toggle("on")) map.addLayer(g); else map.removeLayer(g);
+}));
+
+/* ============ FORMS GRID ============ */
+const GRPNAME={U:"Upstream (mine)",M:"Midstream (smelt & refine)",D:"Downstream (fabrication)",C:"Circular (scrap)"};
+const GRPCOL={U:col("--accent"),M:col("--accent2"),D:col("--dis"),C:col("--muted")};
+const elGrid=document.getElementById("elGrid"), elDetail=document.getElementById("elDetail");
+elGrid.innerHTML=DATA.forms.map((e,i)=>`
+  <button class="el g${e.g}" data-i="${i}" aria-label="${e.n}">
+    <span class="z">${String(i+1).padStart(2,"0")}</span>
+    <b>${e.s}</b><span>${e.n}</span>
+  </button>`).join("");
+function showEl(i){
+  const e=DATA.forms[i];
+  document.querySelectorAll(".el").forEach(el=>el.classList.toggle("sel",+el.dataset.i===i));
+  const grpCol=GRPCOL[e.g];
+  elDetail.innerHTML=`
+    <h3>${e.n} <small>· ${e.use}</small></h3>
+    <div class="tags">
+      <span class="pp-tag" style="background:${grpCol}22;color:${grpCol}">${GRPNAME[e.g].toUpperCase()}</span>
+    </div>
+    <p>${e.d}</p>
+    ${e.pr?`<div class="price">${e.pr}</div>`:""}`;
+}
+elGrid.addEventListener("click",ev=>{const b=ev.target.closest(".el");if(b)showEl(+b.dataset.i);});
+showEl(DATA.forms.findIndex(e=>e.n==="Cathode"));
+
+/* ============ JOURNEY CARDS ============ */
+document.getElementById("journey").innerHTML = DATA.journey.map((j,i)=>`
+  <div class="jcard"><div class="num">${String(i+1).padStart(2,"0")}</div>
+    <div class="ico">${j.ico}</div><h3>${j.t}</h3><p>${j.p}</p>
+    <div class="fact">${j.f}</div></div>`).join("");
+
+/* ============ COMPANY TRACKER ============ */
+const SEGMETA={
+  mine:{label:"Miner",color:col("--mine")},
+  sep:{label:"Smelting & refining",color:col("--proc")},
+  dev:{label:"Developer",color:col("--dev")}
+};
+const coState={segs:new Set(Object.keys(SEGMETA)),q:""};
+function renderCo(){
+  const q=coState.q.trim().toLowerCase();
+  const rows=DATA.companies.filter(c=>c.seg.split(" ").some(s=>coState.segs.has(s))&&
+    (!q||[c.n,c.hq,c.tik,c.a,c.s].join(" ").toLowerCase().includes(q)));
+  document.getElementById("coBody").innerHTML=rows.map(c=>{
+    const tags=c.seg.split(" ").map(s=>{const m=SEGMETA[s];
+      return `<span class="pp-tag" style="background:${m.color}22;color:${m.color}">${m.label}</span>`;}).join(" ");
+    return `<tr>
+      <td><b><a href="${c.u}" target="_blank" rel="noopener">${c.n}</a></b>
+        <div class="tik">${c.hq} · ${c.tik}</div></td>
+      <td>${tags}</td>
+      <td>${c.a}</td>
+      <td>${c.s}</td></tr>`;
+  }).join("")||`<tr><td colspan="4" style="text-align:center;padding:24px">No companies match.</td></tr>`;
+  document.getElementById("coCount").textContent=`${rows.length} of ${DATA.companies.length} companies`;
+}
+document.querySelectorAll("#coFilters .chip").forEach(ch=>ch.addEventListener("click",()=>{
+  const s=ch.dataset.seg;
+  if(ch.classList.toggle("on")) coState.segs.add(s); else coState.segs.delete(s);
+  renderCo();
+}));
+document.getElementById("coSearch").addEventListener("input",e=>{coState.q=e.target.value;renderCo();});
+renderCo();
+
+/* ============ CHARTS ============ */
+Chart.defaults.color=col("--muted");
+Chart.defaults.borderColor=col("--line");
+Chart.defaults.font.size=11;
+const fmt=n=>n>=1e3?(n/1e3).toFixed(n>=1e4?0:1)+" Mt":n+" kt";
+const noLeg={plugins:{legend:{display:false}}};
+
+/* draw a total in the center of doughnut charts */
+Chart.register({
+  id:"centerText",
+  afterDraw(chart){
+    const opts=chart.options.plugins&&chart.options.plugins.centerText;
+    if(!opts||!opts.enabled) return;
+    if(!chart.chartArea) return;
+    const {ctx,chartArea:{left,right,top,bottom}}=chart;
+    const cx=(left+right)/2, cy=(top+bottom)/2;
+    ctx.save();
+    ctx.textAlign="center";
+    ctx.textBaseline="middle";
+    ctx.fillStyle=col("--txt");
+    ctx.font="700 19px -apple-system,Segoe UI,Roboto,sans-serif";
+    ctx.fillText(opts.text, cx, cy-(opts.label?9:0));
+    if(opts.label){
+      ctx.font="600 9.5px -apple-system,Segoe UI,Roboto,sans-serif";
+      ctx.fillStyle=col("--muted");
+      ctx.fillText(opts.label, cx, cy+10);
+    }
+    ctx.restore();
+  }
+});
+
+const donutOpts={maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+  tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}%`}}},cutout:"62%"};
+
+new Chart(chProd,{type:"bar",
+  data:{labels:DATA.production2025.map(d=>d[0]),
+    datasets:[{data:DATA.production2025.map(d=>d[1]),backgroundColor:DATA.production2025.map((d,i)=>i===0?col("--accent"):"#34d39988"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{type:"logarithmic",ticks:{callback:v=>[500,1e3,5e3].includes(v)?fmt(v):""},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmt(c.parsed.x)} copper content (log scale)`}}}}});
+
+new Chart(chRefined,{type:"bar",
+  data:{labels:DATA.refined2025.map(d=>d[0]),
+    datasets:[{data:DATA.refined2025.map(d=>d[1]),backgroundColor:DATA.refined2025.map((d,i)=>i===0?col("--accent"):"#34d39988"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{ticks:{callback:v=>fmt(v)},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmt(c.parsed.x)} refined copper`}}}}});
+
+new Chart(chRes,{type:"doughnut",
+  data:{labels:DATA.reserves.map(d=>d[0]),datasets:[{data:DATA.reserves.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed} Mt`}},
+    centerText:{enabled:true,text:"~980 Mt",label:"world total"}}}});
+
+new Chart(chTrend,{type:"line",
+  data:{labels:DATA.trend.years,
+    datasets:[
+      {label:"Mine production",data:DATA.trend.mine,borderColor:col("--accent"),backgroundColor:"#e8926a22",fill:true,tension:0,pointRadius:3,pointBackgroundColor:col("--accent")},
+      {label:"Refined production",data:DATA.trend.refined,borderColor:col("--accent2"),backgroundColor:"transparent",fill:false,tension:0,pointRadius:3,pointBackgroundColor:col("--accent2")}
+    ]},
+  options:{maintainAspectRatio:false,
+    scales:{y:{min:18,max:32,ticks:{callback:v=>v+" Mt"},grid:{color:col("--line")}},x:{grid:{display:false}}},
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+      tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y} Mt`}}}}});
+
+new Chart(chUsImp,{type:"doughnut",
+  data:{labels:DATA.usImports.map(d=>d[0]),datasets:[{data:DATA.usImports.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:donutOpts});
+
+new Chart(chPrices,{type:"line",
+  data:{labels:DATA.prices.years,
+    datasets:[
+      {label:"COMEX (New York)",data:DATA.prices.comex,borderColor:col("--accent"),pointBackgroundColor:col("--accent"),tension:0,pointRadius:3},
+      {label:"LME (London), cash",data:DATA.prices.lme,borderColor:col("--accent2"),pointBackgroundColor:col("--accent2"),tension:0,pointRadius:3}
+    ]},
+  options:{maintainAspectRatio:false,
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+      tooltip:{callbacks:{label:c=>` ${c.dataset.label}: $${c.parsed.y.toFixed(2)}/lb`}}},
+    scales:{y:{ticks:{callback:v=>"$"+v.toFixed(2)},grid:{color:col("--line")}},
+            x:{grid:{display:false}}}}});
+
+/* china bars */
+document.getElementById("chinaBars").innerHTML = DATA.chinaShares.map(([s,v])=>`
+  <div class="bar-row"><span>${s}</span><div class="track"><div class="fill" data-w="${v}"></div></div><span class="val">~${v}%</span></div>`).join("");
+const io2=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.w+"%");io2.unobserve(e.target);}
+}),{threshold:.4});
+io2.observe(document.getElementById("chinaBars"));
+
+/* nav active state */
+const secs=[...document.querySelectorAll("section[id],header")];
+const navLinks=[...document.querySelectorAll("nav a.link")];
+const io3=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}
+}),{rootMargin:"-40% 0px -55% 0px"});
+secs.forEach(s=>io3.observe(s));
+</script>
+<script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
