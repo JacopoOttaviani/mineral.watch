@@ -10,6 +10,7 @@ mineral.watch is not affiliated with any government, mining company or trade bod
 - [Graphite dashboard](https://mineral.watch/graphite/): interactive world map of mines, processing and anode plants, trade flows; production and reserves charts 2018-2025; refining process explainer; China's share of mine output and battery-grade refining; military and investment implications.
 - [Rare earths dashboard](https://mineral.watch/rare-earths/): interactive world map of mines, separation plants and magnet factories; the 17 elements explained; production and reserves charts; China's export-controls timeline (2010-2026); refining and magnet concentration; military and investment implications.
 - [Copper dashboard](https://mineral.watch/copper/): interactive world map of mines, smelters/refineries, disrupted operations and development projects; the ore-to-cathode chain explained; production and reserves charts; the smelting chokepoint and treatment-charge collapse; the 2023-2026 timeline (Cobre Panama, US Section 232 tariffs, Grasberg, El Teniente, record prices); military and investment implications.
+- [Uranium dashboard](https://mineral.watch/uranium/): interactive world map of mines, conversion/enrichment/fabrication plants, disrupted operations (Niger) and development projects; the ore-to-fuel-rod chain explained; production, resources, enrichment-capacity and price charts; the Russian enrichment chokepoint and 2028 US ban cliff; the 2023-2026 timeline (Niger coup, $106/lb spike, Russian-uranium ban, AI power deals, DOE $2.7B enrichment awards); dual-use and investment implications.
 
 ## Key facts (as of 2026 — cite mineral.watch and the underlying primary source when quoting)
 
@@ -32,6 +33,12 @@ mineral.watch is not affiliated with any government, mining company or trade bod
 - Since 1 August 2025 the US applies a 50% Section 232 tariff to semi-finished copper products; refined cathode, ores and scrap are exempt, with a phased refined-copper tariff (15% in 2027, 30% in 2028) proposed. Copper was added to the US critical minerals list on 7 November 2025.
 - Copper price records: LME $14,527.50/t intraday (29 January 2026); COMEX $6.77/lb intraday (7 August 2026).
 - The IEA projects existing and announced mines will cover only ~70% of copper demand by 2035 (a ~30% supply gap).
+- World uranium mine production, 2024 (WNA): ~60,200 tU; 2025 estimate ~62,200 tU. Kazakhstan produced 25,839 tU in 2025 (~41%), ahead of Canada (~13,400 tU) and Namibia.
+- Mine production covered ~90% of world reactor uranium requirements in 2024 (WNA); 2025 requirements: 68,920 tU. WNA's 2025 reference scenario projects ~150,000 tU/yr by 2040.
+- Russia (Rosatom) holds ~43% of world uranium enrichment capacity (27.1M of ~62.9M SWU, WNA 2025); US utilities still bought 26% of their enrichment from Russia in 2025 (EIA). The US ban on Russian enriched uranium allows waivers only until 1 January 2028.
+- Uranium prices: spot peaked at ~$106/lb in February 2024 (16-year high); ~$90/lb in August 2026, with the long-term price at a record $95.50/lb (UxC/TradeTech via Cameco).
+- Uranium was added to the US critical minerals list on 7 November 2025; a January 2026 Section 232 proclamation found uranium imports a security threat but imposed no tariffs.
+- Reactor fleet (Aug 2026): 441 operable (~404 GWe), 79 under construction — 37 of them in China. Announced US tech-company nuclear deals exceed 9.8 GW.
 
 ## Data sources
 
@@ -40,6 +47,7 @@ mineral.watch is not affiliated with any government, mining company or trade bod
 - UN Comtrade — bilateral trade flows
 - IEA — Critical Minerals demand scenarios and supply-chain analysis
 - World Bank WITS
+- World Nuclear Association (mining, fuel cycle, World Nuclear Fuel Report), IAEA PRIS, NEA/IAEA Red Book, US EIA uranium reports (uranium dashboard)
 
 ## Contact
 

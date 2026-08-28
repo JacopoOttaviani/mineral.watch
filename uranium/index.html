@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>UraniumWatch — Tracking the Global Uranium &amp; Nuclear Fuel Supply Chain</title>
+<meta name="description" content="Open data visualisation tracking the global uranium supply chain: mines, conversion and enrichment plants, prices, the Russian enrichment chokepoint and the nuclear revival. Built on WNA, IAEA, EIA and BGS data.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="mineral.watch">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="https://mineral.watch/uranium/">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="alternate icon" href="/brand/favicon.png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mineral.watch/uranium/">
+<meta property="og:site_name" content="mineral.watch">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="UraniumWatch — Tracking the Global Uranium &amp; Nuclear Fuel Supply Chain">
+<meta property="og:description" content="Interactive world map of uranium mines, conversion and enrichment plants, production and price charts, the Russian enrichment chokepoint and the AI-driven nuclear revival — built on WNA, IAEA, EIA and BGS data.">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="UraniumWatch — tracking the global uranium supply chain">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="UraniumWatch — Tracking the Global Uranium &amp; Nuclear Fuel Supply Chain">
+<meta name="twitter:description" content="Interactive map, production and price charts, the enrichment chokepoint, the Russian-ban timeline and the AI-driven nuclear revival — built on WNA, IAEA, EIA and BGS data.">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png">
+<meta name="twitter:image:alt" content="UraniumWatch — tracking the global uranium supply chain">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
+        { "@type": "ListItem", "position": 2, "name": "Uranium", "item": "https://mineral.watch/uranium/" }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "UraniumWatch — Global Uranium Supply Chain Data",
+      "description": "Mines, conversion and enrichment plants, production and resources data, reactor requirements, prices and policy timeline for the global uranium and nuclear fuel supply chain.",
+      "url": "https://mineral.watch/uranium/",
+      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "temporalCoverage": "1970/2026",
+      "spatialCoverage": "Worldwide",
+      "variableMeasured": ["Mine production", "Uranium resources", "Enrichment capacity", "Conversion capacity", "Reactor requirements", "Prices", "Companies"],
+      "isAccessibleForFree": true,
+      "license": "https://mineral.watch/",
+      "citation": [
+        "World Nuclear Association — World Uranium Mining Production and World Nuclear Fuel Report 2025",
+        "IAEA Power Reactor Information System (PRIS)",
+        "NEA/IAEA Uranium Resources, Production and Demand (Red Book)",
+        "US EIA — Uranium Marketing Annual and Domestic Uranium Production reports",
+        "British Geological Survey — World Mineral Statistics",
+        "UxC and TradeTech price indicators as published by Cameco; company and government disclosures"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the world running out of uranium?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Identified recoverable resources are around 6 million tonnes of uranium — roughly ninety years at current mining rates, with far more available at higher prices and in unconventional sources. The squeeze is about timing, not endowment: existing mines deplete significantly by the mid-2030s, a new mine takes ten to twenty years from discovery to production, and the World Nuclear Association projects reactor requirements will more than double to about 150,000 tonnes a year by 2040."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which country produces the most uranium?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kazakhstan mined about 25,800 of the world's roughly 62,000 tonnes of uranium in 2025 — around 41% — ahead of Canada (~13,400 t) and Namibia. But mining is only half the story: Russia controls about 43% of the world's enrichment capacity, the step every kilogram of reactor fuel must pass through."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is enrichment the chokepoint if uranium mining is spread across five continents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Four companies — Rosatom, Urenco, CNNC and Orano — operate virtually all commercial enrichment capacity, and Rosatom alone holds about 43% of it. US utilities still bought 26% of their enrichment from Russia in 2025, even though a US import ban takes full effect in 2028 when waivers expire. That cliff triggered a $2.7 billion US enrichment programme and the largest Western capacity buildout in decades — but new centrifuge plants take years to come online."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What did the US ban on Russian uranium do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Prohibiting Russian Uranium Imports Act, signed in May 2024, banned Russian enriched uranium from August 2024 but allows waivers until 1 January 2028. Russia answered in November 2024 with its own restrictions on enriched-uranium exports to the US. The ban unlocked $2.7 billion for domestic enrichment, awarded in January 2026 to Centrus, General Matter, Orano and Global Laser Enrichment — yet Russian material still covered about a quarter of US enrichment purchases in 2025."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is driving uranium demand?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A reactor fleet that is growing again: 441 operable reactors (~404 GWe) with 79 under construction, 37 of them in China. AI data-centre power deals — Microsoft's Three Mile Island restart contract, Meta-Constellation, Amazon-X-energy, Google-Kairos, together more than 9 GW — turned big tech into a nuclear buyer, more than thirty countries have pledged to triple nuclear capacity by 2050, and the World Bank lifted its decades-old ban on financing nuclear power in June 2025."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did uranium prices spike in 2024 — and where are they now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spot uranium hit about $106 per pound in early February 2024 — a sixteen-year high — after Kazatomprom warned that sulfuric-acid shortages would hit production, capping a run driven by supply cuts, the Sprott Physical Uranium Trust and post-2022 energy security fears. It fell back to $64 by March 2025, then recovered to about $90 by August 2026. The long-term contract price, where most uranium actually trades, kept climbing to a record $95.50 per pound — and enrichment and conversion prices set all-time records too."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#22d3ee;--accent2:#a3e635;
+  --mine:#22d3ee;--proc:#a3e635;--dis:#fbbf24;--dev:#f472b6;
+  --radius:14px;--pad:16px;
+  font-size:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+h1,h2,h3{line-height:1.2;font-weight:700}
+section{padding:40px var(--pad);max-width:1100px;margin:0 auto}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;margin-bottom:8px}
+h2{font-size:1.5rem;margin-bottom:10px}
+.lede{color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:20px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1100px;margin:0 auto}
+.nav-links{display:flex;align-items:center;gap:8px;flex:1;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px;flex:none}
+.brand span{color:var(--accent)}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap;flex:none}
+nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto;flex:none;position:relative;overflow:hidden;z-index:0}
+nav a.cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){nav a.cta::before{transition:none}}
+.research-cta{display:inline-block;background:var(--accent);color:var(--bg);font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none;position:relative;overflow:hidden;z-index:0}
+.research-cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+.research-cta:hover::before,.research-cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){.research-cta::before{transition:none}}
+
+/* hero */
+.hero{padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
+.hero h1{font-size:clamp(1.9rem,6.5vw,3.2rem);letter-spacing:-.02em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);max-width:560px;font-size:1rem}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.stat b{display:block;font-size:1.45rem;color:var(--accent);letter-spacing:-.01em}
+.stat span{font-size:.74rem;color:var(--muted)}
+
+/* map */
+#map{height:62vh;min-height:380px;border-radius:var(--radius);border:1px solid var(--line);z-index:1}
+.map-controls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:7px 14px;font-size:.8rem;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent}
+.chip.on{color:#0d1117;font-weight:700}
+.chip.on.c-mine{background:var(--mine);border-color:var(--mine)}
+.chip.on.c-proc{background:var(--proc);border-color:var(--proc)}
+.chip.on.c-dis{background:var(--dis);border-color:var(--dis)}
+.chip.on.c-dev{background:var(--dev);border-color:var(--dev)}
+.legend{font-size:.74rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--card)}
+.leaflet-popup-content{font-size:.82rem;line-height:1.5;margin:12px 14px}
+.leaflet-popup-content b{color:var(--accent)}
+.pp-tag{display:inline-block;font-size:.66rem;padding:1px 8px;border-radius:99px;margin-bottom:4px;font-weight:700}
+
+/* forms grid (ore → fuel) */
+.el-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px;margin-top:8px}
+.el{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 6px 10px;cursor:pointer;text-align:center;transition:.15s;position:relative;-webkit-tap-highlight-color:transparent}
+.el:hover{border-color:var(--accent)}
+.el.sel{border-color:var(--accent);background:#22d3ee14}
+.el b{display:block;font-size:.98rem;letter-spacing:-.01em}
+.el span{font-size:.6rem;color:var(--muted);display:block;margin-top:2px}
+.el .z{position:absolute;top:4px;left:7px;font-size:.56rem;color:var(--muted)}
+.el.gU b{color:var(--accent)}
+.el.gM b{color:var(--accent2)}
+.el.gD b{color:var(--dis)}
+.el.gC b{color:var(--muted)}
+.el-legend{font-size:.72rem;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.el-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.el-detail{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.el-detail h3{font-size:1.05rem;margin-bottom:2px}
+.el-detail h3 small{color:var(--muted);font-weight:400;font-size:.78rem}
+.el-detail .tags{margin:6px 0 10px;display:flex;gap:6px;flex-wrap:wrap}
+.el-detail p{font-size:.85rem;color:var(--muted)}
+.el-detail .price{margin-top:10px;font-size:.78rem;color:var(--accent);border-top:1px dashed var(--line);padding-top:8px}
+
+/* journey */
+.journey{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 calc(-1*var(--pad));padding-left:var(--pad);padding-right:var(--pad)}
+.jcard{scroll-snap-align:start;flex:0 0 260px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative}
+.jcard .num{position:absolute;top:14px;right:16px;font-size:1.6rem;font-weight:800;color:var(--line)}
+.jcard .ico{font-size:1.6rem;margin-bottom:10px}
+.jcard h3{font-size:1rem;margin-bottom:6px}
+.jcard p{font-size:.8rem;color:var(--muted)}
+.jcard .fact{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.76rem;color:var(--accent)}
+.jhint{font-size:.72rem;color:var(--muted);margin-top:6px}
+
+/* charts */
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card h3{font-size:.95rem;margin-bottom:4px}
+.card .sub{font-size:.74rem;color:var(--muted);margin-bottom:12px}
+.chartbox{position:relative;height:280px}
+.src{font-size:.68rem;color:var(--muted);margin-top:10px}
+
+/* chokepoints section */
+.big{font-size:clamp(2.6rem,10vw,4.5rem);font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1}
+.bars{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.bar-row{display:grid;grid-template-columns:150px 1fr 44px;align-items:center;gap:10px;font-size:.78rem}
+.bar-row .track{background:var(--bg2);border-radius:99px;height:10px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#7deef8);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar-row .val{text-align:right;color:var(--muted)}
+
+/* process flow */
+.flow-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+.flow-wrap svg{min-width:980px;display:block}
+
+/* timeline */
+.tl{position:relative;margin-top:6px;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding-bottom:22px}
+.tl-item::before{content:"";position:absolute;left:-24px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl-item.hot::before{background:var(--accent)}
+.tl-date{font-size:.7rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.tl-item h4{font-size:.92rem;margin:3px 0 4px}
+.tl-item p{font-size:.8rem;color:var(--muted);max-width:640px}
+
+/* company tracker */
+.co-search{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.co-search input{flex:1 1 200px;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;color:var(--txt);font-size:.8rem;outline:none;-webkit-appearance:none}
+.co-search input:focus{border-color:var(--accent)}
+.co-search input::placeholder{color:var(--muted)}
+.co-count{font-size:.72rem;color:var(--muted)}
+.co-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+table.co{width:100%;min-width:900px;border-collapse:collapse;font-size:.79rem}
+.co th{text-align:left;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.co td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted);line-height:1.45}
+.co td:first-child{min-width:170px}
+.co td b{color:var(--txt);font-size:.82rem}
+.co td b a{color:var(--txt);text-decoration:none;border-bottom:1px dashed var(--line)}
+.co td b a:hover{color:var(--accent2);border-bottom-color:var(--accent2)}
+.co .tik{font-size:.68rem;color:var(--muted);margin-top:2px;white-space:nowrap}
+.co .pp-tag{white-space:nowrap;margin-bottom:0}
+
+/* mini cards (military / invest) */
+.mini-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.mini{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px}
+.mini h4{font-size:.86rem;margin-bottom:5px}
+.mini h4 .mi{margin-right:6px}
+.mini p{font-size:.78rem;color:var(--muted)}
+.note{font-size:.72rem;color:var(--muted);border-left:3px solid var(--accent);padding:8px 12px;background:var(--bg2);border-radius:0 8px 8px 0;margin-top:14px}
+.callout{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:14px;margin-top:14px}
+.callout b{font-size:1.5rem;color:var(--accent2);white-space:nowrap;line-height:1.2}
+.callout span{font-size:.78rem;color:var(--muted);flex:1 1 260px;line-height:1.5}
+@media(min-width:720px){.mini-grid{grid-template-columns:1fr 1fr}}
+
+/* research box + animated logo */
+.research-box{display:grid;gap:24px;align-items:center}
+.research-art{display:none;justify-self:center;width:180px;animation:hero-float 11s ease-in-out infinite}
+@media(min-width:720px){.research-box{grid-template-columns:1.3fr 1fr}.research-art{display:block}}
+@keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.net-art .edge{stroke:var(--txt);stroke-opacity:.55;stroke-width:1.1;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 1.6s ease-out forwards}
+.net-art .web{stroke:var(--muted);stroke-opacity:.35;stroke-width:.8;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 2s ease-out forwards}
+.net-art .d1{animation-delay:.1s}.net-art .d2{animation-delay:.35s}.net-art .d3{animation-delay:.6s}
+.net-art .d4{animation-delay:.9s}.net-art .d5{animation-delay:1.15s}.net-art .d6{animation-delay:1.4s}
+@keyframes art-draw{to{stroke-dashoffset:0}}
+.net-art .orbit{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:3 7;transform-box:fill-box;transform-origin:center}
+.net-art .orbit.o2{stroke-opacity:.6;animation:art-spin 120s linear infinite reverse}
+@keyframes art-spin{to{transform:rotate(360deg)}}
+.net-art .node{fill:var(--bg);stroke:var(--txt);stroke-opacity:.7;stroke-width:1.1;opacity:0;animation:art-in .5s ease-out forwards}
+.net-art .sat{fill:none;stroke:var(--muted);stroke-width:1;opacity:0;animation:art-in .5s ease-out forwards,art-breathe 4s ease-in-out 2.4s infinite;transform-box:fill-box;transform-origin:center}
+.net-art .node,.net-art .sat{animation-delay:1.2s}
+.net-art .sat.b2{animation-delay:1.4s,3s}.net-art .sat.b3{animation-delay:1.6s,3.8s}
+@keyframes art-in{to{opacity:1}}
+@keyframes art-breathe{0%,100%{transform:scale(1);stroke-opacity:1}50%{transform:scale(1.5);stroke-opacity:.4}}
+@media(prefers-reduced-motion:reduce){
+  .net-art,.net-art *{animation:none !important;stroke-dashoffset:0 !important;opacity:1 !important}
+}
+
+/* sources */
+.sources li{margin-bottom:12px;font-size:.85rem;color:var(--muted)}
+.sources{list-style:none}
+.sources b{color:var(--txt)}
+
+/* faq */
+.faq{display:grid;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+.faq details[open]{border-color:var(--accent)}
+.faq summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.2rem;flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--muted);font-size:.86rem;margin-top:10px}
+footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}
+
+@media(min-width:720px){
+  :root{--pad:24px}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .grid2{grid-template-columns:1fr 1fr}
+  h2{font-size:1.9rem}
+  .jcard{flex-basis:300px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
+    <div class="brand">Uranium<span>Watch</span></div>
+    <div class="nav-links">
+    <a class="link" href="#map-sec">Map</a>
+    <a class="link" href="#forms-sec">The fuel</a>
+    <a class="link" href="#journey-sec">Journey</a>
+    <a class="link" href="#production-sec">Production</a>
+    <a class="link" href="#enrichment-sec">Enrichment</a>
+    <a class="link" href="#demand-sec">Demand</a>
+    <a class="link" href="#timeline-sec">Timeline</a>
+    <a class="link" href="#trade-sec">Prices</a>
+    <a class="link" href="#chokepoints-sec">Chokepoints</a>
+    <a class="link" href="#military-sec">Dual use</a>
+    <a class="link" href="#invest-sec">Investment</a>
+    <a class="link" href="#companies-sec">Companies</a>
+    <a class="link" href="#sources-sec">Data</a>
+    <a class="link" href="#faq-sec">FAQ</a>
+    <a class="link" href="#research-sec">Research</a>
+    </div>
+    <a class="cta" href="#research-sec">Contact us</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="kicker">Open data · critical minerals</div>
+  <h1>Who fuels the <em>nuclear revival</em>?</h1>
+  <p>Uranium is the densest fuel on Earth — and the most politically supervised commodity in it. Mining is spread across five continents, but every kilogram of reactor fuel must pass through a handful of conversion and enrichment plants, nearly half of them Russian. This site tracks where uranium is mined, converted and enriched, and how AI power deals, a US–Russia decoupling and record fuel prices are redrawing the map — using open data from the WNA, IAEA, EIA and BGS.</p>
+  <div class="stats">
+    <div class="stat"><b data-count="62200" data-suffix=" tU">0</b><span>uranium mined worldwide, 2025 (est.) — ~90% of what reactors consumed</span></div>
+    <div class="stat"><b data-count="41" data-suffix="%">0</b><span>of world mine supply from Kazakhstan, 2025</span></div>
+    <div class="stat"><b data-count="43" data-suffix="%">0</b><span>of world enrichment capacity held by Russia's Rosatom</span></div>
+    <div class="stat"><b data-count="106" data-prefix="$">0</b><span>per lb — Feb 2024 spot peak, a 16-year high</span></div>
+  </div>
+</header>
+
+<section id="map-sec">
+  <div class="kicker">Interactive map</div>
+  <h2>The uranium world map</h2>
+  <p class="lede">Major producing mines, conversion, enrichment and fuel-fabrication plants, disrupted operations and development projects. Tap a marker for details; toggle layers below. Circle size ≈ scale of operation.</p>
+  <div class="map-controls">
+    <button class="chip c-mine on" data-layer="mines">⛏ Mines</button>
+    <button class="chip c-proc on" data-layer="processing">🏭 Conversion &amp; enrichment</button>
+    <button class="chip c-dis on" data-layer="disrupted">⚠ Disrupted &amp; suspended</button>
+    <button class="chip c-dev on" data-layer="development">◐ Development</button>
+  </div>
+  <div id="map"></div>
+  <div class="legend" style="margin-top:10px">
+    <span><i style="background:var(--mine)"></i>Mine (producing)</span>
+    <span><i style="background:var(--proc)"></i>Conversion / enrichment / fabrication</span>
+    <span><i style="background:var(--dis)"></i>Disrupted / suspended</span>
+    <span><i style="background:var(--dev)"></i>Development project</span>
+  </div>
+</section>
+
+<section id="forms-sec">
+  <div class="kicker">From ore to fuel rod</div>
+  <h2>One element, many markets</h2>
+  <p class="lede">Uranium trades in a ladder of forms — from rock holding a gram of metal per kilogram to ceramic pellets that each match a tonne of coal. Every rung is a separate market with its own price, and the chokepoints sit between the rungs. Tap a stage.</p>
+  <div class="el-grid" id="elGrid"></div>
+  <div class="el-legend">
+    <span><i style="background:var(--accent)"></i>Upstream (mine &amp; mill)</span>
+    <span><i style="background:var(--accent2)"></i>Midstream (convert &amp; enrich)</span>
+    <span><i style="background:var(--dis)"></i>Downstream (fabrication)</span>
+    <span><i style="background:var(--muted)"></i>Circular (secondary supply)</span>
+  </div>
+  <div class="el-detail" id="elDetail"></div>
+</section>
+
+<section id="journey-sec">
+  <div class="kicker">Mine to reactor</div>
+  <h2>The journey of a tonne of uranium</h2>
+  <p class="lede">From wellfields in the Kazakh steppe to a reactor core running for two years without refuelling, uranium passes through a chain where the geography narrows at every step — and where the last two steps are the most contested.</p>
+  <div class="journey" id="journey"></div>
+  <div class="jhint">← swipe →</div>
+</section>
+<section id="production-sec">
+  <div class="kicker">Production &amp; resources</div>
+  <h2>Where uranium comes from</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Mine production by country, 2024</h3>
+      <div class="sub">Tonnes of uranium, log scale (WNA; world total ~60,200 tU)</div>
+      <div class="chartbox"><canvas id="chProd"></canvas></div>
+      <div class="src">Source: World Nuclear Association, World Uranium Mining Production (updated Jan 2026). 2025 estimate ~62,200 tU, with Kazakhstan at 25,839 tU (~41%).</div>
+    </div>
+    <div class="card">
+      <h3>Known recoverable resources</h3>
+      <div class="sub">Thousand tonnes of uranium (world total ~6,080 ktU)</div>
+      <div class="chartbox"><canvas id="chRes"></canvas></div>
+      <div class="src">Source: NEA/IAEA "Red Book" via WNA — identified recoverable resources to $130/kgU (2021 data). More becomes viable at higher prices.</div>
+    </div>
+    <div class="card" style="grid-column:1/-1">
+      <h3>World mine production, 1970–2024: the long cycle</h3>
+      <div class="sub">Tonnes of uranium per year — the Cold War peak, the 1990s slump under weapons-stockpile downblending, Kazakhstan's ISR boom, the post-Fukushima trough, and the current recovery</div>
+      <div class="chartbox"><canvas id="chTrend"></canvas></div>
+      <div class="src">Sources: BGS World Mineral Statistics (production, 1970–2024); WNA (2025 reactor requirements, 68,920 tU — dashed line). Mines covered ~90% of requirements in 2024; secondary supplies fill the rest.</div>
+    </div>
+  </div>
+  <div class="note">Compare uranium production country by country since 1970 — and 110 other commodities — in the <a href="/explorer/">BGS data explorer</a>.</div>
+</section>
+
+<section id="enrichment-sec">
+  <div class="kicker">Conversion &amp; enrichment</div>
+  <h2>The chokepoint is the centrifuge</h2>
+  <p class="lede">Uranium mining spans five continents — no fuel can skip the midstream. Five plants convert yellowcake to gas, four companies enrich virtually all of it, and Russia's Rosatom alone holds about 43% of world enrichment capacity. With a US import ban going absolute in 2028, the West is building centrifuges faster than at any time since the Cold War.</p>
+  <div class="card">
+    <h3>Enrichment geography</h3>
+    <div class="sub">A four-company industry racing to de-Russify before the 2028 cliff</div>
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇷🇺</span>The Rosatom fleet</h4><p>Four enrichment complexes give Russia ~27.1M SWU a year — about 43% of world capacity — plus conversion at Seversk. Russia was still the single largest enrichment supplier to both US and EU reactors in 2025: 26% of US enrichment purchases and 22.6% of EU deliveries (EIA; Euratom Supply Agency).</p></div>
+      <div class="mini"><h4><span class="mi">⏳</span>The 2028 cliff</h4><p>The US ban on Russian enriched uranium (signed May 2024) allows waivers only until <b style="color:var(--accent)">1 January 2028</b>. Russia counter-restricted exports to the US in November 2024. DOE has deferred decisions on 2026–27 waivers — utilities are contracting around a hard deadline with no slack.</p></div>
+      <div class="mini"><h4><span class="mi">🏗️</span>The Western buildout</h4><p>Urenco is expanding all four sites and broke ground on a 2.1M-SWU plant at Eunice, New Mexico in August 2026 (~+50% US capacity); Orano is extending Georges Besse II ~30% and planning a ~$5B plant at Oak Ridge; Centrus is building LEU centrifuges in Ohio; startup General Matter took over Paducah. DOE seeded it all with $2.7B in January 2026.</p></div>
+      <div class="mini"><h4><span class="mi">🧪</span>The HALEU bottleneck</h4><p>Most advanced and small modular reactors need high-assay LEU (5–20%) — a fuel only Russia's TENEX sold commercially until Centrus's Piketon plant delivered America's first kilograms in 2023, reaching 900 kg by January 2026. DOE has allocated ~21 t to eight developers; Urenco's Capenhurst HALEU line follows in the early 2030s.</p></div>
+    </div>
+    <div class="src">Sources: WNA uranium enrichment library (2025 capacities); EIA Uranium Marketing Annual 2025; Euratom Supply Agency Annual Report 2025; DOE announcements (Jan–Aug 2026); company disclosures.</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Enrichment capacity by supplier, 2025</h3>
+    <div class="sub">Million separative work units (SWU) per year — the step where the market concentrates</div>
+    <div class="chartbox"><canvas id="chEnr"></canvas></div>
+    <div class="src">Source: WNA (2025 nameplate capacity, ~62.9M SWU total vs ~50M SWU demand). CNNC's capacity is heading toward ~17M SWU by 2030.</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>From ore to fuel rod, step by step</h3>
+    <div class="sub">Primary route (top); secondary supply and the HALEU branch (bottom). Scroll sideways on mobile →</div>
+    <div class="flow-wrap">
+    <svg viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Uranium processing flow from ore to fuel rod">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8b98a5"/></marker>
+      </defs>
+      <style>
+        .fb{fill:#151b23;stroke:#2b3644;rx:10}
+        .ft{fill:#e6edf3;font:700 12px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fs{fill:#8b98a5;font:11px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fe{fill:#22d3ee;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fl{stroke:#8b98a5;stroke-width:1.4;fill:none;marker-end:url(#ah)}
+        .lab{fill:#a3e635;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em}
+      </style>
+      <!-- route labels -->
+      <text x="10" y="24" class="lab">PRIMARY ROUTE (~90% OF SUPPLY)</text>
+      <text x="10" y="212" class="lab">SECONDARY SUPPLY &amp; HALEU BRANCH</text>
+      <!-- primary route boxes y=40..118 -->
+      <g>
+        <rect class="fb" x="10" y="40" width="150" height="78" rx="10"/>
+        <text x="20" y="62" class="ft">1 · Mine ⛏</text>
+        <text x="20" y="80" class="fs">ISR wellfields, pits &amp;</text>
+        <text x="20" y="94" class="fs">underground, ~0.1% U ore</text>
+        <text x="20" y="111" class="fe">ISR is &gt;half of world output</text>
+
+        <rect class="fb" x="205" y="40" width="150" height="78" rx="10"/>
+        <text x="215" y="62" class="ft">2 · Mill · U₃O₈</text>
+        <text x="215" y="80" class="fs">Leach &amp; precipitate to</text>
+        <text x="215" y="94" class="fs">yellowcake, ~85% uranium</text>
+        <text x="215" y="111" class="fe">the world's traded unit ($/lb)</text>
+
+        <rect class="fb" x="400" y="40" width="150" height="78" rx="10"/>
+        <text x="410" y="62" class="ft">3 · Convert 🏭</text>
+        <text x="410" y="80" class="fs">To uranium hexafluoride</text>
+        <text x="410" y="94" class="fs">(UF₆) gas for enrichment</text>
+        <text x="410" y="111" class="fe">5 commercial plants worldwide</text>
+
+        <rect class="fb" x="595" y="40" width="150" height="78" rx="10"/>
+        <text x="605" y="62" class="ft">4 · Enrich 🌀</text>
+        <text x="605" y="80" class="fs">Centrifuges raise U-235</text>
+        <text x="605" y="94" class="fs">from 0.7% to 3–5%</text>
+        <text x="605" y="111" class="fe">Rosatom holds ~43% of capacity</text>
+      </g>
+      <!-- secondary route boxes y=222..300 -->
+      <g>
+        <rect class="fb" x="10" y="222" width="150" height="78" rx="10"/>
+        <text x="20" y="244" class="ft">Secondary supply ♻</text>
+        <text x="20" y="262" class="fs">Inventories, re-enriched</text>
+        <text x="20" y="276" class="fs">tails, recycled MOX fuel</text>
+        <text x="20" y="292" class="fe">~10% of supply, shrinking</text>
+
+        <rect class="fb" x="400" y="222" width="150" height="78" rx="10"/>
+        <text x="410" y="244" class="ft">HALEU · 5–20%</text>
+        <text x="410" y="262" class="fs">For SMRs &amp; advanced</text>
+        <text x="410" y="276" class="fs">reactor designs</text>
+        <text x="410" y="292" class="fe">first US output: Centrus, 2023</text>
+      </g>
+      <!-- convergence box -->
+      <g>
+        <rect class="fb" x="790" y="120" width="180" height="90" rx="10" stroke="#22d3ee"/>
+        <text x="800" y="144" class="ft">5 · Fabricate &amp; load ⚛</text>
+        <text x="800" y="162" class="fs">UO₂ pellets into rods and</text>
+        <text x="800" y="176" class="fs">assemblies; 18–24 month</text>
+        <text x="800" y="190" class="fs">cycles in 441 reactors</text>
+        <text x="800" y="205" class="fe">1 pellet ≈ 1 tonne of coal</text>
+      </g>
+      <!-- arrows -->
+      <path class="fl" d="M160 79 H200"/>
+      <path class="fl" d="M355 79 H395"/>
+      <path class="fl" d="M550 79 H590"/>
+      <path class="fl" d="M745 79 H768 V143 H785"/>
+      <path class="fl" d="M160 261 H250 V123 H255"/>
+      <path class="fl" d="M660 122 V218"/>
+      <path class="fl" d="M550 261 H700 V183 H785"/>
+    </svg>
+    </div>
+    <div class="src">Enrichment is measured in separative work units (SWU); a typical large reactor needs ~100–120 SWU-equivalents of fuel services per year. MOX = mixed uranium-plutonium oxide fuel from reprocessing.</div>
+  </div>
+</section>
+
+<section id="demand-sec">
+  <div class="kicker">Demand</div>
+  <h2>The reactor renaissance</h2>
+  <p class="lede">After a lost post-Fukushima decade, uranium demand is rising on every front at once: 441 operable reactors with 79 under construction, tech giants signing decade-long power deals, thirty-plus countries pledged to triple nuclear capacity — and the World Bank financing it again for the first time since 1959.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🖥️</span>AI buys the atom</h4><p>Microsoft's 20-year deal to restart Three Mile Island (Sept 2024) opened the floodgates: Meta–Constellation and Meta–Vistra, Amazon–X-energy and Amazon–Talen, Google–Kairos — over <b style="color:var(--accent)">9.8&nbsp;GW</b> of announced tech-nuclear capacity by 2026. Data centres turned nuclear's steady megawatts into a premium product.</p></div>
+      <div class="mini"><h4><span class="mi">🇨🇳</span>China's fleet</h4><p>64 reactors operable, <b style="color:var(--accent)">37 under construction</b> — nearly half the world's new build — and 10+ approvals a year for four years running. China is on track for ~100 GWe around 2030, overtaking the US fleet, and is locking up uranium from Kazakhstan to Namibia to feed it.</p></div>
+      <div class="mini"><h4><span class="mi">🔄</span>The restart wave</h4><p>Japan's Kashiwazaki-Kariwa — the world's largest nuclear plant — returned to commercial operation in April 2026 after 14 years. Palisades in Michigan is poised to become the first-ever US restart of a shut-down reactor; Three Mile Island follows in 2027 with a $1B DOE loan. Spain just blinked first on its phase-out, extending Almaraz to 2030.</p></div>
+      <div class="mini"><h4><span class="mi">🧱</span>SMRs break ground</h4><p>TerraPower's Natrium began nuclear-island construction in April 2026 — the first NRC construction permit for a commercial advanced reactor — with Oklo, X-energy/Dow and NuScale's Romanian project close behind. Four US test reactors reached criticality by July 2026. Nearly all of them run on HALEU nobody yet makes at scale.</p></div>
+    </div>
+    <div class="callout"><b>~150,000 tU</b><span>the World Nuclear Association's reference-case projection of annual reactor uranium requirements by 2040 — more than double 2025's 68,920 tU. The IAEA's 2025 high case sees nuclear capacity reaching 992 GWe by 2050, 2.6× today's fleet.</span></div>
+  </div>
+</section>
+
+<section id="timeline-sec">
+  <div class="kicker">Geopolitics</div>
+  <h2>From backwater to battleground</h2>
+  <p class="lede">For a decade after Fukushima, uranium was the market nobody wanted. Between 2023 and 2026 a coup, a price spike, a US–Russia decoupling, a tech-money stampede and a $2.7 billion enrichment programme turned the nuclear fuel chain into contested strategic territory.</p>
+  <div class="card">
+    <div class="tl">
+      <div class="tl-item hot">
+        <div class="tl-date">Jul 2023</div>
+        <h4>The Niger coup</h4>
+        <p>A military junta topples the government of the world's No. 7 producer, then supplying a quarter of the EU's natural uranium. Export routes close, Orano's Imouraren licence is withdrawn (June 2024), production at Somaïr halts (Oct 2024) — and ~4–5% of world mine supply begins sliding off the market.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Dec 2023</div>
+        <h4>COP28: triple it</h4>
+        <p>More than 20 countries pledge to triple world nuclear capacity by 2050 (31 signatories by COP29). Nine months later, 14 global banks — from Goldman Sachs to BNP Paribas — endorse the goal, reopening capital markets that had shunned nuclear for decades.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Feb 2024</div>
+        <h4>$106 uranium</h4>
+        <p>Kazatomprom warns sulfuric-acid shortages will hit production, and spot uranium spikes to ~$106/lb — the highest since 2007, nearly quadruple its level three years earlier. The signal is received: the fuel cycle has run out of slack.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">May 2024</div>
+        <h4>The US bans Russian uranium</h4>
+        <p>The Prohibiting Russian Uranium Imports Act bans Russian enriched uranium from August 2024, with waivers permitted only until 1 January 2028 — and unlocks $2.7B for domestic enrichment. Russia counter-restricts exports to the US in November. Two fuel chains begin to separate.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Sep–Oct 2024</div>
+        <h4>Big tech goes nuclear</h4>
+        <p>Microsoft signs a 20-year PPA to restart Three Mile Island Unit 1 for its data centres. Within weeks: Google orders SMRs from Kairos, Amazon backs X-energy with plans for 5 GW. The most demand-starved market in commodities suddenly has the world's richest buyers.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Dec 2024</div>
+        <h4>Orano loses Somaïr</h4>
+        <p>The French state champion declares loss of operational control of its Niger mine; the junta runs it and blocks ~1,000 t of yellowcake from leaving. Rosatom, meanwhile, quietly starts selling its Kazakh mine stakes to Chinese buyers.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">May 2025</div>
+        <h4>Washington's 400-GW order</h4>
+        <p>Four executive orders target a quadrupling of US nuclear capacity to 400 GW by 2050, ten large reactors under construction by 2030, 18-month licensing caps and a domestic enrichment surge. An earlier Section 232 probe puts uranium imports under national-security review.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Jun 2025</div>
+        <h4>The dam breaks</h4>
+        <p>In one month: the World Bank lifts its ban on financing nuclear power (in place since the 1950s), Meta signs 20 years of Clinton's output, Amazon expands at Susquehanna to 1.92 GW — and Niger formally nationalises Somaïr, sending Orano to arbitration.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Sep–Nov 2025</div>
+        <h4>Critical mineral, finally</h4>
+        <p>The WNA's Fuel Report projects requirements doubling to ~150,000 tU by 2040 and warns existing mines deplete from the mid-2030s. On 7 November, uranium — absent from the August draft — is added to the final 2025 US critical minerals list after a DOE push.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Jan 2026</div>
+        <h4>The $2.7 billion month</h4>
+        <p>DOE awards $900M each to Centrus (HALEU), General Matter (HALEU at Paducah) and Orano (LEU at Oak Ridge). Spot uranium breaks back above $100/lb; Japan restarts Kashiwazaki-Kariwa, the world's largest plant. A Section 232 proclamation finds uranium imports a security threat — but orders negotiations, not tariffs.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Feb–Jun 2026</div>
+        <h4>The construction decade begins</h4>
+        <p>Denison takes FID on Phoenix (Feb 24); NexGen's Arrow — the largest development-stage uranium project anywhere — wins final federal approval (Mar 5); TerraPower pours nuclear-island concrete (Apr); Urenco announces a 2.1M-SWU plant in New Mexico (Jun 2); Orano starts building Zuuvch-Ovoo in Mongolia (Jun).</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Aug 2026</div>
+        <h4>Records at the top of the chain</h4>
+        <p>The long-term price prints $95.50/lb — an all-time high for the series — with spot climbing to ~$90 as Kazakh delays bite. Urenco breaks ground at Eunice with the US Energy Secretary in attendance; Energy Fuels lands a conditional $725M defense loan; Spain extends Almaraz. The rebuild is now visibly under way — and still years from delivering.</p>
+      </div>
+    </div>
+    <div class="src">Sources: WNN/WNA; Congress.gov (H.R.1042); Federal Register (2025 critical minerals list); DOE; Orano, Kazatomprom, Cameco, Constellation and other company disclosures; Al Jazeera, Reuters, S&amp;P Global, ANS Nuclear Newswire (2023–26).</div>
+  </div>
+</section>
+<section id="trade-sec">
+  <div class="kicker">Trade &amp; prices</div>
+  <h2>A two-price market — and a two-bloc one</h2>
+  <p class="lede">Uranium has no exchange: it trades in bilateral contracts, with a thin spot market setting the headline price and long-term contracts moving the actual fuel. Since 2022 both have repriced violently — and the market has begun splitting into Western and Russia-China supply chains.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Spot vs long-term price, 2020–2025</h3>
+      <div class="sub">$/lb U₃O₈ — the term price, where utilities actually buy, kept rising straight through the 2024–25 spot correction</div>
+      <div class="chartbox"><canvas id="chPrices"></canvas></div>
+      <div class="src">Source: UxC/TradeTech indicators as published by Cameco (spot = annual average of month-ends; long-term = year-end; 2020–23 approximate). Aug 2026: spot ~$90/lb; long-term $95.50/lb — a record for the series.</div>
+    </div>
+    <div class="card">
+      <h3>US utility uranium purchases by origin, 2025</h3>
+      <div class="sub">Share of 46.9 Mlb U₃O₈e bought by US reactor operators — domestic mines supplied just 7%</div>
+      <div class="chartbox"><canvas id="chUsImp"></canvas></div>
+      <div class="src">Source: EIA Uranium Marketing Annual 2025 (released Aug 2026). Weighted average price $58.46/lb; 87% of deliveries under long-term contracts.</div>
+    </div>
+    <div class="card">
+      <h3>How the market really works</h3>
+      <div class="sub">What the 2024–26 repricing did to a contract-driven trade</div>
+      <div class="mini-grid">
+        <div class="mini"><h4>Spot vs term</h4><p>Only ~13% of US deliveries priced off spot in 2025. The long-term price climbed from $32/lb (2020) to <b style="color:var(--accent)">$95.50/lb (Jul 2026)</b> without a single down year — the clearest signal that utilities believe the shortage is structural.</p></div>
+        <div class="mini"><h4>The financial squeeze</h4><p>The Sprott Physical Uranium Trust has hoovered up <b style="color:var(--accent)">~75 Mlb</b> since 2021 (buying 8.67 Mlb in 2025 alone) and Yellow Cake holds another ~24 Mlb — together roughly 60% of a year's mine output, sequestered from the spot market indefinitely.</p></div>
+        <div class="mini"><h4>The contracting gap</h4><p>Utilities term-contracted ~160 Mlb in 2023 — the first replacement-rate year in a decade — but only ~110–116 Mlb in 2024–25. UxC estimates ~60% of 2030 requirements are still uncovered, and ~3.1 billion lb through 2045.</p></div>
+        <div class="mini"><h4>The whole chain repriced</h4><p>The scarcer steps moved most: enrichment hit a record <b style="color:var(--accent)">~$190/SWU</b> spot (vs $56 three years earlier) and conversion rose ~230% in five years. Owning centrifuges, not pounds, was the trade of the decade.</p></div>
+      </div>
+      <div class="src">Sources: Cameco-published UxC/TradeTech indicators; EIA UMAR 2025; Sprott/Yellow Cake disclosures; UxC via trade press (2025–26).</div>
+    </div>
+    <div class="card">
+      <h3>The steppe superpower: Kazakhstan</h3>
+      <div class="sub">The world's biggest producer mines with acid, sells in two directions, and ships past Russia</div>
+      <p style="font-size:.85rem;color:var(--muted)">Kazatomprom has led world supply since 2009 — every tonne from in-situ leaching, which needs vast amounts of sulfuric acid. Acid shortages forced repeated guidance cuts (2026: ~10%, to 27,500–29,000 tU), and its new acid plant has slipped to 2027–28. Ownership tells the geopolitical story: Cameco, Orano, Rosatom and Chinese state firms all hold stakes in Kazakh mines — but Rosatom is selling down to Chinese buyers, and the ramping Budenovskoye mine is committed to Russia through 2026. To reach Western customers without crossing Russia, 48% of 2025 deliveries went via the Trans-Caspian corridor — at five times the freight cost.</p>
+      <div class="callout"><b>25,839 tU</b><span>Kazakhstan's 2025 production (Kazatomprom, 100% basis) — about 41% of world supply, more than the next three producers combined. Its 2026 guidance is explicitly "subject to sulphuric acid availability".</span></div>
+      <div class="src">Sources: Kazatomprom 1H2025 &amp; 1H2026 results; WNA Kazakhstan profile (Jul 2026); WNN.</div>
+    </div>
+  </div>
+</section>
+
+<section id="chokepoints-sec">
+  <div class="kicker">Concentration risk</div>
+  <h2>Mined in Kazakhstan, enriched in Russia</h2>
+  <p class="lede">Uranium's concentration problem is double-jointed: one country dominates the ore, another dominates the step that turns it into fuel. And the buyer of last resort for new reactors — China — is building faster than everyone else combined.</p>
+  <div class="card">
+    <div class="big" id="bigPct">43%</div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:6px">of the world's uranium enrichment capacity belongs to Russia's Rosatom (WNA, 2025). Concentration along the mine-to-reactor chain:</p>
+    <div class="bars" id="chokeBars"></div>
+    <div class="src">Sources: WNA (mine production 2025; enrichment capacity 2025; reactors under construction, Aug 2026); EIA Uranium Marketing Annual 2025 (US enrichment purchases). Conversion is similarly tight: five commercial plants worldwide.</div>
+  </div>
+</section>
+
+<section id="military-sec">
+  <div class="kicker">Dual use</div>
+  <h2>The most supervised substance on Earth</h2>
+  <p class="lede">Uranium is the only commodity whose supply chain is defined by weapons treaties. Every gram of traded material is safeguarded, every enrichment plant is a proliferation question — and the military and civilian fuel cycles have always fed each other.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">☮️</span>Megatons to Megawatts</h4><p>From 1993 to 2013, 500 tonnes of highly enriched uranium from ~20,000 dismantled Soviet warheads were downblended into reactor fuel — powering roughly 10% of US electricity for two decades. It was history's greatest swords-to-ploughshares programme, and it suppressed uranium mining for a generation.</p></div>
+      <div class="mini"><h4><span class="mi">🚢</span>Naval propulsion</h4><p>Submarines and aircraft carriers run on compact reactor cores — US and UK boats on weapons-grade HEU, French ones on LEU. The AUKUS submarine pact made naval fuel a live policy issue in three capitals, and naval demand sits permanently outside the civilian market.</p></div>
+      <div class="mini"><h4><span class="mi">🛡️</span>The proliferation firewall</h4><p>The same centrifuges that make 5% reactor fuel can make 90% weapons material — which is why enrichment technology is the most tightly guarded industrial secret on Earth, why IAEA safeguards track uranium by the gram, and why only a handful of countries are allowed to build capacity at all.</p></div>
+      <div class="mini"><h4><span class="mi">🔩</span>Depleted uranium</h4><p>Enrichment's leftover tails — over a million tonnes worldwide — serve as armour plate, penetrators and radiation shielding, and are now a resource: startup General Matter plans to re-enrich the DOE tails cylinders stored at Paducah into fresh reactor fuel.</p></div>
+      <div class="mini"><h4><span class="mi">⚗️</span>Tritium &amp; the defence fleet</h4><p>US warhead tritium is made in a civilian TVA power reactor — but treaty rules require it to run on unobligated, US-origin enriched uranium. That obscure constraint is one of the quiet drivers of Washington's rush to rebuild domestic enrichment.</p></div>
+      <div class="mini"><h4><span class="mi">📦</span>Strategic stockpiles</h4><p>The US holds a modest strategic uranium reserve (established 2020) and large DOE legacy inventories; Russia keeps state reserves; China is widely assessed to be stockpiling well beyond reactor needs. Uranium joined the US critical minerals list in November 2025 — decades after it first became strategic.</p></div>
+    </div>
+    <div class="src">Sources: DOE/NNSA public materials; Congressional Research Service; IAEA; WNA (Megatons to Megawatts, military warheads library pages); Federal Register (2025 critical minerals list).</div>
+  </div>
+</section>
+
+<section id="invest-sec">
+  <div class="kicker">Capital flows</div>
+  <h2>Where the uranium money is going</h2>
+  <p class="lede">A decade of underinvestment left the fuel cycle short at every step just as demand inflected. Capital is now arriving at all of them at once — presented as observation, not investment advice.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🏗️</span>The new-mine bet</h4><p>NexGen's Arrow — approved March 2026, capacity up to ~30 Mlb/yr — is the biggest single supply addition on any horizon; Denison's Phoenix took FID in February 2026; CNNC put $321M into Bannerman's Etango; Orano committed ~$1.6B to Mongolia's Zuuvch-Ovoo. Almost none of it delivers before 2028–30.</p></div>
+      <div class="mini"><h4><span class="mi">🌀</span>Enrichment is the new trade</h4><p>The value moved downstream: DOE's $2.7B (Jan 2026) seeded Centrus, General Matter and Orano's US plants; Urenco is expanding on both sides of the Atlantic; Cameco's 49% of Westinghouse turned a miner into a fuel-cycle house. Conversion and SWU prices at records reward whoever owns the plumbing.</p></div>
+      <div class="mini"><h4><span class="mi">💰</span>Financial uranium</h4><p>SPUT (~75 Mlb) and Yellow Cake (~24 Mlb) turned physical pounds into a listed asset class and put a floor under spot — SPUT's 2025 buying nearly tripled year on year. Utilities now compete with funds for the same drums of yellowcake.</p></div>
+      <div class="mini"><h4><span class="mi">⚠️</span>The risks</h4><p>Demand is policy-shaped and can reverse; restart juniors stumbled repeatedly (Boss, Peninsula, Lotus all cut or withdrew guidance in 2025–26); Kazatomprom retains swing capacity if acid arrives; secondary supplies and SPUT flows can whipsaw spot; and reactors, not headlines, ultimately set the burn rate.</p></div>
+    </div>
+    <div class="note">This section describes where capital is flowing, based on public data. It is not financial advice.</div>
+    <div class="src">Sources: company and government disclosures; DOE; UxC and WNA via trade press; Reuters, WNN, ANS (2025–26).</div>
+  </div>
+</section>
+
+<section id="companies-sec">
+  <div class="kicker">Company tracker</div>
+  <h2>The companies that move uranium</h2>
+  <p class="lede">Miners, converters and enrichers, developers and the physical funds. Two producers — Kazatomprom and Cameco — mine over half the world's uranium; four companies enrich nearly all of it. Filter by segment or search.</p>
+  <div class="map-controls" id="coFilters">
+    <button class="chip c-mine on" data-seg="mine">⛏ Miners</button>
+    <button class="chip c-proc on" data-seg="fuel">🏭 Conversion &amp; enrichment</button>
+    <button class="chip c-dev on" data-seg="dev">◐ Developers</button>
+    <button class="chip c-dis on" data-seg="fin">💰 Physical holders</button>
+  </div>
+  <div class="co-search">
+    <input id="coSearch" type="search" placeholder="Search company, asset, country…" aria-label="Search companies">
+    <span class="co-count" id="coCount"></span>
+  </div>
+  <div class="co-wrap">
+    <table class="co">
+      <thead><tr><th>Company</th><th>Segment</th><th>Key assets</th><th>Status &amp; recent signals</th></tr></thead>
+      <tbody id="coBody"></tbody>
+    </table>
+  </div>
+  <div class="note">Company status reflects public disclosures as of August 2026. This is an observational tracker, not investment advice.</div>
+  <div class="src">Sources: company disclosures &amp; filings; WNA; EIA; trade press (WNN, Reuters, ANS Nuclear Newswire, Northern Miner).</div>
+</section>
+
+<section id="sources-sec">
+  <div class="kicker">Data &amp; methodology</div>
+  <h2>Open data sources</h2>
+  <ul class="sources">
+    <li><b><a href="https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production">World Nuclear Association — World Uranium Mining Production</a></b> — country and mine-level production tables (2024 table used here; updated Jan 2026), plus the fuel-cycle library on <a href="https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/uranium-enrichment">enrichment</a> and conversion capacities.</li>
+    <li><b><a href="https://world-nuclear.org/our-association/publications/global-trends-reports/world-nuclear-fuel-report-2025">WNA World Nuclear Fuel Report 2025</a></b> — reactor uranium requirements (68,920 tU in 2025) and the 2040 demand scenarios used here.</li>
+    <li><b><a href="https://pris.iaea.org/pris/">IAEA Power Reactor Information System (PRIS)</a></b> and the WNA reactor database — operable and under-construction reactor counts and capacity.</li>
+    <li><b><a href="https://www.oecd-nea.org/jcms/pl_79960/uranium-2022-resources-production-and-demand-red-book">NEA/IAEA "Red Book"</a></b> — Uranium Resources, Production and Demand: the identified-recoverable-resources figures behind the resources chart.</li>
+    <li><b><a href="https://www.eia.gov/uranium/marketing/">US EIA — Uranium Marketing Annual</a></b> and <a href="https://www.eia.gov/uranium/production/annual/">Domestic Uranium Production Report</a> — US utility purchases, prices, origin countries and US mine output.</li>
+    <li><b><a href="https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/">British Geological Survey — World Mineral Statistics</a></b> — the long-run production series (1970–2024), also behind this site's <a href="/explorer/">data explorer</a>.</li>
+    <li><b>Prices</b> — UxC and TradeTech spot and long-term indicators as published monthly by <a href="https://www.cameco.com/invest/markets/uranium-price">Cameco</a>; SWU and conversion price context from UxC via trade press.</li>
+    <li><b>Policy</b> — <a href="https://www.congress.gov/bill/118th-congress/house-bill/1042">Prohibiting Russian Uranium Imports Act (H.R.1042)</a>; DOE waiver guidance and the January 2026 $2.7B enrichment awards; <a href="https://www.federalregister.gov/documents/2025/11/07/2025-19813/final-2025-list-of-critical-minerals">Federal Register — final 2025 critical minerals list</a>; Euratom Supply Agency Annual Report 2025.</li>
+    <li><b>Supply disruptions &amp; companies</b> — disclosures from <a href="https://www.kazatomprom.kz/en">Kazatomprom</a>, <a href="https://www.cameco.com/">Cameco</a>, <a href="https://www.orano.group/en">Orano</a> (Niger arbitrations), Paladin, Boss, Energy Fuels and others; WNN, ANS Nuclear Newswire, Reuters.</li>
+    <li><b>Notes</b> — mine and plant coordinates are approximate. Enrichment and conversion shares are nameplate capacity, not output; where sources disagree (e.g. Uzbekistan's 2025 output), the more conservative figure is used. Production figures are tonnes of uranium metal (tU); 1 tU ≈ 2,600 lb U₃O₈. Last data refresh: August 2026.</li>
+  </ul>
+</section>
+
+<section id="faq-sec">
+  <div class="kicker">FAQ</div>
+  <h2>Common questions</h2>
+  <div class="faq">
+    <details>
+      <summary>Is the world running out of uranium?</summary>
+      <p>No. Identified recoverable resources are around 6 million tonnes of uranium — roughly ninety years at current mining rates, with far more available at higher prices and in unconventional sources. The squeeze is about timing, not endowment: existing mines deplete significantly by the mid-2030s, a new mine takes ten to twenty years from discovery to production, and the World Nuclear Association projects reactor requirements will more than double to about 150,000 tonnes a year by 2040.</p>
+    </details>
+    <details>
+      <summary>Which country produces the most uranium?</summary>
+      <p>Kazakhstan mined about 25,800 of the world's roughly 62,000 tonnes of uranium in 2025 — around 41% — ahead of Canada (~13,400 t) and Namibia. But mining is only half the story: Russia controls about 43% of the world's enrichment capacity, the step every kilogram of reactor fuel must pass through.</p>
+    </details>
+    <details>
+      <summary>Why is enrichment the chokepoint if uranium mining is spread across five continents?</summary>
+      <p>Four companies — Rosatom, Urenco, CNNC and Orano — operate virtually all commercial enrichment capacity, and Rosatom alone holds about 43% of it. US utilities still bought 26% of their enrichment from Russia in 2025, even though a US import ban takes full effect in 2028 when waivers expire. That cliff triggered a $2.7 billion US enrichment programme and the largest Western capacity buildout in decades — but new centrifuge plants take years to come online.</p>
+    </details>
+    <details>
+      <summary>What did the US ban on Russian uranium do?</summary>
+      <p>The Prohibiting Russian Uranium Imports Act, signed in May 2024, banned Russian enriched uranium from August 2024 but allows waivers until 1 January 2028. Russia answered in November 2024 with its own restrictions on enriched-uranium exports to the US. The ban unlocked $2.7 billion for domestic enrichment, awarded in January 2026 to Centrus, General Matter, Orano and Global Laser Enrichment — yet Russian material still covered about a quarter of US enrichment purchases in 2025.</p>
+    </details>
+    <details>
+      <summary>What is driving uranium demand?</summary>
+      <p>A reactor fleet that is growing again: 441 operable reactors (~404 GWe) with 79 under construction, 37 of them in China. AI data-centre power deals — Microsoft's Three Mile Island restart contract, Meta-Constellation, Amazon-X-energy, Google-Kairos, together more than 9 GW — turned big tech into a nuclear buyer, more than thirty countries have pledged to triple nuclear capacity by 2050, and the World Bank lifted its decades-old ban on financing nuclear power in June 2025.</p>
+    </details>
+    <details>
+      <summary>Why did uranium prices spike in 2024 — and where are they now?</summary>
+      <p>Spot uranium hit about $106 per pound in early February 2024 — a sixteen-year high — after Kazatomprom warned that sulfuric-acid shortages would hit production, capping a run driven by supply cuts, the Sprott Physical Uranium Trust and post-2022 energy security fears. It fell back to $64 by March 2025, then recovered to about $90 by August 2026. The long-term contract price, where most uranium actually trades, kept climbing to a record $95.50 per pound — and enrichment and conversion prices set all-time records too.</p>
+    </details>
+  </div>
+</section>
+
+<section id="research-sec">
+  <div class="research-box" style="background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px">
+    <div>
+      <div class="kicker">Custom research</div>
+      <h2>Need an ad hoc data-driven research report?</h2>
+      <p style="color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:18px">We produce bespoke, source-cited research on uranium and other strategic minerals — supply-chain mapping, trade-flow analysis, country and commodity deep-dives — built on the same open data behind this dashboard.</p>
+      <a class="research-cta" href="mailto:hello@mineral.watch">Reach out at hello@mineral.watch</a>
+    </div>
+    <div class="research-art net-art" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="orbit o2" cx="150" cy="150" r="126"/>
+        <circle cx="150" cy="150" r="116" fill="none" stroke="var(--accent)" stroke-width=".6" opacity=".55"/>
+        <path class="web d3" pathLength="1" d="M150 34 L119 104"/>
+        <path class="web d3" pathLength="1" d="M150 34 L181 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L119 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L82 140"/>
+        <path class="web d4" pathLength="1" d="M242 56 L181 104"/>
+        <path class="web d5" pathLength="1" d="M242 56 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M119 104 H181"/>
+        <path class="edge d1" pathLength="1" d="M119 104 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M181 104 L218 140"/>
+        <path class="edge d2" pathLength="1" d="M82 140 H218"/>
+        <path class="edge d2" pathLength="1" d="M82 140 L150 218"/>
+        <path class="edge d2" pathLength="1" d="M218 140 L150 218"/>
+        <path class="edge d3" pathLength="1" d="M119 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M181 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M150 140 V218"/>
+        <circle class="node" cx="119" cy="104" r="3"/>
+        <circle class="node" cx="181" cy="104" r="3"/>
+        <circle class="node" cx="82" cy="140" r="3"/>
+        <circle class="node" cx="218" cy="140" r="3"/>
+        <circle class="node" cx="150" cy="218" r="3"/>
+        <circle class="sat" cx="150" cy="34" r="2.2"/>
+        <circle class="sat b2" cx="58" cy="62" r="2.2"/>
+        <circle class="sat b3" cx="242" cy="56" r="2.2"/>
+        <circle class="sat b2" cx="258" cy="196" r="2.2"/>
+        <circle class="sat b3" cx="68" cy="240" r="2.2"/>
+        <circle cx="150" cy="140" r="5" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6">
+          <animate attributeName="r" values="5;16" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".6;0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="150" cy="140" r="4.2" fill="var(--accent)"/>
+        <circle r="1.6" fill="var(--accent2)">
+          <animateMotion path="M58 62 L119 104 L150 140" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.6" fill="var(--accent)">
+          <animateMotion path="M258 196 L218 140 L150 140" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<footer>
+  UraniumWatch · open data project · built with Leaflet &amp; Chart.js · data: WNA, IAEA, EIA, BGS, company disclosures
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+/* ============ DATA (curated from WNA, IAEA, EIA, NEA/IAEA Red Book, BGS, company disclosures) ============ */
+const DATA = {
+  production2024: [ // tonnes U, WNA (updated Jan 2026)
+    ["Kazakhstan",23270],["Canada",14309],["Namibia",7333],["Australia",4598],
+    ["Uzbekistan",4000],["Russia",2738],["China",1600],["Niger",962],
+    ["India",500],["Ukraine",288],["United States",260],["South Africa",200],["Other",155]
+  ],
+  resources: [ // thousand tonnes U, identified recoverable to $130/kgU (Red Book via WNA, 2021)
+    ["Australia",1684],["Kazakhstan",815],["Canada",588],["Russia",480],["Namibia",470],
+    ["South Africa",320],["Niger",311],["Brazil",276],["China",223],
+    ["Mongolia",144],["Uzbekistan",131],["Ukraine",107],["Other",529]
+  ],
+  trend: { // tonnes U per year (BGS World Mineral Statistics 1970–2024)
+    years:[1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024],
+    prod:[18061,18696,19599,19834,19061,20383,23714,28064,34652,39482,43978,43891,41280,36384,37899,34740,37250,36659,36772,35390,41963,40439,35789,32266,31268,32636,34669,35414,33399,30711,34547,36066,37064,36183,40432,42037,39457,41372,43856,50571,53445,53715,59251,59269,56190,60362,62949,60094,54759,54623,48437,48195,50465,55258,62463],
+    req2025:68920
+  },
+  enrichment: [ // million SWU per year, WNA 2025 nameplate
+    ["Rosatom (Russia)",27.1],["Urenco (UK · NL · DE · US)",17.9],["CNNC (China)",10.0],
+    ["Orano (France)",7.5],["Others",0.4]
+  ],
+  usImports:[["Canada",32],["Kazakhstan",28],["Australia",15],["United States",7],["Uzbekistan",7],["Namibia",4],["Other",7]],
+  prices:{ years:[2020,2021,2022,2023,2024,2025],
+    spot:[30,35,50,62,85.1,73.5],
+    lt:[32,43,52,68,80.5,86.5] },
+  chokeShares:[ // stage, share %
+    ["Kazakhstan — mining",41],["Rosatom — enrichment",43],["Russia — US SWU buys, 2025",26],["China — new reactors",47]
+  ],
+  journey:[
+    {ico:"⛏",t:"1 · Mining",p:"More than half the world's uranium is pumped, not dug: in-situ recovery wells dissolve it out of sandstone aquifers — Kazakhstan's entire output works this way. Pits and shafts survive where grades justify them, up to a freakish 15%+ uranium at Cigar Lake.",f:"~62,200 tU mined in 2025 — Kazakhstan 41% (WNA)"},
+    {ico:"🛢",t:"2 · Milling",p:"Ore or well solution is leached, concentrated and precipitated into U₃O₈ — yellowcake — drummed at roughly 85% uranium. This is the commodity the $/lb headlines track, and what utilities and physical funds compete to buy.",f:"Spot ~$90/lb in Aug 2026; the record ~$106 (Feb 2024)"},
+    {ico:"🏭",t:"3 · Conversion",p:"Yellowcake becomes uranium hexafluoride (UF₆), the gas centrifuges need. Five commercial plants exist — in France, Canada, the US, Russia and China — and the five-year idling of the US plant helped push conversion prices to records.",f:"Conversion prices rose ~230% in five years"},
+    {ico:"🌀",t:"4 · Enrichment",p:"Cascades of centrifuges raise fissile U-235 from its natural 0.7% to the 3–5% reactors burn. Four companies control virtually all capacity and Russia holds ~43% — the chain's tightest chokepoint, now the target of a $2.7B US rebuild.",f:"SWU prices hit a record ~$190 — more than triple 2022"},
+    {ico:"⚙️",t:"5 · Fabrication",p:"Enriched gas becomes ceramic UO₂ pellets, sealed into zirconium rods and bundled into assemblies engineered for one specific reactor design. A single 10-gram pellet holds the energy of a tonne of coal.",f:"One fuel pellet ≈ 1 tonne of coal (WNA)"},
+    {ico:"⚛️",t:"6 · Reactor & beyond",p:"Assemblies run 18–24-month cycles, four to six years in the core. Spent fuel is stored or reprocessed into MOX in France and Russia — used fuel still holds ~95% of its original energy, the largest untapped resource in the chain.",f:"441 reactors supply ~9% of world electricity"}
+  ],
+  forms:[
+    {s:"~0.1%",n:"Ore",g:"U",use:"In the ground",
+     d:"Most uranium ore carries 0.03–0.3% metal, but the spread is the widest in mining: Namibian pits profitably move 0.02% rock at enormous scale, while Canada's Athabasca Basin hosts freak deposits like Cigar Lake and Arrow grading 2–15% and more. Over half of world supply now comes from in-situ recovery wellfields that never move rock at all.",pr:null},
+    {s:"U₃O₈",n:"Yellowcake",g:"U",use:"The traded unit",
+     d:"Milling leaches and precipitates ore into drums of uranium oxide concentrate — yellowcake, roughly 85% uranium. It is the form uranium trades in, the $/lb the market quotes, and the asset physical funds hoard. Niger's junta is currently sitting on ~1,000 blocked tonnes of it.",pr:"Spot ~$90/lb and long-term a record $95.50/lb (Aug 2026); peak ~$106/lb (Feb 2024)"},
+    {s:"UF₆",n:"Hex",g:"M",use:"Ready to enrich",
+     d:"Refined uranium is fluorinated into uranium hexafluoride — a solid that turns to gas just above room temperature, the only practical centrifuge feed. Five commercial converters exist worldwide, and the market is so tight that conversion, not uranium, was the first stage to hit crisis pricing after 2022.",pr:"Conversion prices up ~230% in five years; long-term +43% in 2024 alone"},
+    {s:"3–5%",n:"LEU",g:"M",use:"Reactor grade",
+     d:"Enrichment raises fissile U-235 from its natural 0.7% to the 3–5% light-water reactors burn, sold in separative work units (SWU). Rosatom, Urenco, CNNC and Orano operate virtually all capacity — the most concentrated and most politicised link of the entire chain, splitting into Western and Russian-Chinese halves.",pr:"SWU spot hit a record ~$190 (2025), vs $56 in 2022"},
+    {s:"5–20%",n:"HALEU",g:"M",use:"Advanced fuel",
+     d:"High-assay LEU is what most SMRs and advanced reactor designs need. Until 2023, Russia's TENEX was the only commercial source on Earth; Centrus's Piketon plant broke the monopoly with America's first kilograms, and DOE has allocated its scarce ~21 t of supply across eight reactor developers.",pr:"$900M DOE task orders each to Centrus and General Matter (Jan 2026)"},
+    {s:"UO₂",n:"Fuel assemblies",g:"D",use:"Into the core",
+     d:"Enriched uranium becomes ceramic pellets, sealed in zirconium-alloy rods and bundled into assemblies designed for one reactor type. Fabrication is the least concentrated step — and the front line of de-Russification, as Westinghouse and Framatome displace Russia's TVEL across Europe's 30-plus VVER reactors.",pr:null},
+    {s:"~0.2%",n:"Depleted tails",g:"C",use:"The leftover",
+     d:"Enrichment leaves depleted tails — over a million tonnes stockpiled worldwide in steel cylinders. Once waste, now a resource: when enrichment is cheap, tails get re-run for extra uranium, and General Matter's planned Paducah plant is designed to re-enrich the DOE's cylinder yards into fresh reactor fuel.",pr:null},
+    {s:"♻",n:"Secondary supply",g:"C",use:"The invisible mine",
+     d:"For two decades after the Cold War, downblended warheads, stockpiles and recycled fuel met a third of demand and suppressed mining — Megatons to Megawatts alone fuelled ~10% of US electricity. Secondary supply now covers only ~10% of requirements and is shrinking, which is the deep reason the whole chain repriced.",pr:"Mines covered ~90% of 2024 requirements — up from 78% in 2022 (WNA)"}
+  ],
+  companies:[
+    // seg: mine | fuel | dev | fin (space-separated when spanning segments)
+    // --- miners ---
+    {n:"Kazatomprom",u:"https://www.kazatomprom.kz/en",hq:"Kazakhstan",tik:"LSE/AIX: KAP",seg:"mine",
+     a:"All Kazakh ISR mines via JVs — Inkai, Katco, Budenovskoye, Karatau, Ortalyk and more; the world's largest seller",
+     s:"25,839 tU in 2025 (~41% of world supply); 2026 guidance cut ~10% to 27,500–29,000 tU, explicitly \"subject to sulphuric acid availability\" — its new acid plant slipped to 2027–28. Shipping 48% of Western deliveries via the Trans-Caspian route to skirt Russia."},
+    {n:"Cameco",u:"https://www.cameco.com/",hq:"Canada",tik:"NYSE: CCJ · TSX: CCO",seg:"mine fuel",
+     a:"McArthur River/Key Lake, Cigar Lake, 40% of Inkai; Port Hope conversion & Blind River refinery; 49% of Westinghouse",
+     s:"2025 own-share output 21.0 Mlb; 2026 outlook 19.5–21.5 Mlb. Port Hope set a UF₆ record in 2025, it bought TEPCO's 5% of Cigar Lake (Aug 2026), and a McArthur expansion to 25 Mlb/yr is under study — the West's only integrated fuel-cycle major."},
+    {n:"Orano",u:"https://www.orano.group/en",hq:"France",tik:"state-owned (~90%)",seg:"mine fuel dev",
+     a:"Katco (Kazakhstan), 40.5% Cigar Lake, McClean Lake mill; Malvési–Tricastin conversion; Georges Besse II enrichment; Zuuvch-Ovoo (Mongolia)",
+     s:"Lost its Niger mines — Somaïr nationalised June 2025, three ICSID arbitrations running. Meanwhile: extending enrichment ~30%, planning a ~$5B Oak Ridge plant, and building Mongolia's first uranium mine since June 2026."},
+    {n:"Uranium One / Rosatom",u:"https://rosatom.ru/en/",hq:"Russia",tik:"state-owned",seg:"mine fuel",
+     a:"Kazakh JV stakes (Karatau, Akbastau, Betpak Dala); Russian mines (Priargunsky, Khiagda, Dalur); TENEX enrichment exports",
+     s:"The vertically integrated giant: ~43% of world enrichment capacity and Russia's ~2,700 tU of mining. Quietly selling Kazakh stakes to Chinese buyers (Zarechnoye, Khorasan-U — Dec 2024) as its US market closes ahead of the 2028 ban."},
+    {n:"CGN Mining / CNNC",u:"https://www.cgnmc.com/",hq:"China",tik:"HKEX: 1164",seg:"mine fuel dev",
+     a:"Husab & Rössing (Namibia), 49% of Ortalyk & Semizbay-U (Kazakhstan), 25% of Langer Heinrich; conversion, enrichment & fabrication at home",
+     s:"China's twin state champions: ~2,700 tU/yr from Kazakh JVs plus Namibia's biggest mines, a $321M strategic stake in Bannerman's Etango (Feb 2026) — and they are buying what Rosatom sells. Domestic enrichment heading for ~17M SWU by 2030."},
+    {n:"Navoiyuran",u:"https://www.navoiuran.uz/en/",hq:"Uzbekistan",tik:"state-owned",seg:"mine",
+     a:"Navoi-region ISR complexes across 43 deposits; Qizilkok commercial from April 2026",
+     s:"Claims ~7,000 tU in 2025 (+35%) against WNA's more conservative ~4,000 t estimate; three more deposits launching in 2026 toward a 7,100 tU target by 2030 — the quietest big producer in the market."},
+    {n:"BHP",u:"https://www.bhp.com/",hq:"Australia",tik:"ASX: BHP · NYSE: BHP",seg:"mine",
+     a:"Olympic Dam — uranium as a by-product of the copper-gold giant",
+     s:"~3.2 kt of uranium in FY2025 (down 11% after a state-wide power outage). A South Australian smelting-and-mine expansion under study could lift by-product uranium in the 2030s."},
+    {n:"Paladin Energy",u:"https://www.paladinenergy.com.au/",hq:"Australia",tik:"ASX: PDN",seg:"mine dev",
+     a:"Langer Heinrich (Namibia, 75%); Patterson Lake South (Canada, via the Fission takeover)",
+     s:"FY2026: 4.82 Mlb at the top of guidance, realising $70/lb against $43 costs — the restart wave's success story. PLS would take it into the Athabasca Basin's high-grade league."},
+    {n:"Boss Energy",u:"https://bossenergy.com/",hq:"Australia",tik:"ASX: BOE",seg:"mine",
+     a:"Honeymoon ISR (South Australia); 30% of Alta Mesa (Texas)",
+     s:"FY2026 output up 61% to 1.41 Mlb — but guidance was cut after flooding, following 2025's leaching warnings. The case study in how hard restarts are."},
+    {n:"Energy Fuels",u:"https://www.energyfuels.com/",hq:"United States",tik:"NYSE: UUUU",seg:"mine",
+     a:"White Mesa — the only operating conventional US mill; Pinyon Plain & La Sal mines; rare-earths line",
+     s:"Pinyon Plain graded 1.62% U₃O₈ in 2025 — among the highest-grade US mines ever; ~1.6 Mlb milled by mid-2026. Landed a conditional $725M defense-linked loan in Aug 2026."},
+    {n:"Ur-Energy",u:"https://www.ur-energy.com/",hq:"United States",tik:"NYSE-A: URG",seg:"mine",
+     a:"Lost Creek & Shirley Basin ISR (Wyoming)",
+     s:"Shirley Basin delivered first uranium in April 2026 — a new US mine, not a restart. Combined licensed capacity 4.2 Mlb/yr, still ramping."},
+    {n:"enCore Energy",u:"https://encoreuranium.com/",hq:"United States",tik:"NASDAQ: EU",seg:"mine",
+     a:"Alta Mesa (70%) & Rosita ISR (Texas); Dewey-Burdock pipeline (South Dakota)",
+     s:"2025 extraction up 242% to ~700 klb — the largest of the new US ISR producers, in a country that mined almost nothing three years ago."},
+    {n:"Peninsula Energy",u:"https://www.pel.net.au/",hq:"Australia",tik:"ASX: PEN",seg:"mine",
+     a:"Lance / Ross ISR (Wyoming)",
+     s:"Withdrew 2026 guidance in July on wellfield flow problems; 2027 target of 500–600 klb reaffirmed behind a $56M funding package."},
+    {n:"Lotus Resources",u:"https://lotusresources.com.au/",hq:"Australia",tik:"ASX: LOT",seg:"mine dev",
+     a:"Kayelekera (Malawi, 85%); Letlhakane (Botswana)",
+     s:"Restarted Kayelekera in Aug 2025 — Africa's first restart of the cycle — then fought acid-plant failures through mid-2026; back online and targeting 2.4 Mlb/yr."},
+    // --- developers ---
+    {n:"NexGen Energy",u:"https://www.nexgenenergy.ca/",hq:"Canada",tik:"TSX/NYSE: NXE",seg:"dev",
+     a:"Rook I / Arrow (Athabasca Basin) — the largest development-stage uranium project in the world",
+     s:"Final federal approval on 5 March 2026 after years of review; construction from summer 2026 toward up to ~30 Mlb/yr around 2030 — the biggest single supply addition on any horizon."},
+    {n:"Denison Mines",u:"https://denisonmines.com/",hq:"Canada",tik:"NYSE-A: DNN",seg:"dev mine",
+     a:"Phoenix / Wheeler River (95%); 22.5% of McClean Lake",
+     s:"Phoenix took FID in Feb 2026 — the Athabasca Basin's first ISR mine, ~C$600M, first production mid-2028. Its McClean share is already producing again via SABRE."},
+    {n:"Deep Yellow",u:"https://deepyellow.com.au/",hq:"Australia",tik:"ASX: DYL",seg:"dev",
+     a:"Tumas (Namibia); Mulga Rock (Western Australia)",
+     s:"Deferred FID in 2025 waiting for stronger incentive prices; earthworks complete and contractors mobilising, with the decision targeted for late 2026."},
+    {n:"Bannerman Energy",u:"https://bannermanenergy.com/",hq:"Australia",tik:"ASX: BMN",seg:"dev",
+     a:"Etango (Namibia)",
+     s:"CNNC Overseas took a ~$321M strategic position in Feb 2026, with first production targeted 2028 — Chinese capital now underwrites Namibia's next mine."},
+    {n:"Global Atomic",u:"https://www.globalatomiccorp.com/",hq:"Canada",tik:"TSX: GLO",seg:"dev",
+     a:"Dasa (Niger) — the junta-era test case for new Nigerien supply",
+     s:"Underground development continues, but financing stalled: first yellowcake pushed to H2 2028 on a $501M capex, with a US development-bank facility still in negotiation."},
+    // --- conversion & enrichment ---
+    {n:"Urenco",u:"https://www.urenco.com/",hq:"UK / NL / Germany",tik:"tri-government owned",seg:"fuel",
+     a:"Enrichment at Capenhurst, Almelo, Gronau and Eunice (New Mexico); HALEU line planned at Capenhurst",
+     s:"~28% of world capacity and expanding every site at once; broke ground in Aug 2026 on a second, 2.1M-SWU New Mexico plant (~+50% US capacity) — the anchor of Western de-Russification."},
+    {n:"Centrus Energy",u:"https://www.centrusenergy.com/",hq:"United States",tik:"NYSE-A: LEU",seg:"fuel",
+     a:"Piketon, Ohio — America's only licensed HALEU plant; centrifuge manufacturing at Oak Ridge",
+     s:"Delivered 900 kg of HALEU by Jan 2026, won a $900M DOE task order, and is building commercial LEU cascades for ~2029 — while still reselling Russian LEU under waiver until the 2028 cliff."},
+    {n:"Solstice Advanced Materials",u:"https://www.solstice.com/",hq:"United States",tik:"spun from Honeywell, 2025",seg:"fuel",
+     a:"Metropolis, Illinois (ConverDyn) — the only US uranium conversion plant",
+     s:"Restarted in 2023 after five idle years that helped break the conversion market; expecting >10,000 t UF₆ in 2026 and studying a second plant as conversion prices sit near records."},
+    {n:"Westinghouse",u:"https://westinghousenuclear.com/",hq:"United States",tik:"Cameco 49% / Brookfield 51%",seg:"fuel",
+     a:"Fuel fabrication at Columbia (SC), Västerås (SE) and Springfields (UK); VVER fuel for Eastern Europe",
+     s:"The West's reactor-fuel house, displacing Russia's TVEL across 30+ VVER units — Ukraine runs entirely on its fuel by 2028 and approved a domestic fabrication plant in April 2026."},
+    {n:"General Matter",u:"https://www.generalmatter.com/",hq:"United States",tik:"private",seg:"fuel dev",
+     a:"Planned $1.5B enrichment plant at the former Paducah gaseous-diffusion site (Kentucky)",
+     s:"The Silicon Valley entrant: a $900M DOE HALEU task order (Jan 2026) and a site lease that includes 7,600+ cylinders of depleted tails to re-enrich; operations planned 2034."},
+    {n:"Global Laser Enrichment",u:"https://www.silex.com.au/",hq:"US / Australia",tik:"Silex (ASX: SLX) / Cameco JV",seg:"fuel dev",
+     a:"Third-generation laser enrichment, targeting Paducah",
+     s:"The wildcard technology: a $28M DOE award in Jan 2026 to advance the only laser route to commercial enrichment — potentially rerunning tails at costs centrifuges can't match."},
+    // --- physical holders ---
+    {n:"Sprott Physical Uranium Trust",u:"https://sprott.com/investment-strategies/physical-commodity-funds/uranium/",hq:"Canada",tik:"TSX: U.U / U.UN",seg:"fin",
+     a:"~75 Mlb of physical U₃O₈ in licensed storage — the world's largest holder",
+     s:"The market's swing buyer since 2021: bought 8.67 Mlb in 2025 (nearly triple 2024), ~$6B in assets — its at-the-market raises move the spot price within hours."},
+    {n:"Yellow Cake plc",u:"https://www.yellowcakeplc.com/",hq:"Jersey",tik:"LSE-AIM: YCA",seg:"fin",
+     a:"~24.4 Mlb of physical U₃O₈, built through a standing Kazatomprom purchase option",
+     s:"Took delivery of another 1.16 Mlb in Aug 2026 at $86.15/lb and raised $75M to maximise its 2026 option — passive pounds that never come back to market."}
+  ],
+  sites:[
+    // type: mine | proc | dis | dev ; size 1-3
+    // --- mines (producing) ---
+    {n:"McArthur River & Key Lake",c:"Canada",ll:[57.76,-105.04],ty:"mine",sz:3,d:"The world's largest high-grade mine (Cameco/Orano), restarted 2022 after four idle years: ~5,800 tU in 2025, with an expansion to 25 Mlb/yr under study."},
+    {n:"Cigar Lake",c:"Canada",ll:[58.07,-104.54],ty:"mine",sz:3,d:"The highest-grade uranium mine on Earth (~15% U): ~7,300 tU in 2025. Cameco and Orano bought out TEPCO's 5% in Aug 2026."},
+    {n:"McClean Lake",c:"Canada",ll:[58.35,-103.80],ty:"mine",sz:1,d:"Orano/Denison: the mill for Cigar Lake ore — and since June 2025 a miner again, via the remote-controlled SABRE system, after a 17-year pause."},
+    {n:"Inkai",c:"Kazakhstan",ll:[46.2,68.1],ty:"mine",sz:2,d:"Kazatomprom 60% / Cameco 40% ISR mine: 3,201 tU in 2025. A three-week paperwork suspension in Jan 2025 showed how thin the regulatory margin is."},
+    {n:"Katco (Tortkuduk & Moinkum)",c:"Kazakhstan",ll:[43.7,68.6],ty:"mine",sz:3,d:"Orano 51% / Kazatomprom 49%: the world's largest ISR operation, ~3,840 tU in 2025."},
+    {n:"Budenovskoye 6–7",c:"Kazakhstan",ll:[45.4,67.0],ty:"mine",sz:2,d:"Kazatomprom with Russia-linked partners: on paper the world's biggest ramp-up (6,000 tU/yr), repeatedly delayed — and committed to Russian offtake through 2026."},
+    {n:"Karatau & Akbastau",c:"Kazakhstan",ll:[45.42,66.85],ty:"mine",sz:2,d:"Uranium One (Rosatom) / Kazatomprom JVs on the Budenovskoye deposit: ~4,100 tU in 2025."},
+    {n:"South Inkai & Akdala",c:"Kazakhstan",ll:[46.0,67.9],ty:"mine",sz:2,d:"Uranium One 70% / Kazatomprom (Betpak Dala JV): ~2,800 tU a year."},
+    {n:"Kharasan",c:"Kazakhstan",ll:[44.2,66.7],ty:"mine",sz:1,d:"1,580 tU in 2025. Uranium One's 30% stake is passing to China Uranium Development — part of Rosatom's quiet Kazakh exit."},
+    {n:"Ortalyk & Semizbay-U",c:"Kazakhstan",ll:[44.5,67.3],ty:"mine",sz:1,d:"Kazatomprom / CGN joint ventures (~2,600 tU in 2025) — the dedicated Chinese supply channel."},
+    {n:"Husab",c:"Namibia",ll:[-22.60,15.03],ty:"mine",sz:3,d:"CGN's mega-pit, built expressly to feed China's reactors: ~4,400–5,000 tU a year."},
+    {n:"Rössing",c:"Namibia",ll:[-22.48,15.05],ty:"mine",sz:2,d:"CNNC 68.6%; running since 1976 and extended to 2036 — 2025 output was its highest since 2011."},
+    {n:"Langer Heinrich",c:"Namibia",ll:[-22.82,15.34],ty:"mine",sz:2,d:"Paladin 75% / CNNC 25%: the flagship restart, back since 2024 — 4.82 Mlb in FY2026, top of guidance."},
+    {n:"Olympic Dam",c:"Australia",ll:[-30.44,136.87],ty:"mine",sz:2,d:"BHP's copper-uranium-gold giant — uranium as by-product, ~3 kt a year."},
+    {n:"Four Mile",c:"Australia",ll:[-30.2,139.6],ty:"mine",sz:1,d:"Heathgate (General Atomics) ISR — Australia's quiet, steady producer."},
+    {n:"Honeymoon",c:"Australia",ll:[-31.75,140.65],ty:"mine",sz:1,d:"Boss Energy's restarted ISR mine: 1.41 Mlb in FY2026 (+61%), ramping despite flood setbacks."},
+    {n:"Navoi ISR complexes",c:"Uzbekistan",ll:[41.5,64.5],ty:"mine",sz:2,d:"State-run Navoiyuran's 43-deposit ISR system; Qizilkok added April 2026. Claims ~7,000 tU in 2025."},
+    {n:"Priargunsky",c:"Russia",ll:[50.07,118.17],ty:"mine",sz:1,d:"Rosatom's underground complex at Krasnokamensk; Mine No. 6 under development toward 1,800 tU/yr."},
+    {n:"Kayelekera",c:"Malawi",ll:[-9.81,33.68],ty:"mine",sz:1,d:"Lotus Resources: Africa's first restart of the cycle (Aug 2025); back online Aug 2026 after acid-plant failures, targeting 2.4 Mlb/yr."},
+    {n:"Pinyon Plain",c:"United States",ll:[35.89,-112.10],ty:"mine",sz:1,d:"Energy Fuels: among the highest-grade US mines ever (1.62% U₃O₈ in 2025), trucking ore to White Mesa."},
+    {n:"White Mesa mill",c:"United States",ll:[37.53,-109.49],ty:"mine",sz:1,d:"The only operating conventional uranium mill in the US — ~1.6 Mlb finished by mid-2026, plus a rare-earths line."},
+    {n:"Lost Creek & Shirley Basin",c:"United States",ll:[42.2,-107.3],ty:"mine",sz:1,d:"Ur-Energy's Wyoming ISR pair; Shirley Basin delivered first uranium in April 2026."},
+    {n:"Alta Mesa & Rosita",c:"United States",ll:[26.9,-98.1],ty:"mine",sz:1,d:"enCore Energy's Texas ISR hub — extraction up 242% in 2025."},
+    {n:"Smith Ranch-Highland",c:"United States",ll:[43.0,-105.5],ty:"mine",sz:1,d:"Cameco's US ISR operation — ticking over at low rates, held as swing capacity."},
+    {n:"Caetité",c:"Brazil",ll:[-13.99,-42.5],ty:"mine",sz:1,d:"State-owned INB's mine — Latin America's only uranium production."},
+    {n:"Tummalapalle",c:"India",ll:[14.32,78.27],ty:"mine",sz:1,d:"UCIL's flagship — India mines ~500 tU/yr for its self-contained domestic fuel cycle."},
+    {n:"Inner Mongolia ISR fields",c:"China",ll:[39.6,109.78],ty:"mine",sz:1,d:"CNNC's growing domestic ISR base (~1,600 tU/yr nationally) — small beside what China imports."},
+    // --- disrupted & suspended ---
+    {n:"Somaïr (Arlit)",c:"Niger",ll:[18.79,7.34],ty:"dis",sz:2,d:"Nationalised June 2025 after the junta seized control from Orano; ~1,000 t of yellowcake sits blocked under an ICSID freeze while arbitration runs."},
+    {n:"Imouraren",c:"Niger",ll:[17.8,7.98],ty:"dis",sz:2,d:"One of the world's largest undeveloped deposits — Orano's licence was withdrawn in June 2024; now an arbitration exhibit."},
+    {n:"Madaouela",c:"Niger",ll:[18.5,7.4],ty:"dis",sz:1,d:"GoviEx's permit, revoked July 2024 — arbitration paused for on-and-off settlement talks."},
+    {n:"Rabbit Lake",c:"Canada",ll:[58.25,-103.7],ty:"dis",sz:1,d:"Cameco; care and maintenance since 2016 — the longest-idled restart option in the West."},
+    {n:"Ranger",c:"Australia",ll:[-12.68,132.92],ty:"dis",sz:1,d:"Rio Tinto/ERA; ceased in 2021 after 40 years — now a multi-billion-dollar rehabilitation beside Kakadu National Park."},
+    {n:"Lance / Ross",c:"United States",ll:[44.6,-105.0],ty:"dis",sz:1,d:"Peninsula Energy withdrew 2026 guidance in July over wellfield problems — restart economics under repair, 500–600 klb targeted for 2027."},
+    // --- conversion, enrichment & fabrication ---
+    {n:"Port Hope & Blind River",c:"Canada",ll:[43.95,-78.29],ty:"proc",sz:2,d:"Cameco's refinery-conversion chain — a record 11.2M kgU of UF₆ in 2025, the West's biggest converter."},
+    {n:"Metropolis",c:"United States",ll:[37.15,-88.73],ty:"proc",sz:2,d:"Solstice (ex-Honeywell ConverDyn) — the only US conversion plant. Its 2018–23 idling helped break the market; now expanding past 10,000 t UF₆."},
+    {n:"Malvési & Tricastin",c:"France",ll:[44.33,4.73],ty:"proc",sz:3,d:"Orano's conversion chain (15,000 tU/yr) plus Georges Besse II enrichment — being extended ~30% by 2028."},
+    {n:"Capenhurst",c:"United Kingdom",ll:[53.26,-2.95],ty:"proc",sz:2,d:"Urenco's UK site — enrichment expansion plus Europe's first commercial HALEU line (early 2030s)."},
+    {n:"Almelo",c:"Netherlands",ll:[52.33,6.65],ty:"proc",sz:1,d:"Urenco's Dutch plant — expansion roughly doubled to ~750k SWU, new cascades from ~2027."},
+    {n:"Gronau",c:"Germany",ll:[52.21,7.05],ty:"proc",sz:1,d:"Urenco's German plant — first new cascades installing in 2026, in a country that closed its reactors."},
+    {n:"Eunice (Urenco USA)",c:"United States",ll:[32.44,-103.18],ty:"proc",sz:2,d:"The only operating US enrichment plant. New cascades online since 2025 — and a second, 2.1M-SWU plant broke ground in Aug 2026."},
+    {n:"Piketon",c:"United States",ll:[39.01,-83.00],ty:"proc",sz:1,d:"Centrus — America's only licensed HALEU plant (900 kg by Jan 2026), with commercial LEU cascades to follow ~2029."},
+    {n:"Seversk",c:"Russia",ll:[56.60,84.85],ty:"proc",sz:2,d:"Rosatom's conversion hub (12,500 tU/yr) feeding four enrichment complexes."},
+    {n:"Novouralsk",c:"Russia",ll:[57.25,60.08],ty:"proc",sz:3,d:"The largest enrichment complex on Earth — the core of Rosatom's ~43% of world SWU capacity."},
+    {n:"Lanzhou",c:"China",ll:[36.06,103.79],ty:"proc",sz:2,d:"CNNC's conversion-enrichment base — Chinese capacity is heading for ~17M SWU by 2030."},
+    {n:"Columbia",c:"United States",ll:[33.92,-81.02],ty:"proc",sz:1,d:"Westinghouse's fabrication plant — 1,600 t/yr of fuel assemblies for the Western fleet."},
+    {n:"Romans-sur-Isère",c:"France",ll:[45.04,5.05],ty:"proc",sz:1,d:"Framatome's fabrication plant — Europe's largest."},
+    {n:"Springfields",c:"United Kingdom",ll:[53.78,-2.79],ty:"proc",sz:1,d:"Westinghouse UK — a hub of Eastern Europe's switch from Russian VVER fuel."},
+    {n:"Elektrostal",c:"Russia",ll:[55.79,38.44],ty:"proc",sz:1,d:"TVEL's fabrication plant — losing its European VVER customers to Westinghouse and Framatome."},
+    {n:"Yibin",c:"China",ll:[28.77,104.62],ty:"proc",sz:1,d:"CJNF fabrication — fuelling China's 37-reactor construction pipeline."},
+    // --- development ---
+    {n:"Arrow (Rook I)",c:"Canada",ll:[57.77,-109.5],ty:"dev",sz:3,d:"NexGen — the largest development-stage uranium project in the world, up to ~30 Mlb/yr. Final federal approval March 2026; construction under way."},
+    {n:"Phoenix (Wheeler River)",c:"Canada",ll:[57.5,-105.4],ty:"dev",sz:2,d:"Denison — the Athabasca Basin's first ISR mine; FID Feb 2026, first production mid-2028."},
+    {n:"Etango",c:"Namibia",ll:[-22.63,14.75],ty:"dev",sz:1,d:"Bannerman + CNNC Overseas ($321M, Feb 2026) — first production targeted 2028."},
+    {n:"Tumas",c:"Namibia",ll:[-22.9,15.1],ty:"dev",sz:1,d:"Deep Yellow — earthworks done, contractors mobilising, FID targeted late 2026."},
+    {n:"Zuuvch-Ovoo",c:"Mongolia",ll:[44.0,110.0],ty:"dev",sz:2,d:"Orano's $1.6B ISR project — construction started June 2026, ~2,500 tU/yr for 30 years. Mongolia joins the top table ~2030."},
+    {n:"Dasa",c:"Niger",ll:[17.6,7.9],ty:"dev",sz:1,d:"Global Atomic — the junta-era test case: development continues but financing stalled; first yellowcake ~H2 2028."},
+    {n:"Oak Ridge (Orano)",c:"United States",ll:[35.96,-84.31],ty:"dev",sz:1,d:"Orano's planned ~$5B LEU enrichment plant — NRC licensing from 2026, production targeted ~2031."},
+    {n:"Paducah",c:"United States",ll:[37.11,-88.81],ty:"dev",sz:1,d:"General Matter's $1.5B enrichment plant (re-enriching DOE tails, operations ~2034) plus GLE's laser-enrichment project."}
+  ]
+};
+
+/* ============ helpers ============ */
+const C = getComputedStyle(document.documentElement);
+const col = v => C.getPropertyValue(v).trim();
+const PAL = ["#22d3ee","#a3e635","#fbbf24","#f472b6","#60a5fa","#f87171","#94a3b8","#e879f9","#38bdf8","#e8926a","#64748b","#c4b5fd","#fda4af"];
+
+/* count-up hero stats */
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target, end=parseFloat(el.dataset.count), suf=el.dataset.suffix||"", pre=el.dataset.prefix||"", dec=end%1?1:0;
+  const t0=performance.now();
+  (function tick(t){const p=Math.min(Math.max((t-t0)/1200,0),1), v=end*(1-Math.pow(1-p,3));
+    el.textContent=pre+(end>=1000?Math.round(v).toLocaleString("en-US"):v.toFixed(dec))+suf;
+    if(p<1)requestAnimationFrame(tick);})(t0);
+  io.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+
+/* ============ MAP ============ */
+const map = L.map("map",{scrollWheelZoom:false,worldCopyJump:true}).setView([25,25],2);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{
+  attribution:'Tiles &copy; Esri &mdash; &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom:10
+}).addTo(map);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",{
+  maxZoom:10
+}).addTo(map);
+map.on("click",()=>map.scrollWheelZoom.enable());
+
+const groups = {mines:L.layerGroup().addTo(map), processing:L.layerGroup().addTo(map),
+                disrupted:L.layerGroup().addTo(map), development:L.layerGroup().addTo(map)};
+const TYCOL={mine:col("--mine"),proc:col("--proc"),dis:col("--dis"),dev:col("--dev")};
+const TYNAME={mine:"MINE",proc:"CONVERSION / ENRICHMENT / FABRICATION",dis:"DISRUPTED / SUSPENDED",dev:"DEVELOPMENT"};
+const TYGRP={mine:"mines",proc:"processing",dis:"disrupted",dev:"development"};
+
+DATA.sites.forEach(s=>{
+  const c=TYCOL[s.ty];
+  L.circleMarker(s.ll,{radius:4+s.sz*2.4,color:c,weight:1.5,fillColor:c,fillOpacity:.35})
+   .bindPopup(`<span class="pp-tag" style="background:${c}22;color:${c}">${TYNAME[s.ty]}</span><br><b>${s.n}</b> · ${s.c}<br>${s.d}`)
+   .addTo(groups[TYGRP[s.ty]]);
+});
+
+/* layer toggles */
+document.querySelectorAll(".chip[data-layer]").forEach(ch=>ch.addEventListener("click",()=>{
+  const g=groups[ch.dataset.layer];
+  if(ch.classList.toggle("on")) map.addLayer(g); else map.removeLayer(g);
+}));
+
+/* ============ FORMS GRID ============ */
+const GRPNAME={U:"Upstream (mine & mill)",M:"Midstream (convert & enrich)",D:"Downstream (fabrication)",C:"Circular (secondary supply)"};
+const GRPCOL={U:col("--accent"),M:col("--accent2"),D:col("--dis"),C:col("--muted")};
+const elGrid=document.getElementById("elGrid"), elDetail=document.getElementById("elDetail");
+elGrid.innerHTML=DATA.forms.map((e,i)=>`
+  <button class="el g${e.g}" data-i="${i}" aria-label="${e.n}">
+    <span class="z">${String(i+1).padStart(2,"0")}</span>
+    <b>${e.s}</b><span>${e.n}</span>
+  </button>`).join("");
+function showEl(i){
+  const e=DATA.forms[i];
+  document.querySelectorAll(".el").forEach(el=>el.classList.toggle("sel",+el.dataset.i===i));
+  const grpCol=GRPCOL[e.g];
+  elDetail.innerHTML=`
+    <h3>${e.n} <small>· ${e.use}</small></h3>
+    <div class="tags">
+      <span class="pp-tag" style="background:${grpCol}22;color:${grpCol}">${GRPNAME[e.g].toUpperCase()}</span>
+    </div>
+    <p>${e.d}</p>
+    ${e.pr?`<div class="price">${e.pr}</div>`:""}`;
+}
+elGrid.addEventListener("click",ev=>{const b=ev.target.closest(".el");if(b)showEl(+b.dataset.i);});
+showEl(DATA.forms.findIndex(e=>e.n==="Yellowcake"));
+
+/* ============ JOURNEY CARDS ============ */
+document.getElementById("journey").innerHTML = DATA.journey.map((j,i)=>`
+  <div class="jcard"><div class="num">${String(i+1).padStart(2,"0")}</div>
+    <div class="ico">${j.ico}</div><h3>${j.t}</h3><p>${j.p}</p>
+    <div class="fact">${j.f}</div></div>`).join("");
+
+/* ============ COMPANY TRACKER ============ */
+const SEGMETA={
+  mine:{label:"Miner",color:col("--mine")},
+  fuel:{label:"Conversion & enrichment",color:col("--proc")},
+  dev:{label:"Developer",color:col("--dev")},
+  fin:{label:"Physical holder",color:col("--dis")}
+};
+const coState={segs:new Set(Object.keys(SEGMETA)),q:""};
+function renderCo(){
+  const q=coState.q.trim().toLowerCase();
+  const rows=DATA.companies.filter(c=>c.seg.split(" ").some(s=>coState.segs.has(s))&&
+    (!q||[c.n,c.hq,c.tik,c.a,c.s].join(" ").toLowerCase().includes(q)));
+  document.getElementById("coBody").innerHTML=rows.map(c=>{
+    const tags=c.seg.split(" ").map(s=>{const m=SEGMETA[s];
+      return `<span class="pp-tag" style="background:${m.color}22;color:${m.color}">${m.label}</span>`;}).join(" ");
+    return `<tr>
+      <td><b><a href="${c.u}" target="_blank" rel="noopener">${c.n}</a></b>
+        <div class="tik">${c.hq} · ${c.tik}</div></td>
+      <td>${tags}</td>
+      <td>${c.a}</td>
+      <td>${c.s}</td></tr>`;
+  }).join("")||`<tr><td colspan="4" style="text-align:center;padding:24px">No companies match.</td></tr>`;
+  document.getElementById("coCount").textContent=`${rows.length} of ${DATA.companies.length} companies`;
+}
+document.querySelectorAll("#coFilters .chip").forEach(ch=>ch.addEventListener("click",()=>{
+  const s=ch.dataset.seg;
+  if(ch.classList.toggle("on")) coState.segs.add(s); else coState.segs.delete(s);
+  renderCo();
+}));
+document.getElementById("coSearch").addEventListener("input",e=>{coState.q=e.target.value;renderCo();});
+renderCo();
+
+/* ============ CHARTS ============ */
+Chart.defaults.color=col("--muted");
+Chart.defaults.borderColor=col("--line");
+Chart.defaults.font.size=11;
+const fmtU=n=>n>=1e3?(n/1e3).toFixed(1)+" ktU":n+" tU";
+const noLeg={plugins:{legend:{display:false}}};
+
+/* draw a total in the center of doughnut charts */
+Chart.register({
+  id:"centerText",
+  afterDraw(chart){
+    const opts=chart.options.plugins&&chart.options.plugins.centerText;
+    if(!opts||!opts.enabled) return;
+    if(!chart.chartArea) return;
+    const {ctx,chartArea:{left,right,top,bottom}}=chart;
+    const cx=(left+right)/2, cy=(top+bottom)/2;
+    ctx.save();
+    ctx.textAlign="center";
+    ctx.textBaseline="middle";
+    ctx.fillStyle=col("--txt");
+    ctx.font="700 19px -apple-system,Segoe UI,Roboto,sans-serif";
+    ctx.fillText(opts.text, cx, cy-(opts.label?9:0));
+    if(opts.label){
+      ctx.font="600 9.5px -apple-system,Segoe UI,Roboto,sans-serif";
+      ctx.fillStyle=col("--muted");
+      ctx.fillText(opts.label, cx, cy+10);
+    }
+    ctx.restore();
+  }
+});
+
+const donutOpts={maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+  tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}%`}}},cutout:"62%"};
+
+new Chart(chProd,{type:"bar",
+  data:{labels:DATA.production2024.map(d=>d[0]),
+    datasets:[{data:DATA.production2024.map(d=>d[1]),backgroundColor:DATA.production2024.map((d,i)=>i===0?col("--accent"):"#a3e63588"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{type:"logarithmic",ticks:{callback:v=>[500,5000,20000].includes(v)?fmtU(v):""},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x.toLocaleString("en-US")} tU (log scale)`}}}}});
+
+new Chart(chEnr,{type:"bar",
+  data:{labels:DATA.enrichment.map(d=>d[0]),
+    datasets:[{data:DATA.enrichment.map(d=>d[1]),backgroundColor:DATA.enrichment.map((d,i)=>i===0?col("--accent"):"#a3e63588"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{ticks:{callback:v=>v+"M SWU"},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x}M SWU/yr — ~${Math.round(c.parsed.x/62.9*100)}% of world capacity`}}}}});
+
+new Chart(chRes,{type:"doughnut",
+  data:{labels:DATA.resources.map(d=>d[0]),datasets:[{data:DATA.resources.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed.toLocaleString("en-US")} ktU`}},
+    centerText:{enabled:true,text:"~6.1 MtU",label:"identified resources"}}}});
+
+new Chart(chTrend,{type:"line",
+  data:{labels:DATA.trend.years,
+    datasets:[
+      {label:"Mine production",data:DATA.trend.prod,borderColor:col("--accent"),backgroundColor:"#22d3ee22",fill:true,tension:0,pointRadius:0,pointHitRadius:6},
+      {label:"Reactor requirements, 2025 (WNA)",data:DATA.trend.years.map(()=>DATA.trend.req2025),borderColor:col("--accent2"),borderDash:[6,6],fill:false,tension:0,pointRadius:0,pointHitRadius:0,borderWidth:1.5}
+    ]},
+  options:{maintainAspectRatio:false,
+    scales:{y:{min:0,max:75000,ticks:{callback:v=>(v/1000)+" ktU"},grid:{color:col("--line")}},x:{grid:{display:false},ticks:{maxTicksLimit:12}}},
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+      tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y.toLocaleString("en-US")} tU`}}}}});
+
+new Chart(chUsImp,{type:"doughnut",
+  data:{labels:DATA.usImports.map(d=>d[0]),datasets:[{data:DATA.usImports.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:donutOpts});
+
+new Chart(chPrices,{type:"line",
+  data:{labels:DATA.prices.years,
+    datasets:[
+      {label:"Spot (annual average)",data:DATA.prices.spot,borderColor:col("--accent"),pointBackgroundColor:col("--accent"),tension:0,pointRadius:3},
+      {label:"Long-term (year-end)",data:DATA.prices.lt,borderColor:col("--accent2"),pointBackgroundColor:col("--accent2"),tension:0,pointRadius:3}
+    ]},
+  options:{maintainAspectRatio:false,
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+      tooltip:{callbacks:{label:c=>` ${c.dataset.label}: $${c.parsed.y.toFixed(2)}/lb`}}},
+    scales:{y:{ticks:{callback:v=>"$"+v},grid:{color:col("--line")}},
+            x:{grid:{display:false}}}}});
+
+/* chokepoint bars */
+document.getElementById("chokeBars").innerHTML = DATA.chokeShares.map(([s,v])=>`
+  <div class="bar-row"><span>${s}</span><div class="track"><div class="fill" data-w="${v}"></div></div><span class="val">~${v}%</span></div>`).join("");
+const io2=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.w+"%");io2.unobserve(e.target);}
+}),{threshold:.4});
+io2.observe(document.getElementById("chokeBars"));
+
+/* nav active state */
+const secs=[...document.querySelectorAll("section[id],header")];
+const navLinks=[...document.querySelectorAll("nav a.link")];
+const io3=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}
+}),{rootMargin:"-40% 0px -55% 0px"});
+secs.forEach(s=>io3.observe(s));
+</script>
+<script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
