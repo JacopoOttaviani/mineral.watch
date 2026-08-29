@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>LithiumWatch — Tracking the Global Lithium Supply Chain</title>
+<meta name="description" content="Open data visualisation tracking the global lithium supply chain: hard-rock mines, brine operations, converters, the China refining chokepoint, the price whipsaw and the battery boom. Built on USGS, IEA, BGS and price-agency data.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="mineral.watch">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="https://mineral.watch/lithium/">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="alternate icon" href="/brand/favicon.png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mineral.watch/lithium/">
+<meta property="og:site_name" content="mineral.watch">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="LithiumWatch — Tracking the Global Lithium Supply Chain">
+<meta property="og:description" content="Interactive world map of hard-rock mines, brine operations and converters, production and reserves charts, the China conversion chokepoint and the boom-bust-boom price cycle — built on USGS, IEA, BGS and price-agency data.">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LithiumWatch — tracking the global lithium supply chain">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LithiumWatch — Tracking the Global Lithium Supply Chain">
+<meta name="twitter:description" content="Interactive map, production and reserves charts, the conversion chokepoint, the Jianxiawo saga and the price whipsaw — built on USGS, IEA, BGS and price-agency data.">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png">
+<meta name="twitter:image:alt" content="LithiumWatch — tracking the global lithium supply chain">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
+        { "@type": "ListItem", "position": 2, "name": "Lithium", "item": "https://mineral.watch/lithium/" }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "LithiumWatch — Global Lithium Supply Chain Data",
+      "description": "Hard-rock mines, brine operations and converters, production and reserves data, prices, trade flows and refining concentration for the global lithium supply chain.",
+      "url": "https://mineral.watch/lithium/",
+      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "temporalCoverage": "2018/2026",
+      "spatialCoverage": "Worldwide",
+      "variableMeasured": ["Mine production", "Reserves", "Chemical conversion capacity", "Prices", "Trade flows", "Companies"],
+      "isAccessibleForFree": true,
+      "license": "https://mineral.watch/",
+      "citation": [
+        "USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Lithium)",
+        "IEA Global Critical Minerals Outlook 2025 and Global EV Outlook 2026",
+        "British Geological Survey, World Mineral Statistics",
+        "Benchmark Mineral Intelligence and Fastmarkets price assessments; Guangzhou Futures Exchange",
+        "Company disclosures and government announcements"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the world running out of lithium?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. USGS puts global reserves at 37 million tonnes of lithium — about 127 years of production at the 2025 rate — and identified resources at roughly 150 million tonnes. The constraint is not geology but timing and processing: demand is growing so fast that supply has swung from shortage to glut and back within five years, and almost every tonne must pass through a conversion plant, about 70% of which are in China."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which country produces the most lithium?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Australia mined about 92,000 of the world's 290,000 tonnes of lithium content in 2025, ahead of China (62,000 t) and Chile (56,000 t), according to USGS estimates. But the leverage sits one step downstream: China converts roughly 70% of the world's lithium into battery-grade chemicals and makes about 85% of cathode active material."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did lithium prices crash and then rebound?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 2021–22 EV boom caught supply flat-footed and pushed battery-grade lithium carbonate to an average of $63,700 per tonne in 2022. The wave of new mines it financed then flooded the market: prices fell about 85% to a $9,000 average in 2025, forcing curtailments across Australia, Canada and China. When CATL's giant Jianxiawo mine lost its permit in August 2025 just as EV and storage demand surged, futures more than doubled, topping ¥200,000 (~$29,500) per tonne in 2026 before restarts cooled the rally back to roughly $18,000–23,000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is lithium used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Batteries take 88% of world supply (USGS, 2025) — electric vehicles above all, plus grid storage, phones, laptops and power tools. The rest goes to ceramics and glass (4%), lubricating greases (2%), air treatment, casting fluxes and pharmaceuticals. No commercial battery chemistry with comparable energy density exists without lithium, though sodium-ion is emerging at the cheap end."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hard rock or brine — where does lithium actually come from?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About two thirds of mined lithium comes from hard rock — spodumene ore in Australia, Africa, Brazil, Canada and China — which is fast to build but costlier to run, and almost all of it ships to China for conversion. Most of the rest is pumped from salt-flat brines in Chile, Argentina and China, which sit at the bottom of the cost curve but take 12–18 months of pond evaporation. Direct lithium extraction (DLE), which pulls lithium from brine in hours, is the technology both worlds are betting on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does a single Chinese mine move the world lithium price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CATL's Jianxiawo lepidolite mine in Jiangxi supplies roughly 3–6% of world lithium and sits near the top of the cost curve, making it the market's swing producer. When its permit lapsed in August 2025, Guangzhou futures more than doubled; when a new permit landed on 29 June 2026 and the mine restarted, prices gave back much of the rally. Since carbonate futures listed in 2023, positioning around this one mine has amplified every headline."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#fb7185;--accent2:#2dd4bf;
+  --mine:#fb7185;--brine:#2dd4bf;--proc:#60a5fa;--dis:#fbbf24;--dev:#c4b5fd;
+  --radius:14px;--pad:16px;
+  font-size:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+h1,h2,h3{line-height:1.2;font-weight:700}
+section{padding:40px var(--pad);max-width:1100px;margin:0 auto}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;margin-bottom:8px}
+h2{font-size:1.5rem;margin-bottom:10px}
+.lede{color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:20px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1100px;margin:0 auto}
+.nav-links{display:flex;align-items:center;gap:8px;flex:1;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px;flex:none}
+.brand span{color:var(--accent)}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap;flex:none}
+nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto;flex:none;position:relative;overflow:hidden;z-index:0}
+nav a.cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){nav a.cta::before{transition:none}}
+.research-cta{display:inline-block;background:var(--accent);color:var(--bg);font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none;position:relative;overflow:hidden;z-index:0}
+.research-cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+.research-cta:hover::before,.research-cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){.research-cta::before{transition:none}}
+
+/* hero */
+.hero{padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
+.hero h1{font-size:clamp(1.9rem,6.5vw,3.2rem);letter-spacing:-.02em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);max-width:560px;font-size:1rem}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.stat b{display:block;font-size:1.45rem;color:var(--accent);letter-spacing:-.01em}
+.stat span{font-size:.74rem;color:var(--muted)}
+
+/* map */
+#map{height:62vh;min-height:380px;border-radius:var(--radius);border:1px solid var(--line);z-index:1}
+.map-controls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:7px 14px;font-size:.8rem;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent}
+.chip.on{color:#0d1117;font-weight:700}
+.chip.on.c-mine{background:var(--mine);border-color:var(--mine)}
+.chip.on.c-brine{background:var(--brine);border-color:var(--brine)}
+.chip.on.c-proc{background:var(--proc);border-color:var(--proc)}
+.chip.on.c-dis{background:var(--dis);border-color:var(--dis)}
+.chip.on.c-dev{background:var(--dev);border-color:var(--dev)}
+.legend{font-size:.74rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--card)}
+.leaflet-popup-content{font-size:.82rem;line-height:1.5;margin:12px 14px}
+.leaflet-popup-content b{color:var(--accent)}
+.pp-tag{display:inline-block;font-size:.66rem;padding:1px 8px;border-radius:99px;margin-bottom:4px;font-weight:700}
+
+/* forms grid (ore → battery) */
+.el-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px;margin-top:8px}
+.el{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 6px 10px;cursor:pointer;text-align:center;transition:.15s;position:relative;-webkit-tap-highlight-color:transparent}
+.el:hover{border-color:var(--accent)}
+.el.sel{border-color:var(--accent);background:#fb718514}
+.el b{display:block;font-size:.98rem;letter-spacing:-.01em}
+.el span{font-size:.6rem;color:var(--muted);display:block;margin-top:2px}
+.el .z{position:absolute;top:4px;left:7px;font-size:.56rem;color:var(--muted)}
+.el.gU b{color:var(--accent)}
+.el.gM b{color:var(--accent2)}
+.el.gD b{color:var(--dis)}
+.el.gC b{color:var(--muted)}
+.el-legend{font-size:.72rem;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.el-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.el-detail{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.el-detail h3{font-size:1.05rem;margin-bottom:2px}
+.el-detail h3 small{color:var(--muted);font-weight:400;font-size:.78rem}
+.el-detail .tags{margin:6px 0 10px;display:flex;gap:6px;flex-wrap:wrap}
+.el-detail p{font-size:.85rem;color:var(--muted)}
+.el-detail .price{margin-top:10px;font-size:.78rem;color:var(--accent);border-top:1px dashed var(--line);padding-top:8px}
+
+/* journey */
+.journey{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 calc(-1*var(--pad));padding-left:var(--pad);padding-right:var(--pad)}
+.jcard{scroll-snap-align:start;flex:0 0 260px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative}
+.jcard .num{position:absolute;top:14px;right:16px;font-size:1.6rem;font-weight:800;color:var(--line)}
+.jcard .ico{font-size:1.6rem;margin-bottom:10px}
+.jcard h3{font-size:1rem;margin-bottom:6px}
+.jcard p{font-size:.8rem;color:var(--muted)}
+.jcard .fact{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.76rem;color:var(--accent)}
+.jhint{font-size:.72rem;color:var(--muted);margin-top:6px}
+
+/* charts */
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card h3{font-size:.95rem;margin-bottom:4px}
+.card .sub{font-size:.74rem;color:var(--muted);margin-bottom:12px}
+.chartbox{position:relative;height:280px}
+.src{font-size:.68rem;color:var(--muted);margin-top:10px}
+
+/* china section */
+.big{font-size:clamp(2.6rem,10vw,4.5rem);font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1}
+.bars{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.bar-row{display:grid;grid-template-columns:150px 1fr 44px;align-items:center;gap:10px;font-size:.78rem}
+.bar-row .track{background:var(--bg2);border-radius:99px;height:10px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#fda4af);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar-row .val{text-align:right;color:var(--muted)}
+
+/* process flow */
+.flow-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+.flow-wrap svg{min-width:980px;display:block}
+
+/* timeline */
+.tl{position:relative;margin-top:6px;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding-bottom:22px}
+.tl-item::before{content:"";position:absolute;left:-24px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl-item.hot::before{background:var(--accent)}
+.tl-date{font-size:.7rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.tl-item h4{font-size:.92rem;margin:3px 0 4px}
+.tl-item p{font-size:.8rem;color:var(--muted);max-width:640px}
+
+/* company tracker */
+.co-search{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.co-search input{flex:1 1 200px;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;color:var(--txt);font-size:.8rem;outline:none;-webkit-appearance:none}
+.co-search input:focus{border-color:var(--accent)}
+.co-search input::placeholder{color:var(--muted)}
+.co-count{font-size:.72rem;color:var(--muted)}
+.co-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+table.co{width:100%;min-width:900px;border-collapse:collapse;font-size:.79rem}
+.co th{text-align:left;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.co td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted);line-height:1.45}
+.co td:first-child{min-width:170px}
+.co td b{color:var(--txt);font-size:.82rem}
+.co td b a{color:var(--txt);text-decoration:none;border-bottom:1px dashed var(--line)}
+.co td b a:hover{color:var(--accent2);border-bottom-color:var(--accent2)}
+.co .tik{font-size:.68rem;color:var(--muted);margin-top:2px;white-space:nowrap}
+.co .pp-tag{white-space:nowrap;margin-bottom:0}
+
+/* mini cards (military / invest) */
+.mini-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.mini{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px}
+.mini h4{font-size:.86rem;margin-bottom:5px}
+.mini h4 .mi{margin-right:6px}
+.mini p{font-size:.78rem;color:var(--muted)}
+.note{font-size:.72rem;color:var(--muted);border-left:3px solid var(--accent);padding:8px 12px;background:var(--bg2);border-radius:0 8px 8px 0;margin-top:14px}
+.callout{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:14px;margin-top:14px}
+.callout b{font-size:1.5rem;color:var(--accent2);white-space:nowrap;line-height:1.2}
+.callout span{font-size:.78rem;color:var(--muted);flex:1 1 260px;line-height:1.5}
+@media(min-width:720px){.mini-grid{grid-template-columns:1fr 1fr}}
+
+/* research box + animated logo */
+.research-box{display:grid;gap:24px;align-items:center}
+.research-art{display:none;justify-self:center;width:180px;animation:hero-float 11s ease-in-out infinite}
+@media(min-width:720px){.research-box{grid-template-columns:1.3fr 1fr}.research-art{display:block}}
+@keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.net-art .edge{stroke:var(--txt);stroke-opacity:.55;stroke-width:1.1;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 1.6s ease-out forwards}
+.net-art .web{stroke:var(--muted);stroke-opacity:.35;stroke-width:.8;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 2s ease-out forwards}
+.net-art .d1{animation-delay:.1s}.net-art .d2{animation-delay:.35s}.net-art .d3{animation-delay:.6s}
+.net-art .d4{animation-delay:.9s}.net-art .d5{animation-delay:1.15s}.net-art .d6{animation-delay:1.4s}
+@keyframes art-draw{to{stroke-dashoffset:0}}
+.net-art .orbit{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:3 7;transform-box:fill-box;transform-origin:center}
+.net-art .orbit.o2{stroke-opacity:.6;animation:art-spin 120s linear infinite reverse}
+@keyframes art-spin{to{transform:rotate(360deg)}}
+.net-art .node{fill:var(--bg);stroke:var(--txt);stroke-opacity:.7;stroke-width:1.1;opacity:0;animation:art-in .5s ease-out forwards}
+.net-art .sat{fill:none;stroke:var(--muted);stroke-width:1;opacity:0;animation:art-in .5s ease-out forwards,art-breathe 4s ease-in-out 2.4s infinite;transform-box:fill-box;transform-origin:center}
+.net-art .node,.net-art .sat{animation-delay:1.2s}
+.net-art .sat.b2{animation-delay:1.4s,3s}.net-art .sat.b3{animation-delay:1.6s,3.8s}
+@keyframes art-in{to{opacity:1}}
+@keyframes art-breathe{0%,100%{transform:scale(1);stroke-opacity:1}50%{transform:scale(1.5);stroke-opacity:.4}}
+@media(prefers-reduced-motion:reduce){
+  .net-art,.net-art *{animation:none !important;stroke-dashoffset:0 !important;opacity:1 !important}
+}
+
+/* sources */
+.sources li{margin-bottom:12px;font-size:.85rem;color:var(--muted)}
+.sources{list-style:none}
+.sources b{color:var(--txt)}
+
+/* faq */
+.faq{display:grid;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+.faq details[open]{border-color:var(--accent)}
+.faq summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.2rem;flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--muted);font-size:.86rem;margin-top:10px}
+footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}
+
+@media(min-width:720px){
+  :root{--pad:24px}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .grid2{grid-template-columns:1fr 1fr}
+  h2{font-size:1.9rem}
+  .jcard{flex-basis:300px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
+    <div class="brand">Lithium<span>Watch</span></div>
+    <div class="nav-links">
+    <a class="link" href="#map-sec">Map</a>
+    <a class="link" href="#forms-sec">The metal</a>
+    <a class="link" href="#journey-sec">Journey</a>
+    <a class="link" href="#production-sec">Production</a>
+    <a class="link" href="#refining-sec">Conversion</a>
+    <a class="link" href="#demand-sec">Demand</a>
+    <a class="link" href="#timeline-sec">Timeline</a>
+    <a class="link" href="#trade-sec">Trade</a>
+    <a class="link" href="#china-sec">China</a>
+    <a class="link" href="#military-sec">Military</a>
+    <a class="link" href="#invest-sec">Investment</a>
+    <a class="link" href="#companies-sec">Companies</a>
+    <a class="link" href="#sources-sec">Data</a>
+    <a class="link" href="#faq-sec">FAQ</a>
+    <a class="link" href="#research-sec">Research</a>
+    </div>
+    <a class="cta" href="#research-sec">Contact us</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="kicker">Open data · critical minerals</div>
+  <h1>Who holds the world's <em>charge</em>?</h1>
+  <p>Lithium is the irreplaceable ion of the battery age — every EV, grid battery, phone and drone stores its energy in it. It is mined from Australian rock and Andean brine, but nearly every tonne must pass through a conversion plant, and most of those are in China. This site tracks where lithium is mined, converted and consumed, and how a boom, a bust and one idled Chinese mine keep whipsawing the price — using open data from USGS, the IEA, BGS and price agencies.</p>
+  <div class="stats">
+    <div class="stat"><b data-count="290" data-suffix=" kt">0</b><span>lithium mined worldwide in 2025 — up 31% in one year (USGS)</span></div>
+    <div class="stat"><b data-count="88" data-suffix="%">0</b><span>of world lithium demand is batteries (USGS, 2025)</span></div>
+    <div class="stat"><b data-count="70" data-prefix="~" data-suffix="%">0</b><span>of the world's lithium chemicals are refined in China (IEA est.)</span></div>
+    <div class="stat"><b data-count="63700" data-prefix="$">0</b><span>per tonne — carbonate's 2022 average; it fell to $9,000 by 2025, then roughly doubled in 2026</span></div>
+  </div>
+</header>
+
+<section id="map-sec">
+  <div class="kicker">Interactive map</div>
+  <h2>The lithium world map</h2>
+  <p class="lede">Hard-rock mines, brine operations, conversion plants, curtailed operations and development projects. Tap a marker for details; toggle layers below. Circle size ≈ scale of operation.</p>
+  <div class="map-controls">
+    <button class="chip c-mine on" data-layer="mines">⛏ Hard-rock mines</button>
+    <button class="chip c-brine on" data-layer="brines">💧 Brine operations</button>
+    <button class="chip c-proc on" data-layer="processing">🏭 Converters &amp; refineries</button>
+    <button class="chip c-dis on" data-layer="disrupted">⚠ Curtailed &amp; suspended</button>
+    <button class="chip c-dev on" data-layer="development">◐ Development</button>
+  </div>
+  <div id="map"></div>
+  <div class="legend" style="margin-top:10px">
+    <span><i style="background:var(--mine)"></i>Hard-rock mine</span>
+    <span><i style="background:var(--brine)"></i>Brine operation</span>
+    <span><i style="background:var(--proc)"></i>Converter / refinery</span>
+    <span><i style="background:var(--dis)"></i>Curtailed / suspended</span>
+    <span><i style="background:var(--dev)"></i>Development project</span>
+  </div>
+</section>
+
+<section id="forms-sec">
+  <div class="kicker">From ore to electrons</div>
+  <h2>One element, two supply chains</h2>
+  <p class="lede">Lithium trades in a ladder of forms — rock, brine, concentrate, chemical, cathode — and unlike copper there is no single exchange-traded metal at the end of it. Each rung is its own market with its own price, and the chokepoints sit between the rungs. Tap a stage.</p>
+  <div class="el-grid" id="elGrid"></div>
+  <div class="el-legend">
+    <span><i style="background:var(--accent)"></i>Upstream (mine &amp; salar)</span>
+    <span><i style="background:var(--accent2)"></i>Midstream (conversion)</span>
+    <span><i style="background:var(--dis)"></i>Downstream (cathode &amp; cells)</span>
+    <span><i style="background:var(--muted)"></i>Circular (recycling)</span>
+  </div>
+  <div class="el-detail" id="elDetail"></div>
+</section>
+
+<section id="journey-sec">
+  <div class="kicker">Mine to battery</div>
+  <h2>The journey of a tonne of lithium</h2>
+  <p class="lede">From a per-cent of an Australian rock or a fraction of a per-cent of an Andean brine to the cathode powder in an EV cell, lithium crosses more borders than almost any other battery material — and the geography narrows hard in the middle.</p>
+  <div class="journey" id="journey"></div>
+  <div class="jhint">← swipe →</div>
+</section>
+
+<section id="production-sec">
+  <div class="kicker">Production &amp; reserves</div>
+  <h2>Where lithium comes from</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Mine production by country, 2025</h3>
+      <div class="sub">Thousand tonnes of lithium content, log scale (USGS estimates)</div>
+      <div class="chartbox"><canvas id="chProd"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries 2026. World total ~290 kt (excludes US output, which is withheld); 2025 figures are estimates.</div>
+    </div>
+    <div class="card">
+      <h3>Reserves by country</h3>
+      <div class="sub">Million tonnes of lithium content (world total ~37 Mt)</div>
+      <div class="chartbox"><canvas id="chRes"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries 2026. Identified resources are far larger: ~150 Mt worldwide, led by the US (30 Mt), Argentina (28 Mt) and Bolivia (23 Mt).</div>
+    </div>
+    <div class="card" style="grid-column:1/-1">
+      <h3>The scissors: production up 3×, price on a rollercoaster</h3>
+      <div class="sub">World mine production (kt lithium content, left) vs the USGS annual-average battery-grade carbonate price ($/t, right)</div>
+      <div class="chartbox"><canvas id="chTrend"></canvas></div>
+      <div class="src">Sources: USGS Mineral Commodity Summaries, successive editions (production, as revised; excludes US); USGS MCS 2026 (price series, from 2021). 2026 spot rebounded to roughly $18,000–23,000/t by August.</div>
+    </div>
+  </div>
+  <div class="note">Compare where lithium is <b>mined</b> against where it is <b>refined</b>, country by country since 1970, on the <a href="/supply-chain/">mined-vs-refined supply-chain map</a>.</div>
+</section>
+
+<section id="refining-sec">
+  <div class="kicker">Conversion &amp; refining</div>
+  <h2>The chokepoint is the converter</h2>
+  <p class="lede">Lithium mining spans five continents and no country digs more than a third of it. The concentration comes one step later: almost every tonne of spodumene — Australian, African, Brazilian or Canadian — ships to China to be converted into battery-grade carbonate or hydroxide. China makes roughly 70% of the world's lithium chemicals and 85% of its cathode material.</p>
+  <div class="card">
+    <h3>Conversion geography</h3>
+    <div class="sub">A world of mines, a province of converters</div>
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇨🇳</span>The conversion belt</h4><p>Jiangxi's lepidolite district around Yichun, the spodumene converters of Sichuan and the brine plants of Qinghai and Tibet form the engine room of the battery age. Chinese converters were built faster than mines could feed them — so China imports rock from three continents to keep them running.</p></div>
+      <div class="mini"><h4><span class="mi">🎚️</span>The swing producer</h4><p>CATL's Jianxiawo mine — roughly 3–6% of world supply, near the top of the cost curve — has become the market's throttle. Its August 2025 permit lapse more than doubled futures; its June 2026 restart permit knocked them straight back down. Rarely has one asset so visibly set a global price.</p></div>
+      <div class="mini"><h4><span class="mi">🌍</span>The ex-China buildout</h4><p>Diversification is under way but hard: Australia's Kwinana and Kemerton hydroxide plants have run below plan for years, while Tesla's Corpus Christi refinery, AMG's Bitterfeld plant in Germany, Chile's expanding carbonate lines and Kwinana's new Mt Holland refinery are the first serious non-Chinese additions.</p></div>
+      <div class="mini"><h4><span class="mi">🚫</span>The technology wall</h4><p>In 2025 Beijing added lithium-processing and battery technologies to its export-control lists — July for battery and cathode know-how, 9 October for the wider lithium-ion supply chain — making it harder to clone Chinese refining abroad just as everyone was trying to.</p></div>
+    </div>
+    <div class="src">Sources: IEA (Global EV Outlook 2026, critical-minerals commentaries); Benchmark Mineral Intelligence; USGS MCS 2026; company disclosures.</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Where lithium chemicals are made, 2025</h3>
+    <div class="sub">Approximate shares of world battery-grade conversion output — the step where the market concentrates</div>
+    <div class="chartbox"><canvas id="chConv"></canvas></div>
+    <div class="src">Sources: IEA and Benchmark Mineral Intelligence estimates; shares are approximate. Chile and Argentina convert their own brine; nearly all spodumene is converted in China.</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>From rock and brine to battery, step by step</h3>
+    <div class="sub">Hard-rock route (top) and brine route (bottom) converge at battery-grade chemicals. Scroll sideways on mobile →</div>
+    <div class="flow-wrap">
+    <svg viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lithium processing flow from ore and brine to battery">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8b98a5"/></marker>
+      </defs>
+      <style>
+        .fb{fill:#151b23;stroke:#2b3644;rx:10}
+        .ft{fill:#e6edf3;font:700 12px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fs{fill:#8b98a5;font:11px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fe{fill:#fb7185;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fl{stroke:#8b98a5;stroke-width:1.4;fill:none;marker-end:url(#ah)}
+        .lab{fill:#2dd4bf;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em}
+      </style>
+      <!-- route labels -->
+      <text x="10" y="24" class="lab">HARD-ROCK ROUTE (~2/3 OF SUPPLY)</text>
+      <text x="10" y="212" class="lab">BRINE ROUTE (~1/3)</text>
+      <!-- hard-rock route boxes y=40..118 -->
+      <g>
+        <rect class="fb" x="10" y="40" width="150" height="78" rx="10"/>
+        <text x="20" y="62" class="ft">1 · Mining ⛏</text>
+        <text x="20" y="80" class="fs">Spodumene pegmatites,</text>
+        <text x="20" y="94" class="fs">~1–2% Li₂O in the rock</text>
+        <text x="20" y="111" class="fe">Australia digs ~1/3 of it</text>
+
+        <rect class="fb" x="205" y="40" width="150" height="78" rx="10"/>
+        <text x="215" y="62" class="ft">2 · Concentrate</text>
+        <text x="215" y="80" class="fs">Crush &amp; float to SC6 —</text>
+        <text x="215" y="94" class="fs">6% Li₂O powder</text>
+        <text x="215" y="111" class="fe">the world's traded feedstock</text>
+
+        <rect class="fb" x="400" y="40" width="150" height="78" rx="10"/>
+        <text x="410" y="62" class="ft">3 · Convert 🏭</text>
+        <text x="410" y="80" class="fs">Roast at 1,075°C, acid-leach,</text>
+        <text x="410" y="94" class="fs">crystallise the salt</text>
+        <text x="410" y="111" class="fe">~70% happens in China</text>
+
+        <rect class="fb" x="595" y="40" width="150" height="78" rx="10"/>
+        <text x="605" y="62" class="ft">4 · Chemical ⚗️</text>
+        <text x="605" y="80" class="fs">Battery-grade carbonate</text>
+        <text x="605" y="94" class="fs">(LFP) or hydroxide (NMC)</text>
+        <text x="605" y="111" class="fe">the price you read about</text>
+      </g>
+      <!-- brine route boxes y=222..300 -->
+      <g>
+        <rect class="fb" x="10" y="222" width="150" height="78" rx="10"/>
+        <text x="20" y="244" class="ft">Pumping 💧</text>
+        <text x="20" y="262" class="fs">Salar brine, ~0.02–0.2% Li,</text>
+        <text x="20" y="276" class="fs">from under the salt crust</text>
+        <text x="20" y="292" class="fe">lowest costs on Earth</text>
+
+        <rect class="fb" x="400" y="222" width="150" height="78" rx="10"/>
+        <text x="410" y="244" class="ft">Ponds or DLE ☀️</text>
+        <text x="410" y="262" class="fs">12–18 months of evaporation —</text>
+        <text x="410" y="276" class="fs">or hours, if DLE scales</text>
+        <text x="410" y="292" class="fe">the technology race to watch</text>
+      </g>
+      <!-- convergence box -->
+      <g>
+        <rect class="fb" x="790" y="120" width="180" height="90" rx="10" stroke="#fb7185"/>
+        <text x="800" y="144" class="ft">5 · Cathode &amp; cells 🔋</text>
+        <text x="800" y="162" class="fs">Chemical → cathode powder</text>
+        <text x="800" y="176" class="fs">→ cells → packs: EVs, grid</text>
+        <text x="800" y="190" class="fs">storage, electronics</text>
+        <text x="800" y="205" class="fe">China makes ~85% of cathode</text>
+      </g>
+      <!-- arrows -->
+      <path class="fl" d="M160 79 H200"/>
+      <path class="fl" d="M355 79 H395"/>
+      <path class="fl" d="M550 79 H590"/>
+      <path class="fl" d="M745 79 H768 V143 H785"/>
+      <path class="fl" d="M160 261 H395"/>
+      <path class="fl" d="M550 261 H700 V183 H785"/>
+    </svg>
+    </div>
+    <div class="src">Route shares: USGS, IEA estimates. SC6 = 6% Li₂O spodumene concentrate. DLE = direct lithium extraction, running at commercial scale in Qinghai and at Eramet's Centenario in Argentina.</div>
+  </div>
+</section>
+
+<section id="demand-sec">
+  <div class="kicker">Demand</div>
+  <h2>The battery century</h2>
+  <p class="lede">Two decades ago lithium went into ceramics, grease and the odd laptop. Now 88% of it goes into batteries, demand is about six times its 2015 level, and the two engines — electric vehicles and grid storage — are both still accelerating.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🚗</span>Electric vehicles</h4><p>One in four cars sold worldwide in 2025 was electric (IEA), and EV batteries absorbed about 1.2&nbsp;TWh of cells — up nearly 30% in a year. China and Europe drove the growth; the US market cooled after its purchase credit expired in September 2025.</p></div>
+      <div class="mini"><h4><span class="mi">🔋</span>Grid storage</h4><p>The fastest-growing buyer: battery energy storage now takes over 15% of all cells and rising, as solar-plus-storage undercuts gas peakers. USGS credits the storage boom, alongside EVs, for the demand surge that flipped the lithium market in late 2025.</p></div>
+      <div class="mini"><h4><span class="mi">🏺</span>Everything else</h4><p>The legacy 12%: ceramics and glass (4%), lubricating greases (2%), air-treatment systems, continuous-casting fluxes and lithium pharmaceuticals. These uses once defined the market; now they are a rounding error on battery demand.</p></div>
+      <div class="mini"><h4><span class="mi">🧂</span>The sodium shadow</h4><p>The substitution watch: CATL unveiled its Naxtra sodium-ion battery in 2025 and LFP — the lithium-lightest chemistry — already powers over half of new EVs. Cheaper chemistries cap the price spikes, but every one of them still needs lithium except sodium, which is only nibbling at the cheap end.</p></div>
+    </div>
+    <div class="callout"><b>&gt;3 TWh</b><span>the IEA's projection for annual battery demand by 2030 — more than double 2025's deployment. Lithium demand grew 20% in 2025 alone (USGS); the IEA sees it growing faster than any other critical mineral through 2040.</span></div>
+  </div>
+</section>
+
+<section id="timeline-sec">
+  <div class="kicker">Geopolitics</div>
+  <h2>Boom, bust, boom</h2>
+  <p class="lede">No commodity this decade has whipsawed like lithium: a sevenfold price spike, an 85% crash, a state takeover in Chile, a $6.7 billion oil-major-style consolidation — and then one Chinese mine's paperwork moved the world price twice.</p>
+  <div class="card">
+    <div class="tl">
+      <div class="tl-item hot">
+        <div class="tl-date">2021–2022</div>
+        <h4>The first squeeze</h4>
+        <p>EV sales double in two years and catch the mining industry flat-footed. Battery-grade carbonate averages $63,700/t in 2022 — more than five times the 2021 average — igniting a global rush of mine building from the Pilbara to the Andes, and pulling lepidolite, Africa's pegmatites and recycled black mass into the supply pool.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Apr 2023</div>
+        <h4>Chile reaches for its salares</h4>
+        <p>President Boric announces the National Lithium Strategy: state control over the world's richest brine, with private partners in the minority. SQM — whose Atacama lease was due to expire in 2030 — is pushed to the negotiating table with state copper giant Codelco. In July, China lists lithium carbonate futures in Guangzhou, financialising a market that had priced by private negotiation.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">2024</div>
+        <h4>The crash</h4>
+        <p>The mines the boom financed all arrive at once. Prices collapse to 2015 levels; Australia's Bald Hill and Finniss go into care and maintenance, Albemarle mothballs a Kemerton train and slashes capex, and Chinese lepidolite runs at a loss. Contrarians buy the bottom: Rio Tinto agrees to acquire Arcadium for $6.7B (October) and approves a $2.5B expansion of Rincon; Ganfeng's Goulamina in Mali ships its first concentrate (December).</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Mar 2025</div>
+        <h4>Big mining buys in</h4>
+        <p>Rio Tinto closes the Arcadium deal — Fénix, Olaroz, Mt Cattlin and a chemicals network — becoming a top-three Western producer overnight and rebranding the unit Rio Tinto Lithium. The message lands industry-wide: the majors now treat lithium like copper, a bet on the decade rather than the quarter.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Aug 2025</div>
+        <h4>Jianxiawo goes dark</h4>
+        <p>CATL's giant lepidolite mine in Jiangxi — roughly 3–6% of world supply — halts when its permit expires amid Beijing's "anti-involution" crackdown on loss-making overcapacity. Guangzhou futures leap; the market discovers that its marginal tonne answers to a battery company and a mining regulator, not to the market.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Sep–Oct 2025</div>
+        <h4>Washington buys equity, Beijing controls tech</h4>
+        <p>The US EV tax credit expires on 30 September, chilling American demand. Weeks later Washington deepens supply-side support: the restructured DOE loan hands the government warrants for 5% of Lithium Americas and 5% of the Thacker Pass JV, with the first $435M advance flowing in October. On 9 October, Beijing extends export controls across the lithium-ion battery supply chain.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Nov–Dec 2025</div>
+        <h4>Chile closes the circle</h4>
+        <p>China's antitrust regulator — reviewing a Chilean JV, a sign of the times — clears the Codelco-SQM partnership in November. In December the joint venture is born: Codelco holds 50%+1 share, SQM operates until 2031, and the Atacama operation is secured to 2060. H2 demand — EVs in China and Europe, grid storage everywhere — has meanwhile flipped the market: carbonate ends 2025 above $10,000 and climbing.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">H1 2026</div>
+        <h4>The rebound</h4>
+        <p>With Jianxiawo idle and demand compounding, Guangzhou carbonate futures more than double from the 2025 trough, topping ¥200,000 (~$29,500)/t. Spodumene climbs from $800 (Jan 2025) past $2,000/t. Restarts begin: MinRes reboots Bald Hill in May after an 18-month pause, and on 29 June CATL secures Jianxiawo's new permit — futures drop 10% in two sessions on the news.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Jul–Aug 2026</div>
+        <h4>Restarts temper the rally</h4>
+        <p>Jianxiawo ramps back toward ~62,500 t LCE for 2026 (Benchmark) and analysts pencil a ~78 kt LCE surplus for the year; spot carbonate settles back to roughly $18,000–23,000/t — still about double a year earlier. The next fight is downstream: Zimbabwe's ban on exporting unprocessed concentrates takes effect in January 2027, and Chile's NovAndino JV budgets $3B to lift Atacama output ~70% with direct extraction.</p>
+      </div>
+    </div>
+    <div class="src">Sources: USGS MCS 2026; Benchmark Mineral Intelligence; Fastmarkets; Guangzhou Futures Exchange data as reported by Reuters, Bloomberg and MINING.com; company and government disclosures (CATL, Rio Tinto, SQM, Codelco, Lithium Americas, US DOE).</div>
+  </div>
+</section>
+
+<section id="trade-sec">
+  <div class="kicker">Trade &amp; prices</div>
+  <h2>A market still learning to price itself</h2>
+  <p class="lede">Lithium has no LME contract and no single price: spodumene, carbonate and hydroxide each trade on assessments, auctions and — since 2023 — Chinese futures. The flows are simple to draw and hard to change: rock goes to China, brine chemicals go everywhere, and the US imports nearly all of what it uses.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>US lithium import sources</h3>
+      <div class="sub">Average shares 2021–2024 — nearly everything arrives from two South American brine producers</div>
+      <div class="chartbox"><canvas id="chUsImp"></canvas></div>
+      <div class="src">Source: USGS MCS 2026. US net import reliance exceeds 50% of apparent consumption; domestic output comes from a single Nevada brine operation.</div>
+    </div>
+    <div class="card">
+      <h3>The whipsaw, in annual averages</h3>
+      <div class="sub">Battery-grade lithium carbonate, US fixed-contract annual average, $/t</div>
+      <div class="chartbox"><canvas id="chPrices"></canvas></div>
+      <div class="src">Source: USGS MCS 2026 (Benchmark Mineral Intelligence assessments). 2026 spot rebounded to ~$18,000–23,000/t by August after futures briefly topped ¥200,000 (~$29,500).</div>
+    </div>
+    <div class="card">
+      <h3>Three prices, one atom</h3>
+      <div class="sub">What you pay depends on which rung of the ladder you stand on</div>
+      <div class="mini-grid">
+        <div class="mini"><h4>The rock price</h4><p>Spodumene concentrate (SC6) is priced FOB Australia: <b style="color:var(--accent)">$800/t in January 2025, above $2,000/t by mid-2026</b>. Miners' fortunes swing on it — it is set increasingly by auction and by the implied economics of Chinese converters.</p></div>
+        <div class="mini"><h4>The chemical price</h4><p>Battery-grade carbonate and hydroxide are the headline numbers. Since Guangzhou listed carbonate futures in July 2023, China's exchange has set the world's marginal price — and amplified every supply headline into a double-digit move.</p></div>
+        <div class="mini"><h4>The contract price</h4><p>Most real tonnes move on fixed or formula contracts that lag spot: the US contract average was <b style="color:var(--accent)">$9,000/t in 2025</b> even as spot doubled late in the year. The gap between contract and spot is where the market's pain — and profit — lives.</p></div>
+        <div class="mini"><h4>The missing benchmark</h4><p>No terminal market, no deliverable metal, no LME warehouse: lithium is a chemical, not a metal trade. That makes price discovery noisy, hedging hard, and Chinese futures — for better or worse — the closest thing to a world price.</p></div>
+      </div>
+      <div class="src">Sources: USGS MCS 2026; Fastmarkets; Benchmark Mineral Intelligence; GFEX data via Reuters and MINING.com.</div>
+    </div>
+    <div class="card">
+      <h3>The quiet risers: Zimbabwe and Mali</h3>
+      <div class="sub">Africa went from bit player to the margin that matters in three years</div>
+      <p style="font-size:.85rem;color:var(--muted)">Zimbabwe became the world's fourth-largest producer in 2025 (~28,000 t of lithium content) on the back of five Chinese-owned mines — Bikita, Arcadia, Sabi Star, Kamativi and Zulu — and Mali went from nearly zero to 9,400 t in Goulamina and Bougouni's first full year. Nearly every tonne ships to China as concentrate. Harare is now forcing the value chain home: a ban on exporting unprocessed concentrates takes effect in January 2027, with lithium-sulfate plants under construction at Bikita and Arcadia to keep more of the price on shore.</p>
+      <div class="callout"><b>~13%</b><span>of world mine supply came from Zimbabwe and Mali in 2025 (USGS) — up from about 1% in 2021. African hard rock has become the swing tonne behind China's converters, and its governments know it.</span></div>
+      <div class="src">Sources: USGS MCS 2026; government announcements; company disclosures (Sinomine, Huayou, Chengxin, Ganfeng, Kodal).</div>
+    </div>
+  </div>
+</section>
+
+<section id="china-sec">
+  <div class="kicker">Concentration risk</div>
+  <h2>The China chokepoint</h2>
+  <p class="lede">China mines about a fifth of the world's lithium — and converts about seventy per cent of it. Like copper smelting and unlike rare earths, the dominance isn't geological; it was built, converter by converter, in fifteen years, and it deepens at every step from the salt to the cell.</p>
+  <div class="card">
+    <div class="big" id="bigPct">~70%</div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:6px">of the world's battery-grade lithium chemicals are made in China (IEA estimates). Its share along the mine-to-battery chain:</p>
+    <div class="bars" id="chinaBars"></div>
+    <div class="src">Sources: USGS MCS 2026 (mine production, 2025); IEA Global EV Outlook 2026 and critical-minerals analysis (chemicals ~70%, cathode active materials ~85%, LFP cells &gt;98%). Chinese companies also own or fund most of Zimbabwe's and Mali's output.</div>
+  </div>
+</section>
+
+<section id="military-sec">
+  <div class="kicker">Dual use</div>
+  <h2>The battlefield runs on batteries</h2>
+  <p class="lede">Drones rewrote the demand signal: modern wars are fought on lithium-ion cells, and modern deterrents were built on lithium isotopes. The Pentagon treats battery supply chains as munitions supply chains now — because they are.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🛸</span>Drones</h4><p>FPV and reconnaissance drones are consumed like artillery shells — Ukraine alone builds millions a year — and every one flies on lithium-polymer cells. Loitering munitions, robot dogs and one-way attack drones have made small high-density cells a war-stock item.</p></div>
+      <div class="mini"><h4><span class="mi">🌊</span>Submarines &amp; ships</h4><p>Japan's Taigei-class boats swapped lead-acid for lithium-ion banks, doubling submerged endurance at speed; South Korea followed. Unmanned surface and undersea vehicles — the fastest-growing naval programmes anywhere — are battery-electric by definition.</p></div>
+      <div class="mini"><h4><span class="mi">⚡</span>Lasers &amp; the electric battlefield</h4><p>Directed-energy weapons, electromagnetic launchers and jammers need pulse power that generators can't deliver alone — lithium batteries buffer it. Soldier-worn power, silent-watch vehicles and expeditionary microgrids all draw on the same cells as EVs.</p></div>
+      <div class="mini"><h4><span class="mi">☢️</span>The isotope legacy</h4><p>Lithium-6 deuteride is the fusion fuel of thermonuclear warheads — the reason the US enriched lithium at Oak Ridge until 1963 and still husbands the residue. Lithium-7 conditions the water chemistry of most Western reactors; large-scale isotope separation today survives mainly in China and Russia.</p></div>
+      <div class="mini"><h4><span class="mi">📦</span>The stockpile gap</h4><p>The National Defense Stockpile sold off its lithium decades ago; recent NDAAs directed it back into battery materials, and the Pentagon has used Defense Production Act funds — including a $90M award to restart Albemarle's Kings Mountain mine — to rebuild a domestic chain.</p></div>
+      <div class="mini"><h4><span class="mi">🏛️</span>Critical by every list</h4><p>Lithium sits on the US, EU, Japanese and Indian critical-minerals lists; the US 2025 Section 232 investigation into processed critical minerals covers it, and the EU Critical Raw Materials Act sets 2030 targets for domestic extraction, processing and recycling that lithium currently misses.</p></div>
+    </div>
+    <div class="src">Sources: USGS MCS 2026; DoD and DOE announcements; naval programme disclosures (Japan MoD, ROK Navy); Oak Ridge historical records; Federal Register; press reports.</div>
+  </div>
+</section>
+
+<section id="invest-sec">
+  <div class="kicker">Capital flows</div>
+  <h2>Where the lithium money is going</h2>
+  <p class="lede">The crash shook out the tourists; the rebound is repricing what's left. Majors, oil companies and governments are all buying exposure to the same thesis — that the 2030s need far more lithium than the 2020s financed — presented as observation, not investment advice.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🤝</span>Big mining's bet</h4><p>Rio Tinto's $6.7B Arcadium takeover (closed March 2025) created Rio Tinto Lithium and validated the countercyclical playbook: buy brine and chemicals at the bottom. Its $2.5B Rincon expansion and stalled Jadar project make it the West's most-watched lithium balance sheet.</p></div>
+      <div class="mini"><h4><span class="mi">🛢️</span>Big Oil goes brine</h4><p>The Smackover formation under Arkansas and Texas has drawn ExxonMobil (targeting first production late this decade), Chevron (acreage bought 2025) and Equinor (JV with Standard Lithium): drilling, pumping and processing brine is the business they already know — if DLE delivers.</p></div>
+      <div class="mini"><h4><span class="mi">🏛️</span>Governments as shareholders</h4><p>The state is back on the cap table: Washington holds warrants for 5% of Lithium Americas alongside a $2.26B DOE loan; Chile's NovAndino gives Codelco 50%+1 of the Atacama; Bolivia's Uyuni deals await a new government's blessing; and EU strategic-project status fast-tracks a dozen lithium builds.</p></div>
+      <div class="mini"><h4><span class="mi">🧪</span>The DLE frontier</h4><p>Direct lithium extraction — pulling lithium from brine in hours instead of pond-years — is running commercially at Eramet's Centenario and across Qinghai, and anchors the $3B Atacama expansion plan. If it scales, oilfield brines, geothermal plants (Vulcan, Salton Sea) and old salares all become orebodies.</p></div>
+      <div class="mini"><h4><span class="mi">⚠️</span>The risks</h4><p>Analysts still pencil a ~78 kt LCE surplus for 2026 as restarts return — the rebound rests on demand forecasts and Chinese permitting whims. Sodium-ion nibbles from below, contract prices lag spot both ways, and the US demand picture dimmed when the EV credit died. Lithium has now burned momentum investors twice in five years.</p></div>
+      <div class="mini"><h4><span class="mi">♻️</span>The urban salar</h4><p>Recycling is the sleeping supply source: black-mass capacity keeps growing in China, Korea and the US, and every retired EV battery is ~40 kg of LCE that never needs a pond or a roaster. Before 2035 it stays a side dish — there simply aren't enough dead batteries yet.</p></div>
+    </div>
+    <div class="note">This section describes where capital is flowing, based on public data. It is not financial advice.</div>
+    <div class="src">Sources: company and government disclosures; US DOE; Benchmark Mineral Intelligence; IEA; Reuters; MINING.com.</div>
+  </div>
+</section>
+
+<section id="companies-sec">
+  <div class="kicker">Company tracker</div>
+  <h2>The companies that move lithium</h2>
+  <p class="lede">Miners, brine operators, converters and developers across the chain. A handful of companies in four countries produce most of the world's lithium — and a battery maker owns the mine that sets the price. Filter by segment or search.</p>
+  <div class="map-controls" id="coFilters">
+    <button class="chip c-mine on" data-seg="mine">⛏ Miners &amp; brine</button>
+    <button class="chip c-proc on" data-seg="sep">🏭 Conversion &amp; chemicals</button>
+    <button class="chip c-dev on" data-seg="dev">◐ Developers</button>
+  </div>
+  <div class="co-search">
+    <input id="coSearch" type="search" placeholder="Search company, asset, country…" aria-label="Search companies">
+    <span class="co-count" id="coCount"></span>
+  </div>
+  <div class="co-wrap">
+    <table class="co">
+      <thead><tr><th>Company</th><th>Segment</th><th>Key assets</th><th>Status &amp; recent signals</th></tr></thead>
+      <tbody id="coBody"></tbody>
+    </table>
+  </div>
+  <div class="note">Company status reflects public disclosures as of August 2026. This is an observational tracker, not investment advice.</div>
+  <div class="src">Sources: company disclosures &amp; filings; USGS MCS 2026; trade press (Reuters, MINING.com, Benchmark Source, Fastmarkets, Northern Miner).</div>
+</section>
+
+<section id="sources-sec">
+  <div class="kicker">Data &amp; methodology</div>
+  <h2>Open data sources</h2>
+  <ul class="sources">
+    <li><b><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf">USGS Mineral Commodity Summaries 2026 — Lithium</a></b> — world mine production, reserves and resources, US trade, prices and end-use shares. 2025 figures are estimates; US production is withheld.</li>
+    <li><b><a href="https://www.iea.org/reports/global-ev-outlook-2026">IEA Global EV Outlook 2026</a></b> and the <a href="https://www.iea.org/reports/global-critical-minerals-outlook-2025">Global Critical Minerals Outlook 2025</a> — battery demand, EV sales, refining-concentration estimates and demand scenarios to 2040.</li>
+    <li><b><a href="https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/">British Geological Survey — World Mineral Statistics</a></b> — long-run lithium-minerals production series (1974–2024), also behind this site's <a href="/supply-chain/">supply-chain map</a>.</li>
+    <li><b>Prices</b> — Benchmark Mineral Intelligence assessments (the source of USGS's annual averages) and <a href="https://www.fastmarkets.com/metals-and-mining/battery-raw-materials/lithium/lithium-carbonate-prices/">Fastmarkets</a> spot assessments; Guangzhou Futures Exchange carbonate contracts as reported by Reuters and <a href="https://www.mining.com/china-lithium-price-slides-on-speculation-over-catl-mine-restart/">MINING.com</a>.</li>
+    <li><b>Chile &amp; the Atacama</b> — <a href="https://acuerdocodelcosqm.cl/en/codelco-sqm-partnership/">Codelco–SQM partnership documents (NovAndino Litio)</a>; SQM filings; Chilean government announcements.</li>
+    <li><b>US policy &amp; projects</b> — <a href="https://www.lithiumamericas.com/">Lithium Americas</a> disclosures on the DOE loan and government warrants; DOE Loan Programs Office; Federal Register.</li>
+    <li><b>Supply events</b> — company disclosures: CATL (Jianxiawo), <a href="https://www.mineralresources.com.au/news/minres-to-restart-bald-hill-lithium-mine/">Mineral Resources</a> (Bald Hill restart), <a href="https://www.riotinto.com/">Rio Tinto</a> (Arcadium, Rincon), Albemarle, Pilbara Minerals, Ganfeng and Sinomine filings; <a href="https://source.benchmarkminerals.com/">Benchmark Source</a> reporting.</li>
+    <li><b>Notes</b> — mine and plant coordinates are approximate. Conversion, cathode and cell shares are IEA/Benchmark estimates; hard-rock vs brine route shares are approximate. All lithium tonnages are lithium content unless stated as LCE (lithium carbonate equivalent; 1 t Li ≈ 5.32 t LCE). Last data refresh: August 2026.</li>
+  </ul>
+</section>
+
+<section id="faq-sec">
+  <div class="kicker">FAQ</div>
+  <h2>Common questions</h2>
+  <div class="faq">
+    <details>
+      <summary>Is the world running out of lithium?</summary>
+      <p>No. USGS puts global reserves at 37 million tonnes of lithium — about 127 years of production at the 2025 rate — and identified resources at roughly 150 million tonnes. The constraint is not geology but timing and processing: demand is growing so fast that supply has swung from shortage to glut and back within five years, and almost every tonne must pass through a conversion plant, about 70% of which are in China.</p>
+    </details>
+    <details>
+      <summary>Which country produces the most lithium?</summary>
+      <p>Australia mined about 92,000 of the world's 290,000 tonnes of lithium content in 2025, ahead of China (62,000 t) and Chile (56,000 t), according to USGS estimates. But the leverage sits one step downstream: China converts roughly 70% of the world's lithium into battery-grade chemicals and makes about 85% of cathode active material.</p>
+    </details>
+    <details>
+      <summary>Why did lithium prices crash and then rebound?</summary>
+      <p>The 2021–22 EV boom caught supply flat-footed and pushed battery-grade lithium carbonate to an average of $63,700 per tonne in 2022. The wave of new mines it financed then flooded the market: prices fell about 85% to a $9,000 average in 2025, forcing curtailments across Australia, Canada and China. When CATL's giant Jianxiawo mine lost its permit in August 2025 just as EV and storage demand surged, futures more than doubled, topping ¥200,000 (~$29,500) per tonne in 2026 before restarts cooled the rally back to roughly $18,000–23,000.</p>
+    </details>
+    <details>
+      <summary>What is lithium used for?</summary>
+      <p>Batteries take 88% of world supply (USGS, 2025) — electric vehicles above all, plus grid storage, phones, laptops and power tools. The rest goes to ceramics and glass (4%), lubricating greases (2%), air treatment, casting fluxes and pharmaceuticals. No commercial battery chemistry with comparable energy density exists without lithium, though sodium-ion is emerging at the cheap end.</p>
+    </details>
+    <details>
+      <summary>Hard rock or brine — where does lithium actually come from?</summary>
+      <p>About two thirds of mined lithium comes from hard rock — spodumene ore in Australia, Africa, Brazil, Canada and China — which is fast to build but costlier to run, and almost all of it ships to China for conversion. Most of the rest is pumped from salt-flat brines in Chile, Argentina and China, which sit at the bottom of the cost curve but take 12–18 months of pond evaporation. Direct lithium extraction (DLE), which pulls lithium from brine in hours, is the technology both worlds are betting on.</p>
+    </details>
+    <details>
+      <summary>Why does a single Chinese mine move the world lithium price?</summary>
+      <p>CATL's Jianxiawo lepidolite mine in Jiangxi supplies roughly 3–6% of world lithium and sits near the top of the cost curve, making it the market's swing producer. When its permit lapsed in August 2025, Guangzhou futures more than doubled; when a new permit landed on 29 June 2026 and the mine restarted, prices gave back much of the rally. Since carbonate futures listed in 2023, positioning around this one mine has amplified every headline.</p>
+    </details>
+  </div>
+</section>
+
+<section id="research-sec">
+  <div class="research-box" style="background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px">
+    <div>
+      <div class="kicker">Custom research</div>
+      <h2>Need an ad hoc data-driven research report?</h2>
+      <p style="color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:18px">We produce bespoke, source-cited research on lithium and other strategic minerals — supply-chain mapping, trade-flow analysis, country and commodity deep-dives — built on the same open data behind this dashboard.</p>
+      <a class="research-cta" href="mailto:hello@mineral.watch">Reach out at hello@mineral.watch</a>
+    </div>
+    <div class="research-art net-art" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="orbit o2" cx="150" cy="150" r="126"/>
+        <circle cx="150" cy="150" r="116" fill="none" stroke="var(--accent)" stroke-width=".6" opacity=".55"/>
+        <path class="web d3" pathLength="1" d="M150 34 L119 104"/>
+        <path class="web d3" pathLength="1" d="M150 34 L181 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L119 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L82 140"/>
+        <path class="web d4" pathLength="1" d="M242 56 L181 104"/>
+        <path class="web d5" pathLength="1" d="M242 56 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M119 104 H181"/>
+        <path class="edge d1" pathLength="1" d="M119 104 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M181 104 L218 140"/>
+        <path class="edge d2" pathLength="1" d="M82 140 H218"/>
+        <path class="edge d2" pathLength="1" d="M82 140 L150 218"/>
+        <path class="edge d2" pathLength="1" d="M218 140 L150 218"/>
+        <path class="edge d3" pathLength="1" d="M119 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M181 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M150 140 V218"/>
+        <circle class="node" cx="119" cy="104" r="3"/>
+        <circle class="node" cx="181" cy="104" r="3"/>
+        <circle class="node" cx="82" cy="140" r="3"/>
+        <circle class="node" cx="218" cy="140" r="3"/>
+        <circle class="node" cx="150" cy="218" r="3"/>
+        <circle class="sat" cx="150" cy="34" r="2.2"/>
+        <circle class="sat b2" cx="58" cy="62" r="2.2"/>
+        <circle class="sat b3" cx="242" cy="56" r="2.2"/>
+        <circle class="sat b2" cx="258" cy="196" r="2.2"/>
+        <circle class="sat b3" cx="68" cy="240" r="2.2"/>
+        <circle cx="150" cy="140" r="5" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6">
+          <animate attributeName="r" values="5;16" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".6;0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="150" cy="140" r="4.2" fill="var(--accent)"/>
+        <circle r="1.6" fill="var(--accent2)">
+          <animateMotion path="M58 62 L119 104 L150 140" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.6" fill="var(--accent)">
+          <animateMotion path="M258 196 L218 140 L150 140" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<footer>
+  LithiumWatch · open data project · built with Leaflet &amp; Chart.js · data: USGS, IEA, BGS, Benchmark, Fastmarkets, company disclosures
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+/* ============ DATA (curated from USGS MCS 2026, IEA, Benchmark, company disclosures) ============ */
+const DATA = {
+  production2025: [ // thousand tonnes lithium content, USGS estimates
+    ["Australia",92],["China",62],["Chile",56],["Zimbabwe",28],
+    ["Argentina",23],["Brazil",12],["Mali",9.4],["Canada",5.6],["Portugal",0.38]
+  ],
+  reserves: [ // million tonnes lithium content
+    ["Chile",9.2],["Australia",8.4],["China",4.6],["United States",4.4],
+    ["Argentina",4.4],["Canada",1.6],["Brazil",0.54],["Zimbabwe",0.5],
+    ["Mali",0.37],["Portugal",0.06],["Other",2.4]
+  ],
+  trend: { // world mine production, kt Li content (USGS MCS, successive editions, as revised; excludes US)
+    years:[2018,2019,2020,2021,2022,2023,2024,2025],
+    prod:[95,86,82.5,107,146,204,222,290],
+    price:[null,null,null,11700,63700,39000,11800,9000] // USGS annual avg, battery-grade carbonate $/t
+  },
+  conv2025: [ // approximate % share of battery-grade chemical conversion (IEA / Benchmark estimates)
+    ["China",70],["Chile",15],["Argentina",7],["Rest of world",8]
+  ],
+  usImports:[["Chile",54],["Argentina",43],["Other",3]],
+  prices:{ years:[2021,2022,2023,2024,2025],
+    carbonate:[11700,63700,39000,11800,9000] },
+  chinaShares:[ // stage, share %
+    ["Mine production",21],["Lithium chemicals",70],["Cathode materials",85],["LFP battery cells",98]
+  ],
+  journey:[
+    {ico:"⛏",t:"1 · Mining & pumping",p:"Two worlds produce the same atom: open pits blast spodumene pegmatites in Australia, Africa and Brazil, while wellfields in Chile, Argentina and Qinghai pump brine from beneath salt crusts. Rock is fast to start and costly to run; brine is the opposite.",f:"290 kt mined in 2025 — Australia 32%, China 21%, Chile 19% (USGS)"},
+    {ico:"☀️",t:"2 · Concentrating",p:"Rock is crushed and floated to SC6 — 6% Li₂O spodumene concentrate, the world's traded feedstock. Brine spends 12–18 months in evaporation ponds, the sun doing for free what roasters do with gas — unless DLE plants shortcut it in hours.",f:"SC6 went from $800/t (Jan 2025) past $2,000/t (mid-2026)"},
+    {ico:"🏭",t:"3 · Converting",p:"Concentrate is roasted at 1,075°C, acid-leached and crystallised into battery-grade carbonate or hydroxide. This is the step China dominates — around 70% of world capacity — and the step every diversification plan is trying to rebuild elsewhere.",f:"~70% of lithium chemicals are made in China (IEA)"},
+    {ico:"⚗️",t:"4 · Cathode & cells",p:"The chemical becomes cathode powder — LFP from carbonate, high-nickel NMC from hydroxide — then electrodes, cells and packs. Concentration deepens: China makes ~85% of cathode active material and nearly all LFP cells.",f:"1.2 TWh of EV batteries deployed in 2025, up ~30% (IEA)"},
+    {ico:"🔌",t:"5 · EVs & storage",p:"One in four cars sold worldwide in 2025 was electric, and grid batteries are the fastest-growing buyer of cells. Batteries now take 88% of all lithium — a market that barely existed when this decade began.",f:"88% of lithium demand is batteries (USGS, 2025)"},
+    {ico:"♻️",t:"6 · Recycling",p:"Dead batteries are shredded into black mass and re-refined into the same chemicals. Capacity is growing fast in China, Korea and the US, but the feedstock is young: most EV batteries ever made are still on the road.",f:"Every retired EV pack holds ~40 kg of lithium carbonate equivalent"}
+  ],
+  forms:[
+    {s:"~1.4%",n:"Spodumene ore",g:"U",use:"In the ground",
+     d:"Lithium's hard-rock home: coarse crystals in granite pegmatites, typically 1–2% Li₂O in the ground. Greenbushes in Western Australia — the world's richest lithium mine — runs about double the grade of its rivals. Lepidolite, the mica that feeds Jiangxi's converters, is poorer and pricier to process, which is why it sets the marginal cost.",pr:null},
+    {s:"SC6",n:"Concentrate",g:"U",use:"The traded feedstock",
+     d:"Crushing and flotation upgrade ore to spodumene concentrate at 6% Li₂O — the unit the seaborne market trades. Nearly all of it sails to China: from the Pilbara, Zimbabwe, Mali, Brazil and Québec to converters in Sichuan and Jiangxi. Auctions by Pilbara Minerals made its price discovery public in the boom.",pr:"FOB Australia: $800/t (Jan 2025) → ~$2,000/t (Aug 2026)"},
+    {s:"~0.15%",n:"Brine",g:"U",use:"The liquid orebody",
+     d:"Beneath the salt crusts of the Atacama, the Argentine puna and Qinghai lies brine carrying lithium at hundreds of parts per million. Pumped into vast turquoise ponds, it concentrates for 12–18 months in the desert sun — the cheapest lithium on Earth, and the slowest to expand. Water politics shadow every expansion.",pr:null},
+    {s:"99.5%",n:"Carbonate",g:"M",use:"The benchmark",
+     d:"Battery-grade lithium carbonate (Li₂CO₃, ≥99.5%) is the market's headline product — the feedstock for LFP cathodes and the unit behind 'the lithium price'. Since July 2023 it has traded as a futures contract in Guangzhou, which now amplifies every supply headline into a double-digit move.",pr:"2022 avg $63,700/t → 2025 avg $9,000/t → ~$18,000–23,000/t (Aug 2026)"},
+    {s:"56.5%",n:"Hydroxide",g:"M",use:"The premium salt",
+     d:"Lithium hydroxide monohydrate feeds high-nickel NMC cathodes — the long-range chemistry — and can be made directly from spodumene, skipping carbonate. Australia's conversion ambitions (Kwinana, Kemerton, Mt Holland) were built around it; the LFP boom, which wants carbonate instead, is part of why they struggled.",pr:null},
+    {s:"Li",n:"Metal & chloride",g:"M",use:"The next frontier",
+     d:"Metallic lithium is a small, specialised market today — alloys, primary batteries, pharmaceuticals — but it is the anode of the solid-state batteries every major cell maker has roadmapped for the late 2020s. If lithium-metal anodes ship at scale, demand per cell jumps again.",pr:null},
+    {s:"LCE",n:"LCE",g:"M",use:"The yardstick",
+     d:"Lithium carbonate equivalent is the industry's common denominator: 1 tonne of lithium content ≈ 5.32 tonnes of LCE. World mine supply of ~290 kt lithium in 2025 is ~1.5 Mt LCE. Analyst balances, company guidance and this page's surplus figures are all quoted in it.",pr:null},
+    {s:"NMC/LFP",n:"Cathode & cells",g:"D",use:"Where lithium meets the battery",
+     d:"Carbonate and hydroxide become cathode active material, then cells. China makes about 85% of the world's cathode material and over 98% of LFP cells; Korea and Japan lead the high-nickel rest. Cell chemistry choices upstream — LFP vs NMC vs sodium-ion — are now the biggest single driver of which lithium product the world needs.",pr:null},
+    {s:"♻",n:"Black mass",g:"C",use:"The urban salar",
+     d:"Shredded battery scrap — 'black mass' — carries lithium, nickel and cobalt back to the refinery. Manufacturing offcuts dominate today's feed; end-of-life EV packs arrive in force in the 2030s. China already treats black mass as a strategic import, and Western recyclers fight to keep it from flowing east.",pr:null}
+  ],
+  companies:[
+    // seg: mine | sep | dev (space-separated when spanning segments)
+    // --- miners & brine operators ---
+    {n:"Albemarle",u:"https://www.albemarle.com/",hq:"United States",tik:"NYSE: ALB",seg:"mine sep dev",
+     a:"Greenbushes (49%) & Wodgina (50%, Australia); Salar de Atacama + La Negra (Chile); Silver Peak (Nevada); Kemerton & Qinzhou/Meishan conversion; Kings Mountain project (US)",
+     s:"The world's biggest lithium company spent the bust cutting: capex slashed, a Kemerton train mothballed, jobs shed. The rebound flips the script — Atacama rights run to 2043, and a $90M DoD award backs the Kings Mountain restart."},
+    {n:"SQM",u:"https://www.sqm.com/",hq:"Chile",tik:"NYSE: SQM",seg:"mine sep",
+     a:"Salar de Atacama brine + Salar del Carmen carbonate/hydroxide plants (Chile); Mt Holland JV with Wesfarmers + Kwinana refinery (Australia)",
+     s:"The world's largest brine producer folded its crown jewel into NovAndino Litio with Codelco (Dec 2025): SQM operates until 2031, the state holds 50%+1, and the JV targets ~70% more Atacama output with DLE — secured to 2060."},
+    {n:"Codelco (NovAndino Litio)",u:"https://acuerdocodelcosqm.cl/en/codelco-sqm-partnership/",hq:"Chile",tik:"state-owned",seg:"mine dev",
+     a:"NovAndino Litio JV (50%+1) over the Salar de Atacama; Salares Maricunga project",
+     s:"The copper giant is now Chile's lithium landlord: majority control of the world's second-largest lithium operation from 2026, operational control from 2031, and a $3B investment plan budgeted with SQM in May 2026."},
+    {n:"Rio Tinto Lithium",u:"https://www.riotinto.com/",hq:"UK / Australia",tik:"LSE: RIO · ASX: RIO",seg:"mine sep dev",
+     a:"Fénix/Hombre Muerto & Olaroz (Argentina), Rincon + $2.5B expansion; Mt Cattlin (on care & maintenance); Jadar (Serbia, stalled); chemicals plants in the US, China, Japan",
+     s:"Born from the $6.7B Arcadium takeover (closed Mar 2025) — the industry's biggest countercyclical bet. Rincon's starter plant is ramping toward a 60 kt/yr build-out; Jadar remains hostage to Serbian politics."},
+    {n:"Pilbara Minerals",u:"https://www.pilbaraminerals.com.au/",hq:"Australia",tik:"ASX: PLS",seg:"mine dev",
+     a:"Pilgangoora (world's largest independent hard-rock operation); Colina project (Brazil, via Latin Resources); POSCO hydroxide JV (Korea)",
+     s:"The pure-play bellwether: rode the bust with cash reserves and expansion options, and its P680/P1000 plants position it first for the rebound. Its concentrate auctions made spodumene price discovery public."},
+    {n:"Mineral Resources",u:"https://www.mineralresources.com.au/",hq:"Australia",tik:"ASX: MIN",seg:"mine",
+     a:"Wodgina (50%), Mt Marion (50%, with Ganfeng), Bald Hill (100%)",
+     s:"Restarted Bald Hill in May 2026 after an 18-month pause — the restart that signalled the recovery. Now the only company running three hard-rock lithium mines, though balance-sheet strain from its iron ore and haulage arms shadows the story."},
+    {n:"IGO",u:"https://www.igo.com.au/",hq:"Australia",tik:"ASX: IGO",seg:"mine sep",
+     a:"Greenbushes (24.99% effective, via Tianqi JV); Kwinana hydroxide refinery stake",
+     s:"Owns a slice of the world's best lithium mine and a piece of its most troubled refinery: Greenbushes prints cash through every cycle, while Kwinana's train two was scrapped and write-downs piled up."},
+    {n:"Tianqi Lithium",u:"https://www.tianqilithium.com/",hq:"China",tik:"SZSE: 002466 · HKEX: 9696",seg:"mine sep",
+     a:"Greenbushes (26% effective); Kwinana refinery (Australia); Shehong & Zhangjiagang converters (China); 22% of SQM",
+     s:"The most internationalised Chinese producer — stakes in the best Australian rock and the biggest Chilean brine — but the bust years hit hard, and its SQM stake now sits alongside Codelco's new control."},
+    {n:"Ganfeng Lithium",u:"https://www.ganfenglithium.com/",hq:"China",tik:"SZSE: 002460 · HKEX: 1772",seg:"mine sep dev",
+     a:"Mt Marion (50%), Goulamina (Mali), Cauchari-Olaroz & Mariana (Argentina), Sonora clay (Mexico, disputed); converters in Xinyu & Ningdu; solid-state R&D",
+     s:"China's most vertically ambitious lithium house: mines on four continents feeding its own converters. Goulamina's ramp made Mali a top-seven producer in year one; the Mexican clay concessions remain in arbitration."},
+    {n:"CATL",u:"https://www.catl.com/en/",hq:"China",tik:"SZSE: 300750 · HKEX: 3750",seg:"mine sep",
+     a:"Jianxiawo lepidolite mine + Jiangxi converters; the world's largest battery maker (~1/3 of global cells); sodium-ion (Naxtra) line",
+     s:"The battery giant whose mine sets the lithium price: Jianxiawo's Aug 2025 permit lapse doubled futures, and its June 2026 restart permit knocked them back down. Vertical integration as market power, demonstrated twice."},
+    {n:"Sinomine Resource Group",u:"http://www.sinomine.com/",hq:"China",tik:"SZSE: 002738",seg:"mine sep",
+     a:"Bikita (Zimbabwe), Tanco (Canada); Chinese conversion plants; caesium/tantalum arms",
+     s:"Zimbabwe's biggest lithium operator, racing Harare's January 2027 concentrate-export ban by building a lithium-sulfate plant at Bikita to keep shipping legally — the template for Chinese miners across the country."},
+    {n:"Zhejiang Huayou Cobalt",u:"https://www.huayou.com/",hq:"China",tik:"SSE: 603799",seg:"mine sep",
+     a:"Arcadia mine + sulfate plant build (Zimbabwe); cathode and nickel empire (Indonesia)",
+     s:"The cobalt-and-nickel major that added Zimbabwean lithium: Arcadia feeds its cathode chain, and its in-country processing build is Exhibit A of the export ban working as intended."},
+    {n:"Chengxin Lithium",u:"http://www.chengxinlithium.com/",hq:"China",tik:"SZSE: 002240",seg:"mine sep",
+     a:"Sabi Star (Zimbabwe); Sichuan converters",
+     s:"Mid-tier Chinese converter with its own African rock — part of the wave that made Zimbabwe the world's No. 4 producer in three years."},
+    {n:"Qinghai Salt Lake Industry",u:"https://www.qhyhjt.com/",hq:"China",tik:"SZSE: 000792",seg:"mine sep",
+     a:"Chaerhan (Qarhan) salt lake brine + carbonate plants, Qinghai",
+     s:"China's domestic brine champion, running adsorption DLE at scale on low-grade brine — proof the technology works commercially, years before Western salars adopted it. Now under China Minmetals' wing."},
+    {n:"Sigma Lithium",u:"https://www.sigmalithiumresources.com/",hq:"Brazil / Canada",tik:"NASDAQ: SGML",seg:"mine",
+     a:"Grota do Cirilo (Minas Gerais) — 'Greentech' plant, zero-tailings-dam design",
+     s:"Brazil's lithium flagship and its marketing pioneer: 'green lithium' concentrate shipped to Asia at costs low enough to survive the bust. Anchor of Minas Gerais's self-styled Lithium Valley."},
+    {n:"Liontown Resources",u:"https://www.ltresources.com.au/",hq:"Australia",tik:"ASX: LTR",seg:"mine",
+     a:"Kathleen Valley (underground, ramped from Jul 2024)",
+     s:"Survived Albemarle's abandoned takeover, Gina Rinehart's blocking stake and first production into the worst market in years — now ramping Australia's newest big mine into the recovery."},
+    {n:"Eramet",u:"https://www.eramet.com/",hq:"France",tik:"EPA: ERA",seg:"mine sep",
+     a:"Centenario-Ratones (Argentina) — direct lithium extraction at commercial scale",
+     s:"Europe's first big lithium producer, and DLE's flagship: Centenario pulls lithium from brine in days, not pond-years. Its ramp is the industry's live test of whether the technology scales economically."},
+    {n:"POSCO Holdings",u:"https://www.posco-inholdings.com/",hq:"South Korea",tik:"KRX: 005490",seg:"mine sep",
+     a:"Sal de Oro (Hombre Muerto, Argentina); hydroxide plants at Gwangyang; Pilbara JV",
+     s:"Korea's integrated bet: Argentine brine and Australian spodumene feeding home-soil conversion for its own cathode ecosystem — the most complete non-Chinese chain in Asia."},
+    {n:"Zijin Mining",u:"https://www.zijinmining.com/",hq:"China",tik:"SSE: 601899 · HKEX: 2899",seg:"mine dev",
+     a:"Tres Quebradas (Argentina), Lakkor Tso (Tibet); Manono-north JV (DR Congo)",
+     s:"The copper-gold giant's lithium arm: 3Q entered production in 2025, and its Congo position adds a claim on Manono — the world's largest undeveloped hard-rock deposit."},
+    // --- conversion & chemicals ---
+    {n:"Tesla",u:"https://www.tesla.com/",hq:"United States",tik:"NASDAQ: TSLA",seg:"sep",
+     a:"Corpus Christi lithium refinery (Texas)",
+     s:"The only carmaker refining its own lithium: the Texas plant, commissioned through 2025, converts spodumene for its cell lines — a hedge against both Chinese converters and chemical-market whiplash."},
+    {n:"AMG Critical Materials",u:"https://amg-nv.com/",hq:"Netherlands / Germany",tik:"AMS: AMG",seg:"mine sep",
+     a:"Mibra mine (Brazil); Bitterfeld hydroxide plant (Germany) — Europe's first",
+     s:"Quietly built Europe's first battery-grade lithium hydroxide plant (2024) on Brazilian feedstock — small, but the continent's only working proof that conversion can live outside Asia."},
+    {n:"Yahua Industrial",u:"http://www.yahua.com.cn/",hq:"China",tik:"SZSE: 002497",seg:"sep",
+     a:"Sichuan converters; long-term hydroxide supply to Tesla and Korean cell makers",
+     s:"The archetypal independent Chinese converter: no big mines of its own, buying concentrate from Australia and Africa and living on conversion margins that the price cycle whipsaws."},
+    // --- developers ---
+    {n:"Lithium Americas",u:"https://www.lithiumamericas.com/",hq:"US / Canada",tik:"NYSE: LAC",seg:"dev",
+     a:"Thacker Pass (Nevada) — the largest known US lithium resource; GM JV (38%)",
+     s:"The state-backed flagship: a $2.26B DOE loan (advances flowing since Oct 2025), US government warrants for 5%, GM as partner and 1,600 workers on site. Phase 1 targets mechanical completion in late 2027 — ~40 kt/yr of carbonate from clay."},
+    {n:"ioneer",u:"https://www.ioneer.com/",hq:"US / Australia",tik:"ASX: INR · NASDAQ: IONR",seg:"dev",
+     a:"Rhyolite Ridge lithium-boron (Nevada)",
+     s:"Closed a ~$996M DOE loan in January 2025 and moved to construction: boron by-product credits and a rare non-clay, non-brine chemistry make it the other Nevada project to watch."},
+    {n:"Standard Lithium",u:"https://www.standardlithium.com/",hq:"Canada / US",tik:"NYSE-A: SLI",seg:"dev",
+     a:"South West Arkansas JV with Equinor (Smackover brine); demonstration DLE plant at El Dorado",
+     s:"Longest-running Smackover player, now with Equinor's balance sheet and a DOE grant behind a phase-one FID — the bridgehead of oilfield-brine lithium in America."},
+    {n:"ExxonMobil (Mobil Lithium)",u:"https://corporate.exxonmobil.com/what-we-do/delivering-industrial-solutions/mobil-lithium",hq:"United States",tik:"NYSE: XOM",seg:"dev",
+     a:"Smackover leases (Arkansas); DLE development",
+     s:"Big Oil's loudest lithium entry: drilling its first lithium wells with production targeted before decade's end and supply MOUs with cell makers already signed. Chevron bought neighbouring acreage in 2025 — the majors now compete underground."},
+    {n:"Vulcan Energy",u:"https://v-er.eu/",hq:"Germany / Australia",tik:"ASX: VUL · FRA: VUL",seg:"dev",
+     a:"Zero Carbon Lithium — geothermal DLE, Upper Rhine Valley (Landau)",
+     s:"Europe's most original bet: co-producing lithium and renewable heat from geothermal brine under Germany's industrial heartland, with EU strategic-project status and carmaker offtakes riding on the ramp."},
+    {n:"Sibanye-Stillwater (Keliber)",u:"https://www.sibanyestillwater.com/",hq:"South Africa / Finland",tik:"NYSE: SBSW",seg:"dev",
+     a:"Keliber (Kokkola, Finland) — mine + hydroxide refinery",
+     s:"The EU's first integrated ore-to-hydroxide chain, commissioning from 2026 — small tonnes, big symbolism for a bloc that currently converts almost nothing."},
+    {n:"Elevra Lithium",u:"https://elevralithium.com/",hq:"Australia / Canada",tik:"ASX: ELV · NASDAQ: ELVR",seg:"mine dev",
+     a:"North American Lithium (Québec, operating); Moblan project",
+     s:"Born from the 2025 Sayona-Piedmont merger: Québec's only producing spodumene mine plus a development pipeline, positioned for a North American supply chain that tariffs and IRA rules keep promising."},
+    {n:"KoBold Metals",u:"https://www.koboldmetals.com/",hq:"United States",tik:"private",seg:"dev",
+     a:"Manono (DR Congo) — framework agreement to develop the Roche Dure deposit",
+     s:"The AI-exploration company's boldest move: a 2025 agreement with Kinshasa to unlock the world's largest undeveloped hard-rock lithium deposit, stepping into a concession fight that stranded it for years."},
+    {n:"European Metals",u:"https://www.europeanmet.com/",hq:"Czechia / Australia",tik:"ASX: EMH",seg:"dev",
+     a:"Cínovec (with ČEZ) — Europe's largest hard-rock lithium resource",
+     s:"EU strategic-project status and a state utility partner give the old Erzgebirge tin district a second life — if permitting and financing land, it anchors Central European supply."}
+  ],
+  sites:[
+    // type: mine | brine | proc | dis | dev ; size 1-3
+    // --- hard-rock mines (producing) ---
+    {n:"Greenbushes",c:"Australia",ll:[-33.86,116.06],ty:"mine",sz:3,d:"The world's largest and richest lithium mine (Talison: Tianqi/IGO 51%, Albemarle 49%): ~2% Li₂O ore, roughly double rivals' grade. It alone supplies about a fifth of world lithium."},
+    {n:"Pilgangoora",c:"Australia",ll:[-21.05,118.90],ty:"mine",sz:3,d:"Pilbara Minerals' flagship — the largest independent hard-rock operation, whose spodumene auctions gave the market public price discovery. P680/P1000 expansions ready it for the rebound."},
+    {n:"Wodgina",c:"Australia",ll:[-21.18,118.68],ty:"mine",sz:2,d:"MinRes/Albemarle JV in the Pilbara; restarted in 2019's ashes, ran through the bust, and anchors MinRes's three-mine lithium portfolio."},
+    {n:"Mt Marion",c:"Australia",ll:[-30.98,121.05],ty:"mine",sz:2,d:"MinRes/Ganfeng JV near Kalgoorlie — one of the first big spodumene mines of the EV era, its concentrate flowing to Ganfeng's Chinese converters."},
+    {n:"Kathleen Valley",c:"Australia",ll:[-27.63,120.61],ty:"mine",sz:2,d:"Liontown's underground mine, ramping since July 2024 — first production landed in the bust, and the ramp-up meets the recovery."},
+    {n:"Mt Holland",c:"Australia",ll:[-32.10,119.76],ty:"mine",sz:2,d:"Covalent JV (SQM/Wesfarmers): the Earl Grey deposit feeds a concentrator plus a new Kwinana refinery — Chile's biggest producer betting on Australian rock."},
+    {n:"Bald Hill",c:"Australia",ll:[-31.65,121.52],ty:"mine",sz:1,d:"MinRes restarted Bald Hill in May 2026 after an 18-month pause — the restart that confirmed the price recovery, ~140 kt/yr of SC6-equivalent."},
+    {n:"Jianxiawo",c:"China",ll:[27.67,114.28],ty:"mine",sz:3,d:"CATL's lepidolite giant in Jiangxi — roughly 3–6% of world supply and the market's swing producer. Its Aug 2025 permit lapse doubled futures; a new permit (29 Jun 2026) brought it back, ~62.5 kt LCE forecast for 2026."},
+    {n:"Yichun lepidolite district",c:"China",ll:[27.85,114.42],ty:"mine",sz:2,d:"The 'lithium capital of Asia': a cluster of lepidolite mines and converters whose high-cost tonnes set the marginal price — and absorb Beijing's 'anti-involution' production discipline."},
+    {n:"Jiajika (Sichuan)",c:"China",ll:[30.35,101.50],ty:"mine",sz:2,d:"China's largest spodumene district, on the eastern Tibetan Plateau — expanding hard as Beijing pushes domestic resource security."},
+    {n:"Bikita",c:"Zimbabwe",ll:[-20.08,31.42],ty:"mine",sz:2,d:"Africa's oldest lithium mine, reborn under Sinomine: petalite and spodumene, plus a new lithium-sulfate plant racing the January 2027 concentrate-export ban."},
+    {n:"Arcadia",c:"Zimbabwe",ll:[-17.72,31.24],ty:"mine",sz:2,d:"Huayou Cobalt's open pit outside Harare — the anchor of Zimbabwe's leap to world No. 4 producer, now adding in-country sulfate processing."},
+    {n:"Sabi Star",c:"Zimbabwe",ll:[-18.92,32.10],ty:"mine",sz:1,d:"Chengxin Lithium's fast-built spodumene mine in Manicaland — Chinese converter capital moving upstream."},
+    {n:"Kamativi",c:"Zimbabwe",ll:[-18.32,27.06],ty:"mine",sz:1,d:"Old tin tailings and new pegmatite mining — one of five Zimbabwean operations feeding China's converters."},
+    {n:"Goulamina",c:"Mali",ll:[-11.87,-7.43],ty:"mine",sz:2,d:"Ganfeng's West African flagship, first concentrate December 2024 — it took Mali from nearly zero to 9,400 t of lithium in its first full year, with the junta holding a stake."},
+    {n:"Bougouni",c:"Mali",ll:[-11.42,-7.55],ty:"mine",sz:1,d:"Kodal Minerals' (with Hainan Mining) second Malian mine, shipping since 2025 — African hard rock is the fastest-growing feed for Chinese converters."},
+    {n:"Grota do Cirilo",c:"Brazil",ll:[-16.20,-42.30],ty:"mine",sz:2,d:"Sigma Lithium's 'Greentech' operation in Minas Gerais — zero tailings dams, renewable power, and costs low enough to ship through the bust."},
+    {n:"Mibra (AMG)",c:"Brazil",ll:[-21.77,-45.23],ty:"mine",sz:1,d:"AMG's tantalum-lithium mine, the feedstock behind Europe's first hydroxide plant at Bitterfeld."},
+    {n:"North American Lithium",c:"Canada",ll:[48.36,-77.78],ty:"mine",sz:1,d:"Québec's only producing spodumene mine (Elevra, post Sayona-Piedmont merger) — the seed of a would-be North American supply chain."},
+    {n:"Tanco",c:"Canada",ll:[50.37,-95.45],ty:"mine",sz:1,d:"Sinomine's Manitoba mine — historic caesium producer, now also shipping spodumene to China."},
+    // --- brine operations ---
+    {n:"Salar de Atacama (SQM / NovAndino)",c:"Chile",ll:[-23.45,-68.20],ty:"brine",sz:3,d:"The world's richest lithium brine and second-largest operation — from 2026 run by NovAndino Litio (Codelco 50%+1, SQM operating to 2031, secured to 2060), with a $3B plan to lift output ~70% using DLE."},
+    {n:"Salar de Atacama (Albemarle)",c:"Chile",ll:[-23.78,-68.35],ty:"brine",sz:2,d:"Albemarle's southern wellfields, feeding the La Negra plants under a contract running to 2043 — the other half of the Atacama duopoly."},
+    {n:"Fénix / Hombre Muerto",c:"Argentina",ll:[-25.35,-67.05],ty:"brine",sz:2,d:"Argentina's oldest lithium operation (1997), now Rio Tinto Lithium's — low-cost brine that came with the Arcadium deal."},
+    {n:"Olaroz",c:"Argentina",ll:[-23.45,-66.70],ty:"brine",sz:2,d:"Rio Tinto Lithium (ex-Orocobre/Arcadium) with Toyota Tsusho and Jujuy province — the first of the new-wave Argentine salares (2015)."},
+    {n:"Cauchari-Olaroz",c:"Argentina",ll:[-23.65,-66.82],ty:"brine",sz:2,d:"Ganfeng/Lithium Argentina's flagship — Argentina's largest lithium operation, ramped through the bust to full rates."},
+    {n:"Centenario-Ratones",c:"Argentina",ll:[-25.00,-66.75],ty:"brine",sz:1,d:"Eramet's DLE plant — Europe's first big lithium production, extracting from brine in days instead of pond-years. The industry's live test of direct extraction at scale."},
+    {n:"Sal de Oro",c:"Argentina",ll:[-25.42,-66.95],ty:"brine",sz:1,d:"POSCO's Hombre Muerto operation, feeding hydroxide plants in Korea — Seoul's independent lithium chain."},
+    {n:"Tres Quebradas (3Q)",c:"Argentina",ll:[-27.10,-68.70],ty:"brine",sz:1,d:"Zijin Mining's Catamarca brine, in production since 2025 — the Chinese copper-gold giant diversifying into lithium."},
+    {n:"Rincon",c:"Argentina",ll:[-24.25,-67.05],ty:"brine",sz:1,d:"Rio Tinto's own-built starter plant (first lithium late 2024) plus a $2.5B expansion toward 60 kt/yr — the major's flagship greenfield bet, using DLE."},
+    {n:"Chaerhan (Qarhan)",c:"China",ll:[36.90,95.20],ty:"brine",sz:2,d:"Qinghai Salt Lake Industry's adsorption-DLE operation on low-grade brine — proof at scale, years early, that direct extraction works commercially."},
+    {n:"Zabuye",c:"China",ll:[31.35,84.07],ty:"brine",sz:1,d:"Tibet's high-altitude salt lake, expanding with solar-thermal evaporation — part of Beijing's domestic-resource push."},
+    {n:"Silver Peak",c:"United States",ll:[37.75,-117.63],ty:"brine",sz:1,d:"Albemarle's Nevada operation — America's only producing lithium source since 1966, a reminder of how far behind US supply starts."},
+    // --- converters & refineries ---
+    {n:"Sichuan conversion cluster",c:"China",ll:[30.55,105.58],ty:"proc",sz:3,d:"Tianqi's Shehong plant and neighbours — the spodumene-conversion heartland that turns Australian and African rock into battery-grade chemicals."},
+    {n:"Xinyu (Ganfeng)",c:"China",ll:[27.82,114.93],ty:"proc",sz:3,d:"Ganfeng's home base in Jiangxi — one of the world's largest lithium-chemical complexes, fed by mines on four continents."},
+    {n:"Kwinana",c:"Australia",ll:[-32.23,115.77],ty:"proc",sz:1,d:"Tianqi/IGO's hydroxide refinery — Australia's first, chronically below plan; its cancelled second train became the symbol of how hard cloning Chinese conversion is. SQM's new Mt Holland refinery next door tries again."},
+    {n:"Kemerton",c:"Australia",ll:[-33.14,115.72],ty:"proc",sz:1,d:"Albemarle's hydroxide plant — two trains built of a planned four, one mothballed in the 2024 cuts. The bust's most expensive lesson in conversion economics."},
+    {n:"La Negra",c:"Chile",ll:[-23.75,-70.30],ty:"proc",sz:2,d:"Albemarle's carbonate plants near Antofagasta, converting Atacama brine concentrate."},
+    {n:"Salar del Carmen (SQM)",c:"Chile",ll:[-23.68,-70.25],ty:"proc",sz:2,d:"SQM's carbonate and hydroxide lines — the largest single lithium-chemical site outside China."},
+    {n:"Corpus Christi (Tesla)",c:"United States",ll:[27.90,-97.32],ty:"proc",sz:1,d:"Tesla's own spodumene refinery, commissioned through 2025 — the only carmaker-owned lithium conversion plant anywhere."},
+    {n:"Bessemer City",c:"United States",ll:[35.28,-81.28],ty:"proc",sz:1,d:"Albemarle's North Carolina chemicals plant — small today, strategic if Kings Mountain ore returns next door."},
+    {n:"Bitterfeld (AMG)",c:"Germany",ll:[51.62,12.32],ty:"proc",sz:1,d:"Europe's first battery-grade hydroxide plant (2024), running on Brazilian feedstock — modest tonnes, continental symbolism."},
+    {n:"Gwangyang (POSCO)",c:"South Korea",ll:[34.94,127.70],ty:"proc",sz:1,d:"POSCO's hydroxide plants, fed by Australian spodumene and Argentine brine — Korea's bid to de-Sinicise its cathode chain."},
+    // --- curtailed & suspended ---
+    {n:"Mt Cattlin",c:"Australia",ll:[-33.55,120.05],ty:"dis",sz:1,d:"Rio Tinto Lithium (ex-Arcadium) put Mt Cattlin on care and maintenance in 2025 as ore ran down and prices bottomed — a restart candidate as the market recovers."},
+    {n:"Finniss",c:"Australia",ll:[-12.55,130.95],ty:"dis",sz:1,d:"Core Lithium's Northern Territory mine, on care and maintenance since early 2024 — restart studies refreshed as prices doubled in 2026."},
+    {n:"Namibia lepidolite (Xinfeng)",c:"Namibia",ll:[-21.30,15.90],ty:"dis",sz:1,d:"USGS removed Namibia from its 2025 production table 'owing to legal uncertainties' — a licensing fight that shows African lithium politics cuts both ways."},
+    // --- development ---
+    {n:"Thacker Pass",c:"United States",ll:[41.71,-118.06],ty:"dev",sz:3,d:"The largest known US lithium resource (Lithium Americas/GM): $2.26B DOE loan, US government warrants for 5%, 1,600 workers on site, mechanical completion targeted late 2027 — ~40 kt/yr of carbonate from clay."},
+    {n:"Rhyolite Ridge",c:"United States",ll:[37.85,-117.88],ty:"dev",sz:1,d:"ioneer's lithium-boron project, in construction on a ~$996M DOE loan closed January 2025 — boron credits sweeten the economics."},
+    {n:"Smackover (Exxon / Standard-Equinor)",c:"United States",ll:[33.30,-92.70],ty:"dev",sz:2,d:"Oilfield brine under Arkansas: ExxonMobil targets production before decade's end, Standard Lithium and Equinor advance their JV, Chevron bought in next door — Big Oil's DLE proving ground."},
+    {n:"Salton Sea (Hell's Kitchen)",c:"United States",ll:[33.20,-115.60],ty:"dev",sz:2,d:"Geothermal brine + lithium co-production in California — 'Lithium Valley' holds giant resources, but costs and first-of-a-kind engineering keep slipping timelines."},
+    {n:"Kings Mountain",c:"United States",ll:[35.24,-81.34],ty:"dev",sz:1,d:"Albemarle's plan to reopen the historic mine that supplied America's mid-century lithium — backed by a $90M Defense Production Act award."},
+    {n:"James Bay & Whabouchi",c:"Canada",ll:[52.00,-76.50],ty:"dev",sz:1,d:"Québec's stalled spodumene pipeline (Rio Tinto Lithium; Nemaska with state backing) — paused by the bust, repriced by the rebound."},
+    {n:"Manono",c:"DR Congo",ll:[-7.30,27.40],ty:"dev",sz:2,d:"The world's largest undeveloped hard-rock deposit: KoBold's 2025 framework with Kinshasa targets Roche Dure while Zijin develops the north — after years of concession warfare stranded it all."},
+    {n:"Salar de Uyuni",c:"Bolivia",ll:[-20.30,-67.50],ty:"dev",sz:2,d:"The world's largest lithium resource (23 Mt) and its most stubborn: state-led plants underperform, and the CATL- and Rosatom-linked contracts stalled in the legislature await the new government's verdict."},
+    {n:"Maricunga",c:"Chile",ll:[-27.08,-69.08],ty:"dev",sz:1,d:"Chile's next salar: Codelco leads development under the National Lithium Strategy, with partner selection under way."},
+    {n:"Jadar",c:"Serbia",ll:[44.63,19.32],ty:"dev",sz:2,d:"Rio Tinto's jadarite deposit could supply much of Europe — but mass protests, a revoked-then-restored licence and EU-list snubs keep it Europe's most contested hole in the ground."},
+    {n:"Cínovec",c:"Czechia",ll:[50.73,13.77],ty:"dev",sz:1,d:"Europe's largest hard-rock resource (European Metals/ČEZ), an EU strategic project in the old Erzgebirge tin district."},
+    {n:"Keliber",c:"Finland",ll:[63.70,23.60],ty:"dev",sz:1,d:"Sibanye-Stillwater's integrated mine-to-hydroxide build — commissioning from 2026 as the EU's first complete lithium chain."},
+    {n:"Barroso",c:"Portugal",ll:[41.65,-7.75],ty:"dev",sz:1,d:"Savannah Resources' spodumene project — Western Europe's nearest-term mine, an EU strategic project, and a lightning rod for local opposition."},
+    {n:"Vulcan (Upper Rhine)",c:"Germany",ll:[49.20,8.12],ty:"dev",sz:1,d:"Geothermal DLE under the Upper Rhine Valley: lithium and renewable heat from the same wells, with carmaker offtakes waiting on the ramp."},
+    {n:"Cornish Lithium",c:"United Kingdom",ll:[50.23,-5.30],ty:"dev",sz:1,d:"Geothermal and hard-rock lithium in Cornwall's old mining district — the UK's homegrown hope."},
+    {n:"Ewoyaa",c:"Ghana",ll:[5.30,-1.00],ty:"dev",sz:1,d:"Atlantic Lithium's project would make Ghana the next West African producer — parliament's ratification and price recovery set the pace."},
+    {n:"Sonora",c:"Mexico",ll:[29.80,-109.70],ty:"dev",sz:1,d:"Ganfeng's clay project, stranded since Mexico nationalised lithium and cancelled concessions — now in international arbitration."}
+  ]
+};
+
+/* ============ helpers ============ */
+const C = getComputedStyle(document.documentElement);
+const col = v => C.getPropertyValue(v).trim();
+const PAL = ["#fb7185","#2dd4bf","#fbbf24","#60a5fa","#c4b5fd","#f87171","#94a3b8","#e879f9","#38bdf8","#a3e635","#64748b","#fda4af","#f472b6"];
+
+/* count-up hero stats */
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target, end=parseFloat(el.dataset.count), suf=el.dataset.suffix||"", pre=el.dataset.prefix||"", dec=end%1?1:0;
+  const t0=performance.now();
+  (function tick(t){const p=Math.min(Math.max((t-t0)/1200,0),1), v=end*(1-Math.pow(1-p,3));
+    el.textContent=pre+(end>=1000?Math.round(v).toLocaleString("en-US"):v.toFixed(dec))+suf;
+    if(p<1)requestAnimationFrame(tick);})(t0);
+  io.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+
+/* ============ MAP ============ */
+const map = L.map("map",{scrollWheelZoom:false,worldCopyJump:true}).setView([12,10],2);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{
+  attribution:'Tiles &copy; Esri &mdash; &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom:10
+}).addTo(map);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",{
+  maxZoom:10
+}).addTo(map);
+map.on("click",()=>map.scrollWheelZoom.enable());
+
+const groups = {mines:L.layerGroup().addTo(map), brines:L.layerGroup().addTo(map),
+                processing:L.layerGroup().addTo(map),
+                disrupted:L.layerGroup().addTo(map), development:L.layerGroup().addTo(map)};
+const TYCOL={mine:col("--mine"),brine:col("--brine"),proc:col("--proc"),dis:col("--dis"),dev:col("--dev")};
+const TYNAME={mine:"HARD-ROCK MINE",brine:"BRINE OPERATION",proc:"CONVERTER / REFINERY",dis:"CURTAILED / SUSPENDED",dev:"DEVELOPMENT"};
+const TYGRP={mine:"mines",brine:"brines",proc:"processing",dis:"disrupted",dev:"development"};
+
+DATA.sites.forEach(s=>{
+  const c=TYCOL[s.ty];
+  L.circleMarker(s.ll,{radius:4+s.sz*2.4,color:c,weight:1.5,fillColor:c,fillOpacity:.35})
+   .bindPopup(`<span class="pp-tag" style="background:${c}22;color:${c}">${TYNAME[s.ty]}</span><br><b>${s.n}</b> · ${s.c}<br>${s.d}`)
+   .addTo(groups[TYGRP[s.ty]]);
+});
+
+/* layer toggles */
+document.querySelectorAll(".chip[data-layer]").forEach(ch=>ch.addEventListener("click",()=>{
+  const g=groups[ch.dataset.layer];
+  if(ch.classList.toggle("on")) map.addLayer(g); else map.removeLayer(g);
+}));
+
+/* ============ FORMS GRID ============ */
+const GRPNAME={U:"Upstream (mine & salar)",M:"Midstream (conversion)",D:"Downstream (cathode & cells)",C:"Circular (recycling)"};
+const GRPCOL={U:col("--accent"),M:col("--accent2"),D:col("--dis"),C:col("--muted")};
+const elGrid=document.getElementById("elGrid"), elDetail=document.getElementById("elDetail");
+elGrid.innerHTML=DATA.forms.map((e,i)=>`
+  <button class="el g${e.g}" data-i="${i}" aria-label="${e.n}">
+    <span class="z">${String(i+1).padStart(2,"0")}</span>
+    <b>${e.s}</b><span>${e.n}</span>
+  </button>`).join("");
+function showEl(i){
+  const e=DATA.forms[i];
+  document.querySelectorAll(".el").forEach(el=>el.classList.toggle("sel",+el.dataset.i===i));
+  const grpCol=GRPCOL[e.g];
+  elDetail.innerHTML=`
+    <h3>${e.n} <small>· ${e.use}</small></h3>
+    <div class="tags">
+      <span class="pp-tag" style="background:${grpCol}22;color:${grpCol}">${GRPNAME[e.g].toUpperCase()}</span>
+    </div>
+    <p>${e.d}</p>
+    ${e.pr?`<div class="price">${e.pr}</div>`:""}`;
+}
+elGrid.addEventListener("click",ev=>{const b=ev.target.closest(".el");if(b)showEl(+b.dataset.i);});
+showEl(DATA.forms.findIndex(e=>e.n==="Carbonate"));
+
+/* ============ JOURNEY CARDS ============ */
+document.getElementById("journey").innerHTML = DATA.journey.map((j,i)=>`
+  <div class="jcard"><div class="num">${String(i+1).padStart(2,"0")}</div>
+    <div class="ico">${j.ico}</div><h3>${j.t}</h3><p>${j.p}</p>
+    <div class="fact">${j.f}</div></div>`).join("");
+
+/* ============ COMPANY TRACKER ============ */
+const SEGMETA={
+  mine:{label:"Miner / brine",color:col("--mine")},
+  sep:{label:"Conversion & chemicals",color:col("--proc")},
+  dev:{label:"Developer",color:col("--dev")}
+};
+const coState={segs:new Set(Object.keys(SEGMETA)),q:""};
+function renderCo(){
+  const q=coState.q.trim().toLowerCase();
+  const rows=DATA.companies.filter(c=>c.seg.split(" ").some(s=>coState.segs.has(s))&&
+    (!q||[c.n,c.hq,c.tik,c.a,c.s].join(" ").toLowerCase().includes(q)));
+  document.getElementById("coBody").innerHTML=rows.map(c=>{
+    const tags=c.seg.split(" ").map(s=>{const m=SEGMETA[s];
+      return `<span class="pp-tag" style="background:${m.color}22;color:${m.color}">${m.label}</span>`;}).join(" ");
+    return `<tr>
+      <td><b><a href="${c.u}" target="_blank" rel="noopener">${c.n}</a></b>
+        <div class="tik">${c.hq} · ${c.tik}</div></td>
+      <td>${tags}</td>
+      <td>${c.a}</td>
+      <td>${c.s}</td></tr>`;
+  }).join("")||`<tr><td colspan="4" style="text-align:center;padding:24px">No companies match.</td></tr>`;
+  document.getElementById("coCount").textContent=`${rows.length} of ${DATA.companies.length} companies`;
+}
+document.querySelectorAll("#coFilters .chip").forEach(ch=>ch.addEventListener("click",()=>{
+  const s=ch.dataset.seg;
+  if(ch.classList.toggle("on")) coState.segs.add(s); else coState.segs.delete(s);
+  renderCo();
+}));
+document.getElementById("coSearch").addEventListener("input",e=>{coState.q=e.target.value;renderCo();});
+renderCo();
+
+/* ============ CHARTS ============ */
+Chart.defaults.color=col("--muted");
+Chart.defaults.borderColor=col("--line");
+Chart.defaults.font.size=11;
+const fmtKt=n=>n>=1?n+" kt":Math.round(n*1000)+" t";
+const noLeg={plugins:{legend:{display:false}}};
+
+/* draw a total in the center of doughnut charts */
+Chart.register({
+  id:"centerText",
+  afterDraw(chart){
+    const opts=chart.options.plugins&&chart.options.plugins.centerText;
+    if(!opts||!opts.enabled) return;
+    if(!chart.chartArea) return;
+    const {ctx,chartArea:{left,right,top,bottom}}=chart;
+    const cx=(left+right)/2, cy=(top+bottom)/2;
+    ctx.save();
+    ctx.textAlign="center";
+    ctx.textBaseline="middle";
+    ctx.fillStyle=col("--txt");
+    ctx.font="700 19px -apple-system,Segoe UI,Roboto,sans-serif";
+    ctx.fillText(opts.text, cx, cy-(opts.label?9:0));
+    if(opts.label){
+      ctx.font="600 9.5px -apple-system,Segoe UI,Roboto,sans-serif";
+      ctx.fillStyle=col("--muted");
+      ctx.fillText(opts.label, cx, cy+10);
+    }
+    ctx.restore();
+  }
+});
+
+const donutOpts={maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+  tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}%`}}},cutout:"62%"};
+
+new Chart(chProd,{type:"bar",
+  data:{labels:DATA.production2025.map(d=>d[0]),
+    datasets:[{data:DATA.production2025.map(d=>d[1]),backgroundColor:DATA.production2025.map((d,i)=>i===0?col("--accent"):"#2dd4bf88"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{type:"logarithmic",ticks:{callback:v=>[1,10,50].includes(v)?v+" kt":""},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmtKt(c.parsed.x)} lithium content (log scale)`}}}}});
+
+new Chart(chRes,{type:"doughnut",
+  data:{labels:DATA.reserves.map(d=>d[0]),datasets:[{data:DATA.reserves.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed} Mt`}},
+    centerText:{enabled:true,text:"37 Mt",label:"world total"}}}});
+
+new Chart(chTrend,{type:"line",
+  data:{labels:DATA.trend.years,
+    datasets:[
+      {label:"Mine production (kt Li)",data:DATA.trend.prod,borderColor:col("--accent"),backgroundColor:"#fb718522",fill:true,tension:0,pointRadius:3,pointBackgroundColor:col("--accent"),yAxisID:"y"},
+      {label:"Carbonate price ($/t)",data:DATA.trend.price,borderColor:col("--accent2"),backgroundColor:"transparent",fill:false,tension:0,pointRadius:3,pointBackgroundColor:col("--accent2"),yAxisID:"y2",spanGaps:false}
+    ]},
+  options:{maintainAspectRatio:false,
+    scales:{y:{min:0,max:300,ticks:{callback:v=>v+" kt"},grid:{color:col("--line")},title:{display:false}},
+            y2:{position:"right",min:0,max:70000,ticks:{callback:v=>"$"+(v/1000)+"k"},grid:{display:false}},
+            x:{grid:{display:false}}},
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+      tooltip:{callbacks:{label:c=>c.dataset.yAxisID==="y2"?` Price: $${c.parsed.y.toLocaleString("en-US")}/t`:` Production: ${c.parsed.y} kt Li`}}}}});
+
+new Chart(chConv,{type:"bar",
+  data:{labels:DATA.conv2025.map(d=>d[0]),
+    datasets:[{data:DATA.conv2025.map(d=>d[1]),backgroundColor:DATA.conv2025.map((d,i)=>i===0?col("--accent"):"#2dd4bf88"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{max:80,ticks:{callback:v=>v+"%"},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ~${c.parsed.x}% of battery-grade conversion (est.)`}}}}});
+
+new Chart(chUsImp,{type:"doughnut",
+  data:{labels:DATA.usImports.map(d=>d[0]),datasets:[{data:DATA.usImports.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:donutOpts});
+
+new Chart(chPrices,{type:"bar",
+  data:{labels:DATA.prices.years,
+    datasets:[{data:DATA.prices.carbonate,backgroundColor:DATA.prices.carbonate.map((v,i)=>i===1?col("--accent"):"#2dd4bf88"),borderRadius:4}]},
+  options:{...noLeg,maintainAspectRatio:false,
+    scales:{y:{ticks:{callback:v=>"$"+(v/1000)+"k"},grid:{color:col("--line")}},x:{grid:{display:false}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` $${c.parsed.y.toLocaleString("en-US")}/t annual average`}}}}});
+
+/* china bars */
+document.getElementById("chinaBars").innerHTML = DATA.chinaShares.map(([s,v])=>`
+  <div class="bar-row"><span>${s}</span><div class="track"><div class="fill" data-w="${v}"></div></div><span class="val">~${v}%</span></div>`).join("");
+const io2=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.w+"%");io2.unobserve(e.target);}
+}),{threshold:.4});
+io2.observe(document.getElementById("chinaBars"));
+
+/* nav active state */
+const secs=[...document.querySelectorAll("section[id],header")];
+const navLinks=[...document.querySelectorAll("nav a.link")];
+const io3=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}
+}),{rootMargin:"-40% 0px -55% 0px"});
+secs.forEach(s=>io3.observe(s));
+</script>
+<script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

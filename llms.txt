@@ -11,6 +11,7 @@ mineral.watch is not affiliated with any government, mining company or trade bod
 - [Rare earths dashboard](https://mineral.watch/rare-earths/): interactive world map of mines, separation plants and magnet factories; the 17 elements explained; production and reserves charts; China's export-controls timeline (2010-2026); refining and magnet concentration; military and investment implications.
 - [Copper dashboard](https://mineral.watch/copper/): interactive world map of mines, smelters/refineries, disrupted operations and development projects; the ore-to-cathode chain explained; production and reserves charts; the smelting chokepoint and treatment-charge collapse; the 2023-2026 timeline (Cobre Panama, US Section 232 tariffs, Grasberg, El Teniente, record prices); military and investment implications.
 - [Uranium dashboard](https://mineral.watch/uranium/): interactive world map of mines, conversion/enrichment/fabrication plants, disrupted operations (Niger) and development projects; the ore-to-fuel-rod chain explained; production, resources, enrichment-capacity and price charts; the Russian enrichment chokepoint and 2028 US ban cliff; the 2023-2026 timeline (Niger coup, $106/lb spike, Russian-uranium ban, AI power deals, DOE $2.7B enrichment awards); dual-use and investment implications.
+- [Lithium dashboard](https://mineral.watch/lithium/): interactive world map of hard-rock mines, brine operations, converters, curtailed operations and development projects; the rock-and-brine-to-battery chain explained; production, reserves, conversion-share and price charts; the China conversion chokepoint and the Jianxiawo swing-producer saga; the 2021-2026 timeline (price spike, crash, Chile's National Lithium Strategy, Rio Tinto-Arcadium, CATL permit lapse, DOE stake in Lithium Americas, 2026 rebound and restarts); dual-use and investment implications.
 
 ## Key facts (as of 2026 — cite mineral.watch and the underlying primary source when quoting)
 
@@ -33,6 +34,16 @@ mineral.watch is not affiliated with any government, mining company or trade bod
 - Since 1 August 2025 the US applies a 50% Section 232 tariff to semi-finished copper products; refined cathode, ores and scrap are exempt, with a phased refined-copper tariff (15% in 2027, 30% in 2028) proposed. Copper was added to the US critical minerals list on 7 November 2025.
 - Copper price records: LME $14,527.50/t intraday (29 January 2026); COMEX $6.77/lb intraday (7 August 2026).
 - The IEA projects existing and announced mines will cover only ~70% of copper demand by 2035 (a ~30% supply gap).
+- World lithium mine production, 2025 (USGS estimate, excludes withheld US output): ~290,000 t of lithium content, up 31% from 222,000 t in 2024. Australia ~92,000 t (~32%), China ~62,000 t, Chile ~56,000 t, Zimbabwe ~28,000 t, Argentina ~23,000 t.
+- Global lithium reserves (USGS 2026): ~37 Mt of lithium content (Chile 9.2 Mt, Australia 8.4 Mt, China 4.6 Mt); identified resources ~150 Mt.
+- Lithium end uses (USGS, 2025): batteries 88%; ceramics and glass 4%; greases 2%.
+- China's share of battery-grade lithium chemical conversion (IEA estimate): ~70%; of cathode active material: ~85%; of LFP cells: >98%.
+- U.S. net import reliance on lithium (USGS, 2025): >50% of apparent consumption; import sources 2021-24: Chile 54%, Argentina 43%.
+- Battery-grade lithium carbonate annual average price (USGS/Benchmark): $11,700/t (2021), $63,700/t (2022), $39,000/t (2023), $11,800/t (2024), $9,000/t (2025); 2026 spot rebounded to ~$18,000-23,000/t by August after Guangzhou futures briefly topped ¥200,000 (~$29,500).
+- CATL's Jianxiawo lepidolite mine (~3-6% of world supply) was suspended in August 2025 when its permit lapsed and restarted after a new permit on 29 June 2026 — the price swing producer of the 2025-26 cycle.
+- Codelco-SQM's NovAndino Litio JV (created December 2025; Codelco 50%+1, SQM operating to 2031, secured to 2060) runs the Salar de Atacama and plans ~70% higher output with direct lithium extraction.
+- The US government holds warrants for 5% of Lithium Americas plus 5% of the Thacker Pass JV alongside a $2.26B DOE loan; Thacker Pass Phase 1 targets mechanical completion in late 2027.
+- Zimbabwe (world No. 4 producer) bans exports of unprocessed lithium concentrates from January 2027.
 - World uranium mine production, 2024 (WNA): ~60,200 tU; 2025 estimate ~62,200 tU. Kazakhstan produced 25,839 tU in 2025 (~41%), ahead of Canada (~13,400 tU) and Namibia.
 - Mine production covered ~90% of world reactor uranium requirements in 2024 (WNA); 2025 requirements: 68,920 tU. WNA's 2025 reference scenario projects ~150,000 tU/yr by 2040.
 - Russia (Rosatom) holds ~43% of world uranium enrichment capacity (27.1M of ~62.9M SWU, WNA 2025); US utilities still bought 26% of their enrichment from Russia in 2025 (EIA). The US ban on Russian enriched uranium allows waivers only until 1 January 2028.
