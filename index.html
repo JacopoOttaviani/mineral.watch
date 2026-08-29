@@ -68,7 +68,7 @@
         { "@type": "ListItem", "position": 4, "name": "Nickel" },
         { "@type": "ListItem", "position": 5, "name": "Rare earths", "url": "https://mineral.watch/rare-earths/" },
         { "@type": "ListItem", "position": 6, "name": "Copper", "url": "https://mineral.watch/copper/" },
-        { "@type": "ListItem", "position": 7, "name": "Manganese" },
+        { "@type": "ListItem", "position": 7, "name": "Manganese", "url": "https://mineral.watch/manganese/" },
         { "@type": "ListItem", "position": 8, "name": "Uranium", "url": "https://mineral.watch/uranium/" },
         { "@type": "ListItem", "position": 9, "name": "Antimony" }
       ]
@@ -90,7 +90,7 @@
           "name": "Which minerals does mineral.watch cover?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Graphite, rare earths, copper, uranium and lithium are live today, with dedicated dashboards for cobalt, nickel and manganese in development."
+            "text": "Graphite, rare earths, copper, uranium, lithium and manganese are live today, with dedicated dashboards for cobalt and nickel in development."
           }
         },
         {
@@ -207,6 +207,7 @@ nav a.cta:focus-visible::before,.btn:focus-visible::before{transform:translateX(
 .fcar-slide{flex:0 0 100%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always}
 .fcar-slide .feature{height:100%}
 /* front slide keeps the site accent; the rest carry their dashboard's color */
+.f-lithium{--accent:#fb7185}
 .f-uranium{--accent:#22d3ee}
 .f-copper{--accent:#e8926a}
 .f-ree{--accent:#a78bfa}
@@ -408,10 +409,25 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
 <section id="featured">
   <div class="fcar" aria-roledescription="carousel" aria-label="Live mineral dashboards">
     <div class="fcar-track" id="fcarTrack" tabindex="0" aria-label="Live mineral dashboards — scroll horizontally">
-      <div class="fcar-slide" data-name="Lithium" role="group" aria-roledescription="slide" aria-label="Lithium — 1 of 5">
+      <div class="fcar-slide" data-name="Manganese" role="group" aria-roledescription="slide" aria-label="Manganese — 1 of 6">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live · latest</div>
+            <h2 class="serif">Manganese: who hardens the world's steel?</h2>
+            <p>Interactive world map of mines, smelters and battery-grade refineries, production and price charts, the 2024 cyclone price spike, China's ~95% refining chokepoint and the deep-sea nodule race — built on USGS, IEA, BGS and price-agency data.</p>
+            <a class="btn primary" href="/manganese/">Open the Manganese dashboard →</a>
+          </div>
+          <div class="fchart">
+            <div class="fchart-h"><b>World mine production, 2018–2024</b><br>Million tonnes of manganese ore (gross weight) per year — a steady giant tied to steel</div>
+            <div class="fchart-box"><canvas id="chFeatMn"></canvas></div>
+            <div class="fchart-src">Source: BGS World Mineral Statistics</div>
+          </div>
+        </div>
+      </div>
+      <div class="fcar-slide f-lithium" data-name="Lithium" role="group" aria-roledescription="slide" aria-label="Lithium — 2 of 6">
+        <div class="feature">
+          <div>
+            <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
             <h2 class="serif">Lithium: who holds the world's charge?</h2>
             <p>Interactive world map of hard-rock mines, brine operations and converters, production and reserves charts, the China conversion chokepoint and the boom-bust-boom price cycle — built on USGS, IEA, BGS and price-agency data.</p>
             <a class="btn primary" href="/lithium/">Open the Lithium dashboard →</a>
@@ -423,7 +439,7 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-uranium" data-name="Uranium" role="group" aria-roledescription="slide" aria-label="Uranium — 2 of 5">
+      <div class="fcar-slide f-uranium" data-name="Uranium" role="group" aria-roledescription="slide" aria-label="Uranium — 3 of 6">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -438,7 +454,7 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-copper" data-name="Copper" role="group" aria-roledescription="slide" aria-label="Copper — 3 of 5">
+      <div class="fcar-slide f-copper" data-name="Copper" role="group" aria-roledescription="slide" aria-label="Copper — 4 of 6">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -453,7 +469,7 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-ree" data-name="Rare earths" role="group" aria-roledescription="slide" aria-label="Rare earths — 4 of 5">
+      <div class="fcar-slide f-ree" data-name="Rare earths" role="group" aria-roledescription="slide" aria-label="Rare earths — 5 of 6">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -468,7 +484,7 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-graphite" data-name="Graphite" role="group" aria-roledescription="slide" aria-label="Graphite — 5 of 5">
+      <div class="fcar-slide f-graphite" data-name="Graphite" role="group" aria-roledescription="slide" aria-label="Graphite — 6 of 6">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -491,7 +507,7 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
 <section id="minerals">
   <div class="kicker">The minerals</div>
   <h2 class="serif">One deep-dive per mineral</h2>
-  <p class="lede">Each mineral gets its own data dashboard: production, reserves, trade flows, prices and supply-chain concentration. Graphite, rare earths, copper, uranium and lithium are live; the rest are in the pipeline.</p>
+  <p class="lede">Each mineral gets its own data dashboard: production, reserves, trade flows, prices and supply-chain concentration. Graphite, rare earths, copper, uranium, lithium and manganese are live; the rest are in the pipeline.</p>
   <div class="mgrid">
     <a class="mcard" href="/graphite/">
       <span class="tag live">Live</span>
@@ -529,12 +545,12 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
       <h3>Copper</h3>
       <p>The metal of electrification: grids, EVs, AI data centres, the smelting chokepoint and a looming supply gap — mapped and charted.</p>
     </a>
-    <div class="mcard soon">
-      <span class="tag soon">Coming soon</span>
+    <a class="mcard" href="/manganese/">
+      <span class="tag live">Live</span>
       <span class="sym">Mn</span>
       <h3>Manganese</h3>
-      <p>From steel staple to battery cathode ingredient: high-purity supply under scrutiny.</p>
-    </div>
+      <p>The steel hardener turned battery metal: African and Australian mines, China's ~95% refining grip and the deep-sea nodule race — mapped and charted.</p>
+    </a>
     <a class="mcard" href="/uranium/">
       <span class="tag live">Live</span>
       <span class="sym">U</span>
@@ -665,7 +681,7 @@ footer{border-top:1px solid var(--line);padding:28px var(--pad);text-align:cente
     </details>
     <details>
       <summary>Which minerals does mineral.watch cover?</summary>
-      <p>Graphite, rare earths, copper, uranium and lithium are live today, with dedicated dashboards for cobalt, nickel and manganese in development.</p>
+      <p>Graphite, rare earths, copper, uranium, lithium and manganese are live today, with dedicated dashboards for cobalt and nickel in development.</p>
     </details>
     <details>
       <summary>What data sources does mineral.watch use?</summary>
@@ -741,6 +757,8 @@ const uTrend = [[2018,54759],[2019,54623],[2020,48437],[2021,48195], // tonnes U
   [2022,50465],[2023,55258],[2024,62463],[2025,62200]];
 const liTrend = [[2018,95],[2019,86],[2020,82.5],[2021,107], // kt lithium content (USGS MCS, successive editions; excludes US)
   [2022,146],[2023,204],[2024,222],[2025,290]];
+const mnTrend = [[2018,55.0],[2019,57.8],[2020,58.6],[2021,57.1], // Mt manganese ore, gross weight (BGS 2018–2024)
+  [2022,54.7],[2023,54.0],[2024,53.4]];
 const fmt = n => n>=1e6 ? (n/1e6).toFixed(2)+" Mt" : (n/1e3).toFixed(0)+" kt";
 const rootCss = getComputedStyle(document.documentElement);
 const gridLine = rootCss.getPropertyValue("--line").trim();
@@ -771,6 +789,12 @@ function slideAccent(el){
     .getPropertyValue("--accent").trim();
 }
 const featDraw = {
+  chFeatMn(el){
+    const a = slideAccent(el);
+    featLine(el, mnTrend.map(d=>d[0]), [
+      { data:mnTrend.map(d=>d[1]), borderColor:a, backgroundColor:a+"22", fill:true, tension:0, pointRadius:3, pointBackgroundColor:a }
+    ], { min:40, max:65, ticks:{ callback:v=>v+" Mt" } }, v=>v.toFixed(1)+" Mt ore", false);
+  },
   chFeatLi(el){
     const a = slideAccent(el);
     featLine(el, liTrend.map(d=>d[0]), [

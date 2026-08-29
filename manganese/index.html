@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ManganeseWatch — Tracking the Global Manganese Supply Chain</title>
+<meta name="description" content="Open data visualisation tracking the global manganese supply chain: the mines of the Kalahari, Gabon and Groote Eylandt, China's refining chokepoint, the steel backbone, the battery pivot and the deep-sea nodule race. Built on USGS, IEA, BGS and price-agency data.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="mineral.watch">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="https://mineral.watch/manganese/">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="alternate icon" href="/brand/favicon.png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mineral.watch/manganese/">
+<meta property="og:site_name" content="mineral.watch">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="ManganeseWatch — Tracking the Global Manganese Supply Chain">
+<meta property="og:description" content="Interactive world map of mines, smelters and refineries, production and price charts, the China refining chokepoint, the battery pivot and the deep-sea nodule race — built on USGS, IEA, BGS and price-agency data.">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ManganeseWatch — tracking the global manganese supply chain">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ManganeseWatch — Tracking the Global Manganese Supply Chain">
+<meta name="twitter:description" content="Interactive map, production and price charts, the 2024 cyclone spike, Gabon's export ban, the LMR battery bet and the nodule race — built on USGS, IEA, BGS and price-agency data.">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png">
+<meta name="twitter:image:alt" content="ManganeseWatch — tracking the global manganese supply chain">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
+        { "@type": "ListItem", "position": 2, "name": "Manganese", "item": "https://mineral.watch/manganese/" }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "ManganeseWatch — Global Manganese Supply Chain Data",
+      "description": "Mines, ferroalloy smelters and battery-grade refineries, production and reserves data, prices, trade flows and refining concentration for the global manganese supply chain.",
+      "url": "https://mineral.watch/manganese/",
+      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "temporalCoverage": "2018/2026",
+      "spatialCoverage": "Worldwide",
+      "variableMeasured": ["Mine production", "Reserves", "Refining capacity", "Prices", "Trade flows", "Companies"],
+      "isAccessibleForFree": true,
+      "license": "https://mineral.watch/",
+      "citation": [
+        "USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Manganese)",
+        "IEA Global Critical Minerals Outlook 2025",
+        "British Geological Survey, World Mineral Statistics",
+        "CRU Group and Fastmarkets price assessments",
+        "Company disclosures and government announcements"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is manganese used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 90% of manganese goes into steelmaking, where it removes oxygen and sulfur from molten iron and hardens the finished steel — USGS states flatly that manganese has no satisfactory substitute in its major applications. The rest goes into aluminium alloys (every beverage can), batteries (alkaline cells and, increasingly, lithium-ion cathodes), fertilisers, animal feed and water treatment. Batteries are the fastest-growing use: demand from that segment is projected to grow around eightfold this decade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which country produces the most manganese?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "South Africa mined about 7.6 million of the world's 20 million tonnes of manganese content in 2025 (USGS), from the Kalahari Manganese Field — which also holds roughly 70% of the world's identified resources. Gabon came second at about 5 million tonnes and Ghana leapt to third at about 2 million after doubling output in a year. But the leverage sits downstream: China refines more than 90% of the world's manganese metal and about 95% of battery-grade manganese sulphate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the world running out of manganese?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. USGS puts reserves at about 1.8 billion tonnes of manganese content — roughly 90 years at the 2025 mining rate — before counting the billions of tonnes lying in polymetallic nodules on the Pacific seabed. The risk is not geology but structure: ore is cheap and abundant, so almost nobody outside China has built the refineries that turn it into battery-grade product, and 100% of US consumption is imported."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did the manganese price spike in 2024?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In March 2024, Cyclone Megan destroyed the export wharf at South32's GEMCO mine on Groote Eylandt, Australia — roughly a tenth of world supply and a much larger share of high-grade ore. Panic buying drove 44%-grade ore from about $4 to nearly $9 per dmtu by August. Then China's steel slump caught up: port stocks swelled to about 6 million tonnes and prices collapsed below $4 by October. GEMCO resumed exports in May 2025; the 2025 average was $4.50/dmtu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is manganese's role in batteries?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Manganese has powered alkaline batteries for a century, and in lithium-ion it is the cheap, stable ingredient in NMC cathodes. The next wave leans on it harder: LMFP and lithium-manganese-rich (LMR) chemistries promise near-nickel energy at LFP-like cost — GM and LG Energy Solution plan LMR production for US electric trucks by 2028, and Chinese cathode makers are scaling LMFP. Every one of those routes runs through high-purity manganese sulphate, about 95% of which is refined in China."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are manganese nodules?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Potato-sized lumps on the abyssal Pacific seafloor that are roughly 30% manganese, plus nickel, cobalt and copper. The Clarion-Clipperton Zone alone holds billions of tonnes. After a 2025 US executive order opened a national permitting route, The Metals Company applied to NOAA for the first commercial recovery permit; NOAA found the application compliant in May 2026 and published it for comment that August, with a decision expected by early 2027 — over the objections of the International Seabed Authority, which says international waters are not America's to license."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#e879f9;--accent2:#60a5fa;
+  --mine:#e879f9;--proc:#60a5fa;--dis:#fbbf24;--dev:#c4b5fd;
+  --radius:14px;--pad:16px;
+  font-size:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+h1,h2,h3{line-height:1.2;font-weight:700}
+section{padding:40px var(--pad);max-width:1100px;margin:0 auto}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;margin-bottom:8px}
+h2{font-size:1.5rem;margin-bottom:10px}
+.lede{color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:20px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1100px;margin:0 auto}
+.nav-links{display:flex;align-items:center;gap:8px;flex:1;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px;flex:none}
+.brand span{color:var(--accent)}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap;flex:none}
+nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto;flex:none;position:relative;overflow:hidden;z-index:0}
+nav a.cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){nav a.cta::before{transition:none}}
+.research-cta{display:inline-block;background:var(--accent);color:var(--bg);font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none;position:relative;overflow:hidden;z-index:0}
+.research-cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+.research-cta:hover::before,.research-cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){.research-cta::before{transition:none}}
+
+/* hero */
+.hero{padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
+.hero h1{font-size:clamp(1.9rem,6.5vw,3.2rem);letter-spacing:-.02em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);max-width:560px;font-size:1rem}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.stat b{display:block;font-size:1.45rem;color:var(--accent);letter-spacing:-.01em}
+.stat span{font-size:.74rem;color:var(--muted)}
+
+/* map */
+#map{height:62vh;min-height:380px;border-radius:var(--radius);border:1px solid var(--line);z-index:1}
+.map-controls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:7px 14px;font-size:.8rem;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent}
+.chip.on{color:#0d1117;font-weight:700}
+.chip.on.c-mine{background:var(--mine);border-color:var(--mine)}
+.chip.on.c-proc{background:var(--proc);border-color:var(--proc)}
+.chip.on.c-dis{background:var(--dis);border-color:var(--dis)}
+.chip.on.c-dev{background:var(--dev);border-color:var(--dev)}
+.legend{font-size:.74rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--card)}
+.leaflet-popup-content{font-size:.82rem;line-height:1.5;margin:12px 14px}
+.leaflet-popup-content b{color:var(--accent)}
+.pp-tag{display:inline-block;font-size:.66rem;padding:1px 8px;border-radius:99px;margin-bottom:4px;font-weight:700}
+
+/* forms grid (ore → cathode) */
+.el-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px;margin-top:8px}
+.el{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 6px 10px;cursor:pointer;text-align:center;transition:.15s;position:relative;-webkit-tap-highlight-color:transparent}
+.el:hover{border-color:var(--accent)}
+.el.sel{border-color:var(--accent);background:#e879f914}
+.el b{display:block;font-size:.98rem;letter-spacing:-.01em}
+.el span{font-size:.6rem;color:var(--muted);display:block;margin-top:2px}
+.el .z{position:absolute;top:4px;left:7px;font-size:.56rem;color:var(--muted)}
+.el.gU b{color:var(--accent)}
+.el.gM b{color:var(--accent2)}
+.el.gD b{color:var(--dis)}
+.el.gC b{color:var(--muted)}
+.el-legend{font-size:.72rem;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.el-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.el-detail{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.el-detail h3{font-size:1.05rem;margin-bottom:2px}
+.el-detail h3 small{color:var(--muted);font-weight:400;font-size:.78rem}
+.el-detail .tags{margin:6px 0 10px;display:flex;gap:6px;flex-wrap:wrap}
+.el-detail p{font-size:.85rem;color:var(--muted)}
+.el-detail .price{margin-top:10px;font-size:.78rem;color:var(--accent);border-top:1px dashed var(--line);padding-top:8px}
+
+/* journey */
+.journey{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 calc(-1*var(--pad));padding-left:var(--pad);padding-right:var(--pad)}
+.jcard{scroll-snap-align:start;flex:0 0 260px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative}
+.jcard .num{position:absolute;top:14px;right:16px;font-size:1.6rem;font-weight:800;color:var(--line)}
+.jcard .ico{font-size:1.6rem;margin-bottom:10px}
+.jcard h3{font-size:1rem;margin-bottom:6px}
+.jcard p{font-size:.8rem;color:var(--muted)}
+.jcard .fact{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.76rem;color:var(--accent)}
+.jhint{font-size:.72rem;color:var(--muted);margin-top:6px}
+
+/* charts */
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card h3{font-size:.95rem;margin-bottom:4px}
+.card .sub{font-size:.74rem;color:var(--muted);margin-bottom:12px}
+.chartbox{position:relative;height:280px}
+.src{font-size:.68rem;color:var(--muted);margin-top:10px}
+
+/* china section */
+.big{font-size:clamp(2.6rem,10vw,4.5rem);font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1}
+.bars{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.bar-row{display:grid;grid-template-columns:150px 1fr 44px;align-items:center;gap:10px;font-size:.78rem}
+.bar-row .track{background:var(--bg2);border-radius:99px;height:10px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#f0abfc);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar-row .val{text-align:right;color:var(--muted)}
+
+/* process flow */
+.flow-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+.flow-wrap svg{min-width:980px;display:block}
+
+/* timeline */
+.tl{position:relative;margin-top:6px;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding-bottom:22px}
+.tl-item::before{content:"";position:absolute;left:-24px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl-item.hot::before{background:var(--accent)}
+.tl-date{font-size:.7rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.tl-item h4{font-size:.92rem;margin:3px 0 4px}
+.tl-item p{font-size:.8rem;color:var(--muted);max-width:640px}
+
+/* company tracker */
+.co-search{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.co-search input{flex:1 1 200px;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;color:var(--txt);font-size:.8rem;outline:none;-webkit-appearance:none}
+.co-search input:focus{border-color:var(--accent)}
+.co-search input::placeholder{color:var(--muted)}
+.co-count{font-size:.72rem;color:var(--muted)}
+.co-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+table.co{width:100%;min-width:900px;border-collapse:collapse;font-size:.79rem}
+.co th{text-align:left;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.co td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted);line-height:1.45}
+.co td:first-child{min-width:170px}
+.co td b{color:var(--txt);font-size:.82rem}
+.co td b a{color:var(--txt);text-decoration:none;border-bottom:1px dashed var(--line)}
+.co td b a:hover{color:var(--accent2);border-bottom-color:var(--accent2)}
+.co .tik{font-size:.68rem;color:var(--muted);margin-top:2px;white-space:nowrap}
+.co .pp-tag{white-space:nowrap;margin-bottom:0}
+
+/* mini cards (military / invest) */
+.mini-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.mini{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px}
+.mini h4{font-size:.86rem;margin-bottom:5px}
+.mini h4 .mi{margin-right:6px}
+.mini p{font-size:.78rem;color:var(--muted)}
+.note{font-size:.72rem;color:var(--muted);border-left:3px solid var(--accent);padding:8px 12px;background:var(--bg2);border-radius:0 8px 8px 0;margin-top:14px}
+.callout{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:14px;margin-top:14px}
+.callout b{font-size:1.5rem;color:var(--accent2);white-space:nowrap;line-height:1.2}
+.callout span{font-size:.78rem;color:var(--muted);flex:1 1 260px;line-height:1.5}
+@media(min-width:720px){.mini-grid{grid-template-columns:1fr 1fr}}
+
+/* research box + animated logo */
+.research-box{display:grid;gap:24px;align-items:center}
+.research-art{display:none;justify-self:center;width:180px;animation:hero-float 11s ease-in-out infinite}
+@media(min-width:720px){.research-box{grid-template-columns:1.3fr 1fr}.research-art{display:block}}
+@keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.net-art .edge{stroke:var(--txt);stroke-opacity:.55;stroke-width:1.1;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 1.6s ease-out forwards}
+.net-art .web{stroke:var(--muted);stroke-opacity:.35;stroke-width:.8;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 2s ease-out forwards}
+.net-art .d1{animation-delay:.1s}.net-art .d2{animation-delay:.35s}.net-art .d3{animation-delay:.6s}
+.net-art .d4{animation-delay:.9s}.net-art .d5{animation-delay:1.15s}.net-art .d6{animation-delay:1.4s}
+@keyframes art-draw{to{stroke-dashoffset:0}}
+.net-art .orbit{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:3 7;transform-box:fill-box;transform-origin:center}
+.net-art .orbit.o2{stroke-opacity:.6;animation:art-spin 120s linear infinite reverse}
+@keyframes art-spin{to{transform:rotate(360deg)}}
+.net-art .node{fill:var(--bg);stroke:var(--txt);stroke-opacity:.7;stroke-width:1.1;opacity:0;animation:art-in .5s ease-out forwards}
+.net-art .sat{fill:none;stroke:var(--muted);stroke-width:1;opacity:0;animation:art-in .5s ease-out forwards,art-breathe 4s ease-in-out 2.4s infinite;transform-box:fill-box;transform-origin:center}
+.net-art .node,.net-art .sat{animation-delay:1.2s}
+.net-art .sat.b2{animation-delay:1.4s,3s}.net-art .sat.b3{animation-delay:1.6s,3.8s}
+@keyframes art-in{to{opacity:1}}
+@keyframes art-breathe{0%,100%{transform:scale(1);stroke-opacity:1}50%{transform:scale(1.5);stroke-opacity:.4}}
+@media(prefers-reduced-motion:reduce){
+  .net-art,.net-art *{animation:none !important;stroke-dashoffset:0 !important;opacity:1 !important}
+}
+
+/* sources */
+.sources li{margin-bottom:12px;font-size:.85rem;color:var(--muted)}
+.sources{list-style:none}
+.sources b{color:var(--txt)}
+
+/* faq */
+.faq{display:grid;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+.faq details[open]{border-color:var(--accent)}
+.faq summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.2rem;flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--muted);font-size:.86rem;margin-top:10px}
+footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}
+
+@media(min-width:720px){
+  :root{--pad:24px}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .grid2{grid-template-columns:1fr 1fr}
+  h2{font-size:1.9rem}
+  .jcard{flex-basis:300px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
+    <div class="brand">Manganese<span>Watch</span></div>
+    <div class="nav-links">
+    <a class="link" href="#map-sec">Map</a>
+    <a class="link" href="#forms-sec">The metal</a>
+    <a class="link" href="#journey-sec">Journey</a>
+    <a class="link" href="#production-sec">Production</a>
+    <a class="link" href="#refining-sec">Refining</a>
+    <a class="link" href="#demand-sec">Demand</a>
+    <a class="link" href="#timeline-sec">Timeline</a>
+    <a class="link" href="#trade-sec">Trade</a>
+    <a class="link" href="#china-sec">China</a>
+    <a class="link" href="#military-sec">Military</a>
+    <a class="link" href="#invest-sec">Investment</a>
+    <a class="link" href="#companies-sec">Companies</a>
+    <a class="link" href="#sources-sec">Data</a>
+    <a class="link" href="#faq-sec">FAQ</a>
+    <a class="link" href="#research-sec">Research</a>
+    </div>
+    <a class="cta" href="#research-sec">Contact us</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="kicker">Open data · critical minerals</div>
+  <h1>Who hardens the world's <em>steel</em>?</h1>
+  <p>Manganese is the quiet workhorse of industry — nine tonnes in ten harden steel, and USGS says it has no satisfactory substitute. It is dug in enormous volumes in South Africa, Gabon and Australia, hauled down single railway lines, and refined — almost entirely in China — into the alloys behind every building and the battery salts behind the next EV chemistry. This site tracks where manganese is mined, smelted and refined, how a cyclone doubled its price, and why a metal this common became this strategic — using open data from USGS, the IEA, BGS and price agencies.</p>
+  <div class="stats">
+    <div class="stat"><b data-count="20" data-suffix=" Mt">0</b><span>of manganese content mined worldwide in 2025 — up 7% in a year (USGS)</span></div>
+    <div class="stat"><b data-count="90" data-prefix="~" data-suffix="%">0</b><span>of manganese demand is steelmaking — no satisfactory substitute (USGS)</span></div>
+    <div class="stat"><b data-count="95" data-prefix="~" data-suffix="%">0</b><span>of battery-grade manganese sulphate is refined in China (IEA)</span></div>
+    <div class="stat"><b data-count="100" data-suffix="%">0</b><span>US net import reliance — no domestic manganese mine since 1970 (USGS)</span></div>
+  </div>
+</header>
+
+<section id="map-sec">
+  <div class="kicker">Interactive map</div>
+  <h2>The manganese world map</h2>
+  <p class="lede">Mines, ferroalloy smelters and battery-grade refineries, disrupted operations and development projects — including the seabed. Tap a marker for details; toggle layers below. Circle size ≈ scale of operation.</p>
+  <div class="map-controls">
+    <button class="chip c-mine on" data-layer="mines">⛏ Mines</button>
+    <button class="chip c-proc on" data-layer="processing">🏭 Smelters &amp; refineries</button>
+    <button class="chip c-dis on" data-layer="disrupted">⚠ Disrupted &amp; closed</button>
+    <button class="chip c-dev on" data-layer="development">◐ Development</button>
+  </div>
+  <div id="map"></div>
+  <div class="legend" style="margin-top:10px">
+    <span><i style="background:var(--mine)"></i>Mine</span>
+    <span><i style="background:var(--proc)"></i>Smelter / refinery</span>
+    <span><i style="background:var(--dis)"></i>Disrupted / closed</span>
+    <span><i style="background:var(--dev)"></i>Development project</span>
+  </div>
+</section>
+
+<section id="forms-sec">
+  <div class="kicker">From ore to alloy to cathode</div>
+  <h2>One metal, two markets</h2>
+  <p class="lede">Manganese trades in a ladder of forms — ore graded by percentage, bulk alloys for steel mills, refined metal and battery salts measured in parts per million of impurity. The tonnage lives at the bottom of the ladder; the strategy lives at the top. Tap a stage.</p>
+  <div class="el-grid" id="elGrid"></div>
+  <div class="el-legend">
+    <span><i style="background:var(--accent)"></i>Upstream (mine)</span>
+    <span><i style="background:var(--accent2)"></i>Midstream (smelt &amp; refine)</span>
+    <span><i style="background:var(--dis)"></i>Downstream (steel &amp; cells)</span>
+    <span><i style="background:var(--muted)"></i>Frontier &amp; circular</span>
+  </div>
+  <div class="el-detail" id="elDetail"></div>
+</section>
+
+<section id="journey-sec">
+  <div class="kicker">Mine to steel — and to cell</div>
+  <h2>The journey of a tonne of manganese</h2>
+  <p class="lede">From a 37% ore seam in the Kalahari to the girder in a skyscraper — or, for a small but growing share, to the cathode powder in an electric truck. The tonnage is African and Australian; the transformation is overwhelmingly Chinese.</p>
+  <div class="journey" id="journey"></div>
+  <div class="jhint">← swipe →</div>
+</section>
+
+<section id="production-sec">
+  <div class="kicker">Production &amp; reserves</div>
+  <h2>Where manganese comes from</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Mine production by country, 2025</h3>
+      <div class="sub">Thousand tonnes of manganese content, log scale (USGS estimates)</div>
+      <div class="chartbox"><canvas id="chProd"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries 2026. World total ~20 Mt manganese content; 2025 figures are estimates. Ghana's output doubled in a year, lifting it to third place.</div>
+    </div>
+    <div class="card">
+      <h3>Reserves by country</h3>
+      <div class="sub">Million tonnes of manganese content (world total ~1.8 billion tonnes)</div>
+      <div class="chartbox"><canvas id="chRes"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries 2026. South Africa alone holds an estimated 70% of the world's identified manganese <i>resources</i>, nearly all of it in the Kalahari Manganese Field.</div>
+    </div>
+    <div class="card" style="grid-column:1/-1">
+      <h3>The scissors: steady tonnage, wild price</h3>
+      <div class="sub">World mine production of manganese ore (Mt gross weight, left) vs the annual-average 44%-ore price CIF China ($/dmtu, right)</div>
+      <div class="chartbox"><canvas id="chTrend"></canvas></div>
+      <div class="src">Sources: BGS World Mineral Statistics (production, gross weight, 2018–2024); USGS MCS 2026 / CRU Group (price, from 2021). The 2024 average of $5.53 hides the year's ride: ore spiked to nearly $9/dmtu in August after Cyclone Megan, then collapsed below $4 by October.</div>
+    </div>
+  </div>
+  <div class="note">Explore where manganese ore is <b>mined</b>, country by country since 1970, on the <a href="/supply-chain/">supply-chain map</a> — and why no matching "refined" series exists for manganese.</div>
+</section>
+
+<section id="refining-sec">
+  <div class="kicker">Smelting &amp; refining</div>
+  <h2>The chokepoint is the refinery</h2>
+  <p class="lede">Manganese mining is refreshingly diversified — four countries on three continents lead it, and no one holds more than 40%. The concentration comes after the mine: China smelts most of the world's manganese alloys, makes more than 90% of its refined manganese metal, and refines about 95% of the battery-grade sulphate that every manganese-rich cathode needs.</p>
+  <div class="card">
+    <h3>Refining geography</h3>
+    <div class="sub">A world of mines, one country of refineries</div>
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇨🇳</span>The manganese triangle</h4><p>Ningxia Tianyuan's complex at Zhongwei and the EMM cluster where Guizhou, Hunan and Chongqing meet — China's "manganese triangle" — refine most of the world's electrolytic manganese metal and sulphate. Built on cheap power and low-grade domestic ore, the industry now runs mostly on imported African rock.</p></div>
+      <div class="mini"><h4><span class="mi">🇿🇦</span>The one exception</h4><p>Manganese Metal Company in Mbombela, South Africa, is the world's only large-scale refinery of 99.9% manganese metal outside China — running since 1974 on Kalahari ore. Every Western battery-supply-chain plan cites it, because it is essentially the only non-Chinese starting point that already exists.</p></div>
+      <div class="mini"><h4><span class="mi">⚡</span>The electricity trap</h4><p>Smelting manganese is brutally power-hungry, and the industry migrates to cheap electrons. South Africa — the world's top miner — closed its last ferromanganese smelter at Cato Ridge in May 2025 after power prices rose over 930% since 2008. Malaysia's hydro-powered Sarawak hub grew into a top supplier of US ferroalloys; Ukraine's plants run at a tenth of capacity.</p></div>
+      <div class="mini"><h4><span class="mi">🚧</span>The buildout stumbles</h4><p>The ex-China battery-grade pipeline is thin and wobbling: Element 25's Louisiana sulphate plant — backed by GM money and a $166M DOE grant — went under review in May 2026 as EV demand softened; Euro Manganese's Chvaletice project in Czechia holds EU strategic status and a fresh economic study but not yet financing; Ghana's $450M refinery is a plan on paper.</p></div>
+    </div>
+    <div class="src">Sources: IEA Global Critical Minerals Outlook 2025; USGS MCS 2026; company disclosures (MMC, Assmang, Element 25, Euro Manganese, Ghana Manganese Company); GMK Center.</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Where battery-grade manganese sulphate is refined, 2025</h3>
+    <div class="sub">Approximate shares of world high-purity manganese sulphate output — the step every manganese-rich battery needs</div>
+    <div class="chartbox"><canvas id="chConv"></canvas></div>
+    <div class="src">Sources: IEA Global Critical Minerals Outlook 2025 (~95%); Benchmark Mineral Intelligence puts it near 96%. Commercial-scale plants outside China exist only in Japan, Belgium and Kazakhstan.</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>From ore to steel and to cell, step by step</h3>
+    <div class="sub">The metallurgical route (top) takes ~90% of every tonne; the battery route (bottom) takes a small share and all the attention. Scroll sideways on mobile →</div>
+    <div class="flow-wrap">
+    <svg viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Manganese processing flow from ore to steel and battery cathodes">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8b98a5"/></marker>
+      </defs>
+      <style>
+        .fb{fill:#151b23;stroke:#2b3644;rx:10}
+        .ft{fill:#e6edf3;font:700 12px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fs{fill:#8b98a5;font:11px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fe{fill:#e879f9;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fl{stroke:#8b98a5;stroke-width:1.4;fill:none;marker-end:url(#ah)}
+        .lab{fill:#60a5fa;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em}
+      </style>
+      <!-- route labels -->
+      <text x="205" y="24" class="lab">METALLURGICAL ROUTE (~90% OF DEMAND)</text>
+      <text x="205" y="212" class="lab">BATTERY ROUTE (SMALL BUT GROWING FAST)</text>
+      <!-- shared mining box -->
+      <g>
+        <rect class="fb" x="10" y="120" width="150" height="90" rx="10"/>
+        <text x="20" y="144" class="ft">1 · Mining ⛏</text>
+        <text x="20" y="162" class="fs">Open pits &amp; shafts,</text>
+        <text x="20" y="176" class="fs">27–48% Mn in the ore</text>
+        <text x="20" y="200" class="fe">SA + Gabon dig ~63%</text>
+      </g>
+      <!-- metallurgical route boxes y=40..118 -->
+      <g>
+        <rect class="fb" x="205" y="40" width="150" height="78" rx="10"/>
+        <text x="215" y="62" class="ft">2 · Rail &amp; port 🚂</text>
+        <text x="215" y="80" class="fs">Single lines: Transgabonais,</text>
+        <text x="215" y="94" class="fs">Transnet's 800 km to the coast</text>
+        <text x="215" y="111" class="fe">logistics ≈ 43% of SA costs</text>
+
+        <rect class="fb" x="400" y="40" width="150" height="78" rx="10"/>
+        <text x="410" y="62" class="ft">3 · Smelt 🏭</text>
+        <text x="410" y="80" class="fs">Electric furnaces make SiMn</text>
+        <text x="410" y="94" class="fs">and FeMn — the bulk alloys</text>
+        <text x="410" y="111" class="fe">~60% smelted in China</text>
+
+        <rect class="fb" x="595" y="40" width="150" height="78" rx="10"/>
+        <text x="605" y="62" class="ft">4 · Steel 🏗</text>
+        <text x="605" y="80" class="fs">Deoxidises the melt, hardens</text>
+        <text x="605" y="94" class="fs">the product — every tonne</text>
+        <text x="605" y="111" class="fe">~90% of all manganese</text>
+      </g>
+      <!-- battery route boxes y=222..300 -->
+      <g>
+        <rect class="fb" x="205" y="222" width="150" height="78" rx="10"/>
+        <text x="215" y="244" class="ft">2 · Refine ⚗️</text>
+        <text x="215" y="262" class="fs">Leach, purify, electrolyse:</text>
+        <text x="215" y="276" class="fs">EMM metal or MnSO₄ salt</text>
+        <text x="215" y="292" class="fe">&gt;90% happens in China</text>
+
+        <rect class="fb" x="400" y="222" width="150" height="78" rx="10"/>
+        <text x="410" y="244" class="ft">3 · HPMSM 🧪</text>
+        <text x="410" y="262" class="fs">Battery-grade sulphate,</text>
+        <text x="410" y="276" class="fs">≥99.9% pure</text>
+        <text x="410" y="292" class="fe">~95% made in China</text>
+      </g>
+      <!-- convergence box -->
+      <g>
+        <rect class="fb" x="790" y="120" width="180" height="90" rx="10" stroke="#e879f9"/>
+        <text x="800" y="144" class="ft">5 · Cathodes &amp; cells 🔋</text>
+        <text x="800" y="162" class="fs">NMC today; LMFP and LMR</text>
+        <text x="800" y="176" class="fs">next — plus sodium-ion and</text>
+        <text x="800" y="190" class="fs">every alkaline cell</text>
+        <text x="800" y="205" class="fe">battery demand ~8× this decade</text>
+      </g>
+      <!-- arrows -->
+      <path class="fl" d="M160 150 L182 150 L182 79 H200"/>
+      <path class="fl" d="M355 79 H395"/>
+      <path class="fl" d="M550 79 H590"/>
+      <path class="fl" d="M745 79 H768 V143 H785"/>
+      <path class="fl" d="M160 180 L182 180 L182 261 H200"/>
+      <path class="fl" d="M355 261 H395"/>
+      <path class="fl" d="M550 261 H700 V183 H785"/>
+    </svg>
+    </div>
+    <div class="src">Route shares: USGS, IEA and Benchmark estimates. SiMn = silicomanganese; FeMn = ferromanganese; EMM = electrolytic manganese metal; HPMSM = high-purity manganese sulphate monohydrate. 1 dmtu = 10 kg of contained manganese.</div>
+  </div>
+</section>
+
+<section id="demand-sec">
+  <div class="kicker">Demand</div>
+  <h2>The steel century, the battery decade</h2>
+  <p class="lede">Manganese demand has tracked steel output since the Bessemer converter — which is why a metal mined at twenty million tonnes a year moves with Chinese construction data. The new variable is the cathode: battery demand is small today and projected to grow roughly eightfold this decade.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🏗</span>Steel</h4><p>About 90% of all manganese deoxidises and hardens steel — typically 0.5–1% of every tonne, far more in wear-resistant grades. That chains demand to global steel consumption, which the World Steel Association estimated flat in 2025: the reason ore prices sat near decade lows even as the battery story took off.</p></div>
+      <div class="mini"><h4><span class="mi">🔋</span>Batteries</h4><p>The fastest-growing buyer. Manganese dioxide has powered dry cells for a century; lithium-ion NMC cathodes made it an EV metal; and LMFP and lithium-manganese-rich (LMR) chemistries — plus manganese-based sodium-ion — lean on it harder still. Benchmark projects battery demand for manganese to grow more than eightfold this decade.</p></div>
+      <div class="mini"><h4><span class="mi">🥫</span>Aluminium &amp; chemicals</h4><p>The quiet remainder: manganese stiffens the 3004 alloy of nearly every beverage can, feeds fertilisers and animal nutrition, colours brick and glass, and — as potassium permanganate — treats drinking water. Small tonnages, but embedded in daily life on every continent.</p></div>
+      <div class="mini"><h4><span class="mi">🧪</span>The chemistry shift</h4><p>The bet reshaping the market: GM and LG Energy Solution plan LMR prismatic cells for US electric trucks by 2028 — pre-production starts late 2027 — promising 400-mile range at LFP-like cost, while Chinese cathode makers scale LMFP. If either wins share, manganese joins lithium as a headline battery metal.</p></div>
+    </div>
+    <div class="callout"><b>&gt;8×</b><span>projected growth in battery demand for manganese this decade (Benchmark Mineral Intelligence) — from a base so small that steel will still dominate, but concentrated entirely in the high-purity forms China controls.</span></div>
+  </div>
+</section>
+
+<section id="timeline-sec">
+  <div class="kicker">Geopolitics</div>
+  <h2>A cyclone, a ban and the seabed</h2>
+  <p class="lede">Manganese spent decades as the commodity nobody watched. Then a war idled Europe's mining basin, one storm doubled the world price, Gabon set a deadline to keep its ore at home, and Washington opened a permitting route to the bottom of the Pacific.</p>
+  <div class="card">
+    <div class="tl">
+      <div class="tl-item hot">
+        <div class="tl-date">2022–</div>
+        <h4>War idles Europe's manganese basin</h4>
+        <p>Russia's invasion puts Ukraine's Nikopol basin — historically one of the world's great manganese districts — on the front line. The Pokrov and Marganets mines fall practically idle, the rail link between them is destroyed, and Ukraine's ferroalloy plants sink to roughly 10% of capacity by 2025. Manganese lands on the critical-minerals list of the US–Ukraine resources agreement.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Mar 2024</div>
+        <h4>Cyclone Megan breaks the market</h4>
+        <p>The storm wrecks the export wharf at South32's GEMCO mine on Groote Eylandt — roughly a tenth of world supply and a far bigger share of high-grade ore. Panic buying drives 44%-grade ore from about $4 to nearly $9/dmtu by August. Then China's steel slump bites: port stocks swell toward 6 million tonnes and the price collapses below $4 by October. Boom and bust inside seven months.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">May 2025</div>
+        <h4>The battery moment — and a restart</h4>
+        <p>GM and LG Energy Solution announce they will commercialise lithium-manganese-rich (LMR) cells for US electric trucks by 2028, the loudest Western endorsement yet of manganese-heavy chemistry. The same week, South African coal miner Exxaro agrees to buy into the Tshipi Borwa mine, and GEMCO ships again after fourteen months of repairs.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">May–Jun 2025</div>
+        <h4>Gabon sets a deadline</h4>
+        <p>Libreville announces a ban on exporting raw manganese ore from 1 January 2029, following the resource-nationalist playbook of Indonesia's nickel and Zimbabwe's lithium. Eramet's shares slide — its Comilog subsidiary mines nearly all of Gabon's ore — and a later memorandum sketches three processing plants for 2028–2031, the largest due only after the ban bites. The deadline stands; the timetable doesn't add up yet.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">May–Aug 2025</div>
+        <h4>The smelting map redraws</h4>
+        <p>Assmang permanently shuts Cato Ridge — South Africa's last ferromanganese smelter, felled by electricity prices up over 930% since 2008 — leaving the world's top miner smelting almost nothing. The energy-cheap winners keep gaining: Malaysia's Sarawak hub is now among America's largest ferroalloy suppliers. By October, USGS notes 2025 ore prices running 22% below 2024's average.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Jan–Feb 2026</div>
+        <h4>Africa moves up the ladder</h4>
+        <p>Ghana Manganese Company — 90% owned by China's Tianyuan Manganese Industry — unveils a $450M refinery at Nsuta to upgrade its 27% ore toward 40% and battery grades, after Ghana's output doubled in 2025 to make it the world's No. 3 producer. Exxaro closes its Tshipi deal on 27 February, becoming the Kalahari's newest major owner.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">2025–2026</div>
+        <h4>The nodule race goes official</h4>
+        <p>An April 2025 US executive order revives a 1980 law as a national permitting route for seabed mining, bypassing the deadlocked International Seabed Authority. The Metals Company files a consolidated application in January 2026 for the first commercial recovery permit in the Clarion-Clipperton Zone; NOAA rules it compliant on 1 May and publishes it in the Federal Register on 19 August. A decision is expected by early 2027 — the ISA calls the route illegal.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">May–Aug 2026</div>
+        <h4>Reality check</h4>
+        <p>Element 25 puts its GM- and DOE-backed Louisiana sulphate plant under review as US EV demand softens — the West's flagship HPMSM project, wobbling. Eramet's recovery runs the other way: ore output up 6% in H1 2026 on a debottlenecked railway, full-year guidance of 6.4–6.8 Mt, and €225M in fresh rail financing. August 2026 ore prices sit near $5/dmtu — closer to the floor than the 2024 fireworks.</p>
+      </div>
+    </div>
+    <div class="src">Sources: USGS MCS 2026; Fastmarkets; S&amp;P Global; GMK Center; company and government disclosures (South32, Eramet/Comilog, Exxaro, Assmang, GM/LG Energy Solution, Ghana Manganese Company, The Metals Company, NOAA).</div>
+  </div>
+</section>
+
+<section id="trade-sec">
+  <div class="kicker">Trade &amp; prices</div>
+  <h2>A bulk trade priced by the percentage point</h2>
+  <p class="lede">Manganese has no LME contract. Ore trades by grade in dollars per dmtu — one dmtu is 10 kg of contained metal — alloys trade on Chinese futures and regional assessments, and refined products are priced almost entirely inside China. The flows are simple: African and Australian rock sails east, alloys and refined metal sail back.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>US manganese import sources</h3>
+      <div class="sub">Manganese contained in principal imports, average 2021–2024 — Malaysia mines nothing yet ranks third, on smelting alone</div>
+      <div class="chartbox"><canvas id="chUsImp"></canvas></div>
+      <div class="src">Source: USGS MCS 2026. By product: ore comes from Gabon (64%), South Africa (24%) and Mexico (12%); ferromanganese from Malaysia, Australia and Norway; silicomanganese from Georgia, South Africa and Australia. Net import reliance: 100%.</div>
+    </div>
+    <div class="card">
+      <h3>The whipsaw, in annual averages</h3>
+      <div class="sub">Manganese ore, 44% grade, CIF China, $/dmtu (annual average)</div>
+      <div class="chartbox"><canvas id="chPrices"></canvas></div>
+      <div class="src">Source: USGS MCS 2026 (CRU Group assessments). The 2024 bar hides an intra-year spike to ~$8.97/dmtu in August after Cyclone Megan, and a collapse below $4 by October. August 2026 offers sat near $5/dmtu.</div>
+    </div>
+    <div class="card">
+      <h3>Three prices, one metal</h3>
+      <div class="sub">What you pay depends on which rung of the ladder you stand on</div>
+      <div class="mini-grid">
+        <div class="mini"><h4>The ore price</h4><p>Graded and indexed: high-grade Gabonese and Australian lump (44–46% Mn), South African semi-carbonate (36.5%), Ghanaian carbonate (~27%). Benchmarks are CIF Tianjin — <b style="color:var(--accent)">$4.50/dmtu average in 2025</b> — because China is the buyer that sets the marginal tonne.</p></div>
+        <div class="mini"><h4>The alloy price</h4><p>Silicomanganese — the workhorse alloy steel mills actually buy — trades as a futures contract on China's Zhengzhou exchange, making Mn alloys one of the few China-listed bulk ferroalloys. Tender prices from Chinese steel mills ripple straight back into what miners in the Kalahari earn.</p></div>
+        <div class="mini"><h4>The refined price</h4><p>Electrolytic metal and battery-grade sulphate are priced almost entirely inside China, where overcapacity keeps margins thin — cited by Western developers as the reason their plants can't reach financing. Cheap refined manganese is exactly what makes the 95% chokepoint so hard to compete away.</p></div>
+        <div class="mini"><h4>The missing benchmark</h4><p>No terminal market, no warehouse stock to watch, no transparent forward curve outside China: manganese price discovery runs on index assessments and mill tenders. When supply breaks — as in 2024 — the market finds the new price violently, because nothing dampens it.</p></div>
+      </div>
+      <div class="src">Sources: USGS MCS 2026 (CRU); Fastmarkets; SMM; Zhengzhou Commodity Exchange data via trade press.</div>
+    </div>
+    <div class="card">
+      <h3>The quiet risers: Ghana and Côte d'Ivoire</h3>
+      <div class="sub">West Africa is the fastest-changing corner of the supply map</div>
+      <p style="font-size:.85rem;color:var(--muted)">Ghana doubled output to about 2 million tonnes of manganese content in 2025, vaulting past Australia into third place, as Ghana Manganese Company — 90% owned by China's Tianyuan Manganese Industry — pushed the century-old Nsuta mine to records (700,000 tonnes of ore targeted in August 2026 alone). Côte d'Ivoire produced ~350,000 tonnes from smaller mines. Nearly every tonne ships to China as low-grade carbonate ore, and Accra is now following the Gabonese script: a $450M refinery to keep more of the value — and eventually battery-grade product — on shore.</p>
+      <div class="callout"><b>~12%</b><span>of world mine supply came from Ghana and Côte d'Ivoire in 2025 (USGS) — West African carbonate ore has become the marginal feed for China's refineries, and its governments know it.</span></div>
+      <div class="src">Sources: USGS MCS 2026; Ghana Manganese Company and Ministry of Lands announcements; Ecofin Agency.</div>
+    </div>
+  </div>
+</section>
+
+<section id="china-sec">
+  <div class="kicker">Concentration risk</div>
+  <h2>The China chokepoint</h2>
+  <p class="lede">China mines barely 4% of the world's manganese — its domestic ore is thin and low-grade — yet dominates every step after the mine. Like lithium conversion and unlike rare earths, the grip isn't geological; it was built on cheap power, scale and two decades of Western indifference to a "boring" steel additive.</p>
+  <div class="card">
+    <div class="big" id="bigPct">~95%</div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:6px">of the world's battery-grade manganese sulphate is refined in China (IEA). Its share along the mine-to-battery chain:</p>
+    <div class="bars" id="chinaBars"></div>
+    <div class="src">Sources: USGS MCS 2026 (mine production, 2025); ferroalloy share ~60% (USGS Minerals Yearbook and industry estimates); IEA Global Critical Minerals Outlook 2025 (battery-grade sulphate ~95%); EMM share &gt;90% with Manganese Metal Company (South Africa) the only large-scale producer elsewhere.</div>
+  </div>
+</section>
+
+<section id="military-sec">
+  <div class="kicker">Dual use</div>
+  <h2>No manganese, no steel, no arsenal</h2>
+  <p class="lede">Manganese was one of the first minerals ever stockpiled for war, because armour, helmets, gun barrels and ship hulls are all manganese steels. A century later the Pentagon still holds it — and is now swapping steel-age stockpiles for battery-age ones.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🛡</span>Hadfield's armour</h4><p>Steel alloyed with 12–14% manganese — invented by Robert Hadfield in 1882 — hardens as it's struck, which is why it became the material of tank tracks, WWI helmets, rail crossings and rock crushers. Modern armour plate and ballistic steels still lean on manganese; there is no manganese-free route to hard steel.</p></div>
+      <div class="mini"><h4><span class="mi">🚢</span>Hulls, barrels and shells</h4><p>Naval hull plate, artillery gun steel, shell casings and the structural steel of every base and bridge carry manganese as deoxidiser and hardener. It is the least glamorous defence mineral precisely because it is in everything — a war economy consumes manganese in proportion to its steel.</p></div>
+      <div class="mini"><h4><span class="mi">📦</span>The stockpile pivot</h4><p>The US National Defense Stockpile has held manganese since WWII. Its FY2025 plan tells the modern story in one line: authority to sell 292,000 t of metallurgical ore and 18,000 t of ferromanganese — while <i>acquiring</i> electrolytic manganese metal, the battery-relevant form the US cannot make.</p></div>
+      <div class="mini"><h4><span class="mi">🔋</span>The battlefield goes electric</h4><p>Drones, soldier-worn power and hybrid vehicles pull defence demand toward the same manganese-rich cells the EV market is scaling — and toward the same Chinese sulphate chokepoint. Beijing's July 2025 export controls on LFP and LMFP cathode technology showed how quickly that leverage can be exercised.</p></div>
+      <div class="mini"><h4><span class="mi">🌊</span>Nodules as strategy</h4><p>The 2025 seabed-minerals executive order framed Pacific nodules — roughly 30% manganese, with nickel, cobalt and copper — as a strategic reserve, and NOAA is processing the first commercial permit application. If it proceeds, the US would source manganese from the seabed before it re-learns to refine it on land.</p></div>
+      <div class="mini"><h4><span class="mi">🏛</span>Critical by every list</h4><p>Manganese sits on the US, EU, Japanese and Indian critical-minerals lists; high-purity manganese is an EU strategic raw material with 2030 processing targets; the US Section 232 investigation into processed critical minerals covers it; and it appears in the US–Ukraine minerals agreement.</p></div>
+    </div>
+    <div class="src">Sources: USGS MCS 2026 (Government Stockpile table); DLA Strategic Materials; Federal Register; EU Critical Raw Materials Act; MOFCOM announcements via trade press; historical metallurgy literature.</div>
+  </div>
+</section>
+
+<section id="invest-sec">
+  <div class="kicker">Capital flows</div>
+  <h2>Where the manganese money is going</h2>
+  <p class="lede">For decades manganese attracted no capital because it needed none — ore was cheap, abundant and boring. The battery story and the export-ban wave changed the question: the money now chases refining capacity, logistics and the seabed. Presented as observation, not investment advice.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🤝</span>Exxaro's pivot</h4><p>South Africa's coal heavyweight bought its way into the Kalahari, closing the acquisition of Ntsimbintle's 50.1% of Tshipi Borwa — the country's largest single manganese exporter — in February 2026, with the Mokala stake to follow. A bet that the world's biggest ore endowment beats a declining coal market.</p></div>
+      <div class="mini"><h4><span class="mi">🚂</span>Eramet doubles down on rail</h4><p>Comilog's ceiling has never been the Moanda mine — it's the single-track Transgabonais railway. Eramet raised €225M in 2026 to renovate and expand it, targeting more than 8 Mt of annual capacity, while negotiating processing plants against Gabon's 2029 raw-ore export ban. The mine is a licence; the railway is the business.</p></div>
+      <div class="mini"><h4><span class="mi">🏛</span>Governments as anchor investors</h4><p>Washington granted Element 25's Louisiana plant a $166M DOE award with GM adding $85M in debt; the EU handed Chvaletice strategic-project status; Ghana's state keeps 10% of GMC and a refinery ambition. Every non-Chinese battery-grade project leans on a state balance sheet — none has reached production.</p></div>
+      <div class="mini"><h4><span class="mi">🌊</span>The nodule speculation</h4><p>The Metals Company turned a regulatory bet into a listed proxy for seabed mining: a NOAA permit expected by early 2027, an Allseas contract for the first commercial collection system, and billions of tonnes of ~30%-manganese nodules behind it. High ceiling, binary risk — legal, environmental and political.</p></div>
+      <div class="mini"><h4><span class="mi">⚠️</span>The risks</h4><p>Prices sit near decade lows and demand is chained to flat global steel. China's overcapacity in EMM and sulphate can underprice any new entrant — Element 25's 2026 review shows the financing bar. Export-ban politics cut both ways, battery demand is still a single-digit share, and the 2024 spike proved how fast this market gives back a rally.</p></div>
+      <div class="mini"><h4><span class="mi">♻️</span>The missing circular economy</h4><p>USGS calls dedicated manganese recycling "negligible": the metal disperses into steel and is recovered only incidentally in scrap and slag. Battery recycling will eventually return cathode manganese, but the feedstock barely exists yet — a rare major metal with essentially no secondary supply cushion.</p></div>
+    </div>
+    <div class="note">This section describes where capital is flowing, based on public data. It is not financial advice.</div>
+    <div class="src">Sources: company and government disclosures (Exxaro, Eramet, Element 25, Euro Manganese, TMC); US DOE; EU Commission; USGS MCS 2026.</div>
+  </div>
+</section>
+
+<section id="companies-sec">
+  <div class="kicker">Company tracker</div>
+  <h2>The companies that move manganese</h2>
+  <p class="lede">Miners, smelters, refiners and developers across the chain. Four mining houses dominate the ore trade; one Chinese company leads the refined market; and a handful of Western developers are trying to build the missing middle. Filter by segment or search.</p>
+  <div class="map-controls" id="coFilters">
+    <button class="chip c-mine on" data-seg="mine">⛏ Miners</button>
+    <button class="chip c-proc on" data-seg="sep">🏭 Smelting &amp; refining</button>
+    <button class="chip c-dev on" data-seg="dev">◐ Developers</button>
+  </div>
+  <div class="co-search">
+    <input id="coSearch" type="search" placeholder="Search company, asset, country…" aria-label="Search companies">
+    <span class="co-count" id="coCount"></span>
+  </div>
+  <div class="co-wrap">
+    <table class="co">
+      <thead><tr><th>Company</th><th>Segment</th><th>Key assets</th><th>Status &amp; recent signals</th></tr></thead>
+      <tbody id="coBody"></tbody>
+    </table>
+  </div>
+  <div class="note">Company status reflects public disclosures as of August 2026. This is an observational tracker, not investment advice.</div>
+  <div class="src">Sources: company disclosures &amp; filings; USGS MCS 2026; trade press (Reuters, MINING.com, Fastmarkets, S&amp;P Global, GMK Center, Ecofin Agency).</div>
+</section>
+
+<section id="sources-sec">
+  <div class="kicker">Data &amp; methodology</div>
+  <h2>Open data sources</h2>
+  <ul class="sources">
+    <li><b><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-manganese.pdf">USGS Mineral Commodity Summaries 2026 — Manganese</a></b> — world mine production, reserves and resources, US trade, prices, stockpile and end-use notes. 2025 figures are estimates; production is manganese content.</li>
+    <li><b><a href="https://www.iea.org/reports/global-critical-minerals-outlook-2025">IEA Global Critical Minerals Outlook 2025</a></b> — refining-concentration estimates, including China's ~95% share of high-purity manganese sulphate, and demand scenarios for battery chemistries.</li>
+    <li><b><a href="https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/">British Geological Survey — World Mineral Statistics</a></b> — long-run manganese-ore production series (1970–2024, gross weight), also behind this site's <a href="/supply-chain/">supply-chain map</a>.</li>
+    <li><b>Prices</b> — CRU Group annual averages (the series USGS publishes); <a href="https://www.fastmarkets.com/commodity-prices/manganese-ore-high-grade-index-cif-tianjin-dollar-per-dmtu-mb-mno-0001/">Fastmarkets</a> and SMM ore indices; Zhengzhou Commodity Exchange silicomanganese futures via trade press.</li>
+    <li><b>Supply events</b> — company disclosures: <a href="https://www.south32.net/">South32</a> (GEMCO), <a href="https://www.eramet.com/en/activities/products/manganese/">Eramet/Comilog</a> (Moanda, Transgabonais, H1 2026 results), <a href="https://www.exxaro.com/">Exxaro</a> (Tshipi acquisition), <a href="https://arm.co.za/">African Rainbow Minerals/Assmang</a> (Cato Ridge closure), <a href="https://ghamang.com.gh/">Ghana Manganese Company</a>, <a href="https://element25.com.au/">Element 25</a>, <a href="https://www.mn25.ca/">Euro Manganese</a>.</li>
+    <li><b>Batteries</b> — <a href="https://news.gm.com/home.detail.html/Pages/news/us/en/2025/may/0513-GM-LG-Energy-Solution-pioneer-LMR-battery-cell-technology.html">GM / LG Energy Solution LMR announcement</a>; <a href="https://source.benchmarkminerals.com/article/benchmark-launches-manganese-sulphate-market-outlook">Benchmark Mineral Intelligence</a> manganese sulphate outlook.</li>
+    <li><b>Seabed</b> — <a href="https://investors.metals.co/">The Metals Company</a> disclosures and <a href="https://oceanservice.noaa.gov/deep-seabed-mineral-resources/deep-seabed-mining/">NOAA's deep-seabed mining docket</a> under the Deep Seabed Hard Mineral Resources Act.</li>
+    <li><b>Ukraine</b> — <a href="https://gmk.center/en/tag/manganese-ore/">GMK Center</a> reporting on the Nikopol basin and ferroalloy industry.</li>
+    <li><b>Notes</b> — mine and plant coordinates are approximate. Production tonnages are manganese content unless stated as gross ore weight (BGS series). 1 dmtu = 10 kg of contained manganese per tonne of ore. Refining shares are IEA/Benchmark/industry estimates. Last data refresh: August 2026.</li>
+  </ul>
+</section>
+
+<section id="faq-sec">
+  <div class="kicker">FAQ</div>
+  <h2>Common questions</h2>
+  <div class="faq">
+    <details>
+      <summary>What is manganese used for?</summary>
+      <p>About 90% of manganese goes into steelmaking, where it removes oxygen and sulfur from molten iron and hardens the finished steel — USGS states flatly that manganese has no satisfactory substitute in its major applications. The rest goes into aluminium alloys (every beverage can), batteries (alkaline cells and, increasingly, lithium-ion cathodes), fertilisers, animal feed and water treatment. Batteries are the fastest-growing use: demand from that segment is projected to grow around eightfold this decade.</p>
+    </details>
+    <details>
+      <summary>Which country produces the most manganese?</summary>
+      <p>South Africa mined about 7.6 million of the world's 20 million tonnes of manganese content in 2025 (USGS), from the Kalahari Manganese Field — which also holds roughly 70% of the world's identified resources. Gabon came second at about 5 million tonnes and Ghana leapt to third at about 2 million after doubling output in a year. But the leverage sits downstream: China refines more than 90% of the world's manganese metal and about 95% of battery-grade manganese sulphate.</p>
+    </details>
+    <details>
+      <summary>Is the world running out of manganese?</summary>
+      <p>No. USGS puts reserves at about 1.8 billion tonnes of manganese content — roughly 90 years at the 2025 mining rate — before counting the billions of tonnes lying in polymetallic nodules on the Pacific seabed. The risk is not geology but structure: ore is cheap and abundant, so almost nobody outside China has built the refineries that turn it into battery-grade product, and 100% of US consumption is imported.</p>
+    </details>
+    <details>
+      <summary>Why did the manganese price spike in 2024?</summary>
+      <p>In March 2024, Cyclone Megan destroyed the export wharf at South32's GEMCO mine on Groote Eylandt, Australia — roughly a tenth of world supply and a much larger share of high-grade ore. Panic buying drove 44%-grade ore from about $4 to nearly $9 per dmtu by August. Then China's steel slump caught up: port stocks swelled to about 6 million tonnes and prices collapsed below $4 by October. GEMCO resumed exports in May 2025; the 2025 average was $4.50/dmtu.</p>
+    </details>
+    <details>
+      <summary>What is manganese's role in batteries?</summary>
+      <p>Manganese has powered alkaline batteries for a century, and in lithium-ion it is the cheap, stable ingredient in NMC cathodes. The next wave leans on it harder: LMFP and lithium-manganese-rich (LMR) chemistries promise near-nickel energy at LFP-like cost — GM and LG Energy Solution plan LMR production for US electric trucks by 2028, and Chinese cathode makers are scaling LMFP. Every one of those routes runs through high-purity manganese sulphate, about 95% of which is refined in China.</p>
+    </details>
+    <details>
+      <summary>What are manganese nodules?</summary>
+      <p>Potato-sized lumps on the abyssal Pacific seafloor that are roughly 30% manganese, plus nickel, cobalt and copper. The Clarion-Clipperton Zone alone holds billions of tonnes. After a 2025 US executive order opened a national permitting route, The Metals Company applied to NOAA for the first commercial recovery permit; NOAA found the application compliant in May 2026 and published it for comment that August, with a decision expected by early 2027 — over the objections of the International Seabed Authority, which says international waters are not America's to license.</p>
+    </details>
+  </div>
+</section>
+
+<section id="research-sec">
+  <div class="research-box" style="background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px">
+    <div>
+      <div class="kicker">Custom research</div>
+      <h2>Need an ad hoc data-driven research report?</h2>
+      <p style="color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:18px">We produce bespoke, source-cited research on manganese and other strategic minerals — supply-chain mapping, trade-flow analysis, country and commodity deep-dives — built on the same open data behind this dashboard.</p>
+      <a class="research-cta" href="mailto:hello@mineral.watch">Reach out at hello@mineral.watch</a>
+    </div>
+    <div class="research-art net-art" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="orbit o2" cx="150" cy="150" r="126"/>
+        <circle cx="150" cy="150" r="116" fill="none" stroke="var(--accent)" stroke-width=".6" opacity=".55"/>
+        <path class="web d3" pathLength="1" d="M150 34 L119 104"/>
+        <path class="web d3" pathLength="1" d="M150 34 L181 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L119 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L82 140"/>
+        <path class="web d4" pathLength="1" d="M242 56 L181 104"/>
+        <path class="web d5" pathLength="1" d="M242 56 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M119 104 H181"/>
+        <path class="edge d1" pathLength="1" d="M119 104 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M181 104 L218 140"/>
+        <path class="edge d2" pathLength="1" d="M82 140 H218"/>
+        <path class="edge d2" pathLength="1" d="M82 140 L150 218"/>
+        <path class="edge d2" pathLength="1" d="M218 140 L150 218"/>
+        <path class="edge d3" pathLength="1" d="M119 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M181 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M150 140 V218"/>
+        <circle class="node" cx="119" cy="104" r="3"/>
+        <circle class="node" cx="181" cy="104" r="3"/>
+        <circle class="node" cx="82" cy="140" r="3"/>
+        <circle class="node" cx="218" cy="140" r="3"/>
+        <circle class="node" cx="150" cy="218" r="3"/>
+        <circle class="sat" cx="150" cy="34" r="2.2"/>
+        <circle class="sat b2" cx="58" cy="62" r="2.2"/>
+        <circle class="sat b3" cx="242" cy="56" r="2.2"/>
+        <circle class="sat b2" cx="258" cy="196" r="2.2"/>
+        <circle class="sat b3" cx="68" cy="240" r="2.2"/>
+        <circle cx="150" cy="140" r="5" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6">
+          <animate attributeName="r" values="5;16" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".6;0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="150" cy="140" r="4.2" fill="var(--accent)"/>
+        <circle r="1.6" fill="var(--accent2)">
+          <animateMotion path="M58 62 L119 104 L150 140" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.6" fill="var(--accent)">
+          <animateMotion path="M258 196 L218 140 L150 140" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<footer>
+  ManganeseWatch · open data project · built with Leaflet &amp; Chart.js · data: USGS, IEA, BGS, CRU, Fastmarkets, company disclosures
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+/* ============ DATA (curated from USGS MCS 2026, IEA, BGS, company disclosures) ============ */
+const DATA = {
+  production2025: [ // thousand tonnes manganese content, USGS estimates
+    ["South Africa",7600],["Gabon",5000],["Ghana",2000],["Australia",1600],
+    ["Brazil",800],["India",790],["China",700],["Côte d'Ivoire",350]
+  ],
+  reserves: [ // million tonnes manganese content
+    ["Australia",580],["South Africa",550],["Brazil",300],["China",260],
+    ["Gabon",61],["India",34],["Ghana",13]
+  ],
+  trend: { // world mine production of manganese ore, Mt gross weight (BGS); price: 44% ore CIF China $/dmtu (USGS/CRU)
+    years:[2018,2019,2020,2021,2022,2023,2024,2025],
+    prod:[55.0,57.8,58.6,57.1,54.7,54.0,53.4,null],
+    price:[null,null,null,5.27,5.97,4.80,5.53,4.50]
+  },
+  conv2025: [ // approximate % share of battery-grade manganese sulphate refining (IEA / Benchmark estimates)
+    ["China",95],["Japan / Belgium / Kazakhstan",5]
+  ],
+  usImports:[["Gabon",23],["South Africa",21],["Malaysia",11],["Australia",10],["Other",35]],
+  prices:{ years:[2021,2022,2023,2024,2025],
+    ore:[5.27,5.97,4.80,5.53,4.50] },
+  chinaShares:[ // stage, share %
+    ["Mine production",4],["Manganese ferroalloys",60],["Electrolytic Mn metal",93],["Battery-grade sulphate",95]
+  ],
+  journey:[
+    {ico:"⛏",t:"1 · Mining",p:"Open pits and shafts pull manganese ore — 27% to 48% metal — from the Kalahari Manganese Field, Gabon's Moanda plateau, Groote Eylandt off northern Australia and the carbonate seams of Ghana. Four countries dig about four fifths of the world's supply.",f:"20 Mt of Mn content mined in 2025 — South Africa 38%, Gabon 25% (USGS)"},
+    {ico:"🚂",t:"2 · The long haul",p:"Bulk ore is cheap, so logistics decide who profits: Comilog's tonnage is capped by the single-track Transgabonais railway, and Kalahari ore travels 800+ km to the coast — logistics eat roughly 43% of South African FOB costs, and trucking costs 37% more than rail.",f:"Eramet raised €225M in 2026 to push its railway past 8 Mt/yr"},
+    {ico:"🏭",t:"3 · Smelting",p:"Electric furnaces alloy the ore into silicomanganese and ferromanganese — the forms steel mills buy. It is ferociously power-hungry, so smelting migrates to cheap electricity: China above all, plus India and Malaysia, while South Africa and Ukraine drop out.",f:"~60% of manganese ferroalloys are smelted in China"},
+    {ico:"🏗",t:"4 · Steel",p:"In the ladle, manganese scavenges oxygen and sulfur and hardens the finished metal; typical steels carry 0.5–1%, wear-resistant Hadfield grades up to 14%. This is where ~90% of every year's manganese ends up — and why demand tracks global construction.",f:"USGS: no satisfactory substitute in its major applications"},
+    {ico:"⚗️",t:"5 · The battery branch",p:"A separate, purer path: ore is leached and electrolysed into 99.9% manganese metal or refined into high-purity sulphate, the precursor for NMC, LMFP and lithium-manganese-rich cathodes — and manganese-based sodium-ion. China refines ~95% of it.",f:"GM & LG plan LMR cells for US electric trucks by 2028"},
+    {ico:"🌊",t:"6 · Recycling & the seabed",p:"Dedicated manganese recycling is negligible — the metal disperses into steel and returns only incidentally in scrap. The speculative supply frontier lies instead on the Pacific floor, where trillions of nodules run roughly 30% manganese.",f:"First US seabed-mining permit decision expected by early 2027"}
+  ],
+  forms:[
+    {s:"27–48%",n:"Ore",g:"U",use:"The traded rock",
+     d:"Manganese ore is sold by its percentage: Gabonese and Australian high-grade lump (44–46% Mn) commands the premium, South African semi-carbonate (36.5%) moves the volume, and Ghana's carbonate (~27%) is the cheap marginal feed China's refineries grew up on. Pricing is per dmtu — one dmtu is 10 kg of contained metal — so a 44% tonne carries 44 units.",pr:"2025 average $4.50/dmtu (44% CIF China); spiked to ~$8.97 in Aug 2024; ~$5 in Aug 2026"},
+    {s:"SiMn",n:"Silicomanganese",g:"M",use:"The workhorse alloy",
+     d:"Roughly 65% manganese and 17% silicon, silicomanganese is what most steel mills actually buy — it deoxidises and alloys in one addition. It trades as a futures contract on China's Zhengzhou exchange, and Chinese mill tender prices set the tone for the whole manganese complex, all the way back to the Kalahari.",pr:null},
+    {s:"FeMn",n:"Ferromanganese",g:"M",use:"The high-Mn addition",
+     d:"High-carbon ferromanganese (~78% Mn) delivers concentrated manganese for high-strength and specialty steels; refined low-carbon grades serve stainless. Production follows cheap electricity — which is why South Africa, the top miner, closed its last ferromanganese smelter in 2025 while Malaysia's hydro-powered furnaces became a top US supplier.",pr:null},
+    {s:"99.7%",n:"EMM",g:"M",use:"Refined metal",
+     d:"Electrolytic manganese metal — ore leached, purified and plated at 99.7%+ — feeds 200-series stainless steel, aluminium alloys and specialty steels, and is a starting point for battery chemicals. China makes more than 90% of it; Manganese Metal Company in South Africa is the world's only large-scale producer elsewhere, which is why the US stockpile is now buying EMM.",pr:null},
+    {s:"MnO₂",n:"EMD",g:"M",use:"The dry-cell legacy",
+     d:"Electrolytic manganese dioxide is the cathode of nearly every alkaline battery on Earth — manganese's original electrochemical job, a century old and still growing quietly. Producers cluster in China, Japan and the US; it is also a feedstock route into lithiated manganese cathode materials.",pr:null},
+    {s:"MnSO₄",n:"HPMSM",g:"M",use:"The battery salt",
+     d:"High-purity manganese sulphate monohydrate — ≥99.9% pure, impurities measured in parts per million — is the form every manganese-bearing lithium-ion cathode starts from. It is the chain's tightest chokepoint: about 95% is refined in China, and Chinese overcapacity keeps the price so low that Western plants struggle to reach financing.",pr:"A niche market today — Benchmark projects battery demand for Mn to grow >8× this decade"},
+    {s:"0.5–1%",n:"Steel",g:"D",use:"Where 90% ends up",
+     d:"Manganese is steel's essential housekeeper: it binds sulfur, scavenges oxygen and hardens the lattice. Ordinary steels carry 0.5–1%; Hadfield steel — 12–14% manganese, invented in 1882 — hardens under impact and still armours tank tracks, rail crossings and crusher jaws. No satisfactory substitute exists (USGS).",pr:null},
+    {s:"LMR",n:"Cathodes",g:"D",use:"The next chemistry",
+     d:"Manganese-rich cathodes are the battery industry's cost play: LMFP upgrades LFP's energy density, and lithium-manganese-rich (LMR) promises near-nickel performance at LFP-like cost. GM and LG Energy Solution plan LMR prismatic cells for US electric trucks by 2028; Chinese makers are scaling LMFP now — and Beijing added LMFP cathode technology to its export-control list in July 2025.",pr:null},
+    {s:"~30%",n:"Nodules",g:"C",use:"The frontier",
+     d:"Polymetallic nodules — potato-sized concretions carpeting the abyssal Pacific — are roughly 30% manganese with nickel, cobalt and copper. The Clarion-Clipperton Zone holds billions of tonnes. The Metals Company's NOAA application, published in the Federal Register in August 2026, would create the first commercial seabed manganese supply — if courts, economics and the ISA dispute allow.",pr:null}
+  ],
+  companies:[
+    // seg: mine | sep | dev (space-separated when spanning segments)
+    // --- miners ---
+    {n:"South32",u:"https://www.south32.net/",hq:"Australia",tik:"ASX: S32 · LSE: S32",seg:"mine",
+     a:"GEMCO (Groote Eylandt, 60% with Anglo American); Hotazel mines Mamatwan & Wessels (South Africa, via Samancor Mn)",
+     s:"The world's biggest manganese miner by footprint: GEMCO's cyclone outage moved the world price in 2024, and its May 2025 export restart marked the market's return to normal. The Australia–South Africa pairing spans both ends of the grade spectrum."},
+    {n:"Eramet (Comilog)",u:"https://www.eramet.com/en/activities/products/manganese/",hq:"France / Gabon",tik:"EPA: ERA",seg:"mine sep",
+     a:"Moanda mine, Complexe Métallurgique de Moanda, Transgabonais railway (SETRAG); ferroalloy plants in Norway, France, US, Gabon",
+     s:"The largest producer of high-grade ore: H1 2026 output rose 6% to 3.2 Mt on a debottlenecked railway, with 6.4–6.8 Mt guided for the year. Gabon's 2029 raw-ore export ban now frames every investment decision — three processing plants are sketched for 2028–2031."},
+    {n:"Assmang (ARM / Assore)",u:"https://arm.co.za/",hq:"South Africa",tik:"JSE: ARI",seg:"mine",
+     a:"Nchwaning & Gloria mines (Black Rock complex, Kalahari)",
+     s:"The 50:50 African Rainbow Minerals–Assore venture mines some of the Kalahari's highest grades — but closed Cato Ridge, South Africa's last ferromanganese smelter, in May 2025 after electricity costs rose over 930% since 2008, and sold out of Malaysia's Sakura smelter."},
+    {n:"Exxaro Resources",u:"https://www.exxaro.com/",hq:"South Africa",tik:"JSE: EXX",seg:"mine",
+     a:"Ntsimbintle Mining (50.1% of Tshipi Borwa, closed Feb 2026); Mokala stake pending",
+     s:"The coal heavyweight's diversification bet: it bought control of South Africa's largest single manganese exporter for the long game — betting Kalahari ore outlives thermal coal. The Mokala leg of the deal has a February 2027 long-stop date."},
+    {n:"Jupiter Mines",u:"https://www.jupitermines.com/",hq:"Australia",tik:"ASX: JMS",seg:"mine",
+     a:"Tshipi Borwa (49.9%, Kalahari)",
+     s:"The pure-play listed route into Kalahari manganese: low-cost, long-life open pit, dividends through the cycle — and a new majority partner in Exxaro after the 2026 transaction closed."},
+    {n:"United Manganese of Kalahari",u:"https://www.umk.co.za/",hq:"South Africa",tik:"private",seg:"mine",
+     a:"UMK mine (Kalahari Manganese Field)",
+     s:"One of the Kalahari's big four operations, exporting semi-carbonate ore to China and pushing, like all of them, to shift tonnage from trucks to Transnet rail as private operators enter the network from 2026."},
+    {n:"Tianyuan Manganese Industry (TMI)",u:"https://ghamang.com.gh/",hq:"China",tik:"private",seg:"mine sep",
+     a:"90% of Ghana Manganese Company (Nsuta); Consolidated Minerals (Woodie Woodie, Australia); Ningxia Zhongwei EMM complex",
+     s:"The quiet vertical giant: the world's largest electrolytic manganese producer also owns the Ghanaian mine whose doubling made Ghana the world's No. 3 miner in 2025 — and is now building a $450M refinery at Nsuta to upgrade its 27% ore toward battery grades."},
+    {n:"MOIL",u:"https://moil.nic.in/",hq:"India",tik:"NSE: MOIL",seg:"mine",
+     a:"Eleven mines in Maharashtra & Madhya Pradesh (Balaghat district core)",
+     s:"India's state manganese miner feeds a fast-growing domestic steel industry that still imports higher grades — MOIL expands steadily, but India remains a structural net importer of manganese units."},
+    {n:"Vale",u:"http://www.vale.com/",hq:"Brazil",tik:"NYSE: VALE",seg:"mine",
+     a:"Azul (Carajás), Urucum (Corumbá), Morro da Mina",
+     s:"Brazil's iron-ore giant keeps a manganese sideline built on high-grade Azul ore; it exited ferroalloy smelting in 2021, selling the Minas Gerais plants — the classic pattern of miners retreating from power-hungry processing."},
+    {n:"Autlán",u:"https://www.autlan.com.mx/",hq:"Mexico",tik:"BMV: AUTLANB",seg:"mine sep",
+     a:"Molango district mines (Hidalgo); ferroalloy plants at Teziutlán, Tamós, Gómez Palacio",
+     s:"North America's only integrated manganese producer — the source of the 12% of US ore imports that don't cross an ocean, and of ferroalloys inside the USMCA wall. A strategic asset out of proportion to its size."},
+    {n:"Eurasian Resources Group",u:"https://www.eurasianresources.lu/",hq:"Kazakhstan / Luxembourg",tik:"private",seg:"mine",
+     a:"Zhairem GOK and Kazmarganets operations (Kazakhstan)",
+     s:"Kazakhstan's manganese and ferroalloy complex serves Russian and Chinese mills — and hosts one of the few battery-grade sulphate capabilities outside China, alongside Japan and Belgium."},
+    {n:"OM Holdings",u:"https://www.omholdingsltd.com/",hq:"Singapore / Australia",tik:"ASX: OMH",seg:"sep mine",
+     a:"OM Sarawak ferroalloy smelter (Samalaju, Malaysia); Bootu Creek (NT, closed); ex-Tshipi stake sold to Exxaro",
+     s:"The company that proved the electricity thesis: its hydro-powered Sarawak furnaces helped make Malaysia — a country with no manganese mines — the top source of US ferromanganese imports. Sold its Tshipi interest to Exxaro in the 2026 consolidation."},
+    {n:"Element 25",u:"https://element25.com.au/",hq:"Australia",tik:"ASX: E25",seg:"mine dev",
+     a:"Butcherbird mine (Pilbara); Louisiana HPMSM plant (Burnside, under review)",
+     s:"Australia's newest manganese miner and the West's flagship battery-grade hope: a $166M DOE grant and $85M from GM back its Louisiana sulphate plant — but in May 2026 the company put the project's contracts, site and timeline under review as US EV demand softened."},
+    // --- smelting & refining ---
+    {n:"Ningxia Tianyuan Manganese",u:"https://ghamang.com.gh/",hq:"China",tik:"private",seg:"sep",
+     a:"Zhongwei (Ningxia) EMM complex — the world's largest",
+     s:"The single biggest node in the refined-manganese world: its Zhongwei complex anchors China's >90% share of electrolytic manganese metal, running increasingly on Ghanaian ore from its own mine. See TMI above — mine and refinery are one company."},
+    {n:"CITIC Dameng",u:"http://www.citicdameng.com/",hq:"China",tik:"HKEX: 1091",seg:"mine sep",
+     a:"Daxin & Tiandeng mines (Guangxi); EMM, EMD and sulphate plants",
+     s:"China's most integrated listed manganese house: the largest domestic ore miner plus electrolytic metal, dioxide and battery-grade sulphate lines — a one-company preview of where the whole Chinese industry is heading."},
+    {n:"Manganese Metal Company",u:"https://www.mmc.co.za/",hq:"South Africa",tik:"private",seg:"sep",
+     a:"Mbombela refinery — 99.9% selenium-free EMM",
+     s:"The exception that proves the chokepoint: the world's only large-scale non-Chinese refinery of high-purity manganese metal, running since 1974. Every Western supply-chain strategy cites it; the US stockpile's new EMM purchases effectively start here."},
+    {n:"Tosoh",u:"https://www.tosoh.com/",hq:"Japan",tik:"TYO: 4042",seg:"sep",
+     a:"Hyuga EMD plant (Japan); Greek EMD operations",
+     s:"One of the last major non-Chinese electrolytic manganese dioxide producers — the alkaline-battery workhorse — and part of Japan's small but real battery-grade manganese capability."},
+    {n:"Nikopol & Pokrov complex",u:"https://gmk.center/en/tag/manganese-ore/",hq:"Ukraine",tik:"war-disrupted",seg:"mine sep",
+     a:"Pokrov & Marganets mining complexes; Nikopol Ferroalloy Plant (Europe's largest)",
+     s:"Europe's manganese basin, idled by the front line: mines practically halted, the rail link between them destroyed, ferroalloy output at ~10% of capacity on wartime power prices. Its restoration is written into the US–Ukraine minerals agreement."},
+    {n:"Georgian Manganese",u:"https://www.gm.ge/",hq:"Georgia",tik:"private",seg:"mine sep",
+     a:"Chiatura mines; Zestafoni ferroalloy plant",
+     s:"The 120-year-old Chiatura district — once a quarter of world supply — has lurched through insolvency, strikes and suspensions since 2023, even as Georgia remained the top source of US silicomanganese imports. A case study in ageing supply nobody replaces."},
+    // --- developers ---
+    {n:"Euro Manganese",u:"https://www.mn25.ca/",hq:"Canada / Czechia",tik:"TSXV: EMN · ASX: EMN",seg:"dev",
+     a:"Chvaletice project — reprocessing pyrite tailings into HPMSM and EMM",
+     s:"Europe's flagship battery-manganese project: an EU strategic project under the Critical Raw Materials Act, a May 2026 economic study showing a $492M NPV, final mining-permit filing due H2 2026 — and the financing gap that defines every Western manganese developer."},
+    {n:"Giyani Metals",u:"https://giyanimetals.com/",hq:"Canada / Botswana",tik:"TSXV: EMM",seg:"dev",
+     a:"K.Hill project (Botswana) — ore-to-HPMSM demonstration plant",
+     s:"Aims to make Botswana the first African producer of battery-grade manganese, skipping the alloy stage entirely: a demonstration plant is running and a bankable study is the next gate."},
+    {n:"The Metals Company",u:"https://metals.co/",hq:"Canada / US",tik:"NASDAQ: TMC",seg:"dev",
+     a:"NORI & TOML nodule areas (CCZ); TMC USA-A application before NOAA",
+     s:"The seabed pioneer: its consolidated NOAA application — found compliant in May 2026, published for comment in August — targets the first commercial nodule harvest, with an Allseas-built collection system contracted. A permit by early 2027 would create an entirely new manganese supply chain, and an entirely new fight."}
+  ],
+  sites:[
+    // type: mine | proc | dis | dev ; size 1-3
+    // --- mines (producing) ---
+    {n:"Hotazel mines (Mamatwan & Wessels)",c:"South Africa",ll:[-27.21,22.97],ty:"mine",sz:3,d:"South32's Kalahari operations — open-pit Mamatwan and underground Wessels — sit in the district that holds ~70% of the world's manganese resources and made South Africa the No. 1 producer."},
+    {n:"Black Rock (Nchwaning & Gloria)",c:"South Africa",ll:[-27.13,22.83],ty:"mine",sz:3,d:"Assmang's underground complex mines some of the Kalahari's highest-grade ore. Its former smelter at Cato Ridge closed in 2025 — the ore now leaves the country raw."},
+    {n:"Tshipi Borwa",c:"South Africa",ll:[-27.42,22.93],ty:"mine",sz:3,d:"South Africa's largest single manganese exporter — a long-life open pit owned by Jupiter Mines (49.9%) and, since February 2026, Exxaro's Ntsimbintle Mining (50.1%). Its ore travels 800+ km to the coast; logistics are the battle."},
+    {n:"UMK mine",c:"South Africa",ll:[-27.05,22.90],ty:"mine",sz:2,d:"United Manganese of Kalahari's open pit, one of the field's big four — semi-carbonate ore railed and trucked to Gqeberha and Saldanha for China."},
+    {n:"Moanda",c:"Gabon",ll:[-1.57,13.20],ty:"mine",sz:3,d:"Eramet/Comilog's plateau mine — the world's largest source of high-grade ore (~25% of world Mn content in 2025). Its ceiling is the single-track Transgabonais railway; its deadline is Gabon's 2029 raw-ore export ban."},
+    {n:"GEMCO (Groote Eylandt)",c:"Australia",ll:[-13.97,136.46],ty:"mine",sz:3,d:"South32's island mine supplies roughly a tenth of world ore and far more of the high grades. Cyclone Megan wrecked its wharf in March 2024 and nearly doubled the world price; exports resumed May 2025."},
+    {n:"Woodie Woodie",c:"Australia",ll:[-21.65,121.23],ty:"mine",sz:2,d:"Consolidated Minerals' Pilbara mine — high-grade ore trucked to Port Hedland, owned since 2017 by China's Tianyuan Manganese Industry."},
+    {n:"Butcherbird",c:"Australia",ll:[-24.40,119.75],ty:"mine",sz:1,d:"Element 25's open pit — Australia's newest manganese mine, expanding concentrate output for steel markets while its US battery-grade plans are re-worked."},
+    {n:"Nsuta",c:"Ghana",ll:[5.28,-1.96],ty:"mine",sz:3,d:"Ghana Manganese Company's century-old carbonate mine doubled national output in 2025, making Ghana the world's No. 3 producer. 90% owned by China's TMI; a $450M refinery is planned to upgrade the ~27% ore."},
+    {n:"Azul (Carajás)",c:"Brazil",ll:[-6.05,-50.30],ty:"mine",sz:2,d:"Vale's high-grade mine in the Carajás district — the anchor of Brazil's ~800 kt of manganese content in 2025."},
+    {n:"Urucum",c:"Brazil",ll:[-19.20,-57.60],ty:"mine",sz:1,d:"Vale's underground mine near Corumbá on the Bolivian border, shipping high-grade lump down the Paraguay River system."},
+    {n:"Balaghat district",c:"India",ll:[21.81,80.18],ty:"mine",sz:2,d:"MOIL's core mining district in Madhya Pradesh–Maharashtra — India produced ~790 kt of Mn content in 2025 but still imports higher grades for its steel boom."},
+    {n:"Daxin (Guangxi)",c:"China",ll:[22.83,107.20],ty:"mine",sz:2,d:"CITIC Dameng's flagship mine in China's manganese heartland — the domestic ore is low-grade, which is why China's refineries import African rock."},
+    {n:"Molango district",c:"Mexico",ll:[20.79,-98.73],ty:"mine",sz:1,d:"Autlán's Hidalgo mines — North America's only significant manganese source and 12% of US ore imports."},
+    {n:"Bondoukou",c:"Côte d'Ivoire",ll:[8.04,-2.80],ty:"mine",sz:1,d:"One of the small Ivorian mines that together produced ~350 kt of Mn content in 2025 — West Africa's second quiet riser, shipping carbonate ore to China."},
+    {n:"Zhairem",c:"Kazakhstan",ll:[48.26,70.19],ty:"mine",sz:1,d:"Eurasian Resources Group's polymetallic and manganese operations — feed for Kazakh ferroalloys and one of the few battery-grade sulphate capabilities outside China."},
+    // --- smelters & refineries ---
+    {n:"Zhongwei EMM complex",c:"China",ll:[37.51,105.19],ty:"proc",sz:3,d:"Ningxia Tianyuan's electrolytic manganese metal complex — the world's largest, anchoring China's >90% share of refined manganese metal."},
+    {n:"The manganese triangle",c:"China",ll:[28.20,109.20],ty:"proc",sz:3,d:"Where Guizhou, Hunan and Chongqing meet: the dense cluster of EMM and manganese-sulphate plants that grew from local rhodochrosite and now refines imported ore into battery-grade product."},
+    {n:"Guangxi refining cluster",c:"China",ll:[22.80,108.32],ty:"proc",sz:2,d:"CITIC Dameng's EMM, EMD and sulphate lines around Nanning and Chongzuo — China's most integrated manganese complex, mine to battery salt."},
+    {n:"Manganese Metal Company",c:"South Africa",ll:[-25.47,30.98],ty:"proc",sz:2,d:"Mbombela's 99.9% selenium-free EMM refinery — the world's only large-scale producer of refined manganese metal outside China, running since 1974 on Kalahari ore."},
+    {n:"Samalaju smelting hub",c:"Malaysia",ll:[3.15,113.08],ty:"proc",sz:2,d:"OM Holdings' hydro-powered ferroalloy smelter (with the former Sakura plant next door) made Malaysia — which mines no manganese — the top source of US ferromanganese imports. Cheap electricity is the whole story."},
+    {n:"Hyuga EMD plant",c:"Japan",ll:[32.42,131.62],ty:"proc",sz:1,d:"Tosoh's electrolytic manganese dioxide plant — part of the small non-Chinese capability in battery-grade manganese, serving the alkaline and lithium-ion markets."},
+    // --- disrupted & closed ---
+    {n:"Nikopol basin (Pokrov & Marganets)",c:"Ukraine",ll:[47.65,34.08],ty:"dis",sz:2,d:"Europe's great manganese district, practically idle on the front line since 2022-23: mines halted, the connecting railway destroyed, and listed in the US–Ukraine minerals agreement for eventual restoration."},
+    {n:"Nikopol Ferroalloy Plant",c:"Ukraine",ll:[47.57,34.39],ty:"dis",sz:1,d:"Europe's largest ferroalloy plant runs at roughly 10% of capacity — shelling across the Dnipro, wartime power prices and no insurable assets."},
+    {n:"Chiatura",c:"Georgia",ll:[42.29,43.28],ty:"dis",sz:1,d:"The 120-year-old district that once supplied a quarter of world manganese has cycled through insolvency, strikes and suspensions since 2023 — even as Georgia remained the top source of US silicomanganese."},
+    {n:"Cato Ridge Works",c:"South Africa",ll:[-29.74,30.58],ty:"dis",sz:1,d:"Assmang's ferromanganese smelter — South Africa's last — shut permanently in May 2025 after electricity prices rose over 930% since 2008. The world's top miner now smelts almost nothing."},
+    // --- development ---
+    {n:"Clarion-Clipperton Zone (TMC USA-A)",c:"Pacific Ocean",ll:[10.50,-117.00],ty:"dev",sz:3,d:"The Metals Company's nodule application before NOAA — found compliant May 2026, published August 2026, decision expected by early 2027. Nodules run ~30% manganese; the ISA disputes the entire US route."},
+    {n:"Chvaletice",c:"Czechia",ll:[50.03,15.42],ty:"dev",sz:1,d:"Euro Manganese's tailings-reprocessing project — Europe's would-be source of battery-grade manganese, an EU strategic project with a 2026 economic study and a financing gap to close."},
+    {n:"K.Hill",c:"Botswana",ll:[-24.98,25.33],ty:"dev",sz:1,d:"Giyani Metals' ore-to-HPMSM project with a running demonstration plant — aiming to make Botswana Africa's first battery-grade manganese producer."},
+    {n:"Burnside HPMSM plant",c:"United States",ll:[30.14,-90.92],ty:"dev",sz:1,d:"Element 25's Louisiana sulphate plant — $166M DOE grant, $85M from GM — went under strategic review in May 2026 as US EV demand softened. The West's flagship battery-manganese project, wobbling."},
+    {n:"Tambao",c:"Burkina Faso",ll:[14.79,-0.05],ty:"dev",sz:1,d:"One of the world's richest undeveloped manganese deposits, stranded for a decade by contract disputes and Sahel insecurity — a reminder that geology is the easy part."}
+  ]
+};
+
+/* ============ helpers ============ */
+const C = getComputedStyle(document.documentElement);
+const col = v => C.getPropertyValue(v).trim();
+const PAL = ["#e879f9","#60a5fa","#fbbf24","#34d399","#c4b5fd","#f87171","#94a3b8","#fb7185","#38bdf8","#a3e635","#64748b","#f0abfc","#f472b6"];
+
+/* count-up hero stats */
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target, end=parseFloat(el.dataset.count), suf=el.dataset.suffix||"", pre=el.dataset.prefix||"", dec=end%1?1:0;
+  const t0=performance.now();
+  (function tick(t){const p=Math.min(Math.max((t-t0)/1200,0),1), v=end*(1-Math.pow(1-p,3));
+    el.textContent=pre+(end>=1000?Math.round(v).toLocaleString("en-US"):v.toFixed(dec))+suf;
+    if(p<1)requestAnimationFrame(tick);})(t0);
+  io.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+
+/* ============ MAP ============ */
+const map = L.map("map",{scrollWheelZoom:false,worldCopyJump:true}).setView([12,10],2);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{
+  attribution:'Tiles &copy; Esri &mdash; &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom:10
+}).addTo(map);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",{
+  maxZoom:10
+}).addTo(map);
+map.on("click",()=>map.scrollWheelZoom.enable());
+
+const groups = {mines:L.layerGroup().addTo(map),
+                processing:L.layerGroup().addTo(map),
+                disrupted:L.layerGroup().addTo(map), development:L.layerGroup().addTo(map)};
+const TYCOL={mine:col("--mine"),proc:col("--proc"),dis:col("--dis"),dev:col("--dev")};
+const TYNAME={mine:"MINE",proc:"SMELTER / REFINERY",dis:"DISRUPTED / CLOSED",dev:"DEVELOPMENT"};
+const TYGRP={mine:"mines",proc:"processing",dis:"disrupted",dev:"development"};
+
+DATA.sites.forEach(s=>{
+  const c=TYCOL[s.ty];
+  L.circleMarker(s.ll,{radius:4+s.sz*2.4,color:c,weight:1.5,fillColor:c,fillOpacity:.35})
+   .bindPopup(`<span class="pp-tag" style="background:${c}22;color:${c}">${TYNAME[s.ty]}</span><br><b>${s.n}</b> · ${s.c}<br>${s.d}`)
+   .addTo(groups[TYGRP[s.ty]]);
+});
+
+/* layer toggles */
+document.querySelectorAll(".chip[data-layer]").forEach(ch=>ch.addEventListener("click",()=>{
+  const g=groups[ch.dataset.layer];
+  if(ch.classList.toggle("on")) map.addLayer(g); else map.removeLayer(g);
+}));
+
+/* ============ FORMS GRID ============ */
+const GRPNAME={U:"Upstream (mine)",M:"Midstream (smelt & refine)",D:"Downstream (steel & cells)",C:"Frontier & circular"};
+const GRPCOL={U:col("--accent"),M:col("--accent2"),D:col("--dis"),C:col("--muted")};
+const elGrid=document.getElementById("elGrid"), elDetail=document.getElementById("elDetail");
+elGrid.innerHTML=DATA.forms.map((e,i)=>`
+  <button class="el g${e.g}" data-i="${i}" aria-label="${e.n}">
+    <span class="z">${String(i+1).padStart(2,"0")}</span>
+    <b>${e.s}</b><span>${e.n}</span>
+  </button>`).join("");
+function showEl(i){
+  const e=DATA.forms[i];
+  document.querySelectorAll(".el").forEach(el=>el.classList.toggle("sel",+el.dataset.i===i));
+  const grpCol=GRPCOL[e.g];
+  elDetail.innerHTML=`
+    <h3>${e.n} <small>· ${e.use}</small></h3>
+    <div class="tags">
+      <span class="pp-tag" style="background:${grpCol}22;color:${grpCol}">${GRPNAME[e.g].toUpperCase()}</span>
+    </div>
+    <p>${e.d}</p>
+    ${e.pr?`<div class="price">${e.pr}</div>`:""}`;
+}
+elGrid.addEventListener("click",ev=>{const b=ev.target.closest(".el");if(b)showEl(+b.dataset.i);});
+showEl(DATA.forms.findIndex(e=>e.n==="HPMSM"));
+
+/* ============ JOURNEY CARDS ============ */
+document.getElementById("journey").innerHTML = DATA.journey.map((j,i)=>`
+  <div class="jcard"><div class="num">${String(i+1).padStart(2,"0")}</div>
+    <div class="ico">${j.ico}</div><h3>${j.t}</h3><p>${j.p}</p>
+    <div class="fact">${j.f}</div></div>`).join("");
+
+/* ============ COMPANY TRACKER ============ */
+const SEGMETA={
+  mine:{label:"Miner",color:col("--mine")},
+  sep:{label:"Smelting & refining",color:col("--proc")},
+  dev:{label:"Developer",color:col("--dev")}
+};
+const coState={segs:new Set(Object.keys(SEGMETA)),q:""};
+function renderCo(){
+  const q=coState.q.trim().toLowerCase();
+  const rows=DATA.companies.filter(c=>c.seg.split(" ").some(s=>coState.segs.has(s))&&
+    (!q||[c.n,c.hq,c.tik,c.a,c.s].join(" ").toLowerCase().includes(q)));
+  document.getElementById("coBody").innerHTML=rows.map(c=>{
+    const tags=c.seg.split(" ").map(s=>{const m=SEGMETA[s];
+      return `<span class="pp-tag" style="background:${m.color}22;color:${m.color}">${m.label}</span>`;}).join(" ");
+    return `<tr>
+      <td><b><a href="${c.u}" target="_blank" rel="noopener">${c.n}</a></b>
+        <div class="tik">${c.hq} · ${c.tik}</div></td>
+      <td>${tags}</td>
+      <td>${c.a}</td>
+      <td>${c.s}</td></tr>`;
+  }).join("")||`<tr><td colspan="4" style="text-align:center;padding:24px">No companies match.</td></tr>`;
+  document.getElementById("coCount").textContent=`${rows.length} of ${DATA.companies.length} companies`;
+}
+document.querySelectorAll("#coFilters .chip").forEach(ch=>ch.addEventListener("click",()=>{
+  const s=ch.dataset.seg;
+  if(ch.classList.toggle("on")) coState.segs.add(s); else coState.segs.delete(s);
+  renderCo();
+}));
+document.getElementById("coSearch").addEventListener("input",e=>{coState.q=e.target.value;renderCo();});
+renderCo();
+
+/* ============ CHARTS ============ */
+Chart.defaults.color=col("--muted");
+Chart.defaults.borderColor=col("--line");
+Chart.defaults.font.size=11;
+const fmtKt=n=>n>=1000?(n/1000).toLocaleString("en-US",{maximumFractionDigits:1})+" Mt":n+" kt";
+const noLeg={plugins:{legend:{display:false}}};
+
+/* draw a total in the center of doughnut charts */
+Chart.register({
+  id:"centerText",
+  afterDraw(chart){
+    const opts=chart.options.plugins&&chart.options.plugins.centerText;
+    if(!opts||!opts.enabled) return;
+    if(!chart.chartArea) return;
+    const {ctx,chartArea:{left,right,top,bottom}}=chart;
+    const cx=(left+right)/2, cy=(top+bottom)/2;
+    ctx.save();
+    ctx.textAlign="center";
+    ctx.textBaseline="middle";
+    ctx.fillStyle=col("--txt");
+    ctx.font="700 19px -apple-system,Segoe UI,Roboto,sans-serif";
+    ctx.fillText(opts.text, cx, cy-(opts.label?9:0));
+    if(opts.label){
+      ctx.font="600 9.5px -apple-system,Segoe UI,Roboto,sans-serif";
+      ctx.fillStyle=col("--muted");
+      ctx.fillText(opts.label, cx, cy+10);
+    }
+    ctx.restore();
+  }
+});
+
+const donutOpts={maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+  tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}%`}}},cutout:"62%"};
+
+new Chart(chProd,{type:"bar",
+  data:{labels:DATA.production2025.map(d=>d[0]),
+    datasets:[{data:DATA.production2025.map(d=>d[1]),backgroundColor:DATA.production2025.map((d,i)=>i===0?col("--accent"):"#60a5fa88"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{type:"logarithmic",ticks:{callback:v=>[500,2000,8000].includes(v)?(v/1000)+" Mt":""},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmtKt(c.parsed.x)} manganese content (log scale)`}}}}});
+
+new Chart(chRes,{type:"doughnut",
+  data:{labels:DATA.reserves.map(d=>d[0]),datasets:[{data:DATA.reserves.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed} Mt`}},
+    centerText:{enabled:true,text:"1.8 Bt",label:"world total"}}}});
+
+new Chart(chTrend,{type:"line",
+  data:{labels:DATA.trend.years,
+    datasets:[
+      {label:"Ore production (Mt gross)",data:DATA.trend.prod,borderColor:col("--accent"),backgroundColor:"#e879f922",fill:true,tension:0,pointRadius:3,pointBackgroundColor:col("--accent"),yAxisID:"y",spanGaps:false},
+      {label:"44% ore price ($/dmtu)",data:DATA.trend.price,borderColor:col("--accent2"),backgroundColor:"transparent",fill:false,tension:0,pointRadius:3,pointBackgroundColor:col("--accent2"),yAxisID:"y2",spanGaps:false}
+    ]},
+  options:{maintainAspectRatio:false,
+    scales:{y:{min:0,max:70,ticks:{callback:v=>v+" Mt"},grid:{color:col("--line")},title:{display:false}},
+            y2:{position:"right",min:0,max:8,ticks:{callback:v=>"$"+v},grid:{display:false}},
+            x:{grid:{display:false}}},
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+      tooltip:{callbacks:{label:c=>c.dataset.yAxisID==="y2"?` Price: $${c.parsed.y.toFixed(2)}/dmtu`:` Production: ${c.parsed.y} Mt ore`}}}}});
+
+new Chart(chConv,{type:"bar",
+  data:{labels:DATA.conv2025.map(d=>d[0]),
+    datasets:[{data:DATA.conv2025.map(d=>d[1]),backgroundColor:DATA.conv2025.map((d,i)=>i===0?col("--accent"):"#60a5fa88"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{max:100,ticks:{callback:v=>v+"%"},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ~${c.parsed.x}% of battery-grade sulphate refining (est.)`}}}}});
+
+new Chart(chUsImp,{type:"doughnut",
+  data:{labels:DATA.usImports.map(d=>d[0]),datasets:[{data:DATA.usImports.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:donutOpts});
+
+new Chart(chPrices,{type:"bar",
+  data:{labels:DATA.prices.years,
+    datasets:[{data:DATA.prices.ore,backgroundColor:DATA.prices.ore.map((v,i)=>i===3?col("--accent"):"#60a5fa88"),borderRadius:4}]},
+  options:{...noLeg,maintainAspectRatio:false,
+    scales:{y:{min:0,ticks:{callback:v=>"$"+v},grid:{color:col("--line")}},x:{grid:{display:false}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` $${c.parsed.y.toFixed(2)}/dmtu annual average${c.dataIndex===3?" — spiked to ~$8.97 intra-year":""}`}}}}});
+
+/* china bars */
+document.getElementById("chinaBars").innerHTML = DATA.chinaShares.map(([s,v])=>`
+  <div class="bar-row"><span>${s}</span><div class="track"><div class="fill" data-w="${v}"></div></div><span class="val">~${v}%</span></div>`).join("");
+const io2=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.w+"%");io2.unobserve(e.target);}
+}),{threshold:.4});
+io2.observe(document.getElementById("chinaBars"));
+
+/* nav active state */
+const secs=[...document.querySelectorAll("section[id],header")];
+const navLinks=[...document.querySelectorAll("nav a.link")];
+const io3=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}
+}),{rootMargin:"-40% 0px -55% 0px"});
+secs.forEach(s=>io3.observe(s));
+</script>
+<script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
