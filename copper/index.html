@@ -166,6 +166,23 @@ nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
 .research-cta:hover::before,.research-cta:focus-visible::before{transform:translateX(0)}
 @media(prefers-reduced-motion:reduce){.research-cta::before{transition:none}}
 
+/* subscribe */
+.sub-row{display:flex;flex-direction:column;align-items:stretch;gap:24px;width:100%}
+@media(min-width:860px){.sub-row{flex-direction:row}}
+.sub-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;flex:1;min-width:0}
+.sub-box p{font-size:.92rem;color:var(--muted);margin-bottom:14px}
+.sub-box p:last-child{margin-bottom:0}
+.sub-box a{font-weight:600}
+.sub-form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;flex:1;min-width:0;color-scheme:dark}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-grid .full{grid-column:1/-1}
+.sub-form input,.sub-form select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:var(--txt);font:inherit;font-size:.88rem}
+.sub-form input::placeholder{color:var(--muted)}
+.sub-form input:focus,.sub-form select:focus{outline:none;border-color:var(--accent)}
+.sub-form button{width:100%;background:var(--accent);color:var(--bg);border:0;cursor:pointer;font:inherit;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;margin-top:14px}
+.sub-form button:hover{filter:brightness(1.12)}
+.form-note{font-size:.74rem;color:var(--muted);margin-top:12px;text-align:center}
+
 /* hero */
 .hero{padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
 .hero h1{font-size:clamp(1.9rem,6.5vw,3.2rem);letter-spacing:-.02em;margin-bottom:14px}
@@ -829,6 +846,45 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
           <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7s" begin="3.6s" repeatCount="indefinite"/>
         </circle>
       </svg>
+    </div>
+  </div>
+</section>
+
+<section id="subscribe-sec">
+  <div class="kicker">Stay updated</div>
+  <h2>Get notified when the copper data refreshes</h2>
+  <div class="sub-row">
+    <div class="sub-box">
+      <p>mineral.watch is an independent open-data project, and it grows with the people who use it. Introduce yourself and we'll let you know when the copper figures on this dashboard are updated and when new dashboards, datasets and research go live — no noise, just what's new.</p>
+      <p>Telling us your sector and organisation helps too: it shows us who relies on this data — analysts, policymakers, journalists, researchers — and shapes what we build next, from new minerals to custom research.</p>
+      <p>Prefer to talk directly? Corrections, data tips and collaboration ideas are always welcome at <a href="mailto:hello@mineral.watch">hello@mineral.watch</a>.</p>
+    </div>
+    <div class="sub-form">
+      <form action="https://formspree.io/f/mljeedkq" method="POST">
+        <input type="hidden" name="_subject" value="New mineral.watch subscriber (copper dashboard)">
+        <input type="hidden" name="source" value="copper-dashboard">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-grid">
+          <input type="text" name="first_name" placeholder="First name *" aria-label="First name" autocomplete="given-name" required>
+          <input type="text" name="last_name" placeholder="Last name *" aria-label="Last name" autocomplete="family-name" required>
+          <input type="email" name="email" class="full" placeholder="Email *" aria-label="Email" autocomplete="email" required>
+          <input type="text" name="organisation" class="full" placeholder="Organisation" aria-label="Organisation" autocomplete="organization">
+          <select name="sector" class="full" aria-label="Sector">
+            <option value="" selected>Sector</option>
+            <option>Government &amp; policy</option>
+            <option>Mining &amp; industry</option>
+            <option>Finance &amp; investment</option>
+            <option>Research &amp; academia</option>
+            <option>Media &amp; journalism</option>
+            <option>NGO / civil society</option>
+            <option>Other</option>
+          </select>
+          <input type="text" name="linkedin" placeholder="LinkedIn" aria-label="LinkedIn profile">
+          <input type="tel" name="whatsapp" placeholder="WhatsApp (+code)" aria-label="WhatsApp number">
+        </div>
+        <button type="submit">Subscribe for updates</button>
+        <p class="form-note">We'll only use your details to send you mineral.watch updates. No spam, unsubscribe anytime.</p>
+      </form>
     </div>
   </div>
 </section>
