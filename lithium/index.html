@@ -310,7 +310,8 @@ table.co{width:100%;min-width:900px;border-collapse:collapse;font-size:.79rem}
 @media(min-width:720px){.mini-grid{grid-template-columns:1fr 1fr}}
 
 /* research box + animated logo */
-.research-box{display:grid;gap:24px;align-items:center}
+.research-box{display:grid;gap:24px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px;transition:border-color .2s,box-shadow .2s}
+.research-box:hover{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 0 24px -4px var(--accent)}
 .research-art{display:none;justify-self:center;width:180px;animation:hero-float 11s ease-in-out infinite}
 @media(min-width:720px){.research-box{grid-template-columns:1.3fr 1fr}.research-art{display:block}}
 @keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
@@ -804,7 +805,7 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
 </section>
 
 <section id="research-sec">
-  <div class="research-box" style="background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px">
+  <div class="research-box">
     <div>
       <div class="kicker">Custom research</div>
       <h2>Need an ad hoc data-driven research report?</h2>
