@@ -175,7 +175,15 @@ nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
 .form-note{font-size:.74rem;color:var(--muted);margin-top:12px;text-align:center}
 
 /* hero */
-.hero{padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
+.hero-wrap{position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;transform:scale(1.05);filter:grayscale(1) brightness(.52) contrast(1.05);opacity:.6}
+.hero-tint{position:absolute;inset:0;z-index:0;pointer-events:none;background:var(--accent);mix-blend-mode:color;opacity:.45}
+.hero-scrim{position:absolute;inset:0;z-index:0;pointer-events:none;background:
+  linear-gradient(90deg,rgba(13,17,23,.88) 0%,rgba(13,17,23,.55) 55%,rgba(13,17,23,.3) 100%),
+  linear-gradient(180deg,rgba(13,17,23,.75) 0%,rgba(13,17,23,0) 35%,rgba(13,17,23,0) 68%,var(--bg) 100%)}
+.hero{position:relative;z-index:1;padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
+.hero-wrap .stat{background:rgba(26,34,44,.72);backdrop-filter:blur(4px)}
+.hero-wrap .hero p{color:#b6c2cf}
 .hero h1{font-size:clamp(1.9rem,6.5vw,3.2rem);letter-spacing:-.02em;margin-bottom:14px}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero p{color:var(--muted);max-width:560px;font-size:1rem}
@@ -368,7 +376,11 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero-wrap">
+  <img class="hero-bg" src="/brand/headers/rare-earths.jpg" alt="" aria-hidden="true">
+  <div class="hero-tint" aria-hidden="true"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero">
   <div class="kicker">Open data · critical minerals</div>
   <h1>Who controls the world's <em>rare earths</em>?</h1>
   <p>Seventeen obscure metals sit inside every EV motor, wind turbine, fighter jet and smartphone — and one country separates nine-tenths of them. This site tracks where rare earths are mined, separated and turned into magnets, using open data from USGS, the IEA and trade records.</p>
@@ -377,6 +389,7 @@ footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:cente
     <div class="stat"><b data-count="69" data-suffix="%">0</b><span>of world mine output from China, 2025</span></div>
     <div class="stat"><b data-count="91" data-suffix="%">0</b><span>of refining &amp; separation done in China (IEA, 2024)</span></div>
     <div class="stat"><b data-count="94" data-suffix="%">0</b><span>of sintered NdFeB magnets made in China (2024)</span></div>
+  </div>
   </div>
 </header>
 
