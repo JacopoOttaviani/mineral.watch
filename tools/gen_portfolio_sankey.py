@@ -59,7 +59,7 @@ mcolor = {m[0]: m[2] for m in MINERALS}
 mhref = {m[0]: m[3] for m in MINERALS}
 
 # ---- svg ----
-W, H, TOP, BOT, NW, PADL, PADR, XL, XR = 880, 820, 30, 12, 12, 10, 12, 172, 694
+W, H, TOP, BOT, NW, PADL, PADR, XL, XR = 880, 656, 30, 12, 12, 10, 12, 172, 694
 tot_pts = sum(s for _, _, s, _ in links)
 sL = (H-TOP-BOT-PADL*(len(countries)-1)) / tot_pts
 sR = (H-TOP-BOT-PADR*(len(minerals)-1)) / tot_pts
