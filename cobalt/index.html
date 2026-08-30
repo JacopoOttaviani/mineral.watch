@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>CobaltWatch — Tracking the Global Cobalt Supply Chain</title>
+<meta name="description" content="Open data visualisation tracking the global cobalt supply chain: the DRC's industrial mines and artisanal diggers, Indonesia's rise, China's refining grip, the export-quota gamble and the battery industry's escape attempt. Built on USGS, Cobalt Institute, IEA, BGS and price-agency data.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="mineral.watch">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="https://mineral.watch/cobalt/">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="alternate icon" href="/brand/favicon.png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mineral.watch/cobalt/">
+<meta property="og:site_name" content="mineral.watch">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="CobaltWatch — Tracking the Global Cobalt Supply Chain">
+<meta property="og:description" content="Interactive world map of mines, hydroxide plants and refineries, production and price charts, the DRC export-quota gamble, China's 79% refining grip and the artisanal-mining dilemma — built on USGS, Cobalt Institute, IEA, BGS and price-agency data.">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CobaltWatch — tracking the global cobalt supply chain">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CobaltWatch — Tracking the Global Cobalt Supply Chain">
+<meta name="twitter:description" content="Interactive map, production and price charts, the DRC export-quota saga, Indonesia's rise, China's refining chokepoint and the LFP escape attempt — built on USGS, Cobalt Institute, IEA, BGS and price-agency data.">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png">
+<meta name="twitter:image:alt" content="CobaltWatch — tracking the global cobalt supply chain">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
+        { "@type": "ListItem", "position": 2, "name": "Cobalt", "item": "https://mineral.watch/cobalt/" }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "CobaltWatch — Global Cobalt Supply Chain Data",
+      "description": "Mines, hydroxide plants and refineries, production and reserves data, prices, trade flows, export quotas and refining concentration for the global cobalt supply chain.",
+      "url": "https://mineral.watch/cobalt/",
+      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "temporalCoverage": "2018/2026",
+      "spatialCoverage": "Worldwide",
+      "variableMeasured": ["Mine production", "Reserves", "Refining capacity", "Prices", "Trade flows", "Export quotas", "Companies"],
+      "isAccessibleForFree": true,
+      "license": "https://mineral.watch/",
+      "citation": [
+        "USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Cobalt)",
+        "Cobalt Institute, Cobalt Market Report 2025",
+        "IEA Global Critical Minerals Outlook 2026",
+        "British Geological Survey, World Mineral Statistics",
+        "Fastmarkets, S&P Global Platts and LME price data",
+        "Company disclosures and government announcements"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is cobalt used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Batteries dominate: about 43% of the world's cobalt goes into EV batteries and another 30% into the lithium-ion cells of phones, laptops and power tools (Cobalt Institute, 2024). The rest is the older, strategic market — superalloys for jet-engine hot sections (about half of US consumption), tungsten-carbide cutting tools, catalysts, samarium-cobalt magnets and the pigment that has coloured ceramics cobalt-blue for a thousand years. Total demand grew 13% in 2025 despite the rise of cobalt-free battery chemistries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which country produces the most cobalt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Democratic Republic of the Congo mined about 230,000 of the world's 310,000 tonnes of cobalt in 2025 (USGS) — roughly 73%, almost all of it as a by-product of copper from the Katanga Copperbelt, and a share of it dug by hand. Indonesia is now a clear second at about 44,000 tonnes, a by-product of its nickel boom, up from almost nothing a decade ago. But the tightest grip is downstream: China refined about 79% of the world's cobalt in 2025 (Cobalt Institute)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did the DRC ban cobalt exports, and what are the quotas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By early 2025 cobalt had crashed to eight-year lows around $10 per pound under a wall of new supply. On 22 February 2025 the DRC — supplier of three quarters of the world's cobalt — banned exports outright, and from 16 October 2025 replaced the ban with quotas run by the regulator ARECOMS: 18,125 tonnes for the rest of 2025, then 96,600 tonnes a year for 2026 and 2027, including 9,600 tonnes reserved for the state — roughly half of what the country exported in 2024. Prices responded violently: hydroxide rose about 300% over 2025, and standard-grade metal traded near $26 per pound in August 2026."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the world running out of cobalt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. USGS puts reserves at about 12 million tonnes — roughly forty years at the 2025 mining rate — with identified terrestrial resources of about 25 million tonnes, and it estimates billions of tonnes more in seafloor polymetallic nodules. The risk is not geology but structure: three quarters of mine supply comes from one country, four fifths of refining happens in another, and the export rules can change with a decree."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can batteries go cobalt-free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Increasingly, yes — and it is the biggest force reshaping this market. Cobalt-free LFP chemistry took more than 55% of global EV battery deployments in 2025 (IEA), overtaking nickel-based cells for the first time, and high-nickel NMC keeps thrifting cobalt out of the rest. Yet total cobalt demand still grew 13% in 2025: EV volumes, consumer electronics (whose LCO cathodes are the most cobalt-rich of all) and aerospace superalloys outweigh the substitution — for now. Forecasters see roughly 5–7% annual demand growth to 2030, at the mercy of chemistry choices made in Asia's battery labs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What about artisanal mining and child labour?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Between about 150,000 and 250,000 people dig cobalt by hand in the DRC's artisanal sector, historically supplying anywhere from a few percent to a fifth of national output depending on prices — with documented child labour and fatal accidents. Since February 2025 the state's Entreprise Générale du Cobalt has held a legal monopoly on buying and exporting artisanal cobalt, and it produced its first fully traceable cathodes in November 2025. Formalisation remains partial: initiatives such as the Fair Cobalt Alliance work on mine-site safety and school enrolment, while Amnesty International continues to document evictions and abuses around industrial mines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Need a deep-dive report on cobalt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That's exactly what we do. We produce commissioned deep-dive reports on cobalt, covering angles such as mine-to-refinery supply-chain mapping, the DRC quota regime and its politics, Indonesia's HPAL wave, China's refining grip, battery-chemistry scenarios and what they mean for demand, artisanal-mining due diligence and the Western refinery buildout. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#5b8aff;--accent2:#f472b6;
+  --mine:#5b8aff;--proc:#f472b6;--dis:#fbbf24;--dev:#c4b5fd;
+  --radius:14px;--pad:16px;
+  font-size:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+h1,h2,h3{line-height:1.2;font-weight:700}
+section{padding:40px var(--pad);max-width:1100px;margin:0 auto}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;margin-bottom:8px}
+h2{font-size:1.5rem;margin-bottom:10px}
+.lede{color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:20px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1100px;margin:0 auto}
+.nav-links{display:flex;align-items:center;gap:8px;flex:1;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px;flex:none}
+.brand span{color:var(--accent)}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap;flex:none}
+nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto;flex:none;position:relative;overflow:hidden;z-index:0}
+nav a.cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){nav a.cta::before{transition:none}}
+.research-cta{display:inline-block;background:var(--accent);color:var(--bg);font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none;position:relative;overflow:hidden;z-index:0}
+.research-cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+.research-cta:hover::before,.research-cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){.research-cta::before{transition:none}}
+
+/* subscribe */
+.sub-row{display:flex;flex-direction:column;align-items:stretch;gap:24px;width:100%}
+@media(min-width:860px){.sub-row{flex-direction:row}}
+.sub-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;flex:1;min-width:0}
+.sub-box p{font-size:.92rem;color:var(--muted);margin-bottom:14px}
+.sub-box p:last-child{margin-bottom:0}
+.sub-box a{font-weight:600}
+.sub-form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;flex:1;min-width:0;color-scheme:dark}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-grid .full{grid-column:1/-1}
+.sub-form input,.sub-form select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:var(--txt);font:inherit;font-size:.88rem}
+.sub-form input::placeholder{color:var(--muted)}
+.sub-form input:focus,.sub-form select:focus{outline:none;border-color:var(--accent)}
+.sub-form select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e6edf3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;background-size:16px 16px;padding-right:26px}
+.sub-form button{width:100%;background:var(--accent);color:var(--bg);border:0;cursor:pointer;font:inherit;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;margin-top:14px}
+.sub-form button:hover{filter:brightness(1.12)}
+.form-note{font-size:.74rem;color:var(--muted);margin-top:12px;text-align:center}
+
+/* hero */
+.hero-wrap{position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;transform:scale(1.05);filter:grayscale(1) brightness(.52) contrast(1.05);opacity:.6}
+.hero-tint{position:absolute;inset:0;z-index:0;pointer-events:none;background:var(--accent);mix-blend-mode:color;opacity:.45}
+.hero-scrim{position:absolute;inset:0;z-index:0;pointer-events:none;background:
+  linear-gradient(90deg,rgba(13,17,23,.88) 0%,rgba(13,17,23,.55) 55%,rgba(13,17,23,.3) 100%),
+  linear-gradient(180deg,rgba(13,17,23,.75) 0%,rgba(13,17,23,0) 35%,rgba(13,17,23,0) 68%,var(--bg) 100%)}
+.hero{position:relative;z-index:1;padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
+.hero-wrap .stat{background:rgba(26,34,44,.72);backdrop-filter:blur(4px)}
+.hero-wrap .hero p{color:#b6c2cf}
+.hero h1{font-size:clamp(1.9rem,6.5vw,3.2rem);letter-spacing:-.02em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);max-width:560px;font-size:1rem}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.stat b{display:block;font-size:1.45rem;color:var(--accent);letter-spacing:-.01em}
+.stat span{font-size:.74rem;color:var(--muted)}
+
+/* map */
+#map{height:62vh;min-height:380px;border-radius:var(--radius);border:1px solid var(--line);z-index:1}
+.map-controls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:7px 14px;font-size:.8rem;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent}
+.chip.on{color:#0d1117;font-weight:700}
+.chip.on.c-mine{background:var(--mine);border-color:var(--mine)}
+.chip.on.c-proc{background:var(--proc);border-color:var(--proc)}
+.chip.on.c-dis{background:var(--dis);border-color:var(--dis)}
+.chip.on.c-dev{background:var(--dev);border-color:var(--dev)}
+.legend{font-size:.74rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--card)}
+.leaflet-popup-content{font-size:.82rem;line-height:1.5;margin:12px 14px}
+.leaflet-popup-content b{color:var(--accent)}
+.pp-tag{display:inline-block;font-size:.66rem;padding:1px 8px;border-radius:99px;margin-bottom:4px;font-weight:700}
+
+/* forms grid (ore → cathode) */
+.el-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px;margin-top:8px}
+.el{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 6px 10px;cursor:pointer;text-align:center;transition:.15s;position:relative;-webkit-tap-highlight-color:transparent}
+.el:hover{border-color:var(--accent)}
+.el.sel{border-color:var(--accent);background:#5b8aff14}
+.el b{display:block;font-size:.98rem;letter-spacing:-.01em}
+.el span{font-size:.6rem;color:var(--muted);display:block;margin-top:2px}
+.el .z{position:absolute;top:4px;left:7px;font-size:.56rem;color:var(--muted)}
+.el.gU b{color:var(--accent)}
+.el.gM b{color:var(--accent2)}
+.el.gD b{color:var(--dis)}
+.el.gC b{color:var(--muted)}
+.el-legend{font-size:.72rem;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.el-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.el-detail{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.el-detail h3{font-size:1.05rem;margin-bottom:2px}
+.el-detail h3 small{color:var(--muted);font-weight:400;font-size:.78rem}
+.el-detail .tags{margin:6px 0 10px;display:flex;gap:6px;flex-wrap:wrap}
+.el-detail p{font-size:.85rem;color:var(--muted)}
+.el-detail .price{margin-top:10px;font-size:.78rem;color:var(--accent);border-top:1px dashed var(--line);padding-top:8px}
+
+/* journey */
+.journey{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 calc(-1*var(--pad));padding-left:var(--pad);padding-right:var(--pad)}
+.jcard{scroll-snap-align:start;flex:0 0 260px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative}
+.jcard .num{position:absolute;top:14px;right:16px;font-size:1.6rem;font-weight:800;color:var(--line)}
+.jcard .ico{font-size:1.6rem;margin-bottom:10px}
+.jcard h3{font-size:1rem;margin-bottom:6px}
+.jcard p{font-size:.8rem;color:var(--muted)}
+.jcard .fact{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.76rem;color:var(--accent)}
+.jhint{font-size:.72rem;color:var(--muted);margin-top:6px}
+
+/* charts */
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card h3{font-size:.95rem;margin-bottom:4px}
+.card .sub{font-size:.74rem;color:var(--muted);margin-bottom:12px}
+.chartbox{position:relative;height:280px}
+.src{font-size:.68rem;color:var(--muted);margin-top:10px}
+
+/* china section */
+.big{font-size:clamp(2.6rem,10vw,4.5rem);font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1}
+.bars{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.bar-row{display:grid;grid-template-columns:150px 1fr 44px;align-items:center;gap:10px;font-size:.78rem}
+.bar-row .track{background:var(--bg2);border-radius:99px;height:10px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#93c5fd);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar-row .val{text-align:right;color:var(--muted)}
+
+/* process flow */
+.flow-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+.flow-wrap svg{min-width:980px;display:block}
+
+/* timeline */
+.tl{position:relative;margin-top:6px;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding-bottom:22px}
+.tl-item::before{content:"";position:absolute;left:-24px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl-item.hot::before{background:var(--accent)}
+.tl-date{font-size:.7rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.tl-item h4{font-size:.92rem;margin:3px 0 4px}
+.tl-item p{font-size:.8rem;color:var(--muted);max-width:640px}
+
+/* company tracker */
+.co-search{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.co-search input{flex:1 1 200px;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;color:var(--txt);font-size:.8rem;outline:none;-webkit-appearance:none}
+.co-search input:focus{border-color:var(--accent)}
+.co-search input::placeholder{color:var(--muted)}
+.co-count{font-size:.72rem;color:var(--muted)}
+.co-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+table.co{width:100%;min-width:900px;border-collapse:collapse;font-size:.79rem}
+.co th{text-align:left;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.co td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted);line-height:1.45}
+.co td:first-child{min-width:170px}
+.co td b{color:var(--txt);font-size:.82rem}
+.co td b a{color:var(--txt);text-decoration:none;border-bottom:1px dashed var(--line)}
+.co td b a:hover{color:var(--accent2);border-bottom-color:var(--accent2)}
+.co .tik{font-size:.68rem;color:var(--muted);margin-top:2px;white-space:nowrap}
+.co .pp-tag{white-space:nowrap;margin-bottom:0}
+
+/* mini cards (military / invest) */
+.mini-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.mini{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px}
+.mini h4{font-size:.86rem;margin-bottom:5px}
+.mini h4 .mi{margin-right:6px}
+.mini p{font-size:.78rem;color:var(--muted)}
+.note{font-size:.72rem;color:var(--muted);border-left:3px solid var(--accent);padding:8px 12px;background:var(--bg2);border-radius:0 8px 8px 0;margin-top:14px}
+.callout{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:14px;margin-top:14px}
+.callout b{font-size:1.5rem;color:var(--accent2);white-space:nowrap;line-height:1.2}
+.callout span{font-size:.78rem;color:var(--muted);flex:1 1 260px;line-height:1.5}
+@media(min-width:720px){.mini-grid{grid-template-columns:1fr 1fr}}
+
+/* research box + animated logo */
+.research-box{display:grid;gap:24px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px;transition:border-color .2s,box-shadow .2s}
+.research-box:hover{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 0 24px -4px var(--accent)}
+.research-art{display:none;justify-self:center;width:180px;animation:hero-float 11s ease-in-out infinite}
+@media(min-width:720px){.research-box{grid-template-columns:1.3fr 1fr}.research-art{display:block}}
+@keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.net-art .edge{stroke:var(--txt);stroke-opacity:.55;stroke-width:1.1;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 1.6s ease-out forwards}
+.net-art .web{stroke:var(--muted);stroke-opacity:.35;stroke-width:.8;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 2s ease-out forwards}
+.net-art .d1{animation-delay:.1s}.net-art .d2{animation-delay:.35s}.net-art .d3{animation-delay:.6s}
+.net-art .d4{animation-delay:.9s}.net-art .d5{animation-delay:1.15s}.net-art .d6{animation-delay:1.4s}
+@keyframes art-draw{to{stroke-dashoffset:0}}
+.net-art .orbit{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:3 7;transform-box:fill-box;transform-origin:center}
+.net-art .orbit.o2{stroke-opacity:.6;animation:art-spin 120s linear infinite reverse}
+@keyframes art-spin{to{transform:rotate(360deg)}}
+.net-art .node{fill:var(--bg);stroke:var(--txt);stroke-opacity:.7;stroke-width:1.1;opacity:0;animation:art-in .5s ease-out forwards}
+.net-art .sat{fill:none;stroke:var(--muted);stroke-width:1;opacity:0;animation:art-in .5s ease-out forwards,art-breathe 4s ease-in-out 2.4s infinite;transform-box:fill-box;transform-origin:center}
+.net-art .node,.net-art .sat{animation-delay:1.2s}
+.net-art .sat.b2{animation-delay:1.4s,3s}.net-art .sat.b3{animation-delay:1.6s,3.8s}
+@keyframes art-in{to{opacity:1}}
+@keyframes art-breathe{0%,100%{transform:scale(1);stroke-opacity:1}50%{transform:scale(1.5);stroke-opacity:.4}}
+@media(prefers-reduced-motion:reduce){
+  .net-art,.net-art *{animation:none !important;stroke-dashoffset:0 !important;opacity:1 !important}
+}
+
+/* sources */
+.sources li{margin-bottom:12px;font-size:.85rem;color:var(--muted)}
+.sources{list-style:none}
+.sources b{color:var(--txt)}
+
+/* faq */
+.faq{display:grid;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+.faq details[open]{border-color:var(--accent)}
+.faq summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.2rem;flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--muted);font-size:.86rem;margin-top:10px}
+footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}footer a{color:inherit;text-decoration:none}footer a:hover{color:var(--accent)}
+
+@media(min-width:720px){
+  :root{--pad:24px}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .grid2{grid-template-columns:1fr 1fr}
+  h2{font-size:1.9rem}
+  .jcard{flex-basis:300px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
+    <div class="brand">Cobalt<span>Watch</span></div>
+    <div class="nav-links">
+    <a class="link" href="#map-sec">Map</a>
+    <a class="link" href="#forms-sec">The metal</a>
+    <a class="link" href="#journey-sec">Journey</a>
+    <a class="link" href="#production-sec">Production</a>
+    <a class="link" href="#refining-sec">Refining</a>
+    <a class="link" href="#demand-sec">Demand</a>
+    <a class="link" href="#timeline-sec">Timeline</a>
+    <a class="link" href="#trade-sec">Trade</a>
+    <a class="link" href="#china-sec">China</a>
+    <a class="link" href="#military-sec">Military</a>
+    <a class="link" href="#invest-sec">Investment</a>
+    <a class="link" href="#companies-sec">Companies</a>
+    <a class="link" href="#sources-sec">Data</a>
+    <a class="link" href="#faq-sec">FAQ</a>
+    <a class="link" href="#research-sec">Research</a>
+    </div>
+    <a class="cta" href="#research-sec">Contact us</a>
+  </div>
+</nav>
+
+<header class="hero-wrap">
+  <img class="hero-bg" src="/brand/headers/cobalt.jpg" alt="" aria-hidden="true">
+  <div class="hero-tint" aria-hidden="true"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero">
+  <div class="kicker">Open data · critical minerals</div>
+  <h1>Whose hands power the <em>battery age</em>?</h1>
+  <p>Cobalt is the battery age's most concentrated bet — and its most uncomfortable one. Nearly three quarters is dug in a single country, the Democratic Republic of the Congo, some of it by hand; most of it ships as bagged hydroxide to a single refiner, China; and since 2025 Kinshasa has rationed exports by decree to force the price up. This site tracks where cobalt is mined, refined and consumed, how an export ban rewired the market, and whether the EV industry escapes the metal before the DRC finishes cornering it — using open data from USGS, the Cobalt Institute, the IEA, BGS and price agencies.</p>
+  <div class="stats">
+    <div class="stat"><b data-count="310" data-suffix=" kt">0</b><span>of cobalt content mined worldwide in 2025 — an all-time high (USGS)</span></div>
+    <div class="stat"><b data-count="73" data-prefix="~" data-suffix="%">0</b><span>of world mine supply came from the DR Congo in 2025 (USGS)</span></div>
+    <div class="stat"><b data-count="79" data-prefix="~" data-suffix="%">0</b><span>of the world's refined cobalt was produced in China in 2025 (Cobalt Institute)</span></div>
+    <div class="stat"><b data-count="96600" data-suffix=" t">0</b><span>annual DRC export quota for 2026–27 — about half of 2024 exports (ARECOMS)</span></div>
+  </div>
+  </div>
+</header>
+
+<section id="map-sec">
+  <div class="kicker">Interactive map</div>
+  <h2>The cobalt world map</h2>
+  <p class="lede">Mines and hydroxide plants, refineries, disrupted operations and development projects — from the Katanga Copperbelt to Indonesia's HPAL parks and the refinery towns of Finland, Canada and China. Tap a marker for details; toggle layers below. Circle size ≈ scale of operation.</p>
+  <div class="map-controls">
+    <button class="chip c-mine on" data-layer="mines">⛏ Mines</button>
+    <button class="chip c-proc on" data-layer="processing">🏭 Refineries &amp; plants</button>
+    <button class="chip c-dis on" data-layer="disrupted">⚠ Disrupted &amp; closed</button>
+    <button class="chip c-dev on" data-layer="development">◐ Development</button>
+  </div>
+  <div id="map"></div>
+  <div class="legend" style="margin-top:10px">
+    <span><i style="background:var(--mine)"></i>Mine</span>
+    <span><i style="background:var(--proc)"></i>Refinery / plant</span>
+    <span><i style="background:var(--dis)"></i>Disrupted / closed</span>
+    <span><i style="background:var(--dev)"></i>Development project</span>
+  </div>
+</section>
+
+<section id="forms-sec">
+  <div class="kicker">From ore to cathode to superalloy</div>
+  <h2>One metal, two markets</h2>
+  <p class="lede">Cobalt trades in a ladder of forms — ores nobody ships, intermediates priced as a percentage of a metal benchmark, battery salts measured in parts per million of impurity, and aerospace-certified metal that now commands its own premium. The tonnage lives in the battery chain; the strategy spans both. Tap a stage.</p>
+  <div class="el-grid" id="elGrid"></div>
+  <div class="el-legend">
+    <span><i style="background:var(--accent)"></i>Upstream (mine &amp; intermediate)</span>
+    <span><i style="background:var(--accent2)"></i>Midstream (refine)</span>
+    <span><i style="background:var(--dis)"></i>Downstream (cells &amp; alloys)</span>
+    <span><i style="background:var(--muted)"></i>Circular</span>
+  </div>
+  <div class="el-detail" id="elDetail"></div>
+</section>
+
+<section id="journey-sec">
+  <div class="kicker">Mine to cell — and to jet engine</div>
+  <h2>The journey of a tonne of cobalt</h2>
+  <p class="lede">From a copper orebody in Katanga — or a nickel laterite in the Moluccas — to the cathode in a phone and the turbine blade in a jet. Almost nobody mines cobalt for its own sake: it rides along with copper and nickel, which is why supply ignores its price for years at a time.</p>
+  <div class="journey" id="journey"></div>
+  <div class="jhint">← swipe →</div>
+</section>
+
+<section id="production-sec">
+  <div class="kicker">Production &amp; reserves</div>
+  <h2>Where cobalt comes from</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Mine production by country, 2025</h3>
+      <div class="sub">Tonnes of cobalt content, log scale (USGS estimates)</div>
+      <div class="chartbox"><canvas id="chProd"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries 2026. World total ~310,000 t of cobalt content; 2025 figures are estimates. Indonesia's output has grown from ~1,300 t in 2015 to 44,000 t.</div>
+    </div>
+    <div class="card">
+      <h3>Reserves by country</h3>
+      <div class="sub">Million tonnes of cobalt content (world total ~12 million tonnes)</div>
+      <div class="chartbox"><canvas id="chRes"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries 2026. Identified terrestrial resources are ~25 Mt; USGS estimates billions of tonnes more in seafloor polymetallic nodules.</div>
+    </div>
+    <div class="card" style="grid-column:1/-1">
+      <h3>The scissors: surging tonnage, whipsawing price</h3>
+      <div class="sub">World mine production of cobalt (kt of cobalt content, left) vs the annual-average US spot cathode price ($/lb, right)</div>
+      <div class="chartbox"><canvas id="chTrend"></canvas></div>
+      <div class="src">Sources: BGS World Mineral Statistics (production, cobalt content, 2018–2024); USGS MCS 2026 / S&amp;P Global Platts (price, from 2021). Production nearly doubled between 2021 and 2024 — which is exactly why the price crashed to eight-year lows and Kinshasa reached for the export ban.</div>
+    </div>
+  </div>
+  <div class="note">Explore where cobalt is <b>mined</b> vs where it is <b>refined</b>, country by country since 1970, on the <a href="/supply-chain/">supply-chain map</a>.</div>
+</section>
+
+<section id="refining-sec">
+  <div class="kicker">Refining</div>
+  <h2>The chokepoint is the refinery</h2>
+  <p class="lede">The DRC digs the ore, but almost none of it becomes finished cobalt there: it leaves as hydroxide in bags and returns to the market as Chinese sulphate and metal. China refined about 79% of the world's cobalt in 2025 — a grip built on the battery boom, cheap capital and two decades of buying African mines.</p>
+  <div class="card">
+    <h3>Refining geography</h3>
+    <div class="sub">A world of mines, one country of refineries — and a handful of exceptions</div>
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇨🇳</span>The sulphate machine</h4><p>Zhejiang's refinery belt — Huayou in Quzhou and Tongxiang, GEM in Jingmen, and dozens more — turns Congolese hydroxide into battery-grade sulphate, chloride and metal. Huayou alone shipped ~46,500 t of cobalt products in 2025, roughly what the entire world outside China refined.</p></div>
+      <div class="mini"><h4><span class="mi">🇫🇮</span>The Kokkola exception</h4><p>The refinery hub at Kokkola, Finland — Umicore's cobalt-chemicals plant (permitted for 16,000 t/yr, applying for 21,000 t) alongside Jervois Finland's specialty lines — is the largest cobalt refining centre outside China, and an EU Critical Raw Materials Act strategic project.</p></div>
+      <div class="mini"><h4><span class="mi">🇮🇩</span>The laterite shortcut</h4><p>Indonesia now refines cobalt onshore: HPAL plants on Obi Island and in the Morowali and Weda Bay parks leach nickel laterites into mixed hydroxide, and Lygend's Obi complex converts it straight to battery-grade sulphate — a mine-to-salt chain China built outside China.</p></div>
+      <div class="mini"><h4><span class="mi">🚧</span>The Western buildout</h4><p>The rest of the map is small and struggling: Glencore's Nikkelverk in Norway and Sumitomo's Niihama in Japan refine modest tonnages; Sherritt's Fort Saskatchewan refinery halted in 2026 as its Cuban feed was choked; Vale's Long Harbour is ramping cobalt rounds; Electra's Ontario sulphate refinery — North America's first — targets commissioning from late 2026.</p></div>
+    </div>
+    <div class="src">Sources: Cobalt Institute Cobalt Market Report 2025; company disclosures (Huayou 2025 annual report, Umicore, Jervois, Lygend/Harita, Glencore, Sumitomo, Sherritt, Vale Base Metals, Electra).</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Where refined cobalt was produced, 2025</h3>
+    <div class="sub">Share of world refined output — the step every cathode and superalloy passes through</div>
+    <div class="chartbox"><canvas id="chConv"></canvas></div>
+    <div class="src">Source: Cobalt Institute, Cobalt Market Report 2025 (refined production ~240,000 t in 2025, China 79%). The largest single facilities elsewhere are in Finland (Kokkola), Norway, Japan, Canada and, increasingly, Indonesia.</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>From ore to cell and to jet engine, step by step</h3>
+    <div class="sub">The battery route (top) takes roughly three quarters of every tonne; the metal route (bottom) is smaller, older — and what defence planners lose sleep over. Scroll sideways on mobile →</div>
+    <div class="flow-wrap">
+    <svg viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cobalt processing flow from ore to batteries and superalloys">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8b98a5"/></marker>
+      </defs>
+      <style>
+        .fb{fill:#151b23;stroke:#2b3644;rx:10}
+        .ft{fill:#e6edf3;font:700 12px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fs{fill:#8b98a5;font:11px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fe{fill:#5b8aff;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fl{stroke:#8b98a5;stroke-width:1.4;fill:none;marker-end:url(#ah)}
+        .lab{fill:#f472b6;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em}
+      </style>
+      <!-- route labels -->
+      <text x="205" y="24" class="lab">BATTERY ROUTE (~73% OF DEMAND)</text>
+      <text x="205" y="212" class="lab">METAL ROUTE (SMALLER — AND STRATEGIC)</text>
+      <!-- shared mining box -->
+      <g>
+        <rect class="fb" x="10" y="120" width="150" height="90" rx="10"/>
+        <text x="20" y="144" class="ft">1 · Mining ⛏</text>
+        <text x="20" y="162" class="fs">A by-product: 0.3–0.6% Co in</text>
+        <text x="20" y="176" class="fs">copper ores, less in laterites</text>
+        <text x="20" y="200" class="fe">DRC digs ~73% of it</text>
+      </g>
+      <!-- battery route boxes y=40..118 -->
+      <g>
+        <rect class="fb" x="205" y="40" width="150" height="78" rx="10"/>
+        <text x="215" y="62" class="ft">2 · Intermediate 🧪</text>
+        <text x="215" y="80" class="fs">Hydroxide (20–40% Co) or</text>
+        <text x="215" y="94" class="fs">Ni-Co MHP from HPAL plants</text>
+        <text x="215" y="111" class="fe">priced as % of the metal</text>
+
+        <rect class="fb" x="400" y="40" width="150" height="78" rx="10"/>
+        <text x="410" y="62" class="ft">3 · Refine ⚗️</text>
+        <text x="410" y="80" class="fs">Leach &amp; purify into battery</text>
+        <text x="410" y="94" class="fs">sulphate (20.5% Co basis)</text>
+        <text x="410" y="111" class="fe">China refines ~79%</text>
+
+        <rect class="fb" x="595" y="40" width="150" height="78" rx="10"/>
+        <text x="605" y="62" class="ft">4 · Cathode 🔋</text>
+        <text x="605" y="80" class="fs">Precursor → NMC for EVs,</text>
+        <text x="605" y="94" class="fs">LCO for phones &amp; laptops</text>
+        <text x="605" y="111" class="fe">LCO is the most Co-rich</text>
+      </g>
+      <!-- metal route boxes y=222..300 -->
+      <g>
+        <rect class="fb" x="205" y="222" width="150" height="78" rx="10"/>
+        <text x="215" y="244" class="ft">2 · Metal 🏭</text>
+        <text x="215" y="262" class="fs">Electrowon 99.8% cathode,</text>
+        <text x="215" y="276" class="fs">briquettes &amp; rounds (LME)</text>
+        <text x="215" y="292" class="fe">alloy grade at a premium</text>
+
+        <rect class="fb" x="400" y="222" width="150" height="78" rx="10"/>
+        <text x="410" y="244" class="ft">3 · Alloys ✈️</text>
+        <text x="410" y="262" class="fs">Superalloys, carbide tools,</text>
+        <text x="410" y="276" class="fs">Sm-Co magnets, prosthetics</text>
+        <text x="410" y="292" class="fe">~51% of US consumption</text>
+      </g>
+      <!-- convergence box -->
+      <g>
+        <rect class="fb" x="790" y="120" width="180" height="90" rx="10" stroke="#5b8aff"/>
+        <text x="800" y="144" class="ft">5 · End uses 🔌</text>
+        <text x="800" y="162" class="fs">EVs, phones and grids on one</text>
+        <text x="800" y="176" class="fs">branch; jet engines, tools and</text>
+        <text x="800" y="190" class="fs">missiles on the other</text>
+        <text x="800" y="205" class="fe">demand +13% in 2025</text>
+      </g>
+      <!-- arrows -->
+      <path class="fl" d="M160 150 L182 150 L182 79 H200"/>
+      <path class="fl" d="M355 79 H395"/>
+      <path class="fl" d="M550 79 H590"/>
+      <path class="fl" d="M745 79 H768 V143 H785"/>
+      <path class="fl" d="M160 180 L182 180 L182 261 H200"/>
+      <path class="fl" d="M355 261 H395"/>
+      <path class="fl" d="M550 261 H700 V183 H785"/>
+    </svg>
+    </div>
+    <div class="src">Route shares: Cobalt Institute (batteries ~73% of demand, 2024) and USGS (US end-use split). HPAL = high-pressure acid leaching; MHP = mixed hydroxide precipitate; LCO = lithium cobalt oxide; NMC = nickel-manganese-cobalt cathode.</div>
+  </div>
+</section>
+
+<section id="demand-sec">
+  <div class="kicker">Demand</div>
+  <h2>The battery decade, the substitution race</h2>
+  <p class="lede">Cobalt demand grew 13% in 2025 to about 276,000 tonnes — while the fastest-growing battery chemistry on Earth contains none of it. Both things are true: EVs, electronics and aerospace keep pulling demand up, and every price spike hands the cathode engineers a new reason to design cobalt out.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>What cobalt is used for</h3>
+      <div class="sub">Share of world demand by end use, 2024 (Cobalt Institute)</div>
+      <div class="chartbox"><canvas id="chUse"></canvas></div>
+      <div class="src">Source: Cobalt Institute, Cobalt Market Report 2024. "Other" includes magnets (Sm-Co, Alnico), tyre adhesives and biotech. In the US the picture inverts: superalloys take 51% of consumption (USGS, 2025).</div>
+    </div>
+    <div class="card">
+      <h3>The forces pulling in opposite directions</h3>
+      <div class="sub">Demand grew 14% in 2024 and 13% in 2025 — despite LFP</div>
+      <div class="mini-grid" style="grid-template-columns:1fr">
+        <div class="mini"><h4><span class="mi">🔋</span>The LFP escape</h4><p>Cobalt-free LFP took more than 55% of global EV battery deployments in 2025 — past nickel-based chemistries for the first time (IEA). In China it is ~81% of EV output. Every quota-driven price spike accelerates the exit.</p></div>
+        <div class="mini"><h4><span class="mi">📱</span>The electronics floor</h4><p>Phones, laptops and tablets still run on lithium cobalt oxide — the most cobalt-intensive cathode there is — and took ~30% of world demand in 2024. No LFP threat here: LCO's energy density per volume is unmatched for small devices.</p></div>
+        <div class="mini"><h4><span class="mi">✈️</span>The aerospace pull</h4><p>Superalloys for jet-engine hot sections are the fastest-tightening corner of the market: alloy-grade metal has traded at a sustained premium over standard grade since 2026 began, on commercial-aerospace backlogs and defence stockpiling.</p></div>
+      </div>
+      <div class="callout"><b>~7%</b><span>projected annual growth in cobalt demand to 2030 (Cobalt Institute / Benchmark), taking the market toward ~400,000 t — though the IEA has cut its long-term forecasts by more than 10% as LFP spreads.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="timeline-sec">
+  <div class="kicker">Geopolitics</div>
+  <h2>A glut, a ban and a quota machine</h2>
+  <p class="lede">Cobalt spent the early 2020s drowning in its own supply: the biggest new mine in the metal's history ramped up just as Indonesia arrived and LFP took off. Then the country that mines three quarters of it decided to stop selling — and the market has been running on decrees ever since.</p>
+  <div class="card">
+    <div class="tl">
+      <div class="tl-item hot">
+        <div class="tl-date">2022</div>
+        <h4>The last boom</h4>
+        <p>EV panic-buying drives cobalt to nearly $40/lb in the spring — then the wave breaks. CMOC's Kisanfu (KFM), the largest new cobalt mine ever built, begins ramping in the DRC; Indonesian HPAL plants start delivering nickel-cobalt MHP; and LFP's march through China's EV market gathers pace. The annual average is still $30.78/lb; it will halve within a year.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2023–2024</div>
+        <h4>The glut</h4>
+        <p>Supply nearly doubles in three years and the price caves: the LME average falls from $23/lb in 2021 to $11.84 in 2024, an eight-year low. Jervois suspends its brand-new Idaho mine — the only primary cobalt mine in America — weeks after opening it. CMOC produces 31% above nameplate; hydroxide payability sinks toward 60% of an already-depressed metal price.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">22 Feb 2025</div>
+        <h4>Kinshasa pulls the plug</h4>
+        <p>With standard-grade cobalt at a nine-year low near $10/lb, the DRC's new strategic-minerals regulator ARECOMS suspends all cobalt exports — industrial and artisanal — for four months, and a decree the same week confirms state-owned EGC's monopoly over artisanal cobalt. CMOC's trading arm IXM declares force majeure; the ban is extended in June. Prices jump within days.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">16 Oct 2025</div>
+        <h4>Quotas replace the ban</h4>
+        <p>ARECOMS Decision 004/2025 swaps the ban for export quotas: 18,125 t for the rest of 2025, then 96,600 t a year for 2026 and 2027 — 87,000 t shared pro-rata among producers plus a 9,600 t state "strategic quota" — roughly half of what the DRC exported in 2024. The LME price clears $47,000/t within weeks, a 32-month high. Over 2025, hydroxide gains ~328%, metal ~130%.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Aug–Dec 2025</div>
+        <h4>Washington deals in</h4>
+        <p>The Pentagon's logistics agency issues its first cobalt purchase tender since 1990 — 7,480 t of alloy-grade metal over five years — then cancels it before year-end. A Section 232 investigation covers processed cobalt. And on 4 December, alongside the DRC–Rwanda peace accords, Washington and Kinshasa sign a Strategic Partnership Agreement sketching a US-backed strategic mineral reserve — cobalt included.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Feb 2026</div>
+        <h4>The Orion MoU — and two supply hits</h4>
+        <p>Glencore signs a non-binding MoU to sell 40% of its Congolese crown jewels — KCC and Mutanda — to the US-backed Orion Critical Mineral Consortium at a $9 billion enterprise value, staying on as operator. The same month, Cyclone Gezani shuts Madagascar's Ambatovy plant and Cuba's fuel crisis puts Sherritt's Moa operations on standby: the ex-DRC supply map is thinning too.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Mar–Jul 2026</div>
+        <h4>The quota machine grinds</h4>
+        <p>Exports run far below quota — paperwork, port testing, a collapsed bridge on the Zambian corridor — and hydroxide peaks near $26/lb in April with payability touching 100% of the metal price. In June ARECOMS rules that unused quotas are forfeited to the state's new strategic stockpile, scrapping an estimated 15,000–20,000 t; in July a missed customs notification stalls exports for days. One regulator is now the market's single point of failure.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Aug 2026</div>
+        <h4>Reality check</h4>
+        <p>CMOC reports a record first half — 65,305 t of cobalt, twice its annual export quota — and record profits, stockpiling the excess in-country. Prices drift lower on weak Chinese battery demand (hydroxide $22–23/lb, metal ~$25/lb); ARECOMS floats cutting the quotas further; Jinchuan and MMG lobby for bigger shares; and a reported $100M US grant revives talk of restarting Idaho. The decree economy rolls on.</p>
+      </div>
+    </div>
+    <div class="src">Sources: ARECOMS decisions via IEA policy database; Fastmarkets; Benchmark Mineral Intelligence; Glencore FY2025 production report; CMOC disclosures; US State Department; USGS MCS 2026; Semafor; Reuters.</div>
+  </div>
+</section>
+
+<section id="trade-sec">
+  <div class="kicker">Trade &amp; prices</div>
+  <h2>A market priced in three currencies</h2>
+  <p class="lede">Cobalt has an LME contract almost nobody uses: the real market runs on Fastmarkets' Rotterdam metal assessment, on hydroxide "payability" — a negotiated percentage of that metal price — and on Chinese sulphate quotes in yuan. The flows are simple: Congolese hydroxide goes east to China, refined cobalt comes west to everyone else.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>US cobalt import sources</h3>
+      <div class="sub">Metal, oxide and salts, average 2021–2024 — refiners, not miners: the DRC dependency hides one step upstream</div>
+      <div class="chartbox"><canvas id="chUsImp"></canvas></div>
+      <div class="src">Source: USGS MCS 2026. US net import reliance was 79% of consumption in 2025 — with one small cobalt-bearing mine (Eagle, Michigan) whose concentrate is exported for processing. Norway, Finland, Canada and Japan refine; the ore behind them is largely Congolese and Cuban.</div>
+    </div>
+    <div class="card">
+      <h3>The whipsaw, in annual averages</h3>
+      <div class="sub">US spot cathode price, $/lb (annual average)</div>
+      <div class="chartbox"><canvas id="chPrices"></canvas></div>
+      <div class="src">Source: USGS MCS 2026 (S&amp;P Global Platts). The 2025 bar hides the ride: a nine-year low near $10/lb in February, then a surge after the export ban. By August 2026 standard-grade metal sat around $25/lb — up ~160% from the pre-ban low.</div>
+    </div>
+    <div class="card">
+      <h3>Three prices, one metal</h3>
+      <div class="sub">What you pay depends on which rung of the ladder you stand on</div>
+      <div class="mini-grid">
+        <div class="mini"><h4>The metal price</h4><p>Standard-grade cobalt — 99.8% broken cathode, cut cathode and briquettes — is assessed in-warehouse Rotterdam (Fastmarkets) with an LME contract alongside. Since 2026, aerospace-certified <b style="color:var(--accent)">alloy-grade metal has held a sustained premium</b> over standard grade for the first time — the superalloy market outbidding the battery market.</p></div>
+        <div class="mini"><h4>The hydroxide payability</h4><p>DRC hydroxide — the intermediate that feeds China — is priced as a negotiated <b style="color:var(--accent)">percentage of the metal benchmark</b>. In the glut it sank toward 60%; in the 2026 squeeze it touched 100% — an intermediate briefly worth as much as finished metal, the purest measure of how badly refiners needed feed.</p></div>
+        <div class="mini"><h4>The sulphate quote</h4><p>Battery-grade cobalt sulphate (20.5% Co) trades in yuan inside China — 70,000–76,000 yuan/t in August 2026 — and sets the economics of every NMC precursor plant. Recycled cobalt re-entering the market via black mass increasingly caps it.</p></div>
+        <div class="mini"><h4>The stockpile shadow</h4><p>The strangest feature of the quota era: the price-setting tonnage sits in warehouses inside the DRC. CMOC alone produced twice its export quota in H1 2026; Kinshasa's new Gécamines-managed strategic stockpile absorbs forfeited quota. When and how that metal is released now moves the market as much as any mine.</p></div>
+      </div>
+      <div class="src">Sources: Fastmarkets; LME; SMM/Mysteel (August 2026 sulphate quotes); Semafor; company disclosures.</div>
+    </div>
+    <div class="card">
+      <h3>The quiet riser: Indonesia</h3>
+      <div class="sub">The fastest-changing corner of the supply map — and the DRC's dilemma</div>
+      <p style="font-size:.85rem;color:var(--muted)">Indonesia mined ~44,000 t of cobalt in 2025 (USGS; some analysts put it near 49,000 t), up from ~1,300 t a decade ago — all of it a by-product of the nickel-laterite HPAL plants Chinese groups built on Obi Island, at Morowali and at Weda Bay. Jakarta needs no cobalt policy: its nickel ore quotas (RKAB) indirectly cap output. Kinshasa announced a market-management partnership with Jakarta in March 2025, but no OPEC-style mechanism exists — and every tonne of quota the DRC withholds is market share Indonesia inherits. Benchmark sees Indonesia at ~20% of world supply by 2030; the IEA expects it to overtake the DRC by 2040.</p>
+      <div class="callout"><b>~14%</b><span>of world mine supply came from Indonesia in 2025 (USGS) — the only serious geological alternative to the DRC, and it answers to the same Chinese refiners.</span></div>
+      <div class="src">Sources: USGS MCS 2026; GlobalData/Mining Technology; Benchmark Mineral Intelligence; IEA GCMO 2026.</div>
+    </div>
+  </div>
+</section>
+
+<section id="china-sec">
+  <div class="kicker">Concentration risk</div>
+  <h2>The China chokepoint</h2>
+  <p class="lede">China mines less than 1% of the world's cobalt on its own territory — and controls the market anyway. Chinese companies own most of the DRC's industrial mines and nearly all of Indonesia's HPAL plants, and Chinese refineries turn their output into the sulphate and metal everyone else buys.</p>
+  <div class="card">
+    <div class="big" id="bigPct">~79%</div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:6px">of the world's refined cobalt was produced in China in 2025 (Cobalt Institute). Its share along the mine-to-battery chain:</p>
+    <div class="bars" id="chinaBars"></div>
+    <div class="src">Sources: USGS MCS 2026 (mine production); Chinese-controlled share of DRC output ~70–80% (Benchmark and industry estimates — CMOC alone mined over half of the DRC's 2025 total); Cobalt Institute Cobalt Market Report 2025 (refined share 79%).</div>
+  </div>
+</section>
+
+<section id="military-sec">
+  <div class="kicker">Dual use</div>
+  <h2>The original strategic metal</h2>
+  <p class="lede">Long before batteries, cobalt was the metal of the jet age: no other element keeps a turbine blade solid at combustion temperatures. It triggered one of the great commodity panics of the Cold War, and it is back on every defence-procurement list — this time with the battery market bidding against the arsenal.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">✈️</span>Superalloys</h4><p>Cobalt-bearing superalloys form the hot sections of jet engines and gas turbines — blades, vanes, combustors — where nothing else survives above ~1,000°C. Superalloys take 51% of US cobalt consumption (USGS), and USGS notes substitution generally costs performance. Every fighter, airliner and power turbine carries it.</p></div>
+      <div class="mini"><h4><span class="mi">🎯</span>Magnets &amp; munitions</h4><p>Samarium-cobalt magnets hold their field at temperatures that demagnetise neodymium — which puts them in missile guidance, radar, satellites and electronic warfare. Tungsten-carbide with a cobalt binder is the hard edge of armour-piercing penetrators and nearly every machine tool that makes weapons.</p></div>
+      <div class="mini"><h4><span class="mi">💥</span>1978: the cobalt crisis</h4><p>In May 1978 Katangese rebels seized Kolwezi — then, as now, the heart of world cobalt — and French and Belgian paratroopers retook it. Amid fears of a Soviet squeeze, cobalt went from $5.62/lb in 1977 to $32.83 by 1979, a near-sixfold panic that taught the Pentagon to stockpile it. The mines at the centre of that war are the same ones under quota today.</p></div>
+      <div class="mini"><h4><span class="mi">📦</span>The empty stockpile</h4><p>The US National Defense Stockpile sold down its Cold-War cobalt decades ago; today its plan lists only samarium-cobalt alloy feed. In August 2025 the DLA issued its first cobalt tender since 1990 — 7,480 t of alloy-grade metal over five years — then cancelled it within months, even as Congress handed the Pentagon ~$7.5B for critical-minerals stockpiling. Rebuilding a reserve at quota-era prices is proving harder than announcing one.</p></div>
+      <div class="mini"><h4><span class="mi">🏭</span>Money for the missing middle</h4><p>Defense Production Act Title III money is flowing to the gap where US refining should be: $20M to Electra's Ontario sulphate refinery, $6.4M to Fortune Minerals' Alberta project, $15M to Jervois' Idaho drilling — and, reportedly, a $100M grant in August 2026 toward an Idaho cobalt refinery that could finally restart America's only primary cobalt mine.</p></div>
+      <div class="mini"><h4><span class="mi">🏛</span>Critical by every list</h4><p>Cobalt sits on the US, EU (critical <i>and</i> strategic), Japanese and Indian lists; JOGMEC stockpiles it toward a 60-day consumption target; ten of the EU's first CRMA strategic projects involve cobalt. A US Section 232 probe found in January 2026 that processed-cobalt imports threaten national security — holding tariffs in reserve while Washington negotiates.</p></div>
+    </div>
+    <div class="src">Sources: USGS MCS 2026; DLA solicitations via Stars and Stripes and USGS; DPA Title III awards (DoD); Federal Register / Covington (Section 232); EU Critical Raw Materials Act; US Army Combat Studies Institute (Shaba II); historical price series.</div>
+  </div>
+</section>
+
+<section id="invest-sec">
+  <div class="kicker">Capital flows</div>
+  <h2>Where the cobalt money is going</h2>
+  <p class="lede">For years cobalt attracted capital only by accident — it came along with the copper and nickel investments. The quota era changed the question: the money now chases refining capacity outside China, equity in the DRC's mines, and the stockpiles themselves. Presented as observation, not investment advice.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇺🇸</span>The Orion gambit</h4><p>The US-backed Orion Critical Mineral Consortium's non-binding MoU for 40% of Glencore's KCC and Mutanda — at a $9B enterprise value, with rights to direct sales to nominated buyers — is the biggest Western move on cobalt in decades, nested inside the December 2025 US–DRC Strategic Partnership and its planned mineral reserve.</p></div>
+      <div class="mini"><h4><span class="mi">🇨🇳</span>CMOC doubles down</h4><p>The world's No. 1 producer answered the quotas by investing <i>more</i>: $1.08B for KFM Phase 2 (completion 2027), record H1 2026 profits, and an unbroken 100,000–120,000 t production plan — stockpiling what it cannot export and betting Kinshasa eventually has to let the metal out.</p></div>
+      <div class="mini"><h4><span class="mi">🇮🇩</span>The HPAL wave</h4><p>Indonesian nickel-cobalt keeps absorbing billions: GEM's $8B Morowali recycling-and-nickel hub plan, Huayou and Vale Indonesia's Sorowako HPAL, QMB's next line starting late 2026, and a sovereign-wealth deal with Danantara. Cobalt is the by-product that makes the nickel maths work — and vice versa.</p></div>
+      <div class="mini"><h4><span class="mi">🏗</span>The Western refinery bet</h4><p>Electra's Ontario refinery is finally funded ($82M against a $73M budget, commissioning from late 2026); Managem switched Bou Azzer's whole output to battery sulphate in January 2026; Cobalt Blue targets FID on its Broken Hill–Kwinana chain; Kokkola expands under EU strategic-project status. Small tonnages — but the only non-Chinese growth there is.</p></div>
+      <div class="mini"><h4><span class="mi">🏦</span>States as buyers</h4><p>Governments have become the marginal bid: the DRC's own strategic stockpile absorbs forfeited quota, Washington's DLA tendered (then cancelled) a five-year purchase, Saudi Arabia's Manara holds 10% of Vale Base Metals, and Japan's JOGMEC quietly stockpiles toward its 60-day target. In a rationed market, reserves are policy.</p></div>
+      <div class="mini"><h4><span class="mi">⚠️</span>The risks</h4><p>Every one is structural: LFP can keep eating the demand base the quotas defend; ARECOMS is a single point of failure that has already stalled exports twice; Indonesia inherits whatever share the DRC withholds; DRC in-country stockpiles hang over any rally; and artisanal-supply-chain exposure remains a reputational tripwire for every buyer.</p></div>
+    </div>
+    <div class="note">This section describes where capital is flowing, based on public data. It is not financial advice.</div>
+    <div class="src">Sources: company and government disclosures (Glencore, CMOC, GEM, Huayou, Electra, Managem, Cobalt Blue, Vale Base Metals); US State Department; Fastmarkets; Semafor; Benchmark Mineral Intelligence.</div>
+  </div>
+</section>
+
+<section id="companies-sec">
+  <div class="kicker">Company tracker</div>
+  <h2>The companies that move cobalt</h2>
+  <p class="lede">Miners, refiners and developers across the chain. One Chinese company mines more than a third of world supply; one Swiss trader-miner sits on the Western share; a state monopoly buys the artisanal tonnes; and a handful of developers are trying to build the missing Western middle. Filter by segment or search.</p>
+  <div class="map-controls" id="coFilters">
+    <button class="chip c-mine on" data-seg="mine">⛏ Miners</button>
+    <button class="chip c-proc on" data-seg="sep">🏭 Refining &amp; recycling</button>
+    <button class="chip c-dev on" data-seg="dev">◐ Developers</button>
+  </div>
+  <div class="co-search">
+    <input id="coSearch" type="search" placeholder="Search company, asset, country…" aria-label="Search companies">
+    <span class="co-count" id="coCount"></span>
+  </div>
+  <div class="co-wrap">
+    <table class="co">
+      <thead><tr><th>Company</th><th>Segment</th><th>Key assets</th><th>Status &amp; recent signals</th></tr></thead>
+      <tbody id="coBody"></tbody>
+    </table>
+  </div>
+  <div class="note">Company status reflects public disclosures as of August 2026. This is an observational tracker, not investment advice.</div>
+  <div class="src">Sources: company disclosures &amp; filings; USGS MCS 2026; trade press (Reuters, Bloomberg, Fastmarkets, Mining.com, Benchmark, Semafor, Ecofin Agency).</div>
+</section>
+
+<section id="sources-sec">
+  <div class="kicker">Data &amp; methodology</div>
+  <h2>Open data sources</h2>
+  <ul class="sources">
+    <li><b><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-cobalt.pdf">USGS Mineral Commodity Summaries 2026 — Cobalt</a></b> — world mine production, reserves and resources, US trade, prices, stockpile and end-use notes. 2025 figures are estimates; production is cobalt content.</li>
+    <li><b><a href="https://www.cobaltinstitute.org/">Cobalt Institute — Cobalt Market Report 2025</a></b> (prepared by Benchmark Mineral Intelligence) — demand by end use, refined production and China's 79% share, recycling share, market balance.</li>
+    <li><b><a href="https://www.iea.org/reports/global-critical-minerals-outlook-2026">IEA Global Critical Minerals Outlook 2026</a></b> — refining-concentration trends, demand scenarios under the LFP shift, and the projected post-quota supply gap.</li>
+    <li><b><a href="https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/">British Geological Survey — World Mineral Statistics</a></b> — long-run cobalt mine and refinery production series (1970–2024), also behind this site's <a href="/supply-chain/">supply-chain map</a>.</li>
+    <li><b>Prices</b> — USGS-published annual averages (S&amp;P Global Platts US spot cathode; LME cash); <a href="https://www.fastmarkets.com/">Fastmarkets</a> standard-grade and hydroxide assessments via trade press; <a href="https://www.lme.com/en/Metals/EV/LME-Cobalt">LME cobalt</a>; SMM/Mysteel Chinese sulphate quotes.</li>
+    <li><b>DRC export controls</b> — ARECOMS suspension and Decision 004/2025 via the <a href="https://www.iea.org/policies/29138-drc-arecoms-decision-no-0042025-cobalt-quota-system">IEA policy database</a> and Fastmarkets/Benchmark reporting; US–DRC Strategic Partnership Agreement via the US State Department.</li>
+    <li><b>Supply events</b> — company disclosures: <a href="https://en.cmoc.com/">CMOC</a> (TFM, KFM), <a href="https://www.glencore.com/">Glencore</a> (KCC, Mutanda, Nikkelverk, FY2025 production report), <a href="https://www.eurasianresources.lu/">ERG</a> (Metalkol), <a href="https://www.huayou.com/">Huayou Cobalt</a>, <a href="https://www.valebasemetals.com/">Vale Base Metals</a>, <a href="https://www.sherritt.com/">Sherritt</a>, <a href="https://www.electrabmc.com/">Electra Battery Materials</a>, <a href="https://jervoisglobal.com/">Jervois</a>, <a href="https://www.umicore.com/">Umicore</a>.</li>
+    <li><b>Artisanal mining</b> — <a href="https://www.faircobaltalliance.org/">Fair Cobalt Alliance</a> impact reporting; <a href="https://www.amnesty.org/">Amnesty International</a> / IBGDH investigations of evictions and abuses around industrial mines; EGC announcements via trade press.</li>
+    <li><b>Notes</b> — mine and plant coordinates are approximate. Tonnages are cobalt content unless stated. Hydroxide is priced as a payable percentage of the standard-grade metal price. Refining shares are Cobalt Institute/Benchmark estimates. Last data refresh: August 2026. Header photo: artisanal cobalt miners in the DRC — IIED via Wikimedia Commons, <a href="https://commons.wikimedia.org/wiki/File:Artisanal_cobalt_miners_in_the_Democratic_Republic_of_Congo.jpg">CC BY 2.5</a>.</li>
+  </ul>
+</section>
+
+<section id="faq-sec">
+  <div class="kicker">FAQ</div>
+  <h2>Common questions</h2>
+  <div class="faq">
+    <details>
+      <summary>What is cobalt used for?</summary>
+      <p>Batteries dominate: about 43% of the world's cobalt goes into EV batteries and another 30% into the lithium-ion cells of phones, laptops and power tools (Cobalt Institute, 2024). The rest is the older, strategic market — superalloys for jet-engine hot sections (about half of US consumption), tungsten-carbide cutting tools, catalysts, samarium-cobalt magnets and the pigment that has coloured ceramics cobalt-blue for a thousand years. Total demand grew 13% in 2025 despite the rise of cobalt-free battery chemistries.</p>
+    </details>
+    <details>
+      <summary>Which country produces the most cobalt?</summary>
+      <p>The Democratic Republic of the Congo mined about 230,000 of the world's 310,000 tonnes of cobalt in 2025 (USGS) — roughly 73%, almost all of it as a by-product of copper from the Katanga Copperbelt, and a share of it dug by hand. Indonesia is now a clear second at about 44,000 tonnes, a by-product of its nickel boom, up from almost nothing a decade ago. But the tightest grip is downstream: China refined about 79% of the world's cobalt in 2025 (Cobalt Institute).</p>
+    </details>
+    <details>
+      <summary>Why did the DRC ban cobalt exports, and what are the quotas?</summary>
+      <p>By early 2025 cobalt had crashed to eight-year lows around $10 per pound under a wall of new supply. On 22 February 2025 the DRC — supplier of three quarters of the world's cobalt — banned exports outright, and from 16 October 2025 replaced the ban with quotas run by the regulator ARECOMS: 18,125 tonnes for the rest of 2025, then 96,600 tonnes a year for 2026 and 2027, including 9,600 tonnes reserved for the state — roughly half of what the country exported in 2024. Prices responded violently: hydroxide rose about 300% over 2025, and standard-grade metal traded near $26 per pound in August 2026.</p>
+    </details>
+    <details>
+      <summary>Is the world running out of cobalt?</summary>
+      <p>No. USGS puts reserves at about 12 million tonnes — roughly forty years at the 2025 mining rate — with identified terrestrial resources of about 25 million tonnes, and it estimates billions of tonnes more in seafloor polymetallic nodules. The risk is not geology but structure: three quarters of mine supply comes from one country, four fifths of refining happens in another, and the export rules can change with a decree.</p>
+    </details>
+    <details>
+      <summary>Can batteries go cobalt-free?</summary>
+      <p>Increasingly, yes — and it is the biggest force reshaping this market. Cobalt-free LFP chemistry took more than 55% of global EV battery deployments in 2025 (IEA), overtaking nickel-based cells for the first time, and high-nickel NMC keeps thrifting cobalt out of the rest. Yet total cobalt demand still grew 13% in 2025: EV volumes, consumer electronics (whose LCO cathodes are the most cobalt-rich of all) and aerospace superalloys outweigh the substitution — for now. Forecasters see roughly 5–7% annual demand growth to 2030, at the mercy of chemistry choices made in Asia's battery labs.</p>
+    </details>
+    <details>
+      <summary>What about artisanal mining and child labour?</summary>
+      <p>Between about 150,000 and 250,000 people dig cobalt by hand in the DRC's artisanal sector, historically supplying anywhere from a few percent to a fifth of national output depending on prices — with documented child labour and fatal accidents. Since February 2025 the state's Entreprise Générale du Cobalt has held a legal monopoly on buying and exporting artisanal cobalt, and it produced its first fully traceable cathodes in November 2025. Formalisation remains partial: initiatives such as the Fair Cobalt Alliance work on mine-site safety and school enrolment, while Amnesty International continues to document evictions and abuses around industrial mines.</p>
+    </details>
+    <details>
+      <summary>Need a deep-dive report on cobalt?</summary>
+      <p>That's exactly what we do. We produce commissioned deep-dive reports on cobalt, covering angles such as mine-to-refinery supply-chain mapping, the DRC quota regime and its politics, Indonesia's HPAL wave, China's refining grip, battery-chemistry scenarios and what they mean for demand, artisanal-mining due diligence and the Western refinery buildout. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email <a href="mailto:hello@mineral.watch">hello@mineral.watch</a> with a short note on what you need and we'll come back with a scoped proposal.</p>
+    </details>
+  </div>
+</section>
+
+<section id="research-sec">
+  <div class="research-box">
+    <div>
+      <div class="kicker">Custom research</div>
+      <h2>Need an ad hoc data-driven research report?</h2>
+      <p style="color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:18px">We produce bespoke, source-cited research on cobalt and other strategic minerals — supply-chain mapping, trade-flow analysis, country and commodity deep-dives — built on the same open data behind this dashboard.</p>
+      <a class="research-cta" href="mailto:hello@mineral.watch">Reach out at hello@mineral.watch</a>
+    </div>
+    <div class="research-art net-art" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="orbit o2" cx="150" cy="150" r="126"/>
+        <circle cx="150" cy="150" r="116" fill="none" stroke="var(--accent)" stroke-width=".6" opacity=".55"/>
+        <path class="web d3" pathLength="1" d="M150 34 L119 104"/>
+        <path class="web d3" pathLength="1" d="M150 34 L181 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L119 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L82 140"/>
+        <path class="web d4" pathLength="1" d="M242 56 L181 104"/>
+        <path class="web d5" pathLength="1" d="M242 56 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M119 104 H181"/>
+        <path class="edge d1" pathLength="1" d="M119 104 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M181 104 L218 140"/>
+        <path class="edge d2" pathLength="1" d="M82 140 H218"/>
+        <path class="edge d2" pathLength="1" d="M82 140 L150 218"/>
+        <path class="edge d2" pathLength="1" d="M218 140 L150 218"/>
+        <path class="edge d3" pathLength="1" d="M119 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M181 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M150 140 V218"/>
+        <circle class="node" cx="119" cy="104" r="3"/>
+        <circle class="node" cx="181" cy="104" r="3"/>
+        <circle class="node" cx="82" cy="140" r="3"/>
+        <circle class="node" cx="218" cy="140" r="3"/>
+        <circle class="node" cx="150" cy="218" r="3"/>
+        <circle class="sat" cx="150" cy="34" r="2.2"/>
+        <circle class="sat b2" cx="58" cy="62" r="2.2"/>
+        <circle class="sat b3" cx="242" cy="56" r="2.2"/>
+        <circle class="sat b2" cx="258" cy="196" r="2.2"/>
+        <circle class="sat b3" cx="68" cy="240" r="2.2"/>
+        <circle cx="150" cy="140" r="5" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6">
+          <animate attributeName="r" values="5;16" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".6;0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="150" cy="140" r="4.2" fill="var(--accent)"/>
+        <circle r="1.6" fill="var(--accent2)">
+          <animateMotion path="M58 62 L119 104 L150 140" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.6" fill="var(--accent)">
+          <animateMotion path="M258 196 L218 140 L150 140" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="subscribe-sec">
+  <div class="kicker">Stay updated</div>
+  <h2>Get notified when the cobalt data refreshes</h2>
+  <div class="sub-row">
+    <div class="sub-box">
+      <p>mineral.watch is an independent data hub, and it grows with the people who use it. Introduce yourself and we'll let you know when the cobalt figures on this dashboard are updated and when new dashboards, datasets and research go live — no noise, just what's new.</p>
+      <p>Telling us your sector and organisation helps too: it shows us who relies on this data — analysts, policymakers, journalists, researchers — and shapes what we build next, from new minerals to custom research.</p>
+      <p>Prefer to talk directly? Corrections, data tips and collaboration ideas are always welcome at <a href="mailto:hello@mineral.watch">hello@mineral.watch</a>.</p>
+    </div>
+    <div class="sub-form">
+      <form action="https://formspree.io/f/mljeedkq" method="POST">
+        <input type="hidden" name="_subject" value="New mineral.watch subscriber (cobalt dashboard)">
+        <input type="hidden" name="source" value="cobalt-dashboard">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-grid">
+          <input type="text" name="first_name" placeholder="First name *" aria-label="First name" autocomplete="given-name" required>
+          <input type="text" name="last_name" placeholder="Last name *" aria-label="Last name" autocomplete="family-name" required>
+          <input type="email" name="email" class="full" placeholder="Email *" aria-label="Email" autocomplete="email" required>
+          <input type="text" name="organisation" class="full" placeholder="Organisation" aria-label="Organisation" autocomplete="organization">
+          <select name="sector" class="full" aria-label="Sector">
+            <option value="" selected>Sector</option>
+            <option>Government &amp; policy</option>
+            <option>Mining &amp; industry</option>
+            <option>Finance &amp; investment</option>
+            <option>Research &amp; academia</option>
+            <option>Media &amp; journalism</option>
+            <option>NGO / civil society</option>
+            <option>Other</option>
+          </select>
+          <input type="text" name="linkedin" placeholder="LinkedIn" aria-label="LinkedIn profile">
+          <input type="tel" name="whatsapp" placeholder="WhatsApp (+code)" aria-label="WhatsApp number">
+        </div>
+        <button type="submit">Subscribe for updates</button>
+        <p class="form-note">We'll only use your details to send you mineral.watch updates. No spam, unsubscribe anytime.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="/">mineral.watch</a> · open intelligence on strategic minerals &amp; rare earths · sources: USGS, BGS, UN Comtrade, IEA
+</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+/* ============ DATA (curated from USGS MCS 2026, Cobalt Institute, IEA, BGS, company disclosures) ============ */
+const DATA = {
+  production2025: [ // tonnes of cobalt content, USGS estimates
+    ["Congo (Kinshasa)",230000],["Indonesia",44000],["Russia",7700],["Madagascar",3900],
+    ["Australia",3700],["Philippines",3700],["Canada",3500],["Papua New Guinea",2800],
+    ["Cuba",2000],["China",2000],["Türkiye",1900],["United States",300]
+  ],
+  reserves: [ // million tonnes of cobalt content
+    ["Congo (Kinshasa)",6.0],["Australia",1.7],["Russia",0.8],["Indonesia",0.76],
+    ["Cuba",0.5],["Philippines",0.26],["Canada",0.22],["Other",1.76]
+  ],
+  trend: { // world mine production, kt cobalt content (BGS); price: US spot cathode $/lb annual average (USGS / S&P Global Platts)
+    years:[2018,2019,2020,2021,2022,2023,2024,2025],
+    prod:[153.6,119.1,130.2,133.8,165.7,203.1,268.5,null],
+    price:[null,null,null,24.21,30.78,17.20,16.77,21]
+  },
+  conv2025: [ // % share of world refined cobalt production (Cobalt Institute, 2025)
+    ["China",79],["Rest of world",21]
+  ],
+  usImports:[["Norway",26],["Finland",16],["Canada",14],["Japan",14],["Other",30]],
+  endUse:[ // % of world demand, 2024 (Cobalt Institute)
+    ["EV batteries",43],["Portable electronics",30],["Superalloys",8],["Hard metals",4],
+    ["Catalysts",3],["Ceramics & pigments",3],["Other",9]
+  ],
+  prices:{ years:[2021,2022,2023,2024,2025],
+    ore:[24.21,30.78,17.20,16.77,21] },
+  chinaShares:[ // stage, share %
+    ["Mine production (in China)",1],["DRC output, Chinese-owned",70],["Refined cobalt",79]
+  ],
+  journey:[
+    {ico:"⛏",t:"1 · Mining",p:"Almost nobody mines cobalt on purpose: it comes up with copper in the DRC's Katanga Copperbelt (~73% of world supply, grades of 0.3–0.6%) and with nickel from the laterites of Indonesia, the Philippines and Cuba. Artisanal diggers work the richest surface ores by hand.",f:"310 kt of cobalt content mined in 2025 — an all-time high (USGS)"},
+    {ico:"🧪",t:"2 · The intermediate",p:"DRC ore is leached on site into cobalt hydroxide — 20–40% cobalt, packed in bags — while HPAL plants precipitate nickel-cobalt MHP. Both are priced as a negotiated percentage of the metal benchmark, and both travel 3,000+ km by truck to Durban or Dar es Salaam before sailing east.",f:"Since Oct 2025, every DRC bag needs an ARECOMS quota allocation"},
+    {ico:"⚗️",t:"3 · Refining",p:"China turns the intermediates into battery-grade sulphate, chloride and 99.8% metal — about 79% of world refined output in 2025. The biggest exception is a Finnish port town: Kokkola, the largest cobalt refining hub outside China.",f:"~79% of refined cobalt was produced in China in 2025 (Cobalt Institute)"},
+    {ico:"🔋",t:"4 · Cathodes & cells",p:"Sulphate becomes precursor, then cathode: NMC for EVs and storage, LCO — the most cobalt-rich chemistry of all — for phones and laptops. Batteries take roughly 73% of all cobalt, which is why chemistry decisions in Asian battery labs move this market more than any mine.",f:"LFP, which contains no cobalt, passed 55% of EV deployments in 2025 (IEA)"},
+    {ico:"✈️",t:"5 · The alloy branch",p:"The older market never went away: cobalt superalloys hold jet-engine hot sections together, tungsten-carbide tools cut with a cobalt binder, and samarium-cobalt magnets guide missiles. Aerospace-certified metal now trades at a sustained premium over standard grade.",f:"Superalloys take 51% of US cobalt consumption (USGS)"},
+    {ico:"♻️",t:"6 · Recycling",p:"Cobalt has the most developed recycling stream of any battery metal: spent cells become black mass, and recyclers like GEM, Huayou, Umicore and Redwood recover the metal at payabilities that rival fresh hydroxide. Recycling supplied about 10% of world cobalt in 2025.",f:"~10% of supply was recycled in 2025 — and rising (Cobalt Institute)"}
+  ],
+  forms:[
+    {s:"0.3–3%",n:"Ore",g:"U",use:"The rock nobody ships",
+     d:"Cobalt ore barely trades: grades are too low to justify freight. In the Copperbelt it rides in copper ores at 0.3–0.6% (artisanal heterogenite lumps run far richer); in nickel laterites it is a fraction of a percent. It is concentrated and leached where it is dug — which is why the DRC's leverage starts at the mine gate, not the port.",pr:null},
+    {s:"20–40%",n:"Hydroxide",g:"U",use:"The DRC intermediate",
+     d:"Cobalt hydroxide is the form the DRC actually exports: a damp cake, 20–40% cobalt, bagged and trucked across half of Africa to the ports of Durban and Dar es Salaam. It is priced as a 'payability' — a negotiated percentage of the standard-grade metal price. In the 2023–24 glut that payability sank toward 60%; in the 2026 squeeze it touched 100%.",pr:"Aug 2026: $22–23/lb (Fastmarkets, cif China) — payability ~90%+ of the metal price"},
+    {s:"Ni·Co",n:"MHP",g:"U",use:"Indonesia's product",
+     d:"Mixed hydroxide precipitate is what HPAL plants make from nickel laterites: roughly 35–40% nickel with 3–4% cobalt riding along. It is the fastest-growing cobalt feedstock on Earth — more than 95% of Indonesia's cobalt growth to 2030 is expected to arrive as MHP — and it answers to nickel economics, not cobalt prices.",pr:null},
+    {s:"CoSO₄",n:"Sulphate",g:"M",use:"The battery salt",
+     d:"Battery-grade cobalt sulphate (20.5% Co basis) is the form every NMC precursor plant buys, quoted in yuan inside China where nearly all of it is made. Electra's Ontario refinery — North America's first — and Managem's new Moroccan line are the West's attempts to break the monopoly, measured in single-digit thousands of tonnes.",pr:"Aug 2026: 70,000–76,000 yuan/t in China (SMM/Mysteel)"},
+    {s:"99.8%",n:"Metal",g:"M",use:"The benchmark",
+     d:"Standard-grade cobalt metal — broken cathode, cut cathode, briquettes and rounds from refineries like Nikkelverk, Kokkola and Fort Saskatchewan — is the price everyone else's contracts reference, assessed in-warehouse Rotterdam with an LME contract alongside. Aerospace-certified alloy grade now commands its own premium.",pr:"Aug 2026: ~$25/lb standard grade Rotterdam (~$56,000/t LME)"},
+    {s:"Co₃O₄",n:"Oxide",g:"M",use:"The electronics feed",
+     d:"Cobalt tetroxide is the precursor for lithium cobalt oxide (LCO) — the original lithium-ion cathode and still the most cobalt-intensive, packing the highest energy per volume into phones, tablets and laptops. Consumer electronics quietly took ~30% of world cobalt demand in 2024, a floor no LFP truck battery can erode.",pr:null},
+    {s:"NMC",n:"EV cathodes",g:"D",use:"Where the growth is",
+     d:"Nickel-manganese-cobalt cathodes power most Western EVs: cobalt stabilises the lattice while nickel carries the energy. Thrifting is relentless — NMC811 and NCMA use a third of the cobalt of early chemistries — and cobalt-free LFP passed 55% of global EV deployments in 2025. EV batteries still took 43% of all cobalt in 2024.",pr:null},
+    {s:"✈️",n:"Superalloys",g:"D",use:"The jet-age market",
+     d:"Cobalt superalloys and cobalt-bearing nickel superalloys form the turbine blades, vanes and combustors of every jet engine — the parts that operate above 1,000°C. This is cobalt's original strategic role, 8% of world demand but 51% of US consumption, and the corner of the market where alloy-grade metal now out-prices battery feed.",pr:null},
+    {s:"WC-Co",n:"Carbides",g:"D",use:"The hard edge",
+     d:"Cemented tungsten carbide uses cobalt as the binder that holds the world's hardest practical material together: cutting tools, mining picks, drill bits and armour-piercing penetrators. About 4% of demand, no serious substitute — iron-nickel binders cost cutting performance (USGS).",pr:null},
+    {s:"♻️",n:"Black mass",g:"C",use:"The circular stream",
+     d:"Shredded spent batteries — black mass — are becoming a mine above ground: recycling supplied about 10% of world cobalt in 2025, the highest share of any battery metal, led by GEM, Huayou, Umicore and Redwood Materials. End-of-2025 black-mass payabilities of 88–100% of the metal price show how hard refiners now compete for scrap.",pr:null}
+  ],
+  companies:[
+    // seg: mine | sep | dev (space-separated when spanning segments)
+    // --- miners ---
+    {n:"CMOC Group",u:"https://en.cmoc.com/",hq:"China",tik:"SSE: 603993 · HKEX: 3993",seg:"mine",
+     a:"Tenke Fungurume (TFM, 80%) & Kisanfu (KFM, with CATL) — DRC; trading arm IXM",
+     s:"The world's No. 1 cobalt miner by a huge margin: a record 117,549 t in 2025 — more than a third of world supply — and a record H1 2026 (65,305 t) despite an export quota of just 31,200 t. Stockpiles the excess in-country, keeps guidance at 100–120 kt, and is spending $1.08B on KFM Phase 2."},
+    {n:"Glencore",u:"https://www.glencore.com/",hq:"Switzerland",tik:"LSE: GLEN",seg:"mine sep",
+     a:"KCC (Kamoto) & Mutanda — DRC; Murrin Murrin (Australia); Nikkelverk refinery (Norway)",
+     s:"The West's cobalt incumbent, now deliberately mining less of it: 36,100 t in 2025 (−5%), H1 2026 down 51% as it prioritises copper and leaves cobalt 'in solution' under quotas. Signed a non-binding MoU in Feb 2026 to sell 40% of KCC and Mutanda to the US-backed Orion consortium at a $9B enterprise value."},
+    {n:"Eurasian Resources Group",u:"https://www.eurasianresources.lu/",hq:"Luxembourg / Kazakhstan",tik:"private",seg:"mine sep",
+     a:"Metalkol RTR tailings-reprocessing (Kolwezi, DRC); Frontier mine; Chambishi refinery (Zambia, idle)",
+     s:"Reprocesses decades of Copperbelt tailings into hydroxide at Metalkol — output fell ~70% to 5,700 t in 2025 under the ban, with a 12,325 t quota for 2026. Its offtakes to Electra (Ontario) and EVelution (Arizona) make it the designated feedstock supplier of the Western buildout."},
+    {n:"Gécamines / EGC",u:"https://www.gecamines.cd/",hq:"DR Congo",tik:"state-owned",seg:"mine sep",
+     a:"Stakes in TFM (20%) & KCC (~25%); STL slag plant; EGC artisanal monopoly; national strategic stockpile",
+     s:"The Congolese state's mining arm is becoming the market's swing player: EGC holds the legal monopoly on artisanal cobalt (first fully traceable cathodes Nov 2025, ~3,000 t exported in H1 2026), STL gets direct quota, and Gécamines manages the new national stockpile that absorbs forfeited quota."},
+    {n:"Chemaf Resources",u:"https://chemaf.com/",hq:"UAE / DR Congo",tik:"private",seg:"mine",
+     a:"Etoile mine & SX-EW plant (Lubumbashi); Mutoshi project (Kolwezi, unfinished)",
+     s:"The cautionary tale: Trafigura-financed, distressed, and blocked in 2025 from selling itself to China's Norin Mining after Gécamines and Washington objected. A US-aligned sale is now the favoured route; Mutoshi still needs hundreds of millions to finish."},
+    {n:"Zhejiang Huayou Cobalt",u:"https://www.huayou.com/",hq:"China",tik:"SSE: 603799",seg:"mine sep",
+     a:"DRC mines & smelters (MIKAS et al.); Huayue & Huafei HPAL (Indonesia); Quzhou & Tongxiang refineries; cathode plants",
+     s:"The most integrated cobalt company on Earth — mines in the DRC, HPAL in Indonesia, refining and cathodes in Zhejiang. Record 2025: revenue +33%, profit +47%, ~46,500 t of cobalt products shipped, and 236,500 t of Indonesian MHP (+30%). On both sides of the DRC-Indonesia rivalry."},
+    {n:"Lygend / Harita (HPL)",u:"https://www.lygend.com/",hq:"China / Indonesia",tik:"HKEX: 2245",seg:"mine sep",
+     a:"PT Halmahera Persada Lygend HPAL, Obi Island — MHP plus onshore battery-grade cobalt sulphate",
+     s:"Built Indonesia's first HPAL plant and its first onshore cobalt sulphate line (~6 kt/yr design). The Obi complex's ramp-up drove Indonesia's 42% cobalt growth in 2025 — the single biggest force diversifying mine supply away from the DRC, under Chinese process technology."},
+    {n:"Vale Base Metals",u:"https://www.valebasemetals.com/",hq:"Canada / Brazil",tik:"NYSE: VALE (90%)",seg:"mine sep",
+     a:"Voisey's Bay Ni-Cu-Co (expanded 2024) + Long Harbour refinery (Canada); Sudbury; 10% held by Saudi Manara",
+     s:"The Americas' best cobalt hope inside a nickel business: Voisey's Bay underground expansion is ramping, and Long Harbour is working toward ~2,600 t/yr of refined cobalt rounds at full rate — IRA-friendly units the US supply chain is counting on."},
+    {n:"Sherritt International",u:"https://www.sherritt.com/",hq:"Canada",tik:"TSX: S",seg:"mine sep",
+     a:"Moa JV (Cuba, 50/50 with GNC); Fort Saskatchewan Ni-Co refinery (Alberta)",
+     s:"Ran the only Cuba-to-Canada cobalt chain for decades — until 2026 broke it: Cuban fuel shortages put Moa on standby in February, and reporting says tightened US sanctions halted the JV by mid-year, idling the refinery and drawing takeover interest. Status fluid."},
+    {n:"Sumitomo Metal Mining",u:"https://www.smm.co.jp/en/",hq:"Japan",tik:"TYO: 5713",seg:"mine sep",
+     a:"Ambatovy HPAL (Madagascar, exiting); Niihama refinery (Japan); Philippine HPAL feeds (Taganito, Coral Bay)",
+     s:"Japan's cobalt pillar is retreating upstream: after Cyclone Gezani shut Ambatovy in Feb 2026, Sumitomo agreed in July to pay ~$418M to hand its 54% stake to Korea's KOMIR-led partners. Niihama keeps refining Philippine mixed sulphide into battery-grade cobalt for the NCA chain."},
+    {n:"Nornickel",u:"https://nornickel.com/",hq:"Russia",tik:"MOEX: GMKN",seg:"mine sep",
+     a:"Norilsk-Talnakh mines; new Monchegorsk cobalt line (Kola, up to 3,000 t/yr from 2025)",
+     s:"Russia's entire cobalt industry in one sanctioned company: ~7,700 t mined in 2025 as a nickel by-product, refined at a rebuilt Monchegorsk facility, and sold almost entirely eastward to China — with battery-materials JVs on the drawing board."},
+    {n:"Managem (CTT)",u:"https://www.managemgroup.com/",hq:"Morocco",tik:"CSE: MNG",seg:"mine sep",
+     a:"Bou Azzer mine — the world's only long-running primary cobalt mine (since 1930); Guemassa hydromet plant",
+     s:"The great outlier: the only place on Earth where cobalt is the main event, not a by-product. From January 2026 all Bou Azzer ore feeds a new ~$100M battery-grade sulphate line near Marrakech — a small, symbolic, non-Chinese chain with BMW and Renault history."},
+    // --- refining & recycling ---
+    {n:"Umicore",u:"https://www.umicore.com/",hq:"Belgium / Finland",tik:"EBR: UMI",seg:"sep",
+     a:"Kokkola cobalt refinery (Finland, permitted 16 kt/yr, expanding); Hoboken recycling; cathode materials",
+     s:"Runs the largest cobalt refinery outside China at Kokkola and wants to grow it to 21 kt/yr — the anchor of Europe's cobalt supply and of the EU's strategic-project list, fed largely by Glencore hydroxide."},
+    {n:"GEM Co",u:"https://en.gem.com.cn/",hq:"China",tik:"SZSE: 002340",seg:"sep",
+     a:"Jingmen & Wuhan recycling complexes; QMB New Materials HPAL (Morowali, Indonesia)",
+     s:"China's recycling giant recovered over 6,000 t of cobalt from scrap in the first nine months of 2025 while its Indonesian HPAL lines doubled cobalt output — the clearest demonstration that black mass plus MHP can route around the DRC entirely. Planning an $8B Indonesian hub."},
+    {n:"Jervois Global",u:"https://jervoisglobal.com/",hq:"Australia / US",tik:"private (Millstreet)",seg:"sep dev",
+     a:"Idaho Cobalt Operations (care & maintenance); Jervois Finland (Kokkola); São Miguel Paulista refinery (Brazil)",
+     s:"Opened America's only primary cobalt mine in 2022, suspended it in 2023 at the bottom of the glut, and went through Chapter 11 in 2025 — shareholders wiped out, Millstreet Capital now owner. An August 2026 report of a $100M US grant for an Idaho refinery may yet give the story a third act."},
+    // --- developers ---
+    {n:"Electra Battery Materials",u:"https://www.electrabmc.com/",hq:"Canada",tik:"NASDAQ/TSXV: ELBM",seg:"dev",
+     a:"Temiskaming cobalt sulphate refinery (Ontario) — North America's first; recycling demo",
+     s:"The West's most advanced cobalt refinery project: ~$82M funded (US DoD $20M, Ontario, Ottawa) against a $73M budget, construction restarted, commissioning from late 2026 and commercial output targeted 2027 — fed by ERG's Congolese hydroxide, 5,000 t/yr of IRA-compliant sulphate at full rate."},
+    {n:"Cobalt Blue Holdings",u:"https://www.cobaltblueholdings.com/",hq:"Australia",tik:"ASX: COB",seg:"dev",
+     a:"Broken Hill project (NSW, pyrite-hosted primary cobalt); Kwinana refinery plan (WA)",
+     s:"Australia's primary-cobalt bet: a Glencore hydroxide feedstock deal for the planned 3,000 t/yr Kwinana refinery, an Iwatani consortium, and a final investment decision targeted for 2026 — the gate is converting letters of intent into binding offtake."},
+    {n:"Fortune Minerals",u:"https://www.fortuneminerals.com/",hq:"Canada",tik:"TSX: FT",seg:"dev",
+     a:"NICO cobalt-gold-bismuth-copper project (NWT mine + Alberta refinery)",
+     s:"A pre-construction Canadian vertical chain with US DoD and Canadian government money (>$21M non-dilutive, including a DPA Title III grant) — one of the few projects that would mine and refine cobalt entirely inside North America."},
+    {n:"Lifezone Metals",u:"https://lifezonemetals.com/",hq:"Tanzania / NYSE",tik:"NYSE: LZM",seg:"dev",
+     a:"Kabanga nickel-copper-cobalt (Tanzania) — one of the largest development-ready sulphide deposits",
+     s:"Kabanga's 2025 feasibility study showed a $1.58B NPV with first-quartile costs, but the final investment decision has slipped to early 2027 amid framework negotiations with Dar es Salaam — Africa's biggest non-DRC cobalt prize, still waiting."}
+  ],
+  sites:[
+    // type: mine | proc | dis | dev ; size 1-3
+    // --- mines & hydroxide plants (producing) ---
+    {n:"Kamoto (KCC)",c:"DR Congo",ll:[-10.72,25.40],ty:"mine",sz:3,d:"Glencore's underground and open-pit complex on Kolwezi's doorstep — copper first, cobalt when quotas allow. Exported zero cobalt in Q4 2025; 40% may pass to the US-backed Orion consortium under the Feb 2026 MoU."},
+    {n:"Mutanda",c:"DR Congo",ll:[-10.79,25.83],ty:"mine",sz:3,d:"Glencore's giant open pit — once a quarter of world cobalt on its own, mothballed 2019–21 to defend the price, now run copper-first under the quota regime. The mine that taught the market what withholding supply can do."},
+    {n:"Tenke Fungurume (TFM)",c:"DR Congo",ll:[-10.62,26.16],ty:"mine",sz:3,d:"CMOC's flagship (80%, with Gécamines) — one of the world's largest copper-cobalt operations, expanded far beyond nameplate. With KFM it made CMOC the first company ever to mine >100 kt of cobalt in a year."},
+    {n:"Kisanfu (KFM)",c:"DR Congo",ll:[-10.80,26.03],ty:"mine",sz:3,d:"The mine that broke the market: CMOC's CATL-backed project ramped from nothing to tens of thousands of tonnes after 2022, crashing prices to eight-year lows. A $1.08B Phase 2 is due in 2027."},
+    {n:"Metalkol RTR",c:"DR Congo",ll:[-10.75,25.44],ty:"mine",sz:2,d:"ERG's roast-tailings-reclamation plant reprocesses decades of Copperbelt tailings into cobalt hydroxide — output fell ~70% in 2025 under the ban. Contracted feedstock source for Electra's Ontario refinery."},
+    {n:"Etoile",c:"DR Congo",ll:[-11.63,27.55],ty:"mine",sz:1,d:"Chemaf's mine and SX-EW plant outside Lubumbashi — Trafigura-financed, financially distressed, and the object of a geopolitical tug-of-war after the DRC blocked its sale to China's Norin Mining."},
+    {n:"Kasulo artisanal zone (EGC)",c:"DR Congo",ll:[-10.70,25.49],ty:"mine",sz:1,d:"Kolwezi's in-town artisanal diggings, where heterogenite is mined by hand — since 2025 legally sellable only to state-owned EGC, which shipped its first fully traceable cathodes in Nov 2025. 150,000–250,000 people work DRC artisanal cobalt."},
+    {n:"Obi Island HPAL (HPL)",c:"Indonesia",ll:[-1.63,127.40],ty:"mine",sz:3,d:"Harita and Lygend's complex leaches Obi's nickel laterites into MHP and refines battery-grade cobalt sulphate onshore — the plant that made Indonesia the world's No. 2 cobalt producer."},
+    {n:"Morowali HPAL cluster",c:"Indonesia",ll:[-2.85,122.17],ty:"mine",sz:2,d:"Huayue (Huayou/Tsingshan/CMOC) and QMB (GEM/CATL) run some of the world's largest HPAL lines inside the IMIP park — nickel first, tens of thousands of tonnes of cobalt as the by-product."},
+    {n:"Weda Bay (Huafei)",c:"Indonesia",ll:[0.45,127.95],ty:"mine",sz:2,d:"Huayou's Huafei plant on Halmahera — launched 2023 with ~15 kt/yr of cobalt capacity, the largest single cobalt capacity addition anywhere this decade."},
+    {n:"Murrin Murrin",c:"Australia",ll:[-28.77,121.89],ty:"mine",sz:1,d:"Glencore's nickel-cobalt laterite operation in Western Australia — one of the few non-Chinese-owned HPAL plants on Earth, quietly supplying alloy-grade units."},
+    {n:"Norilsk & Monchegorsk",c:"Russia",ll:[69.35,88.20],ty:"mine",sz:2,d:"Nornickel's Arctic sulphide mines carry Russia's ~7,700 t of by-product cobalt, refined at a rebuilt Monchegorsk line on the Kola Peninsula and sold almost entirely to China under sanctions."},
+    {n:"Taganito & Coral Bay",c:"Philippines",ll:[9.55,125.85],ty:"mine",sz:1,d:"Sumitomo-backed HPAL plants that leach Philippine laterites into mixed sulphide — the feed for Niihama, Japan's cobalt refinery, and the original template Indonesia copied at scale."},
+    {n:"Ramu",c:"Papua New Guinea",ll:[-5.53,146.05],ty:"mine",sz:1,d:"MCC's Ramu NiCo operation — Kurumbukari mine feeding the Basamuk HPAL plant, ~2,800 t of cobalt in 2025, almost all of it bound for China."},
+    {n:"Bou Azzer",c:"Morocco",ll:[30.52,-6.91],ty:"mine",sz:1,d:"The world's only long-running primary cobalt mine — arsenide ores worked since 1930 by Managem's CTT. From 2026 its entire output feeds Morocco's new battery-grade sulphate line."},
+    {n:"Voisey's Bay",c:"Canada",ll:[56.33,-62.08],ty:"mine",sz:1,d:"Vale's nickel-copper-cobalt mine in Labrador, expanded underground in 2024 — with the Long Harbour refinery, the Americas' cleanest route to IRA-compliant cobalt."},
+    {n:"Eagle Mine",c:"United States",ll:[46.75,-87.87],ty:"mine",sz:1,d:"America's only cobalt-producing mine: a small nickel-copper operation in Michigan whose cobalt-bearing concentrate is exported for processing — ~300 t in 2025, against 14,000 t of US imports."},
+    {n:"Gördes",c:"Türkiye",ll:[38.93,28.29],ty:"mine",sz:1,d:"Meta Nikel's laterite operation — Türkiye's ~1,900 t of by-product cobalt, one of the few sources feeding Europe from its own neighbourhood."},
+    // --- refineries & plants ---
+    {n:"Quzhou (Huayou)",c:"China",ll:[28.97,118.87],ty:"proc",sz:3,d:"Huayou's flagship refinery complex in Zhejiang — Congolese hydroxide and Indonesian MHP in, battery-grade sulphate and metal out. The heart of the 79%."},
+    {n:"Jingmen (GEM)",c:"China",ll:[31.04,112.20],ty:"proc",sz:2,d:"GEM's recycling and refining complex in Hubei — China's largest battery-recycling operation, recovering thousands of tonnes of cobalt a year from black mass alongside virgin feed."},
+    {n:"Kokkola hub",c:"Finland",ll:[63.84,23.13],ty:"proc",sz:2,d:"The largest cobalt refining centre outside China: Umicore's chemicals plant (permitted 16 kt/yr, expanding toward 21 kt) plus Jervois Finland's specialty lines — an EU CRMA strategic project."},
+    {n:"Nikkelverk",c:"Norway",ll:[58.14,8.01],ty:"proc",sz:1,d:"Glencore's Kristiansand refinery produces high-purity cobalt cathode from its own and third-party feed — one of the few Western sources of superalloy-grade units."},
+    {n:"Niihama",c:"Japan",ll:[33.96,133.28],ty:"proc",sz:1,d:"Sumitomo Metal Mining's refinery turns Philippine mixed sulphide into cobalt for Japan's battery chain — including the NCA cathodes behind Tesla's original supply."},
+    {n:"Long Harbour",c:"Canada",ll:[47.42,-53.87],ty:"proc",sz:1,d:"Vale's Newfoundland hydromet plant is ramping toward ~2,600 t/yr of refined cobalt rounds from Voisey's Bay concentrate — North America's main refined-cobalt hope until Electra arrives."},
+    {n:"Lubumbashi slag heap (STL)",c:"DR Congo",ll:[-11.67,27.47],ty:"proc",sz:1,d:"Gécamines' Big Hill plant reworks a century-old smelter slag heap for cobalt and copper — a state producer with its own direct export quota under the ARECOMS regime."},
+    // --- disrupted & closed ---
+    {n:"Idaho Cobalt Operations",c:"United States",ll:[45.13,-114.40],ty:"dis",sz:1,d:"America's only primary cobalt mine, opened by Jervois in 2022 and suspended within months at the bottom of the glut. A reported $100M federal grant for a nearby refinery (Aug 2026) may set up a restart."},
+    {n:"Moa & Fort Saskatchewan",c:"Cuba / Canada",ll:[20.66,-74.94],ty:"dis",sz:2,d:"Sherritt's Cuba-to-Alberta chain — mixed sulphide from Moa refined in Fort Saskatchewan — hit Cuban fuel shortages in Feb 2026 and, per mid-2026 reporting, a sanctions-driven halt. The oldest Western cobalt chain, broken."},
+    {n:"Ambatovy",c:"Madagascar",ll:[-18.85,48.30],ty:"dis",sz:2,d:"The giant Malagasy HPAL plant (~2,500 t Co/yr) was shut by Cyclone Gezani in Feb 2026 mid-restructuring; Sumitomo agreed to pay ~$418M to exit its 54% stake. Restart timing uncertain."},
+    {n:"Chambishi Metals",c:"Zambia",ll:[-12.65,28.06],ty:"dis",sz:1,d:"ERG's Zambian cobalt refinery (nameplate 6.8 kt/yr) has sat largely on care and maintenance since 2020 — idle Western-aligned capacity one border away from the Copperbelt."},
+    {n:"Nickel West (Kwinana)",c:"Australia",ll:[-32.24,115.77],ty:"dis",sz:1,d:"BHP suspended its entire Nickel West division — including the Kwinana refinery's nickel-cobalt output — from late 2024 into a 2027 review, a casualty of the same laterite wave that lifted Indonesia."},
+    // --- development ---
+    {n:"Electra refinery",c:"Canada",ll:[47.51,-79.69],ty:"dev",sz:1,d:"North America's first cobalt sulphate refinery, in Temiskaming Shores, Ontario — fully funded at ~$82M, commissioning from late 2026, fed by ERG's Congolese hydroxide."},
+    {n:"Mutoshi",c:"DR Congo",ll:[-10.68,25.53],ty:"dev",sz:1,d:"Chemaf's half-built copper-cobalt project outside Kolwezi — hostage to the company's stalled sale, needing hundreds of millions to finish."},
+    {n:"Broken Hill & Kwinana",c:"Australia",ll:[-31.96,141.46],ty:"dev",sz:1,d:"Cobalt Blue's pyrite-hosted primary cobalt project in NSW, paired with a planned 3,000 t/yr sulphate refinery at Kwinana — FID targeted 2026 with Glencore feedstock bridging the start."},
+    {n:"NICO",c:"Canada",ll:[63.55,-116.75],ty:"dev",sz:1,d:"Fortune Minerals' cobalt-gold-bismuth project in the Northwest Territories with a planned Alberta refinery — DoD-supported, pre-construction, and one of North America's few all-domestic cobalt routes."},
+    {n:"Kabanga",c:"Tanzania",ll:[-2.87,30.55],ty:"dev",sz:2,d:"Lifezone's nickel-copper-cobalt sulphide deposit — one of the world's largest undeveloped, first-quartile costs on paper, FID slipped to early 2027 amid negotiations with Tanzania."},
+    {n:"São Miguel Paulista",c:"Brazil",ll:[-23.49,-46.43],ty:"dev",sz:1,d:"Jervois' idled São Paulo nickel-cobalt refinery, earmarked for restart — Latin America's only near-term route back into refined cobalt."},
+    {n:"Clarion-Clipperton Zone",c:"Pacific Ocean",ll:[10.50,-117.00],ty:"dev",sz:2,d:"Seafloor polymetallic nodules run ~0.2% cobalt alongside nickel and manganese — USGS estimates billions of tonnes of nodule cobalt. The Metals Company's NOAA permit decision, expected by early 2027, would open the frontier."}
+  ]
+};
+
+/* ============ helpers ============ */
+const C = getComputedStyle(document.documentElement);
+const col = v => C.getPropertyValue(v).trim();
+const PAL = ["#5b8aff","#f472b6","#fbbf24","#34d399","#c4b5fd","#f87171","#94a3b8","#2dd4bf","#38bdf8","#a3e635","#64748b","#f0abfc","#e879f9"];
+
+/* count-up hero stats */
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target, end=parseFloat(el.dataset.count), suf=el.dataset.suffix||"", pre=el.dataset.prefix||"", dec=end%1?1:0;
+  const t0=performance.now();
+  (function tick(t){const p=Math.min(Math.max((t-t0)/1200,0),1), v=end*(1-Math.pow(1-p,3));
+    el.textContent=pre+(end>=1000?Math.round(v).toLocaleString("en-US"):v.toFixed(dec))+suf;
+    if(p<1)requestAnimationFrame(tick);})(t0);
+  io.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+
+/* ============ MAP ============ */
+const map = L.map("map",{scrollWheelZoom:false,worldCopyJump:true}).setView([8,25],2);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{
+  attribution:'Tiles &copy; Esri &mdash; &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom:10
+}).addTo(map);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",{
+  maxZoom:10
+}).addTo(map);
+map.on("click",()=>map.scrollWheelZoom.enable());
+
+const groups = {mines:L.layerGroup().addTo(map),
+                processing:L.layerGroup().addTo(map),
+                disrupted:L.layerGroup().addTo(map), development:L.layerGroup().addTo(map)};
+const TYCOL={mine:col("--mine"),proc:col("--proc"),dis:col("--dis"),dev:col("--dev")};
+const TYNAME={mine:"MINE / HYDROXIDE PLANT",proc:"REFINERY / PLANT",dis:"DISRUPTED / CLOSED",dev:"DEVELOPMENT"};
+const TYGRP={mine:"mines",proc:"processing",dis:"disrupted",dev:"development"};
+
+DATA.sites.forEach(s=>{
+  const c=TYCOL[s.ty];
+  L.circleMarker(s.ll,{radius:4+s.sz*2.4,color:c,weight:1.5,fillColor:c,fillOpacity:.35})
+   .bindPopup(`<span class="pp-tag" style="background:${c}22;color:${c}">${TYNAME[s.ty]}</span><br><b>${s.n}</b> · ${s.c}<br>${s.d}`)
+   .addTo(groups[TYGRP[s.ty]]);
+});
+
+/* layer toggles */
+document.querySelectorAll(".chip[data-layer]").forEach(ch=>ch.addEventListener("click",()=>{
+  const g=groups[ch.dataset.layer];
+  if(ch.classList.toggle("on")) map.addLayer(g); else map.removeLayer(g);
+}));
+
+/* ============ FORMS GRID ============ */
+const GRPNAME={U:"Upstream (mine & intermediate)",M:"Midstream (refine)",D:"Downstream (cells & alloys)",C:"Circular"};
+const GRPCOL={U:col("--accent"),M:col("--accent2"),D:col("--dis"),C:col("--muted")};
+const elGrid=document.getElementById("elGrid"), elDetail=document.getElementById("elDetail");
+elGrid.innerHTML=DATA.forms.map((e,i)=>`
+  <button class="el g${e.g}" data-i="${i}" aria-label="${e.n}">
+    <span class="z">${String(i+1).padStart(2,"0")}</span>
+    <b>${e.s}</b><span>${e.n}</span>
+  </button>`).join("");
+function showEl(i){
+  const e=DATA.forms[i];
+  document.querySelectorAll(".el").forEach(el=>el.classList.toggle("sel",+el.dataset.i===i));
+  const grpCol=GRPCOL[e.g];
+  elDetail.innerHTML=`
+    <h3>${e.n} <small>· ${e.use}</small></h3>
+    <div class="tags">
+      <span class="pp-tag" style="background:${grpCol}22;color:${grpCol}">${GRPNAME[e.g].toUpperCase()}</span>
+    </div>
+    <p>${e.d}</p>
+    ${e.pr?`<div class="price">${e.pr}</div>`:""}`;
+}
+elGrid.addEventListener("click",ev=>{const b=ev.target.closest(".el");if(b)showEl(+b.dataset.i);});
+showEl(DATA.forms.findIndex(e=>e.n==="Hydroxide"));
+
+/* ============ JOURNEY CARDS ============ */
+document.getElementById("journey").innerHTML = DATA.journey.map((j,i)=>`
+  <div class="jcard"><div class="num">${String(i+1).padStart(2,"0")}</div>
+    <div class="ico">${j.ico}</div><h3>${j.t}</h3><p>${j.p}</p>
+    <div class="fact">${j.f}</div></div>`).join("");
+
+/* ============ COMPANY TRACKER ============ */
+const SEGMETA={
+  mine:{label:"Miner",color:col("--mine")},
+  sep:{label:"Refining & recycling",color:col("--proc")},
+  dev:{label:"Developer",color:col("--dev")}
+};
+const coState={segs:new Set(Object.keys(SEGMETA)),q:""};
+function renderCo(){
+  const q=coState.q.trim().toLowerCase();
+  const rows=DATA.companies.filter(c=>c.seg.split(" ").some(s=>coState.segs.has(s))&&
+    (!q||[c.n,c.hq,c.tik,c.a,c.s].join(" ").toLowerCase().includes(q)));
+  document.getElementById("coBody").innerHTML=rows.map(c=>{
+    const tags=c.seg.split(" ").map(s=>{const m=SEGMETA[s];
+      return `<span class="pp-tag" style="background:${m.color}22;color:${m.color}">${m.label}</span>`;}).join(" ");
+    return `<tr>
+      <td><b><a href="${c.u}" target="_blank" rel="noopener">${c.n}</a></b>
+        <div class="tik">${c.hq} · ${c.tik}</div></td>
+      <td>${tags}</td>
+      <td>${c.a}</td>
+      <td>${c.s}</td></tr>`;
+  }).join("")||`<tr><td colspan="4" style="text-align:center;padding:24px">No companies match.</td></tr>`;
+  document.getElementById("coCount").textContent=`${rows.length} of ${DATA.companies.length} companies`;
+}
+document.querySelectorAll("#coFilters .chip").forEach(ch=>ch.addEventListener("click",()=>{
+  const s=ch.dataset.seg;
+  if(ch.classList.toggle("on")) coState.segs.add(s); else coState.segs.delete(s);
+  renderCo();
+}));
+document.getElementById("coSearch").addEventListener("input",e=>{coState.q=e.target.value;renderCo();});
+renderCo();
+
+/* ============ CHARTS ============ */
+Chart.defaults.color=col("--muted");
+Chart.defaults.borderColor=col("--line");
+Chart.defaults.font.size=11;
+const fmtT=n=>n>=1000?(n/1000).toLocaleString("en-US",{maximumFractionDigits:1})+" kt":n+" t";
+const noLeg={plugins:{legend:{display:false}}};
+
+/* draw a total in the center of doughnut charts */
+Chart.register({
+  id:"centerText",
+  afterDraw(chart){
+    const opts=chart.options.plugins&&chart.options.plugins.centerText;
+    if(!opts||!opts.enabled) return;
+    if(!chart.chartArea) return;
+    const {ctx,chartArea:{left,right,top,bottom}}=chart;
+    const cx=(left+right)/2, cy=(top+bottom)/2;
+    ctx.save();
+    ctx.textAlign="center";
+    ctx.textBaseline="middle";
+    ctx.fillStyle=col("--txt");
+    ctx.font="700 19px -apple-system,Segoe UI,Roboto,sans-serif";
+    ctx.fillText(opts.text, cx, cy-(opts.label?9:0));
+    if(opts.label){
+      ctx.font="600 9.5px -apple-system,Segoe UI,Roboto,sans-serif";
+      ctx.fillStyle=col("--muted");
+      ctx.fillText(opts.label, cx, cy+10);
+    }
+    ctx.restore();
+  }
+});
+
+const donutOpts={maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+  tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}%`}}},cutout:"62%"};
+
+new Chart(chProd,{type:"bar",
+  data:{labels:DATA.production2025.map(d=>d[0]),
+    datasets:[{data:DATA.production2025.map(d=>d[1]),backgroundColor:DATA.production2025.map((d,i)=>i===0?col("--accent"):"#f472b688"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{type:"logarithmic",ticks:{callback:v=>[1000,10000,100000].includes(v)?(v/1000)+" kt":""},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmtT(c.parsed.x)} cobalt content (log scale)`}}}}});
+
+new Chart(chRes,{type:"doughnut",
+  data:{labels:DATA.reserves.map(d=>d[0]),datasets:[{data:DATA.reserves.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed} Mt`}},
+    centerText:{enabled:true,text:"12 Mt",label:"world total"}}}});
+
+new Chart(chTrend,{type:"line",
+  data:{labels:DATA.trend.years,
+    datasets:[
+      {label:"Mine production (kt Co)",data:DATA.trend.prod,borderColor:col("--accent"),backgroundColor:"#5b8aff22",fill:true,tension:0,pointRadius:3,pointBackgroundColor:col("--accent"),yAxisID:"y",spanGaps:false},
+      {label:"US spot price ($/lb)",data:DATA.trend.price,borderColor:col("--accent2"),backgroundColor:"transparent",fill:false,tension:0,pointRadius:3,pointBackgroundColor:col("--accent2"),yAxisID:"y2",spanGaps:false}
+    ]},
+  options:{maintainAspectRatio:false,
+    scales:{y:{min:0,max:300,ticks:{callback:v=>v+" kt"},grid:{color:col("--line")},title:{display:false}},
+            y2:{position:"right",min:0,max:36,ticks:{callback:v=>"$"+v},grid:{display:false}},
+            x:{grid:{display:false}}},
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+      tooltip:{callbacks:{label:c=>c.dataset.yAxisID==="y2"?` Price: $${c.parsed.y.toFixed(2)}/lb`:` Production: ${c.parsed.y} kt cobalt content`}}}}});
+
+new Chart(chConv,{type:"bar",
+  data:{labels:DATA.conv2025.map(d=>d[0]),
+    datasets:[{data:DATA.conv2025.map(d=>d[1]),backgroundColor:DATA.conv2025.map((d,i)=>i===0?col("--accent"):"#f472b688"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{max:100,ticks:{callback:v=>v+"%"},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x}% of world refined cobalt, 2025 (Cobalt Institute)`}}}}});
+
+new Chart(chUse,{type:"doughnut",
+  data:{labels:DATA.endUse.map(d=>d[0]),datasets:[{data:DATA.endUse.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,
+    centerText:{enabled:true,text:"~73%",label:"batteries"}}}});
+
+new Chart(chUsImp,{type:"doughnut",
+  data:{labels:DATA.usImports.map(d=>d[0]),datasets:[{data:DATA.usImports.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:donutOpts});
+
+new Chart(chPrices,{type:"bar",
+  data:{labels:DATA.prices.years,
+    datasets:[{data:DATA.prices.ore,backgroundColor:DATA.prices.ore.map((v,i)=>i===4?col("--accent"):"#f472b688"),borderRadius:4}]},
+  options:{...noLeg,maintainAspectRatio:false,
+    scales:{y:{min:0,ticks:{callback:v=>"$"+v},grid:{color:col("--line")}},x:{grid:{display:false}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` $${c.parsed.y.toFixed(2)}/lb annual average${c.dataIndex===4?" — a ~$10/lb low in Feb, then the export-ban surge":""}`}}}}});
+
+/* china bars */
+document.getElementById("chinaBars").innerHTML = DATA.chinaShares.map(([s,v])=>`
+  <div class="bar-row"><span>${s}</span><div class="track"><div class="fill" data-w="${v}"></div></div><span class="val">~${v}%</span></div>`).join("");
+const io2=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.w+"%");io2.unobserve(e.target);}
+}),{threshold:.4});
+io2.observe(document.getElementById("chinaBars"));
+
+/* nav active state */
+const secs=[...document.querySelectorAll("section[id],header")];
+const navLinks=[...document.querySelectorAll("nav a.link")];
+const io3=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}
+}),{rootMargin:"-40% 0px -55% 0px"});
+secs.forEach(s=>io3.observe(s));
+</script>
+<script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
