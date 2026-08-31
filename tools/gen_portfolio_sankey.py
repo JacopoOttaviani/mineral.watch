@@ -63,48 +63,54 @@ mcolor = {m[0]: m[2] for m in MINERALS}
 mhref = {m[0]: m[3] for m in MINERALS}
 
 # ---- svg ----
-W, H, TOP, BOT, NW, PADL, PADR, XL, XR = 880, 560, 30, 12, 12, 12, 12, 172, 694
-tot_pts = sum(s for _, _, s, _ in links)
-sL = (H-TOP-BOT-PADL*(len(countries)-1)) / tot_pts
-sR = (H-TOP-BOT-PADR*(len(minerals)-1)) / tot_pts
-sc = min(sL, sR)
+def build_svg(cls, W, H, TOP, BOT, NW, PADL, PADR, XL, XR):
+    """One rendered variant of the Sankey; cls picks the desktop/mobile CSS."""
+    tot_pts = sum(s for _, _, s, _ in links)
+    sL = (H-TOP-BOT-PADL*(len(countries)-1)) / tot_pts
+    sR = (H-TOP-BOT-PADR*(len(minerals)-1)) / tot_pts
+    sc = min(sL, sR)
 
-lgeo, y = {}, TOP
-for c in countries:
-    h = country_tot[c]*sc; lgeo[c] = [y, h, y]; y += h + PADL
-rgeo, y = {}, TOP
-msum = defaultdict(float)
-for _, m, s, _ in links: msum[m] += s
-for m in minerals:
-    h = msum[m]*sc; rgeo[m] = [y, h, y]; y += h + PADR
+    lgeo, y = {}, TOP
+    for c in countries:
+        h = country_tot[c]*sc; lgeo[c] = [y, h, y]; y += h + PADL
+    rgeo, y = {}, TOP
+    msum = defaultdict(float)
+    for _, m, s, _ in links: msum[m] += s
+    for m in minerals:
+        h = msum[m]*sc; rgeo[m] = [y, h, y]; y += h + PADR
 
-parts = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="Sankey diagram: top producer countries and their share of world mine production for {len(MINERALS)} strategic minerals, {YEAR}" xmlns="http://www.w3.org/2000/svg">']
-parts.append(f'<text x="{XL+NW/2}" y="{TOP-14}" text-anchor="middle" class="sk-col">PRODUCER</text>')
-parts.append(f'<text x="{XR+NW/2}" y="{TOP-14}" text-anchor="middle" class="sk-col">MINERAL</text>')
+    parts = [f'<svg class="{cls}" viewBox="0 0 {W} {H}" role="img" aria-label="Sankey diagram: top producer countries and their share of world mine production for {len(MINERALS)} strategic minerals, {YEAR}" xmlns="http://www.w3.org/2000/svg">']
+    parts.append(f'<text x="{XL+NW/2}" y="{TOP-14}" text-anchor="middle" class="sk-col">PRODUCER</text>')
+    parts.append(f'<text x="{XR+NW/2}" y="{TOP-14}" text-anchor="middle" class="sk-col">MINERAL</text>')
 
-def ribbon(y0, y1, t, color, tip):
-    xm = (XL+NW+XR)/2
-    return (f'<path class="sk-rb" d="M{XL+NW},{y0:.1f} C{xm:.1f},{y0:.1f} {xm:.1f},{y1:.1f} {XR},{y1:.1f} '
-            f'L{XR},{y1+t:.1f} C{xm:.1f},{y1+t:.1f} {xm:.1f},{y0+t:.1f} {XL+NW},{y0+t:.1f} Z" '
-            f'fill="{color}"><title>{html.escape(tip)}</title></path>')
+    def ribbon(y0, y1, t, color, tip):
+        xm = (XL+NW+XR)/2
+        return (f'<path class="sk-rb" d="M{XL+NW},{y0:.1f} C{xm:.1f},{y0:.1f} {xm:.1f},{y1:.1f} {XR},{y1:.1f} '
+                f'L{XR},{y1+t:.1f} C{xm:.1f},{y1+t:.1f} {xm:.1f},{y0+t:.1f} {XL+NW},{y0+t:.1f} Z" '
+                f'fill="{color}"><title>{html.escape(tip)}</title></path>')
 
-for c, m, s, color in sorted(links, key=lambda l: (countries.index(l[0]), minerals.index(l[1]))):
-    t = s*sc
-    y0 = lgeo[c][2]; lgeo[c][2] += t
-    y1 = rgeo[m][2]; rgeo[m][2] += t
-    who = 'All other producers' if c == 'All others' else c
-    parts.append(ribbon(y0, y1, t, color, f'{who} → {m}: {s:.1f}% of world production ({YEAR})'))
+    for c, m, s, color in sorted(links, key=lambda l: (countries.index(l[0]), minerals.index(l[1]))):
+        t = s*sc
+        y0 = lgeo[c][2]; lgeo[c][2] += t
+        y1 = rgeo[m][2]; rgeo[m][2] += t
+        who = 'All other producers' if c == 'All others' else c
+        parts.append(ribbon(y0, y1, t, color, f'{who} → {m}: {s:.1f}% of world production ({YEAR})'))
 
-for c in countries:
-    y, h, _ = lgeo[c]
-    parts.append(f'<rect x="{XL}" y="{y:.1f}" width="{NW}" height="{max(h,1.5):.1f}" rx="2" fill="#8b98a5"/>')
-    parts.append(f'<text x="{XL-8}" y="{y+h/2:.1f}" dy="4" text-anchor="end" class="sk-lab">{html.escape(c)}</text>')
-for m in minerals:
-    y, h, _ = rgeo[m]
-    parts.append(f'<rect x="{XR}" y="{y:.1f}" width="{NW}" height="{h:.1f}" rx="2" fill="{mcolor[m]}"/>')
-    parts.append(f'<a href="{mhref[m]}"><text x="{XR+NW+8}" y="{y+h/2:.1f}" dy="4" text-anchor="start" class="sk-min">{html.escape(m)}</text></a>')
-parts.append('</svg>')
-svg = '\n    '.join(parts)
+    for c in countries:
+        y, h, _ = lgeo[c]
+        parts.append(f'<rect x="{XL}" y="{y:.1f}" width="{NW}" height="{max(h,1.5):.1f}" rx="2" fill="#8b98a5"/>')
+        parts.append(f'<text x="{XL-8}" y="{y+h/2:.1f}" dy="4" text-anchor="end" class="sk-lab">{html.escape(c)}</text>')
+    for m in minerals:
+        y, h, _ = rgeo[m]
+        parts.append(f'<rect x="{XR}" y="{y:.1f}" width="{NW}" height="{h:.1f}" rx="2" fill="{mcolor[m]}"/>')
+        parts.append(f'<a href="{mhref[m]}"><text x="{XR+NW+8}" y="{y+h/2:.1f}" dy="4" text-anchor="start" class="sk-min">{html.escape(m)}</text></a>')
+    parts.append('</svg>')
+    return '\n    '.join(parts)
+
+# Desktop variant plus a portrait mobile variant (narrower canvas, taller rows,
+# larger relative type via .sk-mobile CSS); a media query swaps between them.
+svg = (build_svg('sk-desktop', 880, 560, 30, 12, 12, 12, 12, 172, 694) + '\n    ' +
+       build_svg('sk-mobile', 400, 800, 30, 12, 10, 13, 12, 96, 288))
 
 # ---- table ----
 trows = []
