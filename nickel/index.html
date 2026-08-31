@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>NickelWatch — Tracking the Global Nickel Supply Chain</title>
+<meta name="description" content="Open data visualisation tracking the global nickel supply chain: Indonesia's two-thirds grip on mining, the Chinese-built smelter parks, the class-1/class-2 divide, the 2022 LME squeeze, the quota machine and the battery chemistry war. Built on USGS, INSG, IEA, BGS and price-agency data.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="mineral.watch">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="https://mineral.watch/nickel/">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="alternate icon" href="/brand/favicon.png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mineral.watch/nickel/">
+<meta property="og:site_name" content="mineral.watch">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="NickelWatch — Tracking the Global Nickel Supply Chain">
+<meta property="og:description" content="Interactive world map of mines, smelter parks and refineries, production and price charts, Indonesia's two-thirds grip, the 2022 LME squeeze, the quota machine and the battery chemistry war — built on USGS, INSG, IEA, BGS and price-agency data.">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NickelWatch — tracking the global nickel supply chain">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NickelWatch — Tracking the Global Nickel Supply Chain">
+<meta name="twitter:description" content="Interactive map, production and price charts, Indonesia's quota machine, the class-1/class-2 divide, the LME squeeze legacy and the Western supply cull — built on USGS, INSG, IEA, BGS and price-agency data.">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png">
+<meta name="twitter:image:alt" content="NickelWatch — tracking the global nickel supply chain">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
+        { "@type": "ListItem", "position": 2, "name": "Nickel", "item": "https://mineral.watch/nickel/" }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "NickelWatch — Global Nickel Supply Chain Data",
+      "description": "Mines, smelter parks, HPAL plants and refineries, production and reserves data, prices, trade flows, ore quotas and refining concentration for the global nickel supply chain.",
+      "url": "https://mineral.watch/nickel/",
+      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "temporalCoverage": "2018/2026",
+      "spatialCoverage": "Worldwide",
+      "variableMeasured": ["Mine production", "Reserves", "Refining capacity", "Prices", "Trade flows", "Ore quotas", "Companies"],
+      "isAccessibleForFree": true,
+      "license": "https://mineral.watch/",
+      "citation": [
+        "USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Nickel)",
+        "International Nickel Study Group (INSG), press releases and World Nickel Factbook",
+        "IEA Global Critical Minerals Outlook 2026",
+        "British Geological Survey, World Mineral Statistics",
+        "LME, SMM and Fastmarkets price data",
+        "Company disclosures and government announcements"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is nickel used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mostly to make steel stainless: about 64% of the world's nickel goes into stainless steel, the 300-series kitchens, hospitals and chemical plants are built from (Wood Mackenzie, 2024). Batteries take roughly 15% — the nickel-rich NMC and NCA cathodes in longer-range EVs — with the rest split between non-ferrous alloys, electroplating and alloy steels. The strategic sliver is superalloys: nickel-based alloys make up 40–50% of a modern jet engine's weight, with no substitute at any price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which country produces the most nickel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indonesia, by an enormous margin: about 2.6 million of the world's 3.9 million tonnes in 2025 (USGS) — roughly two-thirds of global mine supply, up from around 5% a decade ago. The Philippines is a distant second at about 270,000 tonnes, much of its ore now shipped to Indonesian plants. Downstream the grip tightens differently: Indonesia and China together produced about 76% of the world's refined nickel in 2025 (IEA), and Chinese groups own roughly three-quarters of Indonesia's refining capacity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happened in the 2022 LME nickel squeeze?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On 8 March 2022, LME nickel jumped 250% in two days and traded past $100,000 a tonne as a huge short position held by Tsingshan — the world's biggest nickel producer — collided with Russia-invasion supply fears. The LME suspended trading for more than a week and retroactively cancelled about 9,000 trades worth roughly $12 billion. Hedge funds sued and lost; the UK regulator later fined the exchange £9.2 million — its first-ever enforcement action against an exchange. Volumes only recovered to pre-crisis levels in 2024."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between class-1 and class-2 nickel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Class-1 is refined metal of at least 99.8% purity — the cathode and briquettes the LME contract actually delivers — and makes up only about a quarter of supply. Class-2 is the rest: nickel pig iron and ferronickel, iron-nickel alloys that go straight into stainless steel. NPI alone was over half of world supply in 2025 (INSG). The boundary is blurring: Indonesian plants now convert NPI to matte and laterite ore to MHP, intermediates that Chinese refineries turn into battery-grade sulphate — and increasingly into new class-1 metal that has flooded LME warehouses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did Western nickel mines shut down?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Five consecutive years of Indonesian-driven surplus crushed the price from about $25,800 a tonne (2022 average) to about $15,000 in 2025 — below the cost of most non-Indonesian supply. In 2024 alone, BHP suspended its entire Nickel West division, First Quantum halted Ravensthorpe, Wyloo closed its Kambalda mines and Glencore walked away from Koniambo in New Caledonia after sinking $9 billion. USGS data shows Australian output fell 54% in 2025. Most restarts are judged to need sustained prices above $18,000–20,000 a tonne."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do EV batteries still need nickel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The long-range ones do: nickel-rich NMC and NCA cathodes still deliver the highest energy density, and solid-state designs pair with high-nickel cathodes too. But nickel-free LFP became the world's dominant EV chemistry in 2025 (IEA), and battery nickel demand actually dipped slightly that year (INSG). The IEA still projects batteries growing from roughly 15% of nickel demand today to about 30% by 2035 — while advising forecasters to revise nickel demand estimates down as LFP spreads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the world running out of nickel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. USGS puts reserves above 140 million tonnes — around 35 years at the 2025 mining rate — with identified resources over 350 million tonnes on land and an estimated 4.5 billion tonnes more in seabed deposits. The real anxieties are concentration and depletion of the best ore: two-thirds of mine supply comes from one archipelago whose quota decisions now set the world price, and Indonesian officials have warned their high-grade saprolite could run short within a couple of decades at the current smelting rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Need a deep-dive report on nickel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That's exactly what we do. We produce commissioned deep-dive reports on nickel, covering angles such as mine-to-refinery supply-chain mapping, Indonesia's quota and royalty regime, the class-1/class-2 divide and what it means for batteries versus stainless, the LME's post-squeeze credibility, Western restart economics and the seabed-nodule wildcard. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#a3e635;--accent2:#fb923c;
+  --mine:#a3e635;--proc:#fb923c;--dis:#f87171;--dev:#c4b5fd;
+  --radius:14px;--pad:16px;
+  font-size:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+h1,h2,h3{line-height:1.2;font-weight:700}
+section{padding:40px var(--pad);max-width:1100px;margin:0 auto}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;margin-bottom:8px}
+h2{font-size:1.5rem;margin-bottom:10px}
+.lede{color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:20px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1100px;margin:0 auto}
+.nav-links{display:flex;align-items:center;gap:8px;flex:1;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px;flex:none}
+.brand span{color:var(--accent)}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap;flex:none}
+nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto;flex:none;position:relative;overflow:hidden;z-index:0}
+nav a.cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){nav a.cta::before{transition:none}}
+.research-cta{display:inline-block;background:var(--accent);color:var(--bg);font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none;position:relative;overflow:hidden;z-index:0}
+.research-cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+.research-cta:hover::before,.research-cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){.research-cta::before{transition:none}}
+
+/* subscribe */
+.sub-row{display:flex;flex-direction:column;align-items:stretch;gap:24px;width:100%}
+@media(min-width:860px){.sub-row{flex-direction:row}}
+.sub-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;flex:1;min-width:0}
+.sub-box p{font-size:.92rem;color:var(--muted);margin-bottom:14px}
+.sub-box p:last-child{margin-bottom:0}
+.sub-box a{font-weight:600}
+.sub-form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;flex:1;min-width:0;color-scheme:dark}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-grid .full{grid-column:1/-1}
+.sub-form input,.sub-form select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:var(--txt);font:inherit;font-size:.88rem}
+.sub-form input::placeholder{color:var(--muted)}
+.sub-form input:focus,.sub-form select:focus{outline:none;border-color:var(--accent)}
+.sub-form select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e6edf3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;background-size:16px 16px;padding-right:26px}
+.sub-form button{width:100%;background:var(--accent);color:var(--bg);border:0;cursor:pointer;font:inherit;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;margin-top:14px}
+.sub-form button:hover{filter:brightness(1.12)}
+.form-note{font-size:.74rem;color:var(--muted);margin-top:12px;text-align:center}
+
+/* hero */
+.hero-wrap{position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;transform:scale(1.05);filter:grayscale(1) brightness(.52) contrast(1.05);opacity:.6}
+.hero-tint{position:absolute;inset:0;z-index:0;pointer-events:none;background:var(--accent);mix-blend-mode:color;opacity:.45}
+.hero-scrim{position:absolute;inset:0;z-index:0;pointer-events:none;background:
+  linear-gradient(90deg,rgba(13,17,23,.88) 0%,rgba(13,17,23,.55) 55%,rgba(13,17,23,.3) 100%),
+  linear-gradient(180deg,rgba(13,17,23,.75) 0%,rgba(13,17,23,0) 35%,rgba(13,17,23,0) 68%,var(--bg) 100%)}
+.hero{position:relative;z-index:1;padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
+.hero-wrap .stat{background:rgba(26,34,44,.72);backdrop-filter:blur(4px)}
+.hero-wrap .hero p{color:#b6c2cf}
+.hero h1{font-size:clamp(1.9rem,6.5vw,3.2rem);letter-spacing:-.02em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);max-width:560px;font-size:1rem}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.stat b{display:block;font-size:1.45rem;color:var(--accent);letter-spacing:-.01em}
+.stat span{font-size:.74rem;color:var(--muted)}
+
+/* map */
+#map{height:62vh;min-height:380px;border-radius:var(--radius);border:1px solid var(--line);z-index:1}
+.map-controls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:7px 14px;font-size:.8rem;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent}
+.chip.on{color:#0d1117;font-weight:700}
+.chip.on.c-mine{background:var(--mine);border-color:var(--mine)}
+.chip.on.c-proc{background:var(--proc);border-color:var(--proc)}
+.chip.on.c-dis{background:var(--dis);border-color:var(--dis)}
+.chip.on.c-dev{background:var(--dev);border-color:var(--dev)}
+.legend{font-size:.74rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--card)}
+.leaflet-popup-content{font-size:.82rem;line-height:1.5;margin:12px 14px}
+.leaflet-popup-content b{color:var(--accent)}
+.pp-tag{display:inline-block;font-size:.66rem;padding:1px 8px;border-radius:99px;margin-bottom:4px;font-weight:700}
+
+/* forms grid (ore → stainless & cells) */
+.el-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px;margin-top:8px}
+.el{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 6px 10px;cursor:pointer;text-align:center;transition:.15s;position:relative;-webkit-tap-highlight-color:transparent}
+.el:hover{border-color:var(--accent)}
+.el.sel{border-color:var(--accent);background:#a3e63514}
+.el b{display:block;font-size:.98rem;letter-spacing:-.01em}
+.el span{font-size:.6rem;color:var(--muted);display:block;margin-top:2px}
+.el .z{position:absolute;top:4px;left:7px;font-size:.56rem;color:var(--muted)}
+.el.gU b{color:var(--accent)}
+.el.gM b{color:var(--accent2)}
+.el.gD b{color:var(--dis)}
+.el.gC b{color:var(--muted)}
+.el-legend{font-size:.72rem;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.el-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.el-detail{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.el-detail h3{font-size:1.05rem;margin-bottom:2px}
+.el-detail h3 small{color:var(--muted);font-weight:400;font-size:.78rem}
+.el-detail .tags{margin:6px 0 10px;display:flex;gap:6px;flex-wrap:wrap}
+.el-detail p{font-size:.85rem;color:var(--muted)}
+.el-detail .price{margin-top:10px;font-size:.78rem;color:var(--accent);border-top:1px dashed var(--line);padding-top:8px}
+
+/* journey */
+.journey{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 calc(-1*var(--pad));padding-left:var(--pad);padding-right:var(--pad)}
+.jcard{scroll-snap-align:start;flex:0 0 260px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative}
+.jcard .num{position:absolute;top:14px;right:16px;font-size:1.6rem;font-weight:800;color:var(--line)}
+.jcard .ico{font-size:1.6rem;margin-bottom:10px}
+.jcard h3{font-size:1rem;margin-bottom:6px}
+.jcard p{font-size:.8rem;color:var(--muted)}
+.jcard .fact{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.76rem;color:var(--accent)}
+.jhint{font-size:.72rem;color:var(--muted);margin-top:6px}
+
+/* charts */
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card h3{font-size:.95rem;margin-bottom:4px}
+.card .sub{font-size:.74rem;color:var(--muted);margin-bottom:12px}
+.chartbox{position:relative;height:280px}
+.src{font-size:.68rem;color:var(--muted);margin-top:10px}
+
+/* china section */
+.big{font-size:clamp(2.6rem,10vw,4.5rem);font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1}
+.bars{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.bar-row{display:grid;grid-template-columns:150px 1fr 44px;align-items:center;gap:10px;font-size:.78rem}
+.bar-row .track{background:var(--bg2);border-radius:99px;height:10px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#d9f99d);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar-row .val{text-align:right;color:var(--muted)}
+
+/* process flow */
+.flow-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+.flow-wrap svg{min-width:980px;display:block}
+
+/* timeline */
+.tl{position:relative;margin-top:6px;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding-bottom:22px}
+.tl-item::before{content:"";position:absolute;left:-24px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl-item.hot::before{background:var(--accent)}
+.tl-date{font-size:.7rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.tl-item h4{font-size:.92rem;margin:3px 0 4px}
+.tl-item p{font-size:.8rem;color:var(--muted);max-width:640px}
+
+/* company tracker */
+.co-search{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.co-search input{flex:1 1 200px;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;color:var(--txt);font-size:.8rem;outline:none;-webkit-appearance:none}
+.co-search input:focus{border-color:var(--accent)}
+.co-search input::placeholder{color:var(--muted)}
+.co-count{font-size:.72rem;color:var(--muted)}
+.co-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+table.co{width:100%;min-width:900px;border-collapse:collapse;font-size:.79rem}
+.co th{text-align:left;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.co td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted);line-height:1.45}
+.co td:first-child{min-width:170px}
+.co td b{color:var(--txt);font-size:.82rem}
+.co td b a{color:var(--txt);text-decoration:none;border-bottom:1px dashed var(--line)}
+.co td b a:hover{color:var(--accent2);border-bottom-color:var(--accent2)}
+.co .tik{font-size:.68rem;color:var(--muted);margin-top:2px;white-space:nowrap}
+.co .pp-tag{white-space:nowrap;margin-bottom:0}
+
+/* mini cards (military / invest) */
+.mini-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.mini{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px}
+.mini h4{font-size:.86rem;margin-bottom:5px}
+.mini h4 .mi{margin-right:6px}
+.mini p{font-size:.78rem;color:var(--muted)}
+.note{font-size:.72rem;color:var(--muted);border-left:3px solid var(--accent);padding:8px 12px;background:var(--bg2);border-radius:0 8px 8px 0;margin-top:14px}
+.callout{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:14px;margin-top:14px}
+.callout b{font-size:1.5rem;color:var(--accent2);white-space:nowrap;line-height:1.2}
+.callout span{font-size:.78rem;color:var(--muted);flex:1 1 260px;line-height:1.5}
+@media(min-width:720px){.mini-grid{grid-template-columns:1fr 1fr}}
+
+/* research box + animated logo */
+.research-box{display:grid;gap:24px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px;transition:border-color .2s,box-shadow .2s}
+.research-box:hover{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 0 24px -4px var(--accent)}
+.research-art{display:none;justify-self:center;width:180px;animation:hero-float 11s ease-in-out infinite}
+@media(min-width:720px){.research-box{grid-template-columns:1.3fr 1fr}.research-art{display:block}}
+@keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.net-art .edge{stroke:var(--txt);stroke-opacity:.55;stroke-width:1.1;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 1.6s ease-out forwards}
+.net-art .web{stroke:var(--muted);stroke-opacity:.35;stroke-width:.8;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 2s ease-out forwards}
+.net-art .d1{animation-delay:.1s}.net-art .d2{animation-delay:.35s}.net-art .d3{animation-delay:.6s}
+.net-art .d4{animation-delay:.9s}.net-art .d5{animation-delay:1.15s}.net-art .d6{animation-delay:1.4s}
+@keyframes art-draw{to{stroke-dashoffset:0}}
+.net-art .orbit{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:3 7;transform-box:fill-box;transform-origin:center}
+.net-art .orbit.o2{stroke-opacity:.6;animation:art-spin 120s linear infinite reverse}
+@keyframes art-spin{to{transform:rotate(360deg)}}
+.net-art .node{fill:var(--bg);stroke:var(--txt);stroke-opacity:.7;stroke-width:1.1;opacity:0;animation:art-in .5s ease-out forwards}
+.net-art .sat{fill:none;stroke:var(--muted);stroke-width:1;opacity:0;animation:art-in .5s ease-out forwards,art-breathe 4s ease-in-out 2.4s infinite;transform-box:fill-box;transform-origin:center}
+.net-art .node,.net-art .sat{animation-delay:1.2s}
+.net-art .sat.b2{animation-delay:1.4s,3s}.net-art .sat.b3{animation-delay:1.6s,3.8s}
+@keyframes art-in{to{opacity:1}}
+@keyframes art-breathe{0%,100%{transform:scale(1);stroke-opacity:1}50%{transform:scale(1.5);stroke-opacity:.4}}
+@media(prefers-reduced-motion:reduce){
+  .net-art,.net-art *{animation:none !important;stroke-dashoffset:0 !important;opacity:1 !important}
+}
+
+/* sources */
+.sources li{margin-bottom:12px;font-size:.85rem;color:var(--muted)}
+.sources{list-style:none}
+.sources b{color:var(--txt)}
+
+/* faq */
+.faq{display:grid;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+.faq details[open]{border-color:var(--accent)}
+.faq summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.2rem;flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--muted);font-size:.86rem;margin-top:10px}
+footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}footer a{color:inherit;text-decoration:none}footer a:hover{color:var(--accent)}
+
+@media(min-width:720px){
+  :root{--pad:24px}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .grid2{grid-template-columns:1fr 1fr}
+  h2{font-size:1.9rem}
+  .jcard{flex-basis:300px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
+    <div class="brand">Nickel<span>Watch</span></div>
+    <div class="nav-links">
+    <a class="link" href="#map-sec">Map</a>
+    <a class="link" href="#forms-sec">The metal</a>
+    <a class="link" href="#journey-sec">Journey</a>
+    <a class="link" href="#production-sec">Production</a>
+    <a class="link" href="#refining-sec">Refining</a>
+    <a class="link" href="#demand-sec">Demand</a>
+    <a class="link" href="#timeline-sec">Timeline</a>
+    <a class="link" href="#trade-sec">Trade</a>
+    <a class="link" href="#china-sec">Chokepoint</a>
+    <a class="link" href="#military-sec">Military</a>
+    <a class="link" href="#invest-sec">Investment</a>
+    <a class="link" href="#companies-sec">Companies</a>
+    <a class="link" href="#sources-sec">Data</a>
+    <a class="link" href="#faq-sec">FAQ</a>
+    <a class="link" href="#research-sec">Research</a>
+    </div>
+    <a class="cta" href="#research-sec">Contact us</a>
+  </div>
+</nav>
+
+<header class="hero-wrap">
+  <img class="hero-bg" src="/brand/headers/nickel.jpg" alt="" aria-hidden="true">
+  <div class="hero-tint" aria-hidden="true"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero">
+  <div class="kicker">Open data · critical minerals</div>
+  <h1>Who forged the world's <em>nickel monopoly</em>?</h1>
+  <p>Nickel is the metal that makes steel stainless and long-range batteries dense — and in a single decade one archipelago took it over. Indonesia now digs about two-thirds of the world's nickel and, with China's process technology and capital, refines most of it too. The price benchmark broke spectacularly in 2022, five straight years of surplus then switched off mines across Australia, New Caledonia and Canada, and since 2025 Jakarta has rationed its ore like OPEC rations crude. This site tracks where nickel is mined, smelted and consumed, how the quota machine works, and who is left standing outside it — using open data from USGS, INSG, the IEA, BGS and price agencies.</p>
+  <div class="stats">
+    <div class="stat"><b data-count="3.9" data-suffix=" Mt">0</b><span>of nickel mined worldwide in 2025 — an all-time high (USGS)</span></div>
+    <div class="stat"><b data-count="66" data-prefix="~" data-suffix="%">0</b><span>of world mine supply came from Indonesia in 2025 (USGS / INSG)</span></div>
+    <div class="stat"><b data-count="76" data-prefix="~" data-suffix="%">0</b><span>of the world's refined nickel was produced in Indonesia and China in 2025 (IEA)</span></div>
+    <div class="stat"><b data-count="100000" data-prefix="&gt;$" data-suffix="/t">0</b><span>the price LME nickel hit on 8 March 2022 — before the exchange cancelled the trades</span></div>
+  </div>
+  </div>
+</header>
+
+<section id="map-sec">
+  <div class="kicker">Interactive map</div>
+  <h2>The nickel world map</h2>
+  <p class="lede">Mines and smelter parks, HPAL plants, refineries, suspended operations and development projects — from the laterite terraces of Sulawesi and Halmahera to the Arctic sulphides of Norilsk and Sudbury, and the mothballed pits of Western Australia. Tap a marker for details; toggle layers below. Circle size ≈ scale of operation.</p>
+  <div class="map-controls">
+    <button class="chip c-mine on" data-layer="mines">⛏ Mines &amp; smelter parks</button>
+    <button class="chip c-proc on" data-layer="processing">🏭 Refineries &amp; plants</button>
+    <button class="chip c-dis on" data-layer="disrupted">⚠ Disrupted &amp; closed</button>
+    <button class="chip c-dev on" data-layer="development">◐ Development</button>
+  </div>
+  <div id="map"></div>
+  <div class="legend" style="margin-top:10px">
+    <span><i style="background:var(--mine)"></i>Mine / smelter park</span>
+    <span><i style="background:var(--proc)"></i>Refinery / plant</span>
+    <span><i style="background:var(--dis)"></i>Disrupted / closed</span>
+    <span><i style="background:var(--dev)"></i>Development project</span>
+  </div>
+</section>
+
+<section id="forms-sec">
+  <div class="kicker">From red earth to stainless — and to cells</div>
+  <h2>One metal, two classes</h2>
+  <p class="lede">Nickel trades in a ladder of forms split into two worlds: class-1 refined metal — the 99.8% cathode the LME contract actually delivers — and class-2 iron-nickel alloys that go straight into stainless steel and never touch an exchange. Indonesia's plants invented ways to jump between the two, and the market has never priced cleanly since. Tap a stage.</p>
+  <div class="el-grid" id="elGrid"></div>
+  <div class="el-legend">
+    <span><i style="background:var(--accent)"></i>Upstream (mine &amp; intermediate)</span>
+    <span><i style="background:var(--accent2)"></i>Midstream (refine)</span>
+    <span><i style="background:var(--dis)"></i>Downstream (steel, cells &amp; alloys)</span>
+    <span><i style="background:var(--muted)"></i>Circular</span>
+  </div>
+  <div class="el-detail" id="elDetail"></div>
+</section>
+
+<section id="journey-sec">
+  <div class="kicker">Mine to mill — and to cathode</div>
+  <h2>The journey of a tonne of nickel</h2>
+  <p class="lede">From a red laterite bench in Sulawesi — or a kilometre-deep sulphide stope in the Arctic — to the sink in your kitchen, the turbine blade in a jet and the cathode in a long-range EV. Two ore types, two processing worlds, one price that Indonesian policy now sets.</p>
+  <div class="journey" id="journey"></div>
+  <div class="jhint">← swipe →</div>
+</section>
+
+<section id="production-sec">
+  <div class="kicker">Production &amp; reserves</div>
+  <h2>Where nickel comes from</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Mine production by country, 2025</h3>
+      <div class="sub">Tonnes of nickel content, log scale (USGS estimates)</div>
+      <div class="chartbox"><canvas id="chProd"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries 2026. World total ~3.9 Mt of nickel content; 2025 figures are estimates. Indonesia's output has grown from ~130,000 t in 2015 to 2.6 Mt; Australia's fell 54% in 2025 alone.</div>
+    </div>
+    <div class="card">
+      <h3>Reserves by country</h3>
+      <div class="sub">Million tonnes of nickel content (world total &gt;140 million tonnes)</div>
+      <div class="chartbox"><canvas id="chRes"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries 2026. Identified land-based resources exceed 350 Mt — 54% in laterites, 35% in sulphides — and a 2022 USGS study put seabed deposits at ~4.5 billion tonnes.</div>
+    </div>
+    <div class="card" style="grid-column:1/-1">
+      <h3>The scissors: surging tonnage, sinking price</h3>
+      <div class="sub">World mine production of nickel (kt of nickel content, left) vs the annual-average LME cash price ($/t, right)</div>
+      <div class="chartbox"><canvas id="chTrend"></canvas></div>
+      <div class="src">Sources: BGS World Mineral Statistics (production, nickel content, 2018–2024); USGS MCS 2026 (LME cash annual averages, from 2021). Output grew ~56% between 2020 and 2023 — almost all of it Indonesian — and the price paid for it: five consecutive years of surplus took the 2025 average to ~$15,000/t, below the cost of most non-Indonesian supply.</div>
+    </div>
+  </div>
+  <div class="note">Explore where nickel is <b>mined</b> vs where it is <b>refined</b>, country by country since 1970, on the <a href="/supply-chain/">supply-chain map</a>.</div>
+</section>
+
+<section id="refining-sec">
+  <div class="kicker">Refining</div>
+  <h2>The chokepoint moved onshore</h2>
+  <p class="lede">For most minerals the ore ships out and the chokepoint is a distant refinery. Indonesia inverted that: it banned ore exports in 2020, made the smelters come to the mines, and now refines almost half the world's nickel on its own soil — in plants overwhelmingly built, owned and run by Chinese groups. The top three refining countries controlled 80% of world output in 2025, up from 66% in 2021 (IEA).</p>
+  <div class="card">
+    <h3>Refining geography</h3>
+    <div class="sub">A one-archipelago industry, a one-customer market — and the survivors around the edge</div>
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇮🇩</span>The RKEF machine</h4><p>More than fifty rotary-kiln electric-furnace smelters — nearly all inside Tsingshan's IMIP and IWIP parks and Harita's Obi complex, up from two smelters in 2016 — turn saprolite ore into nickel pig iron and matte. Coal-fired and ore-hungry: Jakarta froze permits for new intermediate smelters in June 2025 to slow the burn.</p></div>
+      <div class="mini"><h4><span class="mi">🇨🇳</span>The sulphate machine</h4><p>China makes ~75% of the world's nickel sulphate (IEA), feeding on Indonesian MHP and matte, plus what remains of its own NPI industry. Since 2023 its refiners have also mass-produced new LME-deliverable class-1 cathode — Chinese-origin metal reached ~70% of LME stocks by late 2025.</p></div>
+      <div class="mini"><h4><span class="mi">🏔</span>The sulphide survivors</h4><p>The old class-1 world still runs on Arctic and Shield sulphides: Nornickel's Norilsk–Monchegorsk–Harjavalta chain (~199,000 t in 2025, sold mostly eastward under sanctions), Vale's Sudbury–Voisey's Bay–Long Harbour system, Glencore's Sudbury–Nikkelverk route, Jinchuan's Jinchang complex and Sumitomo's Niihama refinery.</p></div>
+      <div class="mini"><h4><span class="mi">🚧</span>The Western rebuild</h4><p>Thin and early: Westwin Elements runs a pilot in Oklahoma — the first US nickel refinery since 1985 — with a $1.4B Traxys offtake; Korea Zinc's 42,600 t/yr Onsan refinery entered production in 2026; Terrafame's Finnish sulphate plant is an EU strategic project; BHP's suspended Kwinana refinery awaits a 2027 verdict.</p></div>
+    </div>
+    <div class="src">Sources: IEA Global Critical Minerals Outlook 2026; company disclosures (Nornickel, Vale, Glencore, Jinchuan, Sumitomo, Westwin, Korea Zinc, Terrafame, BHP); Petromindo/BKPM smelter counts; C4ADS "Refining Power" (Chinese ownership of Indonesian capacity).</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Where refined nickel was produced, 2025</h3>
+    <div class="sub">Share of world refined output — metal, NPI, ferronickel and sulphate (IEA basis)</div>
+    <div class="chartbox"><canvas id="chConv"></canvas></div>
+    <div class="src">Source: IEA Global Critical Minerals Outlook 2026 (refined production ~3.7 Mt in 2025). On INSG's primary-production basis Indonesia's share is even higher — about half the world. The largest single facilities outside the big two are in Canada, Russia, Japan and Norway.</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>From ore to sink and to cell, step by step</h3>
+    <div class="sub">The stainless route (top) takes roughly two-thirds of every tonne; the battery-and-class-1 route (bottom) is smaller, pricier — and where the geopolitics lives. Scroll sideways on mobile →</div>
+    <div class="flow-wrap">
+    <svg viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nickel processing flow from ore to stainless steel and batteries">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8b98a5"/></marker>
+      </defs>
+      <style>
+        .fb{fill:#151b23;stroke:#2b3644;rx:10}
+        .ft{fill:#e6edf3;font:700 12px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fs{fill:#8b98a5;font:11px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fe{fill:#a3e635;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fl{stroke:#8b98a5;stroke-width:1.4;fill:none;marker-end:url(#ah)}
+        .lab{fill:#fb923c;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em}
+      </style>
+      <!-- route labels -->
+      <text x="205" y="24" class="lab">STAINLESS ROUTE (~2/3 OF DEMAND)</text>
+      <text x="205" y="212" class="lab">BATTERY &amp; CLASS-1 ROUTE (SMALLER — AND STRATEGIC)</text>
+      <!-- shared mining box -->
+      <g>
+        <rect class="fb" x="10" y="120" width="150" height="90" rx="10"/>
+        <text x="20" y="144" class="ft">1 · Mining ⛏</text>
+        <text x="20" y="162" class="fs">Laterites: 1.2–1.8% Ni, red</text>
+        <text x="20" y="176" class="fs">earth; sulphides: deep, richer</text>
+        <text x="20" y="200" class="fe">Indonesia digs ~66% of it</text>
+      </g>
+      <!-- stainless route boxes y=40..118 -->
+      <g>
+        <rect class="fb" x="205" y="40" width="150" height="78" rx="10"/>
+        <text x="215" y="62" class="ft">2 · RKEF smelter 🏭</text>
+        <text x="215" y="80" class="fs">Saprolite is smelted into</text>
+        <text x="215" y="94" class="fs">nickel pig iron (10–14% Ni)</text>
+        <text x="215" y="111" class="fe">NPI ≈ half of world supply</text>
+
+        <rect class="fb" x="400" y="40" width="150" height="78" rx="10"/>
+        <text x="410" y="62" class="ft">3 · Class 2 ⚙️</text>
+        <text x="410" y="80" class="fs">NPI &amp; ferronickel charge —</text>
+        <text x="410" y="94" class="fs">never touches the LME</text>
+        <text x="410" y="111" class="fe">priced at a deep discount</text>
+
+        <rect class="fb" x="595" y="40" width="150" height="78" rx="10"/>
+        <text x="605" y="62" class="ft">4 · Stainless 🍴</text>
+        <text x="605" y="80" class="fs">8–10% Ni in the 300-series;</text>
+        <text x="605" y="94" class="fs">64 Mt melted in 2025</text>
+        <text x="605" y="111" class="fe">China melts ~64% of it</text>
+      </g>
+      <!-- battery route boxes y=222..300 -->
+      <g>
+        <rect class="fb" x="205" y="222" width="150" height="78" rx="10"/>
+        <text x="215" y="244" class="ft">2 · HPAL &amp; matte 🧪</text>
+        <text x="215" y="262" class="fs">Limonite → MHP (35–40% Ni);</text>
+        <text x="215" y="276" class="fs">NPI or sulphide → matte ~75%</text>
+        <text x="215" y="292" class="fe">priced as a % of the LME</text>
+
+        <rect class="fb" x="400" y="222" width="150" height="78" rx="10"/>
+        <text x="410" y="244" class="ft">3 · Refine ⚗️</text>
+        <text x="410" y="262" class="fs">Battery sulphate + 99.8%</text>
+        <text x="410" y="276" class="fs">class-1 cathode &amp; briquette</text>
+        <text x="410" y="292" class="fe">China makes ~75% of sulphate</text>
+      </g>
+      <!-- convergence box -->
+      <g>
+        <rect class="fb" x="790" y="120" width="180" height="90" rx="10" stroke="#a3e635"/>
+        <text x="800" y="144" class="ft">5 · End uses 🔌</text>
+        <text x="800" y="162" class="fs">Kitchens, plants and towers on</text>
+        <text x="800" y="176" class="fs">one branch; EV cells, plating</text>
+        <text x="800" y="190" class="fs">and jet engines on the other</text>
+        <text x="800" y="205" class="fe">batteries: ~15% → ~30% by 2035</text>
+      </g>
+      <!-- arrows -->
+      <path class="fl" d="M160 150 L182 150 L182 79 H200"/>
+      <path class="fl" d="M355 79 H395"/>
+      <path class="fl" d="M550 79 H590"/>
+      <path class="fl" d="M745 79 H768 V143 H785"/>
+      <path class="fl" d="M160 180 L182 180 L182 261 H200"/>
+      <path class="fl" d="M355 261 H395"/>
+      <path class="fl" d="M550 261 H700 V183 H785"/>
+      <path class="fl" d="M475 222 V118" style="stroke-dasharray:4 4;marker-end:none"/>
+    </svg>
+    </div>
+    <div class="src">Route shares: Wood Mackenzie via Natural Resources Canada (end-use split, 2024); INSG (NPI ≈ 53–54% of primary supply, 2025); IEA GCMO 2026 (sulphate share, battery share to 2035). RKEF = rotary kiln electric furnace; HPAL = high-pressure acid leaching; MHP = mixed hydroxide precipitate; NPI = nickel pig iron. The dashed link is Tsingshan's 2021 trick: converting stainless-bound NPI into battery-bound matte, which blurred the two classes for good.</div>
+  </div>
+</section>
+
+<section id="demand-sec">
+  <div class="kicker">Demand</div>
+  <h2>Stainless first, batteries second</h2>
+  <p class="lede">Nickel demand grew to about 3.5 million tonnes in 2025 — and the fastest-growing battery chemistry on Earth contains none of it. Stainless steel remains the quiet two-thirds giant, batteries are the volatile swing factor, and every forecast now hinges on cathode decisions made in Asia's battery labs.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>What nickel is used for</h3>
+      <div class="sub">Share of world first-use demand, 2024 (Wood Mackenzie via Natural Resources Canada)</div>
+      <div class="chartbox"><canvas id="chUse"></canvas></div>
+      <div class="src">Source: Wood Mackenzie 2024, via Natural Resources Canada Nickel Facts. INSG puts stainless "just under 70%" of primary consumption in 2025. Batteries means nickel-rich NMC and NCA cathodes; "misc." includes alloy steels and foundry.</div>
+    </div>
+    <div class="card">
+      <h3>The forces pulling in opposite directions</h3>
+      <div class="sub">Demand rose ~3% in 2025 (IEA) — but the battery slice actually shrank</div>
+      <div class="mini-grid" style="grid-template-columns:1fr">
+        <div class="mini"><h4><span class="mi">🍴</span>The stainless floor</h4><p>World stainless melt output hit 64.2 Mt in 2025, up 2.1% — China alone melts 64% of it (worldstainless). Steel doesn't make headlines, but it is why nickel demand keeps growing through every battery panic: the 300-series kitchens, refineries and railings of a urbanising world.</p></div>
+        <div class="mini"><h4><span class="mi">🔋</span>The LFP counterattack</h4><p>Nickel-free LFP grew 48% in 2025 and overtook nickel-based chemistries as the world's dominant EV battery (IEA). Battery-sector nickel use actually declined slightly in 2025 (INSG) — the first such dip of the EV era — and the IEA now tells forecasters to revise nickel demand downward.</p></div>
+        <div class="mini"><h4><span class="mi">✈️</span>The superalloy pull</h4><p>Aerospace backlogs and rearmament are tightening the high-purity corner: nickel superalloys are 40–50% of a jet engine's weight with no substitute, and they compete for the same class-1 units as premium cathodes — the "surplus" is in stainless-grade NPI, not in metal a turbine maker can use.</p></div>
+      </div>
+      <div class="callout"><b>~30%</b><span>of nickel demand is projected to come from batteries by 2035, up from ~15% today, contributing about two-thirds of all demand growth (IEA GCMO 2026) — if high-nickel chemistries hold their ground against LFP.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="timeline-sec">
+  <div class="kicker">Geopolitics</div>
+  <h2>A ban, a squeeze and a quota machine</h2>
+  <p class="lede">Modern nickel history runs through Jakarta: an export ban built the world's biggest smelting industry from scratch, the flood of metal it unleashed broke the LME and bankrupted the competition — and now the same government is throttling the ore to push the price back up.</p>
+  <div class="card">
+    <div class="tl">
+      <div class="tl-item hot">
+        <div class="tl-date">1 Jan 2020</div>
+        <h4>The ban that built an industry</h4>
+        <p>Indonesia's second raw-ore export ban takes full effect, two years early. Forced to smelt in-country, Chinese groups pour tens of billions of dollars into RKEF lines at Morowali and Weda Bay: from 2 smelters in 2016 to more than 50 by 2025. In 2021 Tsingshan adds the trick that changes everything — converting stainless-bound NPI into battery-grade matte on demand.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">8 Mar 2022</div>
+        <h4>The day the benchmark broke</h4>
+        <p>LME nickel rises 250% in two days and trades past $100,000/t as Tsingshan's giant short position collides with Russia-invasion panic. The LME halts trading for more than a week and cancels ~9,000 trades worth ~$12 billion. Elliott and Jane Street sue and lose; the FCA later fines the exchange £9.2M — its first-ever action against an exchange. Volumes take until 2024 to recover.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2023–2024</div>
+        <h4>Five years of surplus</h4>
+        <p>Indonesian supply keeps ramping: world output grows ~15% in 2023 alone, surpluses run at 170,000–180,000 t a year (INSG), and the LME average halves from $25,815/t in 2022 to $16,812 in 2024. LFP batteries eat into the one demand segment everyone was counting on. Analysts start calling nickel the worst-performing metal of the energy transition.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">2024</div>
+        <h4>The year the West switched off</h4>
+        <p>The glut claims its casualties: First Quantum halts Ravensthorpe and Wyloo shuts its Kambalda mines (May); BHP suspends the entire Nickel West division (October); Glencore walks away from Koniambo after $9 billion sunk, and the furnaces go cold in August. In New Caledonia, riots over French voting reforms kill 14 people and cause €2bn+ of damage — mine output halves. The US and UK ban new Russian metal from the LME. Australia puts nickel on its critical minerals list; it doesn't save a single mine.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2025</div>
+        <h4>Jakarta turns the screws</h4>
+        <p>The ore royalty jumps from a flat 10% to a progressive 14–19% (April); a moratorium freezes permits for new NPI, matte and MHP smelters (June); Raja Ampat mining permits are revoked after a reef-damage outcry (June); and in October the RKAB quota system is cut back to one-year permits, explicitly to "control output and stabilise prices". Meanwhile the USGS logs Australia −54% and the Philippines −24% for the year, and a US Section 232 probe puts processed nickel in its sights.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Jan–Apr 2026</div>
+        <h4>The quota shock</h4>
+        <p>Indonesia sets the 2026 ore quota at ~260–270 million wet tonnes — roughly a third below 2025 approvals — and prices jump ~20% between December and mid-2026 (IEA), peaking near $18,800/t in May. On 15 April a new HPM benchmark formula reprices Indonesian ore (the limonite floor nearly triples, and cobalt becomes payable for the first time). INSG flips its 2026 forecast from a 261,000 t surplus to a 32,000 t deficit — the first since 2021. Washington's Section 232 finding names processed nickel a security threat but holds tariffs in reserve; a US–Indonesia trade agreement signed in February promises critical-minerals access while Jakarta insists the ore ban stays.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">May–Aug 2026</div>
+        <h4>Casualties and course-corrections</h4>
+        <p>The squeeze bites unevenly: Weda Bay — the world's largest nickel mine — exhausts its slashed quota and halts ore production in May, then wins a 25 Mwmt top-up; Gunbuster, one of Indonesia's biggest independent smelters, enters court-ordered debt suspension with ~1,900 layoffs; Huayou cuts MHP output as sulphur costs surge. New US sanctions on Cuba's mining sector break Sherritt's 30-year-old Moa-to-Alberta chain. By late August LME nickel is back near $16,800/t, the US DLA is preparing to buy 3,500 t for the rebuilt strategic stockpile, and BHP's decision on the Kalgoorlie smelter looms.</p>
+      </div>
+    </div>
+    <div class="src">Sources: USITC and CSIS (export-ban history); LME, FCA, UK court rulings and OFR (2022 squeeze); INSG press releases (Oct 2025, Apr 2026); USGS MCS 2026; IEA GCMO 2026; ESDM/RKAB decisions via Benchmark Mineral Intelligence, Mysteel and SMM; BHP, Glencore, Eramet, First Quantum and Sherritt disclosures; Reuters; Bloomberg.</div>
+  </div>
+</section>
+
+<section id="trade-sec">
+  <div class="kicker">Trade &amp; prices</div>
+  <h2>A market that broke its own benchmark</h2>
+  <p class="lede">The LME price everyone quotes covers only the quarter of supply pure enough to deliver against it. The rest — the NPI that feeds stainless mills, the MHP that feeds Chinese refineries, the ore that feeds everything — trades at negotiated discounts and government-set floors. Since 2022 the question has been whether the benchmark still describes the market at all.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>US nickel import sources</h3>
+      <div class="sub">Primary nickel, average 2021–2024 — refiners, not miners: the Indonesian tonne rarely ships west directly</div>
+      <div class="chartbox"><canvas id="chUsImp"></canvas></div>
+      <div class="src">Source: USGS MCS 2026. US net import reliance was 41% of consumption in 2025 — but excluding scrap it is nearly 100%: one mine (Eagle, Michigan, near end of life), no primary refinery since 1985, and a scrap industry covering ~60% of demand.</div>
+    </div>
+    <div class="card">
+      <h3>The long slide, in annual averages</h3>
+      <div class="sub">LME cash price, $/t (annual average)</div>
+      <div class="chartbox"><canvas id="chPrices"></canvas></div>
+      <div class="src">Source: USGS MCS 2026 (LME cash annual averages; 2025 estimated). The 2022 bar hides the madness: a two-day 250% spike past $100,000/t that the LME cancelled. By August 2026 the price sat near $16,800/t after a quota-driven spring rally to ~$18,800.</div>
+    </div>
+    <div class="card">
+      <h3>Four prices, one metal</h3>
+      <div class="sub">What you pay depends on which rung of the ladder you stand on</div>
+      <div class="mini-grid">
+        <div class="mini"><h4>The class-1 benchmark</h4><p>The LME contract delivers 99.8% cathode and briquettes — about a quarter of world supply. Post-squeeze reforms (daily price limits, OTC reporting) rebuilt volumes by 2024, but the metal in the warehouses changed: <b style="color:var(--accent)">~70% of LME stocks are now Chinese-brand cathode</b> that barely existed before 2023.</p></div>
+        <div class="mini"><h4>The NPI discount</h4><p>Nickel pig iron — over half of world supply — trades far below the exchange: SMM's Indonesian NPI index averaged ~$11,700/t of contained nickel in 2025 while the LME averaged ~$15,000. This is the real price of the stainless world, and for stretches of 2025–26 it sat <b style="color:var(--accent)">below most producers' cash costs</b>.</p></div>
+        <div class="mini"><h4>The MHP payability</h4><p>The HPAL intermediate that feeds battery chains is priced as a <b style="color:var(--accent)">negotiated percentage of the LME — roughly 70–80%</b> — though the market is drifting toward pricing it off Chinese sulphate instead; Platts retired its old payability assessment in June 2026. Supply is growing so fast that payables keep sagging.</p></div>
+        <div class="mini"><h4>The HPM floor</h4><p>Jakarta's benchmark ore price (HPM) sets what every smelter in Indonesia must pay its miners. The April 2026 overhaul — higher base prices, cobalt payable for the first time — <b style="color:var(--accent)">repriced the global cost curve by decree</b>: UBS put post-reform break-evens at ~$18,400/t for RKEF and ~$20,800/t for HPAL.</p></div>
+      </div>
+      <div class="src">Sources: LME; ING THINK; SMM (NPI index); Fastmarkets and S&amp;P Global Platts (MHP payables); Eramet FY2025 disclosures; UBS via Skillings (HPM break-evens).</div>
+    </div>
+    <div class="card">
+      <h3>The quiet casualty: New Caledonia</h3>
+      <div class="sub">What five years of Indonesian surplus did to the world's fourth-largest reserve holder</div>
+      <p style="font-size:.85rem;color:var(--muted)">Nickel is 94% of New Caledonia's exports and a fifth of its private-sector jobs — and all three of its big operations are broken. Koniambo's furnaces have been cold since August 2024 with Glencore's 49% still unsold; Prony's Goro plant restarted only on French loans and survives "fragile"; Eramet's SLN smelter runs on losses financed directly by the French state. The May 2024 riots — 14 dead, €2bn+ in damage — halved mine output in a single year, and the political settlement meant to follow them (the Bougival accord) failed in parliament twice. A territory that produced over 200,000 t a year now struggles to reach 140,000.</p>
+      <div class="callout"><b>−52%</b><span>the collapse of New Caledonian mine production in 2024 (USGS) — the sharpest one-year fall of any major producer in modern nickel history.</span></div>
+      <div class="src">Sources: USGS MCS 2025/2026; Eramet FY2025 results; Glencore disclosures; Benchmark Mineral Intelligence; French government announcements; Reuters/RNZ reporting on the Bougival process.</div>
+    </div>
+  </div>
+</section>
+
+<section id="china-sec">
+  <div class="kicker">Concentration risk</div>
+  <h2>The two-flag chokepoint</h2>
+  <p class="lede">This chokepoint flies two flags. Indonesia owns the ore and the export rules; Chinese companies own most of the plants that turn it into metal — roughly three-quarters of Indonesian refining capacity, built with some $65 billion of investment over a decade. One government sets the quota, another's companies decide where the product goes.</p>
+  <div class="card">
+    <div class="big" id="bigPct">~76%</div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:6px">of the world's refined nickel was produced in Indonesia and China in 2025 (IEA). The grip along the mine-to-battery chain:</p>
+    <div class="bars" id="chinaBars"></div>
+    <div class="src">Sources: USGS MCS 2026 / INSG (mine share); C4ADS "Refining Power" and Mining Technology (Chinese-owned share of Indonesian refining capacity); IEA Global Critical Minerals Outlook 2026 (refined output shares; nickel sulphate share). The IEA projects Indonesia alone reaching ~75% of mining and ~50% of refining by 2035.</div>
+  </div>
+</section>
+
+<section id="military-sec">
+  <div class="kicker">Dual use</div>
+  <h2>The metal that holds the jet age together</h2>
+  <p class="lede">Before it was a battery metal, nickel was a war metal: it hardens armour plate, resists seawater and — above all — keeps turbine blades solid at combustion temperatures. The United States once rationed it out of its own five-cent coin. Today its defence planners face a market where the strategic grades are the scarce ones.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">✈️</span>Superalloys</h4><p>Nickel-based superalloys make up 40–50% of a modern jet engine's weight — single-crystal turbine blades, combustors, discs — because nothing else survives above 1,000°C for thousands of hours. There is no substitute at any price, and full aerospace order books plus rearmament are straining the limited superalloy melt capacity that exists.</p></div>
+      <div class="mini"><h4><span class="mi">🚢</span>The naval metal</h4><p>Monel and cupronickel alloys resist seawater in propeller shafts, valves and piping; HY-80 and HY-100 nickel steels form submarine pressure hulls; nickel alloy steels underpin armour plate. Every navy is, quietly, a nickel consumer — and the 300-series stainless in its shipyards is 8–10% nickel too.</p></div>
+      <div class="mini"><h4><span class="mi">🪙</span>1942: the war nickel</h4><p>Nickel was so critical to WWII aircraft and warship production that Congress ordered it removed from the US five-cent coin: the 1942–45 "war nickels" of copper, silver and manganese saved roughly 800,000 pounds of the metal for P-51s, B-29s and the fleet. Few metals have been rationed out of the currency named after them.</p></div>
+      <div class="mini"><h4><span class="mi">🇨🇺</span>The Cuba embargo, full circle</h4><p>The US built Cuba's Nicaro and Moa nickel plants, lost them to the revolution, and embargoed their output; Soviet engineers kept them running for Moscow. Canada's Sherritt rescued Moa in 1994 — until May 2026, when new US sanctions on Cuba's mining sector broke the chain again and idled a top-ten class-1 refinery in Alberta with it.</p></div>
+      <div class="mini"><h4><span class="mi">📦</span>The empty stockpile, refilling</h4><p>The National Defense Stockpile sold off its Cold-War nickel by the late 1990s. The reversal is now funded: the 2025 One Big Beautiful Bill Act put $2 billion into stockpile purchases, the Pentagon flagged up to $1 billion of buys, and the DLA has moved to acquire 3,500 t of nickel — the first US government nickel purchases in a generation.</p></div>
+      <div class="mini"><h4><span class="mi">🏛</span>Critical by every list</h4><p>Refined nickel sits on the final 2025 US critical minerals list; a Section 232 finding in January 2026 declared processed-mineral imports (nickel included) a security threat — choosing negotiations and possible minimum import prices over immediate tariffs. Australia listed nickel in 2024; the EU's CRMA counts Terrafame's Finnish expansion among its strategic projects.</p></div>
+    </div>
+    <div class="src">Sources: Total Materia and aerospace trade press (superalloys); USGS MCS 2026; National WWII Museum and CoinWeek (war nickels); US State Department (Cuba sanctions, May 2026); P.L. 119-21 and DLA solicitations via Covington and National Defense Magazine; Federal Register (Section 232); EU CRMA; Australian DISR. Naval metallurgy is standard reference material.</div>
+  </div>
+</section>
+
+<section id="invest-sec">
+  <div class="kicker">Capital flows</div>
+  <h2>Where the nickel money is going</h2>
+  <p class="lede">For a metal in five straight years of surplus, nickel still absorbs staggering sums — almost all of them landing on two Indonesian islands. Outside the archipelago, the money is political: state funds, defence grants and development banks trying to keep a non-Indonesian supply chain alive. Presented as observation, not investment advice.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇮🇩</span>The HPAL wave</h4><p>Indonesian MHP capacity is heading toward a near-doubling to ~860,000 t/yr in 2026 (Argus): the Ford-backed Pomalaa plant (Vale/Huayou, ~120 kt) starts up, Nickel Industries' ENC produced its first MHP in July 2026 and targets Indonesia's first LME-grade cathode, Harita pushes Obi Island toward ~305 kt of total nickel capacity — even as the quota squeeze and sulphur costs pinch margins.</p></div>
+      <div class="mini"><h4><span class="mi">🏦</span>The state moves in</h4><p>Jakarta is converting volume dominance into ownership: MIND ID took 34% of PT Vale Indonesia; the new sovereign fund Danantara backed the $1.4B GEM–Vale HPAL, signed a nickel-hub pact with GEM, and is in talks for Eramet's 38.7% of Weda Bay. Quotas, royalties, a smelter moratorium and a state benchmark price complete the toolkit.</p></div>
+      <div class="mini"><h4><span class="mi">🇺🇸</span>The American rebuild</h4><p>Talon Metals bought Lundin's Eagle Mine — the only US nickel mine — for ~$84M in January 2026, pairing it with the DoD-funded Tamarack project in Minnesota; Westwin Elements runs the first US nickel refinery pilot since 1985 with a $1.4B Traxys offtake; and the DLA's stockpile purchases give it all a guaranteed buyer.</p></div>
+      <div class="mini"><h4><span class="mi">🇨🇦</span>Canada bets big</h4><p>Canada Nickel's $2B Crawford project cleared its environmental assessment in March 2026 with an EDC-led financing stack and Samsung SDI aboard; a consortium with Canada Growth Fund money took over Vale's Thompson operation; FPX's Baptiste passed its federal review. Canada already supplies 44% of US primary nickel imports — and wants the next decade's share too.</p></div>
+      <div class="mini"><h4><span class="mi">🌊</span>The frontiers</h4><p>The Metals Company's Clarion-Clipperton nodules (~619 Mt wet, grading over 1% nickel) entered the first-ever US commercial seabed-mining review, with a NOAA decision path running into 2027. On land-above-ground: Redwood recycles most of North America's lithium-ion batteries, and Korea Zinc's new Onsan refinery gives the non-Chinese chain 42,600 t/yr of class-1.</p></div>
+      <div class="mini"><h4><span class="mi">⚠️</span>The risks</h4><p>Every one is structural: Indonesian policy whiplash (the 2026 balance forecast swung 293,000 t in one INSG revision); the class mismatch — NPI glut, class-1 and sulphate tightness; HPAL's sulphur-cost exposure; Western restarts needing sustained &gt;$18,000–20,000/t; and a "green premium" for cleaner nickel that the LME has so far declined to create.</p></div>
+    </div>
+    <div class="note">This section describes where capital is flowing, based on public data. It is not financial advice.</div>
+    <div class="src">Sources: company and government disclosures (Nickel Industries, Harita, Vale, Huayou, Talon, Westwin, Canada Nickel, FPX, TMC, Korea Zinc, Redwood); Argus; Danantara and MIND ID announcements; NOAA; INSG; Mining Technology.</div>
+  </div>
+</section>
+
+<section id="companies-sec">
+  <div class="kicker">Company tracker</div>
+  <h2>The companies that move nickel</h2>
+  <p class="lede">Miners, smelter-park operators, refiners and developers across the chain. One private Chinese group smelts more nickel than the next several producers combined; one French miner's flagship lost 70% of its ore quota in a stroke; and a handful of Western developers are trying to build what the market keeps closing. Filter by segment or search.</p>
+  <div class="map-controls" id="coFilters">
+    <button class="chip c-mine on" data-seg="mine">⛏ Miners</button>
+    <button class="chip c-proc on" data-seg="sep">🏭 Smelting &amp; refining</button>
+    <button class="chip c-dev on" data-seg="dev">◐ Developers</button>
+  </div>
+  <div class="co-search">
+    <input id="coSearch" type="search" placeholder="Search company, asset, country…" aria-label="Search companies">
+    <span class="co-count" id="coCount"></span>
+  </div>
+  <div class="co-wrap">
+    <table class="co">
+      <thead><tr><th>Company</th><th>Segment</th><th>Key assets</th><th>Status &amp; recent signals</th></tr></thead>
+      <tbody id="coBody"></tbody>
+    </table>
+  </div>
+  <div class="note">Company status reflects public disclosures as of August 2026. This is an observational tracker, not investment advice.</div>
+  <div class="src">Sources: company disclosures &amp; filings; USGS MCS 2026; INSG; trade press (Reuters, Bloomberg, Fastmarkets, Mysteel, SMM, Mining.com, Benchmark, Petromindo, Jakarta Globe).</div>
+</section>
+
+<section id="sources-sec">
+  <div class="kicker">Data &amp; methodology</div>
+  <h2>Open data sources</h2>
+  <ul class="sources">
+    <li><b><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-nickel.pdf">USGS Mineral Commodity Summaries 2026 — Nickel</a></b> — world mine production, reserves and resources, US trade, prices, recycling and end-use notes. 2025 figures are estimates; production is nickel content.</li>
+    <li><b><a href="https://insg.org/">International Nickel Study Group (INSG)</a></b> — primary production, usage and market-balance statistics (April 2026 press release) and the World Nickel Factbook; the source for the NPI share and the 2026 surplus-to-deficit revision.</li>
+    <li><b><a href="https://www.iea.org/reports/global-critical-minerals-outlook-2026">IEA Global Critical Minerals Outlook 2026</a></b> — refining-concentration data (Indonesia 45%, China 31% of refined output in 2025), sulphate shares, demand scenarios and the 2035–2040 supply-gap projections.</li>
+    <li><b><a href="https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/">British Geological Survey — World Mineral Statistics</a></b> — long-run nickel mine and smelter/refinery production series (1970–2024), also behind this site's <a href="/supply-chain/">supply-chain map</a>.</li>
+    <li><b>Prices</b> — USGS-published LME cash annual averages; <a href="https://www.lme.com/en/Metals/Non-ferrous/LME-Nickel">LME nickel</a>; SMM Indonesian NPI index and Chinese sulphate quotes via trade press; Fastmarkets/Platts MHP payability reporting; Indonesian HPM benchmark via ESDM decisions and Wood Mackenzie/SMM analysis.</li>
+    <li><b>Indonesian policy</b> — RKAB quota decisions and PP 19/2025 (royalties), PP 28/2025 (smelter moratorium) and Permen ESDM 17/2025 (one-year quotas) via <a href="https://source.benchmarkminerals.com/">Benchmark Mineral Intelligence</a>, Mysteel, SMM and Petromindo reporting; APNI statements via ANTARA.</li>
+    <li><b>The 2022 LME squeeze</b> — <a href="https://www.fca.org.uk/news/press-releases/first-fca-enforcement-action-and-fine-against-recognised-investment-exchange">FCA enforcement notice (March 2025)</a>; UK High Court and Court of Appeal rulings; US Office of Financial Research working paper 24-09; contemporaneous LME notices.</li>
+    <li><b>Supply events</b> — company disclosures: <a href="https://www.eramet.com/en/">Eramet</a> (Weda Bay, SLN), <a href="https://www.glencore.com/">Glencore</a> (Koniambo, INO, Murrin Murrin), <a href="https://www.bhp.com/">BHP</a> (Nickel West), <a href="https://vale.com/">Vale / Vale Base Metals</a>, <a href="https://nornickel.com/">Nornickel</a>, <a href="https://nickelindustries.com/">Nickel Industries</a>, <a href="https://haritanickel.com/">Harita Nickel</a>, <a href="https://merdekabattery.com/">Merdeka Battery Materials</a>, <a href="https://www.sherritt.com/">Sherritt</a>, <a href="https://talonmetals.com/">Talon Metals</a>, <a href="https://canadanickel.com/">Canada Nickel</a>.</li>
+    <li><b>Environment &amp; labour</b> — Business &amp; Human Rights Resource Centre and Trend Asia (smelter safety; the December 2023 ITSS furnace disaster killed 21 workers); IWGIA and Mongabay (Halmahera deforestation and the Hongana Manyawa); IEEFA (carbon intensity of NPI vs HPAL vs sulphide nickel); US Department of Labor listing of Indonesian nickel (2024).</li>
+    <li><b>Notes</b> — mine and plant coordinates are approximate. Tonnages are nickel content unless stated; RKAB quota figures are wet tonnes of ore. Refined-share figures follow the IEA basis (metal, NPI, ferronickel, sulphate) unless INSG's primary-production basis is cited. Class-1 ≈ 25% of supply is an analyst convention (ING), not an official statistic. Last data refresh: August 2026. Header photo: nickel-ore mining area on the coast of North Kolaka, Southeast Sulawesi, Indonesia — Marwan Mohamad via Wikimedia Commons, <a href="https://commons.wikimedia.org/wiki/File:Kawasan_tambang_nikel_Kolaka_Utara_(2).jpg">CC BY-SA 4.0</a>.</li>
+  </ul>
+</section>
+
+<section id="faq-sec">
+  <div class="kicker">FAQ</div>
+  <h2>Common questions</h2>
+  <div class="faq">
+    <details>
+      <summary>What is nickel used for?</summary>
+      <p>Mostly to make steel stainless: about 64% of the world's nickel goes into stainless steel, the 300-series kitchens, hospitals and chemical plants are built from (Wood Mackenzie, 2024). Batteries take roughly 15% — the nickel-rich NMC and NCA cathodes in longer-range EVs — with the rest split between non-ferrous alloys, electroplating and alloy steels. The strategic sliver is superalloys: nickel-based alloys make up 40–50% of a modern jet engine's weight, with no substitute at any price.</p>
+    </details>
+    <details>
+      <summary>Which country produces the most nickel?</summary>
+      <p>Indonesia, by an enormous margin: about 2.6 million of the world's 3.9 million tonnes in 2025 (USGS) — roughly two-thirds of global mine supply, up from around 5% a decade ago. The Philippines is a distant second at about 270,000 tonnes, much of its ore now shipped to Indonesian plants. Downstream the grip tightens differently: Indonesia and China together produced about 76% of the world's refined nickel in 2025 (IEA), and Chinese groups own roughly three-quarters of Indonesia's refining capacity.</p>
+    </details>
+    <details>
+      <summary>What happened in the 2022 LME nickel squeeze?</summary>
+      <p>On 8 March 2022, LME nickel jumped 250% in two days and traded past $100,000 a tonne as a huge short position held by Tsingshan — the world's biggest nickel producer — collided with Russia-invasion supply fears. The LME suspended trading for more than a week and retroactively cancelled about 9,000 trades worth roughly $12 billion. Hedge funds sued and lost; the UK regulator later fined the exchange £9.2 million — its first-ever enforcement action against an exchange. Volumes only recovered to pre-crisis levels in 2024.</p>
+    </details>
+    <details>
+      <summary>What is the difference between class-1 and class-2 nickel?</summary>
+      <p>Class-1 is refined metal of at least 99.8% purity — the cathode and briquettes the LME contract actually delivers — and makes up only about a quarter of supply. Class-2 is the rest: nickel pig iron and ferronickel, iron-nickel alloys that go straight into stainless steel. NPI alone was over half of world supply in 2025 (INSG). The boundary is blurring: Indonesian plants now convert NPI to matte and laterite ore to MHP, intermediates that Chinese refineries turn into battery-grade sulphate — and increasingly into new class-1 metal that has flooded LME warehouses.</p>
+    </details>
+    <details>
+      <summary>Why did Western nickel mines shut down?</summary>
+      <p>Five consecutive years of Indonesian-driven surplus crushed the price from about $25,800 a tonne (2022 average) to about $15,000 in 2025 — below the cost of most non-Indonesian supply. In 2024 alone, BHP suspended its entire Nickel West division, First Quantum halted Ravensthorpe, Wyloo closed its Kambalda mines and Glencore walked away from Koniambo in New Caledonia after sinking $9 billion. USGS data shows Australian output fell 54% in 2025. Most restarts are judged to need sustained prices above $18,000–20,000 a tonne.</p>
+    </details>
+    <details>
+      <summary>Do EV batteries still need nickel?</summary>
+      <p>The long-range ones do: nickel-rich NMC and NCA cathodes still deliver the highest energy density, and solid-state designs pair with high-nickel cathodes too. But nickel-free LFP became the world's dominant EV chemistry in 2025 (IEA), and battery nickel demand actually dipped slightly that year (INSG). The IEA still projects batteries growing from roughly 15% of nickel demand today to about 30% by 2035 — while advising forecasters to revise nickel demand estimates down as LFP spreads.</p>
+    </details>
+    <details>
+      <summary>Is the world running out of nickel?</summary>
+      <p>No. USGS puts reserves above 140 million tonnes — around 35 years at the 2025 mining rate — with identified resources over 350 million tonnes on land and an estimated 4.5 billion tonnes more in seabed deposits. The real anxieties are concentration and depletion of the best ore: two-thirds of mine supply comes from one archipelago whose quota decisions now set the world price, and Indonesian officials have warned their high-grade saprolite could run short within a couple of decades at the current smelting rate.</p>
+    </details>
+    <details>
+      <summary>Need a deep-dive report on nickel?</summary>
+      <p>That's exactly what we do. We produce commissioned deep-dive reports on nickel, covering angles such as mine-to-refinery supply-chain mapping, Indonesia's quota and royalty regime, the class-1/class-2 divide and what it means for batteries versus stainless, the LME's post-squeeze credibility, Western restart economics and the seabed-nodule wildcard. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email <a href="mailto:hello@mineral.watch">hello@mineral.watch</a> with a short note on what you need and we'll come back with a scoped proposal.</p>
+    </details>
+  </div>
+</section>
+
+<section id="research-sec">
+  <div class="research-box">
+    <div>
+      <div class="kicker">Custom research</div>
+      <h2>Need an ad hoc data-driven research report?</h2>
+      <p style="color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:18px">We produce bespoke, source-cited research on nickel and other strategic minerals — supply-chain mapping, trade-flow analysis, country and commodity deep-dives — built on the same open data behind this dashboard.</p>
+      <a class="research-cta" href="mailto:hello@mineral.watch">Reach out at hello@mineral.watch</a>
+    </div>
+    <div class="research-art net-art" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="orbit o2" cx="150" cy="150" r="126"/>
+        <circle cx="150" cy="150" r="116" fill="none" stroke="var(--accent)" stroke-width=".6" opacity=".55"/>
+        <path class="web d3" pathLength="1" d="M150 34 L119 104"/>
+        <path class="web d3" pathLength="1" d="M150 34 L181 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L119 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L82 140"/>
+        <path class="web d4" pathLength="1" d="M242 56 L181 104"/>
+        <path class="web d5" pathLength="1" d="M242 56 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M119 104 H181"/>
+        <path class="edge d1" pathLength="1" d="M119 104 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M181 104 L218 140"/>
+        <path class="edge d2" pathLength="1" d="M82 140 H218"/>
+        <path class="edge d2" pathLength="1" d="M82 140 L150 218"/>
+        <path class="edge d2" pathLength="1" d="M218 140 L150 218"/>
+        <path class="edge d3" pathLength="1" d="M119 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M181 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M150 140 V218"/>
+        <circle class="node" cx="119" cy="104" r="3"/>
+        <circle class="node" cx="181" cy="104" r="3"/>
+        <circle class="node" cx="82" cy="140" r="3"/>
+        <circle class="node" cx="218" cy="140" r="3"/>
+        <circle class="node" cx="150" cy="218" r="3"/>
+        <circle class="sat" cx="150" cy="34" r="2.2"/>
+        <circle class="sat b2" cx="58" cy="62" r="2.2"/>
+        <circle class="sat b3" cx="242" cy="56" r="2.2"/>
+        <circle class="sat b2" cx="258" cy="196" r="2.2"/>
+        <circle class="sat b3" cx="68" cy="240" r="2.2"/>
+        <circle cx="150" cy="140" r="5" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6">
+          <animate attributeName="r" values="5;16" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".6;0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="150" cy="140" r="4.2" fill="var(--accent)"/>
+        <circle r="1.6" fill="var(--accent2)">
+          <animateMotion path="M58 62 L119 104 L150 140" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.6" fill="var(--accent)">
+          <animateMotion path="M258 196 L218 140 L150 140" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="subscribe-sec">
+  <div class="kicker">Stay updated</div>
+  <h2>Get notified when the nickel data refreshes</h2>
+  <div class="sub-row">
+    <div class="sub-box">
+      <p>mineral.watch is an independent data hub, and it grows with the people who use it. Introduce yourself and we'll let you know when the nickel figures on this dashboard are updated and when new dashboards, datasets and research go live — no noise, just what's new.</p>
+      <p>Telling us your sector and organisation helps too: it shows us who relies on this data — analysts, policymakers, journalists, researchers — and shapes what we build next, from new minerals to custom research.</p>
+      <p>Prefer to talk directly? Corrections, data tips and collaboration ideas are always welcome at <a href="mailto:hello@mineral.watch">hello@mineral.watch</a>.</p>
+    </div>
+    <div class="sub-form">
+      <form action="https://formspree.io/f/mljeedkq" method="POST">
+        <input type="hidden" name="_subject" value="New mineral.watch subscriber (nickel dashboard)">
+        <input type="hidden" name="source" value="nickel-dashboard">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-grid">
+          <input type="text" name="first_name" placeholder="First name *" aria-label="First name" autocomplete="given-name" required>
+          <input type="text" name="last_name" placeholder="Last name *" aria-label="Last name" autocomplete="family-name" required>
+          <input type="email" name="email" class="full" placeholder="Email *" aria-label="Email" autocomplete="email" required>
+          <input type="text" name="organisation" class="full" placeholder="Organisation" aria-label="Organisation" autocomplete="organization">
+          <select name="sector" class="full" aria-label="Sector">
+            <option value="" selected>Sector</option>
+            <option>Government &amp; policy</option>
+            <option>Mining &amp; industry</option>
+            <option>Finance &amp; investment</option>
+            <option>Research &amp; academia</option>
+            <option>Media &amp; journalism</option>
+            <option>NGO / civil society</option>
+            <option>Other</option>
+          </select>
+          <input type="text" name="linkedin" placeholder="LinkedIn" aria-label="LinkedIn profile">
+          <input type="tel" name="whatsapp" placeholder="WhatsApp (+code)" aria-label="WhatsApp number">
+        </div>
+        <button type="submit">Subscribe for updates</button>
+        <p class="form-note">We'll only use your details to send you mineral.watch updates. No spam, unsubscribe anytime.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="/">mineral.watch</a> · open intelligence on strategic minerals &amp; rare earths · sources: USGS, BGS, UN Comtrade, IEA
+</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+/* ============ DATA (curated from USGS MCS 2026, INSG, IEA GCMO 2026, BGS, company disclosures) ============ */
+const DATA = {
+  production2025: [ // tonnes of nickel content, USGS estimates
+    ["Indonesia",2600000],["Philippines",270000],["Russia",200000],["Canada",140000],
+    ["New Caledonia",140000],["China",120000],["Brazil",70000],["Australia",45000],
+    ["Madagascar",30000],["United States",10000]
+  ],
+  reserves: [ // million tonnes of nickel content
+    ["Indonesia",62],["Australia",25],["Brazil",16],["Russia",8.3],
+    ["New Caledonia",7.1],["Philippines",4.8],["China",4.4],["Canada",2.2],["Other",10.2]
+  ],
+  trend: { // world mine production, kt nickel content (BGS); price: LME cash $/t annual average (USGS)
+    years:[2018,2019,2020,2021,2022,2023,2024,2025],
+    prod:[2448.5,2861.9,2493.6,2786.5,3260.9,3942.5,3818.6,null],
+    price:[null,null,null,18476,25815,21495,16812,15000]
+  },
+  conv2025: [ // % share of world refined nickel production (IEA GCMO 2026)
+    ["Indonesia",45],["China",31],["Canada",3.4],["Russia",3.3],["Japan",2.9],
+    ["Norway",2.7],["Brazil",1.7],["Rest of world",10]
+  ],
+  usImports:[["Canada",44],["Norway",11],["Australia",8],["Brazil",7],["Other",30]],
+  endUse:[ // % of world first-use demand, 2024 (Wood Mackenzie via NRCan)
+    ["Stainless steel",64],["Batteries",15],["Non-ferrous alloys",9],
+    ["Electroplating",5],["Alloy steel & foundry",7]
+  ],
+  prices:{ years:[2021,2022,2023,2024,2025],
+    ore:[18476,25815,21495,16812,15000] },
+  chinaShares:[ // stage, share %
+    ["Mine production (Indonesia)",66],["Indonesian refining, Chinese-owned",75],
+    ["Refined nickel (Indonesia + China)",76],["Nickel sulphate (China)",75]
+  ],
+  journey:[
+    {ico:"⛏",t:"1 · Mining",p:"Two ore worlds: laterites — red, shallow, tropical weathered rock at 1.2–1.8% nickel, dug in open cuts across Indonesia, the Philippines and New Caledonia — and sulphides, richer but kilometres deep, mined at Norilsk, Sudbury and Voisey's Bay. Laterites won: they carry ~two-thirds of supply and most of the growth.",f:"3.9 Mt of nickel mined in 2025 — an all-time high (USGS)"},
+    {ico:"🏭",t:"2 · The smelter park",p:"Saprolite (the higher-grade laterite layer) goes into rotary-kiln electric furnaces — RKEF lines — and comes out as nickel pig iron, a cheap iron-nickel alloy invented in China and perfected in Indonesia's giant industrial parks. Coal-fired, ore-hungry and built at a speed the West never matched.",f:"NPI alone was ~53% of world primary supply in 2025 (INSG)"},
+    {ico:"🧪",t:"3 · HPAL & the intermediates",p:"The lower-grade limonite layer is pressure-leached in acid (HPAL) into mixed hydroxide precipitate — 35–40% nickel plus cobalt — while converters turn NPI or sulphide concentrate into ~75% matte. These intermediates are the bridge from stainless-grade rock to battery-grade chemistry.",f:"Indonesian MHP capacity is heading toward ~860 kt/yr in 2026 (Argus)"},
+    {ico:"⚗️",t:"4 · Refining",p:"MHP and matte become battery-grade nickel sulphate — about 75% of it made in China — or 99.8% class-1 metal. Since 2023 Chinese and Indonesian refiners have minted so much new LME-deliverable cathode that Chinese brands now dominate the exchange's own warehouses.",f:"Indonesia + China produced ~76% of refined nickel in 2025 (IEA)"},
+    {ico:"🍴",t:"5 · Stainless & alloys",p:"Two of every three tonnes end up in stainless steel — 8–10% nickel in the 300-series that equips kitchens, hospitals, refineries and skyscrapers. The strategic sliver goes further up the alloy ladder: superalloys for jet engines, Monel for seawater, HY-grade steels for submarine hulls.",f:"World stainless output hit 64.2 Mt in 2025; China melted 64% (worldstainless)"},
+    {ico:"🔋",t:"6 · Cells & the loop",p:"Nickel-rich NMC and NCA cathodes power longer-range EVs — but nickel-free LFP overtook them in 2025, and battery nickel demand dipped for the first time. The circular stream is older and bigger: stainless scrap already supplies a third as much nickel again as mines do, while battery recycling remains below 5%.",f:"LFP passed nickel chemistries as the top EV battery in 2025 (IEA)"}
+  ],
+  forms:[
+    {s:"1.2–1.8%",n:"Laterite ore",g:"U",use:"The rock Jakarta rations",
+     d:"Laterite ore is too poor to ship profitably — which is exactly why Indonesia banned exporting it and made the smelters come to the ore. Every wet tonne now needs an RKAB quota and is priced by the government's HPM benchmark, which the April 2026 overhaul nearly tripled for limonite. The mine gate, not the port, is where Indonesian leverage begins.",pr:"Ore royalty: 14–19% progressive since April 2025 (PP 19/2025)"},
+    {s:"10–14%",n:"NPI",g:"U",use:"The class-2 flood",
+     d:"Nickel pig iron — a crude iron-nickel alloy from RKEF furnaces — is the invention that broke the market open: a Chinese workaround from the 2000s that Indonesia industrialised at continental scale. It feeds stainless mills directly, never touches the LME, and made up over half of world primary supply in 2025. When people say the nickel market is in surplus, they mean NPI.",pr:"2025: SMM Indonesian NPI index averaged ~$11,700/t Ni — far below the LME"},
+    {s:"20–40%",n:"Ferronickel",g:"U",use:"The old class 2",
+     d:"NPI's respectable elder: richer iron-nickel alloy from conventional smelters — SLN's Doniambo, Cerro Matoso, Barro Alto, Antam's Pomalaa — that dominated stainless feed for decades before Indonesian NPI undercut it. The producers left standing are mostly state-backed, sold, or squeezed: Anglo American sold its Brazilian plants to China's MMG in 2025.",pr:null},
+    {s:"~75%",n:"Matte",g:"U",use:"Tsingshan's bridge",
+     d:"Nickel matte is the intermediate sulphide smelters always made — Vale's Sorowako has shipped it for fifty years. The 2021 twist was Tsingshan converting stainless-bound NPI into battery-bound matte on demand, collapsing the wall between class 2 and the battery market and crashing the class-1 premium. Indonesia now exports matte to Chinese refiners at scale.",pr:"Priced as a payable percentage of the LME metal price"},
+    {s:"Ni·Co",n:"MHP",g:"U",use:"The battery feedstock",
+     d:"Mixed hydroxide precipitate — 35–40% nickel with 2–4% cobalt riding along — is what HPAL plants leach out of limonite. It is the fastest-growing nickel product on Earth: Indonesian capacity is heading toward ~860,000 t/yr in 2026, feeding Chinese sulphate refineries and, increasingly, plants on Indonesian soil. Paid as ~70–80% of the LME price, and sagging as supply swells.",pr:"Payability ~70–80% of LME; pricing drifting to a sulphate basis"},
+    {s:"NiSO₄",n:"Sulphate",g:"M",use:"The battery salt",
+     d:"Battery-grade nickel sulphate is what precursor plants actually buy — and about 75% of it is made in China (IEA), from Indonesian MHP and matte. Indonesia opened its first sulphate plant on Obi Island in 2023 and is building the rest of the chain (precursor, cathode, cells) behind its quota wall; the IEA still sees China at ~70% of sulphate in 2035.",pr:null},
+    {s:"99.8%",n:"Class-1 metal",g:"M",use:"The benchmark",
+     d:"Full-plate cathode, briquettes and powder — the only nickel the LME contract delivers, and only about a quarter of world supply. The squeeze of March 2022 froze this market for a week and cancelled $12 billion of trades; the rebuild came with an unexpected twist: new Chinese and Indonesian electrowinning lines flooded the exchange, and Chinese-brand metal is now ~70% of LME stocks.",pr:"Aug 2026: ~$16,800/t LME cash; 2025 average ~$15,000/t"},
+    {s:"8–10%",n:"Stainless",g:"D",use:"Two-thirds of everything",
+     d:"The 300-series austenitic stainless that equips kitchens, hospitals, chemical plants and facades is 8–10% nickel, and it takes about 64% of world demand. It is why nickel demand grows through every battery panic — and why NPI exists. China melts 64% of the world's stainless; Indonesia, conveniently, hosts the biggest stainless mills outside it, inside the same parks that smelt the ore.",pr:null},
+    {s:"NMC",n:"EV cathodes",g:"D",use:"The contested growth",
+     d:"Nickel-rich NMC and NCA cathodes deliver the energy density long-range EVs need — nickel carries the lithium ion's energy. But cobalt-free, nickel-free LFP overtook nickel chemistries as the world's dominant EV battery in 2025, and battery nickel use dipped. The IEA still sees batteries at ~30% of nickel demand by 2035; the chemistry labs will decide.",pr:null},
+    {s:"✈️",n:"Superalloys",g:"D",use:"The no-substitute market",
+     d:"Nickel-based superalloys — single-crystal turbine blades, combustors, discs — are 40–50% of a jet engine's weight and have no viable alternative at any price. Aerospace backlogs and rearmament keep this corner tight regardless of the NPI glut: a turbine maker cannot use class-2 units, which is why defence planners watch class-1 supply, not the headline surplus.",pr:null},
+    {s:"♻️",n:"Scrap",g:"C",use:"The old loop and the new",
+     d:"Nickel's circular economy is the stainless scrap loop, and it is enormous: secondary nickel supplies around a third as much again as mines, and covers ~60% of US consumption (USGS). The new loop is tiny by comparison — battery recycling runs below 5% (IEA) — but growing, led by black-mass processors like Redwood in Nevada and GEM in China.",pr:null}
+  ],
+  companies:[
+    // seg: mine | sep | dev (space-separated when spanning segments)
+    {n:"Tsingshan Group",u:"https://www.etsingshan.com/",hq:"China",tik:"private",seg:"mine sep",
+     a:"IMIP (Morowali) & IWIP (Weda Bay) industrial parks; Weda Bay Nickel JV; RKEF, matte & stainless lines; Chinese NPI plants",
+     s:"The world's largest nickel producer and the architect of the Indonesian model — parks, RKEF lines and the NPI-to-matte trick. Last public figure: a record ~1.12 Mt of nickel units in 2023; slashed Indonesian NPI output in 2025 as quota-tightened ore squeezed margins. Also the short seller at the centre of the 2022 LME squeeze."},
+    {n:"PT Vale Indonesia",u:"https://www.vale.com/indonesia",hq:"Indonesia",tik:"IDX: INCO",seg:"mine",
+     a:"Sorowako mine & matte smelter; Bahodopi and Pomalaa blocks; HPAL JVs with Huayou and Ford",
+     s:"Indonesia's grand old producer — 72,000 t of nickel-in-matte in 2025, hydro-powered and lower-carbon than the parks around it. Now majority-domestic: MIND ID took 34% in the licence-saving 2025 divestment. The Ford/Huayou Pomalaa HPAL (~120 kt MHP) reaches mechanical completion in 2026."},
+    {n:"Harita Nickel",u:"https://haritanickel.com/",hq:"Indonesia",tik:"IDX: NCKL",seg:"mine sep",
+     a:"Obi Island complex — HPL & ONC HPAL plants, RKEF lines, Indonesia's first nickel sulphate plant",
+     s:"The HPAL pioneer: first Indonesian HPAL (2021), first onshore battery-grade sulphate (2023), and a 2025 net income up 40% while metal prices fell. A third RKEF plant and tailings-recycling push Obi Island toward ~305,000 t of total nickel capacity."},
+    {n:"Nickel Industries",u:"https://nickelindustries.com/",hq:"Australia",tik:"ASX: NIC",seg:"mine sep",
+     a:"Hengjaya mine; RKEF plants at IMIP/IWIP; 44% of ENC HPAL; Sampala project",
+     s:"The ASX's Indonesian insider — RKEF NPI plants with Tsingshan plus a US$696M bet on the ENC HPAL, which delivered first MHP in July 2026 and targets Indonesia's first LME-grade class-1 cathode. A rare Western shareholder register on Chinese-built plants."},
+    {n:"Merdeka Battery Materials",u:"https://merdekabattery.com/",hq:"Indonesia",tik:"IDX: MBMA",seg:"mine sep",
+     a:"SCM mine (Morowali); RKEF lines; ESG HPAL; SLNC HPAL (90 kt, with GEM)",
+     s:"Controls one of the world's largest nickel resources at SCM — 21.7 Mwmt of ore moved in 2025 — and is scaling the HPAL ladder with GEM: ESG produced 26,000 t of nickel-in-MHP in 2025, SLNC began commissioning mid-2026, and Danantara joined the register."},
+    {n:"Huayou Cobalt",u:"https://www.huayou.com/",hq:"China",tik:"SSE: 603799",seg:"sep",
+     a:"Huayue & Huafei HPALs (Indonesia); Pomalaa HPAL with Vale/Ford; Sorowako HPAL (2027); Zhejiang refineries",
+     s:"The HPAL operator of record: Huayue runs above its 60 kt nameplate, Huafei is designed for 120 kt, and the Ford-backed Pomalaa plant starts in 2026. Cut Indonesian MHP output from May 2026 as sulphur costs surged — the first crack in HPAL economics."},
+    {n:"Eramet",u:"https://www.eramet.com/en/",hq:"France",tik:"EPA: ERA",seg:"mine sep",
+     a:"38.7% of PT Weda Bay Nickel — the world's largest nickel mine; SLN (New Caledonia) mines & Doniambo smelter",
+     s:"Owner of the biggest prize and the biggest problem: Weda Bay's 2026 ore quota was slashed ~70% to 12 Mwmt — ore production halted in May before a 25 Mwmt top-up — while SLN survives only on French state financing. Danantara is in talks for the Weda Bay stake."},
+    {n:"Nornickel",u:"https://nornickel.com/",hq:"Russia",tik:"MOEX: GMKN",seg:"mine sep",
+     a:"Norilsk–Talnakh mines & Nadezhda smelter; Monchegorsk (Kola) refining; Harjavalta refinery (Finland)",
+     s:"The world's largest class-1 producer — 198,500 t in 2025, guidance flat for 2026. Not itself blocked, but new Russian metal is banned from the LME and CME since April 2024, so sales flow east in yuan; its Finnish Harjavalta refinery legally keeps ~94%-Russian feed flowing into Europe."},
+    {n:"Vale Base Metals",u:"https://valebasemetals.com/",hq:"Canada / Brazil",tik:"NYSE: VALE (parent)",seg:"mine sep",
+     a:"Sudbury; Voisey's Bay + Long Harbour refinery; Onça Puma (Brazil); Thompson (18.9% retained)",
+     s:"The West's biggest nickel system grew 10.8% in 2025 to 177,000 t — its best since 2022 — on the Voisey's Bay underground ramp-up and a second Onça Puma furnace. Handed 81.1% of Thompson to an Orion-led consortium investing up to US$200M; an IPO keeps being mooted."},
+    {n:"Glencore",u:"https://www.glencore.com/",hq:"Switzerland",tik:"LSE: GLEN",seg:"mine sep",
+     a:"Sudbury INO & Raglan; Nikkelverk refinery (Norway); Murrin Murrin (Australia); 49% of Koniambo (mothballed)",
+     s:"Own-sourced production fell 7% to 71,900 t in 2025 (a Sudbury furnace failure didn't help). Walked away from Koniambo in 2024 after US$9B sunk and no profit in a decade — the furnaces are cold and the 49% stake still unsold, propped by a €300M French support fund."},
+    {n:"BHP",u:"https://www.bhp.com/",hq:"Australia",tik:"ASX: BHP",seg:"mine",
+     a:"Nickel West — Mt Keith & Leinster mines, Kalgoorlie smelter, Kwinana refinery; West Musgrave project (all suspended)",
+     s:"Suspended its entire nickel division in October 2024 rather than lose ~US$300M a year to Indonesian prices, with a restart-or-divest review due by February 2027. A decision on the Kalgoorlie smelter loomed in August 2026; WA's royalty rebates and loan schemes wait on the other side."},
+    {n:"Jinchuan Group",u:"https://www.jnmc.com/",hq:"China",tik:"HKEX: 2362 (intl arm)",seg:"mine sep",
+     a:"Jinchang mine & refinery complex (Gansu) — ~190 kt/yr electrolytic nickel capacity; Indonesian NPI (Obi Island)",
+     s:"China's legacy nickel champion and the largest single class-1 refinery complex on Earth at Jinchang. Now building an Indonesian leg with a stated target of 100,000 t/yr of nickel output there — state-owned insurance against its own depleting sulphide ore."},
+    {n:"Sumitomo Metal Mining",u:"https://www.smm.co.jp/en/",hq:"Japan",tik:"TYO: 5713",seg:"mine sep",
+     a:"Niihama refinery (Japan); Coral Bay & Taganito HPALs (Philippines); 11.5% of PT Vale Indonesia",
+     s:"Japan's nickel pillar is consolidating around the Philippines-to-Niihama chain: it bought out Coral Bay's minorities in 2025 but weighs closing one HPAL over tailings capex. Its trading-house sibling paid ~$418M to exit Madagascar's Ambatovy — one of the great value-destructions in mining."},
+    {n:"Nickel Asia Corp",u:"https://nickelasia.com/",hq:"Philippines",tik:"PSE: NIKL",seg:"mine",
+     a:"Taganito, Rio Tuba, Hinatuan & Cagdianao ore mines; stake in Taganito HPAL",
+     s:"The biggest miner in the world's No. 2 producing country. 2025 profit tripled as ore prices rose with Indonesia's quota squeeze — Philippine ore now feeds Indonesian smelters as well as Chinese ones, and a Senate push to ban ore exports from 2030 was stripped from the final law in 2026."},
+    {n:"Terrafame",u:"https://www.terrafame.com/",hq:"Finland",tik:"state-controlled",seg:"mine sep",
+     a:"Sotkamo bioheap-leach mine & battery chemicals plant; Kolmisoppi expansion (EU CRMA strategic project)",
+     s:"Europe's home-grown battery-nickel chain — sulphate made on-site from its own ore with among the lowest carbon footprints anywhere. Squeezed hard by prices and the EV slowdown: temporary layoffs in the battery-chemicals line from 2025 and a strategy reset for 2026–2030."},
+    {n:"Sherritt International",u:"https://www.sherritt.com/",hq:"Canada",tik:"TSX: S",seg:"mine sep",
+     a:"Moa JV (Cuba, 50/50); Fort Saskatchewan refinery (Alberta)",
+     s:"Ran the Cuba-to-Canada chain for thirty years — until 2026 broke it: Cuba's energy crisis suspended Moa in February, and May's US sanctions on Cuba's mining sector forced Sherritt to halt participation outright. Shares fell 30% in a day; rival recapitalisation plans circle what remains."},
+    {n:"MMG",u:"https://www.mmg.com/",hq:"China / Australia",tik:"HKEX: 1208",seg:"mine sep",
+     a:"Barro Alto & Codemin ferronickel operations (Brazil, ~40 kt/yr) plus Jacaré and Morro Sem Boné projects",
+     s:"China Minmetals' listed arm agreed to buy Anglo American's Brazilian nickel business for up to US$500M in February 2025 — extending Chinese ownership into ferronickel's last Western stronghold. EU merger review pushed the long-stop date to mid-2026."},
+    {n:"Talon Metals",u:"https://talonmetals.com/",hq:"US / Canada",tik:"TSX: TLO",seg:"mine dev",
+     a:"Eagle Mine & Humboldt Mill (Michigan — the only US nickel mine); Tamarack project (Minnesota, with Rio Tinto)",
+     s:"Became America's only nickel miner overnight by buying Lundin's Eagle Mine for ~US$84M (closed January 2026) — buying time while it develops Tamarack with US$20.6M of Pentagon money and a Tesla offtake. Eagle's reserves run out around the end of the decade; Tamarack is the succession plan."},
+    {n:"Canada Nickel Company",u:"https://canadanickel.com/",hq:"Canada",tik:"TSXV: CNC",seg:"dev",
+     a:"Crawford nickel sulphide project (Timmins, Ontario) — US$2B capex, one of the largest nickel reserves in the world",
+     s:"The West's biggest shovel-ready nickel bet: environmental approval landed in March 2026, an EDC-anchored ~$1B financing stack is assembling, Samsung SDI and Agnico Eagle sit on the register, and construction is targeted by end-2026 for 2028 production — into whatever price Indonesia permits."},
+    {n:"Lifezone Metals",u:"https://lifezonemetals.com/",hq:"Tanzania / NYSE",tik:"NYSE: LZM",seg:"dev",
+     a:"Kabanga nickel-copper-cobalt (Tanzania) — one of the largest development-ready sulphide deposits; Kahama refinery plan",
+     s:"Kabanga's 2025 feasibility study showed a $1.58B NPV with first-quartile costs; Lifezone bought out BHP's stake and lined up SocGen-led project finance, with FID targeted late 2026 — Africa's biggest nickel prize, betting the deficit arrives on schedule."}
+  ],
+  sites:[
+    // type: mine | proc | dis | dev ; size 1-3
+    // --- mines & smelter parks (producing) ---
+    {n:"Weda Bay (IWIP)",c:"Indonesia",ll:[0.48,127.90],ty:"mine",sz:3,d:"The world's largest nickel mine (Eramet/Tsingshan JV) inside Tsingshan's IWIP park on Halmahera — 42 Mwmt of ore in 2025, then a 2026 quota cut of ~70% that halted mining for weeks. Documented deforestation and pressure on the uncontacted Hongana Manyawa."},
+    {n:"Morowali (IMIP)",c:"Indonesia",ll:[-2.85,122.10],ty:"mine",sz:3,d:"The world's largest nickel-processing park: ~50 companies, US$34B invested, ~85,000 workers, RKEF, matte, HPAL and stainless lines behind a captive coal fleet. A furnace explosion at ITSS killed 21 workers in December 2023."},
+    {n:"Obi Island (Harita/Lygend)",c:"Indonesia",ll:[-1.63,127.42],ty:"mine",sz:3,d:"Harita and Lygend's mine-to-chemical complex — Indonesia's first HPAL (2021) and first battery-grade sulphate plant (2023), heading toward ~305 kt of nickel capacity across HPAL and RKEF lines."},
+    {n:"Sorowako",c:"Indonesia",ll:[-2.53,121.35],ty:"mine",sz:2,d:"PT Vale Indonesia's hydro-powered flagship has smelted matte since the 1970s — 72,000 t in 2025, among the lowest-carbon laterite nickel anywhere. A Huayou-partnered HPAL for the limonite layer is next."},
+    {n:"Pomalaa",c:"Indonesia",ll:[-4.18,121.62],ty:"mine",sz:2,d:"Antam's ferronickel heartland plus the Ford-backed Vale/Huayou HPAL (~120 kt MHP) reaching mechanical completion in 2026 — the only Indonesian battery-nickel chain structured for US IRA compliance."},
+    {n:"Gag Island",c:"Indonesia",ll:[-0.45,129.88],ty:"mine",sz:1,d:"Antam's mine in the Raja Ampat archipelago — the one permit kept alive in June 2025 when four neighbours were revoked over reef damage near the UNESCO geopark. Paused, resumed, and still contested."},
+    {n:"Surigao & Taganito",c:"Philippines",ll:[9.53,125.68],ty:"mine",sz:2,d:"The heart of the world's No. 2 producer: Nickel Asia's ore mines plus Sumitomo's Taganito HPAL. Philippine ore feeds China's remaining NPI plants — and now Indonesia's smelters too, via the growing 'IndoPhil corridor'."},
+    {n:"Coral Bay (Palawan)",c:"Philippines",ll:[8.55,117.42],ty:"mine",sz:1,d:"Sumitomo's HPAL at Rio Tuba — took full ownership in 2025, then flagged possible closure over tailings-dam capex. Palawan province has banned new mining permits for 50 years; existing operations continue."},
+    {n:"Norilsk–Talnakh",c:"Russia",ll:[69.35,88.20],ty:"mine",sz:3,d:"Nornickel's Arctic sulphide complex — the world's largest class-1 source, ~199,000 t in 2025. Banned from LME warranting since April 2024, its metal flows east to China, increasingly priced in yuan."},
+    {n:"Ramu (Basamuk)",c:"Papua New Guinea",ll:[-5.55,146.13],ty:"mine",sz:1,d:"MCC's Chinese-run HPAL chain from the Kurumbukari mine to the Basamuk plant — PNG's nickel export engine, with a proposed ~US$1.6B second phase that would roughly double output."},
+    {n:"Murrin Murrin",c:"Australia",ll:[-28.75,121.89],ty:"mine",sz:1,d:"Glencore's HPAL veteran — 32,100 t in 2025 — is now effectively Australia's last major nickel producer, the sole survivor of a national industry the Indonesian glut switched off."},
+    {n:"Goro (Prony Resources)",c:"New Caledonia",ll:[-22.30,166.95],ty:"mine",sz:2,d:"The southern HPAL plant behind Tesla's 2021 offtake — kept alive by French state loans, halted for seven months by the 2024 riots, restarted and self-described as fragile while it hunts for a new anchor investor."},
+    {n:"Terrafame Sotkamo",c:"Finland",ll:[63.95,28.10],ty:"mine",sz:1,d:"Europe's own battery chain: bioheap-leached ore to on-site nickel sulphate, with EU strategic-project status for the Kolmisoppi expansion — and layoff talks in 2025 as prices and EV demand sagged."},
+    {n:"Sudbury",c:"Canada",ll:[46.49,-81.00],ty:"mine",sz:2,d:"The 1.8-billion-year-old meteorite basin that built Inco and Falconbridge — now Vale's and Glencore's Canadian hubs. Vale logged its best Sudbury ore output since 2016 in 2025."},
+    {n:"Voisey's Bay",c:"Canada",ll:[56.33,-62.09],ty:"mine",sz:1,d:"Vale's Labrador sulphide mine completed its $2.94B underground transition and is ramping toward ~45,000 t/yr — the feed for Long Harbour's IRA-friendly class-1 rounds."},
+    {n:"Raglan",c:"Canada",ll:[61.68,-73.68],ty:"mine",sz:1,d:"Glencore's Arctic Quebec mine — the new Anuri deposit, opened 2024, extends its life by two decades."},
+    {n:"Thompson",c:"Canada",ll:[55.74,-97.86],ty:"mine",sz:1,d:"The Manitoba nickel belt Vale nearly abandoned: an Orion-led consortium agreed in February 2026 to take 81.1% and invest up to US$200M, with Vale keeping offtake."},
+    {n:"Eagle Mine",c:"United States",ll:[46.75,-87.87],ty:"mine",sz:1,d:"America's only nickel mine — ~10,000 t in 2025, nearing the end of its reserves. Talon Metals bought it from Lundin in January 2026 to bridge toward Tamarack."},
+    {n:"Cerro Matoso",c:"Colombia",ll:[8.09,-75.44],ty:"mine",sz:1,d:"One of the world's largest ferronickel operations — South32 sold it to CoreX Holding in December 2025 for almost nothing upfront, a measure of what the glut did to ferronickel economics."},
+    {n:"Barro Alto & Codemin",c:"Brazil",ll:[-14.97,-48.92],ty:"mine",sz:1,d:"Anglo American's Brazilian ferronickel pair (~40,000 t/yr), sold to China's MMG for up to US$500M — pending a drawn-out EU merger review."},
+    {n:"Onça Puma",c:"Brazil",ll:[-6.75,-51.08],ty:"mine",sz:1,d:"Vale's Pará ferronickel operation — a second furnace commissioned in 2025 lifted capacity ~60% and helped Vale to its best nickel year since 2022."},
+    // --- refineries & plants ---
+    {n:"Jinchang complex",c:"China",ll:[38.52,102.19],ty:"proc",sz:3,d:"Jinchuan's mine-smelter-refinery city in Gansu — roughly 190,000 t/yr of electrolytic nickel capacity, the largest class-1 complex on Earth, increasingly fed by imported intermediates."},
+    {n:"Monchegorsk (Kola)",c:"Russia",ll:[67.94,32.87],ty:"proc",sz:2,d:"Nornickel's refining hub on the Kola Peninsula — the finishing end of the Norilsk chain, with EU sanctions now squeezing its Murmansk export logistics."},
+    {n:"Harjavalta",c:"Finland",ll:[61.31,22.14],ty:"proc",sz:1,d:"Nornickel's EU refinery — ~65,000 t/yr, still running on ~94% Russian feed through a deliberate sanctions carve-out that campaigners call the 'war-metals loophole'."},
+    {n:"Nikkelverk",c:"Norway",ll:[58.14,7.98],ty:"proc",sz:1,d:"Glencore's Kristiansand refinery (~92,000 t/yr) produces some of the world's purest class-1 nickel from Sudbury matte — a 2025 furnace failure upstream disrupted its feed."},
+    {n:"Long Harbour",c:"Canada",ll:[47.42,-53.86],ty:"proc",sz:1,d:"Vale's Newfoundland hydromet plant refines Voisey's Bay concentrate straight to class-1 rounds — the cleanest mine-to-metal chain in the Americas."},
+    {n:"Niihama",c:"Japan",ll:[33.96,133.28],ty:"proc",sz:1,d:"Sumitomo Metal Mining's electrolytic refinery (~65,000 t/yr) turns Philippine HPAL intermediates into class-1 metal and the NCA cathode chain behind Japan's battery industry."},
+    {n:"Onsan (Korea Zinc)",c:"South Korea",ll:[35.43,129.36],ty:"proc",sz:1,d:"Korea Zinc's 42,600 t/yr 'all-in-one' nickel refinery entered commercial production in 2026 — the largest new class-1 capacity outside China and Indonesia this decade."},
+    {n:"Doniambo (SLN)",c:"New Caledonia",ll:[-22.26,166.44],ty:"proc",sz:1,d:"Eramet's century-old ferronickel smelter above Nouméa harbour — its losses are financed directly by the French state, the cost of keeping New Caledonia's largest private employer alive."},
+    // --- disrupted & closed ---
+    {n:"Nickel West",c:"Australia",ll:[-27.92,120.70],ty:"dis",sz:3,d:"BHP's entire integrated division — Mt Keith, Leinster, the Kalgoorlie smelter and Kwinana refinery — suspended since October 2024 at ~US$300M/yr in care costs. Review due by February 2027; the smelter's fate came to a head in August 2026."},
+    {n:"Koniambo (KNS)",c:"New Caledonia",ll:[-21.02,164.83],ty:"dis",sz:2,d:"The great write-off: US$9B invested, never a profitable year, furnaces cold since August 2024 after Glencore walked. Its 49% stake remains unsold; a €300M French fund keeps the site alive."},
+    {n:"Ravensthorpe",c:"Australia",ll:[-33.58,120.40],ty:"dis",sz:1,d:"First Quantum's laterite operation, on care and maintenance since May 2024 — its second mothballing in a plant built for US$2.1B. No restart timeframe."},
+    {n:"Kambalda & Nova",c:"Australia",ll:[-31.20,121.66],ty:"dis",sz:1,d:"The historic Kambalda mines (Wyloo) closed in 2024; IGO's Nova reaches end of life in 2026 with its plant sold for lithium processing. The birthplace district of Australian nickel, emptied in two years."},
+    {n:"Savannah",c:"Australia",ll:[-17.37,127.83],ty:"dis",sz:1,d:"Panoramic Resources' Kimberley mine — into administration in December 2023, suspended since, the first Australian casualty of the Indonesian wave."},
+    {n:"Moa & Fort Saskatchewan",c:"Cuba / Canada",ll:[20.66,-74.94],ty:"dis",sz:2,d:"Sherritt's 30-year Cuba-to-Alberta chain: suspended by Cuba's energy crisis in February 2026, then severed outright by US sanctions on Cuba's mining sector in May. A top-ten class-1 refinery now sits without feed."},
+    {n:"Ambatovy",c:"Madagascar",ll:[-18.85,48.30],ty:"dis",sz:2,d:"The US$8B HPAL cautionary tale: shut by Cyclone Gezani in February 2026 mid-restructuring, restarted mid-year as Sumitomo's trading house paid ~US$418M just to hand its stake to new owners."},
+    {n:"Falcondo",c:"Dominican Republic",ll:[18.92,-70.41],ty:"dis",sz:1,d:"The Caribbean's ferronickel smelter, idle since 2023 — a court terminated its power-plant concession in August 2026, dimming what restart hopes remained."},
+    // --- development ---
+    {n:"Tamarack",c:"United States",ll:[46.64,-93.13],ty:"dev",sz:1,d:"Talon Metals and Rio Tinto's high-grade sulphide project in Minnesota — Pentagon-funded exploration, a Tesla offtake, and the designated successor to Eagle as America's nickel source."},
+    {n:"Crawford",c:"Canada",ll:[48.70,-81.40],ty:"dev",sz:2,d:"Canada Nickel's US$2B project near Timmins — one of the world's largest nickel reserves, environmental approval in March 2026, construction targeted by end-2026 and first production in 2028."},
+    {n:"Baptiste (Decar)",c:"Canada",ll:[54.65,-124.70],ty:"dev",sz:1,d:"FPX Nickel's awaruite deposit in British Columbia — a naturally metallic nickel mineral that skips the smelter entirely; cleared its federal environmental review in June 2026."},
+    {n:"Eagle's Nest (Ring of Fire)",c:"Canada",ll:[52.75,-86.30],ty:"dev",sz:1,d:"Wyloo's high-grade deposit in Ontario's remote Ring of Fire — feasibility nearly complete, construction eyed for 2027, and the biggest infrastructure question in Canadian mining attached to it."},
+    {n:"Kabanga",c:"Tanzania",ll:[-2.85,30.53],ty:"dev",sz:2,d:"One of the world's largest undeveloped sulphide deposits — first-quartile costs in Lifezone's 2025 feasibility study, FID targeted late 2026, with a hydromet refinery planned at Kahama."},
+    {n:"Selebi",c:"Botswana",ll:[-21.98,27.83],ty:"dev",sz:1,d:"Premium Resources is working to reopen the past-producing Selebi nickel-copper mines — southern Africa's main candidate to rejoin the supply map, eyed for late 2027."},
+    {n:"Westwin refinery",c:"United States",ll:[34.60,-98.39],ty:"dev",sz:1,d:"The first US nickel refinery project since Port Nickel closed in 1985: a pilot plant running in Oklahoma, a $1.4B Traxys offtake, and a full-scale siting decision still in flux."},
+    {n:"Clarion-Clipperton Zone",c:"Pacific Ocean",ll:[10.50,-117.00],ty:"dev",sz:2,d:"Seafloor polymetallic nodules grading over 1% nickel — The Metals Company's application became the first-ever US commercial seabed-mining review at NOAA, with a decision path running into 2027."}
+  ]
+};
+
+/* ============ helpers ============ */
+const C = getComputedStyle(document.documentElement);
+const col = v => C.getPropertyValue(v).trim();
+const PAL = ["#a3e635","#fb923c","#fbbf24","#5b8aff","#c4b5fd","#f87171","#94a3b8","#2dd4bf","#38bdf8","#a3e635","#64748b","#f0abfc","#e879f9"];
+
+/* count-up hero stats */
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target, end=parseFloat(el.dataset.count), suf=el.dataset.suffix||"", pre=el.dataset.prefix||"", dec=end%1?1:0;
+  const t0=performance.now();
+  (function tick(t){const p=Math.min(Math.max((t-t0)/1200,0),1), v=end*(1-Math.pow(1-p,3));
+    el.textContent=pre+(end>=1000?Math.round(v).toLocaleString("en-US"):v.toFixed(dec))+suf;
+    if(p<1)requestAnimationFrame(tick);})(t0);
+  io.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+
+/* ============ MAP ============ */
+const map = L.map("map",{scrollWheelZoom:false,worldCopyJump:true}).setView([5,110],2);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{
+  attribution:'Tiles &copy; Esri &mdash; &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom:10
+}).addTo(map);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",{
+  maxZoom:10
+}).addTo(map);
+map.on("click",()=>map.scrollWheelZoom.enable());
+
+const groups = {mines:L.layerGroup().addTo(map),
+                processing:L.layerGroup().addTo(map),
+                disrupted:L.layerGroup().addTo(map), development:L.layerGroup().addTo(map)};
+const TYCOL={mine:col("--mine"),proc:col("--proc"),dis:col("--dis"),dev:col("--dev")};
+const TYNAME={mine:"MINE / SMELTER PARK",proc:"REFINERY / PLANT",dis:"DISRUPTED / CLOSED",dev:"DEVELOPMENT"};
+const TYGRP={mine:"mines",proc:"processing",dis:"disrupted",dev:"development"};
+
+DATA.sites.forEach(s=>{
+  const c=TYCOL[s.ty];
+  L.circleMarker(s.ll,{radius:4+s.sz*2.4,color:c,weight:1.5,fillColor:c,fillOpacity:.35})
+   .bindPopup(`<span class="pp-tag" style="background:${c}22;color:${c}">${TYNAME[s.ty]}</span><br><b>${s.n}</b> · ${s.c}<br>${s.d}`)
+   .addTo(groups[TYGRP[s.ty]]);
+});
+
+/* layer toggles */
+document.querySelectorAll(".chip[data-layer]").forEach(ch=>ch.addEventListener("click",()=>{
+  const g=groups[ch.dataset.layer];
+  if(ch.classList.toggle("on")) map.addLayer(g); else map.removeLayer(g);
+}));
+
+/* ============ FORMS GRID ============ */
+const GRPNAME={U:"Upstream (mine & intermediate)",M:"Midstream (refine)",D:"Downstream (steel, cells & alloys)",C:"Circular"};
+const GRPCOL={U:col("--accent"),M:col("--accent2"),D:col("--dis"),C:col("--muted")};
+const elGrid=document.getElementById("elGrid"), elDetail=document.getElementById("elDetail");
+elGrid.innerHTML=DATA.forms.map((e,i)=>`
+  <button class="el g${e.g}" data-i="${i}" aria-label="${e.n}">
+    <span class="z">${String(i+1).padStart(2,"0")}</span>
+    <b>${e.s}</b><span>${e.n}</span>
+  </button>`).join("");
+function showEl(i){
+  const e=DATA.forms[i];
+  document.querySelectorAll(".el").forEach(el=>el.classList.toggle("sel",+el.dataset.i===i));
+  const grpCol=GRPCOL[e.g];
+  elDetail.innerHTML=`
+    <h3>${e.n} <small>· ${e.use}</small></h3>
+    <div class="tags">
+      <span class="pp-tag" style="background:${grpCol}22;color:${grpCol}">${GRPNAME[e.g].toUpperCase()}</span>
+    </div>
+    <p>${e.d}</p>
+    ${e.pr?`<div class="price">${e.pr}</div>`:""}`;
+}
+elGrid.addEventListener("click",ev=>{const b=ev.target.closest(".el");if(b)showEl(+b.dataset.i);});
+showEl(DATA.forms.findIndex(e=>e.n==="NPI"));
+
+/* ============ JOURNEY CARDS ============ */
+document.getElementById("journey").innerHTML = DATA.journey.map((j,i)=>`
+  <div class="jcard"><div class="num">${String(i+1).padStart(2,"0")}</div>
+    <div class="ico">${j.ico}</div><h3>${j.t}</h3><p>${j.p}</p>
+    <div class="fact">${j.f}</div></div>`).join("");
+
+/* ============ COMPANY TRACKER ============ */
+const SEGMETA={
+  mine:{label:"Miner",color:col("--mine")},
+  sep:{label:"Smelting & refining",color:col("--proc")},
+  dev:{label:"Developer",color:col("--dev")}
+};
+const coState={segs:new Set(Object.keys(SEGMETA)),q:""};
+function renderCo(){
+  const q=coState.q.trim().toLowerCase();
+  const rows=DATA.companies.filter(c=>c.seg.split(" ").some(s=>coState.segs.has(s))&&
+    (!q||[c.n,c.hq,c.tik,c.a,c.s].join(" ").toLowerCase().includes(q)));
+  document.getElementById("coBody").innerHTML=rows.map(c=>{
+    const tags=c.seg.split(" ").map(s=>{const m=SEGMETA[s];
+      return `<span class="pp-tag" style="background:${m.color}22;color:${m.color}">${m.label}</span>`;}).join(" ");
+    return `<tr>
+      <td><b><a href="${c.u}" target="_blank" rel="noopener">${c.n}</a></b>
+        <div class="tik">${c.hq} · ${c.tik}</div></td>
+      <td>${tags}</td>
+      <td>${c.a}</td>
+      <td>${c.s}</td></tr>`;
+  }).join("")||`<tr><td colspan="4" style="text-align:center;padding:24px">No companies match.</td></tr>`;
+  document.getElementById("coCount").textContent=`${rows.length} of ${DATA.companies.length} companies`;
+}
+document.querySelectorAll("#coFilters .chip").forEach(ch=>ch.addEventListener("click",()=>{
+  const s=ch.dataset.seg;
+  if(ch.classList.toggle("on")) coState.segs.add(s); else coState.segs.delete(s);
+  renderCo();
+}));
+document.getElementById("coSearch").addEventListener("input",e=>{coState.q=e.target.value;renderCo();});
+renderCo();
+
+/* ============ CHARTS ============ */
+Chart.defaults.color=col("--muted");
+Chart.defaults.borderColor=col("--line");
+Chart.defaults.font.size=11;
+const fmtT=n=>n>=1e6?(n/1e6).toLocaleString("en-US",{maximumFractionDigits:2})+" Mt":n>=1000?(n/1000).toLocaleString("en-US",{maximumFractionDigits:0})+" kt":n+" t";
+const noLeg={plugins:{legend:{display:false}}};
+
+/* draw a total in the center of doughnut charts */
+Chart.register({
+  id:"centerText",
+  afterDraw(chart){
+    const opts=chart.options.plugins&&chart.options.plugins.centerText;
+    if(!opts||!opts.enabled) return;
+    if(!chart.chartArea) return;
+    const {ctx,chartArea:{left,right,top,bottom}}=chart;
+    const cx=(left+right)/2, cy=(top+bottom)/2;
+    ctx.save();
+    ctx.textAlign="center";
+    ctx.textBaseline="middle";
+    ctx.fillStyle=col("--txt");
+    ctx.font="700 19px -apple-system,Segoe UI,Roboto,sans-serif";
+    ctx.fillText(opts.text, cx, cy-(opts.label?9:0));
+    if(opts.label){
+      ctx.font="600 9.5px -apple-system,Segoe UI,Roboto,sans-serif";
+      ctx.fillStyle=col("--muted");
+      ctx.fillText(opts.label, cx, cy+10);
+    }
+    ctx.restore();
+  }
+});
+
+const donutOpts={maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+  tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}%`}}},cutout:"62%"};
+
+new Chart(chProd,{type:"bar",
+  data:{labels:DATA.production2025.map(d=>d[0]),
+    datasets:[{data:DATA.production2025.map(d=>d[1]),backgroundColor:DATA.production2025.map((d,i)=>i===0?col("--accent"):"#fb923c88"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{type:"logarithmic",ticks:{callback:v=>[10000,100000,1000000].includes(v)?fmtT(v):""},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmtT(c.parsed.x)} nickel content (log scale)`}}}}});
+
+new Chart(chRes,{type:"doughnut",
+  data:{labels:DATA.reserves.map(d=>d[0]),datasets:[{data:DATA.reserves.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed} Mt`}},
+    centerText:{enabled:true,text:">140 Mt",label:"world total"}}}});
+
+new Chart(chTrend,{type:"line",
+  data:{labels:DATA.trend.years,
+    datasets:[
+      {label:"Mine production (kt Ni)",data:DATA.trend.prod,borderColor:col("--accent"),backgroundColor:"#a3e63522",fill:true,tension:0,pointRadius:3,pointBackgroundColor:col("--accent"),yAxisID:"y",spanGaps:false},
+      {label:"LME cash price ($/t)",data:DATA.trend.price,borderColor:col("--accent2"),backgroundColor:"transparent",fill:false,tension:0,pointRadius:3,pointBackgroundColor:col("--accent2"),yAxisID:"y2",spanGaps:false}
+    ]},
+  options:{maintainAspectRatio:false,
+    scales:{y:{min:0,max:4500,ticks:{callback:v=>(v/1000).toFixed(1).replace(".0","")+" Mt"},grid:{color:col("--line")},title:{display:false}},
+            y2:{position:"right",min:0,max:28000,ticks:{callback:v=>"$"+(v/1000)+"k"},grid:{display:false}},
+            x:{grid:{display:false}}},
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+      tooltip:{callbacks:{label:c=>c.dataset.yAxisID==="y2"?` Price: $${c.parsed.y.toLocaleString("en-US")}/t`:` Production: ${(c.parsed.y/1000).toFixed(2)} Mt nickel content`}}}}});
+
+new Chart(chConv,{type:"bar",
+  data:{labels:DATA.conv2025.map(d=>d[0]),
+    datasets:[{data:DATA.conv2025.map(d=>d[1]),backgroundColor:DATA.conv2025.map((d,i)=>i<2?col("--accent"):"#fb923c88"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{max:50,ticks:{callback:v=>v+"%"},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x}% of world refined nickel, 2025 (IEA)`}}}}});
+
+new Chart(chUse,{type:"doughnut",
+  data:{labels:DATA.endUse.map(d=>d[0]),datasets:[{data:DATA.endUse.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,
+    centerText:{enabled:true,text:"~64%",label:"stainless"}}}});
+
+new Chart(chUsImp,{type:"doughnut",
+  data:{labels:DATA.usImports.map(d=>d[0]),datasets:[{data:DATA.usImports.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:donutOpts});
+
+new Chart(chPrices,{type:"bar",
+  data:{labels:DATA.prices.years,
+    datasets:[{data:DATA.prices.ore,backgroundColor:DATA.prices.ore.map((v,i)=>i===4?col("--accent"):"#fb923c88"),borderRadius:4}]},
+  options:{...noLeg,maintainAspectRatio:false,
+    scales:{y:{min:0,ticks:{callback:v=>"$"+(v/1000)+"k"},grid:{color:col("--line")}},x:{grid:{display:false}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` $${c.parsed.y.toLocaleString("en-US")}/t annual average${c.dataIndex===1?" — hides the two-day spike past $100,000/t that the LME cancelled":""}${c.dataIndex===4?" — a decade low; the quota rally followed in 2026":""}`}}}}});
+
+/* china bars */
+document.getElementById("chinaBars").innerHTML = DATA.chinaShares.map(([s,v])=>`
+  <div class="bar-row"><span>${s}</span><div class="track"><div class="fill" data-w="${v}"></div></div><span class="val">~${v}%</span></div>`).join("");
+const io2=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.w+"%");io2.unobserve(e.target);}
+}),{threshold:.4});
+io2.observe(document.getElementById("chinaBars"));
+
+/* nav active state */
+const secs=[...document.querySelectorAll("section[id],header")];
+const navLinks=[...document.querySelectorAll("nav a.link")];
+const io3=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}
+}),{rootMargin:"-40% 0px -55% 0px"});
+secs.forEach(s=>io3.observe(s));
+</script>
+<script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

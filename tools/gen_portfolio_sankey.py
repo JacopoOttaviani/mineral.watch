@@ -17,12 +17,16 @@ MIN_SHARE = 4.0   # producers below this % fold into "All others"
 TOP_N = 4
 
 # Editorial-warm palette, CVD-validated in this exact column order (dataviz skill
-# validator): the brand lime lands on rare earths, the most concentrated chain.
+# validator; adjacent-pair CVD ΔE >= 8 and normal-vision floor pass): the brand
+# lime lands on rare earths, the most concentrated chain. Nickel (emerald) and
+# antimony (orchid) sit where they clear their neighbours.
 MINERALS = [
     ('Manganese',   'manganese ore',     '#c08ad6', '/manganese/'),
     ('Graphite',    'graphite',          '#e6b95e', '/graphite/'),
     ('Cobalt',      'cobalt, mine',      '#84a5f0', '/cobalt/'),
+    ('Nickel',      'nickel, mine',      '#34d399', '/nickel/'),
     ('Copper',      'copper, mine',      '#e08256', '/copper/'),
+    ('Antimony',    'antimony, mine',    '#f0abfc', '/antimony/'),
     ('Rare earths', 'rare earth oxides', '#c8ff6b', '/rare-earths/'),
     ('Uranium',     'uranium',           '#4cc9f0', '/uranium/'),
     ('Lithium',     'lithium minerals',  '#ff7d9c', '/lithium/'),
@@ -59,7 +63,7 @@ mcolor = {m[0]: m[2] for m in MINERALS}
 mhref = {m[0]: m[3] for m in MINERALS}
 
 # ---- svg ----
-W, H, TOP, BOT, NW, PADL, PADR, XL, XR = 880, 492, 30, 12, 12, 12, 12, 172, 694
+W, H, TOP, BOT, NW, PADL, PADR, XL, XR = 880, 560, 30, 12, 12, 12, 12, 172, 694
 tot_pts = sum(s for _, _, s, _ in links)
 sL = (H-TOP-BOT-PADL*(len(countries)-1)) / tot_pts
 sR = (H-TOP-BOT-PADR*(len(minerals)-1)) / tot_pts
@@ -74,7 +78,7 @@ for _, m, s, _ in links: msum[m] += s
 for m in minerals:
     h = msum[m]*sc; rgeo[m] = [y, h, y]; y += h + PADR
 
-parts = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="Sankey diagram: top producer countries and their share of world mine production for seven strategic minerals, {YEAR}" xmlns="http://www.w3.org/2000/svg">']
+parts = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="Sankey diagram: top producer countries and their share of world mine production for {len(MINERALS)} strategic minerals, {YEAR}" xmlns="http://www.w3.org/2000/svg">']
 parts.append(f'<text x="{XL+NW/2}" y="{TOP-14}" text-anchor="middle" class="sk-col">PRODUCER</text>')
 parts.append(f'<text x="{XR+NW/2}" y="{TOP-14}" text-anchor="middle" class="sk-col">MINERAL</text>')
 

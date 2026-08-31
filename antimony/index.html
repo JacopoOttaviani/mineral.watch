@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AntimonyWatch — Tracking the Global Antimony Supply Chain</title>
+<meta name="description" content="Open data visualisation tracking the global antimony supply chain: China's mines and smelters, the 2024 export ban, the fivefold price spike, Tajikistan's rise and the West's scramble to rebuild a supply chain it abandoned — built on USGS, BGS, trade and price-agency data.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="mineral.watch">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="https://mineral.watch/antimony/">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="alternate icon" href="/brand/favicon.png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mineral.watch/antimony/">
+<meta property="og:site_name" content="mineral.watch">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="AntimonyWatch — Tracking the Global Antimony Supply Chain">
+<meta property="og:description" content="Interactive world map of mines, roasters and smelters, production and price charts, China's export ban, the fivefold price spike and the West's scramble to rebuild supply — built on USGS, BGS, trade and price-agency data.">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AntimonyWatch — tracking the global antimony supply chain">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AntimonyWatch — Tracking the Global Antimony Supply Chain">
+<meta name="twitter:description" content="Interactive map, production and price charts, China's export ban, the fivefold price spike and the Western supply-chain rebuild — built on USGS, BGS, trade and price-agency data.">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png">
+<meta name="twitter:image:alt" content="AntimonyWatch — tracking the global antimony supply chain">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
+        { "@type": "ListItem", "position": 2, "name": "Antimony", "item": "https://mineral.watch/antimony/" }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "AntimonyWatch — Global Antimony Supply Chain Data",
+      "description": "Mines, roasters and smelters, production and reserves data, prices, trade flows, export controls and processing concentration for the global antimony supply chain.",
+      "url": "https://mineral.watch/antimony/",
+      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "temporalCoverage": "2018/2026",
+      "spatialCoverage": "Worldwide",
+      "variableMeasured": ["Mine production", "Reserves", "Smelting capacity", "Prices", "Trade flows", "Export controls", "Companies"],
+      "isAccessibleForFree": true,
+      "license": "https://mineral.watch/",
+      "citation": [
+        "USGS National Minerals Information Center, Mineral Commodity Summaries (Antimony)",
+        "British Geological Survey, World Mineral Statistics",
+        "China MOFCOM export-control announcements via Reuters and trade press",
+        "Fastmarkets and Argus price assessments via trade press",
+        "Company disclosures and government announcements"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is antimony used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mostly for stopping fires and starting cars: antimony trioxide is the synergist that makes brominated flame retardants work in electronics, cables, vehicle interiors and building materials, and antimonial lead hardens the grids of lead-acid batteries. The rest goes into PET plastic (as the polymerisation catalyst in most of the world's bottles), high-clarity glass for solar panels, semiconductors and infrared detectors — and munitions, where antimony hardens bullets, ignites primers and lights tracer rounds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which country produces the most antimony?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "China — about 40,000 of the roughly 110,000 tonnes mined worldwide in 2025 (USGS estimates via trade press), down from around 100,000 tonnes a year in the mid-2010s as its flagship deposits age. Russia and Tajikistan follow; together the three control more than 85% of world mine supply. The grip is even tighter downstream: China dominates the roasting and smelting that turns concentrate into trioxide and metal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did the antimony price explode in 2024–25?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A shrinking supply base met an export weapon. World mine production had already fallen by roughly a third since 2018 when China imposed export licensing on antimony in September 2024 and then, on 3 December 2024, banned exports to the United States outright. Rotterdam prices went from around $12,000 a tonne in early 2024 to roughly $60,000 in the spring of 2025 — about a fivefold rise — while US imports from China collapsed by 97% in late 2024."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is China still blocking antimony exports to the US?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Partially. After the Trump–Xi meeting of October 2025, China suspended its US-specific export ban on antimony, gallium and germanium from November 2025 until 27 November 2026. But the suspension is not a repeal: the underlying dual-use export-licensing regime introduced in September 2024 still applies to every buyer, licences remain slow and selective, and flows to the US have not returned to pre-ban levels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the world running out of antimony?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not imminently, but antimony has one of the thinnest reserve cushions of any strategic mineral: roughly 2 million tonnes of reserves against ~110,000 tonnes of annual mine production — under two decades at current rates, concentrated in China, Russia and Bolivia. The offsets are gold: much of the new supply arriving in Australia, the US and Tajikistan comes from gold-antimony ores where gold pays the bills — and recycling, since antimonial lead from old batteries is remelted into new ones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do militaries care about antimony?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Almost every round of conventional ammunition contains it: antimony hardens lead bullets and shot, antimony trisulfide ignites the primer, and antimony compounds light tracer rounds. It is also in night-vision optics (indium antimonide infrared detectors), nuclear-weapons components historically, and the flame retardants in every vehicle and vessel. During the Second World War the Stibnite district in Idaho produced 90% of America's antimony; today the Pentagon is spending more than $80 million — plus a $2.9 billion EXIM loan — to reopen that same district by 2029."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Need a deep-dive report on antimony?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That's exactly what we do. We produce commissioned deep-dive reports on antimony, covering angles such as export-control exposure, mine-to-smelter supply-chain mapping, trade-flow and transshipment analysis, the Western project pipeline and its timelines, defence procurement and stockpiling, and price scenarios. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#34d399;--accent2:#f472b6;
+  --mine:#34d399;--proc:#f472b6;--dis:#fbbf24;--dev:#c4b5fd;
+  --radius:14px;--pad:16px;
+  font-size:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+h1,h2,h3{line-height:1.2;font-weight:700}
+section{padding:40px var(--pad);max-width:1100px;margin:0 auto}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;margin-bottom:8px}
+h2{font-size:1.5rem;margin-bottom:10px}
+.lede{color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:20px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1100px;margin:0 auto}
+.nav-links{display:flex;align-items:center;gap:8px;flex:1;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px;flex:none}
+.brand span{color:var(--accent)}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap;flex:none}
+nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto;flex:none;position:relative;overflow:hidden;z-index:0}
+nav a.cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){nav a.cta::before{transition:none}}
+.research-cta{display:inline-block;background:var(--accent);color:var(--bg);font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none;position:relative;overflow:hidden;z-index:0}
+.research-cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+.research-cta:hover::before,.research-cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){.research-cta::before{transition:none}}
+
+/* subscribe */
+.sub-row{display:flex;flex-direction:column;align-items:stretch;gap:24px;width:100%}
+@media(min-width:860px){.sub-row{flex-direction:row}}
+.sub-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;flex:1;min-width:0}
+.sub-box p{font-size:.92rem;color:var(--muted);margin-bottom:14px}
+.sub-box p:last-child{margin-bottom:0}
+.sub-box a{font-weight:600}
+.sub-form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;flex:1;min-width:0;color-scheme:dark}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-grid .full{grid-column:1/-1}
+.sub-form input,.sub-form select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:var(--txt);font:inherit;font-size:.88rem}
+.sub-form input::placeholder{color:var(--muted)}
+.sub-form input:focus,.sub-form select:focus{outline:none;border-color:var(--accent)}
+.sub-form select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e6edf3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;background-size:16px 16px;padding-right:26px}
+.sub-form button{width:100%;background:var(--accent);color:var(--bg);border:0;cursor:pointer;font:inherit;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;margin-top:14px}
+.sub-form button:hover{filter:brightness(1.12)}
+.form-note{font-size:.74rem;color:var(--muted);margin-top:12px;text-align:center}
+
+/* hero */
+.hero-wrap{position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;transform:scale(1.05);filter:grayscale(1) brightness(.52) contrast(1.05);opacity:.6}
+.hero-tint{position:absolute;inset:0;z-index:0;pointer-events:none;background:var(--accent);mix-blend-mode:color;opacity:.45}
+.hero-scrim{position:absolute;inset:0;z-index:0;pointer-events:none;background:
+  linear-gradient(90deg,rgba(13,17,23,.88) 0%,rgba(13,17,23,.55) 55%,rgba(13,17,23,.3) 100%),
+  linear-gradient(180deg,rgba(13,17,23,.75) 0%,rgba(13,17,23,0) 35%,rgba(13,17,23,0) 68%,var(--bg) 100%)}
+.hero{position:relative;z-index:1;padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
+.hero-wrap .stat{background:rgba(26,34,44,.72);backdrop-filter:blur(4px)}
+.hero-wrap .hero p{color:#b6c2cf}
+.hero h1{font-size:clamp(1.9rem,6.5vw,3.2rem);letter-spacing:-.02em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);max-width:560px;font-size:1rem}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.stat b{display:block;font-size:1.45rem;color:var(--accent);letter-spacing:-.01em}
+.stat span{font-size:.74rem;color:var(--muted)}
+
+/* map */
+#map{height:62vh;min-height:380px;border-radius:var(--radius);border:1px solid var(--line);z-index:1}
+.map-controls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:7px 14px;font-size:.8rem;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent}
+.chip.on{color:#0d1117;font-weight:700}
+.chip.on.c-mine{background:var(--mine);border-color:var(--mine)}
+.chip.on.c-proc{background:var(--proc);border-color:var(--proc)}
+.chip.on.c-dis{background:var(--dis);border-color:var(--dis)}
+.chip.on.c-dev{background:var(--dev);border-color:var(--dev)}
+.legend{font-size:.74rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--card)}
+.leaflet-popup-content{font-size:.82rem;line-height:1.5;margin:12px 14px}
+.leaflet-popup-content b{color:var(--accent)}
+.pp-tag{display:inline-block;font-size:.66rem;padding:1px 8px;border-radius:99px;margin-bottom:4px;font-weight:700}
+
+/* forms grid (ore → trioxide → metal) */
+.el-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px;margin-top:8px}
+.el{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 6px 10px;cursor:pointer;text-align:center;transition:.15s;position:relative;-webkit-tap-highlight-color:transparent}
+.el:hover{border-color:var(--accent)}
+.el.sel{border-color:var(--accent);background:#34d39914}
+.el b{display:block;font-size:.98rem;letter-spacing:-.01em}
+.el span{font-size:.6rem;color:var(--muted);display:block;margin-top:2px}
+.el .z{position:absolute;top:4px;left:7px;font-size:.56rem;color:var(--muted)}
+.el.gU b{color:var(--accent)}
+.el.gM b{color:var(--accent2)}
+.el.gD b{color:var(--dis)}
+.el.gC b{color:var(--muted)}
+.el-legend{font-size:.72rem;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.el-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.el-detail{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.el-detail h3{font-size:1.05rem;margin-bottom:2px}
+.el-detail h3 small{color:var(--muted);font-weight:400;font-size:.78rem}
+.el-detail .tags{margin:6px 0 10px;display:flex;gap:6px;flex-wrap:wrap}
+.el-detail p{font-size:.85rem;color:var(--muted)}
+.el-detail .price{margin-top:10px;font-size:.78rem;color:var(--accent);border-top:1px dashed var(--line);padding-top:8px}
+
+/* journey */
+.journey{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 calc(-1*var(--pad));padding-left:var(--pad);padding-right:var(--pad)}
+.jcard{scroll-snap-align:start;flex:0 0 260px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative}
+.jcard .num{position:absolute;top:14px;right:16px;font-size:1.6rem;font-weight:800;color:var(--line)}
+.jcard .ico{font-size:1.6rem;margin-bottom:10px}
+.jcard h3{font-size:1rem;margin-bottom:6px}
+.jcard p{font-size:.8rem;color:var(--muted)}
+.jcard .fact{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.76rem;color:var(--accent)}
+.jhint{font-size:.72rem;color:var(--muted);margin-top:6px}
+
+/* charts */
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card h3{font-size:.95rem;margin-bottom:4px}
+.card .sub{font-size:.74rem;color:var(--muted);margin-bottom:12px}
+.chartbox{position:relative;height:280px}
+.src{font-size:.68rem;color:var(--muted);margin-top:10px}
+
+/* china section */
+.big{font-size:clamp(2.6rem,10vw,4.5rem);font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1}
+.bars{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.bar-row{display:grid;grid-template-columns:150px 1fr 44px;align-items:center;gap:10px;font-size:.78rem}
+.bar-row .track{background:var(--bg2);border-radius:99px;height:10px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#a7f3d0);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar-row .val{text-align:right;color:var(--muted)}
+
+/* process flow */
+.flow-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+.flow-wrap svg{min-width:980px;display:block}
+
+/* timeline */
+.tl{position:relative;margin-top:6px;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding-bottom:22px}
+.tl-item::before{content:"";position:absolute;left:-24px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl-item.hot::before{background:var(--accent)}
+.tl-date{font-size:.7rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.tl-item h4{font-size:.92rem;margin:3px 0 4px}
+.tl-item p{font-size:.8rem;color:var(--muted);max-width:640px}
+
+/* company tracker */
+.co-search{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.co-search input{flex:1 1 200px;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;color:var(--txt);font-size:.8rem;outline:none;-webkit-appearance:none}
+.co-search input:focus{border-color:var(--accent)}
+.co-search input::placeholder{color:var(--muted)}
+.co-count{font-size:.72rem;color:var(--muted)}
+.co-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+table.co{width:100%;min-width:900px;border-collapse:collapse;font-size:.79rem}
+.co th{text-align:left;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.co td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted);line-height:1.45}
+.co td:first-child{min-width:170px}
+.co td b{color:var(--txt);font-size:.82rem}
+.co td b a{color:var(--txt);text-decoration:none;border-bottom:1px dashed var(--line)}
+.co td b a:hover{color:var(--accent2);border-bottom-color:var(--accent2)}
+.co .tik{font-size:.68rem;color:var(--muted);margin-top:2px;white-space:nowrap}
+.co .pp-tag{white-space:nowrap;margin-bottom:0}
+
+/* mini cards (military / invest) */
+.mini-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.mini{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px}
+.mini h4{font-size:.86rem;margin-bottom:5px}
+.mini h4 .mi{margin-right:6px}
+.mini p{font-size:.78rem;color:var(--muted)}
+.note{font-size:.72rem;color:var(--muted);border-left:3px solid var(--accent);padding:8px 12px;background:var(--bg2);border-radius:0 8px 8px 0;margin-top:14px}
+.callout{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:14px;margin-top:14px}
+.callout b{font-size:1.5rem;color:var(--accent2);white-space:nowrap;line-height:1.2}
+.callout span{font-size:.78rem;color:var(--muted);flex:1 1 260px;line-height:1.5}
+@media(min-width:720px){.mini-grid{grid-template-columns:1fr 1fr}}
+
+/* research box + animated logo */
+.research-box{display:grid;gap:24px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px;transition:border-color .2s,box-shadow .2s}
+.research-box:hover{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 0 24px -4px var(--accent)}
+.research-art{display:none;justify-self:center;width:180px;animation:hero-float 11s ease-in-out infinite}
+@media(min-width:720px){.research-box{grid-template-columns:1.3fr 1fr}.research-art{display:block}}
+@keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.net-art .edge{stroke:var(--txt);stroke-opacity:.55;stroke-width:1.1;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 1.6s ease-out forwards}
+.net-art .web{stroke:var(--muted);stroke-opacity:.35;stroke-width:.8;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 2s ease-out forwards}
+.net-art .d1{animation-delay:.1s}.net-art .d2{animation-delay:.35s}.net-art .d3{animation-delay:.6s}
+.net-art .d4{animation-delay:.9s}.net-art .d5{animation-delay:1.15s}.net-art .d6{animation-delay:1.4s}
+@keyframes art-draw{to{stroke-dashoffset:0}}
+.net-art .orbit{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:3 7;transform-box:fill-box;transform-origin:center}
+.net-art .orbit.o2{stroke-opacity:.6;animation:art-spin 120s linear infinite reverse}
+@keyframes art-spin{to{transform:rotate(360deg)}}
+.net-art .node{fill:var(--bg);stroke:var(--txt);stroke-opacity:.7;stroke-width:1.1;opacity:0;animation:art-in .5s ease-out forwards}
+.net-art .sat{fill:none;stroke:var(--muted);stroke-width:1;opacity:0;animation:art-in .5s ease-out forwards,art-breathe 4s ease-in-out 2.4s infinite;transform-box:fill-box;transform-origin:center}
+.net-art .node,.net-art .sat{animation-delay:1.2s}
+.net-art .sat.b2{animation-delay:1.4s,3s}.net-art .sat.b3{animation-delay:1.6s,3.8s}
+@keyframes art-in{to{opacity:1}}
+@keyframes art-breathe{0%,100%{transform:scale(1);stroke-opacity:1}50%{transform:scale(1.5);stroke-opacity:.4}}
+@media(prefers-reduced-motion:reduce){
+  .net-art,.net-art *{animation:none !important;stroke-dashoffset:0 !important;opacity:1 !important}
+}
+
+/* sources */
+.sources li{margin-bottom:12px;font-size:.85rem;color:var(--muted)}
+.sources{list-style:none}
+.sources b{color:var(--txt)}
+
+/* faq */
+.faq{display:grid;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+.faq details[open]{border-color:var(--accent)}
+.faq summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.2rem;flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--muted);font-size:.86rem;margin-top:10px}
+footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}footer a{color:inherit;text-decoration:none}footer a:hover{color:var(--accent)}
+
+@media(min-width:720px){
+  :root{--pad:24px}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .grid2{grid-template-columns:1fr 1fr}
+  h2{font-size:1.9rem}
+  .jcard{flex-basis:300px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
+    <div class="brand">Antimony<span>Watch</span></div>
+    <div class="nav-links">
+    <a class="link" href="#map-sec">Map</a>
+    <a class="link" href="#forms-sec">The metal</a>
+    <a class="link" href="#journey-sec">Journey</a>
+    <a class="link" href="#production-sec">Production</a>
+    <a class="link" href="#refining-sec">Smelting</a>
+    <a class="link" href="#demand-sec">Demand</a>
+    <a class="link" href="#timeline-sec">Timeline</a>
+    <a class="link" href="#trade-sec">Trade</a>
+    <a class="link" href="#china-sec">China</a>
+    <a class="link" href="#military-sec">Military</a>
+    <a class="link" href="#invest-sec">Investment</a>
+    <a class="link" href="#companies-sec">Companies</a>
+    <a class="link" href="#sources-sec">Data</a>
+    <a class="link" href="#faq-sec">FAQ</a>
+    <a class="link" href="#research-sec">Research</a>
+    </div>
+    <a class="cta" href="#research-sec">Contact us</a>
+  </div>
+</nav>
+
+<header class="hero-wrap">
+  <img class="hero-bg" src="/brand/headers/antimony.jpg" alt="" aria-hidden="true">
+  <div class="hero-tint" aria-hidden="true"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero">
+  <div class="kicker">Open data · critical minerals</div>
+  <h1>Who's playing with <em>fire</em>?</h1>
+  <p>Antimony is the smallest market on any critical-minerals list — and the first one to blow up. A brittle, silvery metalloid, it keeps aircraft seats and circuit boards from burning, hardens the lead in every bullet and battery grid, and clarifies the glass on solar panels. China mines more of it than anyone, smelts far more, and in 2024 turned that grip into a weapon: export licences in September, then an outright ban on sales to the United States in December. Prices roughly quintupled. This site tracks where antimony is mined, roasted and consumed, how a metal most people can't name became a superpower bargaining chip, and the West's scramble to rebuild a supply chain it let rust for thirty years — using open data from USGS, BGS, trade statistics and price agencies.</p>
+  <div class="stats">
+    <div class="stat"><b data-count="110" data-prefix="~" data-suffix=" kt">0</b><span>of antimony mined worldwide in 2025 — roughly a third less than in 2020 (USGS via trade press)</span></div>
+    <div class="stat"><b data-count="85" data-prefix="&gt;" data-suffix="%">0</b><span>of world mine supply came from China, Russia and Tajikistan in 2025 (USGS-derived estimates)</span></div>
+    <div class="stat"><b data-count="5" data-prefix="~" data-suffix="×">0</b><span>price multiple from early 2024 to the spring-2025 peak near $60,000/t Rotterdam (price-agency assessments)</span></div>
+    <div class="stat"><b data-count="2.9" data-prefix="$" data-suffix="B">0</b><span>EXIM loan approved in May 2026 to reopen America's WWII antimony district at Stibnite, Idaho (EXIM/Perpetua)</span></div>
+  </div>
+  </div>
+</header>
+
+<section id="map-sec">
+  <div class="kicker">Interactive map</div>
+  <h2>The antimony world map</h2>
+  <p class="lede">Mines and gold-antimony operations, roasters and smelters, idled assets and the development wave — from the Hunan veins that armed two world wars to the Idaho project the Pentagon is paying to reopen. Tap a marker for details; toggle layers below. Circle size ≈ scale of operation.</p>
+  <div class="map-controls">
+    <button class="chip c-mine on" data-layer="mines">⛏ Mines</button>
+    <button class="chip c-proc on" data-layer="processing">🏭 Smelters &amp; roasters</button>
+    <button class="chip c-dis on" data-layer="disrupted">⚠ Disrupted &amp; idle</button>
+    <button class="chip c-dev on" data-layer="development">◐ Development</button>
+  </div>
+  <div id="map"></div>
+  <div class="legend" style="margin-top:10px">
+    <span><i style="background:var(--mine)"></i>Mine</span>
+    <span><i style="background:var(--proc)"></i>Smelter / roaster</span>
+    <span><i style="background:var(--dis)"></i>Disrupted / idle</span>
+    <span><i style="background:var(--dev)"></i>Development project</span>
+  </div>
+</section>
+
+<section id="forms-sec">
+  <div class="kicker">From stibnite to trioxide to trigger</div>
+  <h2>One metalloid, many disguises</h2>
+  <p class="lede">Antimony rarely trades as shiny metal: it moves as sulphide concentrate, as the white trioxide powder blended into plastics, as an invisible hardener inside lead, and as a military-spec sulphide that ignites primers. Each form has its own buyers, its own price — and, since 2024, its own export-control code. Tap a stage.</p>
+  <div class="el-grid" id="elGrid"></div>
+  <div class="el-legend">
+    <span><i style="background:var(--accent)"></i>Upstream (mine &amp; concentrate)</span>
+    <span><i style="background:var(--accent2)"></i>Midstream (roast &amp; smelt)</span>
+    <span><i style="background:var(--dis)"></i>Downstream (products)</span>
+    <span><i style="background:var(--muted)"></i>Circular</span>
+  </div>
+  <div class="el-detail" id="elDetail"></div>
+</section>
+
+<section id="journey-sec">
+  <div class="kicker">Mine to flame retardant — and to firing pin</div>
+  <h2>The journey of a tonne of antimony</h2>
+  <p class="lede">From a stibnite vein in Hunan — or a gold mine in Siberia, Victoria or Idaho — to the circuit board that doesn't catch fire and the cartridge that does. Increasingly, antimony arrives as a passenger in gold ore: the gold pays for the mine, and the antimony comes along as strategic freight.</p>
+  <div class="journey" id="journey"></div>
+  <div class="jhint">← swipe →</div>
+</section>
+
+<section id="production-sec">
+  <div class="kicker">Production &amp; reserves</div>
+  <h2>Where antimony comes from</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Mine production by country, 2025</h3>
+      <div class="sub">Tonnes of antimony content, log scale (USGS estimates via trade press)</div>
+      <div class="chartbox"><canvas id="chProd"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries via trade-press compilations (2025 figures are estimates). World total ~110,000 t. China's output has halved since the mid-2010s as Xikuangshan and the Guangxi belt age and environmental inspections bite.</div>
+    </div>
+    <div class="card">
+      <h3>Reserves by country</h3>
+      <div class="sub">Thousand tonnes of antimony content (world total ~2 million tonnes)</div>
+      <div class="chartbox"><canvas id="chRes"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries. One of the thinnest reserve cushions of any strategic mineral — under two decades at current mining rates, and much of it in China, Russia and Bolivia.</div>
+    </div>
+    <div class="card" style="grid-column:1/-1">
+      <h3>The shrinking base: a market that was tightening before the ban</h3>
+      <div class="sub">World mine production of antimony, tonnes of metal content (BGS, 1970-style long series shown 2018–2024)</div>
+      <div class="chartbox"><canvas id="chTrend"></canvas></div>
+      <div class="src">Source: BGS World Mineral Statistics (production, antimony content, 2018–2024). Output fell roughly 40% between 2018 and 2024 — China's environmental crackdowns, ore depletion and falling grades — which is exactly why the 2024 export controls hit a market with no slack.</div>
+    </div>
+  </div>
+  <div class="note">Explore where antimony is <b>mined</b>, country by country since 1970, on the <a href="/supply-chain/">supply-chain map</a>.</div>
+</section>
+
+<section id="refining-sec">
+  <div class="kicker">Smelting</div>
+  <h2>The chokepoint is the roaster</h2>
+  <p class="lede">Mining antimony is the easy half. Turning stibnite concentrate into the trioxide that goes into plastics — or the 99.65% metal ingot the market prices — happens in roasters and reduction furnaces that the West spent decades closing. China dominates that middle step, which is why even non-Chinese concentrate has usually had to pass through Chinese hands.</p>
+  <div class="card">
+    <h3>Smelting geography</h3>
+    <div class="sub">One Chinese valley, a handful of exceptions — and a rebuild measured in single-digit thousands of tonnes</div>
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇨🇳</span>The Lengshuijiang machine</h4><p>Xikuangshan in Hunan — "the world's antimony capital", mined since 1897 — anchors a smelting complex (Hsikwangshan Twinkling Star, under China Minmetals) rated at ~30,000 t/yr of refined antimony and ~40,000 t/yr of antimony products, exporting to 50+ countries. Guangxi and Yunnan host the rest of a belt that processes imported ore, too.</p></div>
+      <div class="mini"><h4><span class="mi">🇴🇲</span>The idle exception</h4><p>SPMP's roaster in Oman's Sohar Free Zone — built for ~20,000 t/yr of antimony plus by-product gold, precisely to break the Chinese tolling monopoly — has sat idle since early 2024 for want of concentrate, and as of August 2026 is looking for a buyer or operating partner. The West's spare smelting capacity exists; it just has nothing to feed it.</p></div>
+      <div class="mini"><h4><span class="mi">🇺🇸</span>Two smelters, no mine</h4><p>United States Antimony runs the only operating smelter in the US at Thompson Falls, Montana — mid-expansion toward 300–400 tons a month — plus the restarted Madero smelter in Mexico. Until Perpetua's Stibnite mine arrives, they run on imported and purchased feed: America can smelt antimony, it just doesn't mine any.</p></div>
+      <div class="mini"><h4><span class="mi">🇦🇺</span>The by-product route</h4><p>Nyrstar's Port Pirie lead smelter in South Australia poured its first antimony metal in November 2025 and is ramping toward 2,000 t/yr (potentially 5,000 t by 2028) — recovered from the lead circuit, backed by A$105M in government support, and Australia's only source of finished antimony metal.</p></div>
+    </div>
+    <div class="src">Sources: company profiles and disclosures (Hsikwangshan Twinkling Star, SPMP via Metalnomist, United States Antimony, Nyrstar); Asian Metal; InDaily; ABC News; trade press. Capacities are nameplate.</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Where the middle of the chain sits</h3>
+    <div class="sub">Approximate shares of the smelting and processing step — the stage every flame retardant and ingot passes through</div>
+    <div class="chartbox"><canvas id="chConv"></canvas></div>
+    <div class="src">Source: industry and government estimates via trade press (China's share of antimony smelting and trioxide output is commonly put at up to ~80%; Australia's 2026 strategic-reserve announcement cited China and Russia together controlling ~80% of supply). Precise smelting statistics are not published — itself a symptom of how concentrated the market is.</div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>From stibnite to synergist and to ingot, step by step</h3>
+    <div class="sub">The oxide route (top) carries most of the tonnage into plastics; the metal route (bottom) feeds batteries, bearings — and ammunition. Scroll sideways on mobile →</div>
+    <div class="flow-wrap">
+    <svg viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Antimony processing flow from stibnite ore to trioxide, metal and end uses">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8b98a5"/></marker>
+      </defs>
+      <style>
+        .fb{fill:#151b23;stroke:#2b3644;rx:10}
+        .ft{fill:#e6edf3;font:700 12px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fs{fill:#8b98a5;font:11px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fe{fill:#34d399;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fl{stroke:#8b98a5;stroke-width:1.4;fill:none;marker-end:url(#ah)}
+        .lab{fill:#f472b6;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em}
+      </style>
+      <!-- route labels -->
+      <text x="205" y="24" class="lab">OXIDE ROUTE (MOST OF THE TONNAGE)</text>
+      <text x="205" y="212" class="lab">METAL ROUTE (BATTERIES, ALLOYS — AND AMMUNITION)</text>
+      <!-- shared mining box -->
+      <g>
+        <rect class="fb" x="10" y="120" width="150" height="90" rx="10"/>
+        <text x="20" y="144" class="ft">1 · Mining ⛏</text>
+        <text x="20" y="162" class="fs">Stibnite (Sb₂S₃) veins and,</text>
+        <text x="20" y="176" class="fs">increasingly, gold-antimony ores</text>
+        <text x="20" y="200" class="fe">3 countries dig &gt;85%</text>
+      </g>
+      <!-- oxide route boxes y=40..118 -->
+      <g>
+        <rect class="fb" x="205" y="40" width="150" height="78" rx="10"/>
+        <text x="215" y="62" class="ft">2 · Concentrate 🪨</text>
+        <text x="215" y="80" class="fs">Flotation to 45–60% Sb —</text>
+        <text x="215" y="94" class="fs">the form that crosses borders</text>
+        <text x="215" y="111" class="fe">export-licensed since 2024</text>
+
+        <rect class="fb" x="400" y="40" width="150" height="78" rx="10"/>
+        <text x="410" y="62" class="ft">3 · Roast ⚗️</text>
+        <text x="410" y="80" class="fs">Volatilising roast drives off</text>
+        <text x="410" y="94" class="fs">sulphur → crude Sb₂O₃</text>
+        <text x="410" y="111" class="fe">China dominates this step</text>
+
+        <rect class="fb" x="595" y="40" width="150" height="78" rx="10"/>
+        <text x="605" y="62" class="ft">4 · ATO 🔥</text>
+        <text x="605" y="80" class="fs">Refined antimony trioxide —</text>
+        <text x="605" y="94" class="fs">the flame-retardant synergist</text>
+        <text x="605" y="111" class="fe">also the PET catalyst</text>
+      </g>
+      <!-- metal route boxes y=222..300 -->
+      <g>
+        <rect class="fb" x="205" y="222" width="150" height="78" rx="10"/>
+        <text x="215" y="244" class="ft">2 · Smelt 🏭</text>
+        <text x="215" y="262" class="fs">Reduction furnaces turn</text>
+        <text x="215" y="276" class="fs">concentrate into crude metal</text>
+        <text x="215" y="292" class="fe">or recover Sb from lead</text>
+
+        <rect class="fb" x="400" y="222" width="150" height="78" rx="10"/>
+        <text x="410" y="244" class="ft">3 · Refine 🥈</text>
+        <text x="410" y="262" class="fs">99.65% ingot — the Rotterdam</text>
+        <text x="410" y="276" class="fs">benchmark; 5N+ for chips</text>
+        <text x="410" y="292" class="fe">alloys: antimonial lead</text>
+      </g>
+      <!-- convergence box -->
+      <g>
+        <rect class="fb" x="790" y="120" width="180" height="90" rx="10" stroke="#34d399"/>
+        <text x="800" y="144" class="ft">5 · End uses 🔌</text>
+        <text x="800" y="162" class="fs">Plastics that don't burn, batteries</text>
+        <text x="800" y="176" class="fs">that start cars, solar glass —</text>
+        <text x="800" y="190" class="fs">and rounds that fire</text>
+        <text x="800" y="205" class="fe">no scalable substitute (USGS)</text>
+      </g>
+      <!-- arrows -->
+      <path class="fl" d="M160 150 L182 150 L182 79 H200"/>
+      <path class="fl" d="M355 79 H395"/>
+      <path class="fl" d="M550 79 H590"/>
+      <path class="fl" d="M745 79 H768 V143 H785"/>
+      <path class="fl" d="M160 180 L182 180 L182 261 H200"/>
+      <path class="fl" d="M355 261 H395"/>
+      <path class="fl" d="M550 261 H700 V183 H785"/>
+    </svg>
+    </div>
+    <div class="src">ATO = antimony trioxide. The military-spec branch — antimony trisulfide for primers (MIL-A-22131, min 70% Sb) — is small in tonnage and outsized in strategic weight; the US Army opened a pilot plant for it with Perpetua and Idaho National Laboratory in July 2026.</div>
+  </div>
+</section>
+
+<section id="demand-sec">
+  <div class="kicker">Demand</div>
+  <h2>The fireproofing metal with a battery habit</h2>
+  <p class="lede">Antimony demand is unglamorous and stubborn: fire-safety rules don't relax when prices quintuple, cars still need lead-acid batteries to start, and every new solar panel needs clarified glass. That inelasticity is precisely what made the market such an effective pressure point.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>What antimony is used for</h3>
+      <div class="sub">Approximate share of world demand by end use (industry estimates)</div>
+      <div class="chartbox"><canvas id="chUse"></canvas></div>
+      <div class="src">Source: industry and USGS end-use estimates via trade press; shares are approximate and vary by year. In the US, flame retardants alone account for roughly 40% of reported consumption (USGS).</div>
+    </div>
+    <div class="card">
+      <h3>The forces pulling demand</h3>
+      <div class="sub">Slow-growing, hard to substitute — with one fast-growing exception</div>
+      <div class="mini-grid" style="grid-template-columns:1fr">
+        <div class="mini"><h4><span class="mi">🔥</span>The synergist lock-in</h4><p>Antimony trioxide makes halogenated flame retardants work — in circuit boards, cable sheathing, vehicle seats, aircraft interiors and building plastics. Fire-safety codes wrote it into the modern world, and USGS notes substitutes generally cost performance. Demand moves with regulation, not price.</p></div>
+        <div class="mini"><h4><span class="mi">☀️</span>The solar wildcard</h4><p>Sodium antimonate fines and clarifies the high-transmittance glass on photovoltaic panels. Solar glass was the fastest-growing antimony use of the 2020s — one reason China, the world's solar factory, became a net importer of antimony ore even while restricting exports of the processed forms.</p></div>
+        <div class="mini"><h4><span class="mi">🔋</span>The lead-acid floor</h4><p>Antimonial lead stiffens the grids in lead-acid batteries — still the battery that starts nearly every combustion car, backs up telecom towers and powers forklifts. It is also antimony's circular loop: recycled battery lead returns much of its antimony to the pool, the closest thing the West has to domestic supply.</p></div>
+      </div>
+      <div class="callout"><b>&gt;100 kt</b><span>of annual world consumption against ~110 kt of mine supply and a thin scrap stream — a structurally tight market even before export controls, which is why inventories, not mines, set the price in 2024–25.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="timeline-sec">
+  <div class="kicker">Geopolitics</div>
+  <h2>A ban, a spike and a scramble</h2>
+  <p class="lede">Antimony was the test shot of the critical-minerals trade war: the first metal China banned outright for one named country. The sequence — licence, ban, spike, truce — is now the template every other export-controlled mineral is read against.</p>
+  <div class="card">
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-date">2018–2023</div>
+        <h4>The quiet depletion</h4>
+        <p>World mine output slides from ~174,000 t to ~118,000 t (BGS) as China's flagship deposits age: Xikuangshan's grades fall, environmental inspections idle Hunan and Guangxi operations, and Chinese smelters begin importing ore from Myanmar, Tajikistan and Russia to stay fed. Rotterdam drifts around $11,000–13,000/t — cheap enough that nobody in the West notices the floor thinning.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">15 Aug 2024</div>
+        <h4>Beijing reaches for the lever</h4>
+        <p>China announces dual-use export controls on antimony — ores, oxides, metal, hydrides and smelting technology — effective 15 September, citing national security. It is the third strike after gallium/germanium (2023) and graphite: every licence now passes through MOFCOM. Rotterdam, already at records near $25,000/t on the shrinking supply base, keeps climbing as buyers panic-order ahead of the deadline.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">3 Dec 2024</div>
+        <h4>The ban</h4>
+        <p>Responding to new US chip sanctions, China bans exports of antimony, gallium and germanium to the United States outright — the first time it names a single country. US imports from China, 63% of American supply in recent years, collapse ~97% between August and December. The Rotterdam price ends the year around $39,000–40,000/t, roughly triple January's level.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">H1 2025</div>
+        <h4>The $60,000 tonne</h4>
+        <p>Rotterdam grinds up to roughly $60,000/t by late spring (~$27.50/lb in the US market, per trade-press assessments) while China's domestic price lags tens of thousands of dollars below — a spread that makes a tonne of antimony worth smuggling. Reuters documents surging "Thai" and "Mexican" antimony flows into the US; Beijing answers with a May transshipment crackdown. Inside China, the squeeze is real too: by June, 45% of surveyed smelters are at zero output for want of ore.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Sep–Oct 2025</div>
+        <h4>America breaks ground</h4>
+        <p>The rebuild stops being a slide deck: Perpetua gets its Forest Service notice to proceed (19 Sep) and breaks ground at Stibnite (21 Oct) after posting $139M in financial assurance; Nova Minerals wins a $43.4M Pentagon award for Alaskan antimony (2 Oct); US Antimony lands a ~$245M sole-source DLA contract to restock the National Defense Stockpile — then bids ~A$720M for Australia's Larvotto and is rebuffed within a week.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">9–10 Nov 2025</div>
+        <h4>The truce</h4>
+        <p>After the Trump–Xi meeting, Beijing suspends the US-specific ban on antimony, gallium and germanium until 27 November 2026 — a suspension, not a repeal, with the September 2024 licensing regime still standing for every buyer. Days later, Nyrstar pours Australia's first antimony metal at Port Pirie. The price eases off its highs but settles at multiples of the pre-control level.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Jan–Apr 2026</div>
+        <h4>Allies start stockpiling</h4>
+        <p>Australia unveils a A$1.2B Critical Minerals Strategic Reserve with antimony explicitly prioritised (12 Jan), including A$185M for physical stockpiles. Talco Gold's 20,000 t/yr smelter in Tajikistan — a TALCO–Tibet Huayu joint venture — nears completion; Kyrgyzstan begins a phased relaunch of the Soviet-era Kadamjay combine; Alkane signs an earn-in over Nagambie, Australia's highest-grade resource.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">May–Aug 2026</div>
+        <h4>The rebuild gets real — and expensive</h4>
+        <p>EXIM's board approves a $2.9B, 13-year loan for Stibnite (21 May) — the bank's fourth-largest ever — and courts wave construction on (injunction denied 29 May, stay denied 17 June, appeals still running). The US Army and Idaho National Laboratory cut the ribbon on a military-spec antimony trisulfide pilot plant (29 Jul). In New South Wales, Larvotto's Hillgrove starts commissioning (21 Jul) with first production due within days as August ends. Not everything goes the West's way: Slovakia cancels the licence over the EU's largest antimony resource (May), Oman's idle roaster goes up for sale (Aug) — and prices ease to $25,000–31,000/t by mid-2026, still roughly double the pre-control level.</p>
+      </div>
+    </div>
+    <div class="src">Sources: China MOFCOM announcements via Reuters and Exiger; USGS; BGS; Reuters transshipment investigation; SMM smelter surveys via trade press; Perpetua Resources, EXIM, US Army/INL, DLA, Nova Minerals, US Antimony, Larvotto, Alkane, Nyrstar and Australian-government disclosures.</div>
+  </div>
+</section>
+
+<section id="trade-sec">
+  <div class="kicker">Trade &amp; prices</div>
+  <h2>A market repriced by decree</h2>
+  <p class="lede">Antimony has no exchange contract: the market runs on price-agency assessments — Rotterdam in dollars, China in yuan — and on bilateral deals for concentrate. Since 2024 the defining feature has been the spread: what a tonne is worth inside China versus what the cut-off West will pay for it.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>US antimony import sources</h3>
+      <div class="sub">Metal and oxide, recent multi-year average — the dependency the ban weaponised</div>
+      <div class="chartbox"><canvas id="chUsImp"></canvas></div>
+      <div class="src">Source: USGS Mineral Commodity Summaries (import shares, metal and oxide). US net import reliance is ~85% of consumption, with most of the remainder covered by recycled antimonial lead — and no domestic mine production since 2016.</div>
+    </div>
+    <div class="card">
+      <h3>The spike, in checkpoints — and the slow exhale</h3>
+      <div class="sub">US-market antimony price, $/lb (trade-press assessments)</div>
+      <div class="chartbox"><canvas id="chPrices"></canvas></div>
+      <div class="src">Source: trade-press price compilations of Fastmarkets/Argus-type assessments (approximate). From ~$6/lb in early 2024 to ~$27.50/lb at the spring-2025 peak — Rotterdam metal near $60,000/t — before the November 2025 truce and new supply let air out: ~$25,000–31,000/t by June 2026, still about double the pre-control level.</div>
+    </div>
+    <div class="card">
+      <h3>How this market actually trades</h3>
+      <div class="sub">Four prices, one metalloid</div>
+      <div class="mini-grid">
+        <div class="mini"><h4>The Rotterdam benchmark</h4><p>Regulus-grade 99.65% antimony metal, assessed in-warehouse Rotterdam by the price agencies, is the number contracts reference. No LME contract, thin liquidity, few sellers: when the ban hit, the "price" was whatever the last desperate trade printed — which is how a sleepy metal quintupled.</p></div>
+        <div class="mini"><h4>The China discount</h4><p>Inside China the same metal trades in yuan at a persistent discount to Rotterdam — at the 2025 extreme, less than half the Western price. That spread is the export-control premium made visible, and it hands a windfall to anyone who can move metal across the line: legally with a licence, or otherwise.</p></div>
+        <div class="mini"><h4>The concentrate squeeze</h4><p>Mines sell 45–60% concentrate to smelters at a payable percentage of the metal price. With Chinese smelters short of ore — 45% of them at zero output in mid-2025 — payables rose even as Beijing restricted what could leave. New non-Chinese supply (Hillgrove, Stibnite) is contracted years ahead: Wogen took Larvotto's first seven years.</p></div>
+        <div class="mini"><h4>The laundering routes</h4><p>Trade data tells the enforcement story: after December 2024, US imports "from Thailand" and "from Mexico" surged past historical totals while direct Chinese flows died — classic transshipment, documented by Reuters and answered by Beijing's May 2025 crackdown. Vietnam, which mines ~220 t a year, became the No. 2 supplier of antimony metal to the US. Every spread this wide builds its own pipeline.</p></div>
+      </div>
+      <div class="src">Sources: Fastmarkets/Argus assessments via trade press; Reuters (July 2025 transshipment investigation); SMM smelter surveys; company offtake disclosures.</div>
+    </div>
+    <div class="card">
+      <h3>The quiet riser: Tajikistan</h3>
+      <div class="sub">The other supply story — and its own dependency question</div>
+      <p style="font-size:.85rem;color:var(--muted)">Tajikistan mined ~22,000 t of antimony in 2025 — a fifth of world supply, up from ~11,000 t a decade ago — from the US-owned Anzob combine (Comsup Commodities, &gt;$300M invested) and the Talco Gold joint venture at Konchoch. It now supplies ~42% of the EU's antimony imports. But the fastest-growing processing capacity there is the new 20,000 t/yr Talco Gold smelter — a 50/50 venture with China's Tibet Huayu Mining. Even the diversification story has a Chinese partner.</p>
+      <div class="callout"><b>~20%</b><span>of world mine supply came from Tajikistan in 2025 (USGS-derived estimates) — the largest non-sanctioned, non-Chinese source, sitting between Russia, Afghanistan and China.</span></div>
+      <div class="src">Sources: USGS-derived estimates via trade press; SpecialEurasia; Avesta/Asia-Plus (Talco Gold smelter); company statements.</div>
+    </div>
+  </div>
+</section>
+
+<section id="china-sec">
+  <div class="kicker">Concentration risk</div>
+  <h2>The China chokepoint</h2>
+  <p class="lede">China's mine share has actually fallen — from three-quarters of world output in the mid-2010s to under 40% as its deposits age. Its leverage never did: the smelting, the trioxide plants, the price discovery and the export rules all still run through Beijing, and imported ore from Myanmar, Russia and Central Asia keeps the furnaces fed.</p>
+  <div class="card">
+    <div class="big" id="bigPct">~80%</div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:6px">of the world's antimony smelting and processing is commonly attributed to China (industry and government estimates). Its share along the chain:</p>
+    <div class="bars" id="chinaBars"></div>
+    <div class="src">Sources: USGS-derived production estimates via trade press (mine share); industry/government processing estimates cited by, among others, Australia's strategic-reserve announcement (China + Russia ~80% of supply); USGS import statistics (63% of US metal-and-oxide imports before the ban).</div>
+  </div>
+</section>
+
+<section id="military-sec">
+  <div class="kicker">Dual use</div>
+  <h2>The ammunition metal</h2>
+  <p class="lede">Antimony's military résumé is older than the periodic table — kohl in pharaohs' eyeliner, Gutenberg's type metal, shrapnel hardener in two world wars. Almost every conventional round fired today contains it three times over: in the hardened lead, in the primer, in the tracer. That is why a metal with a market smaller than a mid-size gold miner gets Pentagon money and its own line in export-control law.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🎯</span>In every round</h4><p>Pure lead is too soft to fly true: bullets and shot are hardened with 2–8% antimony, and armour-piercing designs use more. Antimony trisulfide — made to the US military's MIL-A-22131 spec, minimum 70% Sb — is the friction igniter in primers and percussion caps; antimony compounds burn in tracer rounds. No antimony, no ammunition plant.</p></div>
+      <div class="mini"><h4><span class="mi">👁</span>Night vision &amp; optics</h4><p>Indium antimonide (InSb) is the classic mid-wave infrared detector material — missile seekers, thermal sights, satellite sensors — and antimony-based semiconductors (GaSb, InSb superlattices) underpin modern night-vision focal planes. High-purity antimony also dopes silicon throughout the chip industry.</p></div>
+      <div class="mini"><h4><span class="mi">🏭</span>1941: the Stibnite precedent</h4><p>When Japan cut off Chinese antimony — Hunan then supplied most of the world — the US turned a remote Idaho gold district into a war plant: Stibnite produced 90% of America's antimony and 40% of its tungsten in 1941–45. The deposit the Pentagon is now spending billions to reopen is the same one that armed the last world war.</p></div>
+      <div class="mini"><h4><span class="mi">📦</span>Restocking the stockpile</h4><p>The National Defense Stockpile sold down its Cold-War antimony long ago. Now the Defense Logistics Agency is buying again: a ~$245M sole-source contract with US Antimony (2025) with ~$75M of deliveries planned for 2026 — while the FY2024 NDAA bars Chinese antimony from defence supply chains from 2027, giving procurement officers a hard deadline.</p></div>
+      <div class="mini"><h4><span class="mi">🔬</span>The trisulfide gap</h4><p>Mining antimony is not enough — military primers need trisulfide to spec, and the US hasn't made it domestically in decades. In July 2026 the US Army, Idaho National Laboratory and Perpetua opened a containerised pilot plant processing a ton of ore a day into military-spec antimony trisulfide, the prototype for closing the last gap in the chain.</p></div>
+      <div class="mini"><h4><span class="mi">🏛</span>Critical on every list</h4><p>Antimony sits on the US, EU, UK, Japanese, Indian and Australian critical-minerals lists; Australia's new A$1.2B strategic reserve names it in the first tranche. The EU imports ~42% of its antimony from Tajikistan; the US relies on imports for ~85% of consumption. Every ally is now short the same small metal.</p></div>
+    </div>
+    <div class="src">Sources: USGS MCS antimony (end uses, import reliance, stockpile); US Army / Idaho National Laboratory / Perpetua (trisulfide pilot, MIL-A-22131); DLA contract reporting via Montana Public Radio and trade press; FY2024 NDAA; USGS/state histories of the Stibnite district; Australian government announcements.</div>
+  </div>
+</section>
+
+<section id="invest-sec">
+  <div class="kicker">Capital flows</div>
+  <h2>Where the antimony money is going</h2>
+  <p class="lede">For thirty years no Western banker would finance an antimony mine: the market was too small, the price too Chinese. The ban inverted the logic — now governments underwrite the projects and the constraint is time, not money. Presented as observation, not investment advice.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇺🇸</span>The $3B bet on Idaho</h4><p>Perpetua's Stibnite is the West's flagship: a $2.9B EXIM loan (approved May 2026, the bank's fourth-largest ever), &gt;$80M in Pentagon funding, $317M in equity from Agnico Eagle and JPMorganChase, and construction underway toward 2029 production covering ~35% of US antimony demand — with gold paying most of the bills and litigation still trailing the permits.</p></div>
+      <div class="mini"><h4><span class="mi">🇦🇺</span>The Hillgrove sprint</h4><p>Larvotto took Hillgrove from acquisition (Dec 2023) to commissioning (Jul 2026) on A$60M of equity and a US$105M bond — with Wogen contracted for seven years of antimony and first production due as August 2026 ends. At ~5,000 t/yr it would be ~7% of world supply, and it made Larvotto a takeover target: US Antimony's ~A$720M approach was rejected in October 2025.</p></div>
+      <div class="mini"><h4><span class="mi">🏭</span>The smelter premium</h4><p>Processing, not mining, is the bottleneck — so capital is chasing furnaces: US Antimony's Montana expansion (toward 300–400 tons/month) and Mexican restart, its 49% hydrometallurgical JV with Americas Gold and Silver, Nyrstar's government-backed Port Pirie antimony circuit, and Talco Gold's 20,000 t/yr Tajik smelter. Whoever owns conversion capacity taxes the whole chain.</p></div>
+      <div class="mini"><h4><span class="mi">🏦</span>States as buyers of last resort</h4><p>Governments have become the demand floor: the DLA's ~$245M stockpile contract, Australia's A$185M physical reserve, the Pentagon's DPA Title III awards ($43.4M to Nova Minerals, $59M+ to Perpetua), and EXIM's project lending. In a 110,000-tonne market, a single state purchase programme moves the price.</p></div>
+      <div class="mini"><h4><span class="mi">🌍</span>The junior swarm</h4><p>Behind the leaders, a crowd of gold-antimony juniors is being repriced as strategic: Southern Cross Gold's Sunday Creek (63–95 kt of Sb in its exploration target, decline under construction), Alkane's Costerfield-plus-Nagambie consolidation in Victoria, Black Cat's Mt Clement, Felix Gold and Nova in Alaska, Military Metals in Slovakia and Nova Scotia. Most are years from a saleable tonne.</p></div>
+      <div class="mini"><h4><span class="mi">⚠️</span>The risks</h4><p>Every one is a mirror of the upside: if Beijing extends the truce past November 2026 and licences flow, the price that justifies the rebuild deflates; a 110 kt market can only absorb a few Hillgroves before it's oversupplied; most new "antimony" projects are really gold projects whose antimony arrives only if the gold works; and litigation still shadows Stibnite. The trade is a bet on the ban's shadow outlasting the ban.</p></div>
+    </div>
+    <div class="note">This section describes where capital is flowing, based on public data. It is not financial advice.</div>
+    <div class="src">Sources: company and government disclosures (Perpetua, EXIM, US Antimony, Larvotto, Nova Minerals, Alkane, Southern Cross Gold, Black Cat, Nyrstar, Australian government); DLA contract reporting; trade press (Reuters, Mining.com, Fastmarkets, Argus).</div>
+  </div>
+</section>
+
+<section id="companies-sec">
+  <div class="kicker">Company tracker</div>
+  <h2>The companies that move antimony</h2>
+  <p class="lede">A state-owned Chinese complex at the top, two sanctioned-adjacent giants in Russia and Central Asia's quiet champions in the middle — and a fast-moving pack of Western developers racing the calendar at the bottom. Filter by segment or search.</p>
+  <div class="map-controls" id="coFilters">
+    <button class="chip c-mine on" data-seg="mine">⛏ Miners</button>
+    <button class="chip c-proc on" data-seg="sep">🏭 Smelting &amp; processing</button>
+    <button class="chip c-dev on" data-seg="dev">◐ Developers</button>
+  </div>
+  <div class="co-search">
+    <input id="coSearch" type="search" placeholder="Search company, asset, country…" aria-label="Search companies">
+    <span class="co-count" id="coCount"></span>
+  </div>
+  <div class="co-wrap">
+    <table class="co">
+      <thead><tr><th>Company</th><th>Segment</th><th>Key assets</th><th>Status &amp; recent signals</th></tr></thead>
+      <tbody id="coBody"></tbody>
+    </table>
+  </div>
+  <div class="note">Company status reflects public disclosures as of August 2026. This is an observational tracker, not investment advice.</div>
+  <div class="src">Sources: company disclosures &amp; filings; USGS; trade press (Reuters, Mining.com, Fastmarkets, Argus, North of 60 Mining News, Australian trade press).</div>
+</section>
+
+<section id="sources-sec">
+  <div class="kicker">Data &amp; methodology</div>
+  <h2>Open data sources</h2>
+  <ul class="sources">
+    <li><b><a href="https://www.usgs.gov/centers/national-minerals-information-center/antimony-statistics-and-information">USGS Mineral Commodity Summaries — Antimony</a></b> — world mine production, reserves, US trade and import reliance, prices, end-use notes. Recent-year figures are estimates; production is antimony content.</li>
+    <li><b><a href="https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/">British Geological Survey — World Mineral Statistics</a></b> — long-run antimony mine production series (1970–2024), also behind this site's <a href="/supply-chain/">supply-chain map</a>.</li>
+    <li><b>Export controls</b> — China MOFCOM announcements (August 2024 licensing, December 2024 US ban, November 2025 suspension) via <a href="https://www.reuters.com/">Reuters</a>, CNBC and compliance analyses (Exiger, Covington); FY2024 NDAA defence-sourcing restrictions.</li>
+    <li><b>Prices</b> — Fastmarkets and Argus antimony assessments (Rotterdam 99.65% metal, US market, Chinese domestic) as reported through trade press; USGS-published annual averages. Antimony has no exchange contract, so all price history is assessment-based.</li>
+    <li><b>Supply projects</b> — company disclosures: <a href="https://perpetuaresources.com/">Perpetua Resources</a> (Stibnite, EXIM, DoD funding), <a href="https://usantimony.com/">United States Antimony</a> (Thompson Falls, Madero, DLA contract), <a href="https://www.larvottoresources.com/">Larvotto Resources</a> (Hillgrove), <a href="https://alkres.com/">Alkane Resources</a> (Costerfield, Nagambie), <a href="https://www.southerncrossgold.com/">Southern Cross Gold</a>, <a href="https://novaminerals.com.au/">Nova Minerals</a>, <a href="https://felixgold.com.au/">Felix Gold</a>, <a href="https://bc8.com.au/">Black Cat Syndicate</a>, Nyrstar/Trafigura (Port Pirie), Hsikwangshan Twinkling Star, Talco Gold, GeoProMining, Polyus.</li>
+    <li><b>Trade flows</b> — <a href="https://comtradeplus.un.org/">UN Comtrade</a> and US import statistics; Reuters' 2025 investigation of transshipment via Thailand and Mexico.</li>
+    <li><b>Notes</b> — mine and plant coordinates are approximate; several exploration-stage sites are mapped at district level. Tonnages are antimony content unless stated. China's smelting share is an industry estimate — no official statistic exists. Larvotto's Hillgrove is shown as commissioning: first production had not been formally declared as of 30 August 2026. Last data refresh: August 2026.</li>
+  </ul>
+</section>
+
+<section id="faq-sec">
+  <div class="kicker">FAQ</div>
+  <h2>Common questions</h2>
+  <div class="faq">
+    <details>
+      <summary>What is antimony used for?</summary>
+      <p>Mostly for stopping fires and starting cars: antimony trioxide is the synergist that makes brominated flame retardants work in electronics, cables, vehicle interiors and building materials, and antimonial lead hardens the grids of lead-acid batteries. The rest goes into PET plastic (as the polymerisation catalyst in most of the world's bottles), high-clarity glass for solar panels, semiconductors and infrared detectors — and munitions, where antimony hardens bullets, ignites primers and lights tracer rounds.</p>
+    </details>
+    <details>
+      <summary>Which country produces the most antimony?</summary>
+      <p>China — about 40,000 of the roughly 110,000 tonnes mined worldwide in 2025 (USGS estimates via trade press), down from around 100,000 tonnes a year in the mid-2010s as its flagship deposits age. Russia and Tajikistan follow; together the three control more than 85% of world mine supply. The grip is even tighter downstream: China dominates the roasting and smelting that turns concentrate into trioxide and metal.</p>
+    </details>
+    <details>
+      <summary>Why did the antimony price explode in 2024–25?</summary>
+      <p>A shrinking supply base met an export weapon. World mine production had already fallen by roughly a third since 2018 when China imposed export licensing on antimony in September 2024 and then, on 3 December 2024, banned exports to the United States outright. Rotterdam prices went from around $12,000 a tonne in early 2024 to roughly $60,000 in the spring of 2025 — about a fivefold rise — while US imports from China collapsed by 97% in late 2024.</p>
+    </details>
+    <details>
+      <summary>Is China still blocking antimony exports to the US?</summary>
+      <p>Partially. After the Trump–Xi meeting of October 2025, China suspended its US-specific export ban on antimony, gallium and germanium from November 2025 until 27 November 2026. But the suspension is not a repeal: the underlying dual-use export-licensing regime introduced in September 2024 still applies to every buyer, licences remain slow and selective, and flows to the US have not returned to pre-ban levels.</p>
+    </details>
+    <details>
+      <summary>Is the world running out of antimony?</summary>
+      <p>Not imminently, but antimony has one of the thinnest reserve cushions of any strategic mineral: roughly 2 million tonnes of reserves against ~110,000 tonnes of annual mine production — under two decades at current rates, concentrated in China, Russia and Bolivia. The offsets are gold: much of the new supply arriving in Australia, the US and Tajikistan comes from gold-antimony ores where gold pays the bills — and recycling, since antimonial lead from old batteries is remelted into new ones.</p>
+    </details>
+    <details>
+      <summary>Why do militaries care about antimony?</summary>
+      <p>Almost every round of conventional ammunition contains it: antimony hardens lead bullets and shot, antimony trisulfide ignites the primer, and antimony compounds light tracer rounds. It is also in night-vision optics (indium antimonide infrared detectors), and in the flame retardants in every vehicle and vessel. During the Second World War the Stibnite district in Idaho produced 90% of America's antimony; today the Pentagon is spending more than $80 million — plus a $2.9 billion EXIM loan — to reopen that same district by 2029.</p>
+    </details>
+    <details>
+      <summary>Need a deep-dive report on antimony?</summary>
+      <p>That's exactly what we do. We produce commissioned deep-dive reports on antimony, covering angles such as export-control exposure, mine-to-smelter supply-chain mapping, trade-flow and transshipment analysis, the Western project pipeline and its timelines, defence procurement and stockpiling, and price scenarios. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email <a href="mailto:hello@mineral.watch">hello@mineral.watch</a> with a short note on what you need and we'll come back with a scoped proposal.</p>
+    </details>
+  </div>
+</section>
+
+<section id="research-sec">
+  <div class="research-box">
+    <div>
+      <div class="kicker">Custom research</div>
+      <h2>Need an ad hoc data-driven research report?</h2>
+      <p style="color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:18px">We produce bespoke, source-cited research on antimony and other strategic minerals — supply-chain mapping, trade-flow analysis, country and commodity deep-dives — built on the same open data behind this dashboard.</p>
+      <a class="research-cta" href="mailto:hello@mineral.watch">Reach out at hello@mineral.watch</a>
+    </div>
+    <div class="research-art net-art" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="orbit o2" cx="150" cy="150" r="126"/>
+        <circle cx="150" cy="150" r="116" fill="none" stroke="var(--accent)" stroke-width=".6" opacity=".55"/>
+        <path class="web d3" pathLength="1" d="M150 34 L119 104"/>
+        <path class="web d3" pathLength="1" d="M150 34 L181 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L119 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L82 140"/>
+        <path class="web d4" pathLength="1" d="M242 56 L181 104"/>
+        <path class="web d5" pathLength="1" d="M242 56 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M119 104 H181"/>
+        <path class="edge d1" pathLength="1" d="M119 104 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M181 104 L218 140"/>
+        <path class="edge d2" pathLength="1" d="M82 140 H218"/>
+        <path class="edge d2" pathLength="1" d="M82 140 L150 218"/>
+        <path class="edge d2" pathLength="1" d="M218 140 L150 218"/>
+        <path class="edge d3" pathLength="1" d="M119 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M181 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M150 140 V218"/>
+        <circle class="node" cx="119" cy="104" r="3"/>
+        <circle class="node" cx="181" cy="104" r="3"/>
+        <circle class="node" cx="82" cy="140" r="3"/>
+        <circle class="node" cx="218" cy="140" r="3"/>
+        <circle class="node" cx="150" cy="218" r="3"/>
+        <circle class="sat" cx="150" cy="34" r="2.2"/>
+        <circle class="sat b2" cx="58" cy="62" r="2.2"/>
+        <circle class="sat b3" cx="242" cy="56" r="2.2"/>
+        <circle class="sat b2" cx="258" cy="196" r="2.2"/>
+        <circle class="sat b3" cx="68" cy="240" r="2.2"/>
+        <circle cx="150" cy="140" r="5" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6">
+          <animate attributeName="r" values="5;16" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".6;0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="150" cy="140" r="4.2" fill="var(--accent)"/>
+        <circle r="1.6" fill="var(--accent2)">
+          <animateMotion path="M58 62 L119 104 L150 140" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.6" fill="var(--accent)">
+          <animateMotion path="M258 196 L218 140 L150 140" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="subscribe-sec">
+  <div class="kicker">Stay updated</div>
+  <h2>Get notified when the antimony data refreshes</h2>
+  <div class="sub-row">
+    <div class="sub-box">
+      <p>mineral.watch is an independent data hub, and it grows with the people who use it. Introduce yourself and we'll let you know when the antimony figures on this dashboard are updated and when new dashboards, datasets and research go live — no noise, just what's new.</p>
+      <p>Telling us your sector and organisation helps too: it shows us who relies on this data — analysts, policymakers, journalists, researchers — and shapes what we build next, from new minerals to custom research.</p>
+      <p>Prefer to talk directly? Corrections, data tips and collaboration ideas are always welcome at <a href="mailto:hello@mineral.watch">hello@mineral.watch</a>.</p>
+    </div>
+    <div class="sub-form">
+      <form action="https://formspree.io/f/mljeedkq" method="POST">
+        <input type="hidden" name="_subject" value="New mineral.watch subscriber (antimony dashboard)">
+        <input type="hidden" name="source" value="antimony-dashboard">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-grid">
+          <input type="text" name="first_name" placeholder="First name *" aria-label="First name" autocomplete="given-name" required>
+          <input type="text" name="last_name" placeholder="Last name *" aria-label="Last name" autocomplete="family-name" required>
+          <input type="email" name="email" class="full" placeholder="Email *" aria-label="Email" autocomplete="email" required>
+          <input type="text" name="organisation" class="full" placeholder="Organisation" aria-label="Organisation" autocomplete="organization">
+          <select name="sector" class="full" aria-label="Sector">
+            <option value="" selected>Sector</option>
+            <option>Government &amp; policy</option>
+            <option>Mining &amp; industry</option>
+            <option>Finance &amp; investment</option>
+            <option>Research &amp; academia</option>
+            <option>Media &amp; journalism</option>
+            <option>NGO / civil society</option>
+            <option>Other</option>
+          </select>
+          <input type="text" name="linkedin" placeholder="LinkedIn" aria-label="LinkedIn profile">
+          <input type="tel" name="whatsapp" placeholder="WhatsApp (+code)" aria-label="WhatsApp number">
+        </div>
+        <button type="submit">Subscribe for updates</button>
+        <p class="form-note">We'll only use your details to send you mineral.watch updates. No spam, unsubscribe anytime.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="/">mineral.watch</a> · open intelligence on strategic minerals &amp; rare earths · sources: USGS, BGS, UN Comtrade, IEA
+</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+/* ============ DATA (curated from USGS via trade press, BGS, MOFCOM/Reuters, company disclosures) ============ */
+const DATA = {
+  production2025: [ // tonnes of antimony content, USGS MCS 2026 estimates via trade press
+    ["China",40000],["Russia",32000],["Tajikistan",22000],["Bolivia",5000],
+    ["Myanmar",4500],["Türkiye",3000],["Australia",1300],["Vietnam",220],["Others",2000]
+  ],
+  reserves: [ // thousand tonnes of antimony content (USGS)
+    ["China",830],["Russia",350],["Bolivia",310],["Myanmar",140],
+    ["Australia",110],["Türkiye",99],["Tajikistan",60],["United States",60],["Other",130]
+  ],
+  trend: { // world mine production, tonnes antimony content (BGS)
+    years:[2018,2019,2020,2021,2022,2023,2024],
+    prod:[173841,128547,124715,100284,105556,117804,105244]
+  },
+  conv: [ // % share of smelting & processing (industry estimates)
+    ["China",80],["Rest of world",20]
+  ],
+  usImports:[["China",63],["Belgium",8],["India",6],["Bolivia",5],["Other",18]],
+  endUse:[ // % of world demand (industry estimates, approximate)
+    ["Flame retardants",45],["Lead-acid batteries",20],["PET catalyst & chemicals",15],
+    ["Glass incl. solar & ceramics",10],["Ammunition & military",5],["Semiconductors & other",5]
+  ],
+  prices:{ labels:["Early 2024","Aug 2024","Spring 2025 peak","Nov 2025","Jun 2026"],
+    usd:[6,9.8,27.5,20.3,12.6] }, // $/lb, US market, trade-press assessments (approx.)
+  chinaShares:[ // stage, share %
+    ["Mine production",36],["Smelting & processing",80],["US imports pre-ban",63]
+  ],
+  journey:[
+    {ico:"⛏",t:"1 · Mining",p:"Antimony's main ore is stibnite — soft, silver, metallic Sb₂S₃, the kohl of ancient Egypt. It is dug from narrow veins in Hunan and Guangxi, from Tajik and Siberian gold-antimony ores, and by artisanal miners in Myanmar. Three countries — China, Russia, Tajikistan — dig more than 85% of it.",f:"~110 kt mined in 2025 — down a third since 2020 (USGS via trade press)"},
+    {ico:"🪨",t:"2 · The concentrate",p:"Ore is floated into a 45–60% sulphide concentrate — the form that actually crosses borders, sold at a payable percentage of the metal price. Since September 2024 every Chinese export of it needs a MOFCOM dual-use licence, and every non-Chinese tonne has a queue of smelters bidding.",f:"Wogen locked up Hillgrove's first seven years of output before the mine even restarted"},
+    {ico:"⚗️",t:"3 · Roast & smelt",p:"Volatilising roasters drive off sulphur to make crude trioxide; reduction furnaces make 99.65% metal. This is the chokepoint: China dominates the step, Oman's purpose-built merchant roaster sits idle for want of feed, and the US has smelters but — until Stibnite — no mine behind them.",f:"45% of surveyed Chinese smelters sat at zero output in June 2025, starved of ore"},
+    {ico:"🔥",t:"4 · The fire brake",p:"Most antimony ends up as trioxide blended into plastics, where it multiplies the effect of brominated flame retardants — circuit boards, cable sheathing, car seats, aircraft interiors. It also catalyses PET for bottles and, as sodium antimonate, clarifies solar-panel glass.",f:"Fire-safety codes, not prices, set this demand — USGS calls substitutes a downgrade"},
+    {ico:"🎯",t:"5 · The arsenal",p:"The metal route ends in harder lead: bullets and shot (2–8% Sb), battery grids, bearings and solder — and in military-spec antimony trisulfide, the friction igniter in every primer and percussion cap, plus indium antimonide in night-vision and missile seekers.",f:"US NDAA rules bar Chinese antimony from defence supply chains from 2027"},
+    {ico:"♻️",t:"6 · The lead loop",p:"Antimony's quiet recycling stream rides on lead-acid batteries: recyclers remelt old grids into antimonial lead, keeping the metal in circulation. It covers a meaningful slice of Western consumption — and it is the only 'domestic mine' the US has had since 2016.",f:"US net import reliance still ~85% of consumption (USGS)"}
+  ],
+  forms:[
+    {s:"Sb₂S₃",n:"Stibnite ore",g:"U",use:"The ore of kohl and kings",
+     d:"Antimony's signature mineral — soft, steel-grey blades that the ancient world ground into kohl eyeliner and alchemists obsessed over. Ore grades run from a few percent in bulk deposits to spectacular high-grade veins: Felix Gold's Alaskan bulk sample and Tajikistan's deeper Jijikrut levels both exceed 15% Sb. It is rarely shipped as ore — too much rock, too little metal.",pr:null},
+    {s:"45–60%",n:"Concentrate",g:"U",use:"The form that travels",
+     d:"Flotation upgrades ore to a sulphide concentrate that smelters buy at a payable percentage of the metal price. This is the layer where the supply chain actually knots: Chinese and Omani smelters compete for Myanmar, Central Asian and now Australian material, and China's 2024 controls put concentrate, oxide, metal and even smelting technology under dual-use licence.",pr:null},
+    {s:"Au·Sb",n:"Gold-antimony",g:"U",use:"The passenger model",
+     d:"Increasingly, antimony is mined by accident: it rides in refractory gold ores at Polyus' Olimpiada in Siberia, Alkane's Costerfield and Larvotto's Hillgrove in Australia, and Perpetua's Stibnite in Idaho. Gold pays the capital bills; antimony comes along as strategic freight. It is the West's fastest route to new supply — and its weakness: no gold case, no antimony.",pr:null},
+    {s:"Sb₂O₃",n:"ATO",g:"M",use:"The workhorse trioxide",
+     d:"Antimony trioxide — a fine white powder — is the form most of the market actually consumes: the synergist in halogenated flame retardants, the catalyst in PET polymerisation, an opacifier in ceramics. Roasters volatilise stibnite concentrate into crude trioxide, then refine it to product grades. China supplies most of the world's ATO, which is why the ban hit plastics compounders first.",pr:"2024–25: US ATO import dependence on China ~63% pre-ban (USGS)"},
+    {s:"99.65%",n:"Metal ingot",g:"M",use:"The benchmark",
+     d:"Regulus-grade antimony metal — 99.65% ingots — is what the price agencies assess in-warehouse Rotterdam and what the trade means by 'the antimony price'. There is no exchange contract and liquidity is thin, so the 2024–25 squeeze repriced the market violently: from ~$12,000/t in early 2024 to ~$60,000/t at the spring-2025 peak.",pr:"Peak: ~$60,000/t Rotterdam, spring 2025 (~$27.50/lb US market) — price-agency assessments via trade press"},
+    {s:"Pb·Sb",n:"Antimonial lead",g:"D",use:"The battery bones",
+     d:"Adding 1–5% antimony to lead stiffens battery grids against corrosion and deep cycling — the chemistry that starts nearly every combustion vehicle and backs up telecom networks. Nyrstar's Port Pirie smelter recovers antimony straight from this lead circuit, and battery recyclers keep the alloy loop turning: the largest 'secondary mine' in the West.",pr:null},
+    {s:"NaSbO₃",n:"Sodium antimonate",g:"D",use:"The solar clarifier",
+     d:"The glass on a photovoltaic panel must be degassed and colour-corrected to stay transparent for decades — sodium antimonate is the fining agent of choice. Solar glass became the fastest-growing antimony application of the 2020s, tying the energy transition to the same small metal the arms industry needs.",pr:null},
+    {s:"5N+",n:"High-purity Sb",g:"D",use:"The chip dopant",
+     d:"Zone-refined antimony (99.999%+) dopes silicon n-type and forms III-V compounds: indium antimonide for mid-wave infrared detectors — missile seekers, thermal imagers — and gallium antimonide substrates for night-vision focal planes and infrared lasers. Tiny tonnages, zero substitutes, maximum export-control attention.",pr:null},
+    {s:"Sb₂S₃",n:"Trisulfide, mil-spec",g:"D",use:"The primer igniter",
+     d:"Purified antimony trisulfide to MIL-A-22131 spec (minimum 70% Sb) is the friction-sensitive igniter in small-arms primers and percussion caps. The US hasn't produced it domestically at scale in decades — which is why the Army, Idaho National Laboratory and Perpetua opened a containerised pilot plant in July 2026 to make it from Stibnite ore.",pr:null},
+    {s:"♻️",n:"Secondary Sb",g:"C",use:"The lead-loop return",
+     d:"Most recycled antimony never leaves the battery industry: spent lead-acid batteries are remelted and their antimonial lead recast into new grids and oxides. It is invisible in trade statistics but covers a meaningful share of Western consumption — the quiet buffer that kept US industry running through the ban.",pr:null}
+  ],
+  companies:[
+    // seg: mine | sep | dev (space-separated when spanning segments)
+    // --- miners & integrated ---
+    {n:"Hsikwangshan Twinkling Star",u:"http://www.hksts.net/",hq:"China",tik:"state-owned (China Minmetals)",seg:"mine sep",
+     a:"Xikuangshan mine & smelting complex, Lengshuijiang, Hunan — 'the world's antimony capital', mined since 1897",
+     s:"The integrated giant at the centre of the market: ~600,000 t/yr of ore, ~30,000 t/yr of refined antimony and ~40,000 t/yr of products, exported to 50+ countries. Its ageing, high-cost ore base is the deeper reason China's mine share keeps falling — and its smelters increasingly run on imported concentrate."},
+    {n:"Hunan Gold",u:"https://www.hngoldgroup.com/",hq:"China",tik:"SZSE: 002155",seg:"mine sep",
+     a:"Gold-antimony mines and smelters across Hunan, in the Minmetals family alongside Twinkling Star",
+     s:"China's listed antimony champion — gold-antimony ore gives it the same by-product economics the West is now chasing. A prime beneficiary of the 2024–25 price spike; a hostage, like every Chinese producer, to MOFCOM's export-licence pace."},
+    {n:"Guangxi China Tin / Huaxi Group",u:"https://www.chinatin.com.cn/",hq:"China",tik:"SSE: 000960 group",seg:"mine",
+     a:"Tongkeng-Changpo polymetallic mine, Nandan, Guangxi — tin-lead-zinc-antimony, ~9,300 t/yr Sb capacity",
+     s:"With Xikuangshan, part of the consortium producing over 80% of China's domestic mine output. Guangxi holds the largest share of China's antimony deposits, and its 2025 suspensions — environmental and economic — helped starve the smelter belt of ore."},
+    {n:"Polyus",u:"https://polyus.com/",hq:"Russia",tik:"MOEX: PLZL",seg:"mine",
+     a:"Olimpiada gold mine, Krasnoyarsk Krai — antimony in gold flotation concentrate",
+     s:"The world's biggest single antimony by-product source at its peak: 27,075 t in concentrate in 2023 as Olimpiada's high-grade Vostochny stage was mined. That stage is winding down and the company is sanctioned — Russia's ~32,000 t now flows overwhelmingly east to China."},
+    {n:"GeoProMining",u:"http://www.geopromining.com/",hq:"Russia",tik:"private",seg:"mine",
+     a:"Sarylakh-Surma and Sentachan gold-antimony mines, Sakha (Yakutia) — ore grades ~13.7% Sb",
+     s:"Runs some of the highest-grade antimony mines on Earth in the Yakutian permafrost, relaunched from Soviet-era assets in 2008. Concentrate output roughly tripled from 2019 to the low-20,000s of tonnes — nearly all of it sold into China."},
+    {n:"Comsup Commodities / Anzob",u:"https://www.specialeurasia.com/2025/04/25/tajikistan-antimony-cmr/",hq:"US / Tajikistan",tik:"private",seg:"mine",
+     a:"Anzob GOK, Jijikrut mercury-antimony deposit, Sughd — Tajikistan's largest antimony operation",
+     s:"The quietest US-owned strategic asset anywhere: a New Jersey trading family has put >$300M into the Soviet-era Anzob combine, whose deeper levels grade >15% Sb with gold. Licensed to 2027; courted by everyone since the ban made Tajik supply precious — it feeds ~42% of EU antimony imports."},
+    {n:"Talco Gold",u:"https://en.avesta.tj/",hq:"Tajikistan / China",tik:"JV: TALCO + Tibet Huayu (SSE: 601020)",seg:"mine sep",
+     a:"Konchoch gold-antimony deposits and a new 20,000 t/yr antimony smelter at Ayni",
+     s:"Tajikistan's expansion vehicle — and the fine print in the diversification story: the state aluminium company's 50/50 partner is Chinese. The Ayni smelter, nearing completion in early 2026, would put a fifth of world smelting capacity outside China but not outside Chinese ownership."},
+    {n:"Alkane Resources",u:"https://alkres.com/",hq:"Australia",tik:"ASX: ALK · TSX: ALK",seg:"mine dev",
+     a:"Costerfield gold-antimony mine (Victoria); earn-in up to 80% of Nagambie; Tomingley gold",
+     s:"Australia's only producing antimony miner, inherited via the August 2025 Mandalay merger: 1,298 t of antimony in FY2026 alongside 40,103 oz of gold, record profit and a first dividend. Mine life is the catch (~5 years) — hence aggressive near-mine drilling and the April 2026 Nagambie earn-in, consolidating Victoria's antimony district."},
+    // --- smelting & processing ---
+    {n:"United States Antimony",u:"https://usantimony.com/",hq:"United States",tik:"NYSE American: UAMY",seg:"sep dev",
+     a:"Thompson Falls smelter (Montana); Madero smelter (Mexico); Alchemy hydromet plant (Bolivia, offtake); Alaska & Montana claims; ~10% of Larvotto",
+     s:"America's only operating antimony smelter, transformed by the crisis: a ~$245M sole-source DLA stockpile contract, a $20M expansion toward 300–400 tons/month, the Madero restart, a Bolivian hydromet line shipping flake north, 35,000+ acres of Alaskan claims, a hydromet JV with Americas Gold and Silver — and a rejected ~A$720M bid for Larvotto. Guiding to $125M revenue in 2026."},
+    {n:"SPMP",u:"https://www.spmpgroup.com/",hq:"Oman",tik:"private (Oman Investment Authority + Tri-Star)",seg:"sep",
+     a:"Sohar antimony roaster and gold circuit, Sohar Free Zone — ~20,000 t/yr design capacity, idle",
+     s:"The cautionary tale of building the furnace before the mine: the largest antimony plant outside China, idled since early 2024 for want of concentrate and — as of August 2026 — seeking a buyer or operating partner. Whoever secures feed for Sohar acquires a ready-made piece of the non-Chinese midstream."},
+    {n:"Nyrstar (Trafigura)",u:"https://www.nyrstar.com/",hq:"Australia / Switzerland",tik:"private (Trafigura)",seg:"sep",
+     a:"Port Pirie multi-metals smelter, South Australia — antimony recovery from the lead circuit",
+     s:"Poured Australia's first antimony metal in November 2025 and shipped the first parcel in February 2026, ramping toward 2,000 t/yr by end-2026 with a 5,000 t option by 2028 — underwritten by A$105M in fresh federal-state support. Proof that the fastest Western smelting fix is a circuit inside an existing lead plant."},
+    // --- developers ---
+    {n:"Perpetua Resources",u:"https://perpetuaresources.com/",hq:"United States",tik:"Nasdaq: PPTA · TSX: PPTA",seg:"dev",
+     a:"Stibnite Gold Project, Idaho — the only identified US antimony reserve (148 Mlb) inside a 4.8 Moz gold project",
+     s:"The West's flagship rebuild: Record of Decision January 2025, groundbreaking October 2025, a $2.9B EXIM loan approved May 2026, >$80M of Pentagon funding, $574M cash — and production targeted for 2029, covering ~35% of US antimony demand. Injunctions denied but appeals continue; the gold, as in 1941, pays for the antimony."},
+    {n:"Larvotto Resources",u:"https://www.larvottoresources.com/",hq:"Australia",tik:"ASX: LRV",seg:"dev",
+     a:"Hillgrove gold-antimony mine, NSW — Australia's largest antimony resource, ~5,000 t/yr planned (~7% of world supply)",
+     s:"The fastest mine restart of the crisis: acquired December 2023, fully funded with A$60M equity plus a US$105M bond, first ore hauled May 2026, commissioning from July — and first production due within days as August 2026 closed. Wogen holds a seven-year antimony offtake; USAC's takeover approach was rejected in October 2025."},
+    {n:"Nova Minerals",u:"https://novaminerals.com.au/",hq:"Australia / US",tik:"ASX: NVA · Nasdaq: NVA",seg:"dev",
+     a:"Estelle gold & critical-minerals project, Alaska — Stibium antimony prospect (grades up to 60.5% Sb)",
+     s:"Won a US$43.4M Defense Production Act award in October 2025 to fast-track Alaskan antimony — roads built, equipment ordered, processing plant planned, initial output targeted late 2026 and refined US antimony by 2027. A gold explorer repurposed mid-flight as a defence supplier."},
+    {n:"Felix Gold",u:"https://felixgold.com.au/",hq:"Australia / US",tik:"ASX: FXG",seg:"dev",
+     a:"Treasure Creek, Fairbanks, Alaska — historic Scrafford antimony mine ground (ore historically 38–56% Sb)",
+     s:"Holds the highest-grade near-term card in Alaska: a March 2026 permit to extract a 1,600-ton bulk sample of massive stibnite that already exceeds US military spec as direct ore. The gap between bulk sampling and a commercial mining permit is now the whole story."},
+    {n:"Southern Cross Gold",u:"https://www.southerncrossgold.com/",hq:"Australia / Canada",tik:"TSXV: SXGC · ASX: SX2",seg:"dev",
+     a:"Sunday Creek gold-antimony project, Victoria — exploration target includes 63,000–95,000 t of contained antimony",
+     s:"The biggest undeveloped antimony endowment in the Western pipeline, inside a 3.0–4.6 Moz AuEq exploration target. Eleven rigs turning, a 1.2 km exploration decline under construction since the November 2025 state approval — and years of study still separating it from a saleable tonne."},
+    {n:"Black Cat Syndicate",u:"https://bc8.com.au/",hq:"Australia",tik:"ASX: BC8",seg:"dev",
+     a:"Mt Clement antimony project, Pilbara, WA — ~25,800 t contained Sb (Inferred), near its Paulsens gold mine",
+     s:"Doubled the Mt Clement resource in September 2025 with only a fifth of the vein system drilled; metallurgical work and scoping studies run through 2026. One of the few Australian antimony plays that isn't primarily a gold story."},
+    {n:"Military Metals",u:"https://www.militarymetalscorp.com/",hq:"Canada / Slovakia",tik:"CSE: MILI",seg:"dev",
+     a:"Trojárová & Tiennesgrund antimony-gold, Slovakia; West Gore, Nova Scotia",
+     s:"Wears the thesis in its name — and carries its risks: weeks after declaring the EU's largest modern antimony resource at Trojárová (67,000 t Sb, April 2026), Slovakia's environment ministry cancelled the exploration licence and the stock lost more than half its value. An appeal has run since June 2026 while drills turn at West Gore instead."}
+  ],
+  sites:[
+    // type: mine | proc | dis | dev ; size 1-3
+    // --- mines (producing) ---
+    {n:"Xikuangshan",c:"China",ll:[27.75,111.48],ty:"mine",sz:3,d:"The world's largest antimony deposit — 'the antimony capital', mined since 1897 and the source of the ore that armed two world wars. Run by Hsikwangshan Twinkling Star (China Minmetals); ageing grades and environmental inspections keep tightening its output."},
+    {n:"Tongkeng-Changpo",c:"China",ll:[24.97,107.54],ty:"mine",sz:2,d:"Guangxi China Tin's polymetallic mine at Nandan — tin, lead, zinc and ~9,300 t/yr of antimony. With Xikuangshan it accounts for over 80% of China's domestic mine output; 2025 suspensions in Guangxi helped starve the smelters."},
+    {n:"Jijikrut / Anzob GOK",c:"Tajikistan",ll:[39.08,68.87],ty:"mine",sz:2,d:"Tajikistan's flagship mercury-antimony combine, US-owned (Comsup Commodities, >$300M invested since the 2000s). Deeper levels grade over 15% Sb with gold; the state wants processing lifted to 700,000 t of ore a year."},
+    {n:"Konchoch (Talco Gold)",c:"Tajikistan",ll:[39.39,68.54],ty:"mine",sz:2,d:"Gold-antimony deposits at Ayni worked by Talco Gold — a 50/50 venture of state-owned TALCO and China's Tibet Huayu Mining — with ~1,500 workers, 50 km of galleries and a new 20,000 t/yr antimony smelter nearing completion in early 2026."},
+    {n:"Olimpiada",c:"Russia",ll:[59.87,92.92],ty:"mine",sz:3,d:"Polyus' giant gold mine in Krasnoyarsk Krai produced 27,075 t of antimony in concentrate in 2023 — briefly the world's largest single source — as the high-grade Vostochny stage was mined. That stage is winding down; the metal flows east under sanctions."},
+    {n:"Sarylakh & Sentachan",c:"Russia",ll:[64.35,142.52],ty:"mine",sz:2,d:"GeoProMining's Yakutian gold-antimony mines — ore around 13.7% Sb, among the highest grades anywhere, hauled out of the permafrost 400 km apart and concentrated at Sarylakh. Russia's other antimony pillar besides Olimpiada."},
+    {n:"Costerfield",c:"Australia",ll:[-36.87,144.80],ty:"mine",sz:1,d:"Australia's only producing antimony mine — high-grade gold-antimony veins worked by Alkane Resources (ex-Mandalay): 1,298 t of antimony in FY2026. Reserve life ~5 years, hence the drilling blitz at True Blue, Brunswick South and Kendal."},
+    {n:"Tha Byu & Shan State mines",c:"Myanmar",ll:[19.7,97.2],ty:"mine",sz:1,d:"Myanmar's scattered antimony mines — led by the Tha Byu deposit — supplied ~4,500 t in 2025 through border trade with China and Thailand. A conflict economy: armed groups in the north now list antimony among the minerals they intend to tax and trade."},
+    {n:"Bolivian cooperatives",c:"Bolivia",ll:[-21.0,-66.3],ty:"mine",sz:1,d:"Bolivia's cooperative miners — heirs of the great Chilcobija mine in Potosí — produced ~5,000 t in 2025, the largest supply outside Asia and one of the biggest reserve bases anywhere (~310,000 t). Concentrate mostly exports for processing."},
+    {n:"Haliköy",c:"Türkiye",ll:[38.08,28.20],ty:"mine",sz:1,d:"Eti Bakır's Haliköy operation in western Anatolia yields ~1,100 t/yr of by-product antimony concentrate within Türkiye's ~3,000 t national output — atop a 99,000 t reserve base that makes Türkiye a perennial 'next supplier' candidate for Europe."},
+    {n:"Gediz antimony district",c:"Türkiye",ll:[39.05,29.42],ty:"mine",sz:1,d:"Kütahya's Gediz district hosts several private producers — Özdemir Antimuan (founded 1932, ~1.5% of the world concentrate market) and Üç Yıldız among them — while power group ODAŞ quietly ramps an antimony mine it bought for $1M in 2015, now a ~$12M-a-year earner at post-ban prices."},
+    // --- smelters & roasters ---
+    {n:"Lengshuijiang smelting complex",c:"China",ll:[27.69,111.43],ty:"proc",sz:3,d:"Hsikwangshan Twinkling Star's furnaces — ~30,000 t/yr of refined antimony, ~40,000 t/yr of trioxide and products, flame-retardant masterbatch to 50+ countries. The single densest node in the world antimony chain."},
+    {n:"Alchemy plant (USAC)",c:"Bolivia",ll:[-19.6,-65.75],ty:"proc",sz:1,d:"A US Antimony-funded hydrometallurgical plant run by Bolivia's Alchemy SRL near Potosí — output up 15-fold since mid-2025, first ~150 t shipment of antimony flake to Thompson Falls in early 2026, ramping toward ~150 t/month. The newest link in the non-Chinese chain."},
+    {n:"Thompson Falls smelter",c:"United States",ll:[47.60,-115.37],ty:"proc",sz:1,d:"United States Antimony's Montana plant — the only operating antimony smelter in the US, mid-expansion toward 300–400 tons/month under a ~$245M DLA stockpile contract. Runs entirely on imported and purchased feed until Stibnite arrives."},
+    {n:"Madero smelter",c:"Mexico",ll:[25.78,-103.03],ty:"proc",sz:1,d:"USAC's Coahuila smelter, restarted in April 2025 after a year idle — six furnaces refurbished for under $1M, ramping toward 200 tons/month on internationally sourced ore, with the Puerto Blanco mill and Wadley concessions behind it."},
+    {n:"Port Pirie (Nyrstar)",c:"Australia",ll:[-33.19,138.02],ty:"proc",sz:1,d:"Trafigura's Nyrstar lead smelter added an antimony recovery circuit — first pour November 2025, first shipment February 2026, ramping to 2,000 t/yr (potentially 5,000 t by 2028) with A$105M of government backing. Australia's only finished-antimony source."},
+    {n:"Ayni smelter (Talco Gold)",c:"Tajikistan",ll:[39.40,68.55],ty:"proc",sz:2,d:"Talco Gold's export-oriented antimony metallurgical plant — four furnaces, 20,000 t/yr of raw-material capacity, nearing completion in January 2026. Would move a fifth of world smelting outside China's borders, inside a half-Chinese joint venture."},
+    // --- disrupted & idle ---
+    {n:"Muli",c:"China",ll:[24.05,105.07],ty:"dis",sz:1,d:"Yunnan Muli Antimony Industry's mine and smelter (10,000 t/yr metal, 4,000 t/yr trioxide capacity) fully suspended production in 2025 — squeezed between depleted ore, environmental rules and the domestic-price discount. Emblematic of China's shrinking mine base."},
+    {n:"SPMP Sohar roaster",c:"Oman",ll:[24.45,56.62],ty:"dis",sz:2,d:"The West's purpose-built escape hatch: a ~20,000 t/yr roaster with a gold circuit in Sohar Free Zone, the largest antimony plant outside China — idle since early 2024 for want of concentrate, and seeking a buyer or operating partner as of August 2026."},
+    {n:"Kadamjay combine",c:"Kyrgyzstan",ll:[40.13,71.72],ty:"dis",sz:1,d:"The Soviet Union's antimony giant, smelting since 1936 atop a huge mercury-antimony district — bankrupt in 2020, and since March 2026 under a phased private relaunch with equipment modernisation. A revival Bishkek talks up and rarely details."},
+    {n:"Beaver Brook",c:"Canada",ll:[48.7,-55.3],ty:"dis",sz:1,d:"Canada's only primary antimony mine — ~6,000 t/yr of concentrate capacity, owned by China Minmetals since 2009, mined in bursts (2012–13, 2019–23) and on care-and-maintenance since 2023. Idle Western capacity in Chinese hands, with no restart announced."},
+    {n:"Consolidated Murchison",c:"South Africa",ll:[-23.94,30.68],ty:"dis",sz:1,d:"The century-old Gravelotte antimony-gold mine in Limpopo — for decades the biggest producer outside China, idled in the 2010s. Successive restart ventures have circled it since the price spike; none has yet returned it to steady production."},
+    // --- development ---
+    {n:"Stibnite Gold Project",c:"United States",ll:[44.898,-115.339],ty:"dev",sz:3,d:"Perpetua's reopening of the WWII antimony district: the only identified US antimony reserve (148 Mlb) inside a 4.8 Moz gold project. ROD January 2025, groundbreaking October 2025, $2.9B EXIM loan approved May 2026, production targeted 2029 — litigation still pending."},
+    {n:"Hillgrove",c:"Australia",ll:[-30.57,151.90],ty:"dev",sz:2,d:"Larvotto's gold-antimony restart near Armidale, NSW — Australia's largest antimony resource, ~5,000 t/yr planned (~7% of world supply). First ore May 2026, plant commissioning from July, first production due as August 2026 ends; Wogen holds a 7-year offtake."},
+    {n:"Estelle / Stibium",c:"United States",ll:[62.4,-151.7],ty:"dev",sz:1,d:"Nova Minerals' Alaskan gold-and-antimony play, backed by a US$43.4M Defense Production Act award — roads and plant works underway toward initial antimony output in late 2026 and refined US antimony by 2027. Grades at the Stibium prospect reach 60.5% Sb."},
+    {n:"Treasure Creek",c:"United States",ll:[65.05,-147.75],ty:"dev",sz:1,d:"Felix Gold's ground over the historic Scrafford antimony mine near Fairbanks — hand-sorted massive stibnite that beats US military spec as direct ore, and a March 2026 permit for a 1,600-ton bulk sample. Awaiting a commercial mining permit."},
+    {n:"Sunday Creek",c:"Australia",ll:[-37.25,145.05],ty:"dev",sz:2,d:"Southern Cross Gold's Victorian discovery — an exploration target of 3.0–4.6 Moz AuEq including 63,000–95,000 t of contained antimony, with a 1.2 km exploration decline under construction. The largest antimony endowment in the Western pipeline, and the furthest from production."},
+    {n:"Nagambie",c:"Australia",ll:[-36.77,145.16],ty:"dev",sz:1,d:"Australia's highest-grade antimony resource (539 kt @ 3.9% Sb with gold), 40 km from Costerfield — now under an Alkane earn-in (up to 80%, April 2026) that consolidates Victoria's antimony district under one operator."},
+    {n:"Mt Clement",c:"Australia",ll:[-22.6,116.3],ty:"dev",sz:1,d:"Black Cat Syndicate's Pilbara antimony project — ~25,800 t of contained antimony (Inferred) with silver and lead credits, doubled in September 2025 with most of the vein system still undrilled. Scoping studies through 2026."},
+    {n:"Trojárová",c:"Slovakia",ll:[48.354,17.206],ty:"dev",sz:1,d:"Military Metals' deposit near Bratislava — a maiden resource of 67,000 t of antimony with gold (April 2026), the EU's largest defined by modern standards. Weeks later Slovakia cancelled the exploration licence; an appeal has been running since June 2026. Europe's antimony hope, frozen in paperwork."},
+    {n:"West Gore",c:"Canada",ll:[45.093,-63.779],ty:"dev",sz:1,d:"Nova Scotia's WWI munitions mine — 7,000+ t of 46% antimony concentrate shipped by 1917 — back under the drill: Military Metals began a 1,750 m diamond-drilling campaign in July 2026, with stockpile grabs running to 40.6% Sb. No modern resource yet."}
+  ]
+};
+
+/* ============ helpers ============ */
+const C = getComputedStyle(document.documentElement);
+const col = v => C.getPropertyValue(v).trim();
+const PAL = ["#34d399","#f472b6","#fbbf24","#5b8aff","#c4b5fd","#f87171","#94a3b8","#2dd4bf","#38bdf8","#a3e635","#64748b","#f0abfc","#e879f9"];
+
+/* count-up hero stats */
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target, end=parseFloat(el.dataset.count), suf=el.dataset.suffix||"", pre=el.dataset.prefix||"", dec=end%1?1:0;
+  const t0=performance.now();
+  (function tick(t){const p=Math.min(Math.max((t-t0)/1200,0),1), v=end*(1-Math.pow(1-p,3));
+    el.textContent=pre+(end>=1000?Math.round(v).toLocaleString("en-US"):v.toFixed(dec))+suf;
+    if(p<1)requestAnimationFrame(tick);})(t0);
+  io.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+
+/* ============ MAP ============ */
+const map = L.map("map",{scrollWheelZoom:false,worldCopyJump:true}).setView([25,60],2);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{
+  attribution:'Tiles &copy; Esri &mdash; &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom:10
+}).addTo(map);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",{
+  maxZoom:10
+}).addTo(map);
+map.on("click",()=>map.scrollWheelZoom.enable());
+
+const groups = {mines:L.layerGroup().addTo(map),
+                processing:L.layerGroup().addTo(map),
+                disrupted:L.layerGroup().addTo(map), development:L.layerGroup().addTo(map)};
+const TYCOL={mine:col("--mine"),proc:col("--proc"),dis:col("--dis"),dev:col("--dev")};
+const TYNAME={mine:"MINE",proc:"SMELTER / ROASTER",dis:"DISRUPTED / IDLE",dev:"DEVELOPMENT"};
+const TYGRP={mine:"mines",proc:"processing",dis:"disrupted",dev:"development"};
+
+DATA.sites.forEach(s=>{
+  const c=TYCOL[s.ty];
+  L.circleMarker(s.ll,{radius:4+s.sz*2.4,color:c,weight:1.5,fillColor:c,fillOpacity:.35})
+   .bindPopup(`<span class="pp-tag" style="background:${c}22;color:${c}">${TYNAME[s.ty]}</span><br><b>${s.n}</b> · ${s.c}<br>${s.d}`)
+   .addTo(groups[TYGRP[s.ty]]);
+});
+
+/* layer toggles */
+document.querySelectorAll(".chip[data-layer]").forEach(ch=>ch.addEventListener("click",()=>{
+  const g=groups[ch.dataset.layer];
+  if(ch.classList.toggle("on")) map.addLayer(g); else map.removeLayer(g);
+}));
+
+/* ============ FORMS GRID ============ */
+const GRPNAME={U:"Upstream (mine & concentrate)",M:"Midstream (roast & smelt)",D:"Downstream (products)",C:"Circular"};
+const GRPCOL={U:col("--accent"),M:col("--accent2"),D:col("--dis"),C:col("--muted")};
+const elGrid=document.getElementById("elGrid"), elDetail=document.getElementById("elDetail");
+elGrid.innerHTML=DATA.forms.map((e,i)=>`
+  <button class="el g${e.g}" data-i="${i}" aria-label="${e.n}">
+    <span class="z">${String(i+1).padStart(2,"0")}</span>
+    <b>${e.s}</b><span>${e.n}</span>
+  </button>`).join("");
+function showEl(i){
+  const e=DATA.forms[i];
+  document.querySelectorAll(".el").forEach(el=>el.classList.toggle("sel",+el.dataset.i===i));
+  const grpCol=GRPCOL[e.g];
+  elDetail.innerHTML=`
+    <h3>${e.n} <small>· ${e.use}</small></h3>
+    <div class="tags">
+      <span class="pp-tag" style="background:${grpCol}22;color:${grpCol}">${GRPNAME[e.g].toUpperCase()}</span>
+    </div>
+    <p>${e.d}</p>
+    ${e.pr?`<div class="price">${e.pr}</div>`:""}`;
+}
+elGrid.addEventListener("click",ev=>{const b=ev.target.closest(".el");if(b)showEl(+b.dataset.i);});
+showEl(DATA.forms.findIndex(e=>e.n==="ATO"));
+
+/* ============ JOURNEY CARDS ============ */
+document.getElementById("journey").innerHTML = DATA.journey.map((j,i)=>`
+  <div class="jcard"><div class="num">${String(i+1).padStart(2,"0")}</div>
+    <div class="ico">${j.ico}</div><h3>${j.t}</h3><p>${j.p}</p>
+    <div class="fact">${j.f}</div></div>`).join("");
+
+/* ============ COMPANY TRACKER ============ */
+const SEGMETA={
+  mine:{label:"Miner",color:col("--mine")},
+  sep:{label:"Smelting & processing",color:col("--proc")},
+  dev:{label:"Developer",color:col("--dev")}
+};
+const coState={segs:new Set(Object.keys(SEGMETA)),q:""};
+function renderCo(){
+  const q=coState.q.trim().toLowerCase();
+  const rows=DATA.companies.filter(c=>c.seg.split(" ").some(s=>coState.segs.has(s))&&
+    (!q||[c.n,c.hq,c.tik,c.a,c.s].join(" ").toLowerCase().includes(q)));
+  document.getElementById("coBody").innerHTML=rows.map(c=>{
+    const tags=c.seg.split(" ").map(s=>{const m=SEGMETA[s];
+      return `<span class="pp-tag" style="background:${m.color}22;color:${m.color}">${m.label}</span>`;}).join(" ");
+    return `<tr>
+      <td><b><a href="${c.u}" target="_blank" rel="noopener">${c.n}</a></b>
+        <div class="tik">${c.hq} · ${c.tik}</div></td>
+      <td>${tags}</td>
+      <td>${c.a}</td>
+      <td>${c.s}</td></tr>`;
+  }).join("")||`<tr><td colspan="4" style="text-align:center;padding:24px">No companies match.</td></tr>`;
+  document.getElementById("coCount").textContent=`${rows.length} of ${DATA.companies.length} companies`;
+}
+document.querySelectorAll("#coFilters .chip").forEach(ch=>ch.addEventListener("click",()=>{
+  const s=ch.dataset.seg;
+  if(ch.classList.toggle("on")) coState.segs.add(s); else coState.segs.delete(s);
+  renderCo();
+}));
+document.getElementById("coSearch").addEventListener("input",e=>{coState.q=e.target.value;renderCo();});
+renderCo();
+
+/* ============ CHARTS ============ */
+Chart.defaults.color=col("--muted");
+Chart.defaults.borderColor=col("--line");
+Chart.defaults.font.size=11;
+const fmtT=n=>n>=1000?(n/1000).toLocaleString("en-US",{maximumFractionDigits:1})+" kt":n+" t";
+const noLeg={plugins:{legend:{display:false}}};
+
+/* draw a total in the center of doughnut charts */
+Chart.register({
+  id:"centerText",
+  afterDraw(chart){
+    const opts=chart.options.plugins&&chart.options.plugins.centerText;
+    if(!opts||!opts.enabled) return;
+    if(!chart.chartArea) return;
+    const {ctx,chartArea:{left,right,top,bottom}}=chart;
+    const cx=(left+right)/2, cy=(top+bottom)/2;
+    ctx.save();
+    ctx.textAlign="center";
+    ctx.textBaseline="middle";
+    ctx.fillStyle=col("--txt");
+    ctx.font="700 19px -apple-system,Segoe UI,Roboto,sans-serif";
+    ctx.fillText(opts.text, cx, cy-(opts.label?9:0));
+    if(opts.label){
+      ctx.font="600 9.5px -apple-system,Segoe UI,Roboto,sans-serif";
+      ctx.fillStyle=col("--muted");
+      ctx.fillText(opts.label, cx, cy+10);
+    }
+    ctx.restore();
+  }
+});
+
+const donutOpts={maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+  tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}%`}}},cutout:"62%"};
+
+new Chart(chProd,{type:"bar",
+  data:{labels:DATA.production2025.map(d=>d[0]),
+    datasets:[{data:DATA.production2025.map(d=>d[1]),backgroundColor:DATA.production2025.map((d,i)=>i===0?col("--accent"):"#f472b688"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{type:"logarithmic",ticks:{callback:v=>[1000,10000,100000].includes(v)?(v/1000)+" kt":""},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmtT(c.parsed.x)} antimony content (log scale)`}}}}});
+
+new Chart(chRes,{type:"doughnut",
+  data:{labels:DATA.reserves.map(d=>d[0]),datasets:[{data:DATA.reserves.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed} kt`}},
+    centerText:{enabled:true,text:"~2 Mt",label:"world total"}}}});
+
+new Chart(chTrend,{type:"line",
+  data:{labels:DATA.trend.years,
+    datasets:[
+      {label:"Mine production (t Sb)",data:DATA.trend.prod,borderColor:col("--accent"),backgroundColor:"#34d39922",fill:true,tension:0,pointRadius:3,pointBackgroundColor:col("--accent")}
+    ]},
+  options:{maintainAspectRatio:false,
+    scales:{y:{min:0,max:200000,ticks:{callback:v=>(v/1000)+" kt"},grid:{color:col("--line")}},
+            x:{grid:{display:false}}},
+    plugins:{legend:{display:false},
+      tooltip:{callbacks:{label:c=>` ${fmtT(c.parsed.y)} of antimony content`}}}}});
+
+new Chart(chConv,{type:"bar",
+  data:{labels:DATA.conv.map(d=>d[0]),
+    datasets:[{data:DATA.conv.map(d=>d[1]),backgroundColor:DATA.conv.map((d,i)=>i===0?col("--accent"):"#f472b688"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{max:100,ticks:{callback:v=>v+"%"},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ~${c.parsed.x}% of world antimony smelting & processing (industry estimates)`}}}}});
+
+new Chart(chUse,{type:"doughnut",
+  data:{labels:DATA.endUse.map(d=>d[0]),datasets:[{data:DATA.endUse.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,
+    centerText:{enabled:true,text:"~45%",label:"flame retardants"}}}});
+
+new Chart(chUsImp,{type:"doughnut",
+  data:{labels:DATA.usImports.map(d=>d[0]),datasets:[{data:DATA.usImports.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:donutOpts});
+
+new Chart(chPrices,{type:"bar",
+  data:{labels:DATA.prices.labels,
+    datasets:[{data:DATA.prices.usd,backgroundColor:DATA.prices.usd.map((v,i)=>i===3?col("--accent"):"#f472b688"),borderRadius:4}]},
+  options:{...noLeg,maintainAspectRatio:false,
+    scales:{y:{min:0,ticks:{callback:v=>"$"+v},grid:{color:col("--line")}},x:{grid:{display:false}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ~$${c.parsed.y.toFixed(2)}/lb, US market (trade-press assessments)${c.dataIndex===2?" — Rotterdam metal near $60,000/t":""}`}}}}});
+
+/* china bars */
+document.getElementById("chinaBars").innerHTML = DATA.chinaShares.map(([s,v])=>`
+  <div class="bar-row"><span>${s}</span><div class="track"><div class="fill" data-w="${v}"></div></div><span class="val">~${v}%</span></div>`).join("");
+const io2=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.w+"%");io2.unobserve(e.target);}
+}),{threshold:.4});
+io2.observe(document.getElementById("chinaBars"));
+
+/* nav active state */
+const secs=[...document.querySelectorAll("section[id],header")];
+const navLinks=[...document.querySelectorAll("nav a.link")];
+const io3=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}
+}),{rootMargin:"-40% 0px -55% 0px"});
+secs.forEach(s=>io3.observe(s));
+</script>
+<script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
