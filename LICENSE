@@ -1,0 +1,157 @@
+mineral.watch — Licensing and Rights Notice
+===========================================
+
+Copyright © 2026 mineral.watch (the "Project"). All rights reserved
+except as expressly granted below.
+
+This Project is dual-licensed. Different parts of it are covered by
+different licences, and some parts are not licensed to you at all.
+Read Section 1 to work out which applies to what you want to use.
+
+--------------------------------------------------------------------
+1. SCOPE — WHAT IS LICENSED, AND HOW
+--------------------------------------------------------------------
+
+(a) ORIGINAL EDITORIAL CONTENT
+    The written analysis, narrative text, explanatory copy, chokepoint
+    framing, timelines, captions, headings and commentary appearing on
+    the Project's pages.
+
+    Licence:  Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+              International (CC BY-NC-SA 4.0)
+    SPDX:     CC-BY-NC-SA-4.0
+    Text:     https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+(b) SOURCE CODE AND DESIGN SYSTEM
+    The HTML, CSS and JavaScript comprising the site and its interactive
+    dashboards, maps and charts; the Python tooling in tools/; and the
+    visual design system (layout, colour tokens, component structure).
+
+    Licence:  GNU Affero General Public License, version 3 or (at your
+              option) any later version (AGPL-3.0-or-later)
+    SPDX:     AGPL-3.0-or-later
+    Text:     https://www.gnu.org/licenses/agpl-3.0.txt
+
+    Note the network clause: if you run a modified version of this code
+    to provide a service over a network, you must offer the complete
+    corresponding source of your modified version to its users.
+
+(c) COMPILED DATASETS
+    The structured data files under map_data/ and the data structures
+    embedded in the Project's pages, as compilations — that is, the
+    Project's selection, cleaning, verification, structuring, geocoding
+    and arrangement of underlying facts.
+
+    Licence:  CC BY-NC-SA 4.0 (as in (a))
+
+    The Project asserts the sui generis database right under Directive
+    96/9/EC and equivalent national law over these
+    compilations, on the basis of substantial investment in obtaining,
+    verifying and presenting their contents. That right is licensed on
+    the same CC BY-NC-SA 4.0 terms and is not waived.
+
+--------------------------------------------------------------------
+2. THIRD-PARTY DATA — NOT OWNED, NOT SUBLICENSED
+--------------------------------------------------------------------
+
+The Project is built on open data published by others, including but
+not limited to:
+
+    British Geological Survey (BGS) — World Mineral Statistics
+    U.S. Geological Survey (USGS) — Mineral Commodity Summaries
+    UN Comtrade — bilateral trade flows
+    International Energy Agency (IEA) — Critical Minerals analysis
+    World Bank WITS, World Nuclear Association, IAEA, NEA, US EIA
+
+The underlying facts, figures and source datasets published by these
+bodies are NOT the property of the Project and are NOT licensed by
+this notice. They remain subject to the terms of their respective
+publishers, and it is your responsibility to comply with those terms.
+
+Section 1(c) licenses only the Project's own compilation of that
+material — not the material itself. Nothing here should be read as an
+assertion of ownership over public statistical data.
+
+--------------------------------------------------------------------
+3. TRADE MARKS AND BRAND — NOT LICENSED
+--------------------------------------------------------------------
+
+The following are expressly excluded from every licence in Section 1
+and no right to use them is granted:
+
+    - the names "mineral.watch", "MineralWatch", and the per-mineral
+      dashboard names ("CobaltWatch", "GraphiteWatch", and so on)
+    - the mineral.watch logo, wordmark and favicon
+    - the domain mineral.watch
+
+You may not use these to name, brand or promote a derivative work, or
+in any way likely to suggest affiliation with or endorsement by the
+Project. Attribution under Section 5 is permitted and expected; brand
+use beyond that is not.
+
+--------------------------------------------------------------------
+4. MEDIA ASSETS — CHECK BEFORE REUSE
+--------------------------------------------------------------------
+
+Photographs, video and other media under brand/ may include material
+licensed to the Project from third parties. Such material is not
+sublicensed to you under Section 1 and is excluded from any grant made
+here. If you intend to reuse any media asset, contact the Project
+first to establish its status.
+
+--------------------------------------------------------------------
+5. HOW TO ATTRIBUTE
+--------------------------------------------------------------------
+
+Attribution required by CC BY-NC-SA 4.0 is satisfied by a visible
+credit of this form, with a working hyperlink where the medium allows:
+
+    Source: mineral.watch (https://mineral.watch) —
+    CC BY-NC-SA 4.0
+
+Do not imply that the Project endorses you or your use, and do not
+remove or obscure copyright notices, source citations or attribution
+embedded in the material you reuse.
+
+--------------------------------------------------------------------
+6. USES REQUIRING SEPARATE PERMISSION
+--------------------------------------------------------------------
+
+The CC licence in Section 1(a) and 1(c) is NonCommercial. Commercial
+use — including use in a paid product or service, in commissioned
+consultancy or advisory work, in investor-facing or client-facing
+research sold or provided as part of a paid engagement, or in
+advertising-supported publication — is not granted by this notice.
+
+Commercial licences, bulk data licences and republication permissions
+are available. Contact hello@mineral.watch.
+
+Newsrooms: reasonable quotation and citation with attribution under
+Section 5 is welcome and is treated as non-commercial for the purposes
+of this notice, whether or not the outlet is a commercial one.
+
+--------------------------------------------------------------------
+7. INFRINGEMENT
+--------------------------------------------------------------------
+
+Wholesale reproduction of the Project's pages, dashboards or compiled
+datasets — with or without cosmetic modification — is not permitted
+under any licence granted here, and will be pursued through takedown
+notices to hosts and search engines and by other available means.
+
+Reports of infringement: hello@mineral.watch
+
+--------------------------------------------------------------------
+8. NO WARRANTY
+--------------------------------------------------------------------
+
+The Project is provided "as is", without warranty of any kind, express
+or implied. The Project is published for research and informational
+purposes and is not investment, financial, legal or procurement
+advice. The Project accepts no liability for any loss arising from
+reliance on it.
+
+--------------------------------------------------------------------
+
+Human-readable summary: https://mineral.watch/terms/
+Last updated: 1 September 2026

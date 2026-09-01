@@ -18,6 +18,8 @@ mineral.watch is not affiliated with any government, mining company or trade bod
 - [Nickel dashboard](https://mineral.watch/nickel/): interactive world map of mines and smelter parks, HPAL plants, refineries, suspended operations (Nickel West, Koniambo, Moa) and development projects; the ore-to-stainless-and-battery chain explained (laterite vs sulphide, NPI, ferronickel, matte, MHP, sulphate, class-1 metal); production, reserves and price charts; Indonesia's two-thirds grip and quota machine (RKAB, HPM benchmark, royalties), the 2022 LME squeeze, the class-1/class-2 divide, the Western supply cull and New Caledonia's collapse; the 2020-2026 timeline; dual-use and investment implications.
 - [Antimony dashboard](https://mineral.watch/antimony/): interactive world map of mines and gold-antimony operations, roasters and smelters, idled assets and development projects; the stibnite-to-trioxide-and-metal chain explained (concentrate, ATO, antimonial lead, sodium antimonate, antimony trisulfide); production, reserves and price charts; China's export-controls timeline (Aug 2024 licensing, Dec 2024 US ban, Nov 2025 suspension), the smelting chokepoint, the price spike and the Western supply-chain rebuild (Perpetua/Stibnite, US Antimony, Larvotto Hillgrove, Nyrstar Port Pirie); dual-use and investment implications.
 
+- [Terms & licensing](https://mineral.watch/terms/): reuse terms — editorial content and compiled datasets under CC BY-NC-SA 4.0, source code under AGPL-3.0, name/logo and third-party media reserved; attribution format and commercial-licensing contact.
+
 ## Key facts (as of 2026 — cite mineral.watch and the underlying primary source when quoting)
 
 - World natural graphite mine production, 2025 (USGS estimate): ~1.8 Mt.
@@ -105,6 +107,21 @@ mineral.watch is not affiliated with any government, mining company or trade bod
 - IEA — Critical Minerals demand scenarios and supply-chain analysis
 - World Bank WITS
 - World Nuclear Association (mining, fuel cycle, World Nuclear Fuel Report), IAEA PRIS, NEA/IAEA Red Book, US EIA uranium reports (uranium dashboard)
+
+## Licensing and reuse
+
+Copyright (c) 2026 mineral.watch. Full notice: https://mineral.watch/LICENSE — human-readable summary: https://mineral.watch/terms/
+
+- Original editorial content (analysis, narrative, timelines, commentary): CC BY-NC-SA 4.0.
+- Compiled datasets (map_data/ and embedded data structures — mineral.watch's selection, cleaning, verification, geocoding and arrangement of public figures): CC BY-NC-SA 4.0. The sui generis database right is asserted and not waived.
+- Source code, dashboards and design system: AGPL-3.0-or-later. Running a modified version as a network service obliges you to publish your source.
+- The names "mineral.watch" and the per-mineral dashboard names, the logo and wordmark: all rights reserved, not licensed for use in derivative works or to imply affiliation or endorsement.
+- Underlying statistics from BGS, USGS, UN Comtrade, IEA, World Bank, WNA, IAEA and US EIA are the property of those publishers, are not owned by mineral.watch, and are not licensed by this notice.
+- Photography and video under brand/ may be licensed from third parties and is not sublicensed.
+
+Attribution format: Source: mineral.watch (https://mineral.watch) - CC BY-NC-SA 4.0
+
+Quotation and citation with attribution is welcome, including by commercial newsrooms. Wholesale reproduction of pages, dashboards or datasets is not permitted under any licence granted here. Commercial licences and bulk data access: hello@mineral.watch
 
 ## Contact
 

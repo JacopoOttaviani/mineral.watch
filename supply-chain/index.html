@@ -7,6 +7,8 @@
 <meta name="description" content="Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024. Data from the British Geological Survey.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="mineral.watch">
+<meta name="copyright" content="© 2026 mineral.watch">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
 <meta name="theme-color" content="#0d1117">
 <link rel="canonical" href="https://mineral.watch/supply-chain/">
 <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
@@ -126,6 +128,8 @@ html[data-embed] #sc-sec{padding-top:16px}
 /* fixed (not vh-based) map height when embedded: the iframe is auto-sized to this
    page's own scrollHeight, so a vh unit here would create a resize feedback loop */
 html[data-embed] .mapdiv{height:420px;min-height:0}
+.legal{display:block;margin-top:8px;opacity:.85}
+footer .legal a{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -199,7 +203,10 @@ html[data-embed] .mapdiv{height:420px;min-height:0}
   </div>
 </section>
 
-<footer>mineral.watch · built on open data from BGS, USGS, UN Comtrade and IEA</footer>
+<footer>
+  mineral.watch · built on open data from BGS, USGS, UN Comtrade and IEA
+  <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/terms/">Terms &amp; licensing</a></span>
+</footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
