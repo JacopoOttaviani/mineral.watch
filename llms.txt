@@ -110,7 +110,7 @@ mineral.watch is not affiliated with any government, mining company or trade bod
 
 ## Licensing and reuse
 
-Copyright (c) 2026 mineral.watch. Full notice: https://mineral.watch/LICENSE — human-readable summary: https://mineral.watch/terms/
+Copyright (c) 2026 mineral.watch. Full notice: https://mineral.watch/LICENSE.txt — human-readable summary: https://mineral.watch/terms/
 
 - Original editorial content (analysis, narrative, timelines, commentary): CC BY-NC-SA 4.0.
 - Compiled datasets (map_data/ and embedded data structures — mineral.watch's selection, cleaning, verification, geocoding and arrangement of public figures): CC BY-NC-SA 4.0. The sui generis database right is asserted and not waived.
