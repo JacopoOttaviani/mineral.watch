@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>GreenWatch — Tracking the Green Transition Supply Chain</title>
+<meta name="description" content="Open data visualisation tracking the green transition's supply chain: who builds the world's solar modules, battery cells, wind turbines and electrolysers, which minerals they consume, China's ~80% manufacturing grip, Europe's gigafactory reckoning and where the EU's green money goes — Innovation Fund, Recovery and Resilience Facility, Just Transition Fund, Modernisation Fund, Hydrogen Bank and more. Built on IEA, IRENA, GWEC, BNEF and European Commission data.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="mineral.watch">
+<meta name="copyright" content="© 2026 mineral.watch">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="https://mineral.watch/green/">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="alternate icon" href="/brand/favicon.png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mineral.watch/green/">
+<meta property="og:site_name" content="mineral.watch">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="GreenWatch — Tracking the Green Transition Supply Chain">
+<meta property="og:description" content="Interactive world map of clean-tech factories, EU-funded flagship projects and stalled gigafactories; deployment, investment and manufacturing-concentration charts; the minerals the machines eat; and a fund-by-fund guide to the EU's green money — built on IEA, IRENA, GWEC, BNEF and European Commission data.">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GreenWatch — tracking the green transition supply chain">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GreenWatch — Tracking the Green Transition Supply Chain">
+<meta name="twitter:description" content="Who builds the machines of net zero, which minerals they eat, and where the EU's green money goes — Innovation Fund, RRF, Just Transition Fund, Modernisation Fund, Hydrogen Bank. Built on IEA, IRENA, GWEC, BNEF and European Commission data.">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta name="twitter:image:alt" content="GreenWatch — tracking the green transition supply chain">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
+        { "@type": "ListItem", "position": 2, "name": "Green transition", "item": "https://mineral.watch/green/" }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "GreenWatch — Green Transition Supply Chain Data",
+      "description": "Clean-technology factories, EU-funded flagship projects and stalled gigafactories; solar, wind, EV and battery deployment; clean-energy investment; manufacturing concentration by country and stage; clean-energy shares of mineral demand; and EU green-transition funding instruments with envelopes, awards and disbursements.",
+      "url": "https://mineral.watch/green/",
+      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "temporalCoverage": "2018/2026",
+      "spatialCoverage": "Worldwide, with a focus on the European Union",
+      "variableMeasured": ["Capacity additions", "EV sales", "Clean energy investment", "Manufacturing capacity shares", "Battery pack prices", "Mineral demand shares", "EU funding envelopes", "Grants awarded", "Companies"],
+      "isAccessibleForFree": true,
+      "license": "https://mineral.watch/",
+      "citation": [
+        "IEA World Energy Investment 2025 and 2026",
+        "IEA Renewables 2025; IEA Global EV Outlook 2026; IEA Energy Technology Perspectives 2024",
+        "IEA Global Critical Minerals Outlook 2026",
+        "IRENA Renewable Capacity Statistics 2026; GWEC Global Wind Report 2026; SolarPower Europe Global Market Outlook",
+        "BloombergNEF Battery Price Survey and Energy Transition Investment Trends",
+        "European Commission — Innovation Fund, Recovery and Resilience Scoreboard, Just Transition Platform, Modernisation Fund, Social Climate Fund; European Investment Bank",
+        "Company disclosures and government announcements"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the green transition supply chain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the chain of mines, refineries, materials plants, component factories and installers that turns minerals into the machines of a low-carbon energy system: solar modules, wind turbines, battery cells and electric vehicles, electrolysers, heat pumps, and the grid transformers, cables and storage that connect them. Each machine has its own chain — polysilicon to wafer to cell to module for solar; cathode and anode powders to cells to packs for batteries; rare-earth magnets, steel and glass fibre to nacelles and blades for wind — but they share the same upstream minerals (lithium, cobalt, nickel, graphite, copper, rare earths, silicon) and, increasingly, the same manufacturing geography: China holds roughly 85% of solar and over 80% of battery-cell capacity, and around 60% of wind-turbine and electrolyser manufacturing (IEA)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who makes the world's solar panels, batteries and wind turbines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mostly China. The IEA puts China at around 85% of global solar supply-chain manufacturing capacity — 95% or more for wafers and over 80% for modules — at over 80% of battery-cell production in 2025 (85% of cathode and more than 90% of anode material), at 60% of wind-turbine production capacity and around 60% of electrolyser manufacturing. Chinese companies also took about 70% of the world's wind-turbine orders in 2025 (Wood Mackenzie), and CATL and BYD alone supplied 55% of EV batteries (SNE Research). Europe's strongholds are wind (19% of turbine capacity), grid equipment — Prysmian, Nexans, NKT, Siemens Energy, Hitachi Energy — and heat pumps (20%); the United States is rebuilding solar-module capacity (First Solar ~14 GW, Qcells, T1 Energy) behind tariffs and the 45X manufacturing credit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does the world invest in clean energy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About $2.2 trillion a year. The IEA's World Energy Investment 2026 expects total energy investment to reach $3.4 trillion in 2026, of which $2.2 trillion goes to renewables, nuclear, grids, storage, low-emission fuels, efficiency and electrification — almost twice the $1.2 trillion flowing to oil, gas and coal. Solar alone attracts about $365 billion (roughly $1 billion a day), grids $550 billion and battery storage more than $100 billion. China accounts for almost a third of the clean total; the United States saw $34.8 billion of announced clean-energy projects cancelled in 2025 after federal tax credits were cut (E2)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does the EU spend on the green transition?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no single figure, because the money sits in a stack of instruments. The largest is the €650 billion Recovery and Resilience Facility (2021–2026), 42% of which — roughly €270 billion — went to climate measures. Cohesion policy (€392 billion for 2021–27) must direct 30% of its regional fund and 37% of its Cohesion Fund to climate objectives. The carbon market feeds three dedicated funds: the Innovation Fund (about €40 billion expected over 2020–2030, some €17 billion awarded so far), the Modernisation Fund (over €57 billion expected by 2030 for 13 lower-income member states, €23.2 billion disbursed) and, from 2026, the Social Climate Fund (€86.7 billion to 2032 including national co-financing). Add the €19.3 billion Just Transition Fund, Horizon Europe's roughly €15 billion climate-energy-mobility cluster, the Connecting Europe Facility's €5.8 billion for energy and €5.4 billion under LIFE — plus the European Investment Bank, which signed €57 billion of green financing in 2025 alone, and the €38.8 billion (2024) to €43 billion (2025) a year of ETS auction revenue that member states must spend on climate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the EU Innovation Fund?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The EU's main grant programme for first-of-a-kind clean-technology projects, financed not from the budget but from the sale of emissions allowances under the EU carbon market — which makes its size move with the carbon price (roughly €40 billion expected for 2020–2030). It runs annual competitive calls: €1.1 billion (2020), €1.8 billion (2021), €3.6 billion (2022), €4.2 billion signed for 77 projects (2023) and €2.7 billion for 54 projects (2024), plus dedicated pots — €852 million for six battery-cell factories in 2025 and the European Hydrogen Bank auctions, which have awarded €720 million, €992 million and €1.09 billion in fixed premiums to renewable-hydrogen producers since 2024. The 2025 call (€2.9 billion, with €1 billion ring-fenced for cleantech manufacturing) drew 358 applications and reports in late 2026. Since February 2025 the Innovation Fund is also the seed of the €100 billion Industrial Decarbonisation Bank, and the Commission proposes to fold it into the European Competitiveness Fund from 2028."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Just Transition Fund?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A €19.3 billion fund (2021–2027, €10.9 billion of it from NextGenerationEU) that pays for retraining, diversification, land rehabilitation and clean-energy projects in the roughly 100 coal, lignite, peat, oil-shale and carbon-intensive territories most exposed to the climate transition — from Silesia and Bełchatów in Poland to Western Macedonia, the Jiu Valley, Ida-Viru, Asturias, Lusatia and Sulcis. Poland (€3.85 billion), Germany (€2.5 billion), Romania (€2.1 billion), Czechia (€1.6 billion) and Bulgaria (€1.2 billion) are the biggest recipients. It is the first pillar of the Just Transition Mechanism, alongside an InvestEU scheme and a public-sector loan facility. Its weakness is speed: by March 2025 only €735 million had actually been paid out, and analysts fear the 2028–34 budget proposal, which merges it into national plans, will dilute it further."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did Northvolt fail, and what does it mean for Europe's gigafactories?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Northvolt raised about $15 billion to become Europe's battery champion and filed for bankruptcy in Sweden on 12 March 2025 after years of production problems at its Skellefteå plant, a lost BMW contract and a market in which Chinese cells cost a fraction of European ones — BloombergNEF's 2025 survey put average pack prices at $108/kWh and LFP packs at $81. Its Swedish assets were bought by California's Lyten, which completed the deal in February 2026, is restarting Skellefteå with first shipments due in the second half of 2026 and plans to open the Heide site in Germany in 2028. The wider lesson is being learned across the continent: ACC cancelled its German and Italian plants in February 2026 while ramping Billy-Berclau, Volkswagen's PowerCo only started Salzgitter in December 2025 and pushed Valencia to mid-2027, and Europe's gigafactory pipeline shrank 8% between 2023 and 2026 — the only major region to lose capacity. The plants actually being built in Europe today are increasingly Chinese- or Korean-owned: CATL in Debrecen, BYD in Szeged, LG in Wrocław, Samsung SDI and SK On in Hungary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Europe's green transition dependent on China?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On hardware, yes. The EU imports the overwhelming majority of its solar modules, around 80% of its new PV systems use Chinese inverters (Huawei alone accounts for 115 GW), Chinese companies dominate the battery cells going into European cars, and China refines 60–90% of the lithium, cobalt, graphite and rare earths behind them. The dependence has become a security question: in 2025 undocumented communication devices were found in Chinese inverters, China restricted rare-earth exports to European carmakers and turbine makers, and in 2026 the UK blocked a £1.5 billion Mingyang turbine factory. The EU's answers are the Net-Zero Industry Act's 40% domestic-manufacturing benchmark for 2030, the Industrial Accelerator Act's 'Made in Europe' rules proposed in March 2026, the Commission's May 2026 guidance denying EU funds to projects using high-risk-supplier inverters, and a price-undertaking deal that replaced most EV tariffs in 2026. Where Europe is not dependent is wind, grids and heat pumps — the machines its own companies still lead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Need a deep-dive report on the green transition supply chain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That's exactly what we do. We produce commissioned deep-dive reports on the green transition and the strategic minerals behind it, covering angles such as mine-to-megawatt supply-chain mapping for a given technology, EU funding and state-aid tracking (Innovation Fund, Hydrogen Bank, RRF, Just Transition Fund, IPCEIs) by country or sector, manufacturing-concentration and import-dependence analysis, gigafactory and offtake pipelines, and the security exposure of grid hardware. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#62e86a;--accent2:#ffd54a;
+  --mine:#62e86a;--proc:#ffd54a;--dis:#f87171;--dev:#c4b5fd;
+  --radius:14px;--pad:16px;
+  font-size:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+h1,h2,h3{line-height:1.2;font-weight:700}
+section{padding:40px var(--pad);max-width:1100px;margin:0 auto}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;margin-bottom:8px}
+h2{font-size:1.5rem;margin-bottom:10px}
+.lede{color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:20px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1100px;margin:0 auto}
+.nav-links{display:flex;align-items:center;gap:8px;flex:1;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px;flex:none}
+.brand span{color:var(--accent)}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap;flex:none}
+nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto;flex:none;position:relative;overflow:hidden;z-index:0}
+nav a.cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){nav a.cta::before{transition:none}}
+.research-cta{display:inline-block;background:var(--accent);color:var(--bg);font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none;position:relative;overflow:hidden;z-index:0}
+.research-cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+.research-cta:hover::before,.research-cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){.research-cta::before{transition:none}}
+
+/* subscribe */
+.sub-row{display:flex;flex-direction:column;align-items:stretch;gap:24px;width:100%}
+@media(min-width:860px){.sub-row{flex-direction:row}}
+.sub-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;flex:1;min-width:0}
+.sub-box p{font-size:.92rem;color:var(--muted);margin-bottom:14px}
+.sub-box p:last-child{margin-bottom:0}
+.sub-box a{font-weight:600}
+.sub-form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;flex:1;min-width:0;color-scheme:dark}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-grid .full{grid-column:1/-1}
+.sub-form input,.sub-form select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:var(--txt);font:inherit;font-size:.88rem}
+.sub-form input::placeholder{color:var(--muted)}
+.sub-form input:focus,.sub-form select:focus{outline:none;border-color:var(--accent)}
+.sub-form select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e6edf3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;background-size:16px 16px;padding-right:26px}
+.sub-form button{width:100%;background:var(--accent);color:var(--bg);border:0;cursor:pointer;font:inherit;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;margin-top:14px}
+.sub-form button:hover{filter:brightness(1.12)}
+.form-note{font-size:.74rem;color:var(--muted);margin-top:12px;text-align:center}
+
+/* hero */
+.hero-wrap{position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;transform:scale(1.05);filter:grayscale(1) brightness(.52) contrast(1.05);opacity:.6}
+.hero-tint{position:absolute;inset:0;z-index:0;pointer-events:none;background:var(--accent);mix-blend-mode:color;opacity:.45}
+.hero-scrim{position:absolute;inset:0;z-index:0;pointer-events:none;background:
+  linear-gradient(90deg,rgba(13,17,23,.88) 0%,rgba(13,17,23,.55) 55%,rgba(13,17,23,.3) 100%),
+  linear-gradient(180deg,rgba(13,17,23,.75) 0%,rgba(13,17,23,0) 35%,rgba(13,17,23,0) 68%,var(--bg) 100%)}
+.hero{position:relative;z-index:1;padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
+.hero-wrap .stat{background:rgba(26,34,44,.72);backdrop-filter:blur(4px)}
+.hero-wrap .hero p{color:#b6c2cf}
+.hero h1{font-size:clamp(1.9rem,6.5vw,3.2rem);letter-spacing:-.02em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);max-width:560px;font-size:1rem}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.stat b{display:block;font-size:1.45rem;color:var(--accent);letter-spacing:-.01em}
+.stat span{font-size:.74rem;color:var(--muted)}
+
+/* map */
+#map{height:62vh;min-height:380px;border-radius:var(--radius);border:1px solid var(--line);z-index:1}
+.map-controls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:7px 14px;font-size:.8rem;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent}
+.chip.on{color:#0d1117;font-weight:700}
+.chip.on.c-mine{background:var(--mine);border-color:var(--mine)}
+.chip.on.c-proc{background:var(--proc);border-color:var(--proc)}
+.chip.on.c-dis{background:var(--dis);border-color:var(--dis)}
+.chip.on.c-dev{background:var(--dev);border-color:var(--dev)}
+.legend{font-size:.74rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--card)}
+.leaflet-popup-content{font-size:.82rem;line-height:1.5;margin:12px 14px}
+.leaflet-popup-content b{color:var(--accent)}
+.pp-tag{display:inline-block;font-size:.66rem;padding:1px 8px;border-radius:99px;margin-bottom:4px;font-weight:700}
+
+/* machines grid (mine → material → machine → megawatt) */
+.el-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px;margin-top:8px}
+.el{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 6px 10px;cursor:pointer;text-align:center;transition:.15s;position:relative;-webkit-tap-highlight-color:transparent}
+.el:hover{border-color:var(--accent)}
+.el.sel{border-color:var(--accent);background:#62e86a14}
+.el b{display:block;font-size:.98rem;letter-spacing:-.01em}
+.el span{font-size:.6rem;color:var(--muted);display:block;margin-top:2px}
+.el .z{position:absolute;top:4px;left:7px;font-size:.56rem;color:var(--muted)}
+.el.gU b{color:var(--accent)}
+.el.gM b{color:var(--accent2)}
+.el.gD b{color:var(--dis)}
+.el.gC b{color:var(--muted)}
+.el-legend{font-size:.72rem;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.el-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.el-detail{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.el-detail h3{font-size:1.05rem;margin-bottom:2px}
+.el-detail h3 small{color:var(--muted);font-weight:400;font-size:.78rem}
+.el-detail .tags{margin:6px 0 10px;display:flex;gap:6px;flex-wrap:wrap}
+.el-detail p{font-size:.85rem;color:var(--muted)}
+.el-detail .price{margin-top:10px;font-size:.78rem;color:var(--accent);border-top:1px dashed var(--line);padding-top:8px}
+
+/* journey */
+.journey{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 calc(-1*var(--pad));padding-left:var(--pad);padding-right:var(--pad)}
+.jcard{scroll-snap-align:start;flex:0 0 260px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative}
+.jcard .num{position:absolute;top:14px;right:16px;font-size:1.6rem;font-weight:800;color:var(--line)}
+.jcard .ico{font-size:1.6rem;margin-bottom:10px}
+.jcard h3{font-size:1rem;margin-bottom:6px}
+.jcard p{font-size:.8rem;color:var(--muted)}
+.jcard .fact{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.76rem;color:var(--accent)}
+.jhint{font-size:.72rem;color:var(--muted);margin-top:6px}
+
+/* charts */
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card h3{font-size:.95rem;margin-bottom:4px}
+.card .sub{font-size:.74rem;color:var(--muted);margin-bottom:12px}
+.chartbox{position:relative;height:280px}
+.src{font-size:.68rem;color:var(--muted);margin-top:10px}
+
+/* chokepoint section */
+.big{font-size:clamp(2.6rem,10vw,4.5rem);font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1}
+.bars{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.bar-row{display:grid;grid-template-columns:150px 1fr 44px;align-items:center;gap:10px;font-size:.78rem}
+.bar-row .track{background:var(--bg2);border-radius:99px;height:10px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#c6f7c9);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar-row .val{text-align:right;color:var(--muted)}
+
+/* process flow */
+.flow-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+.flow-wrap svg{min-width:980px;display:block}
+
+/* timeline */
+.tl{position:relative;margin-top:6px;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding-bottom:22px}
+.tl-item::before{content:"";position:absolute;left:-24px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl-item.hot::before{background:var(--accent)}
+.tl-date{font-size:.7rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.tl-item h4{font-size:.92rem;margin:3px 0 4px}
+.tl-item p{font-size:.8rem;color:var(--muted);max-width:640px}
+
+/* EU funds */
+.fund-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:16px}
+@media(min-width:720px){.fund-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.fund-grid{grid-template-columns:1fr 1fr 1fr}}
+.fund{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;gap:6px;transition:border-color .2s}
+.fund:hover{border-color:var(--accent2)}
+.fund .amt{font-size:1.55rem;font-weight:800;color:var(--accent2);letter-spacing:-.02em;line-height:1.05}
+.fund .amt small{font-size:.7rem;color:var(--muted);font-weight:600;letter-spacing:0;margin-left:6px}
+.fund h4{font-size:.95rem}
+.fund p{font-size:.8rem;color:var(--muted)}
+.fund .st{font-size:.74rem;color:var(--accent);border-top:1px dashed var(--line);padding-top:8px;margin-top:2px}
+.fund .meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:8px}
+.fund .meta span{font-size:.64rem;padding:2px 8px;border-radius:99px;background:var(--bg2);border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.fund .meta span.src{color:var(--accent2);border-color:#ffd54a55}
+.fund .meta span.eu{color:var(--accent);border-color:#62e86a55}
+.fund-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+table.ft{width:100%;min-width:760px;border-collapse:collapse;font-size:.79rem;margin-top:4px}
+.ft th{text-align:left;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.ft td{padding:10px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted);line-height:1.45}
+.ft td b{color:var(--txt)}
+.ft td.num{color:var(--accent2);font-weight:700;white-space:nowrap}
+
+/* company tracker */
+.co-search{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.co-search input{flex:1 1 200px;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;color:var(--txt);font-size:.8rem;outline:none;-webkit-appearance:none}
+.co-search input:focus{border-color:var(--accent)}
+.co-search input::placeholder{color:var(--muted)}
+.co-count{font-size:.72rem;color:var(--muted)}
+.co-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+table.co{width:100%;min-width:900px;border-collapse:collapse;font-size:.79rem}
+.co th{text-align:left;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.co td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted);line-height:1.45}
+.co td:first-child{min-width:170px}
+.co td b{color:var(--txt);font-size:.82rem}
+.co td b a{color:var(--txt);text-decoration:none;border-bottom:1px dashed var(--line)}
+.co td b a:hover{color:var(--accent2);border-bottom-color:var(--accent2)}
+.co .tik{font-size:.68rem;color:var(--muted);margin-top:2px;white-space:nowrap}
+.co .pp-tag{white-space:nowrap;margin-bottom:0}
+.chip.on.c-sol{background:var(--accent);border-color:var(--accent)}
+.chip.on.c-bat{background:var(--accent2);border-color:var(--accent2)}
+.chip.on.c-wind{background:#4cc9f0;border-color:#4cc9f0}
+.chip.on.c-h2g{background:var(--dev);border-color:var(--dev)}
+.chip.on.c-mat{background:#f0abfc;border-color:#f0abfc}
+
+/* mini cards (security / invest) */
+.mini-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.mini{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px}
+.mini h4{font-size:.86rem;margin-bottom:5px}
+.mini h4 .mi{margin-right:6px}
+.mini p{font-size:.78rem;color:var(--muted)}
+.note{font-size:.72rem;color:var(--muted);border-left:3px solid var(--accent);padding:8px 12px;background:var(--bg2);border-radius:0 8px 8px 0;margin-top:14px}
+.callout{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:14px;margin-top:14px}
+.callout b{font-size:1.5rem;color:var(--accent2);white-space:nowrap;line-height:1.2}
+.callout span{font-size:.78rem;color:var(--muted);flex:1 1 260px;line-height:1.5}
+@media(min-width:720px){.mini-grid{grid-template-columns:1fr 1fr}}
+
+/* minerals cross-links */
+.mn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:10px}
+.mn{display:block;text-decoration:none;color:var(--txt);background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px;transition:.15s}
+.mn:hover{border-color:var(--mc,var(--accent));transform:translateY(-2px)}
+.mn .sym{font-family:Georgia,serif;font-size:1.4rem;font-weight:700;color:var(--mc,var(--accent));display:block}
+.mn b{display:block;font-size:.9rem;margin:2px 0 4px}
+.mn span{font-size:.72rem;color:var(--muted);display:block}
+.mn .share{color:var(--mc,var(--accent));font-weight:700;font-size:.78rem;margin-top:6px;display:block}
+
+/* research box + animated logo */
+.research-box{display:grid;gap:24px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px;transition:border-color .2s,box-shadow .2s}
+.research-box:hover{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 0 24px -4px var(--accent)}
+.research-art{display:none;justify-self:center;width:180px;animation:hero-float 11s ease-in-out infinite}
+@media(min-width:720px){.research-box{grid-template-columns:1.3fr 1fr}.research-art{display:block}}
+@keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.net-art .edge{stroke:var(--txt);stroke-opacity:.55;stroke-width:1.1;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 1.6s ease-out forwards}
+.net-art .web{stroke:var(--muted);stroke-opacity:.35;stroke-width:.8;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 2s ease-out forwards}
+.net-art .d1{animation-delay:.1s}.net-art .d2{animation-delay:.35s}.net-art .d3{animation-delay:.6s}
+.net-art .d4{animation-delay:.9s}.net-art .d5{animation-delay:1.15s}.net-art .d6{animation-delay:1.4s}
+@keyframes art-draw{to{stroke-dashoffset:0}}
+.net-art .orbit{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:3 7;transform-box:fill-box;transform-origin:center}
+.net-art .orbit.o2{stroke-opacity:.6;animation:art-spin 120s linear infinite reverse}
+@keyframes art-spin{to{transform:rotate(360deg)}}
+.net-art .node{fill:var(--bg);stroke:var(--txt);stroke-opacity:.7;stroke-width:1.1;opacity:0;animation:art-in .5s ease-out forwards}
+.net-art .sat{fill:none;stroke:var(--muted);stroke-width:1;opacity:0;animation:art-in .5s ease-out forwards,art-breathe 4s ease-in-out 2.4s infinite;transform-box:fill-box;transform-origin:center}
+.net-art .node,.net-art .sat{animation-delay:1.2s}
+.net-art .sat.b2{animation-delay:1.4s,3s}.net-art .sat.b3{animation-delay:1.6s,3.8s}
+@keyframes art-in{to{opacity:1}}
+@keyframes art-breathe{0%,100%{transform:scale(1);stroke-opacity:1}50%{transform:scale(1.5);stroke-opacity:.4}}
+@media(prefers-reduced-motion:reduce){
+  .net-art,.net-art *{animation:none !important;stroke-dashoffset:0 !important;opacity:1 !important}
+}
+
+/* sources */
+.sources li{margin-bottom:12px;font-size:.85rem;color:var(--muted)}
+.sources{list-style:none}
+.sources b{color:var(--txt)}
+
+/* faq */
+.faq{display:grid;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+.faq details[open]{border-color:var(--accent)}
+.faq summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.2rem;flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--muted);font-size:.86rem;margin-top:10px}
+footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}footer a{color:inherit;text-decoration:none}footer a:hover{color:var(--accent)}
+
+@media(min-width:720px){
+  :root{--pad:24px}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .grid2{grid-template-columns:1fr 1fr}
+  h2{font-size:1.9rem}
+  .jcard{flex-basis:300px}
+}
+.legal{display:block;margin-top:8px;opacity:.85}
+footer .legal a{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
+    <div class="brand">Green<span>Watch</span></div>
+    <div class="nav-links">
+    <a class="link" href="#map-sec">Map</a>
+    <a class="link" href="#machines-sec">The machines</a>
+    <a class="link" href="#journey-sec">Journey</a>
+    <a class="link" href="#deploy-sec">Deployment</a>
+    <a class="link" href="#factory-sec">Manufacturing</a>
+    <a class="link" href="#minerals-sec">Minerals</a>
+    <a class="link" href="#funds-sec">EU funds</a>
+    <a class="link" href="#timeline-sec">Timeline</a>
+    <a class="link" href="#china-sec">Chokepoint</a>
+    <a class="link" href="#security-sec">Security</a>
+    <a class="link" href="#invest-sec">Investment</a>
+    <a class="link" href="#companies-sec">Companies</a>
+    <a class="link" href="#sources-sec">Data</a>
+    <a class="link" href="#faq-sec">FAQ</a>
+    <a class="link" href="#research-sec">Research</a>
+    </div>
+    <a class="cta" href="#research-sec">Hire us</a>
+  </div>
+</nav>
+
+<header class="hero-wrap">
+  <img class="hero-bg" src="/brand/headers/green.jpg" alt="" aria-hidden="true">
+  <div class="hero-tint" aria-hidden="true"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero">
+  <div class="kicker">Open data · green transition</div>
+  <h1>Who builds the <em>machines of net zero</em> — and who pays?</h1>
+  <p>The green transition is the biggest industrial build-out of the century. In 2025 the world installed a record 664 GW of solar and 165 GW of wind, sold more than 20 million electric cars, and put nearly twice as much money into clean energy as into oil, gas and coal. But the machines doing the work are made in one country: China holds roughly 85% of the world's solar-manufacturing capacity, over 80% of battery-cell output and 60% of wind-turbine and electrolyser production — and its factories now make far more than the world can install, at prices no rival can match. Europe deploys but does not build, and is spending hundreds of billions of euros of public money — from the carbon-market-funded Innovation Fund to the €650bn recovery facility — to change that before the money runs out. This dashboard tracks where the machines are made, which minerals they eat, where the EU's green money goes and who is left holding the overcapacity — using open data from the IEA, IRENA, GWEC, SolarPower Europe, BloombergNEF and the European Commission.</p>
+  <div class="stats">
+    <div class="stat"><b data-count="2.2" data-prefix="$" data-suffix=" tn">0</b><span>expected to flow into clean energy in 2026 — almost twice the $1.2 tn going to oil, gas and coal (IEA)</span></div>
+    <div class="stat"><b data-count="85" data-prefix="~" data-suffix="%">0</b><span>of the world's solar-manufacturing capacity is in China — along with over 80% of battery-cell output (IEA)</span></div>
+    <div class="stat"><b data-count="664" data-suffix=" GW">0</b><span>of solar PV installed worldwide in 2025, an all-time record; wind added another 165 GW (SolarPower Europe, GWEC)</span></div>
+    <div class="stat"><b data-count="43" data-prefix="&gt;€" data-suffix=" bn">0</b><span>raised by the EU carbon market in 2025 — every euro of it earmarked by law for climate and energy spending (European Commission)</span></div>
+  </div>
+  </div>
+</header>
+
+<section id="map-sec">
+  <div class="kicker">Interactive map</div>
+  <h2>The green transition world map</h2>
+  <p class="lede">Clean-tech factories from the polysilicon belts of Inner Mongolia to the gigafactories of Hungary and Georgia; the projects the EU is paying for — Innovation Fund flagships, Hydrogen Bank winners and the coal regions living on Just Transition money; and the graveyard of stalled, cancelled and bankrupt plants that mark Europe's and America's first industrial casualties. Tap a marker for details; toggle layers below. Circle size ≈ scale of the site.</p>
+  <div class="map-controls">
+    <button class="chip c-mine on" data-layer="make">🏭 Clean-tech factories</button>
+    <button class="chip c-proc on" data-layer="eu">🇪🇺 EU-funded &amp; Just Transition</button>
+    <button class="chip c-dis on" data-layer="dis">⚠ Stalled &amp; cancelled</button>
+    <button class="chip c-dev on" data-layer="dev">◐ Under construction</button>
+  </div>
+  <div id="map"></div>
+  <div class="legend" style="margin-top:10px">
+    <span><i style="background:var(--mine)"></i>Operating factory</span>
+    <span><i style="background:var(--proc)"></i>EU-funded flagship / Just Transition territory</span>
+    <span><i style="background:var(--dis)"></i>Stalled, cancelled or bankrupt</span>
+    <span><i style="background:var(--dev)"></i>Under construction, planned or restarting</span>
+  </div>
+</section>
+
+<section id="machines-sec">
+  <div class="kicker">From mine to megawatt</div>
+  <h2>The machines — and who makes them</h2>
+  <p class="lede">The transition runs on a short list of machines — solar modules, battery cells, wind turbines, electrolysers, heat pumps, and the transformers and cables that tie them to the grid — each with its own chain from mineral to material to component. Tap a tile to see who makes it, at what share of the world market, and what it costs.</p>
+  <div class="el-grid" id="elGrid"></div>
+  <div class="el-legend">
+    <span><i style="background:var(--accent)"></i>Materials (upstream)</span>
+    <span><i style="background:var(--accent2)"></i>Components &amp; machines (midstream)</span>
+    <span><i style="background:var(--dis)"></i>Deployment &amp; end use</span>
+    <span><i style="background:var(--muted)"></i>Circular</span>
+  </div>
+  <div class="el-detail" id="elDetail"></div>
+</section>
+
+<section id="journey-sec">
+  <div class="kicker">Six steps</div>
+  <h2>The journey of a gigawatt</h2>
+  <p class="lede">From a lithium brine in the Atacama or a polysilicon furnace in Inner Mongolia to a rooftop in Bavaria and, eventually, a shredder in Norway: six steps, four continents, and a chokepoint at almost every one of them.</p>
+  <div class="journey" id="journey"></div>
+  <div class="jhint">← swipe →</div>
+</section>
+
+<section id="deploy-sec">
+  <div class="kicker">Deployment &amp; investment</div>
+  <h2>The build-out, by the numbers</h2>
+  <p class="lede">Whatever the politics, the machines keep getting installed: solar added a record 664 GW in 2025, wind 165 GW, and one in four new cars sold was electric. The money is following — clean-energy investment now runs at close to twice fossil-fuel spending — but 2026 is set to bring the first contraction in global solar installations in years as China's own boom cools.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Solar and wind capacity added each year</h3>
+      <div class="sub">Gigawatts of new capacity installed worldwide, 2018–2025</div>
+      <div class="chartbox"><canvas id="chDeploy"></canvas></div>
+      <div class="src">Sources: SolarPower Europe, Global Market Outlook for Solar Power 2026–2030 (2025: 664 GW, +12%; 2026 forecast 612 GW, −8%, driven by a ~24% drop in China; global fleet passed 3 TW in early 2026); GWEC Global Wind Report 2026 (2025: 165 GW, +40%; offshore 9.3 GW; China >120 GW; Asia 80% of additions). 2018–2022 solar figures come from successive SolarPower Europe editions and are approximate.</div>
+    </div>
+    <div class="card">
+      <h3>Electric car sales</h3>
+      <div class="sub">Millions of battery-electric and plug-in hybrid cars sold worldwide per year</div>
+      <div class="chartbox"><canvas id="chEV"></canvas></div>
+      <div class="src">Source: IEA Global EV Outlook (successive editions; 2025 shown as 20.5 — the IEA reports "more than 20 million", +20%). One in four cars sold worldwide in 2025 was electric: ~55% of car sales in China, 28% in Europe (sales +30%), just under 10% in the US, where Q4 2025 sales fell 45% year-on-year after the federal credit expired. Chinese brands supplied about 60% of global EV sales. The IEA expects ~23 million in 2026.</div>
+    </div>
+    <div class="card">
+      <h3>Clean energy vs fossil fuel investment</h3>
+      <div class="sub">Trillion US dollars per year, world (IEA World Energy Investment)</div>
+      <div class="chartbox"><canvas id="chInvest"></canvas></div>
+      <div class="src">Source: IEA World Energy Investment 2022–2026 (each year's edition; 2026 is the IEA's projection; figures rounded and revised between editions). 2026: $3.4 tn in total, of which $2.2 tn clean energy — solar alone $365 bn, grids $550 bn (+~20%), battery storage over $100 bn — against $1.2 tn for oil, gas and coal. China accounts for almost a third of global clean-energy investment.</div>
+    </div>
+    <div class="card">
+      <h3>The learning curve: battery pack prices</h3>
+      <div class="sub">Volume-weighted average lithium-ion pack price, $/kWh (BloombergNEF)</div>
+      <div class="chartbox"><canvas id="chPrice"></canvas></div>
+      <div class="src">Source: BloombergNEF annual Battery Price Survey (December 2025: $108/kWh, −8% year-on-year, real terms). Battery-electric-vehicle packs averaged $99/kWh, stationary-storage packs $70/kWh (−45%) and LFP packs $81/kWh versus $128/kWh for NMC — the learning curve that made Chinese cells unbeatable and most Western gigafactories unbankable.</div>
+    </div>
+  </div>
+</section>
+
+<section id="factory-sec">
+  <div class="kicker">Manufacturing</div>
+  <h2>Where the machines are made</h2>
+  <p class="lede">Manufacturing is where the transition's geography inverts. The world installs everywhere; it builds in one place. China's share runs from about 60% of wind-turbine and electrolyser capacity to more than 80% of battery cells and around 85% of the entire solar supply chain — and it built that capacity so fast that the industry runs at roughly half utilisation, with the top four solar makers losing money on every module they ship.</p>
+  <div class="card">
+    <h3>China's share of global manufacturing capacity, by technology and stage</h3>
+    <div class="sub">Per cent of world capacity (IEA estimates)</div>
+    <div class="chartbox" style="height:340px"><canvas id="chShare"></canvas></div>
+    <div class="src">Source: IEA Energy Technology Perspectives 2026 and Advancing Clean Technology Manufacturing (2024): China ~85% of solar supply-chain capacity (95%+ for wafers, >80% for modules), >80% of battery-cell production in 2025, ~85% of cathode and >90% of anode active material, 60% of wind-turbine production capacity (Europe 19%, US 9%), ~60% of electrolyser manufacturing and 35% of heat-pump capacity (US 25%, EU 20%).</div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Four industries, four different fights</h3>
+    <div class="sub">Solar is a price war Europe has already lost; batteries are a fight it is losing; wind and grids are the strongholds it is defending; hydrogen is the front that collapsed before it began</div>
+    <div class="mini-grid" id="factoryMinis"></div>
+    <div class="src">Sources: pv magazine and PV Tech (Chinese PV makers' FY2025 results — LONGi net loss CNY 6–6.5bn, JinkoSolar RMB 4.45bn on 86 GW shipped; top four lost $1.54bn in H1 2025; export VAT rebate abolished from 1 April 2026; polysilicon consolidation platform registered 9 December 2025; eight-producer anti-involution pact 6 August 2026); SNE Research (2025 EV-battery installations 1,187 GWh; CATL 39.2%, BYD 16.4%, LG Energy Solution 9.2%); Wood Mackenzie (2025 order intake 215 GW; Chinese OEMs ~70% of orders); Vestas, Nordex and Siemens Energy FY2025/26 disclosures; IEA Global Hydrogen Review 2025; thyssenkrupp nucera and Nel disclosures; Benchmark Mineral Intelligence (European cell capacity ~252 GWh in 2025; pipeline −8% 2023–26).</div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>From mine to megawatt, step by step</h3>
+    <div class="sub">The solar-and-battery route (top) is where China's grip is near-total; the wind-and-grid route (bottom) is where Europe still builds. Scroll sideways on mobile →</div>
+    <div class="flow-wrap">
+    <svg viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Green transition supply chain from minerals to installed capacity, solar-battery route and wind-grid route">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8b98a5"/></marker>
+      </defs>
+      <style>
+        .fb{fill:#151b23;stroke:#2b3644;rx:10}
+        .ft{fill:#e6edf3;font:700 12px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fs{fill:#8b98a5;font:11px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fe{fill:#62e86a;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fl{stroke:#8b98a5;stroke-width:1.4;fill:none;marker-end:url(#ah)}
+        .lab{fill:#ffd54a;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em}
+      </style>
+      <text x="205" y="24" class="lab">SOLAR &amp; BATTERY ROUTE (CHINA: 80–97% OF EVERY STAGE)</text>
+      <text x="205" y="212" class="lab">WIND, GRID &amp; ELECTROLYSER ROUTE (EUROPE'S LAST STRONGHOLDS)</text>
+      <g>
+        <rect class="fb" x="10" y="120" width="150" height="90" rx="10"/>
+        <text x="20" y="144" class="ft">1 · Minerals ⛏</text>
+        <text x="20" y="162" class="fs">Lithium, cobalt, nickel, graphite,</text>
+        <text x="20" y="176" class="fs">copper, rare earths, silicon</text>
+        <text x="20" y="200" class="fe">energy sector: ~75% of demand growth</text>
+      </g>
+      <g>
+        <rect class="fb" x="205" y="40" width="150" height="78" rx="10"/>
+        <text x="215" y="62" class="ft">2 · Materials 🧪</text>
+        <text x="215" y="80" class="fs">Polysilicon, cathode &amp; anode</text>
+        <text x="215" y="94" class="fs">powders, electrolyte, foils</text>
+        <text x="215" y="111" class="fe">China: 85% cathode, 90%+ anode</text>
+
+        <rect class="fb" x="400" y="40" width="150" height="78" rx="10"/>
+        <text x="410" y="62" class="ft">3 · Components ⚙️</text>
+        <text x="410" y="80" class="fs">Wafers &amp; cells; battery cells</text>
+        <text x="410" y="94" class="fs">and modules; inverters</text>
+        <text x="410" y="111" class="fe">China: 95% wafers, 80%+ cells</text>
+
+        <rect class="fb" x="595" y="40" width="150" height="78" rx="10"/>
+        <text x="605" y="62" class="ft">4 · Machines 🔋</text>
+        <text x="605" y="80" class="fs">Solar modules, EV packs,</text>
+        <text x="605" y="94" class="fs">grid batteries, EVs</text>
+        <text x="605" y="111" class="fe">20m+ EVs sold in 2025 (IEA)</text>
+      </g>
+      <g>
+        <rect class="fb" x="205" y="222" width="150" height="78" rx="10"/>
+        <text x="215" y="244" class="ft">2 · Materials 🧲</text>
+        <text x="215" y="262" class="fs">Steel, copper wire, NdFeB</text>
+        <text x="215" y="276" class="fs">magnets, glass fibre, resins</text>
+        <text x="215" y="292" class="fe">China: ~94% of NdFeB magnets</text>
+
+        <rect class="fb" x="400" y="222" width="150" height="78" rx="10"/>
+        <text x="410" y="244" class="ft">3 · Machines 🌬</text>
+        <text x="410" y="262" class="fs">Nacelles, blades, towers,</text>
+        <text x="410" y="276" class="fs">transformers, cables, stacks</text>
+        <text x="410" y="292" class="fe">Europe: 19% of turbine capacity</text>
+      </g>
+      <g>
+        <rect class="fb" x="790" y="120" width="180" height="90" rx="10" stroke="#62e86a"/>
+        <text x="800" y="144" class="ft">5 · Megawatts ⚡</text>
+        <text x="800" y="162" class="fs">Permits, grid connections,</text>
+        <text x="800" y="176" class="fs">installers, auctions, subsidies —</text>
+        <text x="800" y="190" class="fs">where the EU's money lands</text>
+        <text x="800" y="205" class="fe">664 GW solar + 165 GW wind in 2025</text>
+      </g>
+      <path class="fl" d="M160 150 L182 150 L182 79 H200"/>
+      <path class="fl" d="M355 79 H395"/>
+      <path class="fl" d="M550 79 H590"/>
+      <path class="fl" d="M745 79 H768 V143 H785"/>
+      <path class="fl" d="M160 180 L182 180 L182 261 H200"/>
+      <path class="fl" d="M355 261 H395"/>
+      <path class="fl" d="M550 261 H700 V183 H785"/>
+    </svg>
+    </div>
+    <div class="src">Sources: IEA Global Critical Minerals Outlook 2026 (energy sector's share of mineral demand growth); IEA Energy Technology Perspectives 2026 (manufacturing shares); IEA Global EV Outlook 2026; SolarPower Europe; GWEC; magnet share via our <a href='/rare-earths/'>Rare earths dashboard</a>. The solar-and-battery route is the one Europe imports almost entirely; the wind-grid-electrolyser route is where European OEMs (Vestas, Siemens Gamesa, Nordex, Prysmian, Nexans, NKT, Hitachi Energy) still lead outside China.</div>
+  </div>
+</section>
+
+<section id="minerals-sec">
+  <div class="kicker">What the machines eat</div>
+  <h2>The mineral bill of the transition</h2>
+  <p class="lede">Every gigawatt is a shopping list: lithium, cobalt, nickel, manganese and graphite for the cells; copper for every wire, motor and transformer; rare earths for the magnets in EV motors and offshore turbines; silicon for the panels. The IEA reckons the energy sector drove about three-quarters of the growth in demand for these minerals in 2025 — and the refining of almost all of them is more concentrated than the machines they go into. Each card links to our dedicated dashboard.</p>
+  <div class="card">
+    <h3>Share of world demand that comes from clean-energy technologies</h3>
+    <div class="sub">EVs and storage, solar, wind, grids, hydrogen and other low-emission technologies — per cent of total demand (IEA)</div>
+    <div class="mn-grid" id="mnGrid"></div>
+    <div class="callout"><b>~75%</b><span>of the growth in demand for key energy minerals in 2025 came from the energy sector, up from 70% in 2024 (IEA). Global battery demand passed 1.5 TWh (+35%), and refining concentration hit new record levels — the chokepoint sits upstream of every factory on this page.</span></div>
+    <div class="src">Sources: IEA Global Critical Minerals Outlook 2026 (demand growth, battery demand, refining concentration; EVs ~58% and stationary storage ~30% of incremental lithium demand; lithium demand ×3 by 2040, nickel, graphite and rare earths +50–90%); refining shares as documented on each mineral.watch dashboard (IEA, USGS, Cobalt Institute, INSG).</div>
+  </div>
+</section>
+
+<section id="funds-sec">
+  <div class="kicker">Follow the money</div>
+  <h2>Europe's green war chest, fund by fund</h2>
+  <p class="lede">There is no single "EU green budget". There is a stack of instruments — some financed by the carbon market, some by joint borrowing, some by the regular seven-year budget, some by the European Investment Bank — each with its own rules, calendar and absorption problem. Together they are the largest public bet on the green transition outside China. Here is the stack, fund by fund, as of September 2026.</p>
+  <div class="card">
+    <div class="big" id="bigFunds">~€270 bn</div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:6px">of the EU's €650 billion Recovery and Resilience Facility went to climate measures — 42% of the money, against a 37% legal minimum — making it the biggest green pot Brussels has ever run. It closes on 31 December 2026. How the main instruments compare, in € billion over their lifetimes:</p>
+    <div class="bars" id="fundBars"></div>
+    <div class="src">Envelopes are multi-year totals in current prices and are not directly comparable: RRF climate share = 42% of the €650bn facility (Commission, 2026); Social Climate Fund €86.7bn 2026–32 includes a 25% national contribution and shrinks to ~€54.6bn of EU money with ETS2 starting in 2028; Modernisation Fund (>€57bn) and Innovation Fund (~€40bn) to 2030 are estimates that move with the carbon price; Just Transition Fund €19.3bn 2021–27; Horizon Europe Cluster 5 (climate, energy, mobility) ~€15bn; Connecting Europe Facility energy strand €5.8bn; LIFE €5.4bn.</div>
+  </div>
+  <div class="fund-grid" id="fundGrid"></div>
+  <div class="grid2" style="margin-top:16px">
+    <div class="card">
+      <h3>The Innovation Fund: what each call handed out</h3>
+      <div class="sub">Grants awarded per large-scale call, € billion (European Commission / CINEA)</div>
+      <div class="chartbox"><canvas id="chIF"></canvas></div>
+      <div class="src">Source: European Commission / CINEA award announcements — large-scale calls and auctions only (small-scale calls add roughly €200m). IF23 and IF24 show grants actually signed (€4.2bn for 77 projects and €2.7bn for 54, versus €4.8bn/85 and €2.9bn/61 announced). IF24 Battery: six cell-manufacturing projects selected for €852m of a €1bn pot. Hydrogen Bank auctions: €720m for 7 projects (April 2024), €992m for 15 (May 2025), €1.09bn for 9 (May 2026, 1.1 GW, lowest bid €0.44/kg). IF25 (€2.9bn budget, 358 applications, €1bn ring-fenced for cleantech manufacturing) reports in Q3 2026. Roughly €17bn awarded in six years — against an expected ~€40bn to 2030.</div>
+    </div>
+    <div class="card">
+      <h3>Just Transition Fund: who gets what</h3>
+      <div class="sub">National allocations 2021–2027, € billion, current prices</div>
+      <div class="chartbox"><canvas id="chJTF"></canvas></div>
+      <div class="src">Source: European Commission JTF allocations, current prices (total €19.32bn, of which €10.87bn from NextGenerationEU; €19.7bn after voluntary transfers). Top five shown individually. Spending is the problem, not the money: only €735m had actually been paid out by March 2025, and by late 2025 Poland had committed 73% of its allocation but disbursed about 12.5% (Germany had committed 49%, Romania 38%). The 2021–27 money must be spent by end-2029.</div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>The industrial-policy toolkit since 2023</h3>
+    <div class="sub">Beyond the budget lines: the laws, banks and state-aid rules Brussels built after the US Inflation Reduction Act</div>
+    <div class="fund-wrap">
+      <table class="ft">
+        <thead><tr><th>Instrument</th><th>Date</th><th>Money / target</th><th>What it does — and where it stands</th></tr></thead>
+        <tbody id="toolkitBody"></tbody>
+      </table>
+    </div>
+    <div class="src">Sources: European Commission (Green Deal Industrial Plan, NZIA, CRMA, Clean Industrial Deal, CISAF, Automotive Package, RESourceEU, Industrial Accelerator Act proposal, MFF 2028–34 proposal); Council of the EU (ECF partial position, 16 June 2026); EIB Group 2025 results; state-aid decisions on the battery and hydrogen IPCEIs.</div>
+  </div>
+  <div class="note" id="mffNote"><b>What comes next.</b> The Commission's proposal for the 2028–2034 budget (16 July 2025, ~€2 trillion) would fold 14 programmes — the Innovation Fund among them — into a €409bn European Competitiveness Fund (€234bn plus Horizon Europe's €175bn) with a dedicated clean-transition and industrial-decarbonisation window, and merge cohesion and just-transition money into national and regional partnership plans. The Council agreed a partial position on the fund on 16 June 2026; governments aim to settle the whole budget by the end of 2026 so money can flow from January 2028. Meanwhile the RRF stops paying on 31 December 2026 — with no successor of comparable size.</div>
+</section>
+
+<section id="timeline-sec">
+  <div class="kicker">Geopolitics</div>
+  <h2>A deal, a race and a reckoning</h2>
+  <p class="lede">Seven years from the Green Deal to the Industrial Accelerator Act: Europe wrote the rules, America wrote the cheques, China built the factories — and then the cheques were cancelled, the factories flooded the market, and Brussels started writing "Made in Europe" into law.</p>
+  <div class="card">
+    <div class="tl" id="timeline"></div>
+    <div class="src">Sources: European Commission and Council press releases; Official Journal; US Congress (P.L. 119-21) and Treasury/IRS Notice 2025-42; E2 Clean Economy Works; Environmental Defense Fund / Atlas Public Policy; ENTSO-E; company disclosures (Northvolt, Lyten, ACC, Stegra, Meyer Burger, PowerCo, CATL); pv magazine, PV Tech, electrive, OPIS, Reuters, Bloomberg.</div>
+  </div>
+</section>
+
+<section id="china-sec">
+  <div class="kicker">Concentration risk</div>
+  <h2>The one-country supply chain</h2>
+  <p class="lede">For minerals, the chokepoint is the refinery; for the green transition it is the factory floor. From the wafer to the pack, from the magnet to the inverter, one country makes most of the world's supply — and holds the export controls, the overcapacity and the price-setting power that come with it.</p>
+  <div class="card">
+    <div class="big" id="bigPct">~85%</div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:6px">of the world's solar supply-chain manufacturing capacity is in China (IEA, 2025). The grip along the chain, stage by stage:</p>
+    <div class="bars" id="chinaBars"></div>
+    <div class="src">Sources: IEA Energy Technology Perspectives 2026 (solar, battery, wind, electrolyser and heat-pump capacity shares, 2025); IEA Global EV Outlook 2026 (Chinese automakers' ~60% share of global EV sales); Wood Mackenzie (Chinese OEMs ~70% of 2025 wind-turbine orders); IEA Global Hydrogen Review 2025 (China 65% of installed electrolysis capacity); SolarPower Europe / ESMC (Chinese inverters in ~80% of new EU PV systems; Huawei alone 115 GW). Magnet share via our Rare earths dashboard.</div>
+  </div>
+</section>
+
+<section id="security-sec">
+  <div class="kicker">Security</div>
+  <h2>When the grid runs on someone else's hardware</h2>
+  <p class="lede">Europe swapped a dependence on Russian gas for a dependence on Chinese hardware — and discovered in 2025 that hardware can be switched off. Rogue radios in inverters, a peninsula-wide blackout, a blocked turbine factory and a rare-earth embargo turned the green transition into a security file.</p>
+  <div class="card">
+    <div class="mini-grid" id="securityMinis"></div>
+    <div class="src">Sources: Reuters (May 2025, undocumented communication devices in Chinese inverters); SolarPower Europe and ESMC (Chinese inverter share, Huawei 115 GW); European Commission Economic Security Doctrine and funding guidance of 13 May 2026; Lithuanian legislation (2024); ENTSO-E Expert Panel final report on the 28 April 2025 Iberian blackout (20 March 2026, 22 recommendations); UK government decision on Mingyang (2026); Chinese Ministry of Commerce export-control announcements (April, October and November 2025); IEA Energy Technology Perspectives 2026 (Chinese-owned battery capacity abroad); European Commission Grids Package (10 December 2025).</div>
+  </div>
+</section>
+
+<section id="invest-sec">
+  <div class="kicker">Capital flows</div>
+  <h2>Where the green money is going</h2>
+  <p class="lede">Roughly $2.2 trillion a year now goes into clean energy — a third of it in China, a shrinking slice in the United States, and in Europe an increasingly public mix of EIB loans, carbon-market grants and state aid propping up a gigafactory sector that the market alone would not finance. Presented as observation, not investment advice.</p>
+  <div class="card">
+    <div class="mini-grid" id="investMinis"></div>
+    <div class="note">This section describes where capital is flowing, based on public data. It is not financial advice.</div>
+    <div class="src">Sources: IEA World Energy Investment 2026; E2 Clean Economy Works (2025 annual analysis; Q1 2026); EDF / Atlas Public Policy (mid-2026); EIB Group 2025 results; European Commission (Battery Booster Facility, RESourceEU, Innovation Fund awards); Benchmark Mineral Intelligence (European gigafactory pipeline); SolarPower Europe (EU battery storage 27.1 GWh in 2025); Tesla, Prysmian, Nexans, thyssenkrupp nucera, Nel, Lyten, ACC and PowerCo disclosures.</div>
+  </div>
+</section>
+
+<section id="companies-sec">
+  <div class="kicker">Company tracker</div>
+  <h2>The companies that build the transition</h2>
+  <p class="lede">Module makers losing money on record shipments, cell makers bankrupt in Sweden and booming in Fujian, turbine makers recovering in Denmark and rebuffed in Scotland, electrolyser makers watching orders vanish, and the materials firms trying to rebuild Europe's midstream. Filter by technology or search.</p>
+  <div class="map-controls" id="coFilters">
+    <button class="chip c-sol on" data-seg="sol">🔆 Solar</button>
+    <button class="chip c-bat on" data-seg="bat">🔋 Batteries &amp; EVs</button>
+    <button class="chip c-wind on" data-seg="wind">🌬 Wind</button>
+    <button class="chip c-h2g on" data-seg="h2g">⚡ Hydrogen, grids &amp; heat</button>
+    <button class="chip c-mat on" data-seg="mat">🧪 Materials &amp; recycling</button>
+  </div>
+  <div class="co-search">
+    <input id="coSearch" type="search" placeholder="Search company, plant, country…" aria-label="Search companies">
+    <span class="co-count" id="coCount"></span>
+  </div>
+  <div class="co-wrap">
+    <table class="co">
+      <thead><tr><th>Company</th><th>Segment</th><th>Key assets</th><th>Status &amp; recent signals</th></tr></thead>
+      <tbody id="coBody"></tbody>
+    </table>
+  </div>
+  <div class="note">Company status reflects public disclosures as of August 2026. This is an observational tracker, not investment advice.</div>
+  <div class="src">Sources: company disclosures and filings (FY2025 and H1 2026); SNE Research; Wood Mackenzie; IEA; pv magazine; PV Tech; electrive; Hydrogen Insight; Recharge; Reuters; Bloomberg.</div>
+</section>
+
+<section id="sources-sec">
+  <div class="kicker">Data &amp; methodology</div>
+  <h2>Open data sources</h2>
+  <ul class="sources" id="sourcesList">
+    <li><b><a href="https://www.iea.org/reports/world-energy-investment-2026">IEA World Energy Investment 2026</a></b> — clean vs fossil investment ($2.2 tn vs $1.2 tn in 2026), solar, grids and storage spending, regional shares; successive editions for the 2022–2025 series.</li>
+    <li><b><a href="https://www.iea.org/reports/energy-technology-perspectives-2026">IEA Energy Technology Perspectives 2026</a></b> and <a href="https://www.iea.org/reports/advancing-clean-technology-manufacturing">Advancing Clean Technology Manufacturing</a> (2024) — manufacturing-capacity and production shares by country for solar, batteries, wind, electrolysers and heat pumps; Chinese-owned capacity abroad.</li>
+    <li><b><a href="https://www.iea.org/reports/global-ev-outlook-2026">IEA Global EV Outlook 2026</a></b> — EV sales by region, battery deployment (1.2 TWh in 2025), Chinese brands' share; <a href="https://www.iea.org/reports/global-critical-minerals-outlook-2026">Global Critical Minerals Outlook 2026</a> — energy sector's share of mineral demand growth, refining concentration; <a href="https://www.iea.org/reports/global-hydrogen-review-2025">Global Hydrogen Review 2025</a> — installed electrolysis capacity and manufacturing.</li>
+    <li><b><a href="https://www.solarpowereurope.org/insights/outlooks/global-solar-market-outlook-2026-2030">SolarPower Europe — Global Market Outlook 2026–2030</a></b> and EU Market Outlook 2025 (EU 65.1 GW in 2025, first decline since 2016; EU battery storage 27.1 GWh); <a href="https://www.gwec.net/reports/globalwindreport">GWEC Global Wind Report 2026</a> (165 GW in 2025); <a href="https://windeurope.org/">WindEurope</a> 2025 statistics; <a href="https://www.acea.auto/">ACEA</a> registrations (BEV 17.4% of the EU market in 2025); <a href="https://ehpa.org/market-data/">EHPA</a> heat-pump market data.</li>
+    <li><b><a href="https://about.bnef.com/insights/clean-transport/lithium-ion-battery-pack-prices-fall-to-108-per-kilowatt-hour-despite-rising-metal-prices-bloombergnef/">BloombergNEF Battery Price Survey</a></b> (December 2025) — pack prices by segment and chemistry; <a href="https://www.sneresearch.com/en/">SNE Research</a> (EV-battery market shares); <a href="https://www.woodmac.com/">Wood Mackenzie</a> (wind-turbine order intake and OEM rankings); <a href="https://source.benchmarkminerals.com/">Benchmark Mineral Intelligence</a> (gigafactory pipeline, lithium-ion demand).</li>
+    <li><b>EU funds</b> — <a href="https://cinea.ec.europa.eu/programmes/innovation-fund_en">Innovation Fund (CINEA)</a> call results and <a href="https://climate.ec.europa.eu/eu-action/eu-funding-climate-action/innovation-fund/battery-booster-facility_en">Battery Booster Facility</a>; <a href="https://commission.europa.eu/recovery-and-resilience-facility-1_en">Recovery and Resilience Facility</a> and scoreboard (disbursements, 42% climate share, 2026 deadlines); <a href="https://commission.europa.eu/funding-and-tenders/find-funding/eu-funding-programmes/just-transition-fund_en">Just Transition Fund</a> allocations and <a href="https://ec.europa.eu/regional_policy/funding/just-transition-fund/just-transition-platform_en">Just Transition Platform</a>; <a href="https://www.modernisationfund.eu/">Modernisation Fund</a> disbursement releases (2 July 2026); <a href="https://climate.ec.europa.eu/eu-action/eu-funding-climate-action/social-climate-fund_en">Social Climate Fund</a>; <a href="https://climate.ec.europa.eu/eu-action/carbon-markets/eu-emissions-trading-system-eu-ets/how-do-member-states-use-ets-revenues_en">ETS revenues and their use</a>; cohesion policy <a href="https://ec.europa.eu/regional_policy/policy/how/programming-and-implementation/mid-term-review_en">mid-term review 2025</a>.</li>
+    <li><b>Industrial policy</b> — <a href="https://commission.europa.eu/topics/competitiveness/green-deal-industrial-plan/net-zero-industry-act_en">Net-Zero Industry Act</a>; <a href="https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials/strategic-projects-under-crma_en">CRMA strategic projects</a>; <a href="https://commission.europa.eu/topics/competitiveness/clean-industrial-deal_en">Clean Industrial Deal</a> and Industrial Decarbonisation Bank; <a href="https://ec.europa.eu/newsroom/growth/items/928572/en">Industrial Accelerator Act</a> proposal (4 March 2026); <a href="https://commission.europa.eu/strategy-and-policy/eu-budget/long-term-eu-budget/eu-budget-2028-2034_en">MFF 2028–2034</a> and the <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/06/16/mff-2028-2034-council-agrees-its-position-on-new-and-innovative-fund-to-boost-eu-s-competitiveness/">Council's ECF position</a> (16 June 2026); <a href="https://policy.trade.ec.europa.eu/news/commission-issues-guidance-document-submission-price-undertaking-offers-battery-electric-vehicles-2026-01-12_en">EV price-undertaking guidance</a>.</li>
+    <li><b><a href="https://www.eib.org/en/publications/online/all/eib-group-activity-report-2025">EIB Group 2025 Activity Report</a></b> — €100bn signed, €57bn green, €11.6bn grids and storage; Climate Bank Roadmap phase 2.</li>
+    <li><b>United States</b> — P.L. 119-21 (One Big Beautiful Bill Act) and <a href="https://www.irs.gov/">IRS Notice 2025-42</a> (beginning-of-construction rules); <a href="https://e2.org/reports/clean-economy-works-q1-2026/">E2 Clean Economy Works</a> (cancellations); EDF / Atlas Public Policy (mid-2026); First Solar, Qcells and T1 Energy disclosures.</li>
+    <li><b>Security</b> — <a href="https://www.entsoe.eu/publications/blackout/28-april-2025-iberian-blackout/">ENTSO-E Expert Panel final report</a> on the Iberian blackout (20 March 2026); Reuters (inverter communication devices, May 2025); <a href="https://esmc.solar/">ESMC</a> and SolarPower Europe (inverter market shares); Commission funding guidance of 13 May 2026; UK government decision on Mingyang (2026).</li>
+    <li><b>Companies</b> — annual and quarterly reports of LONGi, JinkoSolar, Tongwei, First Solar, Qcells (Hanwha), T1 Energy, Meyer Burger, Sungrow, CATL, BYD, LG Energy Solution, Samsung SDI, Volkswagen/PowerCo, ACC, Verkor, Lyten, Tesla, Vestas, Siemens Energy, Nordex, Goldwind, Mingyang, Ørsted, thyssenkrupp nucera, Nel, Prysmian, Nexans, NKT, Umicore, BASF, Wacker Chemie, Stegra, Solvay, Neo Performance Materials and Hydro; trade press as cited.</li>
+    <li><b>Notes</b> — site coordinates are approximate; Just Transition territories are marked at their main town. Multi-year envelopes are not annual budgets and are quoted in current prices unless stated. "China's share" refers to manufacturing capacity or production as cited by the IEA for the stated year; deployment figures are DC for solar. Company and project status reflects public disclosures to early September 2026. Last data refresh: September 2026.</li>
+  </ul>
+</section>
+
+<section id="faq-sec">
+  <div class="kicker">FAQ</div>
+  <h2>Common questions</h2>
+  <div class="faq">
+    <details>
+      <summary>What is the green transition supply chain?</summary>
+      <p>It is the chain of mines, refineries, materials plants, component factories and installers that turns minerals into the machines of a low-carbon energy system: solar modules, wind turbines, battery cells and electric vehicles, electrolysers, heat pumps, and the grid transformers, cables and storage that connect them. Each machine has its own chain — polysilicon to wafer to cell to module for solar; cathode and anode powders to cells to packs for batteries; rare-earth magnets, steel and glass fibre to nacelles and blades for wind — but they share the same upstream minerals (lithium, cobalt, nickel, graphite, copper, rare earths, silicon) and, increasingly, the same manufacturing geography: China holds roughly 85% of solar and over 80% of battery-cell capacity, and around 60% of wind-turbine and electrolyser manufacturing (IEA).</p>
+    </details>
+    <details>
+      <summary>Who makes the world's solar panels, batteries and wind turbines?</summary>
+      <p>Mostly China. The IEA puts China at around 85% of global solar supply-chain manufacturing capacity — 95% or more for wafers and over 80% for modules — at over 80% of battery-cell production in 2025 (85% of cathode and more than 90% of anode material), at 60% of wind-turbine production capacity and around 60% of electrolyser manufacturing. Chinese companies also took about 70% of the world's wind-turbine orders in 2025 (Wood Mackenzie), and CATL and BYD alone supplied 55% of EV batteries (SNE Research). Europe's strongholds are wind (19% of turbine capacity), grid equipment — Prysmian, Nexans, NKT, Siemens Energy, Hitachi Energy — and heat pumps (20%); the United States is rebuilding solar-module capacity (First Solar ~14 GW, Qcells, T1 Energy) behind tariffs and the 45X manufacturing credit.</p>
+    </details>
+    <details>
+      <summary>How much does the world invest in clean energy?</summary>
+      <p>About $2.2 trillion a year. The IEA's World Energy Investment 2026 expects total energy investment to reach $3.4 trillion in 2026, of which $2.2 trillion goes to renewables, nuclear, grids, storage, low-emission fuels, efficiency and electrification — almost twice the $1.2 trillion flowing to oil, gas and coal. Solar alone attracts about $365 billion (roughly $1 billion a day), grids $550 billion and battery storage more than $100 billion. China accounts for almost a third of the clean total; the United States saw $34.8 billion of announced clean-energy projects cancelled in 2025 after federal tax credits were cut (E2).</p>
+    </details>
+    <details>
+      <summary>How much does the EU spend on the green transition?</summary>
+      <p>There is no single figure, because the money sits in a stack of instruments. The largest is the €650 billion Recovery and Resilience Facility (2021–2026), 42% of which — roughly €270 billion — went to climate measures. Cohesion policy (€392 billion for 2021–27) must direct 30% of its regional fund and 37% of its Cohesion Fund to climate objectives. The carbon market feeds three dedicated funds: the Innovation Fund (about €40 billion expected over 2020–2030, some €17 billion awarded so far), the Modernisation Fund (over €57 billion expected by 2030 for 13 lower-income member states, €23.2 billion disbursed) and, from 2026, the Social Climate Fund (€86.7 billion to 2032 including national co-financing). Add the €19.3 billion Just Transition Fund, Horizon Europe's roughly €15 billion climate-energy-mobility cluster, the Connecting Europe Facility's €5.8 billion for energy and €5.4 billion under LIFE — plus the European Investment Bank, which signed €57 billion of green financing in 2025 alone, and the €38.8 billion (2024) to €43 billion (2025) a year of ETS auction revenue that member states must spend on climate.</p>
+    </details>
+    <details>
+      <summary>What is the EU Innovation Fund?</summary>
+      <p>The EU's main grant programme for first-of-a-kind clean-technology projects, financed not from the budget but from the sale of emissions allowances under the EU carbon market — which makes its size move with the carbon price (roughly €40 billion expected for 2020–2030). It runs annual competitive calls: €1.1 billion (2020), €1.8 billion (2021), €3.6 billion (2022), €4.2 billion signed for 77 projects (2023) and €2.7 billion for 54 projects (2024), plus dedicated pots — €852 million for six battery-cell factories in 2025 and the European Hydrogen Bank auctions, which have awarded €720 million, €992 million and €1.09 billion in fixed premiums to renewable-hydrogen producers since 2024. The 2025 call (€2.9 billion, with €1 billion ring-fenced for cleantech manufacturing) drew 358 applications and reports in late 2026. Since February 2025 the Innovation Fund is also the seed of the €100 billion Industrial Decarbonisation Bank, and the Commission proposes to fold it into the European Competitiveness Fund from 2028.</p>
+    </details>
+    <details>
+      <summary>What is the Just Transition Fund?</summary>
+      <p>A €19.3 billion fund (2021–2027, €10.9 billion of it from NextGenerationEU) that pays for retraining, diversification, land rehabilitation and clean-energy projects in the roughly 100 coal, lignite, peat, oil-shale and carbon-intensive territories most exposed to the climate transition — from Silesia and Bełchatów in Poland to Western Macedonia, the Jiu Valley, Ida-Viru, Asturias, Lusatia and Sulcis. Poland (€3.85 billion), Germany (€2.5 billion), Romania (€2.1 billion), Czechia (€1.6 billion) and Bulgaria (€1.2 billion) are the biggest recipients. It is the first pillar of the Just Transition Mechanism, alongside an InvestEU scheme and a public-sector loan facility. Its weakness is speed: by March 2025 only €735 million had actually been paid out, and analysts fear the 2028–34 budget proposal, which merges it into national plans, will dilute it further.</p>
+    </details>
+    <details>
+      <summary>Why did Northvolt fail, and what does it mean for Europe's gigafactories?</summary>
+      <p>Northvolt raised about $15 billion to become Europe's battery champion and filed for bankruptcy in Sweden on 12 March 2025 after years of production problems at its Skellefteå plant, a lost BMW contract and a market in which Chinese cells cost a fraction of European ones — BloombergNEF's 2025 survey put average pack prices at $108/kWh and LFP packs at $81. Its Swedish assets were bought by California's Lyten, which completed the deal in February 2026, is restarting Skellefteå with first shipments due in the second half of 2026 and plans to open the Heide site in Germany in 2028. The wider lesson is being learned across the continent: ACC cancelled its German and Italian plants in February 2026 while ramping Billy-Berclau, Volkswagen's PowerCo only started Salzgitter in December 2025 and pushed Valencia to mid-2027, and Europe's gigafactory pipeline shrank 8% between 2023 and 2026 — the only major region to lose capacity. The plants actually being built in Europe today are increasingly Chinese- or Korean-owned: CATL in Debrecen, BYD in Szeged, LG in Wrocław, Samsung SDI and SK On in Hungary.</p>
+    </details>
+    <details>
+      <summary>Is Europe's green transition dependent on China?</summary>
+      <p>On hardware, yes. The EU imports the overwhelming majority of its solar modules, around 80% of its new PV systems use Chinese inverters (Huawei alone accounts for 115 GW), Chinese companies dominate the battery cells going into European cars, and China refines 60–90% of the lithium, cobalt, graphite and rare earths behind them. The dependence has become a security question: in 2025 undocumented communication devices were found in Chinese inverters, China restricted rare-earth exports to European carmakers and turbine makers, and in 2026 the UK blocked a £1.5 billion Mingyang turbine factory. The EU's answers are the Net-Zero Industry Act's 40% domestic-manufacturing benchmark for 2030, the Industrial Accelerator Act's 'Made in Europe' rules proposed in March 2026, the Commission's May 2026 guidance denying EU funds to projects using high-risk-supplier inverters, and a price-undertaking deal that replaced most EV tariffs in 2026. Where Europe is not dependent is wind, grids and heat pumps — the machines its own companies still lead.</p>
+    </details>
+    <details>
+      <summary>Need a deep-dive report on the green transition supply chain?</summary>
+      <p>That's exactly what we do. We produce commissioned deep-dive reports on the green transition and the strategic minerals behind it, covering angles such as mine-to-megawatt supply-chain mapping for a given technology, EU funding and state-aid tracking (Innovation Fund, Hydrogen Bank, RRF, Just Transition Fund, IPCEIs) by country or sector, manufacturing-concentration and import-dependence analysis, gigafactory and offtake pipelines, and the security exposure of grid hardware. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email <a href="mailto:hello@mineral.watch">hello@mineral.watch</a> with a short note on what you need and we'll come back with a scoped proposal.</p>
+    </details>
+  </div>
+</section>
+
+<section id="research-sec">
+  <div class="research-box">
+    <div>
+      <div class="kicker">Custom research</div>
+      <h2>Need an ad hoc data-driven research report?</h2>
+      <p style="color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:18px">We produce bespoke, source-cited research on the green transition and the strategic minerals behind it — supply-chain mapping from mine to megawatt, EU funding and state-aid tracking, trade-flow analysis, country and technology deep-dives — built on the same open data behind this dashboard.</p>
+      <a class="research-cta" href="mailto:hello@mineral.watch">Reach out at hello@mineral.watch</a>
+    </div>
+    <div class="research-art net-art" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="orbit o2" cx="150" cy="150" r="126"/>
+        <circle cx="150" cy="150" r="116" fill="none" stroke="var(--accent)" stroke-width=".6" opacity=".55"/>
+        <path class="web d3" pathLength="1" d="M150 34 L119 104"/>
+        <path class="web d3" pathLength="1" d="M150 34 L181 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L119 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L82 140"/>
+        <path class="web d4" pathLength="1" d="M242 56 L181 104"/>
+        <path class="web d5" pathLength="1" d="M242 56 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M119 104 H181"/>
+        <path class="edge d1" pathLength="1" d="M119 104 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M181 104 L218 140"/>
+        <path class="edge d2" pathLength="1" d="M82 140 H218"/>
+        <path class="edge d2" pathLength="1" d="M82 140 L150 218"/>
+        <path class="edge d2" pathLength="1" d="M218 140 L150 218"/>
+        <path class="edge d3" pathLength="1" d="M119 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M181 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M150 140 V218"/>
+        <circle class="node" cx="119" cy="104" r="3"/>
+        <circle class="node" cx="181" cy="104" r="3"/>
+        <circle class="node" cx="82" cy="140" r="3"/>
+        <circle class="node" cx="218" cy="140" r="3"/>
+        <circle class="node" cx="150" cy="218" r="3"/>
+        <circle class="sat" cx="150" cy="34" r="2.2"/>
+        <circle class="sat b2" cx="58" cy="62" r="2.2"/>
+        <circle class="sat b3" cx="242" cy="56" r="2.2"/>
+        <circle class="sat b2" cx="258" cy="196" r="2.2"/>
+        <circle class="sat b3" cx="68" cy="240" r="2.2"/>
+        <circle cx="150" cy="140" r="5" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6">
+          <animate attributeName="r" values="5;16" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".6;0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="150" cy="140" r="4.2" fill="var(--accent)"/>
+        <circle r="1.6" fill="var(--accent2)">
+          <animateMotion path="M58 62 L119 104 L150 140" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.6" fill="var(--accent)">
+          <animateMotion path="M258 196 L218 140 L150 140" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="subscribe-sec">
+  <div class="kicker">Stay updated</div>
+  <h2>Get notified when the green transition data refreshes</h2>
+  <div class="sub-row">
+    <div class="sub-box">
+      <p>mineral.watch is an independent data hub, and it grows with the people who use it. Introduce yourself and we'll let you know when the figures on this dashboard are updated — new EU funding rounds, Innovation Fund and Hydrogen Bank results, deployment and manufacturing data — and when new dashboards, datasets and research go live. No noise, just what's new.</p>
+      <p>Telling us your sector and organisation helps too: it shows us who relies on this data — analysts, policymakers, journalists, researchers — and shapes what we build next, from new minerals to custom research.</p>
+      <p>Prefer to talk directly? Corrections, data tips and collaboration ideas are always welcome at <a href="mailto:hello@mineral.watch">hello@mineral.watch</a>.</p>
+    </div>
+    <div class="sub-form">
+      <form action="https://formspree.io/f/mljeedkq" method="POST">
+        <input type="hidden" name="_subject" value="New mineral.watch subscriber (green dashboard)">
+        <input type="hidden" name="source" value="green-dashboard">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-grid">
+          <input type="text" name="first_name" placeholder="First name *" aria-label="First name" autocomplete="given-name" required>
+          <input type="text" name="last_name" placeholder="Last name *" aria-label="Last name" autocomplete="family-name" required>
+          <input type="email" name="email" class="full" placeholder="Email *" aria-label="Email" autocomplete="email" required>
+          <input type="text" name="organisation" class="full" placeholder="Organisation" aria-label="Organisation" autocomplete="organization">
+          <select name="sector" class="full" aria-label="Sector">
+            <option value="" selected>Sector</option>
+            <option>Government &amp; policy</option>
+            <option>Mining &amp; industry</option>
+            <option>Finance &amp; investment</option>
+            <option>Research &amp; academia</option>
+            <option>Media &amp; journalism</option>
+            <option>NGO / civil society</option>
+            <option>Other</option>
+          </select>
+          <input type="text" name="linkedin" placeholder="LinkedIn" aria-label="LinkedIn profile">
+          <input type="tel" name="whatsapp" placeholder="WhatsApp (+code)" aria-label="WhatsApp number">
+        </div>
+        <button type="submit">Subscribe for updates</button>
+        <p class="form-note">We'll only use your details to send you mineral.watch updates. No spam, unsubscribe anytime.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="/">mineral.watch</a> · open intelligence on strategic minerals &amp; rare earths · sources: USGS, BGS, UN Comtrade, IEA
+  <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/terms/">Terms &amp; licensing</a></span>
+</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+/* ============ DATA (curated from IEA, IRENA, GWEC, BNEF, European Commission, company disclosures) ============ */
+const DATA = {
+  deploy:{ years:[2018,2019,2020,2021,2022,2023,2024,2025],
+    solar:[103,118,139,175,239,447,597,664],   // GW, SolarPower Europe (2018–22 approx.)
+    wind:[51,61,93,94,78,117,117,165] },       // GW, GWEC
+  ev:{ years:[2018,2019,2020,2021,2022,2023,2024,2025], sales:[2.0,2.1,3.0,6.6,10.2,13.8,17.1,20.5] }, // million, IEA
+  invest:{ years:[2022,2023,2024,2025,2026], clean:[1.4,1.7,2.0,2.2,2.2], fossil:[1.0,1.05,1.1,1.1,1.2] }, // $ tn, IEA WEI
+  price:{ years:[2018,2019,2020,2021,2022,2023,2024,2025], usd:[181,157,140,141,161,149,115,108] }, // $/kWh, BNEF
+  shares:[ // China's share of global manufacturing capacity / production, % (IEA ETP 2026)
+    ["Solar wafers",95],["Anode active material",90],["Solar supply chain (all stages)",85],["Cathode active material",85],
+    ["Battery cells",80],["Solar modules",80],["Wind turbines",60],["Electrolysers",60],["Heat pumps",35]
+  ],
+  chinaShares:[
+    ["Solar wafers",95],["Anode material",90],["Solar supply chain",85],["Cathode material",85],["Battery cells",80],
+    ["Solar modules",80],["Wind-turbine orders 2025",70],["Installed electrolysers",65],["Wind-turbine capacity",60],
+    ["Electrolyser manufacturing",60],["EV sales (Chinese brands)",60],["Heat pumps",35]
+  ],
+  minerals:[
+    {sym:"Li",n:"Lithium",role:"Every cell: carbonate and hydroxide for cathodes and electrolyte",share:"~70% of chemical conversion in China",href:"/lithium/",c:"#fb7185"},
+    {sym:"Co",n:"Cobalt",role:"NMC and NCA cathodes — now being designed out by LFP",share:"~79% of refining in China",href:"/cobalt/",c:"#5b8aff"},
+    {sym:"Ni",n:"Nickel",role:"High-energy cathodes, plus the stainless steel of the plants",share:"~76% of refining in Indonesia + China",href:"/nickel/",c:"#a3e635"},
+    {sym:"C",n:"Graphite",role:"The anode — roughly 50 kg in every EV",share:"~90% of battery-grade refining in China",href:"/graphite/",c:"#fbbf24"},
+    {sym:"REE",n:"Rare earths",role:"NdFeB magnets in EV motors and offshore turbines",share:"~91% of separation, ~94% of magnets in China",href:"/rare-earths/",c:"#a78bfa"},
+    {sym:"Cu",n:"Copper",role:"Wires, windings, transformers, cables — about three times more per EV than per petrol car",share:"~48% of refined output in China",href:"/copper/",c:"#e8926a"},
+    {sym:"Mn",n:"Manganese",role:"NMC and LMR cathodes; the steel in every tower",share:"~95% of battery-grade sulphate in China",href:"/manganese/",c:"#e879f9"}
+  ],
+  fundBars:[
+    ["RRF climate share (2021–26)",273],["Social Climate Fund (2026–32)",86.7],["Modernisation Fund (2021–30, est.)",57],
+    ["Innovation Fund (2020–30, est.)",40],["Just Transition Fund (2021–27)",19.3],["Horizon Europe Cluster 5 (2021–27)",15],
+    ["CEF Energy (2021–27)",5.8],["LIFE (2021–27)",5.4]
+  ],
+  funds:[
+    {amt:"€650 bn",unit:"2021–26",n:"Recovery and Resilience Facility",p:"Joint EU borrowing (€359bn grants + €291bn loans) behind 27 national recovery plans; 42% went to climate — grids, renovation, rail, hydrogen, EV charging — plus about €20bn of REPowerEU grants. Roughly €398bn had been disbursed by May 2026; every milestone was due by 31 August 2026 and the last payments go out by 31 December.",st:"Closing: no RRF payments after 31 Dec 2026",meta:[["NextGenerationEU","src"],["Grants + loans",""],["2021–2026",""]]},
+    {amt:"~€40 bn",unit:"2020–30 est.",n:"Innovation Fund",p:"The EU carbon market's grant arm for first-of-a-kind clean tech and cleantech manufacturing: about €17bn awarded across six annual calls, a €1bn battery pot and three Hydrogen Bank auctions. The 2025 call (€2.9bn, of which €1bn for cleantech manufacturing) drew 358 applications and reports in Q3 2026.",st:"Seed of the €100bn Industrial Decarbonisation Bank",meta:[["ETS allowances","src"],["Grants & auctions",""],["Run by CINEA",""]]},
+    {amt:">€57 bn",unit:"2021–30 est.",n:"Modernisation Fund",p:"ETS-financed support for energy modernisation in 13 lower-income member states — from Bulgaria and Czechia to Poland and Romania, plus Greece, Portugal and Slovenia since 2024: grids, renewables, efficiency and, critics say, some gas. €23.2bn disbursed by July 2026 (36% of the expected total), €2.5bn of it in the 2026 round for 51 projects in 11 countries.",st:"€23.2bn disbursed as of 2 July 2026",meta:[["ETS allowances","src"],["13 member states",""],["EIB-administered",""]]},
+    {amt:"€19.3 bn",unit:"2021–27",n:"Just Transition Fund",p:"Grants for roughly 100 coal, lignite, peat and carbon-intensive territories to retrain, diversify and clean up — Poland €3.85bn, Germany €2.5bn, Romania €2.1bn, Czechia €1.6bn, Bulgaria €1.2bn. Pillar one of the Just Transition Mechanism, alongside an InvestEU scheme and a public-sector loan facility.",st:"Only €735m actually paid out by March 2025",meta:[["EU budget + NGEU","src"],["Cohesion policy",""],["Spend by 2029",""]]},
+    {amt:"€86.7 bn",unit:"2026–32",n:"Social Climate Fund",p:"The compensation fund for ETS2, the new carbon price on heating and transport fuels: vouchers, renovation and clean mobility for vulnerable households and micro-firms. Live since 2026 — but ETS2 itself was pushed back to 2028 in March 2026, so the early years run on ETS1 revenue and the EU share shrinks to about €54.6bn.",st:"Includes a 25% national co-financing share",meta:[["ETS2 allowances","src"],["Social Climate Plans",""],["From 2026",""]]},
+    {amt:"€392 bn",unit:"2021–27",n:"Cohesion policy",p:"The regular structural funds: at least 30% of the ERDF and 37% of the Cohesion Fund must serve climate objectives, and over €15bn is programmed for clean and efficient energy. The 2025 mid-term review let regions redirect money to defence, housing, water and competitiveness — a quiet dilution of the green share.",st:"Green share softened by the 2025 mid-term review",meta:[["EU budget","src"],["ERDF + Cohesion Fund",""],["Shared management",""]]},
+    {amt:">€43 bn",unit:"in 2025",n:"ETS auction revenues",p:"Selling EU emissions allowances raised €38.8bn in 2024 and more than €43bn in 2025 — about €24bn a year straight to national treasuries, the rest to the Innovation and Modernisation Funds and to repaying REPowerEU borrowing. Since 2024 member states must spend all of it on climate and energy; in 2024 they reported €16.4bn of such spending.",st:"The engine behind three of the funds on this page",meta:[["Carbon market","src"],["National budgets",""],["100% climate rule",""]]},
+    {amt:"€57 bn",unit:"green, 2025",n:"European Investment Bank Group",p:"The EU's bank signed a record €100bn in 2025, nearly 60% of it green: €11.6bn for grids and storage, a fifth of all new EU solar and a third of new onshore wind financed, plus direct clean-tech bets — Vulcan Energy, 3Sun, Verkor, Northvolt before its fall. Its Climate Bank Roadmap phase 2 runs 2026–2030.",st:"Also channels €2bn of RESourceEU and the Modernisation Fund",meta:[["EIB / EIF","src"],["Loans & guarantees",""],["Climate Bank",""]]},
+    {amt:"€40 bn+",unit:"2021–27",n:"Horizon, CEF, LIFE, InvestEU",p:"The smaller lines: Horizon Europe's ~€15bn climate-energy-mobility cluster (35% of the €95.5bn programme is climate-tagged), the Connecting Europe Facility's €5.8bn for cross-border energy infrastructure, LIFE's €5.4bn (with a ~€1bn clean-energy strand) and the €26.2bn InvestEU guarantee, 30% earmarked for climate and meant to mobilise €372bn.",st:"InvestEU also hosts the Just Transition scheme",meta:[["EU budget","src"],["Research, infrastructure, guarantees",""],["2021–2027",""]]}
+  ],
+  ifCalls:[["IF20 · 2020",1.1],["IF21 · 2021",1.8],["IF22 · 2022",3.6],["IF23 · 2023",4.2],["IF24 · 2024",2.7],["IF24 Battery",0.85],["H₂ auction 1 · 2024",0.72],["H₂ auction 2 · 2025",0.99],["H₂ auction 3 · 2026",1.09]],
+  jtf:[["Poland",3.85],["Germany",2.5],["Romania",2.14],["Czechia",1.64],["Bulgaria",1.2],["All others",7.99]],
+  toolkit:[
+    ["Green Deal Industrial Plan","1 Feb 2023","Framework","Brussels' answer to the US Inflation Reduction Act: faster permitting, a relaxed Temporary Crisis and Transition Framework for state aid, skills and trade partnerships — and the two laws below."],
+    ["Net-Zero Industry Act","In force 29 Jun 2024","40% of EU deployment needs made in EU by 2030; 15% of world market by 2040","Strategic-project status, permitting deadlines and non-price 'resilience' criteria in renewables auctions and public procurement. Implementation rules landed in 2025; the strategic-project registry is filling slowly."],
+    ["Critical Raw Materials Act","In force 23 May 2024","10% extraction, 40% processing, 25% recycling of EU consumption by 2030; max 65% from one supplier","47 EU strategic projects (25 Mar 2025) plus 13 outside the EU (4 Jun 2025); 160+ applications in the second round (95 in the EU, 66 abroad; 75 for batteries, 21 for rare earths) — decisions slipping to autumn 2026."],
+    ["IPCEIs (state aid)","2019–2024","€6.1bn batteries; €18.9bn hydrogen (Hy2Tech €5.4bn, Hy2Use €5.2bn, Hy2Infra €6.9bn, Hy2Move €1.4bn)","Cross-border 'Important Projects of Common European Interest' may receive aid beyond normal limits — the vehicle behind Northvolt Heide (€902m approved), ACC, Verkor and dozens of electrolyser plants."],
+    ["Clean Industrial Deal","26 Feb 2025","€100bn Industrial Decarbonisation Bank (Innovation Fund, ETS revenues, InvestEU)","Decarbonisation recast as competitiveness: a €1bn pilot auction for industrial heat launched in October 2025, the CISAF state-aid framework adopted 25 June 2025, lead markets for low-carbon steel and cement."],
+    ["European Hydrogen Bank","Auctions 2024–26","€2.8bn awarded in three EU auctions + €836m via national 'auctions-as-a-service'","A fixed premium per kilogram of renewable hydrogen for ten years: 31 projects and roughly 5 GW of electrolysers, with winning bids from €0.20 to €0.60/kg in 2025 and as low as €0.44/kg in 2026."],
+    ["Automotive Package & Battery Booster","16 Dec 2025 · call opened 9 Jun 2026","€1.8bn (€1.5bn cell manufacturing + €300m raw materials)","CO₂-target flexibilities for carmakers paired with grants for giga-scale European cell plants and 'Made in EU' conditionality."],
+    ["RESourceEU","3 Dec 2025","At least €3bn over 12 months (€2bn EIB, €600m Horizon Europe, €300m Battery Booster)","Joint purchasing, stockpiling and recycling for the three priority chains — permanent magnets, batteries and defence — after China's 2025 rare-earth controls."],
+    ["Industrial Accelerator Act (proposal)","4 Mar 2026","'Made in Europe' content rules for procurement and public support","At least 20% low-carbon EU steel, 5–25% aluminium and 5% cement in public purchases; EU-content rules for wind, solar, electrolysers, heat pumps and nuclear; foreign investors must transfer technology and keep 50% EU employment. Consultation closed May 2026; now with Parliament and Council."],
+    ["MFF 2028–34 / European Competitiveness Fund","Proposed 16 Jul 2025 · Council position 16 Jun 2026","€409bn (ECF €234bn + Horizon Europe €175bn) of a ~€2tn budget","Merges 14 programmes, the Innovation Fund included, into one fund with a clean-transition and industrial-decarbonisation window; just-transition money folded into national plans. Deal targeted by end-2026."]
+  ],
+  timeline:[
+    {d:"11 Dec 2019",h:"The Green Deal",hot:true,p:"The Commission presents the European Green Deal and a pledge of climate neutrality by 2050. The Climate Law (2021) writes it and a 55% cut by 2030 into statute; the pandemic recovery fund (agreed December 2020) attaches a 37% climate rule to €650bn of joint borrowing; the €19bn Just Transition Fund follows in June 2021 and the 'Fit for 55' package in July."},
+    {d:"24 Feb – 18 May 2022",h:"Russia invades — REPowerEU",hot:true,p:"Gas spikes above €300/MWh. REPowerEU mobilises some €300bn — mostly unused RRF loans plus about €20bn of new grants from carbon allowances — to end Russian fossil imports; the 2030 renewables target is raised to 42.5%. EU solar installations jump by half in a year. Almost all of the hardware comes from China."},
+    {d:"16 Aug 2022 – 16 Mar 2023",h:"America writes the cheques",hot:false,p:"The US Inflation Reduction Act signs uncapped clean-energy tax credits later estimated at over $1 trillion; European industry warns of an exodus. Brussels answers with the Green Deal Industrial Plan (1 February 2023), looser state-aid rules and the Net-Zero Industry and Critical Raw Materials Acts (proposed 16 March 2023, in force by mid-2024)."},
+    {d:"2023 – 2024",h:"China floods the market",hot:true,p:"Chinese PV capacity outruns world demand and module prices halve toward $0.10/W; the IEA finds solar manufacturing running at about 50% utilisation. Meyer Burger shuts Freiberg (March 2024) and flees to the US. The Hydrogen Bank's pilot auction awards €720m to seven projects (April 2024). The EU imposes duties of 7.8–35.3% on Chinese EVs (30 October 2024); ArcelorMittal pauses its European hydrogen-steel projects (November); Northvolt's US arm files for Chapter 11."},
+    {d:"Feb – Sep 2025",h:"Clean Industrial Deal — and Northvolt falls",hot:true,p:"26 February: the Clean Industrial Deal launches a €100bn Industrial Decarbonisation Bank. 12 March: Northvolt files for bankruptcy in Sweden after raising about $15bn. 25 March: 47 CRMA strategic projects named. 28 April: the Iberian blackout. May: Reuters reveals undocumented communication devices inside Chinese inverters; the second Hydrogen Bank auction awards €992m to 15 projects. August–September: Meyer Burger's German plants enter insolvency."},
+    {d:"4 – 16 Jul 2025",h:"America cancels the cheques",hot:true,p:"The One Big Beautiful Bill Act ends the EV credit on 30 September 2025 and the residential solar credit on 31 December, and kills the wind and solar credits for projects not under construction by 4 July 2026 or in service by end-2027; the $27bn Greenhouse Gas Reduction Fund is repealed. E2 later counts $34.8bn of cancelled clean-energy projects and 38,000 jobs in 2025 — three dollars cancelled for every dollar announced. On 16 July the Commission proposes the 2028–34 budget with a €409bn Competitiveness Fund."},
+    {d:"Oct – Dec 2025",h:"Rare earths, a target and a grid plan",hot:true,p:"9 October: China expands its rare-earth export controls (suspended for a year in November after the Trump–Xi meeting). 3 December: RESourceEU promises €3bn for magnets, batteries and defence. 9 December: China registers a polysilicon consolidation platform. 10 December: Council and Parliament agree the 2040 target (−90%, up to 5% international credits) and delay ETS2 to 2028; the Commission tables the Grids Package (€1.2tn to 2040). 16 December: the Automotive Package with a €1.8bn Battery Booster. PowerCo starts cell production in Salzgitter."},
+    {d:"Jan – Mar 2026",h:"Made in Europe",hot:true,p:"12 January: minimum-price undertakings start replacing EV tariffs (first accepted 10 February). 16 February: ACC cancels Kaiserslautern and Termoli. 26 February: Lyten completes its purchase of Northvolt's Swedish plants. 4 March: the Industrial Accelerator Act proposes 'Made in Europe' content rules. 5 March: the Council adopts the 2040 target. 20 March: ENTSO-E's blackout report — 'not about renewables, about voltage control'. 24 March: €2.7bn of IF24 grants signed. 1 April: China abolishes the export VAT rebate on solar products."},
+    {d:"Apr – Jun 2026",h:"Money, auctions and vetoes",hot:false,p:"Stegra agrees a €1.4bn rescue round led by the Wallenbergs (April). The third Hydrogen Bank auction awards €1.09bn to nine projects (May); the Commission bars EU funding for projects using high-risk-supplier inverters (13 May); the IEA counts $2.2tn of clean investment against $1.2tn fossil (28 May); Vulcan Energy closes €2.2bn for Europe's first lithium plant. The €1.5bn Battery Booster call opens (9 June); the Council agrees its Competitiveness Fund position (16 June); the UK blocks Mingyang's £1.5bn Scottish turbine factory; Qcells starts US cell production."},
+    {d:"Jul – Sep 2026",h:"Deadlines",hot:true,p:"4 July: the US construction-start cliff for wind and solar credits. 2 July: the Modernisation Fund passes €23bn disbursed. 6 August: eight Chinese polysilicon makers sign an 'anti-involution' pact with prices stuck below cost. 31 August: the RRF milestone deadline — final payment requests by 30 September, last payments by 31 December, no successor of comparable size. CATL's Debrecen cells are held back by safety rectifications; Ørsted's Revolution Wind passes 95% complete; IF25 results and the CRMA second round slip toward autumn."}
+  ],
+  factoryMinis:[
+    {ico:"🔆",h:"Solar: the war Europe lost",p:"China's ~85% of the chain was built on coal-powered polysilicon and scale nobody matched — LONGi and Jinko each ship 80+ GW a year — and then on losses: the top four makers lost $1.54bn in the first half of 2025 alone, LONGi CNY 6–6.5bn over the year. Europe's last cell maker, Meyer Burger, went insolvent in 2025; Wacker's polysilicon is pivoting to chips. Beijing's 2026 fixes — abolishing the export VAT rebate from April, a polysilicon consolidation platform, an eight-producer output pact in August — raise prices for everyone else."},
+    {ico:"🔋",h:"Batteries: the reckoning",p:"China produced over 80% of the world's cells in 2025 and CATL alone 39% of EV batteries. Europe has ~252 GWh of nominal capacity, mostly Korean- and Chinese-owned (LG Wrocław, Samsung SDI and SK On in Hungary, CATL in Erfurt and Debrecen), and its pipeline shrank 8% between 2023 and 2026 — the only major region to lose ground. Northvolt failed, ACC retreated to one French plant, PowerCo started Salzgitter only in December 2025. Brussels' answer is a €1.5bn Battery Booster and 'Made in EU' strings on Chinese investment."},
+    {ico:"🌬",h:"Wind: the stronghold",p:"China holds 60% of turbine capacity and its OEMs took ~70% of 2025's record 215 GW of orders — yet Europe's 19% is the healthiest Western clean-tech industry: Vestas booked a record 16.3 GW and €18.8bn of revenue, Nordex a record 10.2 GW, and Siemens Gamesa returned to quarterly profit in 2026 after a €623m first-half loss a year earlier. Chinese entry has become a security matter: the UK blocked Mingyang's £1.5bn Scottish factory and barred its turbines from British waters; Mingyang now looks to Spain."},
+    {ico:"⚡",h:"Hydrogen, heat and grids: three smaller fronts",p:"Electrolysers are the front that collapsed: installed capacity only reached 4 GW worldwide in 2025 (65% in China) against ~33 GW/yr of factories; thyssenkrupp nucera guides sales down as much as 41%, Nel's orders fell 73%. Heat pumps are the most balanced market (China 35%, US 25%, EU 20%) and recovered ~10% in Europe in 2025 after a 21% slump. Grid gear is Europe's other stronghold — Prysmian's ~€16bn transmission backlog, Nexans' €8.1bn, NKT's Karlskrona expansion — as global grid spending heads to $550bn."}
+  ],
+  securityMinis:[
+    {ico:"🔌",h:"The inverter back door",p:"Around 80% of new EU solar systems use Chinese inverters — Huawei alone has 115 GW connected — and inverters can be updated, throttled or switched off remotely. After undocumented communication devices were found in some units in May 2025, Lithuania banned remote Chinese access to solar, wind and storage plants, the Commission's Economic Security Doctrine flagged inverters as a high-risk dependence, and from 13 May 2026 projects using high-risk-supplier inverters are excluded from EU funding. NIS2 risk assessments and Cyber Resilience Act certification follow in 2026."},
+    {ico:"🔦",h:"28 April 2025: the lights go out",p:"Spain and Portugal lost power for most of a day. ENTSO-E's expert panel (final report 20 March 2026) blamed interacting failures — oscillations, gaps in voltage and reactive-power control, manual switching of voltage equipment, cascading generator disconnections — and its president said it was 'not about renewables, it's about voltage control'. Twenty-two recommendations followed; Spain's rule letting renewables regulate voltage took full effect on 17 March 2026."},
+    {ico:"🌬",h:"The turbine veto",p:"Chinese turbine makers' international orders rose 66% in 2025 and their prices undercut Vestas and Siemens Gamesa by a wide margin — but Europe is saying no on security grounds. The UK blocked Mingyang's planned £1.5bn Scottish factory in 2026 and ruled its turbines out of British waters; the EU has run Foreign Subsidies Regulation probes into Chinese wind bids since 2024 and the NZIA lets auctions score 'resilience'. Mingyang is now looking at Spain."},
+    {ico:"🧲",h:"The magnet embargo",p:"China's April 2025 licensing of seven heavy rare earths and the magnets containing them — expanded in October, then suspended for a year in November — halted lines at European auto suppliers and exposed offshore wind's dependence on NdFeB. The counterweights are small and new: Neo's Narva plant (2,000 t/yr, opened September 2025), Solvay's La Rochelle separation line, LKAB's Per Geijer deposit, and a CRMA rule that no more than 65% of any strategic material should come from one country."},
+    {ico:"🔋",h:"Cells, cars and conditions",p:"Chinese ownership of battery capacity outside China is about 5% today and heading to roughly a quarter by 2030 (IEA) — CATL in Debrecen and Zaragoza, BYD in Szeged and Manisa. The EU's response is conditionality rather than exclusion: the Industrial Accelerator Act would require technology transfer, local content and 50% EU employment from strategic foreign investments, while the 2026 minimum-price deal replaces EV tariffs with undertakings on price and EU investment."},
+    {ico:"⚡",h:"From gas to hardware",p:"REPowerEU cut Russian gas from about 45% of EU imports in 2021 to well under a fifth — by installing Chinese panels, batteries and inverters at record speed. The Economic Security Doctrine now lists solar inverters, batteries and magnets among high-risk dependencies, the Grids Package prices the €1.2tn network Europe needs to 2040, and NZIA resilience criteria are meant to ration the next dependence before it forms."}
+  ],
+  investMinis:[
+    {ico:"🇨🇳",h:"China's third of everything",p:"China accounts for almost a third of the world's clean-energy investment — over $625bn in 2024, nearly double 2015 — and finances the rest of the world's transition through exports: the 'new three' (EVs, batteries, solar) grew 27% in 2025 and green-energy products reached a record 58.3% of Chinese exports in early 2026. The price is paid at home, in loss-making solar giants and a polysilicon market with no bids."},
+    {ico:"🇺🇸",h:"America's reversal",p:"After the IRA triggered a factory boom, 2025 turned negative: $34.8bn of projects and 38,000 jobs cancelled, roughly three dollars pulled for every dollar announced (E2), nearly $40bn and 53,000 jobs by mid-2026 (EDF/Atlas). Yet the 45X manufacturing credit survived, tariffs kept rising, and module capacity keeps growing — First Solar toward 18 GW across six plants, Qcells' vertically integrated Cartersville, T1 Energy's 5 GW G1 Dallas and G2 cells in Texas."},
+    {ico:"🇪🇺",h:"Europe's public money",p:"Where the market will not go, the public purse does: the EIB signed €57bn of green financing in 2025 (a fifth of new EU solar, a third of onshore wind, most offshore wind), the Innovation Fund has awarded about €17bn, the Hydrogen Bank €2.8bn, the battery and hydrogen IPCEIs unlocked €25bn of state aid, and the €1.5bn Battery Booster opened in June 2026 — all against a €650bn RRF that stops paying at the end of 2026."},
+    {ico:"🏭",h:"The gigafactory shake-out",p:"Northvolt is now Lyten (restart shipments due H2 2026, Heide in 2028); ACC cancelled two of three plants while ramping Billy-Berclau toward 40 GWh; PowerCo runs Salzgitter and builds Valencia (July 2027) and St Thomas (2027); CATL's €7.3bn Debrecen and Stellantis JV in Zaragoza, BYD's Szeged and Manisa lead the Chinese wave; Tata's Somerset plant is due in 2027. Europe's pipeline still fell 8% in three years."},
+    {ico:"🔌",h:"The grid and storage boom",p:"Grids ($550bn) and batteries (>$100bn) are the fastest-growing lines in the IEA's 2026 investment tally. Stationary storage demand rose 51% in 2025; the EU installed a record 27.1 GWh; Tesla deployed 46.7 GWh of Megapacks (+49%) and opened a 40 GWh Shanghai Megafactory. Cable and transformer makers are sold out for years — Prysmian's ~€16bn transmission backlog includes a single €5bn Amprion order."},
+    {ico:"⚠️",h:"The risks",p:"Overcapacity that turns every price into a loss; policy whiplash (US credits, EU CO₂ targets, Chinese rebates); a hydrogen market that shrank before it grew — nucera down 41%, Nel orders −73%; permitting and grid queues; CRMA decisions slipping; the RRF cliff; and the possibility that 'Made in Europe' rules raise costs faster than they raise capacity."}
+  ],
+  journey:[
+    {ico:"⛏",t:"1 · Minerals",p:"Lithium from Australian spodumene and Atacama brine, cobalt from Congolese copper mines, nickel from Sulawesi laterite, graphite and rare earths from China, copper from Chile and Peru, quartz for silicon. The energy sector drove about 75% of the growth in demand for these minerals in 2025 — and every one of them has its own dashboard on this site.",f:"Battery demand passed 1.5 TWh in 2025, +35% (IEA)"},
+    {ico:"🧪",t:"2 · Materials",p:"Polysilicon furnaces in Inner Mongolia and Xinjiang, cathode and anode powder plants in Hunan and Fujian, NdFeB magnet works in Baotou and Ganzhou: the least visible and most concentrated link. China makes about 85% of cathode, over 90% of anode and ~94% of magnet material; Wacker, Umicore, BASF, Solvay and Neo are Europe's exceptions.",f:"Polysilicon ~RMB 32,000/t in Aug 2026 — below cost (OPIS)"},
+    {ico:"⚙️",t:"3 · Components",p:"Wafers, cells, battery cells, inverters, nacelle drivetrains, electrolyser stacks. Here scale wins: LONGi and Jinko each ship 80+ GW a year, CATL alone installed 465 GWh of EV cells in 2025 (39% of the world), Huawei and Sungrow dominate inverters.",f:"China: 95% of wafers, >80% of cells (IEA ETP 2026)"},
+    {ico:"🔋",t:"4 · Machines",p:"Modules, packs and cars, turbines, heat pumps, Megapacks. Assembly is the one stage that follows the customer — hence gigafactories in Hungary, Georgia and Salzgitter, BYD plants in Szeged and Manisa — but most of the value stays upstream.",f:"Pack prices $108/kWh in 2025; LFP $81 (BNEF)"},
+    {ico:"⚡",t:"5 · Megawatts",p:"Permits, grid connections, auctions and subsidies: where public money lands. 664 GW of solar and 165 GW of wind in 2025 worldwide; the EU's own solar market shrank for the first time since 2016 (65.1 GW), its wind sector installed 15.1 GW, and its grid needs €1.2tn by 2040.",f:"The EIB financed a fifth of new EU solar and a third of onshore wind in 2025"},
+    {ico:"♻️",t:"6 · Second life",p:"Battery recycling (Hydrovolt, Lyten's Revolt, Redwood, Glencore's Li-Cycle assets), blade recycling and magnet recovery: still small, increasingly mandated by the EU Battery Regulation and the CRMA — and the only long-run route to a less Chinese midstream that needs no new mine.",f:"CRMA target: 25% of EU consumption from recycling by 2030"}
+  ],
+  forms:[
+    {s:"~90%",n:"Polysilicon",g:"U",use:"The first furnace",d:"Solar-grade polysilicon is made in coal-powered furnaces across Inner Mongolia, Xinjiang, Sichuan and Yunnan — Tongwei, GCL, Daqo, Xinte, East Hope. Capacity ran so far ahead of demand that prices fell below cost through 2024–26; a state-blessed consolidation platform was registered in December 2025 and eight producers signed an 'anti-involution' pact in August 2026. Wacker's Burghausen and Nünchritz plants are Europe's last and now pivot to semiconductor grade.",pr:"Aug 2026: ~RMB 32,000/t vs cost of RMB 40,000–45,000 (OPIS)"},
+    {s:"95%",n:"Wafers",g:"U",use:"The purest chokepoint",d:"Monocrystalline ingots pulled and sliced almost entirely in China — the IEA puts China's share of wafer capacity at 95% or more, the tightest stage of any clean-tech chain. Europe has no wafer plant of scale; the US is building a handful, led by Qcells' ingot-to-module complex in Cartersville, Georgia.",pr:null},
+    {s:"85–90%+",n:"Cathode & anode",g:"U",use:"The battery's chemistry",d:"Cathode active material (NMC, LFP) and anode graphite are the value core of a cell: China made ~85% of the world's CAM and more than 90% of anode material in 2025 (IEA). Europe's attempts — Umicore Nysa, BASF Schwarzheide, Northvolt's upstream in Skellefteå — were slowed, written down or paused as LFP took over and EV growth stalled.",pr:"LFP passed 55% of EV battery deployments in 2025 (IEA)"},
+    {s:"~94%",n:"Magnets",g:"U",use:"The motor's heart",d:"Sintered NdFeB magnets turn EV motors and direct-drive offshore turbines; China makes ~94% of them and separates ~91% of the rare earths behind them, and used export licensing in 2025 to squeeze European suppliers. Neo's Narva plant (2,000 t/yr, opened September 2025) and Solvay's La Rochelle line are Europe's first counterweights.",pr:"See the Rare earths dashboard for controls and prices"},
+    {s:"80%+",n:"Solar cells & modules",g:"M",use:"The commodity",d:"TOPCon cells and modules ship from China at under $0.10/W; the top four makers lost $1.54bn in the first half of 2025 and kept shipping 80+ GW each. Europe's last cell maker (Meyer Burger) went insolvent in 2025; the US is rebuilding ~14–18 GW behind tariffs and the 45X credit (First Solar, Qcells, T1 Energy). China abolished the export VAT rebate on PV from April 2026, lifting prices for the first time in years.",pr:"Trina raised prices to RMB 0.88–0.92/W in Jan 2026 (pv magazine)"},
+    {s:"~80%",n:"Inverters",g:"M",use:"The brain — and the back door",d:"Inverters convert and control every solar watt, and around 80% of new EU PV systems use Chinese ones (Huawei alone: 115 GW connected in the EU). After undocumented communication devices were found in some units in 2025, Lithuania banned remote Chinese access, the Commission's Economic Security Doctrine flagged them as a high-risk dependence and, from May 2026, projects using high-risk-supplier inverters are barred from EU funding. SMA and Fronius are the European alternatives.",pr:null},
+    {s:"80%+",n:"Battery cells",g:"M",use:"The gigafactory race",d:"China produced over 80% of the world's cells in 2025; CATL (39%) and BYD (16%) alone supplied more than half of EV batteries. Europe's ~252 GWh of nominal capacity is mostly Korean- or Chinese-owned (LG Wrocław, Samsung SDI Göd, SK On Iváncsa, CATL Erfurt and Debrecen); its home-grown champion Northvolt failed, ACC retreated to one plant and PowerCo only started in December 2025.",pr:"BNEF 2025: $108/kWh average pack; BEV packs $99; storage $70"},
+    {s:"60%",n:"Wind turbines",g:"M",use:"Europe's stronghold",d:"China holds 60% of turbine production capacity and its OEMs took ~70% of 2025 orders — but Europe's 19% is the healthiest Western clean-tech industry: Vestas booked a record 16.3 GW and €18.8bn of revenue in 2025, Nordex a record 10.2 GW, and Siemens Gamesa returned to quarterly profit in 2026. Chinese entry is now a security question: the UK blocked Mingyang's £1.5bn Scottish factory in 2026.",pr:"2025 global order intake: 215 GW (Wood Mackenzie)"},
+    {s:"60%",n:"Electrolysers",g:"M",use:"The market that shrank",d:"Installed electrolysis doubled to just over 4 GW in 2025 — 65% of it in China — against roughly 33 GW/yr of manufacturing capacity, 60% of it Chinese. Western makers are in retreat: thyssenkrupp nucera guides 2025/26 sales down as much as 41%, Nel's orders fell 73% in Q1 2026. The Hydrogen Bank's three auctions (€2.8bn, ~5 GW) are the demand keeping the sector alive.",pr:"3rd auction (May 2026): winning bids from €0.44/kg"},
+    {s:"35%",n:"Heat pumps",g:"M",use:"The most balanced market",d:"The one clean technology where China (35%), the US (25%) and the EU (20%) split capacity — Daikin, Bosch, Vaillant, Viessmann (now Carrier) and NIBE all build in Europe. Sales are policy-driven: European volumes fell 21% in 2024 when subsidies wobbled, then recovered about 10% in 2025 to 2.6 million units as schemes stabilised.",pr:null},
+    {s:"$550bn",n:"Grid gear",g:"M",use:"The bottleneck Europe builds",d:"Transformers, HVDC cables, switchgear: global grid investment reaches $550bn in 2026 (+~20%) and Europe's makers are sold out — Prysmian's transmission backlog is ~€16bn (a €5bn Amprion order alone), Nexans' €8.1bn, NKT is expanding Karlskrona. The EU Grids Package (December 2025) prices Europe's needs at €1.2tn to 2040.",pr:null},
+    {s:"1 in 4",n:"EVs",g:"D",use:"The demand engine",d:"More than 20 million electric cars sold in 2025 — a quarter of the world market: ~55% of sales in China, 28% in Europe, under 10% in the US. Chinese brands supplied about 60% of them. EU duties of up to 35.3% on Chinese EVs (2024) gave way in 2026 to minimum-price undertakings, while BYD builds in Szeged and Manisa.",pr:"IEA forecast for 2026: 23 million (28% of sales)"},
+    {s:"829 GW",n:"Solar & wind farms",g:"D",use:"The megawatts",d:"664 GW of solar and 165 GW of wind installed in 2025, both records — but 80% of the wind and most of the solar went up in Asia. The EU installed 65.1 GW of solar (its first decline since 2016) and 15.1 GW of wind, and is heading for 344 GW of wind by 2030 against a 425 GW target.",pr:"SolarPower Europe expects the global solar market to shrink 8% in 2026"},
+    {s:"1.5 TWh",n:"Storage",g:"D",use:"The fastest-growing buyer",d:"Stationary batteries became the fastest-growing battery market in 2025 (demand +51%), pulling total lithium-ion demand past 1.5 TWh; Tesla alone deployed 46.7 GWh of Megapacks and the EU installed a record 27.1 GWh. Storage packs fell to $70/kWh — cheaper than any car pack.",pr:null},
+    {s:"♻️",n:"Recycling",g:"C",use:"The loop being legislated",d:"Hydrovolt in Norway (now 100% Hydro), Lyten's Revolt in Skellefteå, Redwood in Nevada and Glencore's Li-Cycle assets: black-mass processing is small but growing, and the EU Battery Regulation and the CRMA (25% of consumption from recycling by 2030) are forcing its hand. Recycling is the only midstream Europe can build without a mine.",pr:null}
+  ],
+  companies:[
+    {n:"LONGi Green Energy",u:"https://www.longi.com/",hq:"China",tik:"SSE: 601012",seg:"sol",a:"Wafer, cell and module plants across Shaanxi, Jiangsu, Yunnan; LONGi Hydrogen electrolysers",s:"The world's largest wafer maker and, with Jinko, the top module shipper — and a loss machine: a net loss of CNY 6–6.5bn expected for 2025 as module prices sat below cost. Bets on back-contact cells and on Beijing's anti-involution campaign to restore prices."},
+    {n:"JinkoSolar",u:"https://www.jinkosolar.com/",hq:"China",tik:"NYSE: JKS",seg:"sol",a:"Cell and module plants in Jiangxi, Zhejiang, Anhui; Malaysia, Vietnam and US (Florida) assembly",s:"Shipped 86 GW of modules in 2025 and lost RMB 4.45bn doing it, with gross margin down to 2.2% (from 10.9%); revenue fell 20% to $9.4bn. Tariffs on its Southeast Asian plants and the end of China's export VAT rebate reshape its 2026."},
+    {n:"Tongwei",u:"https://www.tongwei.com/",hq:"China",tik:"SSE: 600438",seg:"sol",a:"Polysilicon complexes in Sichuan, Yunnan and Inner Mongolia; the world's largest cell capacity",s:"The biggest polysilicon and cell producer on Earth reported sharp losses for 2025 as polysilicon traded far below cost. A signatory of the August 2026 eight-producer 'anti-involution' initiative and a backer of the consolidation platform meant to shut surplus furnaces."},
+    {n:"First Solar",u:"https://www.firstsolar.com/",hq:"United States",tik:"NASDAQ: FSLR",seg:"sol",a:"Thin-film module plants in Ohio, Alabama and Louisiana; sixth US plant in South Carolina",s:"The West's one profitable module maker: ~14 GW of US capacity in 2026, heading for ~18 GW across six factories, its cadmium-telluride panels sold out years ahead behind tariffs and the surviving 45X manufacturing credit."},
+    {n:"Qcells (Hanwha Solutions)",u:"https://us.qcells.com/",hq:"South Korea / US",tik:"KRX: 009830 (parent)",seg:"sol",a:"Dalton and Cartersville, Georgia — America's only ingot-to-module complex",s:"Started producing solar cells at Cartersville in June 2026, closing the wafer-and-cell gap in the US chain; total US output due to reach 8.6 GW by the third quarter of 2026."},
+    {n:"T1 Energy (ex-Freyr)",u:"https://www.t1energy.com/",hq:"United States",tik:"NYSE: TE",seg:"sol",a:"G1 Dallas module plant (5 GW); G2 Austin cell plant (2.1 GW first phase, under construction)",s:"The Norwegian battery hopeful Freyr abandoned Mo i Rana, bought Trina's Texas module plant and reinvented itself as an all-American solar maker; its 2.1 GW TOPCon cell factory is the test of whether US cells can compete."},
+    {n:"Meyer Burger",u:"https://www.meyerburger.com/",hq:"Switzerland",tik:"SIX: MBTN",seg:"sol",a:"Thalheim cells and Hohenstein-Ernstthal machinery (insolvent); Freiberg modules (closed 2024); Goodyear, Arizona (closed 2025)",s:"Europe's last solar-cell maker: Freiberg shut in March 2024, the German units filed for insolvency in August–September 2025 after investor talks collapsed under Chinese price pressure and US policy uncertainty; some 600 staff laid off, a 60-person Thun rump remains."},
+    {n:"Sungrow",u:"https://en.sungrowpower.com/",hq:"China",tik:"SZSE: 300274",seg:"sol",a:"Hefei inverter and storage plants; global service network",s:"With Huawei, one of the two vendors that supply most of Europe's inverters — the category the Commission's May 2026 guidance now treats as a security risk when it comes from 'high-risk suppliers'. Storage systems are its fastest-growing line."},
+    {n:"CATL",u:"https://www.catl.com/en/",hq:"China",tik:"SZSE: 300750 · HKEX: 3750",seg:"bat",a:"Ningde and a dozen Chinese bases; Erfurt (14 GWh) and Debrecen (€7.3bn, 100 GWh planned); Zaragoza LFP JV with Stellantis",s:"Installed 465 GWh of EV batteries in 2025 — 39.2% of the world (SNE) — and listed in Hong Kong. Debrecen's module lines started in May 2026 but cell mass production was still awaiting safety sign-off at the end of August; its 40 GWh first phase is fully booked."},
+    {n:"BYD",u:"https://www.byd.com/",hq:"China",tik:"SZSE: 002594 · HKEX: 1211",seg:"bat",a:"Shenzhen, Hefei and other cell and car plants; Szeged (Hungary) and Manisa (Turkey) car factories; Camaçari (Brazil)",s:"World's largest EV maker and No. 2 cell supplier (16.4% share, 195 GWh in 2025). Its Szeged plant, meant to open in 2025, slipped to the fourth quarter of 2026 amid environmental scrutiny; a minimum-price undertaking lets it sidestep EU duties."},
+    {n:"LG Energy Solution",u:"https://www.lgensol.com/en",hq:"South Korea",tik:"KRX: 373220",seg:"bat",a:"Ochang; Wrocław (Europe's largest gigafactory); Michigan, Ohio, Arizona and JV plants in the US",s:"Third in the world at 108.8 GWh (+11%) but losing share to Chinese rivals (9.2%). Europe's biggest cell plant is its Polish one; US expansion has been repurposed toward storage as EV credits vanished."},
+    {n:"Samsung SDI",u:"https://www.samsungsdi.com/",hq:"South Korea",tik:"KRX: 006400",seg:"bat",a:"Cheonan and Ulsan; Göd (Hungary); Indiana JVs with Stellantis and GM",s:"Hungary's other Korean giant, supplying BMW and Stellantis from Göd; like SK On (Iváncsa, Komárom) it is the reason Hungary hosts more cell capacity than any EU country bar Poland and Germany."},
+    {n:"PowerCo (Volkswagen)",u:"https://www.powerco.de/",hq:"Germany",tik:"private (VW)",seg:"bat",a:"Salzgitter (production since Dec 2025); Valencia/Sagunto (under construction); St Thomas, Ontario (under construction)",s:"Europe's carmaker-owned champion: Salzgitter started unified-cell production in December 2025 and ramps toward 20 GWh in 2026 (scope for 40); Valencia's series production slipped to July 2027; St Thomas targets 2027."},
+    {n:"ACC (Automotive Cells Company)",u:"https://www.acc-emotion.com/",hq:"France",tik:"private (Stellantis, Mercedes-Benz, TotalEnergies)",seg:"bat",a:"Billy-Berclau/Douvrin gigafactory (13 GWh block, 40 GWh by 2030); Kaiserslautern and Termoli (cancelled)",s:"Ramping its French plant while formally abandoning Germany and Italy on 16 February 2026 — the prerequisites for a restart 'unlikely to be met' as EV demand lagged and Chinese competition bit. Its CEO called building new gigafactories 'totally irresponsible'."},
+    {n:"Verkor",u:"https://verkor.com/",hq:"France",tik:"private",seg:"bat",a:"Dunkirk gigafactory (16 GWh first phase); Grenoble innovation centre",s:"Renault's cell supplier, built with EIB debt and French and EU support (IPCEI), produced its first cells at Dunkirk in 2025 — one of the few new European gigafactories to reach production on schedule."},
+    {n:"Lyten (Northvolt Sweden)",u:"https://lyten.com/",hq:"United States / Sweden",tik:"private",seg:"bat",a:"Northvolt Ett and Ett Expansion (Skellefteå); Northvolt Labs (Västerås); Revolt recycling; Heide site (Germany)",s:"The California lithium-sulphur start-up completed its purchase of Northvolt's Swedish assets (book value ~$5bn) on 26 February 2026, is rehiring 600+ staff and promises commercial cell shipments from Skellefteå in the second half of 2026; Heide is scheduled for 2028 after repaying part of its German subsidies."},
+    {n:"Tesla",u:"https://www.tesla.com/",hq:"United States",tik:"NASDAQ: TSLA",seg:"bat",a:"Giga Nevada (cells with Panasonic); Grünheide (cars); Megapack factories in Lathrop and Shanghai (40 GWh)",s:"Energy storage is now its growth engine: 46.7 GWh deployed in 2025 (+49%), a record 14.2 GWh in Q4, and a Shanghai Megafactory running since February 2025. US EV sales fell sharply after the federal credit ended on 30 September 2025."},
+    {n:"Vestas",u:"https://www.vestas.com/",hq:"Denmark",tik:"CPH: VWS",seg:"wind",a:"Nacelle and blade plants in Denmark, Germany, Spain, Italy, Poland, US, India, China; offshore V236-15 MW",s:"Record 2025: 16.3 GW of orders, €18.8bn of revenue, 5.7% EBIT margin and a €71.9bn backlog — the largest non-Chinese OEM, even as it fell to seventh in Wood Mackenzie's installation ranking behind six Chinese rivals."},
+    {n:"Siemens Gamesa (Siemens Energy)",u:"https://www.siemensgamesa.com/",hq:"Spain / Germany",tik:"ETR: ENR (parent)",seg:"wind",a:"Cuxhaven and Aalborg offshore nacelles and blades; Hull blades; onshore plants in Spain and Germany",s:"Back in the black: a €56m quarterly profit in fiscal Q3 2026, the first since 2022, after quality failures cost billions; first-half losses cut from €623m to €90m and break-even expected for the year. Parent Siemens Energy posted record €11.4bn quarterly revenue on grids and gas turbines."},
+    {n:"Nordex",u:"https://www.nordex-online.com/",hq:"Germany",tik:"ETR: NDX1",seg:"wind",a:"Rostock nacelles and blades; plants in Spain, India, Brazil, Mexico, US",s:"Record 10.2 GW of orders in 2025 (+22.5%), net income up to €274m from under €9m, free cash flow €863m — Europe's onshore challenger rode Germany's permitting surge (21 GW permitted in 2025)."},
+    {n:"Goldwind",u:"https://www.goldwind.com/en/",hq:"China",tik:"SZSE: 002202 · HKEX: 2208",seg:"wind",a:"Beijing HQ; Urumqi and other Chinese plants; Brazil factory; overseas projects",s:"The world's largest turbine maker by installations in 2025, leading a Chinese top three (with Envision and Windey) that took ~70% of the year's 215 GW of global orders. Europe remains its hardest market."},
+    {n:"Mingyang Smart Energy",u:"https://www.myse.com.cn/",hq:"China",tik:"SSE: 601615",seg:"wind",a:"Zhongshan; the world's largest offshore turbines (20 MW+); proposed European factory",s:"Blocked by the UK in 2026 from building a £1.5bn Scottish factory and from supplying British offshore projects on security grounds; now assessing Spain and other European sites. The test case for whether Chinese wind can enter Europe."},
+    {n:"Ørsted",u:"https://orsted.com/",hq:"Denmark",tik:"CPH: ORSTED",seg:"wind",a:"Offshore wind fleet in Europe and the US; Revolution Wind and Sunrise Wind (US); FlagshipONE e-methanol (cancelled 2024)",s:"The offshore developer that became the sector's stress test: US impairments, a stop-work order on Revolution Wind in 2025, a rights issue — and then recovery. Revolution Wind delivered first power in March 2026 and was over 95% complete in August, with Q2 2026 profit of DKK 5.4bn."},
+    {n:"thyssenkrupp nucera",u:"https://thyssenkrupp-nucera.com/",hq:"Germany",tik:"ETR: NCH2",seg:"h2g",a:"Dortmund; alkaline electrolyser stacks (Gersthofen); chlor-alkali business",s:"Green-hydrogen orders collapsed: fiscal 2025/26 sales guided at €500–600m, down as much as 41% from €845m, with the hydrogen segment's order intake shrinking from €356m to €26m in one year. The legacy chlor-alkali business keeps it profitable."},
+    {n:"Nel",u:"https://nelhydrogen.com/",hq:"Norway",tik:"OSE: NEL",seg:"h2g",a:"Herøya alkaline gigafactory; PEM production in Wallingford, US; Michigan plant on hold",s:"2025 revenue fell 31% and losses more than tripled; Q1 2026 order intake dropped 73% to NOK 85m before a stronger Q2. A cheaper new electrolyser platform and Hydrogen Bank-backed European projects are the hoped-for turn."},
+    {n:"Prysmian",u:"https://www.prysmian.com/",hq:"Italy",tik:"MIL: PRY",seg:"h2g",a:"Pikkala (Finland) and Arco Felice (Italy) submarine cable plants; US plants; cable-laying fleet",s:"The grid boom's biggest winner: a transmission backlog of about €16bn, including some €5bn of ±525 kV HVDC cable for Amprion's German corridors, and capacity sold out for years."},
+    {n:"Nexans",u:"https://www.nexans.com/",hq:"France",tik:"EPA: NEX",seg:"h2g",a:"Halden (Norway) subsea HVDC plant; Charleston (US); European land-cable plants",s:"Record transmission backlog of €8.1bn at end-2025 (+9.7%), almost all subsea, as interconnectors and offshore-wind links queue for factory slots."},
+    {n:"Daikin",u:"https://www.daikin.eu/",hq:"Japan",tik:"TYO: 6367",seg:"h2g",a:"European heat-pump plants in Belgium (Ostend), Czechia, Germany and Poland (Łódź)",s:"The world's largest heating and cooling maker rode Europe's 2025 heat-pump rebound (+10% to 2.6 million units in 16 countries) after the 21% slump of 2024, when subsidy uncertainty in Germany and Italy froze the market."},
+    {n:"Umicore",u:"https://www.umicore.com/",hq:"Belgium",tik:"EBR: UMI",seg:"mat",a:"Cathode plants in Nysa (Poland), Cheonan (Korea), Jiangmen (China — closing); recycling in Hoboken",s:"Europe's cathode champion wrote down its battery-materials plants by €1.6bn as demand stalled, is closing Jiangmen (March 2026) and restructuring the division; Nysa runs far below its 70 kt/yr design as customers turn to LFP."},
+    {n:"BASF Battery Materials",u:"https://www.basf.com/",hq:"Germany",tik:"ETR: BAS",seg:"mat",a:"Schwarzheide cathode plant (Germany); Harjavalta precursor plant (Finland — abandoned); Onoda (Japan)",s:"Schwarzheide has produced high-nickel cathode material since 2023, but BASF shelved further European expansion and the Finnish precursor plant in 2024 as the market shifted to LFP and Chinese suppliers."},
+    {n:"Wacker Chemie",u:"https://www.wacker.com/",hq:"Germany",tik:"ETR: WCH",seg:"mat",a:"Polysilicon plants in Burghausen and Nünchritz (Germany) and Charleston, Tennessee",s:"Europe's polysilicon maker: 2025 polysilicon sales fell 7% to €883m and EBITDA halved to €96m on collapsing solar-grade demand; the business is pivoting to semiconductor grade and the group is cutting 1,500 jobs."},
+    {n:"Stegra (ex-H2 Green Steel)",u:"https://stegra.com/",hq:"Sweden",tik:"private",seg:"mat",a:"Boden green-steel plant (hydrogen DRI + EAF, 2.5 Mt initial, 5 Mt planned); 700 MW+ electrolyser",s:"Europe's flagship green-steel project overran its budget and missed its 2025–26 start; a €1.4bn rescue round led by Wallenberg Investments with Temasek, IMAS, Bolero and SEB-Stiftelsen closed in 2026 to finish construction, with the timeline 'under review'."},
+    {n:"Solvay",u:"https://www.solvay.com/",hq:"Belgium",tik:"EBR: SOLB",seg:"mat",a:"La Rochelle rare-earth separation and magnet-grade NdPr line",s:"Restarted magnet-grade rare-earth separation at La Rochelle in April 2025, plans dysprosium and terbium separation by September 2026 and signed for Brazilian feedstock from Viridis in June 2026 — Europe's only industrial separator."},
+    {n:"Neo Performance Materials",u:"https://www.neomaterials.com/",hq:"Canada",tik:"TSX: NEO",seg:"mat",a:"Narva (Estonia) NdFeB magnet plant; Sillamäe rare-earth separation",s:"Opened Europe's first sintered rare-earth magnet factory in Narva on 22 September 2025 — 2,000 t/yr, enough for a million EVs or a thousand offshore turbines — in Ida-Viru, a Just Transition oil-shale region on the Russian border."},
+    {n:"Hydrovolt (Hydro)",u:"https://www.hydrovolt.com/",hq:"Norway",tik:"OSE: NHY (parent)",seg:"mat",a:"Fredrikstad battery-recycling plant — the Nordics' largest",s:"Hydro bought Northvolt's 28% in 2025 to own 100% of Europe's largest EV-battery recycler, which shreds packs into black mass and recovers aluminium and copper; expanding into Sweden."}
+  ],
+  sites:[
+    // ---- operating factories (make) ----
+    {n:"Baotou polysilicon cluster",c:"China",ll:[40.66,109.84],ty:"make",sz:3,d:"Inner Mongolia's Baotou became the new polysilicon capital as Tongwei, GCL, Xinte and Daqo chased cheap coal power — the heart of an industry where prices sat below cost through 2026 and eight producers signed an output pact in August 2026."},
+    {n:"Xinjiang polysilicon belt",c:"China",ll:[44.30,86.05],ty:"make",sz:3,d:"Daqo (Shihezi), Xinte (Urumqi) and East Hope (Changji) built the world's cheapest polysilicon here — and the US Uyghur Forced Labor Prevention Act made it untouchable for American imports."},
+    {n:"Tongwei Leshan",c:"China",ll:[29.55,103.77],ty:"make",sz:2,d:"Sichuan base of the world's largest polysilicon and solar-cell producer; deep losses in 2025 as polysilicon traded far below cost."},
+    {n:"LONGi Xi'an",c:"China",ll:[34.34,108.94],ty:"make",sz:3,d:"Headquarters of the world's largest wafer maker; LONGi expects a CNY 6–6.5bn net loss for 2025 despite record shipments."},
+    {n:"JinkoSolar Shangrao",c:"China",ll:[28.45,117.94],ty:"make",sz:2,d:"Jiangxi home of the top module shipper: 86 GW in 2025, RMB 4.45bn loss, gross margin 2.2%."},
+    {n:"Trina Solar Changzhou",c:"China",ll:[31.81,119.97],ty:"make",sz:2,d:"Trina lifted module prices to RMB 0.88–0.92/W in January 2026 ahead of the abolition of China's export VAT rebate on 1 April."},
+    {n:"CATL Ningde",c:"China",ll:[26.66,119.55],ty:"make",sz:3,d:"Fujian headquarters of the world's largest battery maker — 465 GWh of EV cells installed in 2025, 39.2% of the world."},
+    {n:"BYD Shenzhen",c:"China",ll:[22.54,114.06],ty:"make",sz:3,d:"The vertically integrated EV and cell giant: No. 2 battery supplier (16.4% share) and the biggest EV maker on Earth."},
+    {n:"Goldwind Beijing",c:"China",ll:[40.05,116.30],ty:"make",sz:2,d:"World's largest wind-turbine maker by 2025 installations, at the head of a Chinese top three that took ~70% of global orders."},
+    {n:"Mingyang Zhongshan",c:"China",ll:[22.52,113.39],ty:"make",sz:2,d:"Builder of the world's biggest offshore turbines; its £1.5bn Scottish factory was blocked by the UK in 2026 on security grounds."},
+    {n:"Sungrow Hefei",c:"China",ll:[31.82,117.23],ty:"make",sz:2,d:"With Huawei (115 GW connected in the EU), one of the two vendors behind ~80% of Europe's new solar inverters."},
+    {n:"Tesla Megafactory Shanghai",c:"China",ll:[30.90,121.90],ty:"make",sz:1,d:"Tesla's 40 GWh Megapack plant, running since February 2025, behind a record 46.7 GWh of storage deployments in 2025."},
+    {n:"Penang PV hub",c:"Malaysia",ll:[5.35,100.30],ty:"make",sz:1,d:"Jinko and other Chinese makers' Southeast Asian export base — hit by successive US anti-dumping and countervailing duties."},
+    {n:"Thai Nguyen PV cluster",c:"Vietnam",ll:[21.59,105.85],ty:"make",sz:1,d:"Trina and others' Vietnamese cell and module plants, built to serve the US market before tariffs caught up with them."},
+    {n:"Adani Mundra",c:"India",ll:[22.84,69.72],ty:"make",sz:2,d:"India's largest integrated solar complex — ingots to modules — at the heart of a protected home market that installed record volumes in 2025."},
+    {n:"Reliance Jamnagar giga-complex",c:"India",ll:[22.47,70.06],ty:"make",sz:2,d:"Reliance's solar module and battery-cell complex, the centrepiece of India's bid to become the non-Chinese manufacturing alternative."},
+    {n:"First Solar Perrysburg",c:"United States",ll:[41.56,-83.63],ty:"make",sz:2,d:"Birthplace of America's only profitable module maker; with Alabama and Louisiana, ~14 GW of US capacity in 2026, heading for ~18 GW."},
+    {n:"Qcells Dalton & Cartersville",c:"United States",ll:[34.77,-84.97],ty:"make",sz:2,d:"America's only ingot-to-module solar complex: cell production started in Cartersville in June 2026; 8.6 GW of US output by Q3 2026."},
+    {n:"T1 Energy G1 Dallas",c:"United States",ll:[32.59,-96.68],ty:"make",sz:1,d:"The former Freyr's 5 GW Texas module plant; a 2.1 GW cell factory (G2) is under construction nearby."},
+    {n:"Tesla Giga Nevada",c:"United States",ll:[39.54,-119.44],ty:"make",sz:2,d:"Panasonic-Tesla cell plant and 4680 lines — the original gigafactory, now flanked by Megapack production in Lathrop."},
+    {n:"Panasonic De Soto",c:"United States",ll:[38.98,-94.97],ty:"make",sz:1,d:"Panasonic's 30 GWh Kansas cell plant, opened 2025 into a US EV market that lost its purchase credit on 30 September 2025."},
+    {n:"BlueOval SK Glendale",c:"United States",ll:[37.60,-85.90],ty:"make",sz:2,d:"Ford–SK On's Kentucky cell plant, part of a US pipeline that saw $34.8bn of clean-energy projects cancelled in 2025."},
+    {n:"MP Materials Fort Worth",c:"United States",ll:[32.75,-97.33],ty:"make",sz:1,d:"America's first rare-earth magnet plant at scale, backed by the Pentagon's 2025 equity-and-price-floor deal."},
+    {n:"LG Energy Solution Ochang",c:"South Korea",ll:[36.72,127.43],ty:"make",sz:1,d:"Home base of the world's No. 3 cell maker (108.8 GWh in 2025, 9.2% share)."},
+    {n:"Samsung SDI Cheonan",c:"South Korea",ll:[36.80,127.15],ty:"make",sz:1,d:"Samsung SDI's Korean cell and R&D hub behind its Hungarian and US plants."},
+    {n:"Vestas Lem & Ringkøbing",c:"Denmark",ll:[56.02,8.38],ty:"make",sz:2,d:"Vestas' West Jutland cradle; record 16.3 GW of orders and €18.8bn revenue in 2025."},
+    {n:"Siemens Gamesa Cuxhaven",c:"Germany",ll:[53.86,8.70],ty:"make",sz:2,d:"Europe's largest offshore nacelle plant; Siemens Gamesa returned to quarterly profit in 2026 after a four-year loss streak."},
+    {n:"Siemens Gamesa Hull",c:"United Kingdom",ll:[53.74,-0.33],ty:"make",sz:1,d:"Offshore blade plant on the Humber — Britain's biggest wind factory, and the kind of capacity the UK's Mingyang veto is meant to protect."},
+    {n:"Nordex Rostock",c:"Germany",ll:[54.15,12.10],ty:"make",sz:1,d:"Nordex's nacelle plant; 2025 brought a record 10.2 GW of orders and €274m of net income."},
+    {n:"Wacker Burghausen",c:"Germany",ll:[48.17,12.83],ty:"make",sz:1,d:"Europe's last polysilicon maker; 2025 polysilicon EBITDA halved to €96m and the business is pivoting to semiconductor grade."},
+    {n:"3Sun Catania",c:"Italy",ll:[37.44,15.05],ty:"make",sz:1,d:"Enel's heterojunction module gigafactory, financed with €560m including EIB money and scaling toward 3 GW — Europe's largest PV plant."},
+    {n:"ACC Billy-Berclau",c:"France",ll:[50.52,2.88],ty:"make",sz:2,d:"ACC's only surviving gigafactory: a 13 GWh first block ramping toward 40 GWh by 2030 after Germany and Italy were cancelled."},
+    {n:"Verkor Dunkirk",c:"France",ll:[51.02,2.30],ty:"make",sz:1,d:"16 GWh first phase for Renault, financed with EIB debt and IPCEI aid; first cells in 2025."},
+    {n:"PowerCo Salzgitter",c:"Germany",ll:[52.15,10.40],ty:"make",sz:2,d:"Volkswagen's first cell plant started production in December 2025, ramping to 20 GWh in 2026 with scope for 40."},
+    {n:"CATL Erfurt (Arnstadt)",c:"Germany",ll:[50.83,10.95],ty:"make",sz:1,d:"CATL's first European plant, 14 GWh, in production since 2022."},
+    {n:"CATL Debrecen",c:"Hungary",ll:[47.53,21.63],ty:"make",sz:3,d:"€7.3bn, 100 GWh planned: module lines started in May 2026, but cell mass production was still held back by safety rectifications at the end of August 2026; the first 40 GWh is fully booked."},
+    {n:"Samsung SDI Göd",c:"Hungary",ll:[47.68,19.13],ty:"make",sz:2,d:"Korean cells for BMW and Stellantis — part of the Hungarian cluster that makes the country Europe's No. 3 battery producer."},
+    {n:"SK On Iváncsa",c:"Hungary",ll:[47.03,18.82],ty:"make",sz:2,d:"SK On's 30 GWh third Hungarian plant, alongside Komárom."},
+    {n:"LG Energy Solution Wrocław",c:"Poland",ll:[50.98,16.92],ty:"make",sz:3,d:"Europe's largest gigafactory, the anchor of Poland's position as the continent's biggest cell producer."},
+    {n:"Tesla Grünheide",c:"Germany",ll:[52.40,13.79],ty:"make",sz:2,d:"Tesla's European car plant; cell production plans here never scaled."},
+    {n:"AESC Douai",c:"France",ll:[50.37,3.08],ty:"make",sz:1,d:"Envision AESC's gigafactory for Renault's ElectriCity hub in northern France."},
+    {n:"thyssenkrupp nucera Dortmund",c:"Germany",ll:[51.51,7.47],ty:"make",sz:1,d:"Electrolyser maker whose hydrogen order intake fell from €356m to €26m in a year; guiding sales down up to 41% for 2025/26."},
+    {n:"Siemens Energy electrolyser gigafactory",c:"Germany",ll:[52.53,13.40],ty:"make",sz:1,d:"Berlin PEM stack factory opened in November 2023, sized for 1 GW/yr and built for a market that reached only 4 GW installed worldwide by 2025."},
+    {n:"Nel Herøya",c:"Norway",ll:[59.12,9.62],ty:"make",sz:1,d:"Nel's alkaline gigafactory; 2025 revenue −31%, Q1 2026 orders −73%."},
+    {n:"ITM Power Sheffield",c:"United Kingdom",ll:[53.38,-1.47],ty:"make",sz:1,d:"PEM electrolyser factory in a sector the IEA says is entering consolidation on oversupply."},
+    {n:"Sunfire Dresden",c:"Germany",ll:[51.05,13.74],ty:"make",sz:1,d:"Alkaline and solid-oxide electrolyser maker, supplier to Innovation Fund and Hydrogen Bank projects."},
+    {n:"Solvay La Rochelle",c:"France",ll:[46.16,-1.15],ty:"make",sz:1,d:"Europe's only industrial rare-earth separator: NdPr line since April 2025, dysprosium and terbium due by September 2026."},
+    {n:"Neo Performance Narva",c:"Estonia",ll:[59.38,28.19],ty:"make",sz:1,d:"Europe's first sintered NdFeB magnet plant (2,000 t/yr), opened 22 September 2025 in the Ida-Viru Just Transition region."},
+    {n:"BASF Schwarzheide",c:"Germany",ll:[51.48,13.85],ty:"make",sz:1,d:"High-nickel cathode plant producing since 2023; further European expansion shelved as the market moved to LFP."},
+    {n:"Hydrovolt Fredrikstad",c:"Norway",ll:[59.21,10.95],ty:"make",sz:1,d:"Europe's largest EV-battery recycler, 100% Hydro-owned since 2025 after Northvolt's exit."},
+    {n:"Prysmian Pikkala",c:"Finland",ll:[60.08,24.30],ty:"make",sz:1,d:"Submarine HVDC cable plant behind a ~€16bn transmission backlog, including €5bn of Amprion orders."},
+    {n:"NKT Karlskrona",c:"Sweden",ll:[56.16,15.59],ty:"make",sz:1,d:"NKT's HVDC cable factory, expanding to serve Europe's €1.2tn grid build-out."},
+    {n:"Daikin Łódź",c:"Poland",ll:[51.76,19.46],ty:"make",sz:1,d:"Daikin's Polish heat-pump plant, built for a European market that rebounded ~10% in 2025 after a 21% slump."},
+    // ---- EU-funded flagships & Just Transition territories (eu) ----
+    {n:"Stegra Boden",c:"Sweden",ll:[65.83,21.69],ty:"eu",sz:3,d:"Europe's green-steel flagship (hydrogen DRI, 2.5→5 Mt/yr) — over budget and behind schedule, rescued in 2026 by a €1.4bn Wallenberg-led round; timeline under review."},
+    {n:"HYBRIT Gällivare",c:"Sweden",ll:[67.13,20.67],ty:"eu",sz:2,d:"SSAB–LKAB–Vattenfall hydrogen-iron demonstration plant, backed by a €143m Innovation Fund grant."},
+    {n:"Kairos@C Antwerp",c:"Belgium",ll:[51.29,4.31],ty:"eu",sz:2,d:"Air Liquide–BASF carbon-capture project, the Innovation Fund's first big award (€357m, 2021)."},
+    {n:"Porthos Rotterdam",c:"Netherlands",ll:[51.95,4.05],ty:"eu",sz:1,d:"Offshore CO₂ storage for Rotterdam industry, €102m from the Innovation Fund; construction under way for a 2026 start."},
+    {n:"Normand'Hy Port-Jérôme",c:"France",ll:[49.48,0.55],ty:"eu",sz:1,d:"Air Liquide's 200 MW Siemens Energy electrolyser for the Normandy refinery cluster, supported under the hydrogen IPCEIs and Innovation Fund."},
+    {n:"Salzgitter SALCOS",c:"Germany",ll:[52.17,10.36],ty:"eu",sz:1,d:"Salzgitter AG's hydrogen-steel conversion, cleared for €1bn of German state aid by the Commission."},
+    {n:"Vulcan Energy (Upper Rhine)",c:"Germany",ll:[49.20,8.12],ty:"eu",sz:1,d:"CRMA strategic project for geothermal lithium: €2.2bn financial close in May 2026, EIB-backed; first lithium hydroxide from a Frankfurt-Höchst plant targeted for 2028."},
+    {n:"Keliber Kaustinen",c:"Finland",ll:[63.55,23.70],ty:"eu",sz:1,d:"Sibanye-Stillwater's CRMA strategic project — Europe's first battery-grade lithium hydroxide from its own ore, due in 2026."},
+    {n:"Talga Vittangi",c:"Sweden",ll:[67.68,21.63],ty:"eu",sz:1,d:"Graphite mine and anode plant, a CRMA strategic project worth over half a billion euros, aimed at Europe's near-total anode dependence on China."},
+    {n:"Catalina (Aragón)",c:"Spain",ll:[40.90,-0.90],ty:"eu",sz:1,d:"Copenhagen Infrastructure Partners' 500 MW electrolyser, one of seven winners of the pilot Hydrogen Bank auction (€720m, April 2024)."},
+    {n:"MP2X Sines",c:"Portugal",ll:[37.95,-8.87],ty:"eu",sz:1,d:"Madoqua's Sines hydrogen-to-ammonia project, a pilot Hydrogen Bank winner; Portugal's bid to export green molecules."},
+    {n:"Silesia (Katowice)",c:"Poland",ll:[50.26,19.02],ty:"eu",sz:3,d:"Europe's largest coal region and the Just Transition Fund's biggest beneficiary: Poland's €3.85bn allocation — 73% committed but only ~12.5% disbursed by late 2025."},
+    {n:"Bełchatów",c:"Poland",ll:[51.37,19.36],ty:"eu",sz:1,d:"Europe's largest lignite plant and its region, funded under Poland's territorial just transition plan for a phase-out toward 2036."},
+    {n:"Lusatia (Cottbus)",c:"Germany",ll:[51.76,14.33],ty:"eu",sz:2,d:"Germany's lignite heartland, drawing on the country's €2.5bn JTF share (49% committed by late 2025) alongside €40bn of federal structural aid."},
+    {n:"Rhenish district (Garzweiler)",c:"Germany",ll:[51.06,6.50],ty:"eu",sz:1,d:"RWE's lignite mines and plants, exiting by 2030 with JTF and federal money."},
+    {n:"Western Macedonia (Kozani)",c:"Greece",ll:[40.30,21.79],ty:"eu",sz:2,d:"Greece's lignite region, phasing out PPC plants with JTF and Modernisation Fund support and a solar build-out on the old mines."},
+    {n:"Ida-Viru (Jõhvi)",c:"Estonia",ll:[59.36,27.42],ty:"eu",sz:1,d:"Estonia's oil-shale region — where the JTF helped land Neo's Narva magnet plant in 2025."},
+    {n:"Jiu Valley (Petroșani)",c:"Romania",ll:[45.41,23.37],ty:"eu",sz:1,d:"Romania's hard-coal valley, part of a €2.14bn national JTF allocation of which 38% was committed by late 2025."},
+    {n:"Asturias (Oviedo)",c:"Spain",ll:[43.36,-5.85],ty:"eu",sz:1,d:"Spain's coal and steel region, one of the Just Transition Fund's Iberian territories."},
+    {n:"Sulcis (Carbonia)",c:"Italy",ll:[39.17,8.52],ty:"eu",sz:1,d:"Sardinia's coal basin — one of Italy's two JTF territories, with Taranto."},
+    {n:"Maritsa East (Stara Zagora)",c:"Bulgaria",ll:[42.43,25.64],ty:"eu",sz:1,d:"Bulgaria's lignite complex, the core of a €1.2bn JTF allocation whose plans were approved late."},
+    {n:"Moravia-Silesia (Ostrava)",c:"Czechia",ll:[49.83,18.28],ty:"eu",sz:1,d:"Czech coal and steel region, part of the country's €1.64bn JTF share."},
+    {n:"Upper Nitra (Prievidza)",c:"Slovakia",ll:[48.77,18.63],ty:"eu",sz:1,d:"Slovakia's former coal-mining valley, an early mover among JTF territories."},
+    // ---- stalled, cancelled, bankrupt (dis) ----
+    {n:"Meyer Burger Thalheim & Freiberg",c:"Germany",ll:[51.65,12.27],ty:"dis",sz:2,d:"Freiberg modules closed March 2024; Thalheim cells and Hohenstein-Ernstthal machinery into insolvency in August–September 2025, ~600 jobs gone — the end of European solar-cell manufacturing."},
+    {n:"Meyer Burger Goodyear",c:"United States",ll:[33.44,-112.36],ty:"dis",sz:1,d:"The Arizona module plant that was supposed to be Meyer Burger's IRA lifeline, closed in 2025."},
+    {n:"ACC Kaiserslautern",c:"Germany",ll:[49.44,7.77],ty:"dis",sz:1,d:"On hold since May 2024, formally cancelled on 16 February 2026."},
+    {n:"ACC Termoli",c:"Italy",ll:[42.00,15.00],ty:"dis",sz:1,d:"Stellantis' Italian gigafactory, shelved in 2024 and abandoned in February 2026; unions pushed for mechanical production instead."},
+    {n:"Britishvolt Blyth",c:"United Kingdom",ll:[55.13,-1.55],ty:"dis",sz:1,d:"Britain's would-be gigafactory collapsed in January 2023; the site was later marketed for a data centre."},
+    {n:"Freyr Mo i Rana",c:"Norway",ll:[66.31,14.14],ty:"dis",sz:1,d:"Abandoned Norwegian gigafactory; Freyr became T1 Energy and moved to Texas solar."},
+    {n:"Italvolt Scarmagno",c:"Italy",ll:[45.38,7.85],ty:"dis",sz:1,d:"The 45 GWh Piedmont gigafactory that never broke ground."},
+    {n:"Ørsted FlagshipONE",c:"Sweden",ll:[63.29,18.72],ty:"dis",sz:1,d:"Europe's largest e-methanol project, cancelled by Ørsted in August 2024 for lack of buyers — an early sign of the hydrogen-derivatives slump."},
+    {n:"ArcelorMittal Gent DRI",c:"Belgium",ll:[51.13,3.78],ty:"dis",sz:1,d:"Hydrogen-DRI plans paused in November 2024 with their Innovation Fund and state-aid awards; Dunkirk got a €1.3bn electric arc furnace instead (start-up 2029)."},
+    {n:"Umicore Nysa",c:"Poland",ll:[50.47,17.33],ty:"dis",sz:1,d:"Europe's biggest cathode plant runs far below its 70 kt/yr design after a €1.6bn write-down and a strategic retreat from cathodes."},
+    {n:"Li-Cycle Rochester",c:"United States",ll:[43.16,-77.61],ty:"dis",sz:1,d:"The stalled recycling hub of a company that went bankrupt in May 2025; Glencore picked up the assets."},
+    {n:"Kore Power Buckeye",c:"United States",ll:[33.37,-112.58],ty:"dis",sz:1,d:"Arizona cell plant cancelled in early 2025 — one of the first casualties of the US policy reversal."},
+    {n:"Nel Michigan",c:"United States",ll:[42.37,-83.47],ty:"dis",sz:1,d:"Nel's planned US gigafactory, put on hold as electrolyser orders collapsed."},
+    // ---- under construction, planned or restarting (dev) ----
+    {n:"Northvolt Ett / Lyten Skellefteå",c:"Sweden",ll:[64.75,21.05],ty:"dev",sz:3,d:"Europe's ~$15bn battery champion went bankrupt on 12 March 2025; Lyten completed its purchase on 26 February 2026 and is restarting, with commercial shipments due in the second half of 2026 and 600+ rehires."},
+    {n:"Northvolt Drei / Lyten Heide",c:"Germany",ll:[54.20,9.10],ty:"dev",sz:2,d:"€902m of approved German aid, ground broken 2024, never really built; Lyten now targets a 2028 start and ~1,000 jobs after a partial permit in April 2026."},
+    {n:"PowerCo Valencia (Sagunto)",c:"Spain",ll:[39.68,-0.27],ty:"dev",sz:2,d:"Volkswagen's second European gigafactory, 3,000 jobs; series production pushed to July 2027."},
+    {n:"PowerCo St Thomas",c:"Canada",ll:[42.78,-81.19],ty:"dev",sz:2,d:"PowerCo's first North American cell plant, start of production planned for 2027."},
+    {n:"CATL–Stellantis Zaragoza",c:"Spain",ll:[41.65,-0.89],ty:"dev",sz:2,d:"€4.1bn LFP gigafactory (50 GWh) under construction, production targeted for late 2026."},
+    {n:"BYD Szeged",c:"Hungary",ll:[46.25,20.15],ty:"dev",sz:2,d:"BYD's first European car plant, delayed from 2025 to the fourth quarter of 2026; the Dolphin Mini is to be the first model."},
+    {n:"BYD Manisa",c:"Turkey",ll:[38.61,27.43],ty:"dev",sz:1,d:"$1bn plant for 150,000 cars a year, giving BYD tariff-free access to the EU customs union."},
+    {n:"Tata Agratas Somerset",c:"United Kingdom",ll:[51.13,-3.00],ty:"dev",sz:2,d:"Tata's 40 GWh gigafactory for JLR, due in 2027 — Britain's second attempt after Britishvolt."},
+    {n:"LKAB Per Geijer",c:"Sweden",ll:[67.86,20.23],ty:"dev",sz:1,d:"Europe's largest known rare-earth deposit, a CRMA strategic project with permits running toward 2030."},
+    {n:"First Solar South Carolina",c:"United States",ll:[34.85,-81.50],ty:"dev",sz:1,d:"First Solar's sixth US factory, taking nameplate capacity toward ~18 GW."},
+    {n:"T1 Energy G2 (Texas cells)",c:"United States",ll:[30.65,-97.00],ty:"dev",sz:1,d:"2.1 GW TOPCon cell factory under construction, expandable to 5.3 GW — the test of American cell economics."}
+  ]
+};
+
+/* ============ helpers ============ */
+const C = getComputedStyle(document.documentElement);
+const col = v => C.getPropertyValue(v).trim();
+const PAL = ["#62e86a","#ffd54a","#4cc9f0","#c4b5fd","#f87171","#fb923c","#94a3b8","#2dd4bf","#e879f9","#a3e635","#64748b","#f0abfc","#38bdf8"];
+
+/* count-up hero stats */
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target, end=parseFloat(el.dataset.count), suf=el.dataset.suffix||"", pre=el.dataset.prefix||"", dec=end%1?1:0;
+  const t0=performance.now();
+  (function tick(t){const p=Math.min(Math.max((t-t0)/1200,0),1), v=end*(1-Math.pow(1-p,3));
+    el.textContent=pre+(end>=1000?Math.round(v).toLocaleString("en-US"):v.toFixed(dec))+suf;
+    if(p<1)requestAnimationFrame(tick);})(t0);
+  io.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+
+/* ============ MAP ============ */
+const map = L.map("map",{scrollWheelZoom:false,worldCopyJump:true}).setView([32,25],2);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{
+  attribution:'Tiles &copy; Esri &mdash; &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom:10
+}).addTo(map);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",{
+  maxZoom:10
+}).addTo(map);
+map.on("click",()=>map.scrollWheelZoom.enable());
+
+const groups = {make:L.layerGroup().addTo(map), eu:L.layerGroup().addTo(map),
+                dis:L.layerGroup().addTo(map), dev:L.layerGroup().addTo(map)};
+const TYCOL={make:col("--mine"),eu:col("--proc"),dis:col("--dis"),dev:col("--dev")};
+const TYNAME={make:"OPERATING FACTORY",eu:"EU-FUNDED / JUST TRANSITION",dis:"STALLED / CANCELLED",dev:"UNDER CONSTRUCTION / RESTARTING"};
+
+DATA.sites.forEach(s=>{
+  const c=TYCOL[s.ty];
+  L.circleMarker(s.ll,{radius:4+s.sz*2.4,color:c,weight:1.5,fillColor:c,fillOpacity:.35})
+   .bindPopup(`<span class="pp-tag" style="background:${c}22;color:${c}">${TYNAME[s.ty]}</span><br><b>${s.n}</b> · ${s.c}<br>${s.d}`)
+   .addTo(groups[s.ty]);
+});
+document.querySelectorAll(".chip[data-layer]").forEach(ch=>ch.addEventListener("click",()=>{
+  const g=groups[ch.dataset.layer];
+  if(ch.classList.toggle("on")) map.addLayer(g); else map.removeLayer(g);
+}));
+
+/* ============ MACHINES GRID ============ */
+const GRPNAME={U:"Materials (upstream)",M:"Components & machines (midstream)",D:"Deployment & end use",C:"Circular"};
+const GRPCOL={U:col("--accent"),M:col("--accent2"),D:col("--dis"),C:col("--muted")};
+const elGrid=document.getElementById("elGrid"), elDetail=document.getElementById("elDetail");
+elGrid.innerHTML=DATA.forms.map((e,i)=>`
+  <button class="el g${e.g}" data-i="${i}" aria-label="${e.n}">
+    <span class="z">${String(i+1).padStart(2,"0")}</span>
+    <b>${e.s}</b><span>${e.n}</span>
+  </button>`).join("");
+function showEl(i){
+  const e=DATA.forms[i];
+  document.querySelectorAll(".el").forEach(el=>el.classList.toggle("sel",+el.dataset.i===i));
+  const grpCol=GRPCOL[e.g];
+  elDetail.innerHTML=`
+    <h3>${e.n} <small>· ${e.use}</small></h3>
+    <div class="tags"><span class="pp-tag" style="background:${grpCol}22;color:${grpCol}">${GRPNAME[e.g].toUpperCase()}</span></div>
+    <p>${e.d}</p>
+    ${e.pr?`<div class="price">${e.pr}</div>`:""}`;
+}
+elGrid.addEventListener("click",ev=>{const b=ev.target.closest(".el");if(b)showEl(+b.dataset.i);});
+showEl(DATA.forms.findIndex(e=>e.n==="Battery cells"));
+
+/* ============ JOURNEY ============ */
+document.getElementById("journey").innerHTML = DATA.journey.map((j,i)=>`
+  <div class="jcard"><div class="num">${String(i+1).padStart(2,"0")}</div>
+    <div class="ico">${j.ico}</div><h3>${j.t}</h3><p>${j.p}</p>
+    <div class="fact">${j.f}</div></div>`).join("");
+
+/* ============ MINI CARD GRIDS ============ */
+const mini=m=>`<div class="mini"><h4><span class="mi">${m.ico}</span>${m.h}</h4><p>${m.p}</p></div>`;
+document.getElementById("factoryMinis").innerHTML=DATA.factoryMinis.map(mini).join("");
+document.getElementById("securityMinis").innerHTML=DATA.securityMinis.map(mini).join("");
+document.getElementById("investMinis").innerHTML=DATA.investMinis.map(mini).join("");
+
+/* ============ MINERALS ============ */
+document.getElementById("mnGrid").innerHTML=DATA.minerals.map(m=>`
+  <a class="mn" href="${m.href}" style="--mc:${m.c}"><span class="sym">${m.sym}</span><b>${m.n}</b><span>${m.role}</span><span class="share">${m.share}</span></a>`).join("");
+
+/* ============ EU FUNDS ============ */
+const fbMax=Math.max(...DATA.fundBars.map(d=>d[1]));
+document.getElementById("fundBars").innerHTML=DATA.fundBars.map(([s,v])=>`
+  <div class="bar-row"><span>${s}</span><div class="track"><div class="fill" data-w="${(v/fbMax*100).toFixed(1)}"></div></div><span class="val">€${v}bn</span></div>`).join("");
+document.getElementById("fundGrid").innerHTML=DATA.funds.map(f=>`
+  <div class="fund"><div class="amt">${f.amt}<small>${f.unit}</small></div><h4>${f.n}</h4><p>${f.p}</p>
+    <div class="st">${f.st}</div>
+    <div class="meta">${f.meta.map(([t,c])=>`<span class="${c}">${t}</span>`).join("")}</div></div>`).join("");
+document.getElementById("toolkitBody").innerHTML=DATA.toolkit.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td class="num">${r[2]}</td><td>${r[3]}</td></tr>`).join("");
+
+/* ============ TIMELINE ============ */
+document.getElementById("timeline").innerHTML=DATA.timeline.map(t=>`
+  <div class="tl-item${t.hot?" hot":""}"><div class="tl-date">${t.d}</div><h4>${t.h}</h4><p>${t.p}</p></div>`).join("");
+
+/* ============ COMPANY TRACKER ============ */
+const SEGMETA={
+  sol:{label:"Solar",color:col("--accent")},
+  bat:{label:"Batteries & EVs",color:col("--accent2")},
+  wind:{label:"Wind",color:"#4cc9f0"},
+  h2g:{label:"Hydrogen, grids & heat",color:col("--dev")},
+  mat:{label:"Materials & recycling",color:"#f0abfc"}
+};
+const coState={segs:new Set(Object.keys(SEGMETA)),q:""};
+function renderCo(){
+  const q=coState.q.trim().toLowerCase();
+  const rows=DATA.companies.filter(c=>c.seg.split(" ").some(s=>coState.segs.has(s))&&
+    (!q||[c.n,c.hq,c.tik,c.a,c.s].join(" ").toLowerCase().includes(q)));
+  document.getElementById("coBody").innerHTML=rows.map(c=>{
+    const tags=c.seg.split(" ").map(s=>{const m=SEGMETA[s];
+      return `<span class="pp-tag" style="background:${m.color}22;color:${m.color}">${m.label}</span>`;}).join(" ");
+    return `<tr>
+      <td><b><a href="${c.u}" target="_blank" rel="noopener">${c.n}</a></b>
+        <div class="tik">${c.hq} · ${c.tik}</div></td>
+      <td>${tags}</td>
+      <td>${c.a}</td>
+      <td>${c.s}</td></tr>`;
+  }).join("")||`<tr><td colspan="4" style="text-align:center;padding:24px">No companies match.</td></tr>`;
+  document.getElementById("coCount").textContent=`${rows.length} of ${DATA.companies.length} companies`;
+}
+document.querySelectorAll("#coFilters .chip").forEach(ch=>ch.addEventListener("click",()=>{
+  const s=ch.dataset.seg;
+  if(ch.classList.toggle("on")) coState.segs.add(s); else coState.segs.delete(s);
+  renderCo();
+}));
+document.getElementById("coSearch").addEventListener("input",e=>{coState.q=e.target.value;renderCo();});
+renderCo();
+
+/* ============ CHARTS ============ */
+Chart.defaults.color=col("--muted");
+Chart.defaults.borderColor=col("--line");
+Chart.defaults.font.size=11;
+const noLeg={plugins:{legend:{display:false}}};
+const A=col("--accent"), A2=col("--accent2");
+
+Chart.register({
+  id:"centerText",
+  afterDraw(chart){
+    const opts=chart.options.plugins&&chart.options.plugins.centerText;
+    if(!opts||!opts.enabled||!chart.chartArea) return;
+    const {ctx,chartArea:{left,right,top,bottom}}=chart;
+    const cx=(left+right)/2, cy=(top+bottom)/2;
+    ctx.save();ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillStyle=col("--txt");
+    ctx.font="700 19px -apple-system,Segoe UI,Roboto,sans-serif";
+    ctx.fillText(opts.text, cx, cy-(opts.label?9:0));
+    if(opts.label){ctx.font="600 9.5px -apple-system,Segoe UI,Roboto,sans-serif";ctx.fillStyle=col("--muted");ctx.fillText(opts.label, cx, cy+10);}
+    ctx.restore();
+  }
+});
+const donutOpts={maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+  tooltip:{callbacks:{label:c=>` ${c.label}: €${c.parsed}bn`}}},cutout:"62%"};
+
+new Chart(chDeploy,{type:"bar",
+  data:{labels:DATA.deploy.years,datasets:[
+    {label:"Solar PV (GW)",data:DATA.deploy.solar,backgroundColor:A,borderRadius:4},
+    {label:"Wind (GW)",data:DATA.deploy.wind,backgroundColor:"#4cc9f0",borderRadius:4}]},
+  options:{maintainAspectRatio:false,
+    scales:{y:{min:0,ticks:{callback:v=>v+" GW"},grid:{color:col("--line")}},x:{grid:{display:false}}},
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+      tooltip:{callbacks:{label:c=>` ${c.dataset.label.replace(" (GW)","")}: ${c.parsed.y} GW added`}}}}});
+
+new Chart(chEV,{type:"bar",
+  data:{labels:DATA.ev.years,datasets:[{data:DATA.ev.sales,backgroundColor:DATA.ev.sales.map((v,i)=>i===DATA.ev.sales.length-1?A:A2+"99"),borderRadius:4}]},
+  options:{...noLeg,maintainAspectRatio:false,
+    scales:{y:{min:0,ticks:{callback:v=>v+" m"},grid:{color:col("--line")}},x:{grid:{display:false}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.dataIndex===7?"more than 20":c.parsed.y} million electric cars sold`}}}}});
+
+new Chart(chInvest,{type:"line",
+  data:{labels:DATA.invest.years,datasets:[
+    {label:"Clean energy ($ tn)",data:DATA.invest.clean,borderColor:A,backgroundColor:A+"22",fill:true,tension:0,pointRadius:3,pointBackgroundColor:A},
+    {label:"Oil, gas & coal ($ tn)",data:DATA.invest.fossil,borderColor:"#f87171",backgroundColor:"transparent",fill:false,tension:0,pointRadius:3,pointBackgroundColor:"#f87171",borderDash:[4,3]}]},
+  options:{maintainAspectRatio:false,
+    scales:{y:{min:0,max:2.6,ticks:{callback:v=>"$"+v.toFixed(1)+" tn"},grid:{color:col("--line")}},x:{grid:{display:false},ticks:{callback:(v,i)=>DATA.invest.years[i]+(DATA.invest.years[i]===2026?" (proj.)":"")}}},
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+      tooltip:{callbacks:{label:c=>` ${c.dataset.label.replace(" ($ tn)","")}: $${c.parsed.y.toFixed(2)} trillion`}}}}});
+
+new Chart(chPrice,{type:"line",
+  data:{labels:DATA.price.years,datasets:[{data:DATA.price.usd,borderColor:A2,backgroundColor:A2+"22",fill:true,tension:0,pointRadius:3,pointBackgroundColor:A2}]},
+  options:{...noLeg,maintainAspectRatio:false,
+    scales:{y:{min:0,max:200,ticks:{callback:v=>"$"+v},grid:{color:col("--line")}},x:{grid:{display:false}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` $${c.parsed.y}/kWh average pack price${c.dataIndex===4?" — the 2022 metals spike":""}${c.dataIndex===7?" — record low; BEV packs $99, storage $70":""}`}}}}});
+
+new Chart(chShare,{type:"bar",
+  data:{labels:DATA.shares.map(d=>d[0]),datasets:[{data:DATA.shares.map(d=>d[1]),backgroundColor:DATA.shares.map(d=>d[1]>=80?A:A2+"99"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{min:0,max:100,ticks:{callback:v=>v+"%"},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` China: ~${c.parsed.x}% of global capacity/production (IEA)`}}}}});
+
+new Chart(chIF,{type:"bar",
+  data:{labels:DATA.ifCalls.map(d=>d[0]),datasets:[{data:DATA.ifCalls.map(d=>d[1]),backgroundColor:DATA.ifCalls.map(d=>d[0].startsWith("H₂")?A:(d[0].includes("Battery")?"#4cc9f0":A2)),borderRadius:4}]},
+  options:{...noLeg,maintainAspectRatio:false,
+    scales:{y:{min:0,ticks:{callback:v=>"€"+v+"bn"},grid:{color:col("--line")}},x:{grid:{display:false},ticks:{font:{size:9.5},maxRotation:45,minRotation:45}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` €${c.parsed.y}bn awarded`}}}}});
+
+new Chart(chJTF,{type:"doughnut",
+  data:{labels:DATA.jtf.map(d=>d[0]),datasets:[{data:DATA.jtf.map(d=>d[1]),backgroundColor:[A2,A,"#4cc9f0","#c4b5fd","#f0abfc","#64748b"],borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,centerText:{enabled:true,text:"€19.3bn",label:"2021–2027"}}}});
+
+/* concentration & fund bars (animated) */
+document.getElementById("chinaBars").innerHTML = DATA.chinaShares.map(([s,v])=>`
+  <div class="bar-row"><span>${s}</span><div class="track"><div class="fill" data-w="${v}"></div></div><span class="val">~${v}%</span></div>`).join("");
+const io2=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.w+"%");io2.unobserve(e.target);}
+}),{threshold:.3});
+io2.observe(document.getElementById("chinaBars"));
+io2.observe(document.getElementById("fundBars"));
+
+/* nav active state */
+const secs=[...document.querySelectorAll("section[id],header")];
+const navLinks=[...document.querySelectorAll("nav a.link")];
+const io3=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}
+}),{rootMargin:"-40% 0px -55% 0px"});
+secs.forEach(s=>io3.observe(s));
+</script>
+<script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
