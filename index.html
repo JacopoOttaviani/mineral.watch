@@ -92,7 +92,7 @@
           "name": "Which minerals does mineral.watch cover?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony and nickel are live today, with more minerals in the pipeline."
+            "text": "Graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony and nickel are live today, alongside a cross-cutting Green transition dashboard on the clean-energy supply chain and the EU's green funds, with more minerals in the pipeline. A separate oil and gas dashboard applies the same approach to energy: chokepoints, flows, sanctions, prices and the companies that move oil and gas."
           }
         },
         {
@@ -217,6 +217,7 @@ nav a.cta:focus-visible::before,.btn:focus-visible::before{transform:translateX(
 .f-graphite{--accent:#fbbf24}
 .f-antimony{--accent:#34d399}
 .f-nickel{--accent:#a3e635}
+.f-green{--accent:#62e86a}
 .fcar-dots{display:flex;justify-content:center;gap:10px;margin-top:18px}
 .fcar-dot{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer;transition:background .2s,transform .2s}
 .fcar-dot:hover{background:var(--muted)}
@@ -250,6 +251,7 @@ nav a.cta:focus-visible::before,.btn:focus-visible::before{transform:translateX(
 .fchart-src{font-size:.66rem;color:var(--muted);margin-top:8px}
 
 /* minerals grid */
+.energy-stats{display:grid;gap:10px;align-self:center}.estat{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px}.estat b{display:block;color:#ff8c2e;font-size:1.2rem;letter-spacing:-.01em;line-height:1.2}.estat span{font-size:.76rem;color:var(--muted)}
 .mgrid{display:grid;grid-template-columns:1fr;gap:14px}
 .mcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;position:relative;text-decoration:none;color:var(--ink);display:block;transition:.15s}
 a.mcard:hover{border-color:var(--accent);transform:translateY(-2px)}
@@ -347,6 +349,8 @@ footer .legal a{text-decoration:underline}
     <a class="brand" href="/"><svg width="22" height="22" viewBox="0 0 64 64" fill="none" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 H44"/><path d="M20 12 L6 26"/><path d="M44 12 L58 26"/><path d="M6 26 H58"/><path d="M6 26 L32 56"/><path d="M58 26 L32 56"/><path d="M20 12 L32 26"/><path d="M44 12 L32 26"/><path d="M32 26 V56"/></g><g fill="var(--bg)" stroke="var(--ink)" stroke-width="2.5"><circle cx="20" cy="12" r="4"/><circle cx="44" cy="12" r="4"/><circle cx="6" cy="26" r="4"/><circle cx="58" cy="26" r="4"/><circle cx="32" cy="56" r="4"/></g><circle cx="32" cy="26" r="5.5" fill="var(--accent)"/></svg>mineral<span>.watch</span></a>
     <a class="link" href="#minerals">Minerals</a>
     <a class="link" href="#supply-chain">Supply chain</a>
+    <a class="link" href="/green/">Green transition</a>
+    <a class="link" href="/oil-gas/">Oil &amp; gas</a>
     <a class="link" href="#why">Why it matters</a>
     <a class="link" href="#data">Data</a>
     <a class="link" href="#research">Research</a>
@@ -440,12 +444,27 @@ footer .legal a{text-decoration:underline}
 </header>
 
 <section id="featured">
-  <div class="fcar" aria-roledescription="carousel" aria-label="Live mineral dashboards">
-    <div class="fcar-track" id="fcarTrack" tabindex="0" aria-label="Live mineral dashboards — scroll horizontally">
-      <div class="fcar-slide f-nickel" data-name="Nickel" role="group" aria-roledescription="slide" aria-label="Nickel — 1 of 9">
+  <div class="fcar" aria-roledescription="carousel" aria-label="Live dashboards">
+    <div class="fcar-track" id="fcarTrack" tabindex="0" aria-label="Live dashboards — scroll horizontally">
+      <div class="fcar-slide f-green" data-name="Green transition" role="group" aria-roledescription="slide" aria-label="Green transition — 1 of 10">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live · latest</div>
+            <h2 class="serif">Green transition: who builds the machines of net zero — and who pays?</h2>
+            <p>Interactive world map of clean-tech factories, EU-funded flagships and stalled gigafactories, deployment and investment charts, China's ~85% solar and 80% battery grip, and a fund-by-fund guide to Europe's green money — Innovation Fund, recovery facility, Just Transition Fund, Hydrogen Bank — built on IEA, GWEC, SolarPower Europe, BNEF and European Commission data.</p>
+            <a class="btn primary" href="/green/">Open the Green transition dashboard →</a>
+          </div>
+          <div class="fchart">
+            <div class="fchart-h"><b>Solar and wind capacity added each year, 2018–2025</b><br>Gigawatts installed worldwide — both records in 2025, most of it built with Chinese hardware</div>
+            <div class="fchart-box"><canvas id="chFeatGreen"></canvas></div>
+            <div class="fchart-src">Sources: SolarPower Europe Global Market Outlook; GWEC Global Wind Report 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="fcar-slide f-nickel" data-name="Nickel" role="group" aria-roledescription="slide" aria-label="Nickel — 2 of 10">
+        <div class="feature">
+          <div>
+            <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
             <h2 class="serif">Nickel: who cornered the metal of the stainless age?</h2>
             <p>Interactive world map of mines, smelter parks and refineries, production and price charts, Indonesia's two-thirds grip and quota machine, the 2022 LME squeeze, the class-1/class-2 divide and the Western supply cull — built on USGS, INSG, IEA and BGS data.</p>
             <a class="btn primary" href="/nickel/">Open the Nickel dashboard →</a>
@@ -457,7 +476,7 @@ footer .legal a{text-decoration:underline}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-antimony" data-name="Antimony" role="group" aria-roledescription="slide" aria-label="Antimony — 2 of 9">
+      <div class="fcar-slide f-antimony" data-name="Antimony" role="group" aria-roledescription="slide" aria-label="Antimony — 3 of 10">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -472,7 +491,7 @@ footer .legal a{text-decoration:underline}
           </div>
         </div>
       </div>
-      <div class="fcar-slide" data-name="Cobalt" role="group" aria-roledescription="slide" aria-label="Cobalt — 3 of 9">
+      <div class="fcar-slide" data-name="Cobalt" role="group" aria-roledescription="slide" aria-label="Cobalt — 4 of 10">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -487,7 +506,7 @@ footer .legal a{text-decoration:underline}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-manganese" data-name="Manganese" role="group" aria-roledescription="slide" aria-label="Manganese — 4 of 9">
+      <div class="fcar-slide f-manganese" data-name="Manganese" role="group" aria-roledescription="slide" aria-label="Manganese — 5 of 10">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -502,7 +521,7 @@ footer .legal a{text-decoration:underline}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-lithium" data-name="Lithium" role="group" aria-roledescription="slide" aria-label="Lithium — 5 of 9">
+      <div class="fcar-slide f-lithium" data-name="Lithium" role="group" aria-roledescription="slide" aria-label="Lithium — 6 of 10">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -517,7 +536,7 @@ footer .legal a{text-decoration:underline}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-uranium" data-name="Uranium" role="group" aria-roledescription="slide" aria-label="Uranium — 6 of 9">
+      <div class="fcar-slide f-uranium" data-name="Uranium" role="group" aria-roledescription="slide" aria-label="Uranium — 7 of 10">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -532,7 +551,7 @@ footer .legal a{text-decoration:underline}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-copper" data-name="Copper" role="group" aria-roledescription="slide" aria-label="Copper — 7 of 9">
+      <div class="fcar-slide f-copper" data-name="Copper" role="group" aria-roledescription="slide" aria-label="Copper — 8 of 10">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -547,7 +566,7 @@ footer .legal a{text-decoration:underline}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-ree" data-name="Rare earths" role="group" aria-roledescription="slide" aria-label="Rare earths — 8 of 9">
+      <div class="fcar-slide f-ree" data-name="Rare earths" role="group" aria-roledescription="slide" aria-label="Rare earths — 9 of 10">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -562,7 +581,7 @@ footer .legal a{text-decoration:underline}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-graphite" data-name="Graphite" role="group" aria-roledescription="slide" aria-label="Graphite — 9 of 9">
+      <div class="fcar-slide f-graphite" data-name="Graphite" role="group" aria-roledescription="slide" aria-label="Graphite — 10 of 10">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -641,6 +660,28 @@ footer .legal a{text-decoration:underline}
       <h3>Antimony</h3>
       <p>The small metal with outsized leverage: export bans, a fivefold price spike and a defence supply chain scrambling for sources — mapped and charted.</p>
     </a>
+    <a class="mcard" href="/green/">
+      <span class="tag live">Live</span>
+      <span class="sym">⚡</span>
+      <h3>Green transition</h3>
+      <p>The machines that eat the minerals — solar, batteries, wind, electrolysers: who builds them, China's manufacturing grip, and where the EU's green money goes. A cross-cutting dashboard.</p>
+    </a>
+  </div>
+</section>
+
+<section id="energy">
+  <div class="feature" style="--accent:#ff8c2e">
+    <div>
+      <div class="kicker">New · beyond minerals</div>
+      <h2 class="serif">Oil &amp; Gas Watch: who controls the flow?</h2>
+      <p>The same open-data approach, applied to the biggest commodity markets on Earth: the 2026 Strait of Hormuz closure and the Gulf shut-in ledger, pipeline bypasses, the LNG shock, sanctions and the shadow fleet, OPEC+, prices and the companies that move energy — built for energy businesses, geopolitics researchers and think tanks, on EIA, IEA, OPEC, Energy Institute and BGS data.</p>
+      <a class="btn primary" href="/oil-gas/">Open the oil &amp; gas dashboard</a>
+    </div>
+    <div class="energy-stats">
+      <div class="estat"><b>20.9 → 4.9 mb/d</b><span>oil through the Strait of Hormuz: early 2025 vs the second quarter of 2026 (EIA)</span></div>
+      <div class="estat"><b>$144.42</b><span>Dated Brent on 7 April 2026 — the highest physical price ever assessed (Platts)</span></div>
+      <div class="estat"><b>400 million barrels</b><span>released by IEA members from 11 March 2026 — the largest emergency action ever</span></div>
+    </div>
   </div>
 </section>
 
@@ -987,7 +1028,7 @@ footer .legal a{text-decoration:underline}
     </details>
     <details>
       <summary>Which minerals does mineral.watch cover?</summary>
-      <p>Graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony and nickel are live today, with more minerals in the pipeline.</p>
+      <p>Graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony and nickel are live today, alongside a cross-cutting Green transition dashboard on the clean-energy supply chain and the EU's green funds, with more minerals in the pipeline. A separate oil and gas dashboard applies the same approach to energy: chokepoints, flows, sanctions, prices and the companies that move oil and gas.</p>
     </details>
     <details>
       <summary>What data sources does mineral.watch use?</summary>
@@ -1072,6 +1113,11 @@ const niTrend = [[2018,2448.5],[2019,2861.9],[2020,2493.6],[2021,2786.5], // kt 
   [2022,3260.9],[2023,3942.5],[2024,3818.6]];
 const mnTrend = [[2018,55.0],[2019,57.8],[2020,58.6],[2021,57.1], // Mt manganese ore, gross weight (BGS 2018–2024)
   [2022,54.7],[2023,54.0],[2024,53.4]];
+const greenTrend = { // GW added per year (SolarPower Europe 2018–2025, 2018–22 approx.; GWEC)
+  years:[2018,2019,2020,2021,2022,2023,2024,2025],
+  solar:[103,118,139,175,239,447,597,664],
+  wind:[51,61,93,94,78,117,117,165]
+};
 const fmt = n => n>=1e6 ? (n/1e6).toFixed(2)+" Mt" : (n/1e3).toFixed(0)+" kt";
 const rootCss = getComputedStyle(document.documentElement);
 const gridLine = rootCss.getPropertyValue("--line").trim();
@@ -1102,6 +1148,13 @@ function slideAccent(el){
     .getPropertyValue("--accent").trim();
 }
 const featDraw = {
+  chFeatGreen(el){
+    const a = slideAccent(el), sky = "#4cc9f0";
+    featLine(el, greenTrend.years, [
+      { label:"Solar PV", data:greenTrend.solar, borderColor:a, backgroundColor:a+"22", fill:true, tension:0, pointRadius:3, pointBackgroundColor:a },
+      { label:"Wind", data:greenTrend.wind, borderColor:sky, fill:false, tension:0, pointRadius:3, pointBackgroundColor:sky }
+    ], { min:0, max:700, ticks:{ callback:v=>v+" GW" } }, v=>v+" GW added", true);
+  },
   chFeatNi(el){
     const a = slideAccent(el);
     featLine(el, niTrend.map(d=>d[0]), [

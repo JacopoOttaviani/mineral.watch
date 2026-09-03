@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Oil &amp; Gas Watch — Tracking the World's Oil and Gas Chokepoints, Flows and Power</title>
+<meta name="description" content="Open data visualisation tracking global oil and gas: the 2026 Strait of Hormuz closure and the largest supply disruption in oil-market history, the Gulf shut-in ledger, pipeline bypasses, the LNG shock, sanctions and the shadow fleet, OPEC+, prices and the companies that move energy. Built on EIA, IEA, OPEC, BGS, Energy Institute and tanker-tracking data — for energy businesses, geopolitics researchers and think tanks.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="mineral.watch">
+<meta name="copyright" content="© 2026 mineral.watch">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="https://mineral.watch/oil-gas/">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<link rel="alternate icon" href="/brand/favicon.png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mineral.watch/oil-gas/">
+<meta property="og:site_name" content="mineral.watch">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Oil &amp; Gas Watch — Tracking the World's Oil and Gas Chokepoints, Flows and Power">
+<meta property="og:description" content="Interactive world map of fields, terminals, LNG plants and chokepoints; production, reserves and price charts; the 2026 Hormuz closure and Gulf shut-in ledger; LNG shock, sanctions and shadow fleet, OPEC+ and the companies that move energy — built on EIA, IEA, OPEC, BGS and Energy Institute data.">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Oil &amp; Gas Watch — tracking the world's oil and gas chokepoints, flows and power">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Oil &amp; Gas Watch — Tracking the World's Oil and Gas Chokepoints, Flows and Power">
+<meta name="twitter:description" content="Interactive map, production and price charts, the 2026 Hormuz closure and shut-in ledger, the LNG shock, sanctions and the shadow fleet, OPEC+ and the companies that move energy — built on EIA, IEA, OPEC, BGS and Energy Institute data.">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta name="twitter:image:alt" content="Oil &amp; Gas Watch — tracking the world's oil and gas chokepoints, flows and power">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
+        { "@type": "ListItem", "position": 2, "name": "Oil & Gas", "item": "https://mineral.watch/oil-gas/" }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "Oil & Gas Watch — Global Oil and Gas Flows, Chokepoints and Supply Data",
+      "description": "Fields and basins, export terminals, refineries and LNG plants, maritime chokepoints, production and reserves data, prices, shut-in estimates, LNG trade, sanctions and company tracking for the global oil and gas system.",
+      "url": "https://mineral.watch/oil-gas/",
+      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "temporalCoverage": "1970/2026",
+      "spatialCoverage": "Worldwide",
+      "variableMeasured": ["Crude oil production", "Natural gas production", "Proved reserves", "Chokepoint transit volumes", "Shut-in production", "LNG exports and imports", "Prices", "Trade flows", "Companies"],
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "citation": [
+        "U.S. Energy Information Administration, Short-Term Energy Outlook (August 2026) and International Energy Statistics",
+        "U.S. Energy Information Administration, World Oil Transit Chokepoints (updated March 2026)",
+        "IEA Oil Market Report (August 2026), Gas Market Report and World Energy Investment 2026",
+        "OPEC Annual Statistical Bulletin 2026 and Monthly Oil Market Report",
+        "Energy Institute Statistical Review of World Energy 2026",
+        "British Geological Survey, World Mineral Statistics (crude petroleum and natural gas series, 1970–2024)",
+        "Kpler, Vortexa and Centre for Research on Energy and Clean Air (CREA) tanker-tracking and export analyses",
+        "Company disclosures and government announcements"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does the Strait of Hormuz matter so much for oil and gas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because roughly one in five barrels the world burns passed through it. In the first half of 2025 about 20.9 million barrels a day of crude and products transited the strait (EIA) — around 15 mb/d of crude and condensate plus 5.5 mb/d of refined products — along with about a fifth of the world's LNG, almost all of it from Qatar, and nearly 30% of seaborne LPG. Some 84% of that oil went to Asia. When Iran shut the strait to normal commercial traffic on 2 March 2026, transits fell from about 100 ships a day to a handful, EIA estimates flows dropped to 4.9 mb/d in the second quarter, and the IEA called it the largest supply disruption in the history of the oil market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which country produces the most oil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The United States, by a wide margin: about 13.6 million barrels a day of crude oil and condensate in 2025 — a record for any country — with EIA forecasting 13.8 mb/d in 2026 and 14.2 mb/d in 2027. Russia (about 9.9 mb/d) and Saudi Arabia (about 9.5 mb/d) follow; together the top three pump nearly 40% of the world's crude and the top five about half. In 2026 the ranking is being scrambled by the Hormuz closure: Saudi output fell to 7.3 mb/d in June against a quota near 10.3 mb/d, then rebounded to about 11 mb/d in August as the East-West pipeline ran at a record 7 mb/d, while Kuwait exported no crude at all in April."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who holds the world's oil and gas reserves?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Proved crude reserves are concentrated in a handful of states: OPEC's 2026 Annual Statistical Bulletin puts Venezuela first at about 304 billion barrels, Saudi Arabia at 267 billion and Iran at 209 billion, followed by Canada (about 163 billion including oil sands), Iraq, the UAE, Kuwait and Russia. The world total is roughly 1.6–1.7 trillion barrels — about 47 years of consumption at 2025 rates. Gas is even more concentrated: Russia, Iran and Qatar hold about half of the world's proved reserves, and the Iran–Qatar field they share (South Pars/North Dome) is the largest gas reservoir on Earth — which is why the March 2026 strikes on both sides of it shook the LNG market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happened to oil prices in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They went vertical. Brent opened the year near $61, touched $116 on 9 March within a week of the Hormuz closure and settled above $118 at the end of March. On 7 April physical Dated Brent was assessed at $144.42 a barrel — the highest since the benchmark began in 1987, a whisker below the 2008 futures record. The June truce sent Brent down to $69 on 2 July; renewed tanker attacks and the Houthi blockade of Saudi Arabia pushed it back to $105 on 23 July; by 2 September it traded near $89.5, about 24% above pre-war. EIA's August outlook expects Brent to average $87 in 2026 and fall to $69 in 2027 as shut-in Gulf production returns — with about 0.6 mb/d still disrupted through the end of 2027."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does the world's LNG come from, and why is it so tight in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three exporters — the United States, Qatar and Australia — supplied 63% of a record 437 million tonnes of LNG traded in 2025, and the US alone shipped 111 million tonnes, the first country ever above 100. Qatar was about a fifth of world supply and every one of its cargoes sails through Hormuz. Iranian missiles hit Ras Laffan on 18–19 March 2026, knocking out about 17% of Qatar's export capacity (12.8 million tonnes a year) for an estimated three to five years, and QatarEnergy has declared force majeure on contracts running into November 2026. The result: Asian spot LNG hit $23.39 per MMBtu on 28 August, a four-year high, European TTF gas climbed back above €70/MWh, EU storage sat 15 bcm below the five-year average in late June, and Pakistan, Bangladesh and India saw cargoes cancelled — while Henry Hub in the US stayed below $3."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can pipelines bypass the Strait of Hormuz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Partly. Saudi Arabia's East-West Petroline can carry 7 million barrels a day from the Gulf fields to Yanbu on the Red Sea, and Aramco ran it at that all-time record in 2026 — Yanbu crude exports hit about 5 mb/d in March. The UAE's ADCOP line moves up to 1.5 mb/d to Fujairah on the Gulf of Oman, and Iraq's Kirkuk–Ceyhan line to Türkiye has a nominal 1.6 mb/d but carried only 200,000–250,000 b/d, with plans to reach 770,000. That is roughly 9 mb/d of bypass against 20 mb/d of normal Hormuz flow — and the Red Sea route itself became a target when the Houthis declared a naval blockade on Saudi Arabia on 20 July 2026 and struck the Jizan refinery. Kuwait, Qatar, Bahrain and Iran have no bypass at all. Abu Dhabi is fast-tracking a new West-East pipeline for early 2027."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Russia winning or losing from the 2026 oil shock?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both. Higher prices and Asian refiners scrambling for non-Gulf barrels lifted Russian fossil-fuel export revenue to about €683 million a day in July 2026 (CREA); Urals crude briefly sold at a $7–8 premium to Brent in April–May, seaborne crude exports hit a post-invasion record of 4.13 mb/d in June, and India bought a record 2.8 mb/d of Russian crude in July. But the discount had reopened to about $21 a barrel by July, the G7 price cap sits at $44.10, Rosneft and Lukoil have been under direct US sanctions since October 2025, about 53% of seaborne crude moves on sanctioned shadow tankers, and Ukrainian drone strikes have cut Russian output for months and idled the Tuapse and CPC terminals for weeks at a time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Need a deep-dive report on oil and gas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That's exactly what we do. We produce commissioned deep-dive reports for energy companies, traders, insurers, geopolitics researchers and think tanks, covering angles such as chokepoint and flow analysis, Gulf shut-in and bypass scenarios, sanctions and shadow-fleet tracking, LNG contract and capacity mapping, country and basin deep-dives and the exposure of specific companies or importing economies. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
+  --txt:#e6edf3;--muted:#8b98a5;--accent:#ff8c2e;--accent2:#38bdf8;
+  --mine:#ff8c2e;--proc:#38bdf8;--dis:#f87171;--dev:#fde047;
+  --radius:14px;--pad:16px;
+  font-size:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+h1,h2,h3{line-height:1.2;font-weight:700}
+section{padding:40px var(--pad);max-width:1100px;margin:0 auto}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;margin-bottom:8px}
+h2{font-size:1.5rem;margin-bottom:10px}
+.lede{color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:20px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1100px;margin:0 auto}
+.nav-links{display:flex;align-items:center;gap:8px;flex:1;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px;flex:none}
+.brand span{color:var(--accent)}
+nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap;flex:none}
+nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto;flex:none;position:relative;overflow:hidden;z-index:0}
+nav a.cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){nav a.cta::before{transition:none}}
+.research-cta{display:inline-block;background:var(--accent);color:var(--bg);font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none;position:relative;overflow:hidden;z-index:0}
+.research-cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
+.research-cta:hover::before,.research-cta:focus-visible::before{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){.research-cta::before{transition:none}}
+
+/* subscribe */
+.sub-row{display:flex;flex-direction:column;align-items:stretch;gap:24px;width:100%}
+@media(min-width:860px){.sub-row{flex-direction:row}}
+.sub-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;flex:1;min-width:0}
+.sub-box p{font-size:.92rem;color:var(--muted);margin-bottom:14px}
+.sub-box p:last-child{margin-bottom:0}
+.sub-box a{font-weight:600}
+.sub-form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;flex:1;min-width:0;color-scheme:dark}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-grid .full{grid-column:1/-1}
+.sub-form input,.sub-form select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:var(--txt);font:inherit;font-size:.88rem}
+.sub-form input::placeholder{color:var(--muted)}
+.sub-form input:focus,.sub-form select:focus{outline:none;border-color:var(--accent)}
+.sub-form select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e6edf3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;background-size:16px 16px;padding-right:26px}
+.sub-form button{width:100%;background:var(--accent);color:var(--bg);border:0;cursor:pointer;font:inherit;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;margin-top:14px}
+.sub-form button:hover{filter:brightness(1.12)}
+.form-note{font-size:.74rem;color:var(--muted);margin-top:12px;text-align:center}
+
+/* hero */
+.hero-wrap{position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;transform:scale(1.05);filter:grayscale(1) brightness(.52) contrast(1.05);opacity:.6}
+.hero-tint{position:absolute;inset:0;z-index:0;pointer-events:none;background:var(--accent);mix-blend-mode:color;opacity:.45}
+.hero-scrim{position:absolute;inset:0;z-index:0;pointer-events:none;background:
+  linear-gradient(90deg,rgba(13,17,23,.88) 0%,rgba(13,17,23,.55) 55%,rgba(13,17,23,.3) 100%),
+  linear-gradient(180deg,rgba(13,17,23,.75) 0%,rgba(13,17,23,0) 35%,rgba(13,17,23,0) 68%,var(--bg) 100%)}
+.hero{position:relative;z-index:1;padding:56px var(--pad) 44px;text-align:left;max-width:1100px;margin:0 auto}
+.hero-wrap .stat{background:rgba(26,34,44,.72);backdrop-filter:blur(4px)}
+.hero-wrap .hero p{color:#b6c2cf}
+.hero h1{font-size:clamp(1.9rem,6.5vw,3.2rem);letter-spacing:-.02em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);max-width:560px;font-size:1rem}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.stat b{display:block;font-size:1.45rem;color:var(--accent);letter-spacing:-.01em}
+.stat span{font-size:.74rem;color:var(--muted)}
+
+/* map */
+#map{height:62vh;min-height:380px;border-radius:var(--radius);border:1px solid var(--line);z-index:1}
+.map-controls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:7px 14px;font-size:.8rem;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent}
+.chip.on{color:#0d1117;font-weight:700}
+.chip.on.c-mine{background:var(--mine);border-color:var(--mine)}
+.chip.on.c-proc{background:var(--proc);border-color:var(--proc)}
+.chip.on.c-dis{background:var(--dis);border-color:var(--dis)}
+.chip.on.c-dev{background:var(--dev);border-color:var(--dev)}
+.legend{font-size:.74rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--card)}
+.leaflet-popup-content{font-size:.82rem;line-height:1.5;margin:12px 14px}
+.leaflet-popup-content b{color:var(--accent)}
+.pp-tag{display:inline-block;font-size:.66rem;padding:1px 8px;border-radius:99px;margin-bottom:4px;font-weight:700}
+
+/* forms grid (benchmarks & products) */
+.el-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px;margin-top:8px}
+.el{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 6px 10px;cursor:pointer;text-align:center;transition:.15s;position:relative;-webkit-tap-highlight-color:transparent}
+.el:hover{border-color:var(--accent)}
+.el.sel{border-color:var(--accent);background:#ff8c2e14}
+.el b{display:block;font-size:.98rem;letter-spacing:-.01em}
+.el span{font-size:.6rem;color:var(--muted);display:block;margin-top:2px}
+.el .z{position:absolute;top:4px;left:7px;font-size:.56rem;color:var(--muted)}
+.el.gU b{color:var(--accent)}
+.el.gM b{color:var(--accent2)}
+.el.gD b{color:var(--dis)}
+.el.gC b{color:var(--muted)}
+.el-legend{font-size:.72rem;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.el-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.el-detail{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.el-detail h3{font-size:1.05rem;margin-bottom:2px}
+.el-detail h3 small{color:var(--muted);font-weight:400;font-size:.78rem}
+.el-detail .tags{margin:6px 0 10px;display:flex;gap:6px;flex-wrap:wrap}
+.el-detail p{font-size:.85rem;color:var(--muted)}
+.el-detail .price{margin-top:10px;font-size:.78rem;color:var(--accent);border-top:1px dashed var(--line);padding-top:8px}
+
+/* journey */
+.journey{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 calc(-1*var(--pad));padding-left:var(--pad);padding-right:var(--pad)}
+.jcard{scroll-snap-align:start;flex:0 0 260px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative}
+.jcard .num{position:absolute;top:14px;right:16px;font-size:1.6rem;font-weight:800;color:var(--line)}
+.jcard .ico{font-size:1.6rem;margin-bottom:10px}
+.jcard h3{font-size:1rem;margin-bottom:6px}
+.jcard p{font-size:.8rem;color:var(--muted)}
+.jcard .fact{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.76rem;color:var(--accent)}
+.jhint{font-size:.72rem;color:var(--muted);margin-top:6px}
+
+/* charts */
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card h3{font-size:.95rem;margin-bottom:4px}
+.card .sub{font-size:.74rem;color:var(--muted);margin-bottom:12px}
+.chartbox{position:relative;height:280px}
+.src{font-size:.68rem;color:var(--muted);margin-top:10px}
+
+/* chokepoint section */
+.big{font-size:clamp(2.6rem,10vw,4.5rem);font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1}
+.bars{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.bar-row{display:grid;grid-template-columns:150px 1fr 66px;align-items:center;gap:10px;font-size:.78rem}
+.bar-row .track{background:var(--bg2);border-radius:99px;height:10px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#ffd08a);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar-row .val{text-align:right;color:var(--muted)}
+
+/* process flow */
+.flow-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+.flow-wrap svg{min-width:980px;display:block}
+
+/* timeline */
+.tl{position:relative;margin-top:6px;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding-bottom:22px}
+.tl-item::before{content:"";position:absolute;left:-24px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl-item.hot::before{background:var(--accent)}
+.tl-date{font-size:.7rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.tl-item h4{font-size:.92rem;margin:3px 0 4px}
+.tl-item p{font-size:.8rem;color:var(--muted);max-width:640px}
+
+/* company tracker */
+.co-search{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.co-search input{flex:1 1 200px;max-width:320px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;color:var(--txt);font-size:.8rem;outline:none;-webkit-appearance:none}
+.co-search input:focus{border-color:var(--accent)}
+.co-search input::placeholder{color:var(--muted)}
+.co-count{font-size:.72rem;color:var(--muted)}
+.co-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+table.co{width:100%;min-width:900px;border-collapse:collapse;font-size:.79rem}
+.co th{text-align:left;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.co td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted);line-height:1.45}
+.co td:first-child{min-width:170px}
+.co td b{color:var(--txt);font-size:.82rem}
+.co td b a{color:var(--txt);text-decoration:none;border-bottom:1px dashed var(--line)}
+.co td b a:hover{color:var(--accent2);border-bottom-color:var(--accent2)}
+.co .tik{font-size:.68rem;color:var(--muted);margin-top:2px;white-space:nowrap}
+.co .pp-tag{white-space:nowrap;margin-bottom:0}
+
+/* mini cards (military / invest) */
+.mini-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.mini{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px}
+.mini h4{font-size:.86rem;margin-bottom:5px}
+.mini h4 .mi{margin-right:6px}
+.mini p{font-size:.78rem;color:var(--muted)}
+.note{font-size:.72rem;color:var(--muted);border-left:3px solid var(--accent);padding:8px 12px;background:var(--bg2);border-radius:0 8px 8px 0;margin-top:14px}
+.callout{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:14px;margin-top:14px}
+.callout b{font-size:1.5rem;color:var(--accent2);white-space:nowrap;line-height:1.2}
+.callout span{font-size:.78rem;color:var(--muted);flex:1 1 260px;line-height:1.5}
+@media(min-width:720px){.mini-grid{grid-template-columns:1fr 1fr}}
+
+/* research box + animated logo */
+.research-box{display:grid;gap:24px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px;transition:border-color .2s,box-shadow .2s}
+.research-box:hover{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 0 24px -4px var(--accent)}
+.research-art{display:none;justify-self:center;width:180px;animation:hero-float 11s ease-in-out infinite}
+@media(min-width:720px){.research-box{grid-template-columns:1.3fr 1fr}.research-art{display:block}}
+@keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.net-art .edge{stroke:var(--txt);stroke-opacity:.55;stroke-width:1.1;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 1.6s ease-out forwards}
+.net-art .web{stroke:var(--muted);stroke-opacity:.35;stroke-width:.8;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:art-draw 2s ease-out forwards}
+.net-art .d1{animation-delay:.1s}.net-art .d2{animation-delay:.35s}.net-art .d3{animation-delay:.6s}
+.net-art .d4{animation-delay:.9s}.net-art .d5{animation-delay:1.15s}.net-art .d6{animation-delay:1.4s}
+@keyframes art-draw{to{stroke-dashoffset:0}}
+.net-art .orbit{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:3 7;transform-box:fill-box;transform-origin:center}
+.net-art .orbit.o2{stroke-opacity:.6;animation:art-spin 120s linear infinite reverse}
+@keyframes art-spin{to{transform:rotate(360deg)}}
+.net-art .node{fill:var(--bg);stroke:var(--txt);stroke-opacity:.7;stroke-width:1.1;opacity:0;animation:art-in .5s ease-out forwards}
+.net-art .sat{fill:none;stroke:var(--muted);stroke-width:1;opacity:0;animation:art-in .5s ease-out forwards,art-breathe 4s ease-in-out 2.4s infinite;transform-box:fill-box;transform-origin:center}
+.net-art .node,.net-art .sat{animation-delay:1.2s}
+.net-art .sat.b2{animation-delay:1.4s,3s}.net-art .sat.b3{animation-delay:1.6s,3.8s}
+@keyframes art-in{to{opacity:1}}
+@keyframes art-breathe{0%,100%{transform:scale(1);stroke-opacity:1}50%{transform:scale(1.5);stroke-opacity:.4}}
+@media(prefers-reduced-motion:reduce){
+  .net-art,.net-art *{animation:none !important;stroke-dashoffset:0 !important;opacity:1 !important}
+}
+
+/* sources */
+.sources li{margin-bottom:12px;font-size:.85rem;color:var(--muted)}
+.sources{list-style:none}
+.sources b{color:var(--txt)}
+
+/* faq */
+.faq{display:grid;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+.faq details[open]{border-color:var(--accent)}
+.faq summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.2rem;flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--muted);font-size:.86rem;margin-top:10px}
+footer{border-top:1px solid var(--line);padding:26px var(--pad);text-align:center;color:var(--muted);font-size:.74rem}footer a{color:inherit;text-decoration:none}footer a:hover{color:var(--accent)}
+
+@media(min-width:720px){
+  :root{--pad:24px}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .grid2{grid-template-columns:1fr 1fr}
+  h2{font-size:1.9rem}
+  .jcard{flex-basis:300px}
+}
+.legal{display:block;margin-top:8px;opacity:.85}
+footer .legal a{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
+    <div class="brand">Oil &amp; Gas <span>Watch</span></div>
+    <div class="nav-links">
+    <a class="link" href="#map-sec">Map</a>
+    <a class="link" href="#forms-sec">The barrel</a>
+    <a class="link" href="#journey-sec">Journey</a>
+    <a class="link" href="#production-sec">Production</a>
+    <a class="link" href="#gas-sec">Gas &amp; LNG</a>
+    <a class="link" href="#choke-sec">Chokepoints</a>
+    <a class="link" href="#timeline-sec">Timeline</a>
+    <a class="link" href="#trade-sec">Prices</a>
+    <a class="link" href="#sanctions-sec">Sanctions</a>
+    <a class="link" href="#opec-sec">OPEC+</a>
+    <a class="link" href="#power-sec">Power</a>
+    <a class="link" href="#invest-sec">Investment</a>
+    <a class="link" href="#companies-sec">Companies</a>
+    <a class="link" href="#sources-sec">Data</a>
+    <a class="link" href="#faq-sec">FAQ</a>
+    <a class="link" href="#research-sec">Research</a>
+    </div>
+    <a class="cta" href="#research-sec">Hire us</a>
+  </div>
+</nav>
+
+<header class="hero-wrap">
+  <img class="hero-bg" src="/brand/headers/oil-gas.jpg" alt="" aria-hidden="true">
+  <div class="hero-tint" aria-hidden="true"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero">
+  <div class="kicker">Open data · energy geopolitics</div>
+  <h1>Who controls the flow of <em>oil and gas</em>?</h1>
+  <p>Oil and gas are the biggest commodity markets on Earth — and in 2026 they are being run through a 33-kilometre gap of water. Iran shut the Strait of Hormuz to normal traffic on 2 March, a fifth of the world's oil and LNG stopped moving, physical Brent set an all-time record, IEA members emptied 400 million barrels of emergency stocks, and Saudi Arabia, the UAE and Iraq rerouted what they could through pipelines that were never meant to carry it all. This page tracks where oil and gas come from, how they move, who can stop them and who profits when they stop — using open data from the EIA, IEA, OPEC, the Energy Institute, BGS and tanker-tracking analysts. Built for energy businesses, geopolitics researchers and think tanks.</p>
+  <div class="stats">
+    <div class="stat"><b data-count="20.9" data-suffix=" mb/d">0</b><span>of oil moved through Hormuz in early 2025 — about one barrel in five consumed worldwide (EIA)</span></div>
+    <div class="stat"><b data-count="4.9" data-suffix=" mb/d">0</b><span>got through in the second quarter of 2026, with 5–8 mb/d of Gulf output shut in (EIA / IEA)</span></div>
+    <div class="stat"><b data-count="144.42" data-prefix="$">0</b><span>Dated Brent on 7 April 2026 — the highest physical price ever assessed (Platts)</span></div>
+    <div class="stat"><b data-count="400" data-suffix=" mb">0</b><span>of emergency oil stocks released by IEA members from 11 March — the largest action ever</span></div>
+  </div>
+  </div>
+</header>
+
+<section id="map-sec">
+  <div class="kicker">Interactive map</div>
+  <h2>The oil and gas world map</h2>
+  <p class="lede">Giant fields and shale basins, export terminals, refineries and LNG plants, the eight maritime chokepoints that carry most of the world's seaborne energy, and the sites disrupted by war, sanctions and drones in 2026 — from Ghawar and the Permian to Ras Laffan, Kharg Island and the Caspian pipeline terminal at Novorossiysk. Tap a marker for details; toggle layers below. Circle size ≈ scale.</p>
+  <div class="map-controls">
+    <button class="chip c-mine on" data-layer="fields">🛢 Fields &amp; basins</button>
+    <button class="chip c-proc on" data-layer="midstream">🏭 Terminals, refineries &amp; LNG</button>
+    <button class="chip c-dev on" data-layer="chokepoints">⚓ Chokepoints</button>
+    <button class="chip c-dis on" data-layer="disrupted">⚠ Disrupted &amp; sanctioned</button>
+  </div>
+  <div id="map"></div>
+  <div class="legend" style="margin-top:10px">
+    <span><i style="background:var(--mine)"></i>Field / basin</span>
+    <span><i style="background:var(--proc)"></i>Terminal / refinery / LNG</span>
+    <span><i style="background:var(--dev)"></i>Chokepoint</span>
+    <span><i style="background:var(--dis)"></i>Disrupted / sanctioned</span>
+  </div>
+</section>
+
+<section id="forms-sec">
+  <div class="kicker">From reservoir to benchmark</div>
+  <h2>One barrel, many prices</h2>
+  <p class="lede">There is no single oil price and no single gas price. Crude trades against a ladder of benchmarks set by quality and geography; refined products trade on their own margins; gas prices in three continents barely talk to each other — and in 2026 a growing share of the world's hydrocarbons is priced by decree: capped, tolled, blockaded or stockpiled. Tap a marker to see how each price is made and where it stood as the year unfolded.</p>
+  <div class="el-grid" id="elGrid"></div>
+  <div class="el-legend">
+    <span><i style="background:var(--accent)"></i>Crude benchmarks</span>
+    <span><i style="background:var(--dis)"></i>Refined products</span>
+    <span><i style="background:var(--accent2)"></i>Gas &amp; LNG</span>
+    <span><i style="background:var(--muted)"></i>Priced by politics</span>
+  </div>
+  <div class="el-detail" id="elDetail"></div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>From reservoir to pump and burner, step by step</h3>
+    <div class="sub">The oil route (top) feeds transport and petrochemicals; the gas route (bottom) feeds power, heat and industry. Both funnel through the same handful of straits. Scroll sideways on mobile →</div>
+    <div class="flow-wrap">
+    <svg viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Oil and gas value chain from reservoir to end uses">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8b98a5"/></marker>
+      </defs>
+      <style>
+        .fb{fill:#151b23;stroke:#2b3644;rx:10}
+        .ft{fill:#e6edf3;font:700 12px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fs{fill:#8b98a5;font:11px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fe{fill:#ff8c2e;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fg{fill:#38bdf8;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif}
+        .fl{stroke:#8b98a5;stroke-width:1.4;fill:none;marker-end:url(#ah)}
+        .lab{fill:#ff8c2e;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em}
+        .lab2{fill:#38bdf8;font:700 10px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em}
+      </style>
+      <text x="205" y="24" class="lab">OIL ROUTE (~103 MB/D OF DEMAND, 2025)</text>
+      <text x="205" y="212" class="lab2">GAS ROUTE (~4,200 BCM/YR — 13% OF IT AS LNG)</text>
+      <g>
+        <rect class="fb" x="10" y="120" width="150" height="90" rx="10"/>
+        <text x="20" y="144" class="ft">1 · Reservoir 🛢</text>
+        <text x="20" y="162" class="fs">Giant fields, shale plays,</text>
+        <text x="20" y="176" class="fs">deepwater, oil sands</text>
+        <text x="20" y="200" class="fe">5 countries pump half the oil</text>
+      </g>
+      <g>
+        <rect class="fb" x="205" y="40" width="150" height="78" rx="10"/>
+        <text x="215" y="62" class="ft">2 · Pipeline &amp; tanker ⚓</text>
+        <text x="215" y="80" class="fs">VLCCs through Hormuz,</text>
+        <text x="215" y="94" class="fs">Malacca, Bab el-Mandeb</text>
+        <text x="215" y="111" class="fe">Hormuz: 20.9 → 4.9 mb/d</text>
+
+        <rect class="fb" x="400" y="40" width="150" height="78" rx="10"/>
+        <text x="410" y="62" class="ft">3 · Refinery 🏭</text>
+        <text x="410" y="80" class="fs">Crude → gasoline, diesel,</text>
+        <text x="410" y="94" class="fs">jet, naphtha, fuel oil</text>
+        <text x="410" y="111" class="fe">diesel crack hit $102/bbl</text>
+
+        <rect class="fb" x="595" y="40" width="150" height="78" rx="10"/>
+        <text x="605" y="62" class="ft">4 · Products 🚚</text>
+        <text x="605" y="80" class="fs">Transport takes ~60%;</text>
+        <text x="605" y="94" class="fs">petrochemicals ~15%</text>
+        <text x="605" y="111" class="fe">rationing in Slovenia, Asia</text>
+      </g>
+      <g>
+        <rect class="fb" x="205" y="222" width="150" height="78" rx="10"/>
+        <text x="215" y="244" class="ft">2 · Processing 🧪</text>
+        <text x="215" y="262" class="fs">Strip liquids &amp; sulphur;</text>
+        <text x="215" y="276" class="fs">pipeline gas or liquefaction</text>
+        <text x="215" y="292" class="fg">Ras Laffan: 17% capacity out</text>
+
+        <rect class="fb" x="400" y="222" width="150" height="78" rx="10"/>
+        <text x="410" y="244" class="ft">3 · Ship &amp; regasify 🚢</text>
+        <text x="410" y="262" class="fs">LNG carriers → import</text>
+        <text x="410" y="276" class="fs">terminals → grid</text>
+        <text x="410" y="292" class="fg">US shipped 111 Mt in 2025</text>
+      </g>
+      <g>
+        <rect class="fb" x="790" y="120" width="180" height="90" rx="10" stroke="#ff8c2e"/>
+        <text x="800" y="144" class="ft">5 · End uses ⚡</text>
+        <text x="800" y="162" class="fs">Cars, ships, planes, plastics</text>
+        <text x="800" y="176" class="fs">on one branch; power, heat,</text>
+        <text x="800" y="190" class="fs">fertiliser on the other</text>
+        <text x="800" y="205" class="fe">demand −1.6 mb/d in 2026 (IEA)</text>
+      </g>
+      <path class="fl" d="M160 150 L182 150 L182 79 H200"/>
+      <path class="fl" d="M355 79 H395"/>
+      <path class="fl" d="M550 79 H590"/>
+      <path class="fl" d="M745 79 H768 V143 H785"/>
+      <path class="fl" d="M160 180 L182 180 L182 261 H200"/>
+      <path class="fl" d="M355 261 H395"/>
+      <path class="fl" d="M550 261 H700 V183 H785"/>
+      <path class="fl" d="M475 222 V118" style="stroke-dasharray:4 4;marker-end:none"/>
+    </svg>
+    </div>
+    <div class="src">Shares: Energy Institute Statistical Review 2026 (oil demand 103 mb/d in 2025; gas ~4,200 bcm); IEA Gas Market Report (LNG ≈ 13% of gas consumed); IEA Oil Market Report August 2026 (2026 demand −1.6 mb/d); EIA STEO August 2026 (Hormuz flows); RBN Energy / Argus (US Gulf Coast diesel crack $102/bbl, 17 August 2026). The dashed link is gas-to-liquids and NGLs — the growing overlap between the two routes.</div>
+  </div>
+</section>
+
+<section id="journey-sec">
+  <div class="kicker">Well to wheel — and well to burner</div>
+  <h2>The journey of a barrel and a cargo</h2>
+  <p class="lede">From a Permian frac crew or a Ghawar water-injection well to the pump, the jet engine and the gas turbine — and from Qatar's North Field to a regasification jetty in Zeebrugge or Chittagong. Six stages, each with its own bottleneck, and in 2026 the bottleneck is stage three.</p>
+  <div class="journey" id="journey"></div>
+  <div class="jhint">← swipe →</div>
+</section>
+
+<section id="production-sec">
+  <div class="kicker">Production &amp; reserves</div>
+  <h2>Where oil comes from — and what stopped</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Crude oil production by country, 2025</h3>
+      <div class="sub">Million barrels per day of crude oil and lease condensate (EIA, January–November 2025 annualised)</div>
+      <div class="chartbox"><canvas id="chProd"></canvas></div>
+      <div class="src">Source: EIA International Energy Statistics via Visual Capitalist (May 2026). World crude and condensate output was about 83 mb/d; total liquids including NGLs, biofuels and refinery gain ~106 mb/d (EIA STEO). The US set an all-time national record of 13.6 mb/d in 2025; EIA expects 13.8 in 2026 and 14.2 in 2027.</div>
+    </div>
+    <div class="card">
+      <h3>Proved crude oil reserves</h3>
+      <div class="sub">Billion barrels, end-2025 (world ~1.6–1.7 trillion)</div>
+      <div class="chartbox"><canvas id="chRes"></canvas></div>
+      <div class="src">Source: OPEC Annual Statistical Bulletin 2026 for all countries except Canada, whose figure includes oil sands (Canada Energy Regulator basis; OPEC counts only ~5 billion barrels of conventional Canadian crude). On OPEC's basis the world total is ~1,567 billion barrels — about 47 years of 2025 consumption.</div>
+    </div>
+    <div class="card" style="grid-column:1/-1">
+      <h3>The shut-in ledger: what the Hormuz closure took offline</h3>
+      <div class="sub">Crude production in February 2026 (before the war) vs estimated production shut in during July 2026, thousand barrels per day (EIA STEO, August 2026)</div>
+      <div class="chartbox"><canvas id="chShut"></canvas></div>
+      <div class="src">Source: EIA Short-Term Energy Outlook, August 2026, Table 1. Gulf shut-ins averaged 10.05 mb/d in March–May, 7.48 mb/d in June and 5.46 mb/d in July; EIA forecasts 6.6 mb/d for 3Q26, 4.2 mb/d in 4Q26 and 1.6 mb/d in 1Q27, with ~0.6 mb/d still disrupted through end-2027. The UAE restored full output by June via the ADCOP pipeline to Fujairah; Iran's shut-ins reflect the US naval blockade rather than the strait. The IEA counted 8.3 mb/d of Gulf output still shut in during July on its broader basis.</div>
+    </div>
+    <div class="card" style="grid-column:1/-1">
+      <h3>Half a century of crude — and the price it fetched</h3>
+      <div class="sub">World crude petroleum production (million tonnes, left) vs the annual-average Brent spot price ($/bbl, right), 2000–2025</div>
+      <div class="chartbox"><canvas id="chTrend"></canvas></div>
+      <div class="src">Sources: BGS World Mineral Statistics (crude petroleum production, 2000–2024, sum of reporting countries); EIA (Brent Europe spot annual averages; 2025 ≈ $69). Output has grown ~24% since 2000 with only two real dips — the 2009 recession and 2020's pandemic — while the price has swung from $25 to $112 and back. 2026 is not on the chart yet: EIA expects Brent to average $87 for the year.</div>
+    </div>
+  </div>
+  <div class="note">BGS publishes long-run <b>crude petroleum</b>, <b>natural gas</b> and <b>coal</b> production series for every producing country back to 1970 — browse them country by country in the <a href="/explorer/">data explorer</a>.</div>
+</section>
+
+<section id="gas-sec">
+  <div class="kicker">Gas &amp; LNG</div>
+  <h2>The gas shock nobody hedged</h2>
+  <p class="lede">Gas was the quiet market of the 2020s recovery: US shale had made America the largest producer and, in 2025, the largest LNG exporter on Earth, and a wave of new liquefaction was about to turn shortage into glut. Then Iranian missiles hit Ras Laffan and the strait through which a fifth of the world's LNG sails was closed. The result is a market split in three: cheap gas in America, rationed gas in South Asia, and Europe outbidding everyone to refill its storage before winter.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Natural gas production by country</h3>
+      <div class="sub">Billion cubic metres, 2025 or latest available year</div>
+      <div class="chartbox"><canvas id="chGas"></canvas></div>
+      <div class="src">Sources: Energy Institute Statistical Review 2026 / OPEC ASB 2026 (US 1,116 bcm and Iran 280 bcm in 2025; others 2024 values, Russia and China rounded estimates). The US alone produced about a quarter of the world's ~4,200 bcm; world output grew 1.3% in 2025. Iran's South Pars complex — 12% of its gas — was struck on 18 March 2026.</div>
+    </div>
+    <div class="card">
+      <h3>Who exported the LNG, 2025</h3>
+      <div class="sub">Billion cubic feet per day of LNG exports (world record 56.3 Bcf/d ≈ 437 million tonnes)</div>
+      <div class="chartbox"><canvas id="chLngExp"></canvas></div>
+      <div class="src">Sources: EIA Today in Energy (global LNG trade 2025; US 15.1 Bcf/d, Qatar 10.6 Bcf/d; top three 63%); Kpler via TradeArabia (436.98 Mt, +6.3%); other countries approximate from GIIGNL/IGU. The US supplied 93% of 2025 export growth and shipped 111 Mt — the first country ever above 100 Mt in a year. EIA sees US exports at 17.4 Bcf/d in 2026 and 18.6 in 2027.</div>
+    </div>
+    <div class="card">
+      <h3>Who bought it</h3>
+      <div class="sub">LNG imports by market, 2025, million tonnes (Kpler basis, approximate)</div>
+      <div class="chartbox"><canvas id="chLngImp"></canvas></div>
+      <div class="src">Sources: Kpler via Baird Maritime / TradeArabia (Europe 126.2 Mt, +26.1 Mt; Asia Pacific 168.7 Mt, −9.2 Mt); SunSirs / customs data (Japan 67.4 Mt, South Korea 48.7 Mt; China −16%, India −11% year on year). Europe drove all the growth in 2025 as it replaced Russian pipeline gas; in 2026 it is competing with Asia for the same cargoes Qatar can no longer send.</div>
+    </div>
+    <div class="card">
+      <h3>Three gas markets, three realities</h3>
+      <div class="sub">What the Ras Laffan strikes and the Hormuz closure did to each region</div>
+      <div class="mini-grid" style="grid-template-columns:1fr">
+        <div class="mini"><h4><span class="mi">🇶🇦</span>The Qatar hole</h4><p>Missile strikes on 18–19 March damaged two LNG trains and a gas-to-liquids plant, knocking out ~17% of Qatar's capacity (12.8 Mt/yr) for an estimated three to five years and, by QatarEnergy's own count, $20 billion a year of revenue. Force majeure notices to buyers in China, South Korea, Italy, Belgium, Pakistan and Bangladesh now run into November 2026; Edison alone has lost 29 cargoes. The 110 Mt/yr North Field East expansion has slipped to a fourth-quarter 2026 start.</p></div>
+        <div class="mini"><h4><span class="mi">🌏</span>Asia pays the spot price</h4><p>Asian spot LNG (JKM) hit $23.39/MMBtu on 28 August, a four-year high, after a 140% jump in the days following the Ras Laffan attack. Pakistan and Bangladesh — the most Qatar-dependent buyers — face cancellations through October; the Philippines declared an energy emergency on 24 March; Bangladesh ordered shopping centres shut by early evening. Japan, with a wide contract portfolio and little Qatari LNG, is the best insulated.</p></div>
+        <div class="mini"><h4><span class="mi">🇪🇺</span>Europe refills at any price</h4><p>EU storage stood at 50 bcm (46% full) on 23 June — 15 bcm below the five-year average — and TTF has climbed back above €70/MWh, its highest since January 2023, as Europe outbids Asia for cargoes. The regulatory clock is also running: the EU's stepwise ban ends Russian LNG imports from 1 January 2027 and pipeline gas by 30 September 2027, while Hungary and Slovakia still draw on TurkStream.</p></div>
+        <div class="mini"><h4><span class="mi">🇺🇸</span>America's insulated market</h4><p>Henry Hub is forecast at just $2.87/MMBtu for 3Q26 — record storage of ~3,985 Bcf expected by end-October and 111 Bcf/d of dry-gas production have kept US prices in a different universe from Asia and Europe. Golden Pass shipped its first cargo on 22 April, Corpus Christi Stage 3 reached substantial completion on 28 August, and Plaquemines' second phase lands by mid-2027: the LNG wave is arriving exactly when the world needs it.</p></div>
+      </div>
+      <div class="callout"><b>~20%</b><span>of the world's LNG passed through the Strait of Hormuz before the war — essentially all of Qatar's exports plus the UAE's. No pipeline can bypass it for gas: unlike crude, Qatari LNG has no Red Sea alternative (IEA / EIA).</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="choke-sec">
+  <div class="kicker">Concentration risk</div>
+  <h2>Eight straits and a canal</h2>
+  <p class="lede">Oil's chokepoints are geographic, not industrial: almost all of the roughly 80 million barrels a day that move by sea pass through a handful of narrow waterways, and two of them — Hormuz and Malacca — carried more than half of it. In 2026 the first was closed and the second was being watched. The bypass pipelines that exist can move about nine of Hormuz's twenty million barrels, and the Red Sea route they feed became a target of its own on 20 July.</p>
+  <div class="card">
+    <div class="big" id="bigPct">20.9 → 4.9</div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:6px">million barrels a day of oil through the Strait of Hormuz: first half of 2025 vs the second quarter of 2026 (EIA). How the world's oil chokepoints compared before the war:</p>
+    <div class="bars" id="chinaBars"></div>
+    <div class="src">Source: EIA World Oil Transit Chokepoints (updated 3 March 2026), crude oil and petroleum liquids, first half of 2025. Malacca handled ~29% of global seaborne oil; Hormuz ~27%, of which ~15 mb/d was crude and condensate. Bab el-Mandeb flows rose from 5.4 mb/d in 4Q25 to 8.1 mb/d in 2Q26 as Saudi crude was rerouted to Yanbu — then the Houthis declared a blockade on Saudi shipping.</div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>The bypass ledger</h3>
+    <div class="sub">What can move around Hormuz — and what cannot</div>
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇸🇦</span>Petroline to Yanbu · 7 mb/d</h4><p>Aramco's East-West pipeline carried 770,000 b/d before the war; by 10 March its CEO said it would hit full capacity "in the next couple of days", and it has since run at an all-time record of 7 mb/d. Yanbu crude exports reached ~5 mb/d plus 700–900 kb/d of products — enough to hold Saudi exports at a 7 mb/d ceiling. Everything above that stays in the ground: 2.07 mb/d was shut in during July.</p></div>
+      <div class="mini"><h4><span class="mi">🇦🇪</span>ADCOP to Fujairah · 1.5 mb/d</h4><p>The Habshan–Fujairah line lets Abu Dhabi load on the Gulf of Oman side of the strait; Fujairah exports rose from 1.17 mb/d in February to 1.62 mb/d in March and the UAE was back to full production by June — the only Gulf producer to fully escape. A new West-East pipeline, 50% built, is being fast-tracked for early 2027 so the UAE need never use Hormuz again.</p></div>
+      <div class="mini"><h4><span class="mi">🇮🇶</span>Kirkuk–Ceyhan · 1.6 mb/d nominal</h4><p>Reopened in September 2025 after a two-and-a-half-year closure, the northern line to Türkiye became Iraq's only working export route — but carried just 200,000–250,000 b/d. Baghdad has approved a plan to lift it to 770,000 b/d. Iraq's exports fell from 3.4 mb/d to 10 million barrels for the whole of April, and its budget breaks even near $86 a barrel.</p></div>
+      <div class="mini"><h4><span class="mi">⛔</span>No bypass at all</h4><p>Kuwait exported zero crude in April — its first total halt since 1991 — and expects 2026 output of 1.84 mb/d against 2.47 in 2025. Qatar's LNG, Bahrain's crude and Iran's Kharg Island exports all depend on the strait; Iran's cargoes are additionally blocked by the US Navy. Kuwait's port calls fell 86%, the UAE's 69%, Qatar's, Iraq's and Bahrain's about two-thirds.</p></div>
+    </div>
+    <div class="src">Sources: S&amp;P Global (Aramco CEO, 10 March 2026); Fortune and Bloomberg (Petroline 7 mb/d, Yanbu records); Kpler via Al Jazeera (Fujairah, ADCOP); CNBC and Kpler (Iraq–Türkiye ramp, UAE West-East pipeline); Iraqi oil ministry via Iraqi News and Shafaq; Kuwait Times and AGBI; Gibson Shipbrokers via Al Jazeera (port calls); EIA STEO August 2026 (shut-ins).</div>
+  </div>
+</section>
+
+<section id="timeline-sec">
+  <div class="kicker">Geopolitics</div>
+  <h2>From shale glut to the closed strait</h2>
+  <p class="lede">A decade ago the story of oil was abundance: American shale broke OPEC's pricing power and forced it into an alliance with Russia. Then came a pandemic that briefly priced a barrel below zero, an invasion that rewired Europe's gas, and a war that closed the world's most important oil chokepoint for the first time in history.</p>
+  <div class="card">
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-date">2014–2020</div>
+        <h4>Shale, OPEC+ and the barrel below zero</h4>
+        <p>US tight oil doubles American output and crashes Brent from $112 (2012 average) to $44 (2016). OPEC responds by recruiting Russia and nine others into "OPEC+" in December 2016. The pandemic then does what no cartel could: on 20 April 2020 the expiring WTI contract settles at −$37.63 a barrel and OPEC+ cuts a record 9.7 mb/d.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">2022</div>
+        <h4>Invasion, Nord Stream and the price cap</h4>
+        <p>Russia invades Ukraine on 24 February; Brent averages $101 for the year and European gas peaks above €300/MWh. IEA members release 182 million barrels — a record at the time. The Nord Stream pipelines are destroyed in September; the EU bans seaborne Russian crude and the G7 caps its price at $60 from 5 December. Russia redirects its barrels to India and China, and a "shadow fleet" of ageing tankers is born.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2023–2024</div>
+        <h4>Cuts, the Red Sea and a record 2025</h4>
+        <p>Eight OPEC+ producers add 1.65 mb/d of "voluntary" cuts in April 2023 on top of earlier ones. Houthi attacks on Red Sea shipping from late 2023 push container lines and many tankers around the Cape of Good Hope; Ukraine ended Russian gas transit on 1 January 2025. US crude production sets a record 13.6 mb/d in 2025 and US LNG exports hit 111 million tonnes as the country becomes the world's largest LNG seller; global LNG trade reaches a record 437 Mt.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Apr–Dec 2025</div>
+        <h4>OPEC+ starts unwinding; Washington sanctions Rosneft</h4>
+        <p>From April OPEC+ begins returning barrels to a market EIA still expected to be oversupplied, with Brent forecast near $51 for 2026. On 22 October the US Treasury sanctions Rosneft and Lukoil outright — Russia's two largest exporters. On 30 November OPEC+ holds 2026 group quotas steady and agrees a mechanism to reassess members' capacity. Brent averages about $69 for the year.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">3–29 Jan 2026</div>
+        <h4>Venezuela changes hands</h4>
+        <p>US forces raid Caracas on 3 January and capture Nicolás Maduro, who is flown to New York to face narco-terrorism charges; Vice-President Delcy Rodríguez is sworn in as interim president on 5 January. The National Assembly rewrites the hydrocarbons law to let foreign companies operate and sell oil even as minority partners of PDVSA, and on 29 January OFAC issues General Licenses 46 and 47 reopening the sector to US companies. Output climbs past 1 mb/d by mid-year.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">28 Feb – 2 Mar 2026</div>
+        <h4>The war and the closure</h4>
+        <p>Israel and the United States strike Iran on 28 February; Supreme Leader Ali Khamenei is killed. Iran retaliates against US bases, Israel and Gulf energy sites — Qatar's LNG output halts, Aramco's Ras Tanura refinery shuts for a week after intercepted drones start a fire on 2 March. The same day the IRGC declares the Strait of Hormuz closed to US- and Israel-allied shipping. Transits collapse from ~100 ships a day to a trickle.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">9–31 Mar 2026</div>
+        <h4>Record stocks, record strikes, record prices</h4>
+        <p>Brent hits $116 on 9 March. The IEA's 32 members agree on 11 March to release 400 million barrels — by far the largest collective action ever, with 172 million from the US SPR. On 13 March US aircraft destroy 90 military sites on Kharg Island but spare the oil terminal. On 18 March Israel strikes Iran's South Pars gas complex (12% of Iranian gas); Iran answers with missiles on Ras Laffan, knocking out 17% of Qatar's LNG capacity for years. Iran turns the strait into a toll booth — up to $2 million a tanker via Larak Island — and its parliament codifies the regime on 30–31 March. Brent closes March at $118.35; Slovenia becomes the first EU country to ration fuel.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">7–21 Apr 2026</div>
+        <h4>$144 Dated Brent, a ceasefire and a blockade</h4>
+        <p>Physical Dated Brent is assessed at $144.42 on 7 April — the highest since Platts began publishing it in 1987. On 8 April Pakistan announces a two-week US–Iran pause and hosts talks in Islamabad; on 13 April the US Navy imposes a blockade on Iranian ports that cuts Iran's exports from ~1.8 mb/d to under 300,000 b/d within weeks. Kuwait exports no crude at all for the month; Iraq ships 10 million barrels instead of 93. President Trump extends the ceasefire indefinitely on 21 April.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">17 Jun – 2 Jul 2026</div>
+        <h4>The memorandum</h4>
+        <p>A 14-point US–Iran memorandum of understanding, brokered by Pakistan, reopens the strait toll-free for a 60-day negotiating window. Traffic recovers to ~28 ships a day — still a third of normal — and 14 trapped LNG cargoes sail. Brent slides to $69 on 2 July; Urals swings back from a premium to a discount as Asian refiners relax. Russian seaborne crude exports hit a post-invasion record of 4.13 mb/d.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">6–27 Jul 2026</div>
+        <h4>Collapse, and a second blockade</h4>
+        <p>Projectiles hit the Qatari LNG carrier Al Rekayyat, the Saudi supertanker Wedyan and a Liberian-flagged tanker on 6–7 July; Trump declares the truce over on 8 July and the naval blockade resumes on 14 July. Drones strike tankers at the CPC terminal in Novorossiysk on 19 July, halting Kazakhstan's main export route. On 20 July the Houthis declare a naval blockade of Saudi Arabia, targeting the very Red Sea route Aramco relies on; Brent reaches $105 on 23 July; the Jizan refinery — 6–8% of Europe's diesel imports since April — is hit on 24 July and shut on the 27th. Russia bans diesel exports for the rest of the month.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">Aug – 3 Sep 2026</div>
+        <h4>Stalemate at sea, records on land</h4>
+        <p>Hormuz traffic averages five ships a day; Gulf crude exports run at ~9 mb/d against 17 before the war. Saudi Arabia nonetheless reports ~11 mb/d of production for August — its highest since April 2020 — as Petroline runs flat out; US diesel cracks hit a record $102 a barrel on 17 August and Asian LNG a four-year high on the 28th. The five Western majors book ~$47 billion of quarterly profit. US strikes hit IRGC launchers on Larak Island on 30 August and further targets on 1 September; Qatar and Pakistan shuttle proposals for an Omani-supervised corridor. OPEC+ completes its 1.65 mb/d unwinding with a September hike it can barely deliver. Brent: ~$89.5 on 2 September.</p>
+      </div>
+    </div>
+    <div class="src">Sources: House of Commons Library briefings (US–Iran ceasefire and nuclear talks; the capture of Maduro); Wikipedia timelines of the 2026 Iran war (cross-checked against Al Jazeera, CNBC, Bloomberg, Reuters and IEA/EIA releases); IEA collective-action notices (11 March 2026 and updates); EIA STEO August 2026; Platts/Bloomberg (Dated Brent record); OPEC press releases (1 March and 2 August 2026); OFAC General Licenses 46/47; CREA and KSE Institute Russian oil trackers; Foreign Policy and Kurdistan24 (Hormuz tolls).</div>
+  </div>
+</section>
+
+<section id="trade-sec">
+  <div class="kicker">Trade &amp; prices</div>
+  <h2>A price for every route</h2>
+  <p class="lede">Benchmark oil doubled and halved inside four months; physical crude in the Atlantic Basin set records while sanctioned Russian barrels swung from discount to premium and back; and the real shortage showed up not in crude but in diesel and jet fuel, where Gulf refineries had been the world's swing supplier. Gas told the same story three times over, at three different prices.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Brent, year by year</h3>
+      <div class="sub">Annual-average spot price, $/bbl (2026 = EIA August forecast)</div>
+      <div class="chartbox"><canvas id="chPrices"></canvas></div>
+      <div class="src">Source: EIA (Brent Europe spot annual averages; 2026 forecast $87, 2027 $69). The 2026 bar hides the range: $61 in January, $116 on 9 March, a $118 close on 31 March, $69 on 2 July, $105 on 23 July. EIA's September 2025 outlook had expected $51 for 2026.</div>
+    </div>
+    <div class="card">
+      <h3>Who bought Russia's fossil fuels, July 2026</h3>
+      <div class="sub">Export value by buyer, € billion (total ≈ €21 billion, or €683 million a day)</div>
+      <div class="chartbox"><canvas id="chRus"></canvas></div>
+      <div class="src">Source: Centre for Research on Energy and Clean Air (CREA), monthly analysis for July 2026. China took 43% (70% of it crude); India a record share, 87% of it crude; the EU still bought €1.5 billion — 38% pipeline gas, 36% LNG. Crude earned Russia €392 million a day, products €116 million, pipeline gas €71 million, LNG €38 million, coal €66 million.</div>
+    </div>
+    <div class="card">
+      <h3>Four prices, one crisis</h3>
+      <div class="sub">Where each benchmark stood at its 2026 extreme</div>
+      <div class="mini-grid">
+        <div class="mini"><h4>The physical record</h4><p>Dated Brent — the price of real North Sea cargoes, not futures — reached <b style="color:var(--accent)">$144.42 on 7 April</b>, the highest since Platts began the assessment in 1987 and just below the 2008 futures peak of $146.08. Futures never got there: the ICE front month topped out near $121 on 30 April as traders priced a truce.</p></div>
+        <div class="mini"><h4>The capped barrel</h4><p>Urals traded at <b style="color:var(--accent)">$60.22 in July, a 26% ($21) discount to Brent</b>, after briefly commanding a $7–8 premium in April–May when Asian refiners scrambled for anything not stuck behind Hormuz. The G7/EU cap has been frozen at $44.10 since February's switch to a dynamic formula — and 53% of Russian seaborne crude sails on sanctioned shadow tankers regardless.</p></div>
+        <div class="mini"><h4>The distillate squeeze</h4><p>The US Gulf Coast diesel crack — refining margin over crude — hit a record <b style="color:var(--accent)">$102 a barrel on 17 August</b>; Northwest Europe's gasoil crack neared $95. Some 700,000 b/d of Gulf product exports vanished, Jizan's 400 kb/d refinery shut after Houthi strikes and Russia banned diesel exports for most of July. Goldman Sachs doubled its 2027 diesel-margin forecasts to $63 (US) and $49 (EU).</p></div>
+        <div class="mini"><h4>The gas spread</h4><p>Asian spot LNG (JKM) reached <b style="color:var(--accent)">$23.39/MMBtu on 28 August</b>, TTF traded above €70/MWh (about $24), and Henry Hub was forecast at $2.87 for the quarter. The same molecule cost eight times more in Tokyo than in Louisiana — the widest transatlantic gas arbitrage since 2022, and the reason every US export train that can run is running.</p></div>
+      </div>
+      <div class="src">Sources: Bloomberg / S&amp;P Global Platts (Dated Brent); Investing.com and EIA (futures highs, STEO price path); CREA July 2026 (Urals, price cap, shadow fleet share); RBN Energy, AGBI and Reuters (diesel cracks, Jizan, Russian diesel ban); Global LNG Hub, LNG Insights and Trading Economics (JKM, TTF); EIA STEO August 2026 (Henry Hub).</div>
+    </div>
+    <div class="card">
+      <h3>Demand destruction, by the numbers</h3>
+      <div class="sub">What $100 oil and rationed gas did to consumption</div>
+      <p style="font-size:.85rem;color:var(--muted)">The IEA now expects world oil demand to <b style="color:var(--txt)">fall by 1.6 mb/d in 2026</b> — the first non-pandemic contraction since 2009 — with the drop peaking at 4.9 mb/d year on year in the second quarter, easing to 2.8 mb/d in the third and returning to growth in the fourth before a 2.4 mb/d rebound in 2027. Supply fell harder: 4.3 mb/d for the year to ~102 mb/d, with 8.3 mb/d of Gulf output still shut in during July and observed inventories plunging 69 million barrels that month alone. China's crude imports dropped 32% quarter on quarter to 8.1 mb/d in 2Q26, below 8 mb/d for the first time since 2016; Spirit Airlines ceased operations on 2 May citing fuel costs; the IMF trimmed 2026 global growth to 3%.</p>
+      <div class="callout"><b>−1.6 mb/d</b><span>IEA's forecast change in world oil demand for 2026 (Oil Market Report, August 2026) — EIA, on a broader liquids basis, sees consumption at 102.7 mb/d against 104.0 mb/d in 2025.</span></div>
+      <div class="src">Sources: IEA Oil Market Report, August 2026 (via Argus and OGJ); EIA STEO August 2026; Energies Media / customs data (China imports); Wikipedia "2026 Iran war fuel crisis" compilation (airline and rationing events, cross-checked); IMF World Economic Outlook update, July 2026.</div>
+    </div>
+  </div>
+</section>
+
+<section id="sanctions-sec">
+  <div class="kicker">Sanctions &amp; the shadow fleet</div>
+  <h2>Barrels that officially don't exist</h2>
+  <p class="lede">Roughly a fifth of the world's oil now moves under some form of sanction, blockade or price cap — Russian, Iranian, Venezuelan — on tankers that switch off their transponders, swap cargoes at sea and insure themselves in Dubai and Mumbai. The 2026 war turned this grey market into the market: when Gulf barrels stopped, sanctioned barrels filled the gap, and enforcing the rules became a choice between principle and price.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🇷🇺</span>Russia: the windfall and the drones</h4><p>Rosneft and Lukoil — directly sanctioned by the US since 22 October 2025 — regained control of 57% of exports by May 2026 through special-purpose vehicles (KSE). Higher prices lifted export revenue to €683 million a day in July; Moscow dropped planned budget cuts in March. But Ukrainian strikes cut Russian output for six straight months to June, idled Tuapse for two months and cut CPC loadings 23%, and the discount reopened to $21 by July.</p></div>
+      <div class="mini"><h4><span class="mi">🛳</span>The shadow fleet</h4><p>KSE counted 192 shadow tankers carrying Russian crude and products in April 2026, 92% of them older than 15 years. In July, 53% of Russia's seaborne crude sailed on sanctioned vessels and only 34% on G7-linked tankers — though for products the G7 share was 72%. A shadow-fleet shortage during the Hormuz scramble pushed Russia back toward Western shipping, exactly what the price cap was designed to police.</p></div>
+      <div class="mini"><h4><span class="mi">🇮🇷</span>Iran: blockaded, not bombed</h4><p>Kharg Island handles ~90–94% of Iran's crude exports; US strikes on 13 March deliberately spared its oil infrastructure. The naval blockade from 13 April did the damage instead: exports fell from 1.84 mb/d in March to under 300,000 b/d in May and 251,000 b/d in August, storage neared tank-tops, and Washington sanctioned Hengli's Dalian refinery and four other Chinese "teapots" that had been taking Iranian crude via Malaysian blends. Al Jazeera put the blockade's cost at nearly $6 billion by early June.</p></div>
+      <div class="mini"><h4><span class="mi">🇻🇪</span>Venezuela: sanctions in reverse</h4><p>Three weeks after Maduro's capture, OFAC's General License 46 let established US companies lift, refine, ship and sell Venezuelan oil, and GL 47 restored diluent exports. Chevron raised its stake in its PDVSA joint venture to 49% in April and on 2 September pledged $7 billion to double output by 2031, including the Ayacucho 8 heavy-oil block; Shell is close behind. Production reached 1.12 mb/d in July — up 18% on 2025, still half of a decade ago.</p></div>
+      <div class="mini"><h4><span class="mi">🇰🇿</span>Kazakhstan: collateral damage</h4><p>The CPC pipeline carries more than 80% of Kazakhstan's exports — over 1% of world supply — to Novorossiysk on Russia's Black Sea coast. Attacks on the terminal began in November 2025 and escalated in July 2026, when four drone strikes in four days hit tankers loading Kazakh crude; loadings were suspended and Tengiz had to cut output. Astana protested, Washington warned Kyiv off Kazakh-linked shipping, and Chevron and ExxonMobil watched their biggest Central Asian asset stall.</p></div>
+      <div class="mini"><h4><span class="mi">⚖️</span>The cap that froze</h4><p>The EU and UK switched the Russian crude price cap to a dynamic formula in February 2026 — at $44.10 it has not moved since, because the formula was designed for falling prices, not a war premium. Enforcement is fraying at both ends: Urals sold above the cap for most of the year, and the US granted a wartime waiver on Russian oil sanctions in the spring that outlasted the emergency it was meant for (The National).</p></div>
+    </div>
+    <div class="src">Sources: Kyiv School of Economics Russian Oil Tracker (May and June 2026); CREA monthly analyses (January–July 2026); US Treasury/OFAC (Rosneft-Lukoil designations, GL 46/47, teapot designations); Kpler (Kharg Island explainer); Al Jazeera (blockade revenue loss, Iranian storage); CNN Business and Benzinga (Chevron Venezuela); Times of Central Asia, Euronews and Bloomberg (CPC attacks); The National (US waiver).</div>
+  </div>
+</section>
+
+<section id="opec-sec">
+  <div class="kicker">OPEC+</div>
+  <h2>A cartel that can't deliver its own quota</h2>
+  <p class="lede">OPEC+ spent 2025 arguing about how fast to return 1.65 million barrels a day of voluntary cuts to an oversupplied market. It finished the job in September 2026 — into a market where its own core members physically cannot load the barrels they are now permitted to sell. Quota politics have been replaced by pipeline capacity.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">📜</span>The unwinding, completed</h4><p>Eight countries — Saudi Arabia, Russia, Iraq, the UAE, Kuwait, Kazakhstan, Algeria and Oman — resumed the rollback of their April 2023 cuts on 1 March 2026 with a 206,000 b/d step, added 188,000 b/d for August and a final ~188,000 b/d for September, closing out the 1.65 mb/d layer entirely. Group-wide 2026 quotas had already been frozen in November 2025, alongside a new mechanism to assess each member's real capacity.</p></div>
+      <div class="mini"><h4><span class="mi">🇸🇦</span>Saudi Arabia: 7.3 then 11</h4><p>The kingdom pumped just 7.34 mb/d in June against an implied target near 10.29 mb/d — a 2.95 mb/d gap dictated by what Petroline and Yanbu could ship. By August it reported "just over 11 mb/d", its highest since the April 2020 price war, as bypass logistics matured and Bab el-Mandeb flows rose to 8.1 mb/d. Aramco earned $33.4 billion in the second quarter, 33% more than a year earlier, on realised prices near $108.</p></div>
+      <div class="mini"><h4><span class="mi">📉</span>OPEC output: the trough and the climb</h4><p>EIA has OPEC crude production averaging 24.0 mb/d in 2026 against 29.3 mb/d in 2025, recovering to 29.7 in 2027. Bloomberg's survey put August OPEC output at 28.55 mb/d, up 400,000 b/d on July, as Saudi and Emirati barrels returned; Iraq, Kuwait, Iran and Qatar remained the missing pieces. Non-OPEC supply, meanwhile, is flat at 76.8 mb/d this year and jumps to 80.1 in 2027.</p></div>
+      <div class="mini"><h4><span class="mi">🇷🇺</span>Russia inside the tent</h4><p>Russia is a co-leader of OPEC+ and, for once, its most reliable supplier: seaborne crude exports hit a post-invasion record of 4.13 mb/d in late June even as drone strikes cut production. The alliance's other winners are the ones outside the Gulf — Kazakhstan until the CPC attacks, Algeria and Oman — and, outside OPEC+, the Americas: EIA sees 1.4 mb/d of growth from the US, Brazil, Guyana, Canada and Argentina in 2026.</p></div>
+    </div>
+    <div class="callout"><b>24.0 mb/d</b><span>EIA's estimate of OPEC crude production in 2026, down 5.3 mb/d from 2025 — the deepest one-year fall in the cartel's history, caused not by a decision in Vienna but by a closed strait (STEO, August 2026).</span></div>
+    <div class="src">Sources: OPEC press releases (30 November 2025; 1 March 2026; 5 July 2026; 2 August 2026); Bloomberg (Saudi output reports to OPEC; August survey); CNBC and Energy Connects (quota steps); EIA STEO August 2026; Aramco second-quarter 2026 results; IEA Oil Market Report August 2026.</div>
+  </div>
+</section>
+
+<section id="power-sec">
+  <div class="kicker">Power</div>
+  <h2>Oil as a weapon, again</h2>
+  <p class="lede">The 2026 crisis is the first time since 1973 that oil has been used as a weapon by all sides at once: Iran tolls the strait, the United States blockades Iran's ports, the Houthis blockade Saudi Arabia's Red Sea coast, Ukraine strikes Russian and Kazakh terminals, and importers reach for their strategic reserves. The map of who depends on whom is being redrawn in real time.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🚧</span>The toll booth</h4><p>Since mid-March the IRGC has routed ships out of the international lane into a corridor between Qeshm and Larak islands, charging $0.50–1 a barrel — about $2 million for a loaded VLCC, sometimes in yuan or crypto — under a five-tier nationality ranking; US- and Israel-linked vessels are refused outright. Iran's parliament wrote it into law as the "Strait of Hormuz Management Plan" on 30–31 March. The June MoU suspended the fees; their return is the core of the current dispute.</p></div>
+      <div class="mini"><h4><span class="mi">🛢</span>The stockpile weapon</h4><p>IEA members made 400 million barrels available on 11 March — more than double the 2022 release — and had put ~290 million on the market by mid-year, leaving about a billion barrels in government reserves. The US contributed 172 million barrels from its SPR (announced 13 March); Japan released 80 million, or 15 days of demand. EIA assumes no further US releases — the reserve is now the thinnest it has been since the 1980s.</p></div>
+      <div class="mini"><h4><span class="mi">🇨🇳</span>China turns inland</h4><p>China's seaborne imports transiting Hormuz fell from 51% of the total in 2025 to ~44% as it leaned on Russia (≈1.8 mb/d by sea, plus pipelines) and drew down commercial stocks; total crude imports dropped to 8.1 mb/d in the second quarter. Beijing's response is structural — more overland pipelines from Russia and Central Asia, more coal, faster electrification — and its sanctioned "teapot" refiners are the pressure point Washington has chosen to squeeze.</p></div>
+      <div class="mini"><h4><span class="mi">🇮🇳</span>India buys everything</h4><p>India's refiners, once Hormuz-dependent, took a record 2.8 mb/d of Russian crude in July — a third of imports — while a February US–India trade deal was billed by Washington as a promise to switch to American and Venezuelan barrels that New Delhi never confirmed. Its state refiners are also locking in one-year tenders for Iraqi and Omani grades delivered outside the strait.</p></div>
+      <div class="mini"><h4><span class="mi">🌍</span>Africa's Atlantic advantage</h4><p>Barrels that never see a chokepoint suddenly carry a security premium: Nigeria (1.51 mb/d), Angola (1.1 mb/d), Libya and Algeria ship straight into the Atlantic and Mediterranean. Nigeria's 650,000 b/d Dangote refinery is running flat out, made the country a net petrol exporter for the first time in March and sent its first gasoline cargo to Mozambique as East African buyers diversify away from the Gulf.</p></div>
+      <div class="mini"><h4><span class="mi">🇪🇺</span>Europe's exposed flank</h4><p>Europe's crude exposure was modest — most Hormuz oil went to Asia — but its diesel and LNG exposure was not: Jizan supplied 6–8% of EU and UK diesel imports before it was hit, Qatar was a top-three LNG supplier, and storage entered the summer 15 bcm below the five-year average. Slovenia rationed fuel from 23 March; refiners such as Repsol pushed jet-fuel yields 15–20% above normal to avoid an aviation shortage.</p></div>
+    </div>
+    <div class="src">Sources: Foreign Policy, Gulf Business and Kurdistan24 (Hormuz tolls); IEA collective-action notices and Energy Connects (stocks); Vortexa and China Briefing (China's imports); The Print, CFR and IndexBox (India); African Energy Week, CNBC Africa and OilPrice (Africa, Dangote); AGBI, Energy Aspects and Discovery Alert (Europe's distillate and gas exposure).</div>
+  </div>
+</section>
+
+<section id="invest-sec">
+  <div class="kicker">Capital flows</div>
+  <h2>Where the energy money is going</h2>
+  <p class="lede">Before the war, the IEA's investment tally showed upstream oil spending falling for a third straight year while gas investment climbed to a ten-year high of $330 billion. The crisis has not reversed that; it has sharpened it. Money is going to LNG, to Hormuz bypass pipelines, to the Americas and Africa, and to the majors' shareholders. Presented as observation, not investment advice.</p>
+  <div class="card">
+    <div class="mini-grid">
+      <div class="mini"><h4><span class="mi">🚢</span>The LNG wave</h4><p>About 300 bcm/yr of new liquefaction is due by 2030, 70% of it in the US and Qatar (IEA). In 2026 alone: Golden Pass Train 1 shipped its first cargo on 22 April with Train 2 due this half; Cheniere's Corpus Christi Stage 3 reached substantial completion on 28 August, lifting the site toward 56 Mt/yr; Plaquemines completes Phase 1 this quarter; Commonwealth LNG took a $12.5 billion FID on 13 June; LNG Canada is ramping to 1.84 Bcf/d. Port Arthur, Rio Grande and Golden Pass Train 3 follow in 2027.</p></div>
+      <div class="mini"><h4><span class="mi">🏗</span>The bypass boom</h4><p>The Gulf is spending its way out of Hormuz: Abu Dhabi's West-East pipeline is 50% built and fast-tracked for early 2027, Iraq is funding a tripling of Kirkuk–Ceyhan throughput to 770,000 b/d, and Kpler tracks new bypass lines that could be online within one to two years. Trans Mountain, meanwhile, is running full for the first time and has launched an open season for 90,000 b/d more by 2027 and 210,000 by 2028.</p></div>
+      <div class="mini"><h4><span class="mi">🌎</span>The Americas' decade</h4><p>Brazil hit a record 4.24 mb/d of oil in March 2026 (5.53 mboe/d with gas) on Santos pre-salt; Guyana produces ~870 kb/d with a fifth FPSO due this quarter and 1.7 mb/d of capacity planned; Argentina's Vaca Muerta lifted a record 882 kb/d in April and crude is now the country's top export; Venezuela reopens with Chevron's $7 billion plan. EIA credits the Americas with all 1.4 mb/d of 2026 non-Gulf supply growth.</p></div>
+      <div class="mini"><h4><span class="mi">💰</span>The windfall quarter</h4><p>Second-quarter 2026 results read like 2022: ExxonMobil $14.5 billion, Chevron $12.1 billion (refining up 500%), Shell $9.8 billion adjusted (its best in four years, with ~20% of production disrupted), TotalEnergies $6.0 billion, BP $5.7 billion underlying, Equinor $4.8 billion net (+267%) — roughly $47 billion for the five Western majors, and $33.4 billion for Aramco alone.</p></div>
+      <div class="mini"><h4><span class="mi">🤝</span>Deals</h4><p>Shell closed its $16.5 billion purchase of ARC Resources, doubling down on Canadian gas and LNG Canada; speculation about a bid for BP — by Shell, ADNOC's XRG, Chevron or ExxonMobil — has hung over London since 2025; XRG bought into three Vaca Muerta blocks tied to Argentina LNG; Chevron and Shell are signing the first big Venezuelan production deals since Maduro's capture. Energy Transfer suspended Lake Charles LNG in December 2025 — a reminder that not every train gets built.</p></div>
+      <div class="mini"><h4><span class="mi">⚠️</span>The risks</h4><p>Every one is a headline: a Hormuz settlement that returns 5–8 mb/d within months (EIA sees Brent at $69 in 2027 and most shut-ins restored by early 2027); demand that fell 1.6 mb/d and may not fully return; Houthi and Ukrainian drones that make "static, high-value" pipelines and terminals the next target; a price cap and sanctions regime that bends under $100 oil; and an LNG glut that arrives in 2028 anyway, Ras Laffan or not.</p></div>
+    </div>
+    <div class="note">This section describes where capital is flowing, based on public data. It is not financial advice.</div>
+    <div class="src">Sources: IEA World Energy Investment 2026; EIA Today in Energy (Golden Pass, Plaquemines, US LNG capacity); Cheniere, Venture Global, Commonwealth LNG, Golden Pass and QatarEnergy disclosures; Kpler and CNBC (bypass pipelines); Trans Mountain; ANP/Agência Brasil, ExxonMobil Guyana, Argentine energy secretariat via OilPrice and Buenos Aires Times; company second-quarter 2026 results; OilPrice and CSP Daily News (Shell–ARC, BP speculation); Energy Transfer.</div>
+  </div>
+</section>
+
+<section id="companies-sec">
+  <div class="kicker">Company tracker</div>
+  <h2>The companies that move oil and gas</h2>
+  <p class="lede">State producers that own the reserves, the majors and independents that develop them, the LNG and pipeline operators that move them, and the traders and refiners that turn a cargo into a margin. One company kept 7 million barrels a day flowing through a single pipeline; another lost a fifth of its output and posted its best quarter in four years. Filter by segment or search.</p>
+  <div class="map-controls" id="coFilters">
+    <button class="chip c-mine on" data-seg="noc">🏛 State producers</button>
+    <button class="chip c-proc on" data-seg="ioc">🛢 Majors &amp; independents</button>
+    <button class="chip c-dev on" data-seg="mid">🚢 LNG &amp; midstream</button>
+    <button class="chip c-dis on" data-seg="trd">⚖ Traders &amp; refiners</button>
+  </div>
+  <div class="co-search">
+    <input id="coSearch" type="search" placeholder="Search company, asset, country…" aria-label="Search companies">
+    <span class="co-count" id="coCount"></span>
+  </div>
+  <div class="co-wrap">
+    <table class="co">
+      <thead><tr><th>Company</th><th>Segment</th><th>Key assets</th><th>Status &amp; recent signals</th></tr></thead>
+      <tbody id="coBody"></tbody>
+    </table>
+  </div>
+  <div class="note">Company status reflects public disclosures as of early September 2026. This is an observational tracker, not investment advice.</div>
+  <div class="src">Sources: company disclosures &amp; filings (second-quarter and half-year 2026 results); EIA; IEA; OPEC; CREA; KSE Institute; Kpler; trade press (Reuters, Bloomberg, CNBC, Argus, S&amp;P Global, Energy Intelligence, Natural Gas Intelligence, OilPrice, Al Jazeera).</div>
+</section>
+
+<section id="sources-sec">
+  <div class="kicker">Data &amp; methodology</div>
+  <h2>Open data sources</h2>
+  <ul class="sources">
+    <li><b><a href="https://www.eia.gov/outlooks/steo/">EIA Short-Term Energy Outlook</a></b> — monthly forecasts of world liquids supply and demand, Brent and Henry Hub prices, US production and LNG exports; the August 2026 edition's Table 1 of Hormuz-related shut-ins by country is the basis of the shut-in ledger above. Also <a href="https://www.eia.gov/international/analysis/special-topics/World_Oil_Transit_Chokepoints">World Oil Transit Chokepoints</a> (updated 3 March 2026) and <a href="https://www.eia.gov/international/data/world">International Energy Statistics</a> for production by country.</li>
+    <li><b><a href="https://www.iea.org/reports/oil-market-report-august-2026">IEA Oil Market Report</a></b> — demand, supply, refining and inventory balances; the August 2026 report's 2026 demand contraction (−1.6 mb/d) and Gulf shut-in estimates (8.3 mb/d in July). Also the IEA's <a href="https://www.iea.org/about/oil-security-and-emergency-response">oil security and emergency response</a> pages (collective action of 11 March 2026), Gas Market Reports and <a href="https://www.iea.org/reports/world-energy-investment-2026">World Energy Investment 2026</a>.</li>
+    <li><b><a href="https://publications.opec.org/asb">OPEC Annual Statistical Bulletin 2026</a></b> — proved reserves by country (end-2025), production and exports; OPEC <a href="https://www.opec.org/">press releases</a> for the 2026 quota decisions and the Monthly Oil Market Report.</li>
+    <li><b><a href="https://www.energyinst.org/statistical-review">Energy Institute Statistical Review of World Energy 2026</a></b> — 2025 oil consumption (103 mb/d, +1.3%), gas production and consumption by country, LNG trade; the last edition with proved gas reserves by country is the 2021 review (end-2020 data), used for the gas-reserves note.</li>
+    <li><b><a href="https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/">British Geological Survey — World Mineral Statistics</a></b> — long-run crude petroleum, natural gas and coal production series by country (1970–2024), also behind this site's <a href="/explorer/">data explorer</a>.</li>
+    <li><b>Tanker tracking &amp; sanctions analysis</b> — <a href="https://www.kpler.com/">Kpler</a> and <a href="https://www.vortexa.com/">Vortexa</a> (Hormuz transits, Gulf exports, Fujairah and Yanbu loadings, China's import mix); <a href="https://energyandcleanair.org/">CREA</a> monthly analyses of Russian fossil-fuel exports (revenues, buyers, shadow-fleet share, Urals price); <a href="https://kse.ua/">KSE Institute</a> Russian Oil Tracker; <a href="https://www.gibsons.co.uk/">Gibson Shipbrokers</a> (port-call data via Al Jazeera).</li>
+    <li><b>Prices</b> — EIA (Brent and WTI spot, Henry Hub); ICE and CME (futures); S&amp;P Global Platts via Bloomberg (Dated Brent record, 7 April 2026); Platts JKM and ICE TTF via Global LNG Hub, LNG Insights and Trading Economics; RBN Energy, Argus and AGBI (diesel and jet crack spreads).</li>
+    <li><b>Policy &amp; sanctions</b> — US Treasury <a href="https://ofac.treasury.gov/">OFAC</a> (Rosneft/Lukoil designations, Venezuela General Licenses 46 and 47, Chinese refinery designations); EU Council (Russian gas phase-out regulation, price-cap mechanism); IEA collective-action decisions; <a href="https://commonslibrary.parliament.uk/">House of Commons Library</a> briefings on the US–Iran ceasefire and the capture of Maduro; Congressional Research Service (Strait of Hormuz).</li>
+    <li><b>Companies &amp; projects</b> — Aramco, ADNOC, QatarEnergy, ExxonMobil, Chevron, Shell, BP, TotalEnergies, Equinor, Petrobras, Cheniere, Venture Global, Golden Pass, Commonwealth LNG, Woodside, Trans Mountain and Dangote disclosures; EIA Today in Energy (US LNG terminals); Natural Gas Intelligence, RBN Energy and LNG Industry (project status).</li>
+    <li><b>Notes</b> — field, terminal and chokepoint coordinates are approximate; circle sizes indicate relative scale, not measured throughput. Oil volumes are barrels per day (mb/d = million, kb/d = thousand) and mix crude-only and total-liquids bases as labelled; gas volumes are billion cubic metres (bcm) or billion cubic feet per day (Bcf/d; 1 Bcf/d ≈ 7.5 Mt/yr of LNG). Shut-in figures are EIA estimates and are revised monthly. Events of the 2026 Iran war are cited to the outlets that reported them and may be revised as official accounts emerge. Last data refresh: 3 September 2026. Header photo: to be credited on publication.</li>
+  </ul>
+</section>
+
+<section id="faq-sec">
+  <div class="kicker">FAQ</div>
+  <h2>Common questions</h2>
+  <div class="faq">
+    <details>
+      <summary>Why does the Strait of Hormuz matter so much for oil and gas?</summary>
+      <p>Because roughly one in five barrels the world burns passed through it. In the first half of 2025 about 20.9 million barrels a day of crude and products transited the strait (EIA) — around 15 mb/d of crude and condensate plus 5.5 mb/d of refined products — along with about a fifth of the world's LNG, almost all of it from Qatar, and nearly 30% of seaborne LPG. Some 84% of that oil went to Asia. When Iran shut the strait to normal commercial traffic on 2 March 2026, transits fell from about 100 ships a day to a handful, EIA estimates flows dropped to 4.9 mb/d in the second quarter, and the IEA called it the largest supply disruption in the history of the oil market.</p>
+    </details>
+    <details>
+      <summary>Which country produces the most oil?</summary>
+      <p>The United States, by a wide margin: about 13.6 million barrels a day of crude oil and condensate in 2025 — a record for any country — with EIA forecasting 13.8 mb/d in 2026 and 14.2 mb/d in 2027. Russia (about 9.9 mb/d) and Saudi Arabia (about 9.5 mb/d) follow; together the top three pump nearly 40% of the world's crude and the top five about half. In 2026 the ranking is being scrambled by the Hormuz closure: Saudi output fell to 7.3 mb/d in June against a quota near 10.3 mb/d, then rebounded to about 11 mb/d in August as the East-West pipeline ran at a record 7 mb/d, while Kuwait exported no crude at all in April.</p>
+    </details>
+    <details>
+      <summary>Who holds the world's oil and gas reserves?</summary>
+      <p>Proved crude reserves are concentrated in a handful of states: OPEC's 2026 Annual Statistical Bulletin puts Venezuela first at about 304 billion barrels, Saudi Arabia at 267 billion and Iran at 209 billion, followed by Canada (about 163 billion including oil sands), Iraq, the UAE, Kuwait and Russia. The world total is roughly 1.6–1.7 trillion barrels — about 47 years of consumption at 2025 rates. Gas is even more concentrated: Russia, Iran and Qatar hold about half of the world's proved reserves, and the Iran–Qatar field they share (South Pars/North Dome) is the largest gas reservoir on Earth — which is why the March 2026 strikes on both sides of it shook the LNG market.</p>
+    </details>
+    <details>
+      <summary>What happened to oil prices in 2026?</summary>
+      <p>They went vertical. Brent opened the year near $61, touched $116 on 9 March within a week of the Hormuz closure and settled above $118 at the end of March. On 7 April physical Dated Brent was assessed at $144.42 a barrel — the highest since the benchmark began in 1987, a whisker below the 2008 futures record. The June truce sent Brent down to $69 on 2 July; renewed tanker attacks and the Houthi blockade of Saudi Arabia pushed it back to $105 on 23 July; by 2 September it traded near $89.5, about 24% above pre-war. EIA's August outlook expects Brent to average $87 in 2026 and fall to $69 in 2027 as shut-in Gulf production returns — with about 0.6 mb/d still disrupted through the end of 2027.</p>
+    </details>
+    <details>
+      <summary>Where does the world's LNG come from, and why is it so tight in 2026?</summary>
+      <p>Three exporters — the United States, Qatar and Australia — supplied 63% of a record 437 million tonnes of LNG traded in 2025, and the US alone shipped 111 million tonnes, the first country ever above 100. Qatar was about a fifth of world supply and every one of its cargoes sails through Hormuz. Iranian missiles hit Ras Laffan on 18–19 March 2026, knocking out about 17% of Qatar's export capacity (12.8 million tonnes a year) for an estimated three to five years, and QatarEnergy has declared force majeure on contracts running into November 2026. The result: Asian spot LNG hit $23.39 per MMBtu on 28 August, a four-year high, European TTF gas climbed back above €70/MWh, EU storage sat 15 bcm below the five-year average in late June, and Pakistan, Bangladesh and India saw cargoes cancelled — while Henry Hub in the US stayed below $3.</p>
+    </details>
+    <details>
+      <summary>Can pipelines bypass the Strait of Hormuz?</summary>
+      <p>Partly. Saudi Arabia's East-West Petroline can carry 7 million barrels a day from the Gulf fields to Yanbu on the Red Sea, and Aramco ran it at that all-time record in 2026 — Yanbu crude exports hit about 5 mb/d in March. The UAE's ADCOP line moves up to 1.5 mb/d to Fujairah on the Gulf of Oman, and Iraq's Kirkuk–Ceyhan line to Türkiye has a nominal 1.6 mb/d but carried only 200,000–250,000 b/d, with plans to reach 770,000. That is roughly 9 mb/d of bypass against 20 mb/d of normal Hormuz flow — and the Red Sea route itself became a target when the Houthis declared a naval blockade on Saudi Arabia on 20 July 2026 and struck the Jizan refinery. Kuwait, Qatar, Bahrain and Iran have no bypass at all. Abu Dhabi is fast-tracking a new West-East pipeline for early 2027.</p>
+    </details>
+    <details>
+      <summary>Is Russia winning or losing from the 2026 oil shock?</summary>
+      <p>Both. Higher prices and Asian refiners scrambling for non-Gulf barrels lifted Russian fossil-fuel export revenue to about €683 million a day in July 2026 (CREA); Urals crude briefly sold at a $7–8 premium to Brent in April–May, seaborne crude exports hit a post-invasion record of 4.13 mb/d in June, and India bought a record 2.8 mb/d of Russian crude in July. But the discount had reopened to about $21 a barrel by July, the G7 price cap sits at $44.10, Rosneft and Lukoil have been under direct US sanctions since October 2025, about 53% of seaborne crude moves on sanctioned shadow tankers, and Ukrainian drone strikes have cut Russian output for months and idled the Tuapse and CPC terminals for weeks at a time.</p>
+    </details>
+    <details>
+      <summary>Need a deep-dive report on oil and gas?</summary>
+      <p>That's exactly what we do. We produce commissioned deep-dive reports for energy companies, traders, insurers, geopolitics researchers and think tanks, covering angles such as chokepoint and flow analysis, Gulf shut-in and bypass scenarios, sanctions and shadow-fleet tracking, LNG contract and capacity mapping, country and basin deep-dives and the exposure of specific companies or importing economies. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email <a href="mailto:hello@mineral.watch">hello@mineral.watch</a> with a short note on what you need and we'll come back with a scoped proposal.</p>
+    </details>
+  </div>
+</section>
+
+<section id="research-sec">
+  <div class="research-box">
+    <div>
+      <div class="kicker">Custom research</div>
+      <h2>Need an ad hoc data-driven energy report?</h2>
+      <p style="color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:18px">We produce bespoke, source-cited research for energy companies, traders, insurers, geopolitics researchers and think tanks — chokepoint and flow analysis, shut-in and bypass scenarios, sanctions and shadow-fleet tracking, LNG contract and capacity mapping, country and basin deep-dives — built on the same open data behind this dashboard and our strategic-minerals work.</p>
+      <a class="research-cta" href="mailto:hello@mineral.watch">Reach out at hello@mineral.watch</a>
+    </div>
+    <div class="research-art net-art" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="orbit o2" cx="150" cy="150" r="126"/>
+        <circle cx="150" cy="150" r="116" fill="none" stroke="var(--accent)" stroke-width=".6" opacity=".55"/>
+        <path class="web d3" pathLength="1" d="M150 34 L119 104"/>
+        <path class="web d3" pathLength="1" d="M150 34 L181 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L119 104"/>
+        <path class="web d4" pathLength="1" d="M58 62 L82 140"/>
+        <path class="web d4" pathLength="1" d="M242 56 L181 104"/>
+        <path class="web d5" pathLength="1" d="M242 56 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L218 140"/>
+        <path class="web d5" pathLength="1" d="M258 196 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L150 218"/>
+        <path class="web d6" pathLength="1" d="M68 240 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M119 104 H181"/>
+        <path class="edge d1" pathLength="1" d="M119 104 L82 140"/>
+        <path class="edge d1" pathLength="1" d="M181 104 L218 140"/>
+        <path class="edge d2" pathLength="1" d="M82 140 H218"/>
+        <path class="edge d2" pathLength="1" d="M82 140 L150 218"/>
+        <path class="edge d2" pathLength="1" d="M218 140 L150 218"/>
+        <path class="edge d3" pathLength="1" d="M119 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M181 104 L150 140"/>
+        <path class="edge d3" pathLength="1" d="M150 140 V218"/>
+        <circle class="node" cx="119" cy="104" r="3"/>
+        <circle class="node" cx="181" cy="104" r="3"/>
+        <circle class="node" cx="82" cy="140" r="3"/>
+        <circle class="node" cx="218" cy="140" r="3"/>
+        <circle class="node" cx="150" cy="218" r="3"/>
+        <circle class="sat" cx="150" cy="34" r="2.2"/>
+        <circle class="sat b2" cx="58" cy="62" r="2.2"/>
+        <circle class="sat b3" cx="242" cy="56" r="2.2"/>
+        <circle class="sat b2" cx="258" cy="196" r="2.2"/>
+        <circle class="sat b3" cx="68" cy="240" r="2.2"/>
+        <circle cx="150" cy="140" r="5" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6">
+          <animate attributeName="r" values="5;16" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".6;0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="150" cy="140" r="4.2" fill="var(--accent)"/>
+        <circle r="1.6" fill="var(--accent2)">
+          <animateMotion path="M58 62 L119 104 L150 140" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.6" fill="var(--accent)">
+          <animateMotion path="M258 196 L218 140 L150 140" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="subscribe-sec">
+  <div class="kicker">Stay updated</div>
+  <h2>Get notified when the oil and gas data refreshes</h2>
+  <div class="sub-row">
+    <div class="sub-box">
+      <p>mineral.watch is an independent data hub, and it grows with the people who use it. Introduce yourself and we'll let you know when the oil and gas figures on this dashboard are updated and when new dashboards, datasets and research go live — no noise, just what's new.</p>
+      <p>Telling us your sector and organisation helps too: it shows us who relies on this data — energy companies, traders, analysts, policymakers, journalists, researchers — and shapes what we build next, from new datasets to custom research.</p>
+      <p>Prefer to talk directly? Corrections, data tips and collaboration ideas are always welcome at <a href="mailto:hello@mineral.watch">hello@mineral.watch</a>.</p>
+    </div>
+    <div class="sub-form">
+      <form action="https://formspree.io/f/mljeedkq" method="POST">
+        <input type="hidden" name="_subject" value="New mineral.watch subscriber (oil-gas dashboard)">
+        <input type="hidden" name="source" value="oil-gas-dashboard">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-grid">
+          <input type="text" name="first_name" placeholder="First name *" aria-label="First name" autocomplete="given-name" required>
+          <input type="text" name="last_name" placeholder="Last name *" aria-label="Last name" autocomplete="family-name" required>
+          <input type="email" name="email" class="full" placeholder="Email *" aria-label="Email" autocomplete="email" required>
+          <input type="text" name="organisation" class="full" placeholder="Organisation" aria-label="Organisation" autocomplete="organization">
+          <select name="sector" class="full" aria-label="Sector">
+            <option value="" selected>Sector</option>
+            <option>Energy &amp; utilities</option>
+            <option>Shipping, trading &amp; insurance</option>
+            <option>Government &amp; policy</option>
+            <option>Think tank / policy research</option>
+            <option>Mining &amp; industry</option>
+            <option>Finance &amp; investment</option>
+            <option>Research &amp; academia</option>
+            <option>Media &amp; journalism</option>
+            <option>NGO / civil society</option>
+            <option>Other</option>
+          </select>
+          <input type="text" name="linkedin" placeholder="LinkedIn" aria-label="LinkedIn profile">
+          <input type="tel" name="whatsapp" placeholder="WhatsApp (+code)" aria-label="WhatsApp number">
+        </div>
+        <button type="submit">Subscribe for updates</button>
+        <p class="form-note">We'll only use your details to send you mineral.watch updates. No spam, unsubscribe anytime.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="/">mineral.watch</a> · open intelligence on strategic minerals &amp; rare earths · sources: USGS, BGS, UN Comtrade, IEA
+  <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/terms/">Terms &amp; licensing</a></span>
+</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+/* ============ DATA (curated from EIA STEO Aug 2026, IEA OMR Aug 2026, OPEC ASB 2026, EI Statistical Review 2026, BGS, CREA, Kpler, company disclosures) ============ */
+const DATA = {
+  production2025: [ // crude oil + lease condensate, mb/d (EIA, Jan–Nov 2025 annualised)
+    ["United States",13.58],["Russia",9.87],["Saudi Arabia",9.51],["Canada",4.94],["Iraq",4.39],
+    ["China",4.34],["Iran",4.19],["UAE",3.82],["Brazil",3.74],["Kuwait",2.58]
+  ],
+  reserves: [ // billion barrels, end-2025 (OPEC ASB 2026; Canada incl. oil sands per CER)
+    ["Venezuela",303.7],["Saudi Arabia",267.2],["Iran",208.6],["Canada",163],["Iraq",145],
+    ["UAE",113],["Kuwait",101.5],["Russia",80],["United States",55],["Libya",48.4],["Nigeria",37],["Kazakhstan",30],["Other",173]
+  ],
+  shutins: { // kb/d (EIA STEO Aug 2026, Table 1)
+    countries:["Saudi Arabia","Iraq","UAE","Iran","Kuwait","Qatar","Bahrain"],
+    feb:[10500,4400,3600,3390,2560,557,193],
+    jul:[2070,1860,0,100,950,350,130]
+  },
+  trend: { // BGS world crude petroleum production, Mt; EIA Brent annual average $/bbl
+    years:[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    prod:[3590.0,3563.0,3554.7,3674.3,3837.0,3886.6,3915.4,3909.7,3944.5,3850.9,3928.9,3995.6,4097.5,4123.2,4204.6,4334.1,4349.4,4362.9,4471.9,4463.1,4164.4,4202.6,4385.7,4467.4,4461.3,null],
+    price:[28.5,24.4,25.0,28.8,38.3,54.5,65.1,72.4,96.9,61.7,79.6,111.3,111.6,108.6,99.0,52.3,43.6,54.1,71.3,64.3,42.0,70.9,100.9,82.5,80.5,69]
+  },
+  gasProd: [ // bcm, 2025 or latest (EI 2026 / OPEC ASB 2026; Russia & China rounded estimates)
+    ["United States",1116],["Russia",630],["Iran",280],["China",260],["Canada",194],["Qatar",180],
+    ["Australia",150],["Saudi Arabia",122],["Norway",113],["Algeria",95]
+  ],
+  lngExp: [ // Bcf/d, 2025 (EIA; non-top-3 approximate)
+    ["United States",15.1],["Qatar",10.6],["Australia",9.8],["Russia",4.4],["Malaysia",3.6],
+    ["Nigeria",2.4],["Indonesia",2.0],["Algeria",1.7],["Oman",1.5],["Other",5.2]
+  ],
+  lngImp: [ // million tonnes, 2025 (Kpler basis, approx.)
+    ["Europe",126],["China",70],["Japan",67],["South Korea",49],["India",25],["Taiwan",22],["Rest of world",78]
+  ],
+  chokepoints: [ // mb/d of crude + products, 1H25 (EIA, updated 3 Mar 2026)
+    ["Strait of Malacca",23.2],["Strait of Hormuz",20.9],["Cape of Good Hope",9.1],["Suez Canal + SUMED",4.9],
+    ["Danish Straits",4.9],["Bab el-Mandeb",4.2],["Turkish Straits",3.7],["Panama Canal",2.3]
+  ],
+  rusBuyers: [["China",7.7],["India",6.4],["Türkiye",1.8],["EU",1.5],["Others",3.8]], // € bn, July 2026 (CREA)
+  brent: { years:["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026F"],
+    v:[52.3,43.6,54.1,71.3,64.3,42.0,70.9,100.9,82.5,80.5,69,87] },
+  journey:[
+    {ico:"🛢",t:"1 · The reservoir",p:"Half the world's crude comes from five countries and a few dozen giant fields: Ghawar and Safaniya in Saudi Arabia, Burgan in Kuwait, Rumaila and West Qurna in Iraq, the Permian's stacked shale in Texas, the pre-salt off Brazil. Gas is even more concentrated — Russia, Iran and Qatar hold about half of proved reserves, and one shared reservoir under the Gulf is the largest on Earth.",f:"US crude output hit a record 13.6 mb/d in 2025 (EIA)"},
+    {ico:"🧪",t:"2 · Gathering & processing",p:"Wellhead oil is stabilised and stripped of gas and water; associated gas is either reinjected, flared or fed into processing plants that remove liquids and sulphur. Whether that gas becomes a pipeline export or an LNG cargo is decided here — and so is whether a country can bypass a strait: crude can be piped across a peninsula, LNG plants cannot move.",f:"Ras Laffan lost ~17% of its capacity (12.8 Mt/yr) on 18–19 March 2026"},
+    {ico:"⚓",t:"3 · Pipelines, tankers & straits",p:"About 80 mb/d of oil moves by sea, most of it through eight chokepoints. Hormuz carried 20.9 mb/d in early 2025 and 4.9 in the second quarter of 2026; Saudi Arabia's East-West line and the UAE's ADCOP moved ~8.5 mb/d around it; Kuwait, Qatar, Bahrain and Iran had nowhere to go. A VLCC now pays Iran up to $2 million to use the Larak corridor — if its flag is on the right list.",f:"Hormuz transits fell from ~100 ships a day to about 5 (Al Jazeera / Kpler)"},
+    {ico:"🏭",t:"4 · Refining & liquefaction",p:"Crude is worthless until a refinery turns it into diesel, jet, gasoline and naphtha; the Gulf's export refineries — Ras Tanura, Jizan, Ruwais, Mina al-Ahmadi — were the world's swing supplier of middle distillates, which is why the shortage of 2026 showed up in diesel cracks, not crude. On the gas side, liquefaction trains in Qatar, the US Gulf Coast and Australia decide who gets LNG.",f:"US Gulf Coast diesel crack: a record $102/bbl on 17 August 2026"},
+    {ico:"📈",t:"5 · Trading & benchmarks",p:"Physical cargoes are priced off Brent, WTI and Dubai; refined products off their cracks; gas off Henry Hub, TTF and JKM. In a crisis the benchmarks disconnect: Dated Brent set an all-time record of $144.42 on 7 April while futures topped out near $121, Urals swung from a $7 premium to a $21 discount, and the same LNG molecule cost eight times more in Tokyo than in Louisiana.",f:"Brent: $61 in January → $144 physical in April → $69 in July → ~$89 in September"},
+    {ico:"⚡",t:"6 · End use & the reserve",p:"Transport burns ~60% of oil; power, heat and industry burn most gas. When supply stops, governments reach for the last stage — emergency stocks: IEA members released 400 million barrels from 11 March, the US 172 million from its SPR, Japan 80 million. Demand adjusted the hard way: rationing in Slovenia and South Asia, an airline bankruptcy, and the IEA's first non-pandemic demand decline since 2009.",f:"World oil demand −1.6 mb/d in 2026; +2.4 mb/d rebound expected in 2027 (IEA)"}
+  ],
+  forms:[
+    {s:"Brent",n:"Dated Brent",g:"C",use:"The world's reference barrel",
+     d:"Brent is the price of light, sweet North Sea crude — and, by extension, of two-thirds of the world's internationally traded oil, which is priced at a differential to it. Futures on ICE set the headlines; the physical Dated Brent assessment sets what cargoes actually cost. In 2026 the two split: futures peaked near $121 while Dated Brent hit an all-time record of $144.42 on 7 April as Atlantic Basin barrels were bid up to replace Gulf crude.",pr:"2 Sep 2026: ~$89.5/bbl · 2025 average $69 · EIA 2026 forecast $87"},
+    {s:"WTI",n:"West Texas Intermediate",g:"C",use:"America's barrel — and its export",
+     d:"Priced at Cushing, Oklahoma, WTI is the benchmark for US shale crude and the world's most-traded oil futures contract. It went negative in April 2020; in 2026 it became the world's spare barrel: US crude exports hit a record 6.4 mb/d in late April and total petroleum exports 13.6 mb/d, draining US inventories below their five-year low even as production ran at ~13.8 mb/d.",pr:"US crude exports: record 6.4 mb/d (late April 2026); net imports below 1 mb/d"},
+    {s:"Dubai",n:"Dubai / Oman",g:"C",use:"The Asian sour benchmark",
+     d:"Medium-sour Gulf crude priced off Dubai and Oman assessments is what Asian refiners actually buy — and Saudi, Iraqi and Kuwaiti official selling prices are set against it. With Gulf loadings collapsing, Dubai's premium to Brent and Oman's futures on the DME became the clearest signal of how desperate Asia was for barrels; Iraq's and Kuwait's exports fell to near zero in April.",pr:"Gulf crude exports: ~17 mb/d in 2025 → ~9 mb/d in August 2026 (Kpler)"},
+    {s:"Urals",n:"Urals",g:"X",use:"The capped barrel",
+     d:"Russia's flagship export blend, priced FOB Primorsk and Novorossiysk, has lived under a G7 price cap since December 2022 — $60, then a dynamic formula that froze at $44.10 in February 2026. The cap is policed through Western tankers and insurers; 53% of Russian crude now moves on sanctioned shadow vessels instead. In April–May 2026 Urals briefly sold at a premium to Brent as Asian refiners scrambled; by July the discount was back to 26%.",pr:"Jul 2026: $60.22/bbl, $21 below Brent · cap $44.10 · China and India the main buyers"},
+    {s:"WCS",n:"Western Canadian Select",g:"C",use:"Heavy oil, finally with an exit",
+     d:"Canada's heavy sour benchmark trades at a deep discount to WTI because it needs complex refineries and, until 2024, had almost no route to the coast. The Trans Mountain expansion changed that: the line is running full for the first time in 2026, an open season is adding 90,000 b/d by 2027 and 210,000 by 2028, and Ottawa is studying a $35–44 billion new line. Heavy barrels are exactly what Asian refiners lost when Gulf medium-sours stopped.",pr:"Trans Mountain: 890 kb/d system at full capacity (June 2026)"},
+    {s:"OSP",n:"Official selling prices",g:"C",use:"How the Gulf prices its crude",
+     d:"Aramco, ADNOC, KPC and Iraq's SOMO do not sell at the screen price: each month they publish official selling prices as differentials to Dubai/Oman (Asia), Brent-linked (Europe) and ASCI (US). In 2026 the OSP system met its limit — Aramco could set any price it liked for barrels it could not load. Its Q2 realised price was about $108, up more than 60% year on year, on volumes held to a 7 mb/d export ceiling by pipeline capacity.",pr:"Aramco Q2 2026: ~$108/bbl realised; net income $33.4bn (+33%)"},
+    {s:"ULSD",n:"Diesel & gasoil",g:"P",use:"Where the shortage lived",
+     d:"Diesel moves trucks, ships, trains, farms and mines, and the Gulf's export refineries were the world's swing supplier of it. Their loss — plus Houthi strikes on Jizan and a Russian export ban in July — sent the US Gulf Coast diesel crack to a record $102 a barrel and Europe's gasoil crack near $95. Chevron's refining profit rose 500%; Thailand's diesel price nearly doubled; Ethiopia halved its daily diesel supply.",pr:"USGC ULSD crack: $102/bbl record (17 Aug 2026) · Goldman 2027 forecast $63"},
+    {s:"Jet",n:"Jet fuel",g:"P",use:"Aviation's exposed margin",
+     d:"Jet fuel and kerosene share the middle-distillate cut with diesel, so they were squeezed together: North American jet prices rose ~95% from the start of the war, Spirit Airlines ceased operations on 2 May, Air New Zealand cancelled 1,100 Pacific flights, Korean Air entered emergency mode. Europe avoided a physical shortage only because refiners such as Repsol pushed jet yields 15–20% above normal.",pr:"Jet and distillate crack spreads more than doubled year on year in 2Q26 (EIA)"},
+    {s:"RBOB",n:"Gasoline",g:"P",use:"The political product",
+     d:"Gasoline is the price consumers see. US pump prices rose $1.16 a gallon from the start of the war and topped $6 in seven California counties by 30 March; EIA now expects a 2026 US retail average of $3.78 against $3.10 in 2025. The politics run through the reserve: 172 million barrels of SPR crude were released partly to keep refiners running flat out, and US refinery inputs through July were the highest since 2019.",pr:"EIA 2026 US retail gasoline forecast: $3.78/gal (2025: $3.10)"},
+    {s:"LPG",n:"LPG & naphtha",g:"P",use:"Petrochemicals' feedstock",
+     d:"Propane, butane and naphtha feed the world's crackers and Asia's cooking stoves. The Gulf supplied nearly 30% of seaborne LPG through Hormuz; Saudi propane and butane exports halted for weeks after the Ras Tanura fire, and the US — already the world's largest LPG exporter — filled the gap from the Gulf Coast. Fertiliser and plastics prices followed, with food-price effects still working through.",pr:"~29% of seaborne LPG transited Hormuz before the war (Al Jazeera / Kpler)"},
+    {s:"HH",n:"Henry Hub",g:"G",use:"America's cheap gas",
+     d:"The US gas benchmark, priced at a Louisiana pipeline hub, is the odd one out in 2026: with 111 Bcf/d of production and storage heading for a record 3,985 Bcf, EIA expects it to average just $2.87/MMBtu in the third quarter and $3.44 for the year. The only link to the global crisis is through export terminals — every train that can run is running, and a Freeport LNG maintenance outage actually pushed Henry Hub down.",pr:"3Q26 forecast $2.87/MMBtu · 2026 $3.44 · 2027 $3.31 (EIA)"},
+    {s:"TTF",n:"Dutch TTF",g:"G",use:"Europe's gas price",
+     d:"The Title Transfer Facility is the benchmark for European gas and, increasingly, for the global LNG market Europe buys from. It nearly doubled to over €60/MWh in mid-March, retreated after the April ceasefire, breached €50 again in June and traded above €70/MWh by late summer — its highest since January 2023 — as EU storage sat 15 bcm below the five-year average and Europe outbid Asia for cargoes.",pr:"Recent high ~€74/MWh · storage 46% full on 23 June (15 bcm below 5-yr average)"},
+    {s:"JKM",n:"JKM (Asian spot LNG)",g:"G",use:"The price of a cargo in Asia",
+     d:"The Japan-Korea Marker is what a spot LNG cargo delivered to Northeast Asia costs. It jumped more than 140% in the days after the Ras Laffan strikes and hit $23.39/MMBtu on 28 August 2026, a four-year high, as Qatar's force majeure cancellations reached into November. The pain is not evenly shared: Japan's long-term portfolio insulates it; Pakistan, Bangladesh and India buy at the margin and lost cargoes first.",pr:"$23.39/MMBtu on 28 Aug 2026 — four-year high (Platts)"},
+    {s:"Toll",n:"The Hormuz toll",g:"X",use:"A price set by the IRGC",
+     d:"Since mid-March 2026 Iran has charged ships to transit its side of the strait: roughly $0.50–1 per barrel of crude, about $2 million for a loaded VLCC, payable through an IRGC-linked intermediary in exchange for a VHF passcode and an escort around Larak Island. Rates follow a five-tier nationality ranking; US- and Israel-linked vessels are refused. Parliament codified the regime on 30–31 March; the June MoU suspended it; its return is the crux of the current stalemate.",pr:"Up to ~$2m per VLCC · codified in the Strait of Hormuz Management Plan (30–31 Mar 2026)"},
+    {s:"SPR",n:"Strategic stocks",g:"X",use:"The government's barrel",
+     d:"Emergency reserves are the last price-setting tool governments own. On 11 March 2026 the IEA's 32 members agreed to release 400 million barrels — more than double the 2022 action — with the US committing 172 million from its SPR; about 290 million had reached the market by mid-year, leaving roughly a billion barrels in public stocks. EIA assumes no further US releases; the SPR is now the thinnest since the 1980s, and refilling it will be the next policy fight.",pr:"400 mb collective action (11 Mar 2026) · ~290 mb released by mid-year · ~1bn bbl remaining"}
+  ],
+  companies:[
+    // seg: noc | ioc | mid | trd (space-separated when spanning segments)
+    {n:"Saudi Aramco",u:"https://www.aramco.com/",hq:"Saudi Arabia",tik:"TADAWUL: 2222",seg:"noc trd",
+     a:"Ghawar, Safaniya, Khurais; Abqaiq processing; East-West Petroline (7 mb/d) to Yanbu; Ras Tanura, Jizan, SAMREF refineries; Jafurah gas",
+     s:"Kept exports at a 7 mb/d ceiling through the Hormuz closure by running Petroline at an all-time record; reported ~11 mb/d of production for August after pumping just 7.34 mb/d in June. Q2 2026 net income $33.4bn (+33%) on ~$108 realised prices — but Ras Tanura shut for a week in March and Jizan (400 kb/d) has been closed since 27 July after Houthi strikes."},
+    {n:"ADNOC / XRG",u:"https://www.adnoc.ae/",hq:"UAE",tik:"state-owned (ADNOC Gas, ADNOC Drilling listed)",seg:"noc mid",
+     a:"Upper Zakum, Bu Hasa; Habshan–Fujairah ADCOP (1.5 mb/d); Ruwais refinery; Das Island LNG; XRG international arm",
+     s:"The Gulf producer that escaped: lost ~1.45 mb/d in March–May, then restored full output by June via Fujairah, and is fast-tracking a new West-East pipeline (50% built) for early 2027 so it need never use Hormuz again. XRG bought Covestro in 2025, took 32% of three Vaca Muerta blocks tied to Argentina LNG, and remains the name most often linked to BP's LNG assets."},
+    {n:"QatarEnergy",u:"https://www.qatarenergy.qa/",hq:"Qatar",tik:"state-owned",seg:"noc mid",
+     a:"North Field; Ras Laffan LNG complex (77 Mt/yr); North Field East (+33 Mt/yr) and South; 70% of Golden Pass LNG (US)",
+     s:"Iranian missiles hit Ras Laffan on 18–19 March, destroying ~17% of capacity (12.8 Mt/yr) for an estimated 3–5 years and $20bn a year of revenue; force majeure on cargoes to China, Korea, Italy, Belgium, Pakistan and Bangladesh now runs into November. North Field East's start has slipped to Q4 2026, North Field West to 2031. Its Golden Pass venture in Texas shipped a first cargo on 22 April — from the one side of the world it can still reach."},
+    {n:"Kuwait Petroleum Corp",u:"https://www.kpc.com.kw/",hq:"Kuwait",tik:"state-owned",seg:"noc",
+     a:"Burgan (world's second-largest field); Mina al-Ahmadi and Al-Zour refineries; KPI's European refining",
+     s:"Exported zero crude in April 2026 — the first total halt since the aftermath of the 1991 Gulf War — and expects 2026 output of 1.84 mb/d against 2.47 in 2025 (EIA still counted 950 kb/d shut in during July). No bypass pipeline exists; the finance ministry projects a 55% wider deficit and port calls are down 86%."},
+    {n:"Iraq (SOMO / Basra Oil Co.)",u:"https://somooil.gov.iq/",hq:"Iraq",tik:"state-owned",seg:"noc",
+     a:"Rumaila, West Qurna, Majnoon (with BP, Exxon successors, PetroChina, Lukoil); Basra Oil Terminal; Kirkuk–Ceyhan line to Türkiye",
+     s:"The biggest loser in barrels: exports of ~3.4 mb/d collapsed to 10 million barrels for all of April (from 93 million in a normal month) and production fell toward 1.4 mb/d; July exports recovered to ~1.4 mb/d. The northern line to Ceyhan, reopened in September 2025, carried 200–250 kb/d with a cabinet plan to reach 770 kb/d. Budget breakeven ~$86/bbl."},
+    {n:"NIOC (Iran)",u:"https://en.nioc.ir/",hq:"Iran",tik:"state-owned",seg:"noc",
+     a:"Ahvaz, Marun, Gachsaran, Azadegan; Kharg Island terminal (~90–94% of exports); South Pars gas phases; Abadan refinery",
+     s:"Exports ran at 1.84 mb/d in March and 1.71 in April, then the US naval blockade from 13 April cut them below 300 kb/d in May and to 251 kb/d in August; storage neared tank-tops and production has been trimmed. Kharg's oil infrastructure was spared by US strikes; South Pars (12% of gas output) was hit by Israel on 18 March. Buyers were almost entirely Shandong teapots, five of which are now US-sanctioned."},
+    {n:"Rosneft",u:"https://www.rosneft.com/",hq:"Russia",tik:"MOEX: ROSN",seg:"noc",
+     a:"Yugansk, Vankor, Vostok Oil; Tuapse and Novorossiysk terminals; ESPO exports via Kozmino; Nayara Energy (India, 49%)",
+     s:"Directly sanctioned by the US since 22 October 2025, yet by May 2026 Rosneft and Lukoil controlled 57% of Russian exports through special-purpose vehicles (KSE). Beneficiary of the Hormuz windfall — Russian export revenue ran at €683m a day in July — but Ukrainian drones cut national output for six straight months and idled Tuapse for two."},
+    {n:"Lukoil",u:"https://www.lukoil.com/",hq:"Russia",tik:"MOEX: LKOH",seg:"ioc",
+     a:"West Siberian and Caspian fields; West Qurna-2 (Iraq); Bulgarian and Romanian refineries; international trading arm",
+     s:"Russia's largest private producer was sanctioned alongside Rosneft in October 2025, forcing a sale of its international assets that dragged through 2026 amid Treasury vetoes of would-be buyers. Its West Qurna-2 stake exposes it to Iraq's export collapse; its Baltic and Black Sea loadings depend on the shadow fleet the West is trying to shrink."},
+    {n:"Gazprom & Novatek",u:"https://www.gazprom.com/",hq:"Russia",tik:"MOEX: GAZP / NVTK",seg:"noc mid",
+     a:"Yamal and Bovanenkovo gas; Power of Siberia to China; TurkStream to Hungary/Slovakia; Yamal LNG (Sabetta); sanctioned Arctic LNG 2",
+     s:"Pipeline gas earned Russia €71m a day in July 2026 (+27% m/m) as Europe's LNG squeeze lifted prices, but the EU's stepwise ban ends Russian LNG imports from 1 January 2027 and pipeline gas by 30 September 2027; Ukrainian transit ended 1 January 2025. LNG revenue fell 36% month on month in July as Arctic LNG 2 struggles to find buyers under sanctions."},
+    {n:"PDVSA",u:"https://www.pdvsa.com/",hq:"Venezuela",tik:"state-owned",seg:"noc",
+     a:"Orinoco heavy-oil belt (Petropiar with Chevron, Ayacucho blocks); Maracaibo; Jose export terminal; Amuay–Cardón refineries",
+     s:"Post-Maduro Venezuela is the one supply story moving the other way: after the 3 January raid and a rewritten hydrocarbons law, OFAC's GL 46/47 reopened the sector; output reached 1.12 mb/d in July (+18% on 2025), Chevron raised its JV stake to 49% and on 2 September pledged $7bn to double production by 2031; Shell is negotiating its own blocks. Still less than half the 2.1 mb/d of a decade ago."},
+    {n:"Petrobras",u:"https://petrobras.com.br/",hq:"Brazil",tik:"B3: PETR4 / NYSE: PBR",seg:"noc",
+     a:"Búzios, Tupi, Mero and other Santos pre-salt fields; Equatorial Margin exploration; refining system",
+     s:"Brazil set a national record of 4.24 mb/d of oil in March 2026 (5.53 mboe/d with gas) on ultra-deepwater pre-salt ramp-ups — Atlantic barrels that need no strait, arriving exactly as Asia scrambled for medium crude. EIA counts Brazil, Guyana and Argentina among the main sources of 2026 non-Gulf supply growth."},
+    {n:"China's NOCs (CNPC, Sinopec, CNOOC)",u:"https://www.cnpc.com.cn/en/",hq:"China",tik:"SSE/HKEX listed arms",seg:"noc trd",
+     a:"Daqing, Tarim, Ordos; Russia–China pipelines and ESPO imports; Rumaila and Halfaya (Iraq) stakes; import terminals at Qingdao, Dongjiakou, Zhoushan",
+     s:"China's crude imports hit a record 11.55 mb/d in 2025, then fell 32% to 8.1 mb/d in 2Q26 — below 8 mb/d for the first time since 2016 — as Gulf barrels vanished. The majors leaned on Russia (~1.8 mb/d by sea, its top supplier) and Central Asian pipelines while the independent Shandong teapots that took Iranian crude were sanctioned by Washington."},
+    {n:"ExxonMobil",u:"https://corporate.exxonmobil.com/",hq:"United States",tik:"NYSE: XOM",seg:"ioc mid",
+     a:"Permian (Pioneer); Stabroek block, Guyana (~870 kb/d, 45%); Golden Pass LNG (30%); West Qurna-1 exited; PNG LNG; Tengiz stake",
+     s:"Q2 2026 earnings $14.5bn with upstream at $7.9bn (vs $5.4bn a year earlier). Guyana is the growth engine — a fifth FPSO is due this quarter and Exxon plans 1.7 mb/d of capacity from eight developments — while Golden Pass Train 1 shipped its first cargo on 22 April. Its Tengiz exposure runs through the drone-hit CPC pipeline."},
+    {n:"Chevron",u:"https://www.chevron.com/",hq:"United States",tik:"NYSE: CVX",seg:"ioc",
+     a:"Permian; Tengiz (50%, via CPC); Gorgon and Wheatstone LNG; Hess/Guyana stake; Petropiar and Ayacucho 8 (Venezuela)",
+     s:"Q2 2026 earnings $12.1bn; refining profit jumped to $4.9bn (+500%) on record diesel cracks. Raised its stake in the PDVSA joint venture to 49% in April and on 2 September committed $7bn to double Venezuelan output by 2031 — the first big Western production deal since Maduro's capture. Tengiz output was cut when CPC loadings halted in July."},
+    {n:"Shell",u:"https://www.shell.com/",hq:"United Kingdom",tik:"LSE: SHEL",seg:"ioc mid trd",
+     a:"Qatar LNG offtake (declared force majeure 11 Mar); LNG Canada (40%); ARC Resources (acquired, $16.5bn); Pearl GTL Qatar; Brazil pre-salt; world's largest LNG trader",
+     s:"Best quarter in four years — $9.8bn adjusted earnings, >$21bn operating cash flow — despite Middle East disruption to ~20% of its production; Brent averaged $104 in the quarter. Closed the $16.5bn ARC Resources deal to feed LNG Canada, and its trading arm is the market's biggest beneficiary of dislocated LNG. Perennial candidate to bid for BP."},
+    {n:"BP",u:"https://www.bp.com/",hq:"United Kingdom",tik:"LSE: BP",seg:"ioc",
+     a:"Rumaila and Kirkuk (Iraq); Azerbaijan (BTC pipeline to Ceyhan); US Gulf of Mexico; Shah Deniz gas; trading",
+     s:"Q2 2026 net profit $3.91bn (from $1.62bn), underlying $5.7bn, on higher prices and refining. Takeover speculation — Shell, ADNOC/XRG, Chevron, ExxonMobil, TotalEnergies have all been named — has hung over the company since 2025. Its Iraqi barrels were stranded by the Hormuz closure; its Azeri barrels via Ceyhan were not."},
+    {n:"TotalEnergies",u:"https://totalenergies.com/",hq:"France",tik:"EPA: TTE",seg:"ioc mid",
+     a:"North Field East and South stakes (Qatar); Mozambique LNG; Cameron LNG offtake; Yamal LNG stake; Brazil, Angola, Iraq's GGIP",
+     s:"Q2 2026 adjusted net income $6.03bn (+68% y/y) as oil prices, refining margins and trading offset lower production and a weaker LNG result — a direct hit from its Qatari exposure. Partner in the delayed North Field expansion and the world's second-largest LNG portfolio player."},
+    {n:"Equinor",u:"https://www.equinor.com/",hq:"Norway",tik:"OSE: EQNR",seg:"ioc mid",
+     a:"Johan Sverdrup, Troll, Snøhvit/Hammerfest LNG; Norwegian gas pipelines to Europe; US onshore; Brazil Bacalhau",
+     s:"Q2 2026 net income $4.84bn (+267%), adjusted operating income $11.5bn, on higher liquids and European gas prices — Norway is Europe's largest gas supplier and the biggest Western winner from the TTF spike. Troll and Johan Sverdrup are running at plateau; Hammerfest LNG is Europe's only large liquefaction plant."},
+    {n:"Eni",u:"https://www.eni.com/",hq:"Italy",tik:"BIT: ENI",seg:"ioc mid",
+     a:"Zohr (Egypt); Coral South FLNG (Mozambique); Congo LNG; Argentina LNG with YPF (first exports 2029–30); Kazakhstan Karachaganak",
+     s:"Italy's champion sits at both ends of the crisis: Edison, its domestic rival, lost 29 Qatari cargoes to force majeure while Eni's Mediterranean and African gas gained value. Targets first LNG exports from Vaca Muerta in late 2029 or early 2030 and is a partner in Kazakhstan's CPC-dependent Karachaganak field."},
+    {n:"Cheniere Energy",u:"https://www.cheniere.com/",hq:"United States",tik:"NYSE: LNG",seg:"mid",
+     a:"Sabine Pass (6 trains); Corpus Christi Stage 1–3 (10 trains); ~56 Mt/yr total after Stage 3",
+     s:"The largest US LNG exporter: Corpus Christi Stage 3 reached substantial completion on 28 August 2026 when Bechtel handed over the seventh and last midscale train, taking the site toward 56 Mt/yr. Every train that can run is running — US exports averaged 16.5 Bcf/d in Q3 despite Freeport maintenance and are forecast at 18.6 Bcf/d in 2027."},
+    {n:"Venture Global",u:"https://www.ventureglobal.com/",hq:"United States",tik:"NYSE: VG",seg:"mid",
+     a:"Calcasieu Pass; Plaquemines LNG (2.6 Bcf/d nominal; 3.2 peak); CP2 under construction",
+     s:"Plaquemines shipped 16.4 Mt in 2025, its first full year, and expects all Phase 1 facilities in service in Q4 2026 and Phase 2 by mid-2027 — on course to be the largest US terminal. The Trump administration's energy emergency could fast-track a further expansion. Still fighting arbitration claims from long-term customers over commissioning cargoes sold at spot."},
+    {n:"Golden Pass LNG",u:"https://www.goldenpasslng.com/",hq:"United States",tik:"QatarEnergy 70% / ExxonMobil 30%",seg:"mid",
+     a:"Sabine Pass, Texas: three trains, 2.0 Bcf/d nominal (2.4 peak), ~18 Mt/yr",
+     s:"The ninth US export terminal produced first LNG in March 2026 and loaded its first cargo — to Zeebrugge — on 22 April, 23 days later. Train 2 is due in the second half of 2026 and Train 3 in the first half of 2027: Qatar's Atlantic outlet while its home plant is under repair."},
+    {n:"Woodside Energy",u:"https://www.woodside.com/",hq:"Australia",tik:"ASX: WDS",seg:"ioc mid",
+     a:"North West Shelf, Pluto and Scarborough (Australia); Louisiana LNG (2.17 Bcf/d, first LNG 2029); Sangomar (Senegal)",
+     s:"Australia's flag-carrier in LNG — the world's third-largest exporter at ~9.8 Bcf/d in 2025 — took a $17.5bn FID on Louisiana LNG in April 2025; the project was 24% complete by mid-2026. Gains from Asian spot prices at a four-year high and from every buyer looking for non-Gulf supply."},
+    {n:"Kazakhstan (KazMunayGas / TCO / CPC)",u:"https://www.kmg.kz/",hq:"Kazakhstan",tik:"KASE: KMGZ",seg:"noc mid",
+     a:"Tengiz (Chevron 50%, Exxon 25%), Kashagan, Karachaganak; Caspian Pipeline Consortium to Novorossiysk (>80% of exports)",
+     s:"Collateral damage of two wars: the CPC terminal was hit by drones from November 2025 and, in July 2026, four strikes in four days on tankers loading Kazakh crude halted Black Sea loadings and forced Tengiz to cut output. CPC carries more than 1% of world supply; Astana protested and Washington warned Kyiv off Kazakh-linked shipping."},
+    {n:"Sonatrach",u:"https://sonatrach.com/",hq:"Algeria",tik:"state-owned",seg:"noc mid",
+     a:"Hassi Messaoud oil, Hassi R'Mel gas; Medgaz and Transmed pipelines to Spain and Italy; Arzew and Skikda LNG",
+     s:"Africa's largest gas exporter (94.7 bcm produced in 2024) sits on Europe's doorstep with pipelines that need no strait — the natural first call as Italy and Spain replace lost Qatari cargoes and the last Russian molecules ahead of the 2027 EU ban. Mediterranean crude and LNG alike now carry a security premium."},
+    {n:"NNPC & Dangote",u:"https://www.nnpcgroup.com/",hq:"Nigeria",tik:"state-owned / private",seg:"noc trd",
+     a:"Bonga, Agbami, Egina; Bonny LNG (Train 7); Dangote refinery, Lekki (650 kb/d)",
+     s:"Nigerian output has recovered to ~1.51 mb/d and its Atlantic barrels carry a war-risk-free premium. The Dangote refinery is running at its full 650 kb/d, made Nigeria a net petrol exporter for the first time in March 2026 (44 kb/d), set export records in April–May and delivered its first gasoline cargo to Mozambique as East Africa diversifies away from Gulf supply."},
+    {n:"Reliance Industries",u:"https://www.ril.com/",hq:"India",tik:"NSE: RELIANCE",seg:"trd",
+     a:"Jamnagar — the world's largest refining complex (~1.4 mb/d); petrochemicals; Rosneft term supply",
+     s:"India's refiners became the swing buyers of the crisis: Russian crude imports hit a record 2.8 mb/d in July (a third of the total) after Urals briefly traded at a premium, while state refiners locked in one-year tenders for Iraqi and Omani grades loaded outside Hormuz. Distillate exports to Europe at record cracks made Jamnagar one of the year's most profitable assets."},
+    {n:"Vitol, Trafigura & Gunvor",u:"https://www.vitol.com/",hq:"Switzerland / Singapore",tik:"private",seg:"trd",
+     a:"Physical crude, products and LNG trading; storage and shipping; stakes in refineries and terminals worldwide",
+     s:"Volatility is the traders' product: the 2026 dislocation — Atlantic crude at record physical premiums, diesel cracks above $100, LNG arbitrage of eight-to-one between Louisiana and Tokyo — recreated the 2022 windfall. The same houses sit at the edge of the sanctions regime, arbitraging price-capped Russian products and blended Iranian barrels that Washington is now targeting refinery by refinery."}
+  ],
+  sites:[
+    // type: field | mid | choke | dis ; size 1-3
+    // --- fields & basins ---
+    {n:"Ghawar",c:"Saudi Arabia",ll:[25.43,49.62],ty:"field",sz:3,d:"The world's largest conventional oil field — roughly 3.8 mb/d of capacity for Aramco — feeds both Ras Tanura on the Gulf and, via Petroline, Yanbu on the Red Sea. In 2026 the pipeline, not the field, set how much of it could reach the world."},
+    {n:"Safaniya",c:"Saudi Arabia",ll:[28.0,48.7],ty:"field",sz:2,d:"The largest offshore oil field on Earth, producing heavy Arab crude in the northern Gulf — a stone's throw from Kuwait's export terminals and squarely inside the closed zone."},
+    {n:"Burgan",c:"Kuwait",ll:[29.05,47.95],ty:"field",sz:2,d:"The world's second-largest field and the backbone of Kuwait's 2.5 mb/d. With no pipeline out of the Gulf, its crude had nowhere to go: Kuwait exported zero barrels in April 2026, its first total halt since 1991."},
+    {n:"Rumaila & West Qurna",c:"Iraq",ll:[30.4,47.3],ty:"field",sz:3,d:"Iraq's supergiants (BP, PetroChina, Lukoil among the operators) supply most of the ~3.4 mb/d that normally leaves through Basra. Production fell toward 1.4 mb/d when Hormuz closed; storage filled and wells were shut in."},
+    {n:"Kirkuk",c:"Iraq",ll:[35.5,44.4],ty:"field",sz:1,d:"The century-old northern field and the head of the Kirkuk–Ceyhan pipeline — reopened in September 2025 after a 2.5-year closure and suddenly Iraq's only working export route in 2026, carrying 200–250 kb/d with a plan to reach 770."},
+    {n:"Upper Zakum & Bu Hasa",c:"UAE",ll:[24.87,53.67],ty:"field",sz:2,d:"Abu Dhabi's giants feed the Habshan hub and the ADCOP pipeline to Fujairah — the reason the UAE alone among Gulf producers restored full output (3.6 mb/d) by June 2026."},
+    {n:"North Field / South Pars",c:"Qatar / Iran",ll:[26.3,52.0],ty:"field",sz:3,d:"The largest gas field on Earth, shared between Qatar (North Dome) and Iran (South Pars) and holding roughly a tenth of world reserves. Both sides were struck within 24 hours in March 2026: Israel hit Iran's South Pars complex on the 18th; Iran hit Qatar's Ras Laffan on the 18th and 19th."},
+    {n:"Ahvaz & Marun",c:"Iran",ll:[31.3,48.7],ty:"field",sz:2,d:"Iran's onshore heartland in Khuzestan, piped to Kharg Island for export. Output of ~3.4 mb/d in February; the US naval blockade from 13 April, not bombing, is what backed the crude up — storage neared tank-tops by late April."},
+    {n:"Permian Basin",c:"United States",ll:[31.8,-102.4],ty:"field",sz:3,d:"The engine of American oil: ~6.5 mb/d of crude plus the associated gas that feeds Gulf Coast LNG plants and Mexico's Energia Costa Azul. US output hit a record 13.6 mb/d in 2025 and EIA sees 13.8 in 2026."},
+    {n:"Bakken",c:"United States",ll:[47.8,-103.0],ty:"field",sz:1,d:"North Dakota's shale play — ~1.2 mb/d, and the field that first proved US tight oil could reshape OPEC's calculus a decade ago."},
+    {n:"Appalachia (Marcellus/Utica)",c:"United States",ll:[40.8,-79.5],ty:"field",sz:2,d:"The largest gas-producing region in the world, ~35 Bcf/d. Its cheap gas is why Henry Hub sits under $3 while JKM is above $23 — and why every US export train is running flat out."},
+    {n:"Haynesville",c:"United States",ll:[32.3,-93.7],ty:"field",sz:1,d:"Louisiana–East Texas dry gas, the closest feedstock to Sabine Pass, Cameron, Calcasieu Pass and Plaquemines. Drilling has ramped with the LNG wave."},
+    {n:"Athabasca oil sands",c:"Canada",ll:[57.0,-111.5],ty:"field",sz:2,d:"About 3.5 mb/d of bitumen and synthetic crude — the reserves that lift Canada to ~163 billion barrels. Trans Mountain is running full for the first time and adding capacity for 2027–28."},
+    {n:"Montney",c:"Canada",ll:[56.0,-121.0],ty:"field",sz:1,d:"British Columbia and Alberta's shale gas, the feedstock for LNG Canada at Kitimat and the reason Shell paid $16.5bn for ARC Resources."},
+    {n:"Santos pre-salt",c:"Brazil",ll:[-25.3,-43.0],ty:"field",sz:3,d:"Búzios, Tupi and Mero under two kilometres of salt: the ultra-deepwater province that took Brazil to a record 4.24 mb/d in March 2026 — Atlantic barrels that never see a strait."},
+    {n:"Stabroek block",c:"Guyana",ll:[8.0,-57.0],ty:"field",sz:2,d:"ExxonMobil, Hess/Chevron and CNOOC produce ~870 kb/d from four FPSOs, with a fifth due this quarter and 1.7 mb/d of capacity planned from eight developments. Exxon says Guyana's barrels helped cushion the Middle East disruption."},
+    {n:"Vaca Muerta",c:"Argentina",ll:[-38.5,-69.0],ty:"field",sz:2,d:"Argentina's shale play lifted a record 882 kb/d in April 2026; crude is now the country's top export. ADNOC's XRG bought into three blocks tied to the planned Argentina LNG project (Eni/YPF, first exports 2029–30)."},
+    {n:"Orinoco Belt",c:"Venezuela",ll:[8.5,-64.5],ty:"field",sz:2,d:"The extra-heavy oil behind the world's largest reserves (303.7 billion barrels). Chevron's Petropiar upgrader and the Ayacucho 8 block are the centre of its $7bn plan to double output by 2031 under OFAC's General License 46."},
+    {n:"Tengiz & Kashagan",c:"Kazakhstan",ll:[46.2,53.3],ty:"field",sz:2,d:"Chevron and ExxonMobil's Tengiz and the Eni/Shell/Total-led Kashagan export almost entirely through the CPC pipeline to Novorossiysk — halted by drone strikes in July 2026, forcing Tengiz to cut output."},
+    {n:"West Siberia",c:"Russia",ll:[61.0,76.5],ty:"field",sz:3,d:"Samotlor, Priobskoye and the Khanty-Mansiysk fields still supply most of Russia's ~9.9 mb/d. Output fell for six straight months to June 2026 as Ukrainian drones hit refineries and terminals, even as export revenue rose."},
+    {n:"Yamal & Bovanenkovo",c:"Russia",ll:[70.4,68.5],ty:"field",sz:2,d:"Gazprom's Arctic gas province and Novatek's Yamal LNG at Sabetta. The EU bans Russian LNG from 1 January 2027 and pipeline gas by 30 September 2027; Power of Siberia to China is the alternative outlet."},
+    {n:"Galkynysh",c:"Turkmenistan",ll:[37.4,61.5],ty:"field",sz:1,d:"The world's second-largest gas field, exported almost entirely to China by pipeline — part of Beijing's overland pivot as its Hormuz-transiting imports fell from 51% to 44% of the total."},
+    {n:"Tarim & Ordos",c:"China",ll:[39.5,84.0],ty:"field",sz:1,d:"China's western oil and gas basins, growing ~6% a year, are the domestic leg of a supply strategy that also runs through Russian and Central Asian pipelines — everything that avoids the sea."},
+    {n:"Daqing",c:"China",ll:[46.6,125.0],ty:"field",sz:1,d:"The 1959 discovery that made China self-sufficient for a generation, now in long decline. China imported a record 11.55 mb/d in 2025 and 8.1 mb/d in the second quarter of 2026."},
+    {n:"Hassi Messaoud & Hassi R'Mel",c:"Algeria",ll:[32.0,4.0],ty:"field",sz:2,d:"Sonatrach's oil and gas hubs feed the Medgaz and Transmed pipelines to Spain and Italy and the Arzew and Skikda LNG plants — Mediterranean supply that needs no strait, and Europe's first call in 2026."},
+    {n:"Sharara & Sirte Basin",c:"Libya",ll:[27.5,17.5],ty:"field",sz:1,d:"Libya's ~1.2 mb/d ships straight to European refineries — an Atlantic-Mediterranean advantage when Gulf crude vanished, permanently hostage to the country's politics."},
+    {n:"Niger Delta & Bonga",c:"Nigeria",ll:[4.6,5.0],ty:"field",sz:2,d:"Nigerian output has recovered to ~1.51 mb/d; Bonny LNG's Train 7 is under construction, and the Dangote refinery at Lekki now takes a growing share of the crude, making Nigeria a net petrol exporter for the first time."},
+    {n:"Cabinda & Block 17",c:"Angola",ll:[-6.5,11.5],ty:"field",sz:1,d:"Angola's deepwater blocks (~1.1 mb/d) left OPEC in 2024 and sell into the Atlantic Basin — security-premium barrels in 2026."},
+    {n:"Zohr",c:"Egypt",ll:[31.9,31.9],ty:"field",sz:1,d:"Eni's Mediterranean supergiant gas field. Egypt swung from LNG exporter to importer as Zohr declined — and was one of the buyers competing for cargoes in 2026."},
+    {n:"Leviathan & Tamar",c:"Israel",ll:[33.0,34.5],ty:"field",sz:1,d:"Israel's offshore gas, piped to Egypt and Jordan, was shut in for weeks during the 2026 war's opening phase, tightening Egypt's LNG needs further."},
+    {n:"Johan Sverdrup & Troll",c:"Norway",ll:[59.5,3.0],ty:"field",sz:2,d:"Europe's largest oil field and its largest gas field. Norway is now Europe's biggest gas supplier; Equinor's Q2 2026 profit rose 267% on the TTF spike."},
+    {n:"Gorgon & Carnarvon Basin",c:"Australia",ll:[-20.5,115.5],ty:"field",sz:2,d:"The gas behind Australia's ~9.8 Bcf/d of LNG exports — the world's third-largest — from Gorgon, Wheatstone, Pluto and the North West Shelf. Every cargo re-priced at a four-year high in 2026."},
+    {n:"Rovuma Basin",c:"Mozambique",ll:[-10.8,40.6],ty:"field",sz:1,d:"Eni's Coral South FLNG exports; TotalEnergies' 13 Mt/yr onshore project has been under force majeure since 2021. East African buyers meanwhile took their first Dangote gasoline cargo in 2026."},
+    {n:"Orange Basin (Venus)",c:"Namibia",ll:[-28.5,14.5],ty:"field",sz:1,d:"TotalEnergies' and Shell's deepwater discoveries — the decade's largest frontier finds — moving toward a development decision as the world rediscovers the value of Atlantic barrels."},
+    // --- terminals, refineries & LNG ---
+    {n:"Ras Tanura",c:"Saudi Arabia",ll:[26.64,50.16],ty:"mid",sz:3,d:"The kingdom's largest refinery (~550 kb/d) and its main Gulf export terminal. Intercepted drones set off a fire on 2 March 2026; Aramco halted the plant for about a week and rerouted product exports to Yanbu. LPG exports stopped for weeks."},
+    {n:"Yanbu",c:"Saudi Arabia",ll:[24.0,38.2],ty:"mid",sz:3,d:"The Red Sea terminus of the 7 mb/d East-West Petroline. Crude exports here hit ~5 mb/d in March 2026 plus 700–900 kb/d of products — the single most important piece of infrastructure in the world's oil supply this year, and since 20 July a target of the Houthi blockade (the Saudi tankers Wafa and Amzan were hit off Yanbu in August)."},
+    {n:"Abqaiq",c:"Saudi Arabia",ll:[25.94,49.67],ty:"mid",sz:2,d:"The world's largest crude-processing plant, stabilising ~7 mb/d — the site of the September 2019 drone and missile attack that briefly halved Saudi output, and the origin of the Petroline flows west."},
+    {n:"Fujairah",c:"UAE",ll:[25.12,56.35],ty:"mid",sz:2,d:"The UAE's port on the Gulf of Oman, outside the strait, fed by the 1.5 mb/d ADCOP pipeline from Habshan. Exports rose from 1.17 mb/d in February to 1.62 mb/d in March 2026; a fire at an oil facility on 14 March marked an Iranian strike."},
+    {n:"Ruwais",c:"UAE",ll:[24.1,52.7],ty:"mid",sz:1,d:"ADNOC's ~900 kb/d refining complex and the head of the planned West-East pipeline, 50% built and fast-tracked for early 2027 so the UAE need never use Hormuz again."},
+    {n:"Ceyhan",c:"Türkiye",ll:[36.9,35.9],ty:"mid",sz:2,d:"Mediterranean terminus of both the Kirkuk–Ceyhan line from Iraq (1.6 mb/d nominal, ~200–250 kb/d flowing) and the BTC pipeline from Azerbaijan — Iraq's only functioning export route during the crisis."},
+    {n:"Primorsk & Ust-Luga",c:"Russia",ll:[59.9,28.7],ty:"mid",sz:2,d:"Russia's Baltic crude and product ports, the origin of most Urals cargoes and of the shadow fleet's voyages to India and China. The G7 price cap — $44.10 since February 2026 — is meant to bite here."},
+    {n:"Kozmino",c:"Russia",ll:[42.7,133.1],ty:"mid",sz:1,d:"Pacific terminus of the ESPO pipeline, loading Russia's premium Far East grade for China, Japan and Korea — the Russian barrels that need no Western tanker."},
+    {n:"Sabetta (Yamal LNG)",c:"Russia",ll:[71.3,72.1],ty:"mid",sz:2,d:"Novatek's Arctic LNG plant, still legally shipping to Europe until the EU ban takes effect on 1 January 2027; its sister project Arctic LNG 2 is under US sanctions and struggling to sell."},
+    {n:"Sabine Pass & Golden Pass",c:"United States",ll:[29.74,-93.87],ty:"mid",sz:3,d:"Cheniere's six-train Sabine Pass and, next door, the QatarEnergy/ExxonMobil Golden Pass plant that shipped its first cargo on 22 April 2026 (Train 2 due this half, Train 3 in 2027). The densest LNG export cluster on Earth."},
+    {n:"Corpus Christi",c:"United States",ll:[27.8,-97.3],ty:"mid",sz:2,d:"Cheniere's second site reached substantial completion of Stage 3 on 28 August 2026, taking capacity toward 56 Mt/yr across the company. Also the top US crude export port — record shipments of 6.4 mb/d nationally in late April."},
+    {n:"Plaquemines",c:"United States",ll:[29.6,-89.7],ty:"mid",sz:2,d:"Venture Global's fast-built plant shipped 16.4 Mt in 2025, its first full year; Phase 1 completes in Q4 2026 and Phase 2 by mid-2027 for 2.6 Bcf/d nominal — set to be the largest US terminal."},
+    {n:"Freeport LNG",c:"United States",ll:[28.94,-95.3],ty:"mid",sz:1,d:"The 2.1 Bcf/d Texas plant whose maintenance outage in summer 2026 trimmed US exports to 16.5 Bcf/d in Q3 — and pushed Henry Hub down, a reminder that US gas prices now move with export terminals."},
+    {n:"Kitimat (LNG Canada)",c:"Canada",ll:[54.0,-128.7],ty:"mid",sz:1,d:"Shell-led LNG Canada is ramping to 1.84 Bcf/d in 2026 — the first large Pacific-coast North American export plant, twelve days' sailing from Asia and fed by Montney gas."},
+    {n:"Hammerfest (Melkøya)",c:"Norway",ll:[70.7,23.6],ty:"mid",sz:1,d:"Equinor's Arctic LNG plant, Europe's only large liquefaction facility, processing Snøhvit gas for a continent short of cargoes."},
+    {n:"Rotterdam",c:"Netherlands",ll:[51.9,4.3],ty:"mid",sz:2,d:"Europe's refining, storage and trading hub and the physical home of the ARA product markets and Dutch TTF gas benchmark, which climbed above €70/MWh in late summer 2026."},
+    {n:"Zeebrugge",c:"Belgium",ll:[51.35,3.2],ty:"mid",sz:1,d:"The LNG terminal that received Golden Pass's first-ever cargo on 22 April 2026 — and one of the European buyers under QatarEnergy's force majeure."},
+    {n:"Bonny LNG",c:"Nigeria",ll:[4.43,7.17],ty:"mid",sz:1,d:"Nigeria's 22 Mt/yr export plant, with Train 7 under construction — Atlantic LNG that needs no strait."},
+    {n:"Dangote refinery",c:"Nigeria",ll:[6.45,3.87],ty:"mid",sz:2,d:"The 650 kb/d Lekki plant — the world's largest single-train refinery — running at full capacity in 2026, exporting record volumes of gasoline in April–May and its first cargo to East Africa (Mozambique) as buyers diversify away from the Gulf."},
+    {n:"Jamnagar",c:"India",ll:[22.3,69.8],ty:"mid",sz:3,d:"Reliance's ~1.4 mb/d complex, the largest refining site in the world. India's Russian crude imports hit a record 2.8 mb/d in July 2026 and its distillate exports to Europe earned record cracks."},
+    {n:"Singapore / Jurong",c:"Singapore",ll:[1.27,103.7],ty:"mid",sz:2,d:"Asia's pricing, trading and bunkering hub at the mouth of the Malacca Strait — the chokepoint that carried 23.2 mb/d in 2025, more than any other. Russian fuel-oil shipments here rose 2.5-fold in July 2026."},
+    {n:"Shandong teapots & Qingdao",c:"China",ll:[36.0,120.3],ty:"mid",sz:2,d:"Dongjiakou, Qingdao and Lanqiao receive most of China's Iranian and Russian crude for the independent 'teapot' refineries of Shandong. The US sanctioned Hengli's Dalian refinery and four others in 2026 for handling Iranian oil via Malaysian blends."},
+    {n:"Curtis Island (Gladstone)",c:"Australia",ll:[-23.8,151.2],ty:"mid",sz:1,d:"Three coal-seam-gas LNG plants on Australia's east coast — part of the ~9.8 Bcf/d that made Australia the world's third-largest exporter in 2025."},
+    {n:"Ichthys & Darwin LNG",c:"Australia",ll:[-12.4,130.8],ty:"mid",sz:1,d:"Inpex's Ichthys and Santos' Darwin plants, Japan's closest large LNG source — one reason Japan, with a broad long-term portfolio, is the best-insulated Asian buyer in 2026."},
+    {n:"Bintulu",c:"Malaysia",ll:[3.2,113.0],ty:"mid",sz:1,d:"Petronas' nine-train complex, the world's largest single-site LNG plant (~30 Mt/yr) and the source of Malaysia's ~3.6 Bcf/d of exports."},
+    // --- chokepoints ---
+    {n:"Strait of Hormuz",c:"Iran / Oman",ll:[26.6,56.4],ty:"choke",sz:3,d:"20.9 mb/d of oil in 1H25 (≈27% of seaborne trade; 15 mb/d crude) plus ~20% of world LNG and 29% of LPG. Closed by the IRGC on 2 March 2026; 4.9 mb/d got through in 2Q26 and ~5 ships a day in August against ~100 before the war. Iran routes tolled traffic through the Qeshm–Larak corridor at up to $2m a VLCC; US strikes hit Larak launchers on 30 August."},
+    {n:"Strait of Malacca",c:"Malaysia / Indonesia / Singapore",ll:[2.5,101.5],ty:"choke",sz:3,d:"The largest oil chokepoint on Earth: 23.2 mb/d in 1H25, about 29% of global seaborne oil, bound for China, Japan, Korea and Southeast Asia. Every Gulf barrel to Asia passes both Hormuz and Malacca — the 'Malacca dilemma' Beijing is trying to pipeline its way out of."},
+    {n:"Bab el-Mandeb",c:"Yemen / Djibouti",ll:[12.6,43.3],ty:"choke",sz:2,d:"Gateway between the Red Sea and the Indian Ocean: 4.2 mb/d in 1H25, rising to 8.1 mb/d in 2Q26 as Saudi crude was rerouted to Yanbu — then the Houthis declared a naval blockade of Saudi Arabia on 20 July 2026 and hit eight ships by late August. A full closure would cut world supply ~7%."},
+    {n:"Suez Canal & SUMED",c:"Egypt",ll:[30.5,32.35],ty:"choke",sz:2,d:"4.9 mb/d in 1H25 via the canal and the 2.5 mb/d SUMED pipeline from Ain Sukhna to Sidi Kerir. Saudi Arabia's fallback route to Europe when Bab el-Mandeb is threatened — longer, dearer and capacity-limited, as EIA notes."},
+    {n:"Turkish Straits",c:"Türkiye",ll:[41.1,29.05],ty:"choke",sz:1,d:"3.7 mb/d of mostly Russian and Kazakh crude and products from Novorossiysk and the CPC terminal through the Bosporus and Dardanelles — the exit for Black Sea barrels now under Ukrainian drone attack."},
+    {n:"Danish Straits",c:"Denmark",ll:[56.0,11.5],ty:"choke",sz:1,d:"4.9 mb/d, almost all of it Russian Urals leaving Primorsk and Ust-Luga on shadow-fleet tankers — the Baltic exit where European states have begun inspecting insurance papers."},
+    {n:"Panama Canal",c:"Panama",ll:[9.1,-79.7],ty:"choke",sz:1,d:"2.3 mb/d, mostly US products and LPG bound for Asia; capacity-constrained by drought in 2023–24 and by the LNG carriers that increasingly compete for slots."},
+    {n:"Cape of Good Hope",c:"South Africa",ll:[-34.5,18.5],ty:"choke",sz:2,d:"Not a strait but the world's detour: 9.1 mb/d rounded the Cape in 1H25 as tankers avoided the Red Sea — adding two weeks and millions of dollars per voyage. West African and Brazilian barrels pass nearby on their way to Asia."},
+    // --- disrupted & sanctioned ---
+    {n:"Ras Laffan",c:"Qatar",ll:[25.9,51.5],ty:"dis",sz:3,d:"The world's largest LNG complex (77 Mt/yr, ~20% of global supply). Iranian missiles on 18–19 March 2026 damaged two trains and the Pearl GTL plant — ~17% of capacity (12.8 Mt/yr) lost for 3–5 years, $20bn a year of revenue. Force majeure declared 24 March, extended into November; North Field East start pushed to Q4 2026."},
+    {n:"Kharg Island",c:"Iran",ll:[29.23,50.32],ty:"dis",sz:3,d:"Handles ~90–94% of Iran's crude exports. US aircraft destroyed 90 military sites here on 13 March but spared the terminal; the US naval blockade from 13 April did the rest — exports fell from 1.84 mb/d to 251 kb/d by August, and storage neared tank-tops."},
+    {n:"Basra Oil Terminal",c:"Iraq",ll:[29.68,48.8],ty:"dis",sz:3,d:"Iraq's ~3.4 mb/d export gateway, idled by the strait's closure: shipments fell from 93 million barrels a month to 10 million in April 2026 and recovered to ~1.4 mb/d in July. Iraq's budget breaks even near $86 a barrel."},
+    {n:"Mina al-Ahmadi",c:"Kuwait",ll:[29.07,48.14],ty:"dis",sz:2,d:"Kuwait's main export terminal and refinery. Zero crude exports in April 2026, output halved for the year (1.84 vs 2.47 mb/d), port calls down 86%, deficit up 55% — the purest case of a producer with no bypass."},
+    {n:"South Pars / Asaluyeh",c:"Iran",ll:[27.5,52.6],ty:"dis",sz:2,d:"Israeli strikes on 18 March 2026 halted two gas refineries with 100 million m³/day of capacity — about 12% of Iran's gas production — and triggered Iran's missile retaliation on Ras Laffan, Saudi Arabia and the UAE the same day."},
+    {n:"Jizan refinery",c:"Saudi Arabia",ll:[16.9,42.55],ty:"dis",sz:2,d:"Aramco's 400 kb/d Red Sea refinery had supplied 6–8% of EU and UK diesel imports since April. Houthi ballistic missiles hit it on 24 July 2026, damaging the gasification complex and tank farm; Aramco shut it on 27 July, and no diesel has loaded since — one trigger of the record $102 diesel crack."},
+    {n:"Novorossiysk / CPC terminal",c:"Russia",ll:[44.7,37.8],ty:"dis",sz:2,d:"Black Sea outlet for Kazakhstan's CPC crude (>80% of its exports, >1% of world supply) and Russian Urals. Drone attacks from November 2025 escalated in July 2026 — four strikes in four days on tankers — halting loadings, cutting July volumes 23% and forcing Tengiz to reduce output."},
+    {n:"Tuapse",c:"Russia",ll:[44.1,39.07],ty:"dis",sz:1,d:"Rosneft's Black Sea refinery and product terminal, hit repeatedly by Ukrainian drones; it loaded almost no products in June or July 2026, part of why Russia banned diesel exports from 8 to 31 July."},
+    {n:"Nord Stream",c:"Baltic Sea",ll:[54.9,15.4],ty:"dis",sz:1,d:"The 110 bcm/yr Russia–Germany pipelines, destroyed by sabotage in September 2022 — the moment Europe's gas system became an LNG system, and the reason Qatar's outage hurts it in 2026."},
+    {n:"Groningen",c:"Netherlands",ll:[53.3,6.7],ty:"dis",sz:1,d:"Europe's largest gas field, permanently closed in April 2024 over earthquake damage — 2,800 bcm produced since 1963, and a domestic cushion Europe no longer has."},
+    {n:"Ukraine gas transit",c:"Ukraine",ll:[49.5,24.0],ty:"dis",sz:1,d:"Russian gas transit through Ukraine ended on 1 January 2025 when the contract expired, leaving TurkStream as the last Russian pipeline into the EU — itself banned from 30 September 2027."}
+  ]
+};
+
+/* ============ helpers ============ */
+const C = getComputedStyle(document.documentElement);
+const col = v => C.getPropertyValue(v).trim();
+const PAL = ["#ff8c2e","#38bdf8","#fde047","#a78bfa","#34d399","#f87171","#94a3b8","#f472b6","#fb923c","#2dd4bf","#64748b","#c4b5fd","#e879f9"];
+
+/* count-up hero stats */
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target, end=parseFloat(el.dataset.count), suf=el.dataset.suffix||"", pre=el.dataset.prefix||"", dec=end%1?(String(end).split(".")[1].length):0;
+  const t0=performance.now();
+  (function tick(t){const p=Math.min(Math.max((t-t0)/1200,0),1), v=end*(1-Math.pow(1-p,3));
+    el.textContent=pre+(end>=1000?Math.round(v).toLocaleString("en-US"):v.toFixed(dec))+suf;
+    if(p<1)requestAnimationFrame(tick);})(t0);
+  io.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+
+/* ============ MAP ============ */
+const map = L.map("map",{scrollWheelZoom:false,worldCopyJump:true}).setView([22,45],2);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{
+  attribution:'Tiles &copy; Esri &mdash; &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom:10
+}).addTo(map);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",{
+  maxZoom:10
+}).addTo(map);
+map.on("click",()=>map.scrollWheelZoom.enable());
+
+const groups = {fields:L.layerGroup().addTo(map),
+                midstream:L.layerGroup().addTo(map),
+                chokepoints:L.layerGroup().addTo(map), disrupted:L.layerGroup().addTo(map)};
+const TYCOL={field:col("--mine"),mid:col("--proc"),choke:col("--dev"),dis:col("--dis")};
+const TYNAME={field:"FIELD / BASIN",mid:"TERMINAL / REFINERY / LNG",choke:"CHOKEPOINT",dis:"DISRUPTED / SANCTIONED"};
+const TYGRP={field:"fields",mid:"midstream",choke:"chokepoints",dis:"disrupted"};
+
+DATA.sites.forEach(s=>{
+  const c=TYCOL[s.ty];
+  L.circleMarker(s.ll,{radius:4+s.sz*2.4,color:c,weight:1.5,fillColor:c,fillOpacity:.35})
+   .bindPopup(`<span class="pp-tag" style="background:${c}22;color:${c}">${TYNAME[s.ty]}</span><br><b>${s.n}</b> · ${s.c}<br>${s.d}`)
+   .addTo(groups[TYGRP[s.ty]]);
+});
+
+/* layer toggles */
+document.querySelectorAll(".chip[data-layer]").forEach(ch=>ch.addEventListener("click",()=>{
+  const g=groups[ch.dataset.layer];
+  if(ch.classList.toggle("on")) map.addLayer(g); else map.removeLayer(g);
+}));
+
+/* ============ BENCHMARK GRID ============ */
+const GRPNAME={C:"Crude benchmarks",P:"Refined products",G:"Gas & LNG",X:"Priced by politics"};
+const GRPCOL={C:col("--accent"),P:col("--dis"),G:col("--accent2"),X:col("--muted")};
+const GRPCLS={C:"gU",P:"gD",G:"gM",X:"gC"};
+const elGrid=document.getElementById("elGrid"), elDetail=document.getElementById("elDetail");
+elGrid.innerHTML=DATA.forms.map((e,i)=>`
+  <button class="el ${GRPCLS[e.g]}" data-i="${i}" aria-label="${e.n}">
+    <span class="z">${String(i+1).padStart(2,"0")}</span>
+    <b>${e.s}</b><span>${e.n}</span>
+  </button>`).join("");
+function showEl(i){
+  const e=DATA.forms[i];
+  document.querySelectorAll(".el").forEach(el=>el.classList.toggle("sel",+el.dataset.i===i));
+  const grpCol=GRPCOL[e.g];
+  elDetail.innerHTML=`
+    <h3>${e.n} <small>· ${e.use}</small></h3>
+    <div class="tags">
+      <span class="pp-tag" style="background:${grpCol}22;color:${grpCol}">${GRPNAME[e.g].toUpperCase()}</span>
+    </div>
+    <p>${e.d}</p>
+    ${e.pr?`<div class="price">${e.pr}</div>`:""}`;
+}
+elGrid.addEventListener("click",ev=>{const b=ev.target.closest(".el");if(b)showEl(+b.dataset.i);});
+showEl(DATA.forms.findIndex(e=>e.n==="Dated Brent"));
+
+/* ============ JOURNEY CARDS ============ */
+document.getElementById("journey").innerHTML = DATA.journey.map((j,i)=>`
+  <div class="jcard"><div class="num">${String(i+1).padStart(2,"0")}</div>
+    <div class="ico">${j.ico}</div><h3>${j.t}</h3><p>${j.p}</p>
+    <div class="fact">${j.f}</div></div>`).join("");
+
+/* ============ COMPANY TRACKER ============ */
+const SEGMETA={
+  noc:{label:"State producer",color:col("--mine")},
+  ioc:{label:"Major / independent",color:col("--proc")},
+  mid:{label:"LNG & midstream",color:col("--dev")},
+  trd:{label:"Trader / refiner",color:col("--dis")}
+};
+const coState={segs:new Set(Object.keys(SEGMETA)),q:""};
+function renderCo(){
+  const q=coState.q.trim().toLowerCase();
+  const rows=DATA.companies.filter(c=>c.seg.split(" ").some(s=>coState.segs.has(s))&&
+    (!q||[c.n,c.hq,c.tik,c.a,c.s].join(" ").toLowerCase().includes(q)));
+  document.getElementById("coBody").innerHTML=rows.map(c=>{
+    const tags=c.seg.split(" ").map(s=>{const m=SEGMETA[s];
+      return `<span class="pp-tag" style="background:${m.color}22;color:${m.color}">${m.label}</span>`;}).join(" ");
+    return `<tr>
+      <td><b><a href="${c.u}" target="_blank" rel="noopener">${c.n}</a></b>
+        <div class="tik">${c.hq} · ${c.tik}</div></td>
+      <td>${tags}</td>
+      <td>${c.a}</td>
+      <td>${c.s}</td></tr>`;
+  }).join("")||`<tr><td colspan="4" style="text-align:center;padding:24px">No companies match.</td></tr>`;
+  document.getElementById("coCount").textContent=`${rows.length} of ${DATA.companies.length} companies`;
+}
+document.querySelectorAll("#coFilters .chip").forEach(ch=>ch.addEventListener("click",()=>{
+  const s=ch.dataset.seg;
+  if(ch.classList.toggle("on")) coState.segs.add(s); else coState.segs.delete(s);
+  renderCo();
+}));
+document.getElementById("coSearch").addEventListener("input",e=>{coState.q=e.target.value;renderCo();});
+renderCo();
+
+/* ============ CHARTS ============ */
+Chart.defaults.color=col("--muted");
+Chart.defaults.borderColor=col("--line");
+Chart.defaults.font.size=11;
+const noLeg={plugins:{legend:{display:false}}};
+
+/* draw a total in the center of doughnut charts */
+Chart.register({
+  id:"centerText",
+  afterDraw(chart){
+    const opts=chart.options.plugins&&chart.options.plugins.centerText;
+    if(!opts||!opts.enabled) return;
+    if(!chart.chartArea) return;
+    const {ctx,chartArea:{left,right,top,bottom}}=chart;
+    const cx=(left+right)/2, cy=(top+bottom)/2;
+    ctx.save();
+    ctx.textAlign="center";
+    ctx.textBaseline="middle";
+    ctx.fillStyle=col("--txt");
+    ctx.font="700 19px -apple-system,Segoe UI,Roboto,sans-serif";
+    ctx.fillText(opts.text, cx, cy-(opts.label?9:0));
+    if(opts.label){
+      ctx.font="600 9.5px -apple-system,Segoe UI,Roboto,sans-serif";
+      ctx.fillStyle=col("--muted");
+      ctx.fillText(opts.label, cx, cy+10);
+    }
+    ctx.restore();
+  }
+});
+
+const donutOpts={maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+  tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}%`}}},cutout:"62%"};
+
+new Chart(chProd,{type:"bar",
+  data:{labels:DATA.production2025.map(d=>d[0]),
+    datasets:[{data:DATA.production2025.map(d=>d[1]),backgroundColor:DATA.production2025.map((d,i)=>i===0?col("--accent"):"#38bdf888"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{ticks:{callback:v=>v+" mb/d"},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x.toFixed(2)} mb/d crude + condensate, 2025 (EIA)`}}}}});
+
+new Chart(chRes,{type:"doughnut",
+  data:{labels:DATA.reserves.map(d=>d[0]),datasets:[{data:DATA.reserves.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed.toLocaleString("en-US")} bn bbl`}},
+    centerText:{enabled:true,text:"~1.7 trn",label:"barrels"}}}});
+
+new Chart(chShut,{type:"bar",
+  data:{labels:DATA.shutins.countries,
+    datasets:[
+      {label:"Production, Feb 2026 (kb/d)",data:DATA.shutins.feb,backgroundColor:"#38bdf888",borderRadius:4},
+      {label:"Shut in, July 2026 (kb/d)",data:DATA.shutins.jul,backgroundColor:col("--dis"),borderRadius:4}
+    ]},
+  options:{maintainAspectRatio:false,indexAxis:"y",
+    scales:{x:{ticks:{callback:v=>(v/1000).toFixed(v%1000?1:0)+" mb/d"},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+      tooltip:{callbacks:{label:c=>` ${c.dataset.label.split(" (")[0]}: ${c.parsed.x.toLocaleString("en-US")} kb/d`}}}}});
+
+new Chart(chTrend,{type:"line",
+  data:{labels:DATA.trend.years,
+    datasets:[
+      {label:"World crude production (Mt)",data:DATA.trend.prod,borderColor:col("--accent"),backgroundColor:"#ff8c2e22",fill:true,tension:0,pointRadius:2.5,pointBackgroundColor:col("--accent"),yAxisID:"y",spanGaps:false},
+      {label:"Brent annual average ($/bbl)",data:DATA.trend.price,borderColor:col("--accent2"),backgroundColor:"transparent",fill:false,tension:0,pointRadius:2.5,pointBackgroundColor:col("--accent2"),yAxisID:"y2",spanGaps:false}
+    ]},
+  options:{maintainAspectRatio:false,
+    scales:{y:{min:3000,max:4800,ticks:{callback:v=>(v/1000).toFixed(1)+" Gt"},grid:{color:col("--line")}},
+            y2:{position:"right",min:0,max:120,ticks:{callback:v=>"$"+v},grid:{display:false}},
+            x:{grid:{display:false},ticks:{maxTicksLimit:13}}},
+    plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10}},
+      tooltip:{callbacks:{label:c=>c.dataset.yAxisID==="y2"?` Brent: $${c.parsed.y.toFixed(1)}/bbl`:` Production: ${(c.parsed.y/1000).toFixed(2)} Gt (≈ ${(c.parsed.y/1000*7.33/365*1000).toFixed(1)} mb/d)`}}}}});
+
+new Chart(chGas,{type:"bar",
+  data:{labels:DATA.gasProd.map(d=>d[0]),
+    datasets:[{data:DATA.gasProd.map(d=>d[1]),backgroundColor:DATA.gasProd.map((d,i)=>i===0?col("--accent2"):"#ff8c2e88"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{ticks:{callback:v=>v.toLocaleString("en-US")+" bcm"},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x.toLocaleString("en-US")} bcm (2025 or latest)`}}}}});
+
+new Chart(chLngExp,{type:"bar",
+  data:{labels:DATA.lngExp.map(d=>d[0]),
+    datasets:[{data:DATA.lngExp.map(d=>d[1]),backgroundColor:DATA.lngExp.map((d,i)=>i<3?col("--accent2"):"#ff8c2e88"),borderRadius:4}]},
+  options:{...noLeg,indexAxis:"y",maintainAspectRatio:false,
+    scales:{x:{ticks:{callback:v=>v+" Bcf/d"},grid:{color:col("--line")}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10}}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x} Bcf/d ≈ ${(c.parsed.x*7.5).toFixed(0)} Mt of LNG in 2025`}}}}});
+
+new Chart(chLngImp,{type:"doughnut",
+  data:{labels:DATA.lngImp.map(d=>d[0]),datasets:[{data:DATA.lngImp.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,tooltip:{callbacks:{label:c=>` ${c.label}: ~${c.parsed} Mt`}},
+    centerText:{enabled:true,text:"437 Mt",label:"record 2025 trade"}}}});
+
+new Chart(chPrices,{type:"bar",
+  data:{labels:DATA.brent.years,
+    datasets:[{data:DATA.brent.v,backgroundColor:DATA.brent.v.map((v,i)=>i===DATA.brent.v.length-1?col("--accent"):"#38bdf888"),borderRadius:4}]},
+  options:{...noLeg,maintainAspectRatio:false,
+    scales:{y:{min:0,ticks:{callback:v=>"$"+v},grid:{color:col("--line")}},x:{grid:{display:false}}},
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` $${c.parsed.y}/bbl annual average${c.dataIndex===DATA.brent.v.length-1?" — EIA forecast (Aug 2026); physical Dated Brent peaked at $144.42 on 7 April":""}${c.label==="2020"?" — WTI settled at −$37.63 on 20 April":""}${c.label==="2022"?" — the Ukraine-invasion year":""}`}}}}});
+
+new Chart(chRus,{type:"doughnut",
+  data:{labels:DATA.rusBuyers.map(d=>d[0]),datasets:[{data:DATA.rusBuyers.map(d=>d[1]),backgroundColor:PAL,borderWidth:2,borderColor:col("--card")}]},
+  options:{...donutOpts,plugins:{...donutOpts.plugins,tooltip:{callbacks:{label:c=>` ${c.label}: €${c.parsed} bn (July 2026)`}},
+    centerText:{enabled:true,text:"€21 bn",label:"one month"}}}});
+
+/* chokepoint bars */
+const maxCk=Math.max(...DATA.chokepoints.map(d=>d[1]));
+document.getElementById("chinaBars").innerHTML = DATA.chokepoints.map(([s,v])=>`
+  <div class="bar-row"><span>${s}</span><div class="track"><div class="fill" data-w="${(v/maxCk*100).toFixed(1)}"></div></div><span class="val">${v} mb/d</span></div>`).join("");
+const io2=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.w+"%");io2.unobserve(e.target);}
+}),{threshold:.4});
+io2.observe(document.getElementById("chinaBars"));
+
+/* nav active state */
+const secs=[...document.querySelectorAll("section[id],header")];
+const navLinks=[...document.querySelectorAll("nav a.link")];
+const io3=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}
+}),{rootMargin:"-40% 0px -55% 0px"});
+secs.forEach(s=>io3.observe(s));
+</script>
+<script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
