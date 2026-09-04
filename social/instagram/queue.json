@@ -4,29 +4,11 @@
   "published": [
     "01-launch",
     "02-nine-minerals",
+    "03-us-import-reliance",
     "minerals/lithium"
   ],
   "rule": "publish queue[0] whose caption first line is not already on the account",
   "queue": [
-    {
-      "id": "03-us-import-reliance",
-      "set": "launch",
-      "type": "single",
-      "title": "How much of it does the US import?",
-      "link": "https://mineral.watch",
-      "media": [
-        "https://mineral.watch/social/instagram/03-us-import-reliance/post.png"
-      ],
-      "alt": [
-        "Bar chart of US net import reliance in 2025: graphite and manganese 100%, antimony 85%, cobalt 79%, rare earths 67%, copper 57%, lithium over 50%, nickel 41%."
-      ],
-      "caption": "How much of it does the US import?\n\nUS net import reliance in 2025, per USGS:\nGraphite 100%\nManganese 100%\nAntimony ~85%\nCobalt 79%\nRare earths 67% (heavy rare earths: 100%)\nRefined copper 57%\nLithium >50%\nNickel 41% (nearly 100% excluding scrap)\n\nThere has been no US manganese mine since 1970 and no antimony mine since 2016. Refined copper, uranium and nickel were all added to or confirmed on the US critical minerals list in late 2025.\n\nSource: USGS Mineral Commodity Summaries 2026. Country-by-country dashboards at mineral.watch (link in bio).",
-      "first_comment": "#criticalminerals #supplychain #usgs #graphite #manganese #antimony #cobalt #rareearths #copper #lithium #nickel #geopolitics #opendata #mineralwatch",
-      "accent": "#c8ff6b",
-      "story": "https://mineral.watch/social/instagram/stories/03-us-import-reliance.jpg",
-      "story_file": "stories/03-us-import-reliance.jpg",
-      "story_link": "https://mineral.watch"
-    },
     {
       "id": "minerals/cobalt",
       "set": "minerals",
