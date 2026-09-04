@@ -1,0 +1,278 @@
+{
+  "account": "https://instagram.com/mineralwatch",
+  "format": "1080x1350 PNG (4:5), duotone photo backgrounds",
+  "generated": "2026-09-04",
+  "note": "Each set works as one 4-slide carousel (use `caption`) or as four standalone posts (use each slide’s `caption`).",
+  "sets": [
+    {
+      "slug": "graphite",
+      "title": "Graphite: who controls the anode?",
+      "link": "https://mineral.watch/graphite",
+      "photo_credit": "NOT RECORDED on the site — confirm the header photo licence before publishing this set",
+      "caption": "Graphite: who controls the anode?\n\nThe biggest material in an EV battery isn't lithium.\n\n82% of the world’s natural graphite was mined in China in 2025. (USGS MCS 2026)\n~50 kg of graphite in every electric car: the largest material by weight in a lithium-ion battery. (USGS · IEA)\n\nChina refines ~90% of battery-grade graphite and ~95% of the spherical graphite used in anodes. The US imports 100% of the natural graphite it uses. Reserves are ample at ~310 Mt; the chokepoint is processing, not geology.\n\nInteractive map of mines, smelters and refineries, production and price charts, and the full timeline: mineral.watch/graphite (link in bio).",
+      "first_comment": "#graphite #batteries #evbattery #anode #criticalminerals #supplychain #china #energytransition #mining #mineralwatch",
+      "media": [
+        {
+          "file": "graphite/slide-01.jpg",
+          "alt": "Graphite: Who controls the anode? Duotone photo of a graphite mining site.",
+          "caption": "Graphite: who controls the anode? The biggest material in an EV battery isn't lithium.\n\nFull dashboard: mineral.watch/graphite (link in bio)."
+        },
+        {
+          "file": "graphite/slide-02.jpg",
+          "alt": "Graphite: 82% of the world’s natural graphite was mined in China in 2025.",
+          "caption": "82% of the world’s natural graphite was mined in China in 2025.\n\nSource: USGS MCS 2026. More at mineral.watch/graphite (link in bio)."
+        },
+        {
+          "file": "graphite/slide-03.jpg",
+          "alt": "Graphite: ~50 kg of graphite in every electric car: the largest material by weight in a lithium-ion battery.",
+          "caption": "~50 kg of graphite in every electric car: the largest material by weight in a lithium-ion battery.\n\nSource: USGS · IEA. More at mineral.watch/graphite (link in bio)."
+        },
+        {
+          "file": "graphite/slide-04.jpg",
+          "alt": "Graphite, why it matters: China refines ~90% of battery-grade graphite and ~95% of the spherical graphite used in anodes. The US imports 100% of t",
+          "caption": "Graphite: why it matters. China refines ~90% of battery-grade graphite and ~95% of the spherical graphite used in anodes. The US imports 100% of the natural graphite it uses. Reserves are ample at ~310 Mt; the chokepoint is processing, not geology.\n\nMap, charts and timeline: mineral.watch/graphite (link in bio)."
+        }
+      ]
+    },
+    {
+      "slug": "lithium",
+      "title": "Lithium: who holds the world's charge?",
+      "link": "https://mineral.watch/lithium",
+      "photo_credit": "NOT RECORDED on the site — confirm the header photo licence before publishing this set",
+      "caption": "Lithium: who holds the world's charge?\n\nA price that went from $11,700 to $63,700 to $9,000 in four years.\n\n88% of the world’s lithium goes into batteries. (USGS MCS 2026)\n$63,700 /t: the 2022 average price of battery-grade lithium carbonate. By 2025 it averaged $9,000. (USGS / Benchmark)\n\nChina converts ~70% of battery-grade lithium chemicals and makes more than 98% of LFP cells. A single mine, CATL’s Jianxiawo, swung the 2025–26 market when its permit lapsed in August 2025 and was renewed in June 2026.\n\nInteractive map of mines, smelters and refineries, production and price charts, and the full timeline: mineral.watch/lithium (link in bio).",
+      "first_comment": "#lithium #batteries #evbattery #criticalminerals #commodities #energytransition #mining #supplychain #mineralwatch",
+      "media": [
+        {
+          "file": "lithium/slide-01.jpg",
+          "alt": "Lithium: Who holds the world's charge? Duotone photo of a lithium mining site.",
+          "caption": "Lithium: who holds the world's charge? A price that went from $11,700 to $63,700 to $9,000 in four years.\n\nFull dashboard: mineral.watch/lithium (link in bio)."
+        },
+        {
+          "file": "lithium/slide-02.jpg",
+          "alt": "Lithium: 88% of the world’s lithium goes into batteries.",
+          "caption": "88% of the world’s lithium goes into batteries.\n\nSource: USGS MCS 2026. More at mineral.watch/lithium (link in bio)."
+        },
+        {
+          "file": "lithium/slide-03.jpg",
+          "alt": "Lithium: $63,700 /t: the 2022 average price of battery-grade lithium carbonate. By 2025 it averaged $9,000.",
+          "caption": "$63,700 /t: the 2022 average price of battery-grade lithium carbonate. By 2025 it averaged $9,000.\n\nSource: USGS / Benchmark. More at mineral.watch/lithium (link in bio)."
+        },
+        {
+          "file": "lithium/slide-04.jpg",
+          "alt": "Lithium, why it matters: China converts ~70% of battery-grade lithium chemicals and makes more than 98% of LFP cells. A single mine, CATL’s Jianx",
+          "caption": "Lithium: why it matters. China converts ~70% of battery-grade lithium chemicals and makes more than 98% of LFP cells. A single mine, CATL’s Jianxiawo, swung the 2025–26 market when its permit lapsed in August 2025 and was renewed in June 2026.\n\nMap, charts and timeline: mineral.watch/lithium (link in bio)."
+        }
+      ]
+    },
+    {
+      "slug": "cobalt",
+      "title": "Cobalt: whose hands power the battery age?",
+      "link": "https://mineral.watch/cobalt",
+      "photo_credit": "Photo: artisanal cobalt miners, DRC — IIED via Wikimedia Commons, CC BY 2.5",
+      "caption": "Cobalt: whose hands power the battery age?\n\nNearly all cobalt is a by-product. Most of it comes from one country.\n\n73% of the world’s cobalt was mined in the DR Congo in 2025. (USGS MCS 2026)\n~79% of the world’s refined cobalt came from China in 2025. (Cobalt Institute)\n\nSince October 2025 the DRC caps exports at 96,600 t a year, about half of 2024 volumes. Some 150,000–250,000 artisanal miners dig cobalt by hand. Cobalt-free LFP batteries already power more than half of new EVs.\n\nInteractive map of mines, smelters and refineries, production and price charts, and the full timeline: mineral.watch/cobalt (link in bio).\n\nPhoto: artisanal cobalt miners, DRC — IIED via Wikimedia Commons, CC BY 2.5",
+      "first_comment": "#cobalt #drc #criticalminerals #batteries #evbattery #supplychain #mining #indonesia #energytransition #mineralwatch",
+      "media": [
+        {
+          "file": "cobalt/slide-01.jpg",
+          "alt": "Cobalt: Whose hands power the battery age? Duotone photo of a cobalt mining site.",
+          "caption": "Cobalt: whose hands power the battery age? Nearly all cobalt is a by-product. Most of it comes from one country.\n\nFull dashboard: mineral.watch/cobalt (link in bio)."
+        },
+        {
+          "file": "cobalt/slide-02.jpg",
+          "alt": "Cobalt: 73% of the world’s cobalt was mined in the DR Congo in 2025.",
+          "caption": "73% of the world’s cobalt was mined in the DR Congo in 2025.\n\nSource: USGS MCS 2026. More at mineral.watch/cobalt (link in bio)."
+        },
+        {
+          "file": "cobalt/slide-03.jpg",
+          "alt": "Cobalt: ~79% of the world’s refined cobalt came from China in 2025.",
+          "caption": "~79% of the world’s refined cobalt came from China in 2025.\n\nSource: Cobalt Institute. More at mineral.watch/cobalt (link in bio)."
+        },
+        {
+          "file": "cobalt/slide-04.jpg",
+          "alt": "Cobalt, why it matters: Since October 2025 the DRC caps exports at 96,600 t a year, about half of 2024 volumes. Some 150,000–250,000 artisanal m",
+          "caption": "Cobalt: why it matters. Since October 2025 the DRC caps exports at 96,600 t a year, about half of 2024 volumes. Some 150,000–250,000 artisanal miners dig cobalt by hand. Cobalt-free LFP batteries already power more than half of new EVs.\n\nMap, charts and timeline: mineral.watch/cobalt (link in bio)."
+        }
+      ]
+    },
+    {
+      "slug": "nickel",
+      "title": "Nickel: who cornered the metal of the stainless age?",
+      "link": "https://mineral.watch/nickel",
+      "photo_credit": "Photo: nickel-ore mining, North Kolaka, Sulawesi — Marwan Mohamad via Wikimedia Commons, CC BY-SA 4.0",
+      "caption": "Nickel: who cornered the metal of the stainless age?\n\nStainless steel, batteries, and a market that broke in 2022.\n\n66% of the world’s nickel was mined in Indonesia in 2025. (USGS MCS 2026)\n$100,000 /t: where nickel traded on 8 March 2022, before the LME cancelled the market. (LME)\n\nIndonesia and China refined ~76% of the world’s nickel in 2025. Class-1 metal is only about a quarter of supply. Western mines are closing: BHP’s Nickel West is suspended and Koniambo’s furnaces have been cold since August 2024.\n\nInteractive map of mines, smelters and refineries, production and price charts, and the full timeline: mineral.watch/nickel (link in bio).\n\nPhoto: nickel-ore mining, North Kolaka, Sulawesi — Marwan Mohamad via Wikimedia Commons, CC BY-SA 4.0",
+      "first_comment": "#nickel #lme #indonesia #stainlesssteel #batteries #criticalminerals #commodities #supplychain #mining #mineralwatch",
+      "media": [
+        {
+          "file": "nickel/slide-01.jpg",
+          "alt": "Nickel: Who cornered the metal of the stainless age? Duotone photo of a nickel mining site.",
+          "caption": "Nickel: who cornered the metal of the stainless age? Stainless steel, batteries, and a market that broke in 2022.\n\nFull dashboard: mineral.watch/nickel (link in bio)."
+        },
+        {
+          "file": "nickel/slide-02.jpg",
+          "alt": "Nickel: 66% of the world’s nickel was mined in Indonesia in 2025.",
+          "caption": "66% of the world’s nickel was mined in Indonesia in 2025.\n\nSource: USGS MCS 2026. More at mineral.watch/nickel (link in bio)."
+        },
+        {
+          "file": "nickel/slide-03.jpg",
+          "alt": "Nickel: $100,000 /t: where nickel traded on 8 March 2022, before the LME cancelled the market.",
+          "caption": "$100,000 /t: where nickel traded on 8 March 2022, before the LME cancelled the market.\n\nSource: LME. More at mineral.watch/nickel (link in bio)."
+        },
+        {
+          "file": "nickel/slide-04.jpg",
+          "alt": "Nickel, why it matters: Indonesia and China refined ~76% of the world’s nickel in 2025. Class-1 metal is only about a quarter of supply. Western",
+          "caption": "Nickel: why it matters. Indonesia and China refined ~76% of the world’s nickel in 2025. Class-1 metal is only about a quarter of supply. Western mines are closing: BHP’s Nickel West is suspended and Koniambo’s furnaces have been cold since August 2024.\n\nMap, charts and timeline: mineral.watch/nickel (link in bio)."
+        }
+      ]
+    },
+    {
+      "slug": "rare-earths",
+      "title": "Rare earths: who controls the magnets?",
+      "link": "https://mineral.watch/rare-earths",
+      "photo_credit": "NOT RECORDED on the site — confirm the header photo licence before publishing this set",
+      "caption": "Rare earths: who controls the magnets?\n\n17 elements, and one supplier for the magnets in every motor and missile.\n\n94% of sintered NdFeB magnets are made in China. (IEA)\n7 of 17 rare earth elements have been under Chinese export controls since April 2025. (MOFCOM · USGS)\n\nChina handles ~91% of rare earth refining and separation. US import reliance is 67% overall and 100% for heavy rare earths. Global reserves exceed 75 Mt; the constraint is separation capacity, not geology.\n\nInteractive map of mines, smelters and refineries, production and price charts, and the full timeline: mineral.watch/rare-earths (link in bio).",
+      "first_comment": "#rareearths #neodymium #magnets #exportcontrols #criticalminerals #china #supplychain #defence #energytransition #mineralwatch",
+      "media": [
+        {
+          "file": "rare-earths/slide-01.jpg",
+          "alt": "Rare earths: Who controls the magnets? Duotone photo of a rare earths mining site.",
+          "caption": "Rare earths: who controls the magnets? 17 elements, and one supplier for the magnets in every motor and missile.\n\nFull dashboard: mineral.watch/rare-earths (link in bio)."
+        },
+        {
+          "file": "rare-earths/slide-02.jpg",
+          "alt": "Rare earths: 94% of sintered NdFeB magnets are made in China.",
+          "caption": "94% of sintered NdFeB magnets are made in China.\n\nSource: IEA. More at mineral.watch/rare-earths (link in bio)."
+        },
+        {
+          "file": "rare-earths/slide-03.jpg",
+          "alt": "Rare earths: 7 of 17 rare earth elements have been under Chinese export controls since April 2025.",
+          "caption": "7 of 17 rare earth elements have been under Chinese export controls since April 2025.\n\nSource: MOFCOM · USGS. More at mineral.watch/rare-earths (link in bio)."
+        },
+        {
+          "file": "rare-earths/slide-04.jpg",
+          "alt": "Rare earths, why it matters: China handles ~91% of rare earth refining and separation. US import reliance is 67% overall and 100% for heavy rare eart",
+          "caption": "Rare earths: why it matters. China handles ~91% of rare earth refining and separation. US import reliance is 67% overall and 100% for heavy rare earths. Global reserves exceed 75 Mt; the constraint is separation capacity, not geology.\n\nMap, charts and timeline: mineral.watch/rare-earths (link in bio)."
+        }
+      ]
+    },
+    {
+      "slug": "copper",
+      "title": "Copper: who keeps the world wired?",
+      "link": "https://mineral.watch/copper",
+      "photo_credit": "NOT RECORDED on the site — confirm the header photo licence before publishing this set",
+      "caption": "Copper: who keeps the world wired?\n\nThe metal of electrification is running short of smelter feed.\n\n$0/t the 2026 benchmark treatment charge for copper concentrate, the lowest on record. (benchmark settlement · USGS)\n~30% of copper demand in 2035 is not covered by existing or announced mines. (IEA)\n\nChina refines ~48% of the world’s copper and holds ~50% of smelting capacity. LME copper hit a record $14,527.50/t in January 2026 as Cobre Panama, Grasberg and El Teniente disruptions tightened the mine side.\n\nInteractive map of mines, smelters and refineries, production and price charts, and the full timeline: mineral.watch/copper (link in bio).",
+      "first_comment": "#copper #commodities #smelting #criticalminerals #chile #china #supplychain #energytransition #mining #mineralwatch",
+      "media": [
+        {
+          "file": "copper/slide-01.jpg",
+          "alt": "Copper: Who keeps the world wired? Duotone photo of a copper mining site.",
+          "caption": "Copper: who keeps the world wired? The metal of electrification is running short of smelter feed.\n\nFull dashboard: mineral.watch/copper (link in bio)."
+        },
+        {
+          "file": "copper/slide-02.jpg",
+          "alt": "Copper: $0/t the 2026 benchmark treatment charge for copper concentrate, the lowest on record.",
+          "caption": "$0/t the 2026 benchmark treatment charge for copper concentrate, the lowest on record.\n\nSource: benchmark settlement · USGS. More at mineral.watch/copper (link in bio)."
+        },
+        {
+          "file": "copper/slide-03.jpg",
+          "alt": "Copper: ~30% of copper demand in 2035 is not covered by existing or announced mines.",
+          "caption": "~30% of copper demand in 2035 is not covered by existing or announced mines.\n\nSource: IEA. More at mineral.watch/copper (link in bio)."
+        },
+        {
+          "file": "copper/slide-04.jpg",
+          "alt": "Copper, why it matters: China refines ~48% of the world’s copper and holds ~50% of smelting capacity. LME copper hit a record $14,527.50/t in Ja",
+          "caption": "Copper: why it matters. China refines ~48% of the world’s copper and holds ~50% of smelting capacity. LME copper hit a record $14,527.50/t in January 2026 as Cobre Panama, Grasberg and El Teniente disruptions tightened the mine side.\n\nMap, charts and timeline: mineral.watch/copper (link in bio)."
+        }
+      ]
+    },
+    {
+      "slug": "manganese",
+      "title": "Manganese: who hardens the world's steel?",
+      "link": "https://mineral.watch/manganese",
+      "photo_credit": "NOT RECORDED on the site — confirm the header photo licence before publishing this set",
+      "caption": "Manganese: who hardens the world's steel?\n\nNinety percent goes into steel, and nothing else does the job.\n\n95% of battery-grade manganese sulphate is refined in China. (IEA)\n4% of the world’s manganese ore is mined in China. South Africa mines ~38%. (USGS MCS 2026)\n\nUSGS lists no satisfactory substitute for manganese in steelmaking. Gabon bans raw ore exports from 2029. Battery demand for manganese is projected to grow more than eightfold this decade.\n\nInteractive map of mines, smelters and refineries, production and price charts, and the full timeline: mineral.watch/manganese (link in bio).",
+      "first_comment": "#manganese #steel #batteries #southafrica #gabon #criticalminerals #china #supplychain #mining #mineralwatch",
+      "media": [
+        {
+          "file": "manganese/slide-01.jpg",
+          "alt": "Manganese: Who hardens the world's steel? Duotone photo of a manganese mining site.",
+          "caption": "Manganese: who hardens the world's steel? Ninety percent goes into steel, and nothing else does the job.\n\nFull dashboard: mineral.watch/manganese (link in bio)."
+        },
+        {
+          "file": "manganese/slide-02.jpg",
+          "alt": "Manganese: 95% of battery-grade manganese sulphate is refined in China.",
+          "caption": "95% of battery-grade manganese sulphate is refined in China.\n\nSource: IEA. More at mineral.watch/manganese (link in bio)."
+        },
+        {
+          "file": "manganese/slide-03.jpg",
+          "alt": "Manganese: 4% of the world’s manganese ore is mined in China. South Africa mines ~38%.",
+          "caption": "4% of the world’s manganese ore is mined in China. South Africa mines ~38%.\n\nSource: USGS MCS 2026. More at mineral.watch/manganese (link in bio)."
+        },
+        {
+          "file": "manganese/slide-04.jpg",
+          "alt": "Manganese, why it matters: USGS lists no satisfactory substitute for manganese in steelmaking. Gabon bans raw ore exports from 2029. Battery demand",
+          "caption": "Manganese: why it matters. USGS lists no satisfactory substitute for manganese in steelmaking. Gabon bans raw ore exports from 2029. Battery demand for manganese is projected to grow more than eightfold this decade.\n\nMap, charts and timeline: mineral.watch/manganese (link in bio)."
+        }
+      ]
+    },
+    {
+      "slug": "uranium",
+      "title": "Uranium: who fuels the nuclear revival?",
+      "link": "https://mineral.watch/uranium",
+      "photo_credit": "NOT RECORDED on the site — confirm the header photo licence before publishing this set",
+      "caption": "Uranium: who fuels the nuclear revival?\n\nThe nuclear revival runs through Russian centrifuges.\n\n43% of the world’s uranium enrichment capacity is Russian (Rosatom). (WNA 2025)\n1 Jan 2028 when US waivers on the ban on Russian enriched uranium expire. (US law · EIA)\n\nKazakhstan mined ~41% of the world’s uranium in 2025. 79 reactors are under construction, 37 of them in China. Spot uranium is near $90/lb, with the long-term price at a record $95.50/lb.\n\nInteractive map of mines, smelters and refineries, production and price charts, and the full timeline: mineral.watch/uranium (link in bio).",
+      "first_comment": "#uranium #nuclear #nuclearenergy #enrichment #kazakhstan #russia #criticalminerals #energysecurity #supplychain #mineralwatch",
+      "media": [
+        {
+          "file": "uranium/slide-01.jpg",
+          "alt": "Uranium: Who fuels the nuclear revival? Duotone photo of a uranium mining site.",
+          "caption": "Uranium: who fuels the nuclear revival? The nuclear revival runs through Russian centrifuges.\n\nFull dashboard: mineral.watch/uranium (link in bio)."
+        },
+        {
+          "file": "uranium/slide-02.jpg",
+          "alt": "Uranium: 43% of the world’s uranium enrichment capacity is Russian (Rosatom).",
+          "caption": "43% of the world’s uranium enrichment capacity is Russian (Rosatom).\n\nSource: WNA 2025. More at mineral.watch/uranium (link in bio)."
+        },
+        {
+          "file": "uranium/slide-03.jpg",
+          "alt": "Uranium: 1 Jan 2028 when US waivers on the ban on Russian enriched uranium expire.",
+          "caption": "1 Jan 2028 when US waivers on the ban on Russian enriched uranium expire.\n\nSource: US law · EIA. More at mineral.watch/uranium (link in bio)."
+        },
+        {
+          "file": "uranium/slide-04.jpg",
+          "alt": "Uranium, why it matters: Kazakhstan mined ~41% of the world’s uranium in 2025. 79 reactors are under construction, 37 of them in China. Spot uran",
+          "caption": "Uranium: why it matters. Kazakhstan mined ~41% of the world’s uranium in 2025. 79 reactors are under construction, 37 of them in China. Spot uranium is near $90/lb, with the long-term price at a record $95.50/lb.\n\nMap, charts and timeline: mineral.watch/uranium (link in bio)."
+        }
+      ]
+    },
+    {
+      "slug": "antimony",
+      "title": "Antimony: who's playing with fire?",
+      "link": "https://mineral.watch/antimony",
+      "photo_credit": "NOT RECORDED on the site — confirm the header photo licence before publishing this set",
+      "caption": "Antimony: who's playing with fire?\n\nA small market with one of the thinnest reserve cushions of any strategic mineral.\n\n>85% of the world’s antimony is mined in China, Russia and Tajikistan. (USGS MCS 2026)\n$60,000 /t: the spring-2025 price peak after China began licensing exports, up from ~$12,000–14,000. (price-agency assessments)\n\nReserves of ~2 Mt are under two decades of supply at current mining rates. Antimony goes into flame retardants, lead-acid batteries, solar glass, ammunition primers and night-vision detectors.\n\nInteractive map of mines, smelters and refineries, production and price charts, and the full timeline: mineral.watch/antimony (link in bio).",
+      "first_comment": "#antimony #criticalminerals #exportcontrols #china #defence #supplychain #mining #commodities #mineralwatch",
+      "media": [
+        {
+          "file": "antimony/slide-01.jpg",
+          "alt": "Antimony: Who's playing with fire? Duotone photo of a antimony mining site.",
+          "caption": "Antimony: who's playing with fire? A small market with one of the thinnest reserve cushions of any strategic mineral.\n\nFull dashboard: mineral.watch/antimony (link in bio)."
+        },
+        {
+          "file": "antimony/slide-02.jpg",
+          "alt": "Antimony: >85% of the world’s antimony is mined in China, Russia and Tajikistan.",
+          "caption": ">85% of the world’s antimony is mined in China, Russia and Tajikistan.\n\nSource: USGS MCS 2026. More at mineral.watch/antimony (link in bio)."
+        },
+        {
+          "file": "antimony/slide-03.jpg",
+          "alt": "Antimony: $60,000 /t: the spring-2025 price peak after China began licensing exports, up from ~$12,000–14,000.",
+          "caption": "$60,000 /t: the spring-2025 price peak after China began licensing exports, up from ~$12,000–14,000.\n\nSource: price-agency assessments. More at mineral.watch/antimony (link in bio)."
+        },
+        {
+          "file": "antimony/slide-04.jpg",
+          "alt": "Antimony, why it matters: Reserves of ~2 Mt are under two decades of supply at current mining rates. Antimony goes into flame retardants, lead-aci",
+          "caption": "Antimony: why it matters. Reserves of ~2 Mt are under two decades of supply at current mining rates. Antimony goes into flame retardants, lead-acid batteries, solar glass, ammunition primers and night-vision detectors.\n\nMap, charts and timeline: mineral.watch/antimony (link in bio)."
+        }
+      ]
+    }
+  ]
+}
