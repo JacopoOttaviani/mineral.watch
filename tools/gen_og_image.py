@@ -83,7 +83,7 @@ body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFo
   linear-gradient(180deg,rgba(8,12,17,.9) 0%%,rgba(8,12,17,0) 19%%,rgba(8,12,17,0) 76%%,rgba(8,12,17,.92) 100%%),
   radial-gradient(80%% 120%% at 108%% 50%%,rgba(8,12,17,.55) 0%%,rgba(8,12,17,0) 60%%)}
 .copy{position:absolute;left:76px;top:0;height:630px;width:470px;display:flex;flex-direction:column;justify-content:center}
-.kick{display:flex;align-items:center;gap:11px;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:#8b98a5;margin-bottom:26px}
+.kick{display:flex;align-items:center;gap:11px;font-size:11.5px;white-space:nowrap;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:#8b98a5;margin-bottom:26px}
 .kick i{display:block;width:26px;height:1px;background:#3a4859}
 .lock{display:flex;align-items:center;gap:18px}
 h1{font-size:63px;line-height:.95;font-weight:800;letter-spacing:-.036em;white-space:nowrap}
@@ -97,12 +97,12 @@ p{margin-top:22px;font-size:22px;line-height:1.42;color:#a9b6c4;max-width:400px;
   <div class="art"><svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg"><g class="fan">%(fan)s</g></svg></div>
   <div class="scrim"></div><div class="vig"></div>
   <div class="copy">
-    <div class="kick"><i></i>Open data &middot; Strategic minerals</div>
+    <div class="kick"><i></i>Open data &middot; Minerals &middot; Oil &amp; gas &middot; Green transition</div>
     <div class="lock"><svg width="62" height="62" viewBox="-2 4 68 58">%(mark)s</svg><h1>mineral<b>.watch</b></h1></div>
-    <p>Who mines it, who refines it, and where the chokepoints are.</p>
+    <p>Who produces it, who refines it, and where the chokepoints are.</p>
     <div class="rule"></div>
   </div>
-  <div class="foot">USGS &middot; BGS &middot; UN Comtrade &middot; IEA</div>
+  <div class="foot">USGS &middot; BGS &middot; UN Comtrade &middot; IEA &middot; EIA &middot; OPEC</div>
 </div>'''
 
 

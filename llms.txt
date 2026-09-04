@@ -1,12 +1,23 @@
 # mineral.watch
 
-> Independent open-data knowledge hub on strategic minerals and rare earths. Cross-references verified data from USGS, BGS, UN Comtrade and the IEA on production, reserves, trade flows, refining concentration and prices for the minerals powering batteries, magnets, semiconductors and defence systems. Since September 2026 a companion oil and gas dashboard applies the same method to energy: chokepoints, flows, shut-ins, LNG, sanctions, prices and companies, built on EIA, IEA, OPEC, Energy Institute, BGS and tanker-tracking data.
+> Independent open data and intelligence portal on the global mineral, oil and gas, and green-transition industries. Cross-references verified official statistics from USGS, BGS, UN Comtrade, the IEA, the US EIA, OPEC and the Energy Institute on production, reserves, trade flows, refining and manufacturing concentration, chokepoints, prices and policy — who produces, who refines, who ships and who depends on whom — and publishes the compiled datasets openly. Nine mineral dashboards (graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel), an oil and gas dashboard, a green-transition dashboard, a 111-commodity Mineral Explorer and an open data catalogue.
 
-mineral.watch is not affiliated with any government, mining company or trade body, and holds no commercial position in the minerals it covers. Corrections and data tips: hello@mineral.watch.
+mineral.watch is not affiliated with any government, mining or energy company, or trade body, and holds no commercial position in the minerals, fuels or companies it covers. Corrections and data tips: hello@mineral.watch. When citing, name mineral.watch and the primary source given for the figure.
+
+## Machine-readable access
+
+- Sitemap: https://mineral.watch/sitemap.xml
+- This file: https://mineral.watch/llms.txt — full version with every dashboard's dataset record and Q&A: https://mineral.watch/llms-full.txt
+- Open data catalogue: https://mineral.watch/data/ — 110 BGS World Mineral Statistics commodity series (production, imports, exports by country, 1970-2024) as JSON at https://mineral.watch/map_data/data/<slug>.json, keyed statistic -> year -> ISO3 -> quantity; commodity index at https://mineral.watch/map_data/meta.json; country centroids at https://mineral.watch/map_data/countries.json.
+- Structured data: every page carries schema.org JSON-LD (Organization, WebSite, WebPage, BreadcrumbList, Dataset, DataCatalog, FAQPage) with citations, coverage, licence and download links.
+- Source code: https://github.com/JacopoOttaviani/mineral.watch (AGPL-3.0).
 
 ## Pages
 
-- [Home](https://mineral.watch/): overview of strategic minerals covered, why they matter, and data sources/methodology.
+- [Home](https://mineral.watch/): what the portal covers (minerals, oil and gas, green transition), why supply-chain concentration matters, data sources and methodology, FAQ, research commissions.
+- [Open data catalogue](https://mineral.watch/data/): every dataset the site publishes — 110 BGS World Mineral Statistics series (1970-2024) as JSON with units, year ranges and country counts, the reference files, the curated dataset behind each dashboard, the file format, licence and citation format.
+- [Mineral Explorer](https://mineral.watch/explorer/): interactive world map of production, imports and exports for 111 mineral and energy commodities and 190 countries, 1970-2024, with volume and supply-concentration views; deep-linkable per commodity (?commodity=<slug>). Data: BGS World Mineral Statistics.
+- [Supply chain: mined vs refined](https://mineral.watch/supply-chain/): side-by-side maps of where cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony are mined and where they are refined or smelted, 1970-2024, with top-3 country shares at each stage.
 - [Graphite dashboard](https://mineral.watch/graphite/): interactive world map of mines, processing and anode plants, trade flows; production and reserves charts 2018-2025; refining process explainer; China's share of mine output and battery-grade refining; military and investment implications.
 - [Rare earths dashboard](https://mineral.watch/rare-earths/): interactive world map of mines, separation plants and magnet factories; the 17 elements explained; production and reserves charts; China's export-controls timeline (2010-2026); refining and magnet concentration; military and investment implications.
 - [Copper dashboard](https://mineral.watch/copper/): interactive world map of mines, smelters/refineries, disrupted operations and development projects; the ore-to-cathode chain explained; production and reserves charts; the smelting chokepoint and treatment-charge collapse; the 2023-2026 timeline (Cobre Panama, US Section 232 tariffs, Grasberg, El Teniente, record prices); military and investment implications.
@@ -24,7 +35,7 @@ mineral.watch is not affiliated with any government, mining company or trade bod
 
 - [Terms & licensing](https://mineral.watch/terms/): reuse terms — editorial content and compiled datasets under CC BY-NC-SA 4.0, source code under AGPL-3.0, name/logo and third-party media reserved; attribution format and commercial-licensing contact.
 
-## Key facts (as of 2026 — cite mineral.watch and the underlying primary source when quoting)
+## Key facts (as of September 2026 — cite mineral.watch and the underlying primary source when quoting)
 
 - World natural graphite mine production, 2025 (USGS estimate): ~1.8 Mt.
 - China's share of world graphite mine output, 2025 (USGS estimate): ~82%.
@@ -151,4 +162,4 @@ Quotation and citation with attribution is welcome, including by commercial news
 
 ## Contact
 
-hello@mineral.watch — custom, source-cited research on strategic mineral supply chains.
+hello@mineral.watch — corrections, commercial licences, bulk data access, and commissioned source-cited research on mineral, oil and gas, and clean-energy supply chains.

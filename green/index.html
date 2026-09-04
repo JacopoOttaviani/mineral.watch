@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>GreenWatch — Tracking the Green Transition Supply Chain</title>
 <meta name="description" content="Open data visualisation tracking the green transition's supply chain: who builds the world's solar modules, battery cells, wind turbines and electrolysers, which minerals they consume, China's ~80% manufacturing grip, Europe's gigafactory reckoning and where the EU's green money goes — Innovation Fund, Recovery and Resilience Facility, Just Transition Fund, Modernisation Fund, Hydrogen Bank and more. Built on IEA, IRENA, GWEC, BNEF and European Commission data.">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="mineral.watch">
 <meta name="copyright" content="© 2026 mineral.watch">
 <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
@@ -22,8 +22,8 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="GreenWatch — Tracking the Green Transition Supply Chain">
 <meta property="og:description" content="Interactive world map of clean-tech factories, EU-funded flagship projects and stalled gigafactories; deployment, investment and manufacturing-concentration charts; the minerals the machines eat; and a fund-by-fund guide to the EU's green money — built on IEA, IRENA, GWEC, BNEF and European Commission data.">
-<meta property="og:image" content="https://mineral.watch/brand/og-image.png?v=2">
-<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png?v=3">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png?v=3">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GreenWatch — Tracking the Green Transition Supply Chain">
 <meta name="twitter:description" content="Who builds the machines of net zero, which minerals they eat, and where the EU's green money goes — Innovation Fund, RRF, Just Transition Fund, Modernisation Fund, Hydrogen Bank. Built on IEA, IRENA, GWEC, BNEF and European Commission data.">
-<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png?v=3">
 <meta name="twitter:image:alt" content="GreenWatch — tracking the green transition supply chain">
 
 <!-- Structured data -->
@@ -42,23 +42,101 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://mineral.watch/green/#webpage",
+      "url": "https://mineral.watch/green/",
+      "name": "GreenWatch — Tracking the Green Transition Supply Chain",
+      "description": "Open data visualisation tracking the green transition's supply chain: who builds the world's solar modules, battery cells, wind turbines and electrolysers, which minerals they consume, China's ~80% manufacturing grip, Europe's gigafactory reckoning and where the EU's green money goes — Innovation Fund, Recovery and Resilience Facility, Just Transition Fund, Modernisation Fund, Hydrogen Bank and more. Built on IEA, IRENA, GWEC, BNEF and European Commission data.",
+      "isPartOf": {
+        "@id": "https://mineral.watch/#website"
+      },
+      "publisher": {
+        "@id": "https://mineral.watch/#organization"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-09-04",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Energy transition",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Energy_transition"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Renewable energy",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Renewable_energy",
+            "https://www.wikidata.org/wiki/Q12705"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Electric vehicle battery",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Electric_vehicle_battery"
+          ]
+        }
+      ],
+      "breadcrumb": {
+        "@id": "https://mineral.watch/green/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://mineral.watch/brand/og-image.png?v=3",
+        "width": 1200,
+        "height": 630
+      },
+      "mainEntity": {
+        "@id": "https://mineral.watch/green/#dataset"
+      },
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
-        { "@type": "ListItem", "position": 2, "name": "Green transition", "item": "https://mineral.watch/green/" }
-      ]
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "mineral.watch",
+          "item": "https://mineral.watch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Green transition",
+          "item": "https://mineral.watch/green/"
+        }
+      ],
+      "@id": "https://mineral.watch/green/#breadcrumb"
     },
     {
       "@type": "Dataset",
       "name": "GreenWatch — Green Transition Supply Chain Data",
       "description": "Clean-technology factories, EU-funded flagship projects and stalled gigafactories; solar, wind, EV and battery deployment; clean-energy investment; manufacturing concentration by country and stage; clean-energy shares of mineral demand; and EU green-transition funding instruments with envelopes, awards and disbursements.",
       "url": "https://mineral.watch/green/",
-      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "creator": {
+        "@id": "https://mineral.watch/#organization"
+      },
       "temporalCoverage": "2018/2026",
-      "spatialCoverage": "Worldwide, with a focus on the European Union",
-      "variableMeasured": ["Capacity additions", "EV sales", "Clean energy investment", "Manufacturing capacity shares", "Battery pack prices", "Mineral demand shares", "EU funding envelopes", "Grants awarded", "Companies"],
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "Worldwide, with a focus on the European Union"
+      },
+      "variableMeasured": [
+        "Capacity additions",
+        "EV sales",
+        "Clean energy investment",
+        "Manufacturing capacity shares",
+        "Battery pack prices",
+        "Mineral demand shares",
+        "EU funding envelopes",
+        "Grants awarded",
+        "Companies"
+      ],
       "isAccessibleForFree": true,
-      "license": "https://mineral.watch/",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "citation": [
         "IEA World Energy Investment 2025 and 2026",
         "IEA Renewables 2025; IEA Global EV Outlook 2026; IEA Energy Technology Perspectives 2024",
@@ -67,7 +145,65 @@
         "BloombergNEF Battery Price Survey and Energy Transition Investment Trends",
         "European Commission — Innovation Fund, Recovery and Resilience Scoreboard, Just Transition Platform, Modernisation Fund, Social Climate Fund; European Investment Bank",
         "Company disclosures and government announcements"
-      ]
+      ],
+      "@id": "https://mineral.watch/green/#dataset",
+      "publisher": {
+        "@id": "https://mineral.watch/#organization"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-09-04",
+      "keywords": [
+        "energy transition",
+        "clean energy supply chain",
+        "solar manufacturing",
+        "wind turbines",
+        "gigafactories",
+        "electric vehicles",
+        "battery manufacturing",
+        "EU green funds",
+        "Innovation Fund",
+        "Net-Zero Industry Act",
+        "clean energy investment",
+        "green industrial policy",
+        "open data"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Energy transition",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Energy_transition"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Renewable energy",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Renewable_energy",
+            "https://www.wikidata.org/wiki/Q12705"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Electric vehicle battery",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Electric_vehicle_battery"
+          ]
+        }
+      ],
+      "isBasedOn": [
+        "https://www.iea.org/reports/world-energy-investment-2026",
+        "https://www.iea.org/reports/global-ev-outlook-2026",
+        "https://climate.ec.europa.eu/",
+        "https://cinea.ec.europa.eu/programmes/innovation-fund_en"
+      ],
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "@id": "https://mineral.watch/data/#catalog",
+        "name": "mineral.watch open data catalogue",
+        "url": "https://mineral.watch/data/"
+      },
+      "measurementTechnique": "Compilation and cross-referencing of official statistics and primary disclosures; each figure is cited to its source and dated on the page, estimates are flagged."
     },
     {
       "@type": "FAQPage",
@@ -144,7 +280,8 @@
             "text": "That's exactly what we do. We produce commissioned deep-dive reports on the green transition and the strategic minerals behind it, covering angles such as mine-to-megawatt supply-chain mapping for a given technology, EU funding and state-aid tracking (Innovation Fund, Hydrogen Bank, RRF, Just Transition Fund, IPCEIs) by country or sector, manufacturing-concentration and import-dependence analysis, gigafactory and offtake pipelines, and the security exposure of grid hardware. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal."
           }
         }
-      ]
+      ],
+      "@id": "https://mineral.watch/green/#faq"
     }
   ]
 }
@@ -1011,8 +1148,8 @@ footer .legal a{text-decoration:underline}
 </section>
 
 <footer>
-  <a href="/">mineral.watch</a> · open intelligence on strategic minerals &amp; rare earths · sources: USGS, BGS, UN Comtrade, IEA
-  <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/terms/">Terms &amp; licensing</a></span>
+  <a href="/">mineral.watch</a> · open data &amp; intelligence on minerals, oil &amp; gas and the green transition · sources: USGS, BGS, UN Comtrade, IEA, EIA
+  <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/data/">Open data</a> · <a href="/terms/">Terms &amp; licensing</a></span>
 </footer>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>GraphiteWatch — Tracking the Global Graphite Supply Chain</title>
 <meta name="description" content="Open data visualisation tracking the global graphite supply chain: mines, trade flows, processing hubs and prices. Built on USGS, BGS, UN Comtrade and IEA data.">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="mineral.watch">
 <meta name="copyright" content="© 2026 mineral.watch">
 <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
@@ -22,8 +22,8 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="GraphiteWatch — Tracking the Global Graphite Supply Chain">
 <meta property="og:description" content="Interactive world map of graphite mines, processing and anode plants, trade flows, production/reserves charts and the China chokepoint — built on USGS, BGS, UN Comtrade and IEA data.">
-<meta property="og:image" content="https://mineral.watch/brand/og-image.png?v=2">
-<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png?v=3">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png?v=3">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GraphiteWatch — Tracking the Global Graphite Supply Chain">
 <meta name="twitter:description" content="Interactive map, production/reserves charts and the China chokepoint in the global graphite supply chain — built on USGS, BGS, UN Comtrade and IEA data.">
-<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png?v=3">
 <meta name="twitter:image:alt" content="GraphiteWatch — tracking the global graphite supply chain">
 
 <!-- Structured data -->
@@ -42,28 +42,142 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://mineral.watch/graphite/#webpage",
+      "url": "https://mineral.watch/graphite/",
+      "name": "GraphiteWatch — Tracking the Global Graphite Supply Chain",
+      "description": "Open data visualisation tracking the global graphite supply chain: mines, trade flows, processing hubs and prices. Built on USGS, BGS, UN Comtrade and IEA data.",
+      "isPartOf": {
+        "@id": "https://mineral.watch/#website"
+      },
+      "publisher": {
+        "@id": "https://mineral.watch/#organization"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-09-04",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Graphite",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Graphite",
+            "https://www.wikidata.org/wiki/Q5309"
+          ]
+        }
+      ],
+      "breadcrumb": {
+        "@id": "https://mineral.watch/graphite/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://mineral.watch/brand/og-image.png?v=3",
+        "width": 1200,
+        "height": 630
+      },
+      "mainEntity": {
+        "@id": "https://mineral.watch/graphite/#dataset"
+      },
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
-        { "@type": "ListItem", "position": 2, "name": "Graphite", "item": "https://mineral.watch/graphite/" }
-      ]
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "mineral.watch",
+          "item": "https://mineral.watch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Graphite",
+          "item": "https://mineral.watch/graphite/"
+        }
+      ],
+      "@id": "https://mineral.watch/graphite/#breadcrumb"
     },
     {
       "@type": "Dataset",
       "name": "GraphiteWatch — Global Graphite Supply Chain Data",
       "description": "Mines, processing and anode plants, trade flows, production and reserves data, and prices for the global graphite supply chain.",
       "url": "https://mineral.watch/graphite/",
-      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "creator": {
+        "@id": "https://mineral.watch/#organization"
+      },
       "temporalCoverage": "2018/2026",
-      "spatialCoverage": "Worldwide",
-      "variableMeasured": ["Mine production", "Reserves", "Trade flows", "Refining capacity", "Prices", "Companies"],
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "variableMeasured": [
+        "Mine production",
+        "Reserves",
+        "Trade flows",
+        "Refining capacity",
+        "Prices",
+        "Companies"
+      ],
       "isAccessibleForFree": true,
-      "license": "https://mineral.watch/",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "citation": [
         "USGS National Minerals Information Center, Mineral Commodity Summaries 2026",
         "British Geological Survey, World Mineral Statistics",
         "UN Comtrade",
         "IEA Global Critical Minerals Outlook 2025"
+      ],
+      "@id": "https://mineral.watch/graphite/#dataset",
+      "publisher": {
+        "@id": "https://mineral.watch/#organization"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-09-04",
+      "keywords": [
+        "graphite",
+        "natural graphite",
+        "synthetic graphite",
+        "spherical graphite",
+        "battery anode",
+        "lithium-ion battery materials",
+        "critical minerals",
+        "supply chain",
+        "China export controls",
+        "mine production",
+        "reserves",
+        "open data"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Graphite",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Graphite",
+            "https://www.wikidata.org/wiki/Q5309"
+          ]
+        }
+      ],
+      "isBasedOn": [
+        "https://www.usgs.gov/centers/national-minerals-information-center/mineral-commodity-summaries",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+        "https://comtradeplus.un.org/",
+        "https://www.iea.org/topics/critical-minerals"
+      ],
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "@id": "https://mineral.watch/data/#catalog",
+        "name": "mineral.watch open data catalogue",
+        "url": "https://mineral.watch/data/"
+      },
+      "measurementTechnique": "Compilation and cross-referencing of official statistics and primary disclosures; each figure is cited to its source and dated on the page, estimates are flagged.",
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "Graphite — production, imports, exports by country, 1970–2024",
+          "description": "BGS World Mineral Statistics series for graphite: production, imports, exports by country (ISO3) and year; production in tonnes (metric); imports in tonnes (metric); exports in tonnes (metric). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/graphite.json",
+          "encodingFormat": "application/json",
+          "contentSize": "47 KB"
+        }
       ]
     },
     {
@@ -109,7 +223,8 @@
             "text": "That's exactly what we do. We produce commissioned deep-dive reports on graphite, covering angles such as mine-to-anode supply-chain mapping, China's grip on spherical graphite and battery-grade refining, natural versus synthetic anode economics, US and EU import dependency and exposure to Chinese export controls, and the emerging ex-China projects trying to break the bottleneck. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal."
           }
         }
-      ]
+      ],
+      "@id": "https://mineral.watch/graphite/#faq"
     }
   ]
 }
@@ -810,8 +925,8 @@ footer .legal a{text-decoration:underline}
 </section>
 
 <footer>
-  <a href="/">mineral.watch</a> · open intelligence on strategic minerals &amp; rare earths · sources: USGS, BGS, UN Comtrade, IEA
-  <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/terms/">Terms &amp; licensing</a></span>
+  <a href="/">mineral.watch</a> · open data &amp; intelligence on minerals, oil &amp; gas and the green transition · sources: USGS, BGS, UN Comtrade, IEA, EIA
+  <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/data/">Open data</a> · <a href="/terms/">Terms &amp; licensing</a></span>
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

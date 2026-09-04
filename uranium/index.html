@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>UraniumWatch — Tracking the Global Uranium &amp; Nuclear Fuel Supply Chain</title>
 <meta name="description" content="Open data visualisation tracking the global uranium supply chain: mines, conversion and enrichment plants, prices, the Russian enrichment chokepoint and the nuclear revival. Built on WNA, IAEA, EIA and BGS data.">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="mineral.watch">
 <meta name="copyright" content="© 2026 mineral.watch">
 <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
@@ -22,8 +22,8 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="UraniumWatch — Tracking the Global Uranium &amp; Nuclear Fuel Supply Chain">
 <meta property="og:description" content="Interactive world map of uranium mines, conversion and enrichment plants, production and price charts, the Russian enrichment chokepoint and the AI-driven nuclear revival — built on WNA, IAEA, EIA and BGS data.">
-<meta property="og:image" content="https://mineral.watch/brand/og-image.png?v=2">
-<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png?v=3">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png?v=3">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="UraniumWatch — Tracking the Global Uranium &amp; Nuclear Fuel Supply Chain">
 <meta name="twitter:description" content="Interactive map, production and price charts, the enrichment chokepoint, the Russian-ban timeline and the AI-driven nuclear revival — built on WNA, IAEA, EIA and BGS data.">
-<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png?v=3">
 <meta name="twitter:image:alt" content="UraniumWatch — tracking the global uranium supply chain">
 
 <!-- Structured data -->
@@ -42,23 +42,92 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://mineral.watch/uranium/#webpage",
+      "url": "https://mineral.watch/uranium/",
+      "name": "UraniumWatch — Tracking the Global Uranium & Nuclear Fuel Supply Chain",
+      "description": "Open data visualisation tracking the global uranium supply chain: mines, conversion and enrichment plants, prices, the Russian enrichment chokepoint and the nuclear revival. Built on WNA, IAEA, EIA and BGS data.",
+      "isPartOf": {
+        "@id": "https://mineral.watch/#website"
+      },
+      "publisher": {
+        "@id": "https://mineral.watch/#organization"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-09-04",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Uranium",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Uranium",
+            "https://www.wikidata.org/wiki/Q1098"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Nuclear fuel cycle",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Nuclear_fuel_cycle"
+          ]
+        }
+      ],
+      "breadcrumb": {
+        "@id": "https://mineral.watch/uranium/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://mineral.watch/brand/og-image.png?v=3",
+        "width": 1200,
+        "height": 630
+      },
+      "mainEntity": {
+        "@id": "https://mineral.watch/uranium/#dataset"
+      },
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
-        { "@type": "ListItem", "position": 2, "name": "Uranium", "item": "https://mineral.watch/uranium/" }
-      ]
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "mineral.watch",
+          "item": "https://mineral.watch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Uranium",
+          "item": "https://mineral.watch/uranium/"
+        }
+      ],
+      "@id": "https://mineral.watch/uranium/#breadcrumb"
     },
     {
       "@type": "Dataset",
       "name": "UraniumWatch — Global Uranium Supply Chain Data",
       "description": "Mines, conversion and enrichment plants, production and resources data, reactor requirements, prices and policy timeline for the global uranium and nuclear fuel supply chain.",
       "url": "https://mineral.watch/uranium/",
-      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "creator": {
+        "@id": "https://mineral.watch/#organization"
+      },
       "temporalCoverage": "1970/2026",
-      "spatialCoverage": "Worldwide",
-      "variableMeasured": ["Mine production", "Uranium resources", "Enrichment capacity", "Conversion capacity", "Reactor requirements", "Prices", "Companies"],
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "variableMeasured": [
+        "Mine production",
+        "Uranium resources",
+        "Enrichment capacity",
+        "Conversion capacity",
+        "Reactor requirements",
+        "Prices",
+        "Companies"
+      ],
       "isAccessibleForFree": true,
-      "license": "https://mineral.watch/",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "citation": [
         "World Nuclear Association — World Uranium Mining Production and World Nuclear Fuel Report 2025",
         "IAEA Power Reactor Information System (PRIS)",
@@ -66,6 +135,65 @@
         "US EIA — Uranium Marketing Annual and Domestic Uranium Production reports",
         "British Geological Survey — World Mineral Statistics",
         "UxC and TradeTech price indicators as published by Cameco; company and government disclosures"
+      ],
+      "@id": "https://mineral.watch/uranium/#dataset",
+      "publisher": {
+        "@id": "https://mineral.watch/#organization"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-09-04",
+      "keywords": [
+        "uranium",
+        "uranium mining",
+        "uranium enrichment",
+        "nuclear fuel cycle",
+        "Kazatomprom",
+        "Rosatom",
+        "uranium price",
+        "nuclear power",
+        "critical minerals",
+        "supply chain",
+        "open data"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Uranium",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Uranium",
+            "https://www.wikidata.org/wiki/Q1098"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Nuclear fuel cycle",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Nuclear_fuel_cycle"
+          ]
+        }
+      ],
+      "isBasedOn": [
+        "https://world-nuclear.org/information-library",
+        "https://pris.iaea.org/",
+        "https://www.eia.gov/international/data/world",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
+      ],
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "@id": "https://mineral.watch/data/#catalog",
+        "name": "mineral.watch open data catalogue",
+        "url": "https://mineral.watch/data/"
+      },
+      "measurementTechnique": "Compilation and cross-referencing of official statistics and primary disclosures; each figure is cited to its source and dated on the page, estimates are flagged.",
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "Uranium — production by country, 1970–2024",
+          "description": "BGS World Mineral Statistics series for uranium: production by country (ISO3) and year; production in tonnes (metal content). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/uranium.json",
+          "encodingFormat": "application/json",
+          "contentSize": "11 KB"
+        }
       ]
     },
     {
@@ -127,7 +255,8 @@
             "text": "That's exactly what we do. We produce commissioned deep-dive reports on uranium, covering angles such as mine supply and the mid-2030s depletion question, enrichment and conversion chokepoints, exposure to Russian material ahead of the 2028 waiver cliff, demand from reactor buildouts, restarts and big-tech power deals, and how spot and long-term contract prices behave. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal."
           }
         }
-      ]
+      ],
+      "@id": "https://mineral.watch/uranium/#faq"
     }
   ]
 }
@@ -949,8 +1078,8 @@ footer .legal a{text-decoration:underline}
 </section>
 
 <footer>
-  <a href="/">mineral.watch</a> · open intelligence on strategic minerals &amp; rare earths · sources: USGS, BGS, UN Comtrade, IEA
-  <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/terms/">Terms &amp; licensing</a></span>
+  <a href="/">mineral.watch</a> · open data &amp; intelligence on minerals, oil &amp; gas and the green transition · sources: USGS, BGS, UN Comtrade, IEA, EIA
+  <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/data/">Open data</a> · <a href="/terms/">Terms &amp; licensing</a></span>
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

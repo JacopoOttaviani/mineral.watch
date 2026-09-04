@@ -1,4 +1,71 @@
+# mineral.watch — open data & intelligence on minerals, oil & gas and the green transition.
+# Everything here is meant to be read, indexed and cited. Search engines, AI assistants and
+# research crawlers are all welcome; please attribute (CC BY-NC-SA 4.0, see /terms/).
+#
+# Machine-readable entry points:
+#   /sitemap.xml        every page with last-modified dates
+#   /llms.txt           site summary and key facts for AI assistants
+#   /llms-full.txt      the above plus each dashboard's dataset record and Q&A
+#   /data/              open data catalogue (schema.org DataCatalog, JSON downloads)
+#   /map_data/          the JSON files themselves
+
 User-agent: *
+Allow: /
+
+# Search engines
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: YandexBot
+Allow: /
+
+# AI assistants and their search / training crawlers
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+User-agent: Meta-ExternalFetcher
+Allow: /
+User-agent: MistralAI-User
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: YouBot
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: Bytespider
 Allow: /
 
 Sitemap: https://mineral.watch/sitemap.xml

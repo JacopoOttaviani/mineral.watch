@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Mined vs Refined — Strategic Mineral Supply-Chain Map | mineral.watch</title>
 <meta name="description" content="Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024. Data from the British Geological Survey.">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="mineral.watch">
 <meta name="copyright" content="© 2026 mineral.watch">
 <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
@@ -20,13 +20,291 @@
 <meta property="og:site_name" content="mineral.watch">
 <meta property="og:title" content="Mined vs Refined — Strategic Mineral Supply-Chain Map">
 <meta property="og:description" content="Side-by-side world maps of where strategic minerals are mined and where they are refined. Cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024.">
-<meta property="og:image" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png?v=3">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mined vs Refined — Strategic Mineral Supply-Chain Map">
 <meta name="twitter:description" content="Where strategic minerals are mined vs where they are refined, mapped side by side. Built on BGS World Mineral Statistics.">
-<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png?v=3">
 
 <script>if(/(?:^|[?&])embed=1(?:&|$)/.test(location.search)) document.documentElement.setAttribute("data-embed", "1");</script>
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://mineral.watch/supply-chain/#webpage",
+      "url": "https://mineral.watch/supply-chain/",
+      "name": "Mined vs Refined — Strategic Mineral Supply-Chain Map | mineral.watch",
+      "description": "Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024. Data from the British Geological Survey.",
+      "isPartOf": {
+        "@id": "https://mineral.watch/#website"
+      },
+      "publisher": {
+        "@id": "https://mineral.watch/#organization"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-09-04",
+      "breadcrumb": {
+        "@id": "https://mineral.watch/supply-chain/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://mineral.watch/brand/og-image.png?v=3",
+        "width": 1200,
+        "height": 630
+      },
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "mainEntity": {
+        "@id": "https://mineral.watch/supply-chain/#dataset"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://mineral.watch/supply-chain/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "mineral.watch",
+          "item": "https://mineral.watch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Supply chain: mined vs refined",
+          "item": "https://mineral.watch/supply-chain/"
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://mineral.watch/supply-chain/#dataset",
+      "name": "Mined vs refined — where strategic minerals are mined and where they are processed, 1970–2024",
+      "description": "Paired country-level series of mine-stage and refined/smelter-stage production for cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024, compiled by mineral.watch from BGS World Mineral Statistics to show how supply-chain concentration shifts from the mine to the refinery. Mine-stage figures for cobalt, copper and nickel are metal content; refined figures are gross tonnes.",
+      "url": "https://mineral.watch/supply-chain/",
+      "creator": {
+        "@id": "https://mineral.watch/#organization"
+      },
+      "publisher": {
+        "@id": "https://mineral.watch/#organization"
+      },
+      "isBasedOn": [
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
+      ],
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "isAccessibleForFree": true,
+      "inLanguage": "en",
+      "temporalCoverage": "1970/2024",
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "variableMeasured": [
+        "Mine production",
+        "Refined production",
+        "Smelter production",
+        "Top-3 country share"
+      ],
+      "keywords": [
+        "mineral refining",
+        "supply chain concentration",
+        "mine production",
+        "refined production",
+        "cobalt",
+        "copper",
+        "nickel",
+        "lithium",
+        "graphite",
+        "rare earths",
+        "manganese",
+        "antimony",
+        "open data"
+      ],
+      "dateModified": "2026-09-01",
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "@id": "https://mineral.watch/data/#catalog",
+        "name": "mineral.watch open data catalogue",
+        "url": "https://mineral.watch/data/"
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "Cobalt, mine — production by country, 1970–2024",
+          "description": "BGS World Mineral Statistics series for cobalt, mine: production by country (ISO3) and year; production in tonnes (metal content). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/cobalt-mine.json",
+          "encodingFormat": "application/json",
+          "contentSize": "10 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Cobalt, refined — production by country, 1972–2024",
+          "description": "BGS World Mineral Statistics series for cobalt, refined: production by country (ISO3) and year; production in tonnes (metric). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/cobalt-refined.json",
+          "encodingFormat": "application/json",
+          "contentSize": "8 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Copper, mine — production by country, 1970–2024",
+          "description": "BGS World Mineral Statistics series for copper, mine: production by country (ISO3) and year; production in tonnes (metal content). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/copper-mine.json",
+          "encodingFormat": "application/json",
+          "contentSize": "39 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Copper, smelter — production by country, 1970–2024",
+          "description": "BGS World Mineral Statistics series for copper, smelter: production by country (ISO3) and year; production in tonnes (metric). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/copper-smelter.json",
+          "encodingFormat": "application/json",
+          "contentSize": "27 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Copper, refined — production by country, 1976–2024",
+          "description": "BGS World Mineral Statistics series for copper, refined: production by country (ISO3) and year; production in tonnes (metric). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/copper-refined.json",
+          "encodingFormat": "application/json",
+          "contentSize": "29 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Nickel, mine — production by country, 1970–2024",
+          "description": "BGS World Mineral Statistics series for nickel, mine: production by country (ISO3) and year; production in tonnes (metal content). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/nickel-mine.json",
+          "encodingFormat": "application/json",
+          "contentSize": "17 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Nickel, smelter/refinery — production by country, 1977–2024",
+          "description": "BGS World Mineral Statistics series for nickel, smelter/refinery: production by country (ISO3) and year; production in tonnes (metric). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/nickel-smelter-refinery.json",
+          "encodingFormat": "application/json",
+          "contentSize": "16 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Lithium minerals — production by country, 1974–2024",
+          "description": "BGS World Mineral Statistics series for lithium minerals: production by country (ISO3) and year; production in tonnes (metric). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/lithium-minerals.json",
+          "encodingFormat": "application/json",
+          "contentSize": "7 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Graphite — production, imports, exports by country, 1970–2024",
+          "description": "BGS World Mineral Statistics series for graphite: production, imports, exports by country (ISO3) and year; production in tonnes (metric); imports in tonnes (metric); exports in tonnes (metric). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/graphite.json",
+          "encodingFormat": "application/json",
+          "contentSize": "47 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Rare earth minerals — production by country, 1975–2024",
+          "description": "BGS World Mineral Statistics series for rare earth minerals: production by country (ISO3) and year; production in tonnes (metric). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/rare-earth-minerals.json",
+          "encodingFormat": "application/json",
+          "contentSize": "3 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Rare earth oxides — production by country, 1992–2024",
+          "description": "BGS World Mineral Statistics series for rare earth oxides: production by country (ISO3) and year; production in tonnes (metric). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/rare-earth-oxides.json",
+          "encodingFormat": "application/json",
+          "contentSize": "3 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Manganese ore — production by country, 1970–2024",
+          "description": "BGS World Mineral Statistics series for manganese ore: production by country (ISO3) and year; production in tonnes (metric). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/manganese-ore.json",
+          "encodingFormat": "application/json",
+          "contentSize": "22 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Antimony, mine — production by country, 1970–2024",
+          "description": "BGS World Mineral Statistics series for antimony, mine: production by country (ISO3) and year; production in tonnes (metal content). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/antimony-mine.json",
+          "encodingFormat": "application/json",
+          "contentSize": "12 KB"
+        }
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Cobalt",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Cobalt",
+            "https://www.wikidata.org/wiki/Q740"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Copper",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Copper",
+            "https://www.wikidata.org/wiki/Q753"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Nickel",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Nickel",
+            "https://www.wikidata.org/wiki/Q744"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Lithium",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Lithium",
+            "https://www.wikidata.org/wiki/Q568"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Graphite",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Graphite",
+            "https://www.wikidata.org/wiki/Q5309"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Rare-earth element",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Rare-earth_element",
+            "https://www.wikidata.org/wiki/Q190444"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Manganese",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Manganese",
+            "https://www.wikidata.org/wiki/Q731"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Antimony",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Antimony",
+            "https://www.wikidata.org/wiki/Q871"
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
 :root{
@@ -205,7 +483,7 @@ footer .legal a{text-decoration:underline}
 
 <footer>
   mineral.watch · built on open data from BGS, USGS, UN Comtrade and IEA
-  <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/terms/">Terms &amp; licensing</a></span>
+  <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/data/">Open data</a> · <a href="/terms/">Terms &amp; licensing</a></span>
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

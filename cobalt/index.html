@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>CobaltWatch — Tracking the Global Cobalt Supply Chain</title>
 <meta name="description" content="Open data visualisation tracking the global cobalt supply chain: the DRC's industrial mines and artisanal diggers, Indonesia's rise, China's refining grip, the export-quota gamble and the battery industry's escape attempt. Built on USGS, Cobalt Institute, IEA, BGS and price-agency data.">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="mineral.watch">
 <meta name="copyright" content="© 2026 mineral.watch">
 <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
@@ -22,8 +22,8 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="CobaltWatch — Tracking the Global Cobalt Supply Chain">
 <meta property="og:description" content="Interactive world map of mines, hydroxide plants and refineries, production and price charts, the DRC export-quota gamble, China's 79% refining grip and the artisanal-mining dilemma — built on USGS, Cobalt Institute, IEA, BGS and price-agency data.">
-<meta property="og:image" content="https://mineral.watch/brand/og-image.png?v=2">
-<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta property="og:image" content="https://mineral.watch/brand/og-image.png?v=3">
+<meta property="og:image:secure_url" content="https://mineral.watch/brand/og-image.png?v=3">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="CobaltWatch — Tracking the Global Cobalt Supply Chain">
 <meta name="twitter:description" content="Interactive map, production and price charts, the DRC export-quota saga, Indonesia's rise, China's refining chokepoint and the LFP escape attempt — built on USGS, Cobalt Institute, IEA, BGS and price-agency data.">
-<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png?v=2">
+<meta name="twitter:image" content="https://mineral.watch/brand/og-image.png?v=3">
 <meta name="twitter:image:alt" content="CobaltWatch — tracking the global cobalt supply chain">
 
 <!-- Structured data -->
@@ -42,23 +42,85 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://mineral.watch/cobalt/#webpage",
+      "url": "https://mineral.watch/cobalt/",
+      "name": "CobaltWatch — Tracking the Global Cobalt Supply Chain",
+      "description": "Open data visualisation tracking the global cobalt supply chain: the DRC's industrial mines and artisanal diggers, Indonesia's rise, China's refining grip, the export-quota gamble and the battery industry's escape attempt. Built on USGS, Cobalt Institute, IEA, BGS and price-agency data.",
+      "isPartOf": {
+        "@id": "https://mineral.watch/#website"
+      },
+      "publisher": {
+        "@id": "https://mineral.watch/#organization"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-09-04",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Cobalt",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Cobalt",
+            "https://www.wikidata.org/wiki/Q740"
+          ]
+        }
+      ],
+      "breadcrumb": {
+        "@id": "https://mineral.watch/cobalt/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://mineral.watch/brand/og-image.png?v=3",
+        "width": 1200,
+        "height": 630
+      },
+      "mainEntity": {
+        "@id": "https://mineral.watch/cobalt/#dataset"
+      },
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "mineral.watch", "item": "https://mineral.watch/" },
-        { "@type": "ListItem", "position": 2, "name": "Cobalt", "item": "https://mineral.watch/cobalt/" }
-      ]
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "mineral.watch",
+          "item": "https://mineral.watch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cobalt",
+          "item": "https://mineral.watch/cobalt/"
+        }
+      ],
+      "@id": "https://mineral.watch/cobalt/#breadcrumb"
     },
     {
       "@type": "Dataset",
       "name": "CobaltWatch — Global Cobalt Supply Chain Data",
       "description": "Mines, hydroxide plants and refineries, production and reserves data, prices, trade flows, export quotas and refining concentration for the global cobalt supply chain.",
       "url": "https://mineral.watch/cobalt/",
-      "creator": { "@type": "Organization", "name": "mineral.watch", "url": "https://mineral.watch/" },
+      "creator": {
+        "@id": "https://mineral.watch/#organization"
+      },
       "temporalCoverage": "2018/2026",
-      "spatialCoverage": "Worldwide",
-      "variableMeasured": ["Mine production", "Reserves", "Refining capacity", "Prices", "Trade flows", "Export quotas", "Companies"],
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "variableMeasured": [
+        "Mine production",
+        "Reserves",
+        "Refining capacity",
+        "Prices",
+        "Trade flows",
+        "Export quotas",
+        "Companies"
+      ],
       "isAccessibleForFree": true,
-      "license": "https://mineral.watch/",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "citation": [
         "USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Cobalt)",
         "Cobalt Institute, Cobalt Market Report 2025",
@@ -66,6 +128,75 @@
         "British Geological Survey, World Mineral Statistics",
         "Fastmarkets, S&P Global Platts and LME price data",
         "Company disclosures and government announcements"
+      ],
+      "@id": "https://mineral.watch/cobalt/#dataset",
+      "publisher": {
+        "@id": "https://mineral.watch/#organization"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-09-04",
+      "keywords": [
+        "cobalt",
+        "cobalt hydroxide",
+        "cobalt sulphate",
+        "DRC cobalt export quota",
+        "ARECOMS",
+        "artisanal mining",
+        "battery cathode",
+        "superalloys",
+        "critical minerals",
+        "supply chain",
+        "reserves",
+        "open data"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Cobalt",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Cobalt",
+            "https://www.wikidata.org/wiki/Q740"
+          ]
+        }
+      ],
+      "isBasedOn": [
+        "https://www.usgs.gov/centers/national-minerals-information-center/mineral-commodity-summaries",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+        "https://comtradeplus.un.org/",
+        "https://www.iea.org/topics/critical-minerals"
+      ],
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "@id": "https://mineral.watch/data/#catalog",
+        "name": "mineral.watch open data catalogue",
+        "url": "https://mineral.watch/data/"
+      },
+      "measurementTechnique": "Compilation and cross-referencing of official statistics and primary disclosures; each figure is cited to its source and dated on the page, estimates are flagged.",
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "Cobalt — imports, exports by country, 1970–2024",
+          "description": "BGS World Mineral Statistics series for cobalt: imports, exports by country (ISO3) and year; imports in tonnes (metric); exports in tonnes (metric). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/cobalt.json",
+          "encodingFormat": "application/json",
+          "contentSize": "27 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Cobalt, mine — production by country, 1970–2024",
+          "description": "BGS World Mineral Statistics series for cobalt, mine: production by country (ISO3) and year; production in tonnes (metal content). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/cobalt-mine.json",
+          "encodingFormat": "application/json",
+          "contentSize": "10 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Cobalt, refined — production by country, 1972–2024",
+          "description": "BGS World Mineral Statistics series for cobalt, refined: production by country (ISO3) and year; production in tonnes (metric). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/cobalt-refined.json",
+          "encodingFormat": "application/json",
+          "contentSize": "8 KB"
+        }
       ]
     },
     {
@@ -127,7 +258,8 @@
             "text": "That's exactly what we do. We produce commissioned deep-dive reports on cobalt, covering angles such as mine-to-refinery supply-chain mapping, the DRC quota regime and its politics, Indonesia's HPAL wave, China's refining grip, battery-chemistry scenarios and what they mean for demand, artisanal-mining due diligence and the Western refinery buildout. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal."
           }
         }
-      ]
+      ],
+      "@id": "https://mineral.watch/cobalt/#faq"
     }
   ]
 }
@@ -942,8 +1074,8 @@ footer .legal a{text-decoration:underline}
 </section>
 
 <footer>
-  <a href="/">mineral.watch</a> · open intelligence on strategic minerals &amp; rare earths · sources: USGS, BGS, UN Comtrade, IEA
-  <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/terms/">Terms &amp; licensing</a></span>
+  <a href="/">mineral.watch</a> · open data &amp; intelligence on minerals, oil &amp; gas and the green transition · sources: USGS, BGS, UN Comtrade, IEA, EIA
+  <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/data/">Open data</a> · <a href="/terms/">Terms &amp; licensing</a></span>
 </footer>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>

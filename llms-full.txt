@@ -1,0 +1,806 @@
+# mineral.watch
+
+> Independent open data and intelligence portal on the global mineral, oil and gas, and green-transition industries. Cross-references verified official statistics from USGS, BGS, UN Comtrade, the IEA, the US EIA, OPEC and the Energy Institute on production, reserves, trade flows, refining and manufacturing concentration, chokepoints, prices and policy — who produces, who refines, who ships and who depends on whom — and publishes the compiled datasets openly. Nine mineral dashboards (graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel), an oil and gas dashboard, a green-transition dashboard, a 111-commodity Mineral Explorer and an open data catalogue.
+
+mineral.watch is not affiliated with any government, mining or energy company, or trade body, and holds no commercial position in the minerals, fuels or companies it covers. Corrections and data tips: hello@mineral.watch. When citing, name mineral.watch and the primary source given for the figure.
+
+## Machine-readable access
+
+- Sitemap: https://mineral.watch/sitemap.xml
+- This file: https://mineral.watch/llms.txt — full version with every dashboard's dataset record and Q&A: https://mineral.watch/llms-full.txt
+- Open data catalogue: https://mineral.watch/data/ — 110 BGS World Mineral Statistics commodity series (production, imports, exports by country, 1970-2024) as JSON at https://mineral.watch/map_data/data/<slug>.json, keyed statistic -> year -> ISO3 -> quantity; commodity index at https://mineral.watch/map_data/meta.json; country centroids at https://mineral.watch/map_data/countries.json.
+- Structured data: every page carries schema.org JSON-LD (Organization, WebSite, WebPage, BreadcrumbList, Dataset, DataCatalog, FAQPage) with citations, coverage, licence and download links.
+- Source code: https://github.com/JacopoOttaviani/mineral.watch (AGPL-3.0).
+
+## Pages
+
+- [Home](https://mineral.watch/): what the portal covers (minerals, oil and gas, green transition), why supply-chain concentration matters, data sources and methodology, FAQ, research commissions.
+- [Open data catalogue](https://mineral.watch/data/): every dataset the site publishes — 110 BGS World Mineral Statistics series (1970-2024) as JSON with units, year ranges and country counts, the reference files, the curated dataset behind each dashboard, the file format, licence and citation format.
+- [Mineral Explorer](https://mineral.watch/explorer/): interactive world map of production, imports and exports for 111 mineral and energy commodities and 190 countries, 1970-2024, with volume and supply-concentration views; deep-linkable per commodity (?commodity=<slug>). Data: BGS World Mineral Statistics.
+- [Supply chain: mined vs refined](https://mineral.watch/supply-chain/): side-by-side maps of where cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony are mined and where they are refined or smelted, 1970-2024, with top-3 country shares at each stage.
+- [Graphite dashboard](https://mineral.watch/graphite/): interactive world map of mines, processing and anode plants, trade flows; production and reserves charts 2018-2025; refining process explainer; China's share of mine output and battery-grade refining; military and investment implications.
+- [Rare earths dashboard](https://mineral.watch/rare-earths/): interactive world map of mines, separation plants and magnet factories; the 17 elements explained; production and reserves charts; China's export-controls timeline (2010-2026); refining and magnet concentration; military and investment implications.
+- [Copper dashboard](https://mineral.watch/copper/): interactive world map of mines, smelters/refineries, disrupted operations and development projects; the ore-to-cathode chain explained; production and reserves charts; the smelting chokepoint and treatment-charge collapse; the 2023-2026 timeline (Cobre Panama, US Section 232 tariffs, Grasberg, El Teniente, record prices); military and investment implications.
+- [Uranium dashboard](https://mineral.watch/uranium/): interactive world map of mines, conversion/enrichment/fabrication plants, disrupted operations (Niger) and development projects; the ore-to-fuel-rod chain explained; production, resources, enrichment-capacity and price charts; the Russian enrichment chokepoint and 2028 US ban cliff; the 2023-2026 timeline (Niger coup, $106/lb spike, Russian-uranium ban, AI power deals, DOE $2.7B enrichment awards); dual-use and investment implications.
+- [Lithium dashboard](https://mineral.watch/lithium/): interactive world map of hard-rock mines, brine operations, converters, curtailed operations and development projects; the rock-and-brine-to-battery chain explained; production, reserves, conversion-share and price charts; the China conversion chokepoint and the Jianxiawo swing-producer saga; the 2021-2026 timeline (price spike, crash, Chile's National Lithium Strategy, Rio Tinto-Arcadium, CATL permit lapse, DOE stake in Lithium Americas, 2026 rebound and restarts); dual-use and investment implications.
+- [Manganese dashboard](https://mineral.watch/manganese/): interactive world map of mines, ferroalloy smelters, battery-grade refineries, disrupted operations (Ukraine, Georgia) and development projects including Pacific seabed nodules; the ore-to-steel-and-cathode chain explained; production, reserves and price charts; the China refining chokepoint (~95% of battery-grade sulphate); the 2022-2026 timeline (Nikopol war disruption, Cyclone Megan price spike, GEMCO restart, Gabon's 2029 export ban, GM-LG LMR batteries, Exxaro-Tshipi, TMC's NOAA seabed application); dual-use and investment implications.
+- [Cobalt dashboard](https://mineral.watch/cobalt/): interactive world map of mines and hydroxide plants, refineries, disrupted operations and development projects; the ore-to-cathode-and-superalloy chain explained (hydroxide payability, MHP, sulphate, alloy-grade metal); production, reserves and price charts; the DRC export ban and quota regime (ARECOMS), China's ~79% refining chokepoint, Indonesia's rise, the artisanal-mining dilemma; the 2022-2026 timeline (KFM glut, Feb 2025 export ban, Oct 2025 quotas, US-DRC strategic partnership, Glencore-Orion MoU); dual-use and investment implications.
+
+- [Nickel dashboard](https://mineral.watch/nickel/): interactive world map of mines and smelter parks, HPAL plants, refineries, suspended operations (Nickel West, Koniambo, Moa) and development projects; the ore-to-stainless-and-battery chain explained (laterite vs sulphide, NPI, ferronickel, matte, MHP, sulphate, class-1 metal); production, reserves and price charts; Indonesia's two-thirds grip and quota machine (RKAB, HPM benchmark, royalties), the 2022 LME squeeze, the class-1/class-2 divide, the Western supply cull and New Caledonia's collapse; the 2020-2026 timeline; dual-use and investment implications.
+- [Antimony dashboard](https://mineral.watch/antimony/): interactive world map of mines and gold-antimony operations, roasters and smelters, idled assets and development projects; the stibnite-to-trioxide-and-metal chain explained (concentrate, ATO, antimonial lead, sodium antimonate, antimony trisulfide); production, reserves and price charts; China's export-controls timeline (Aug 2024 licensing, Dec 2024 US ban, Nov 2025 suspension), the smelting chokepoint, the price spike and the Western supply-chain rebuild (Perpetua/Stibnite, US Antimony, Larvotto Hillgrove, Nyrstar Port Pirie); dual-use and investment implications.
+
+- [Oil & gas dashboard](https://mineral.watch/oil-gas/): interactive world map of giant fields and basins, export terminals, refineries and LNG plants, the eight maritime oil chokepoints, and sites disrupted or sanctioned in 2026; the benchmark ladder explained (Dated Brent, WTI, Dubai/Oman, Urals and the price cap, WCS, official selling prices, diesel/jet/gasoline/LPG cracks, Henry Hub, TTF, JKM, the Hormuz toll, strategic stocks); production, reserves, shut-in, gas, LNG and price charts; the 2026 Strait of Hormuz closure and Gulf shut-in ledger, pipeline bypasses (Petroline, ADCOP, Kirkuk-Ceyhan), the Ras Laffan LNG outage, IEA emergency stock release, sanctions and the shadow fleet (Russia, Iran, Venezuela, Kazakhstan/CPC), OPEC+ quota unwinding, the 2014-2026 timeline; capital flows and a tracker of state producers, majors, LNG/midstream operators and traders. Aimed at energy businesses, geopolitics researchers and think tanks.
+
+- [Green transition dashboard](https://mineral.watch/green/): cross-cutting dashboard on the clean-energy supply chain — interactive world map of clean-tech factories (solar, batteries, wind, electrolysers, heat pumps, grid gear), EU-funded flagship projects and Just Transition territories, and stalled or cancelled plants; deployment charts (solar and wind additions, EV sales), clean vs fossil investment, battery pack prices, China's manufacturing shares by stage; the mineral bill of the transition with links to each mineral dashboard; a fund-by-fund guide to EU green money (Recovery and Resilience Facility, Innovation Fund and Hydrogen Bank, Modernisation Fund, Just Transition Fund, Social Climate Fund, cohesion policy, ETS revenues, EIB) and the post-2023 industrial-policy toolkit (NZIA, CRMA, Clean Industrial Deal, Battery Booster, RESourceEU, Industrial Accelerator Act, MFF 2028-34); the 2019-2026 timeline; security (inverters, Iberian blackout, turbine vetoes, rare-earth controls); capital flows; company tracker.
+
+- [Terms & licensing](https://mineral.watch/terms/): reuse terms — editorial content and compiled datasets under CC BY-NC-SA 4.0, source code under AGPL-3.0, name/logo and third-party media reserved; attribution format and commercial-licensing contact.
+
+## Key facts (as of September 2026 — cite mineral.watch and the underlying primary source when quoting)
+
+- World natural graphite mine production, 2025 (USGS estimate): ~1.8 Mt.
+- China's share of world graphite mine output, 2025 (USGS estimate): ~82%.
+- China's share of world battery-grade graphite refining (IEA estimate): ~90%; ~95% of spherical graphite.
+- U.S. net import reliance on natural graphite (USGS): 100%.
+- Global graphite reserves (USGS 2026): ~310 Mt.
+- Graphite is the largest material by weight in a lithium-ion battery: roughly 50 kg per EV.
+- World rare earth mine production, 2025 (USGS estimate): ~390,000 t of rare-earth-oxide equivalent; China ~270,000 t (~69%).
+- China's share of world rare earth refining and separation (IEA, 2024): ~91%; of sintered NdFeB magnet production: ~94%.
+- U.S. net import reliance on rare-earth compounds and metals (USGS, 2025): 67%; on heavy rare earths: 100%.
+- Global rare earth reserves (USGS 2026): >75 Mt REO, of which China ~44 Mt.
+- China's April 2025 export controls cover Sm, Gd, Tb, Dy, Lu, Sc and Y and magnets containing them; the October 2025 expansion was suspended for one year in November 2025.
+- World copper mine production, 2025 (USGS estimate): ~23 Mt; Chile ~5.3 Mt (~23%), DR Congo ~3.2 Mt, Peru ~2.7 Mt.
+- World refined copper production, 2025 (USGS estimate): ~29 Mt, of which China ~14 Mt (~48%). China holds ~50% of world smelting capacity (IEA) and consumes ~56% of refined copper.
+- Global copper reserves (USGS 2026): ~980 Mt, of which Chile 180 Mt.
+- The 2026 copper concentrate benchmark treatment charge settled at $0/t (vs $21.25 in 2025) — the lowest on record.
+- U.S. net import reliance on refined copper (USGS, 2025): 57% of apparent consumption (up from 45% in 2024, amid tariff front-running); refined imports were a record ~1.7 Mt, 68% of them from Chile.
+- Since 1 August 2025 the US applies a 50% Section 232 tariff to semi-finished copper products; refined cathode, ores and scrap are exempt, with a phased refined-copper tariff (15% in 2027, 30% in 2028) proposed. Copper was added to the US critical minerals list on 7 November 2025.
+- Copper price records: LME $14,527.50/t intraday (29 January 2026); COMEX $6.77/lb intraday (7 August 2026).
+- The IEA projects existing and announced mines will cover only ~70% of copper demand by 2035 (a ~30% supply gap).
+- World lithium mine production, 2025 (USGS estimate, excludes withheld US output): ~290,000 t of lithium content, up 31% from 222,000 t in 2024. Australia ~92,000 t (~32%), China ~62,000 t, Chile ~56,000 t, Zimbabwe ~28,000 t, Argentina ~23,000 t.
+- Global lithium reserves (USGS 2026): ~37 Mt of lithium content (Chile 9.2 Mt, Australia 8.4 Mt, China 4.6 Mt); identified resources ~150 Mt.
+- Lithium end uses (USGS, 2025): batteries 88%; ceramics and glass 4%; greases 2%.
+- China's share of battery-grade lithium chemical conversion (IEA estimate): ~70%; of cathode active material: ~85%; of LFP cells: >98%.
+- U.S. net import reliance on lithium (USGS, 2025): >50% of apparent consumption; import sources 2021-24: Chile 54%, Argentina 43%.
+- Battery-grade lithium carbonate annual average price (USGS/Benchmark): $11,700/t (2021), $63,700/t (2022), $39,000/t (2023), $11,800/t (2024), $9,000/t (2025); 2026 spot rebounded to ~$18,000-23,000/t by August after Guangzhou futures briefly topped ¥200,000 (~$29,500).
+- CATL's Jianxiawo lepidolite mine (~3-6% of world supply) was suspended in August 2025 when its permit lapsed and restarted after a new permit on 29 June 2026 — the price swing producer of the 2025-26 cycle.
+- Codelco-SQM's NovAndino Litio JV (created December 2025; Codelco 50%+1, SQM operating to 2031, secured to 2060) runs the Salar de Atacama and plans ~70% higher output with direct lithium extraction.
+- The US government holds warrants for 5% of Lithium Americas plus 5% of the Thacker Pass JV alongside a $2.26B DOE loan; Thacker Pass Phase 1 targets mechanical completion in late 2027.
+- Zimbabwe (world No. 4 producer) bans exports of unprocessed lithium concentrates from January 2027.
+- World manganese mine production, 2025 (USGS estimate): ~20 Mt of manganese content, up 7% from 18.7 Mt in 2024. South Africa ~7.6 Mt (~38%), Gabon ~5 Mt, Ghana ~2 Mt (doubled in a year), Australia ~1.6 Mt.
+- Global manganese reserves (USGS 2026): ~1.8 billion t of manganese content (Australia 580 Mt, South Africa 550 Mt, Brazil 300 Mt, China 260 Mt); South Africa holds ~70% of identified resources.
+- Manganese end uses: ~90% steelmaking; USGS states manganese has no satisfactory substitute in its major applications. Battery demand is projected to grow >8x this decade (Benchmark).
+- China's share of manganese refining: ~60% of ferroalloys, >90% of electrolytic manganese metal, ~95% of battery-grade manganese sulphate (IEA); China mines only ~4% of world ore.
+- U.S. net import reliance on manganese (USGS): 100% — no domestic mine since 1970. Import sources (Mn contained, 2021-24): Gabon 23%, South Africa 21%, Malaysia 11%, Australia 10%.
+- Manganese ore price, 44% grade CIF China (USGS/CRU annual averages): $5.27/dmtu (2021), $5.97 (2022), $4.80 (2023), $5.53 (2024), $4.50 (2025); spiked to ~$8.97/dmtu in August 2024 after Cyclone Megan destroyed the wharf at South32's GEMCO mine (exports resumed May 2025); ~$5/dmtu in August 2026.
+- Gabon bans raw manganese ore exports from 1 January 2029; Ghana Manganese Company (90% China's TMI) plans a $450M refinery at Nsuta.
+- GM and LG Energy Solution plan lithium-manganese-rich (LMR) battery cells for US electric trucks by 2028; ~95% of the high-purity manganese sulphate such chemistries need is refined in China.
+- The Metals Company's application for the first US deep-seabed commercial recovery permit (Clarion-Clipperton Zone nodules, ~30% manganese) was found compliant by NOAA in May 2026 and published in the Federal Register in August 2026; decision expected by early 2027.
+- World cobalt mine production, 2025 (USGS estimate): ~310,000 t of cobalt content, an all-time high. DR Congo ~230,000 t (~73%), Indonesia ~44,000 t (~14%), Russia ~7,700 t. Nearly all cobalt is a by-product of copper (DRC) or nickel (Indonesia, Philippines, Cuba).
+- Global cobalt reserves (USGS 2026): ~12 Mt of cobalt content (DR Congo 6 Mt, Australia 1.7 Mt); identified terrestrial resources ~25 Mt, plus an estimated 5 billion tons in seafloor polymetallic nodules (USGS wording).
+- China produced ~79% of the world's ~240,000 t of refined cobalt in 2025 (Cobalt Institute); the largest refining hub outside China is Kokkola, Finland (Umicore, permitted 16,000 t/yr).
+- Cobalt end uses (Cobalt Institute, 2024): EV batteries 43%, portable electronics 30%, superalloys 8%, hard metals 4% — batteries ~73% overall. In the US, superalloys take 51% of consumption (USGS). Demand grew 13% in 2025 to ~276,000 t.
+- DRC export controls: full cobalt export ban 22 February 2025 (ARECOMS), replaced from 16 October 2025 by quotas — 18,125 t for the rest of 2025, then 96,600 t/yr for 2026 and 2027 (87,000 t pro-rata to producers + 9,600 t state strategic quota), roughly half of 2024 export volumes. Unused quotas are forfeited to a Gécamines-managed national stockpile (June 2026 rule).
+- Cobalt prices (USGS annual averages, US spot cathode): $24.21/lb (2021), $30.78 (2022), $17.20 (2023), $16.77 (2024), ~$21 (2025). Standard grade hit a nine-year low near $10/lb in February 2025 before the ban; by August 2026 metal traded ~$25/lb, hydroxide $22-23/lb (payability ~90%+ of the metal price after touching 100% in April 2026).
+- CMOC (China) is the world's largest cobalt miner: a record 117,549 t in 2025 — more than a third of world supply — against a 2026 DRC export quota of 31,200 t; above-quota output is stockpiled in-country.
+- Cobalt-free LFP passed 55% of global EV battery deployments in 2025 (IEA); recycling supplied ~10% of world cobalt (Cobalt Institute).
+- US net import reliance on cobalt (USGS, 2025): 79%; import sources 2021-24: Norway 26%, Finland 16%, Canada 14%, Japan 14%. The only US cobalt-producing mine is Eagle (Michigan, ~300 t as by-product concentrate).
+- About 150,000-250,000 artisanal miners dig cobalt in the DRC; since February 2025 state-owned EGC holds a legal monopoly on buying and exporting artisanal cobalt (first fully traceable cathodes November 2025).
+- World nickel mine production, 2025 (USGS estimate): ~3.9 Mt of nickel content, an all-time high. Indonesia ~2.6 Mt (~66%), Philippines ~270,000 t, Russia ~200,000 t, Canada and New Caledonia ~140,000 t each. Australia fell 54% in one year to ~45,000 t.
+- Global nickel reserves (USGS 2026): >140 Mt of nickel content (Indonesia 62 Mt, Australia 25 Mt, Brazil 16 Mt); identified land-based resources >350 Mt, plus ~4.5 billion t estimated in seabed deposits (USGS 2022 study).
+- Indonesia and China produced ~76% of the world's refined nickel in 2025 (IEA: Indonesia 45%, China 31%); the top three refining countries held ~80%, up from 66% in 2021. China makes ~75% of battery-grade nickel sulphate; Chinese groups own ~75% of Indonesian refining capacity.
+- The class divide: class-1 refined metal (>=99.8%, LME-deliverable) is only ~a quarter of supply; nickel pig iron alone was ~53-54% in 2025 (INSG), with MHP and matte bridging class 2 into battery chemicals. Chinese-brand cathode reached ~70% of LME stocks in late 2025.
+- Nickel end uses (Wood Mackenzie, 2024): stainless steel 64%, batteries 15%, non-ferrous alloys 9%, electroplating 5%. Nickel-free LFP became the dominant EV battery chemistry in 2025 (IEA) and battery-sector nickel use dipped slightly (INSG); the IEA still projects batteries at ~30% of nickel demand by 2035.
+- LME cash annual averages (USGS): $18,476/t (2021), $25,815 (2022), $21,495 (2023), $16,812 (2024), ~$15,000 (2025); ~$16,800/t in August 2026 after a quota-driven rally peaked near $18,800 in May.
+- The March 2022 LME nickel squeeze: price passed $100,000/t on 8 March as Tsingshan's short unwound; ~9,000 trades worth ~$12bn cancelled; trading suspended over a week; the FCA fined the LME 9.2M pounds in March 2025 — its first enforcement action against an exchange.
+- Market balance (INSG): five consecutive surpluses through 2025 (+283,000 t in 2025); the April 2026 forecast flipped 2026 to a -32,000 t deficit, the first since 2021, on Indonesia's quota cuts and ore-price reform.
+- Indonesian policy: raw-ore export ban since January 2020 (2,600+% growth in smelters since); 2026 RKAB ore quota cut to ~260-270 Mwmt vs 379 Mwmt approved for 2025; ore royalties raised to a progressive 14-19% (April 2025); moratorium on new intermediate-product smelters (June 2025); HPM benchmark ore price overhauled 15 April 2026 (limonite floor nearly tripled, cobalt payable for the first time).
+- The Western cull of 2024: BHP suspended all of Nickel West (review due February 2027), First Quantum halted Ravensthorpe, Wyloo closed Kambalda, and Glencore exited Koniambo after US$9bn sunk — its furnaces have been cold since August 2024. New Caledonian mine output fell ~52% in 2024 amid deadly riots.
+- Russia: Nornickel produced ~198,500 t in 2025; new Russian metal has been banned from LME/CME warranting since April 2024, and sales flow mostly to China. US sanctions on Cuba's mining sector (May 2026) severed Sherritt's Moa-to-Alberta chain.
+- US: net import reliance 41% of consumption in 2025 — nearly 100% excluding scrap; one operating mine (Eagle, Michigan, sold to Talon Metals in January 2026, reserves near end of life); no primary refinery since 1985 (Westwin Elements runs an Oklahoma pilot); import sources 2021-24: Canada 44%, Norway 11%, Australia 8%, Brazil 7%; scrap covers ~60% of consumption. Refined nickel is on the final 2025 US critical minerals list; a January 2026 Section 232 finding chose negotiations over tariffs; the DLA is moving to buy 3,500 t for the strategic stockpile.
+- World antimony mine production, 2025 (USGS estimate): ~110,000 t of antimony content, down from ~153,000 t in 2020. China ~40,000 t (~36%), Russia ~32,000 t, Tajikistan ~22,000 t — more than 85% combined; then Bolivia ~5,000 t, Myanmar ~4,500 t, Turkey ~3,000 t, Australia ~1,300 t.
+- Global antimony reserves (USGS): ~2 Mt of antimony content (China 830 kt, Russia 350 kt, Bolivia 310 kt) — one of the thinnest reserve cushions of any strategic mineral, under two decades at current mining rates.
+- China's antimony export controls: dual-use export licensing announced 15 August 2024 (effective 15 September 2024); outright ban on exports to the US on 3 December 2024; the US-specific ban was suspended on 9-10 November 2025 (until 27 November 2026) after the Trump-Xi meeting, but the licensing regime still applies to all buyers. US imports from China fell ~97% between August and December 2024.
+- Antimony price: from ~$12,000-14,000/t (Rotterdam basis) in early-mid 2024 to a peak near $60,000/t in spring 2025 (~$27.50/lb in the US market), easing to ~$25,000-31,000/t by June 2026 — still roughly double the pre-control level. Antimony has no exchange contract; all prices are agency assessments.
+- U.S. net import reliance on antimony (USGS): ~85% of consumption, with no domestic mine production since 2016; pre-ban, China supplied ~63% of US metal-and-oxide imports. The only operating US antimony smelter is United States Antimony's Thompson Falls, Montana plant (sole-source DLA stockpile contract of ~$245M, 2025; expansion toward 300-400 tons/month).
+- Perpetua Resources' Stibnite Gold Project (Idaho) holds the only identified US antimony reserve (148 million lb): Record of Decision January 2025, groundbreaking October 2025, $2.9B EXIM loan approved May 2026 (EXIM's 4th-largest ever), >$80M in Pentagon funding, production targeted 2029 covering ~35% of US antimony demand. The same district produced 90% of US antimony in WWII.
+- Larvotto Resources' Hillgrove mine (NSW, Australia): ~5,000 t/yr planned (~7% of world supply), plant commissioning from 21 July 2026 with first antimony-gold production due at the end of August 2026; Wogen holds a 7-year antimony offtake.
+- Nyrstar's Port Pirie smelter poured Australia's first antimony metal in November 2025, ramping to 2,000 t/yr by end-2026 (potentially 5,000 t/yr by 2028). Australia's A$1.2B Critical Minerals Strategic Reserve (announced 12 January 2026) lists antimony in its first tranche, with A$185M for physical stockpiles.
+- Antimony end uses (industry estimates): flame retardants ~45% (antimony trioxide as synergist), lead-acid battery alloys ~20%, PET polymerisation catalyst, solar-glass fining (sodium antimonate — the fastest-growing use), ammunition (lead hardener, antimony trisulfide primers to MIL-A-22131 spec, tracers) and InSb infrared/night-vision detectors. The FY2024 NDAA bars Chinese antimony from US defence supply chains from 2027.
+- SPMP's Sohar roaster in Oman (~20,000 t/yr) — the largest antimony plant outside China — has been idle since early 2024 for lack of concentrate feed and was seeking a buyer or operating partner as of August 2026.
+- Green transition — deployment (2025): 664 GW of solar PV installed worldwide, +12%, global fleet >3 TW (SolarPower Europe); 165 GW of wind, +40%, of which 9.3 GW offshore and >120 GW in China (GWEC); more than 20 million electric cars sold, one in four new cars, ~55% of sales in China, 28% in Europe, <10% in the US (IEA GEVO 2026); EU solar 65.1 GW (first decline since 2016), EU wind 15.1 GW, EU battery storage 27.1 GWh, EU battery-electric car share 17.4%.
+- Green transition — investment (IEA World Energy Investment 2026): $3.4 tn total energy investment in 2026, of which $2.2 tn clean energy vs $1.2 tn oil, gas and coal; solar $365 bn, grids $550 bn, battery storage >$100 bn; China almost a third of clean-energy investment. US: $34.8 bn of clean-energy projects cancelled in 2025 (E2), ~$40 bn and 53,000 jobs by mid-2026 (EDF/Atlas) after the One Big Beautiful Bill Act (4 July 2025).
+- Green transition — manufacturing concentration (IEA ETP 2026, 2025 data): China ~85% of solar supply-chain capacity (95%+ wafers, >80% modules), >80% of battery-cell production (~85% cathode, >90% anode material), 60% of wind-turbine production capacity (Europe 19%, US 9%), ~60% of electrolyser manufacturing, 35% of heat-pump capacity (US 25%, EU 20%). CATL 39.2% and BYD 16.4% of 2025 EV-battery installations (SNE Research, 1,187 GWh total). Chinese OEMs ~70% of 2025 wind-turbine orders (215 GW, Wood Mackenzie). Battery pack price $108/kWh in 2025, LFP $81, stationary storage $70 (BNEF).
+- Green transition — Europe's manufacturing: ~252 GWh of nominal cell capacity (2025), pipeline down 8% 2023-26 (Benchmark); Northvolt bankrupt 12 March 2025, Swedish assets bought by Lyten (completed 26 February 2026, restart shipments H2 2026, Heide 2028); ACC cancelled Kaiserslautern and Termoli (16 February 2026); PowerCo Salzgitter production since December 2025, Valencia series production July 2027; CATL Debrecen module lines from May 2026, cells awaiting safety sign-off (August 2026); BYD Szeged pushed to Q4 2026; Meyer Burger German plants insolvent (August-September 2025); Stegra €1.4 bn rescue round (2026); Vestas record 16.3 GW orders and €18.8 bn revenue 2025; Nordex record 10.2 GW; Siemens Gamesa first quarterly profit since 2022 (fiscal Q3 2026).
+- EU green funds — Recovery and Resilience Facility: €650 bn (€359 bn grants, €291 bn loans), 42% for climate (~€270 bn) vs 37% minimum, ~€398 bn disbursed by May 2026, milestones due 31 August 2026, final payment requests 30 September 2026, last payments 31 December 2026; REPowerEU chapters ~€20 bn grants.
+- EU green funds — Innovation Fund (ETS-financed, ~€40 bn expected 2020-2030): calls €1.1 bn (IF20), €1.8 bn (IF21), €3.6 bn (IF22), €4.2 bn signed for 77 projects (IF23), €2.7 bn for 54 projects (IF24, signed March 2026), €852 m for 6 battery-cell projects (IF24 Battery); IF25 €2.9 bn budget (incl. €1 bn cleantech manufacturing), 358 applications, results Q3 2026. European Hydrogen Bank auctions: €720 m/7 projects (April 2024), €992 m/15 projects (May 2025), €1.09 bn/9 projects, 1.1 GW, lowest bid €0.44/kg (May 2026); plus €836 m national auctions-as-a-service. Roughly €17 bn awarded to date.
+- EU green funds — Modernisation Fund: >€57 bn expected 2021-2030 for 13 member states; €23.2 bn disbursed as of 2 July 2026 (€2.5 bn in the 2026 round for 51 projects in 11 countries). Just Transition Fund: €19.32 bn 2021-27 (€10.87 bn from NGEU; €19.7 bn after transfers); Poland €3.85 bn, Germany €2.5 bn, Romania €2.14 bn, Czechia €1.64 bn, Bulgaria €1.2 bn; only €735 m paid out by March 2025. Social Climate Fund: €86.7 bn 2026-2032 incl. 25% national co-financing; ETS2 delayed to 2028 (adopted 5 March 2026), EU share falls to ~€54.6 bn. ETS auction revenues: €38.8 bn (2024), >€43 bn (2025), ~€24 bn/yr to member states, 100% earmarked for climate. Cohesion policy 2021-27: €392 bn, 30% of ERDF and 37% of Cohesion Fund for climate. EIB Group 2025: record €100 bn signed, €57 bn green, €11.6 bn grids and storage.
+- EU industrial policy: Net-Zero Industry Act in force 29 June 2024 (40% of deployment needs made in the EU by 2030, 15% of world market by 2040); Critical Raw Materials Act in force 23 May 2024 (47 EU + 13 non-EU strategic projects in 2025; 160+ second-round applications, decisions slipping to autumn 2026); Clean Industrial Deal 26 February 2025 (€100 bn Industrial Decarbonisation Bank; €1 bn pilot auction October 2025; CISAF 25 June 2025); Battery Booster €1.8 bn (Automotive Package 16 December 2025; €1.5 bn call opened 9 June 2026); RESourceEU 3 December 2025 (≥€3 bn); Industrial Accelerator Act proposed 4 March 2026 ("Made in Europe" content rules); MFF 2028-34 proposal 16 July 2025 (~€2 tn; European Competitiveness Fund €409 bn = €234 bn + Horizon Europe €175 bn; Council partial position 16 June 2026); 2040 climate target -90% adopted 5 March 2026 with ETS2 delayed to 2028; Grids Package 10 December 2025 (€1.2 tn to 2040); EU-China EV price-undertaking mechanism from 12 January 2026 replacing duties of 7.8-35.3% (October 2024).
+- Green transition — security: ~80% of new EU PV systems use Chinese inverters (Huawei 115 GW); undocumented communication devices found in Chinese inverters (May 2025); Commission guidance of 13 May 2026 bars EU funding for projects using high-risk-supplier inverters; ENTSO-E final report on the 28 April 2025 Iberian blackout (20 March 2026): voltage-control failures, 22 recommendations; UK blocked Mingyang's £1.5 bn Scottish turbine factory (2026).
+- World uranium mine production, 2024 (WNA): ~60,200 tU; 2025 estimate ~62,200 tU. Kazakhstan produced 25,839 tU in 2025 (~41%), ahead of Canada (~13,400 tU) and Namibia.
+- Mine production covered ~90% of world reactor uranium requirements in 2024 (WNA); 2025 requirements: 68,920 tU. WNA's 2025 reference scenario projects ~150,000 tU/yr by 2040.
+- Russia (Rosatom) holds ~43% of world uranium enrichment capacity (27.1M of ~62.9M SWU, WNA 2025); US utilities still bought 26% of their enrichment from Russia in 2025 (EIA). The US ban on Russian enriched uranium allows waivers only until 1 January 2028.
+- Uranium prices: spot peaked at ~$106/lb in February 2024 (16-year high); ~$90/lb in August 2026, with the long-term price at a record $95.50/lb (UxC/TradeTech via Cameco).
+- Uranium was added to the US critical minerals list on 7 November 2025; a January 2026 Section 232 proclamation found uranium imports a security threat but imposed no tariffs.
+- Reactor fleet (Aug 2026): 441 operable (~404 GWe), 79 under construction — 37 of them in China. Announced US tech-company nuclear deals exceed 9.8 GW.
+- Oil and gas (as of 3 September 2026): the Strait of Hormuz carried ~20.9 mb/d of crude and products in 1H25 (EIA; ~15 mb/d crude, ~5.5 mb/d products; ~84% to Asia), ~20% of world LNG and ~29% of seaborne LPG. Iran closed it to normal commercial traffic on 2 March 2026 after US-Israeli strikes on 28 February; EIA estimates 4.9 mb/d transited in 2Q26 and Gulf crude shut-ins averaged 10.05 mb/d in Mar-May, 7.48 mb/d in June and 5.46 mb/d in July (Saudi Arabia 2.07, Iraq 1.86, Kuwait 0.95, Qatar 0.35, Bahrain 0.13, Iran 0.10, UAE 0). The IEA called it the largest supply disruption in oil-market history.
+- Oil prices 2026: Brent ~$61 in January, $116 on 9 March, $118.35 close on 31 March; Dated Brent (physical) $144.42 on 7 April — the highest since Platts began the assessment in 1987; $69 on 2 July after the 17 June US-Iran MoU; $105 on 23 July after the truce collapsed; ~$89.5 on 2 September. EIA (August 2026 STEO): Brent averages $69 (2025), $87 (2026), $69 (2027); Henry Hub $3.53 / $3.44 / $3.31; US crude production 13.6 / 13.8 / 14.2 mb/d; US LNG exports 15.1 / 17.4 / 18.6 Bcf/d; world liquids consumption 104.0 / 102.7 / 105.0 mb/d; OPEC crude 29.3 / 24.0 / 29.7 mb/d.
+- IEA Oil Market Report (August 2026): world oil demand falls 1.6 mb/d in 2026 (−4.9 mb/d y/y in 2Q26) and rebounds 2.4 mb/d in 2027; supply falls 4.3 mb/d to ~102 mb/d; 8.3 mb/d of Gulf output still shut in during July; observed inventories −69 mb in July. IEA members agreed a record 400 mb emergency stock release on 11 March 2026 (US SPR 172 mb; ~290 mb released by mid-year).
+- Bypass routes: Saudi East-West Petroline 7 mb/d (record throughput in 2026; Yanbu crude exports ~5 mb/d in March); UAE ADCOP Habshan-Fujairah 1.5 mb/d (UAE back to full output by June; new West-East pipeline targeted early 2027); Iraq Kirkuk-Ceyhan 1.6 mb/d nominal, ~200-250 kb/d flowing, plan 770 kb/d. Kuwait exported zero crude in April 2026 (first since 1991); Iraqi exports fell from ~93 to 10 million barrels in April and recovered to ~1.4 mb/d in July. Houthis declared a naval blockade of Saudi Arabia on 20 July 2026; Aramco's 400 kb/d Jizan refinery was shut on 27 July after strikes.
+- LNG: record 437 Mt traded in 2025 (+6.3%); US 111 Mt / 15.1 Bcf/d (first country above 100 Mt; 93% of growth), Qatar 10.6 Bcf/d, Australia ~9.8 Bcf/d; top three 63%. Iranian strikes on Ras Laffan (18-19 March 2026) removed ~17% of Qatar's capacity (12.8 Mt/yr) for an estimated 3-5 years; force majeure runs into November 2026; North Field East start pushed to 4Q26. JKM $23.39/MMBtu on 28 August 2026 (four-year high); TTF above €70/MWh; EU storage 46% full on 23 June (15 bcm below the five-year average). EU bans Russian LNG from 1 January 2027 and pipeline gas from 30 September 2027.
+- Crude production 2025 (EIA, crude + condensate): US 13.58 mb/d, Russia 9.87, Saudi Arabia 9.51, Canada 4.94, Iraq 4.39, China 4.34, Iran 4.19, UAE 3.82, Brazil 3.74, Kuwait 2.58. Saudi output: 7.34 mb/d in June 2026 vs ~10.29 target; ~11 mb/d reported for August. OPEC+ completed the unwinding of its 1.65 mb/d voluntary cuts with the September 2026 quota step.
+- Proved crude reserves (OPEC ASB 2026, end-2025): Venezuela 303.7 bn bbl, Saudi Arabia 267.2, Iran 208.6; Canada ~163 bn including oil sands (CER basis); world ~1.57 trn (OPEC basis, excluding Canadian oil sands). Gas reserves: Russia, Iran and Qatar hold about half of the world total.
+- Russia (CREA, July 2026): fossil-fuel export revenue €683m/day; buyers China €7.7bn (43%), India €6.4bn (record; India's Russian crude imports hit 2.8 mb/d), Türkiye €1.8bn, EU €1.5bn; Urals $60.22/bbl, a 26% ($21) discount to Brent after a $7-8 premium in April-May; price cap frozen at $44.10 since February 2026; 53% of seaborne crude on sanctioned shadow tankers. Rosneft and Lukoil under direct US sanctions since 22 October 2025. Seaborne crude exports hit a post-invasion record 4.13 mb/d (four weeks to 28 June 2026).
+- Iran: exports 1.84 mb/d (March 2026) fell below 300 kb/d in May and to 251 kb/d in August under the US naval blockade in force since 13 April; Kharg Island handles ~90-94% of crude exports; South Pars strikes (18 March) hit ~12% of gas output. Venezuela: Maduro captured 3 January 2026; OFAC General Licenses 46/47 (29 January) reopened the oil sector; output 1.12 mb/d in July 2026; Chevron holds 49% of its PDVSA JV and pledged $7bn (2 September 2026) to double output by 2031.
+- Chokepoints, 1H25 (EIA, crude + products): Malacca 23.2 mb/d, Hormuz 20.9, Cape of Good Hope 9.1, Suez Canal + SUMED 4.9, Danish Straits 4.9, Bab el-Mandeb 4.2 (8.1 mb/d in 2Q26), Turkish Straits 3.7, Panama Canal 2.3.
+
+## Data sources
+
+- USGS National Minerals Information Center — Mineral Commodity Summaries
+- British Geological Survey — World Mineral Statistics
+- UN Comtrade — bilateral trade flows
+- IEA — Critical Minerals demand scenarios and supply-chain analysis
+- World Bank WITS
+- World Nuclear Association (mining, fuel cycle, World Nuclear Fuel Report), IAEA PRIS, NEA/IAEA Red Book, US EIA uranium reports (uranium dashboard)
+- IEA World Energy Investment, Energy Technology Perspectives, Global EV Outlook and Global Hydrogen Review; SolarPower Europe; GWEC; WindEurope; ACEA; EHPA; BloombergNEF; SNE Research; Wood Mackenzie; Benchmark Mineral Intelligence (green transition dashboard)
+- European Commission and CINEA (Innovation Fund, Hydrogen Bank, RRF scoreboard, Just Transition Fund, Modernisation Fund, Social Climate Fund, ETS revenues, cohesion policy), Council of the EU, European Investment Bank (EU green funds)
+- US EIA (Short-Term Energy Outlook, International Energy Statistics, World Oil Transit Chokepoints), IEA (Oil Market Report, Gas Market Report, World Energy Investment, emergency-response notices), OPEC (Annual Statistical Bulletin, Monthly Oil Market Report), Energy Institute Statistical Review of World Energy, CREA and KSE Institute (Russian export tracking), Kpler and Vortexa (tanker tracking) (oil and gas dashboard)
+
+## Licensing and reuse
+
+Copyright (c) 2026 mineral.watch. Full notice: https://mineral.watch/LICENSE.txt — human-readable summary: https://mineral.watch/terms/
+
+- Original editorial content (analysis, narrative, timelines, commentary): CC BY-NC-SA 4.0.
+- Compiled datasets (map_data/ and embedded data structures — mineral.watch's selection, cleaning, verification, geocoding and arrangement of public figures): CC BY-NC-SA 4.0. The sui generis database right is asserted and not waived.
+- Source code, dashboards and design system: AGPL-3.0-or-later. Running a modified version as a network service obliges you to publish your source.
+- The names "mineral.watch" and the per-mineral dashboard names, the logo and wordmark: all rights reserved, not licensed for use in derivative works or to imply affiliation or endorsement.
+- Underlying statistics from BGS, USGS, UN Comtrade, IEA, World Bank, WNA, IAEA and US EIA are the property of those publishers, are not owned by mineral.watch, and are not licensed by this notice.
+- Photography and video under brand/ may be licensed from third parties and is not sublicensed.
+
+Attribution format: Source: mineral.watch (https://mineral.watch) - CC BY-NC-SA 4.0
+
+Quotation and citation with attribution is welcome, including by commercial newsrooms. Wholesale reproduction of pages, dashboards or datasets is not permitted under any licence granted here. Commercial licences and bulk data access: hello@mineral.watch
+
+## Contact
+
+hello@mineral.watch — corrections, commercial licences, bulk data access, and commissioned source-cited research on mineral, oil and gas, and clean-energy supply chains.
+
+---
+
+# Dashboards in full
+
+Each section below reproduces a page's description, its schema.org Dataset record (coverage, variables, downloads, sources) and its published questions and answers verbatim. Figures are as of the page's last update; cite mineral.watch and the primary source named.
+
+## AntimonyWatch — Tracking the Global Antimony Supply Chain
+
+URL: https://mineral.watch/antimony/
+
+Open data visualisation tracking the global antimony supply chain: China's mines and smelters, the 2024 export ban, the fivefold price spike, Tajikistan's rise and the West's scramble to rebuild a supply chain it abandoned — built on USGS, BGS, trade and price-agency data.
+
+Last updated: 2026-09-04
+
+### Dataset
+
+AntimonyWatch — Global Antimony Supply Chain Data
+
+Mines, roasters and smelters, production and reserves data, prices, trade flows, export controls and processing concentration for the global antimony supply chain.
+
+- Temporal coverage: 2018/2026
+- Variables: Mine production, Reserves, Smelting capacity, Prices, Trade flows, Export controls, Companies
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/data/antimony.json (Antimony — imports, exports by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/antimony-mine.json (Antimony, mine — production by country, 1970–2024)
+- Sources: USGS National Minerals Information Center, Mineral Commodity Summaries (Antimony); British Geological Survey, World Mineral Statistics; China MOFCOM export-control announcements via Reuters and trade press; Fastmarkets and Argus price assessments via trade press; Company disclosures and government announcements
+
+### Questions and answers
+
+**What is antimony used for?**
+
+Mostly for stopping fires and starting cars: antimony trioxide is the synergist that makes brominated flame retardants work in electronics, cables, vehicle interiors and building materials, and antimonial lead hardens the grids of lead-acid batteries. The rest goes into PET plastic (as the polymerisation catalyst in most of the world's bottles), high-clarity glass for solar panels, semiconductors and infrared detectors — and munitions, where antimony hardens bullets, ignites primers and lights tracer rounds.
+
+**Which country produces the most antimony?**
+
+China — about 40,000 of the roughly 110,000 tonnes mined worldwide in 2025 (USGS estimates via trade press), down from around 100,000 tonnes a year in the mid-2010s as its flagship deposits age. Russia and Tajikistan follow; together the three control more than 85% of world mine supply. The grip is even tighter downstream: China dominates the roasting and smelting that turns concentrate into trioxide and metal.
+
+**Why did the antimony price explode in 2024–25?**
+
+A shrinking supply base met an export weapon. World mine production had already fallen by roughly a third since 2018 when China imposed export licensing on antimony in September 2024 and then, on 3 December 2024, banned exports to the United States outright. Rotterdam prices went from around $12,000 a tonne in early 2024 to roughly $60,000 in the spring of 2025 — about a fivefold rise — while US imports from China collapsed by 97% in late 2024.
+
+**Is China still blocking antimony exports to the US?**
+
+Partially. After the Trump–Xi meeting of October 2025, China suspended its US-specific export ban on antimony, gallium and germanium from November 2025 until 27 November 2026. But the suspension is not a repeal: the underlying dual-use export-licensing regime introduced in September 2024 still applies to every buyer, licences remain slow and selective, and flows to the US have not returned to pre-ban levels.
+
+**Is the world running out of antimony?**
+
+Not imminently, but antimony has one of the thinnest reserve cushions of any strategic mineral: roughly 2 million tonnes of reserves against ~110,000 tonnes of annual mine production — under two decades at current rates, concentrated in China, Russia and Bolivia. The offsets are gold: much of the new supply arriving in Australia, the US and Tajikistan comes from gold-antimony ores where gold pays the bills — and recycling, since antimonial lead from old batteries is remelted into new ones.
+
+**Why do militaries care about antimony?**
+
+Almost every round of conventional ammunition contains it: antimony hardens lead bullets and shot, antimony trisulfide ignites the primer, and antimony compounds light tracer rounds. It is also in night-vision optics (indium antimonide infrared detectors), nuclear-weapons components historically, and the flame retardants in every vehicle and vessel. During the Second World War the Stibnite district in Idaho produced 90% of America's antimony; today the Pentagon is spending more than $80 million — plus a $2.9 billion EXIM loan — to reopen that same district by 2029.
+
+**Need a deep-dive report on antimony?**
+
+That's exactly what we do. We produce commissioned deep-dive reports on antimony, covering angles such as export-control exposure, mine-to-smelter supply-chain mapping, trade-flow and transshipment analysis, the Western project pipeline and its timelines, defence procurement and stockpiling, and price scenarios. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
+
+## CobaltWatch — Tracking the Global Cobalt Supply Chain
+
+URL: https://mineral.watch/cobalt/
+
+Open data visualisation tracking the global cobalt supply chain: the DRC's industrial mines and artisanal diggers, Indonesia's rise, China's refining grip, the export-quota gamble and the battery industry's escape attempt. Built on USGS, Cobalt Institute, IEA, BGS and price-agency data.
+
+Last updated: 2026-09-04
+
+### Dataset
+
+CobaltWatch — Global Cobalt Supply Chain Data
+
+Mines, hydroxide plants and refineries, production and reserves data, prices, trade flows, export quotas and refining concentration for the global cobalt supply chain.
+
+- Temporal coverage: 2018/2026
+- Variables: Mine production, Reserves, Refining capacity, Prices, Trade flows, Export quotas, Companies
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/data/cobalt.json (Cobalt — imports, exports by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/cobalt-mine.json (Cobalt, mine — production by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/cobalt-refined.json (Cobalt, refined — production by country, 1972–2024)
+- Sources: USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Cobalt); Cobalt Institute, Cobalt Market Report 2025; IEA Global Critical Minerals Outlook 2026; British Geological Survey, World Mineral Statistics; Fastmarkets, S&P Global Platts and LME price data; Company disclosures and government announcements
+
+### Questions and answers
+
+**What is cobalt used for?**
+
+Batteries dominate: about 43% of the world's cobalt goes into EV batteries and another 30% into the lithium-ion cells of phones, laptops and power tools (Cobalt Institute, 2024). The rest is the older, strategic market — superalloys for jet-engine hot sections (about half of US consumption), tungsten-carbide cutting tools, catalysts, samarium-cobalt magnets and the pigment that has coloured ceramics cobalt-blue for a thousand years. Total demand grew 13% in 2025 despite the rise of cobalt-free battery chemistries.
+
+**Which country produces the most cobalt?**
+
+The Democratic Republic of the Congo mined about 230,000 of the world's 310,000 tonnes of cobalt in 2025 (USGS) — roughly 73%, almost all of it as a by-product of copper from the Katanga Copperbelt, and a share of it dug by hand. Indonesia is now a clear second at about 44,000 tonnes, a by-product of its nickel boom, up from almost nothing a decade ago. But the tightest grip is downstream: China refined about 79% of the world's cobalt in 2025 (Cobalt Institute).
+
+**Why did the DRC ban cobalt exports, and what are the quotas?**
+
+By early 2025 cobalt had crashed to eight-year lows around $10 per pound under a wall of new supply. On 22 February 2025 the DRC — supplier of three quarters of the world's cobalt — banned exports outright, and from 16 October 2025 replaced the ban with quotas run by the regulator ARECOMS: 18,125 tonnes for the rest of 2025, then 96,600 tonnes a year for 2026 and 2027, including 9,600 tonnes reserved for the state — roughly half of what the country exported in 2024. Prices responded violently: hydroxide rose about 300% over 2025, and standard-grade metal traded near $26 per pound in August 2026.
+
+**Is the world running out of cobalt?**
+
+No. USGS puts reserves at about 12 million tonnes — roughly forty years at the 2025 mining rate — with identified terrestrial resources of about 25 million tonnes, and it estimates billions of tonnes more in seafloor polymetallic nodules. The risk is not geology but structure: three quarters of mine supply comes from one country, four fifths of refining happens in another, and the export rules can change with a decree.
+
+**Can batteries go cobalt-free?**
+
+Increasingly, yes — and it is the biggest force reshaping this market. Cobalt-free LFP chemistry took more than 55% of global EV battery deployments in 2025 (IEA), overtaking nickel-based cells for the first time, and high-nickel NMC keeps thrifting cobalt out of the rest. Yet total cobalt demand still grew 13% in 2025: EV volumes, consumer electronics (whose LCO cathodes are the most cobalt-rich of all) and aerospace superalloys outweigh the substitution — for now. Forecasters see roughly 5–7% annual demand growth to 2030, at the mercy of chemistry choices made in Asia's battery labs.
+
+**What about artisanal mining and child labour?**
+
+Between about 150,000 and 250,000 people dig cobalt by hand in the DRC's artisanal sector, historically supplying anywhere from a few percent to a fifth of national output depending on prices — with documented child labour and fatal accidents. Since February 2025 the state's Entreprise Générale du Cobalt has held a legal monopoly on buying and exporting artisanal cobalt, and it produced its first fully traceable cathodes in November 2025. Formalisation remains partial: initiatives such as the Fair Cobalt Alliance work on mine-site safety and school enrolment, while Amnesty International continues to document evictions and abuses around industrial mines.
+
+**Need a deep-dive report on cobalt?**
+
+That's exactly what we do. We produce commissioned deep-dive reports on cobalt, covering angles such as mine-to-refinery supply-chain mapping, the DRC quota regime and its politics, Indonesia's HPAL wave, China's refining grip, battery-chemistry scenarios and what they mean for demand, artisanal-mining due diligence and the Western refinery buildout. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
+
+## CopperWatch — Tracking the Global Copper Supply Chain
+
+URL: https://mineral.watch/copper/
+
+Open data visualisation tracking the global copper supply chain: mines, smelters, refineries, tariffs, the smelting chokepoint and record prices. Built on USGS, ICSG, IEA and BGS data.
+
+Last updated: 2026-09-04
+
+### Dataset
+
+CopperWatch — Global Copper Supply Chain Data
+
+Mines, smelters and refineries, production and reserves data, trade flows, tariffs and prices for the global copper supply chain.
+
+- Temporal coverage: 2018/2026
+- Variables: Mine production, Refinery production, Smelter production, Reserves, Prices, Treatment charges, Tariffs, Companies
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/data/copper.json (Copper — imports, exports by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/copper-mine.json (Copper, mine — production by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/copper-refined.json (Copper, refined — production by country, 1976–2024)
+- Download: https://mineral.watch/map_data/data/copper-smelter.json (Copper, smelter — production by country, 1970–2024)
+- Sources: USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Copper); International Copper Study Group (ICSG) statistics and market forecasts; IEA Global Critical Minerals Outlook 2025; British Geological Survey, World Mineral Statistics; LME and COMEX price data; company disclosures and government announcements
+
+### Questions and answers
+
+**Is the world running out of copper?**
+
+No. USGS puts global reserves at 980 million tonnes, with identified and undiscovered resources above 5 billion tonnes. The squeeze is about pace, not endowment: average ore grades have fallen to roughly 0.6% copper, a new mine takes about 17 years from discovery to production, and the IEA projects that existing and announced mines will cover only about 70% of copper demand by 2035 — a 30% supply gap.
+
+**Which country produces the most copper?**
+
+Chile mined about 5.3 of the world's 23 million tonnes in 2025 — roughly 23% — ahead of the Democratic Republic of the Congo (3.2 Mt) and Peru (2.7 Mt), according to USGS estimates. But China dominates the next step: it produced about 48% of the world's refined copper in 2025 and consumes well over half of it.
+
+**Why is smelting the chokepoint if copper mining is so spread out?**
+
+Copper mining is geographically diverse, but China built over 90% of the growth in global smelting capacity since 2005 and now holds about half of it. That overcapacity, colliding with stalled mine supply, pushed the 2026 benchmark fee smelters charge miners to $0 per tonne — the lowest ever — with spot fees deeply negative. Outside China, custom smelters are closing or on state support, and the United States has only two primary copper smelters left.
+
+**What did the 2025 US copper tariffs do?**
+
+The July 2025 announcement of a 50% copper tariff sent New York futures up 13% in a day — the largest gain since 1968 — and pulled record volumes of cathode to the US. When the final proclamation exempted refined cathode and applied the 50% duty only to semi-finished products from 1 August 2025, COMEX crashed by about a fifth in a day. The US still imported a record 1.7 million tonnes of refined copper in 2025, net import reliance jumped from 45% to 57%, and a phased tariff on refined copper (15% in 2027, 30% in 2028) remains proposed.
+
+**What is copper used for?**
+
+Wiring the world: building construction (42% of US use), electrical and electronic products (23%) and transportation (18%) lead. Power grids are the biggest growth market, a battery-electric vehicle uses roughly 83 kg of copper versus 23 kg in a petrol car, and a single large AI data centre can contain up to 50,000 tonnes.
+
+**Why did copper prices hit records in 2026?**
+
+A run of 2025 supply shocks — the Grasberg mud rush, the El Teniente collapse and flooding at Kamoa-Kakula — collided with tariff-driven US stockpiling that drained exchange warehouses elsewhere, surging grid and AI demand, and smelting fees at zero. LME copper hit an all-time high of $14,527.50 per tonne on 29 January 2026, and COMEX printed a record $6.77 per pound on 7 August 2026.
+
+**Need a deep-dive report on copper?**
+
+That's exactly what we do. We produce commissioned deep-dive reports on copper, covering angles such as the mine-project pipeline and the looming supply gap, the smelting squeeze and what zero treatment charges mean outside China, tariff and trade-flow analysis, demand from grids, EVs and AI data centres, and country- and asset-level supply risk from Chile to the DRC. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
+
+## Open Data Catalogue — Mineral, Oil & Gas and Green-Transition Datasets | mineral.watch
+
+URL: https://mineral.watch/data/
+
+Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 11 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
+
+Last updated: 2026-09-04
+
+### Dataset
+
+mineral.watch open data catalogue
+
+Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 11 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
+
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+## Mineral Explorer — World Production & Trade Map | mineral.watch
+
+URL: https://mineral.watch/explorer/
+
+Interactive world map of mineral production, imports and exports for 111 commodities, 1970–2024, with a supply-concentration view. Data from the British Geological Survey.
+
+Last updated: 2026-09-04
+
+### Dataset
+
+World mineral production, imports and exports, 1970–2024 — BGS World Mineral Statistics (mineral.watch JSON mirror)
+
+Country-level production, import and export series for 111 mineral and energy commodities from 1970 to 2024, compiled by mineral.watch from the British Geological Survey's World Mineral Statistics via the BGS OGC API Features service. Figures for a given country, commodity and year are summed across sub-commodity breakdowns. Published as one JSON file per commodity (keyed statistic → year → ISO3 country → quantity) plus a commodity index with units and a country centroid file, and explorable as an interactive map with volume and supply-concentration views.
+
+- Temporal coverage: 1970/2024
+- Variables: Production, Imports, Exports
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/meta.json (Commodity index (names, slugs, statistics, years, units))
+- Download: https://mineral.watch/map_data/countries.json (Country names and centroids by ISO3 code)
+- Sources: British Geological Survey, World Mineral Statistics (BGS © UKRI)
+
+## GraphiteWatch — Tracking the Global Graphite Supply Chain
+
+URL: https://mineral.watch/graphite/
+
+Open data visualisation tracking the global graphite supply chain: mines, trade flows, processing hubs and prices. Built on USGS, BGS, UN Comtrade and IEA data.
+
+Last updated: 2026-09-04
+
+### Dataset
+
+GraphiteWatch — Global Graphite Supply Chain Data
+
+Mines, processing and anode plants, trade flows, production and reserves data, and prices for the global graphite supply chain.
+
+- Temporal coverage: 2018/2026
+- Variables: Mine production, Reserves, Trade flows, Refining capacity, Prices, Companies
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/data/graphite.json (Graphite — production, imports, exports by country, 1970–2024)
+- Sources: USGS National Minerals Information Center, Mineral Commodity Summaries 2026; British Geological Survey, World Mineral Statistics; UN Comtrade; IEA Global Critical Minerals Outlook 2025
+
+### Questions and answers
+
+**Who produces the most graphite?**
+
+China produced roughly 82% of the world's mined natural graphite in 2025, according to USGS estimates, out of about 1.8 million tonnes mined worldwide.
+
+**Why does China dominate graphite refining?**
+
+The IEA estimates China performs roughly 90% of the world's battery-grade graphite refining and about 95% of spherical graphite production, because spheronisation and purification cluster near Chinese flake mines and cheap electricity, and because graphitisation for synthetic graphite is extremely energy-intensive.
+
+**How much graphite is in an EV battery?**
+
+Graphite is the single largest material in a lithium-ion battery by weight, at roughly 50 kg per electric vehicle.
+
+**How reliant is the U.S. on imported graphite?**
+
+The United States has 100% net import reliance on natural graphite, according to USGS data.
+
+**Need a deep-dive report on graphite?**
+
+That's exactly what we do. We produce commissioned deep-dive reports on graphite, covering angles such as mine-to-anode supply-chain mapping, China's grip on spherical graphite and battery-grade refining, natural versus synthetic anode economics, US and EU import dependency and exposure to Chinese export controls, and the emerging ex-China projects trying to break the bottleneck. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
+
+## GreenWatch — Tracking the Green Transition Supply Chain
+
+URL: https://mineral.watch/green/
+
+Open data visualisation tracking the green transition's supply chain: who builds the world's solar modules, battery cells, wind turbines and electrolysers, which minerals they consume, China's ~80% manufacturing grip, Europe's gigafactory reckoning and where the EU's green money goes — Innovation Fund, Recovery and Resilience Facility, Just Transition Fund, Modernisation Fund, Hydrogen Bank and more. Built on IEA, IRENA, GWEC, BNEF and European Commission data.
+
+Last updated: 2026-09-04
+
+### Dataset
+
+GreenWatch — Green Transition Supply Chain Data
+
+Clean-technology factories, EU-funded flagship projects and stalled gigafactories; solar, wind, EV and battery deployment; clean-energy investment; manufacturing concentration by country and stage; clean-energy shares of mineral demand; and EU green-transition funding instruments with envelopes, awards and disbursements.
+
+- Temporal coverage: 2018/2026
+- Variables: Capacity additions, EV sales, Clean energy investment, Manufacturing capacity shares, Battery pack prices, Mineral demand shares, EU funding envelopes, Grants awarded, Companies
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Sources: IEA World Energy Investment 2025 and 2026; IEA Renewables 2025; IEA Global EV Outlook 2026; IEA Energy Technology Perspectives 2024; IEA Global Critical Minerals Outlook 2026; IRENA Renewable Capacity Statistics 2026; GWEC Global Wind Report 2026; SolarPower Europe Global Market Outlook; BloombergNEF Battery Price Survey and Energy Transition Investment Trends; European Commission — Innovation Fund, Recovery and Resilience Scoreboard, Just Transition Platform, Modernisation Fund, Social Climate Fund; European Investment Bank; Company disclosures and government announcements
+
+### Questions and answers
+
+**What is the green transition supply chain?**
+
+It is the chain of mines, refineries, materials plants, component factories and installers that turns minerals into the machines of a low-carbon energy system: solar modules, wind turbines, battery cells and electric vehicles, electrolysers, heat pumps, and the grid transformers, cables and storage that connect them. Each machine has its own chain — polysilicon to wafer to cell to module for solar; cathode and anode powders to cells to packs for batteries; rare-earth magnets, steel and glass fibre to nacelles and blades for wind — but they share the same upstream minerals (lithium, cobalt, nickel, graphite, copper, rare earths, silicon) and, increasingly, the same manufacturing geography: China holds roughly 85% of solar and over 80% of battery-cell capacity, and around 60% of wind-turbine and electrolyser manufacturing (IEA).
+
+**Who makes the world's solar panels, batteries and wind turbines?**
+
+Mostly China. The IEA puts China at around 85% of global solar supply-chain manufacturing capacity — 95% or more for wafers and over 80% for modules — at over 80% of battery-cell production in 2025 (85% of cathode and more than 90% of anode material), at 60% of wind-turbine production capacity and around 60% of electrolyser manufacturing. Chinese companies also took about 70% of the world's wind-turbine orders in 2025 (Wood Mackenzie), and CATL and BYD alone supplied 55% of EV batteries (SNE Research). Europe's strongholds are wind (19% of turbine capacity), grid equipment — Prysmian, Nexans, NKT, Siemens Energy, Hitachi Energy — and heat pumps (20%); the United States is rebuilding solar-module capacity (First Solar ~14 GW, Qcells, T1 Energy) behind tariffs and the 45X manufacturing credit.
+
+**How much does the world invest in clean energy?**
+
+About $2.2 trillion a year. The IEA's World Energy Investment 2026 expects total energy investment to reach $3.4 trillion in 2026, of which $2.2 trillion goes to renewables, nuclear, grids, storage, low-emission fuels, efficiency and electrification — almost twice the $1.2 trillion flowing to oil, gas and coal. Solar alone attracts about $365 billion (roughly $1 billion a day), grids $550 billion and battery storage more than $100 billion. China accounts for almost a third of the clean total; the United States saw $34.8 billion of announced clean-energy projects cancelled in 2025 after federal tax credits were cut (E2).
+
+**How much does the EU spend on the green transition?**
+
+There is no single figure, because the money sits in a stack of instruments. The largest is the €650 billion Recovery and Resilience Facility (2021–2026), 42% of which — roughly €270 billion — went to climate measures. Cohesion policy (€392 billion for 2021–27) must direct 30% of its regional fund and 37% of its Cohesion Fund to climate objectives. The carbon market feeds three dedicated funds: the Innovation Fund (about €40 billion expected over 2020–2030, some €17 billion awarded so far), the Modernisation Fund (over €57 billion expected by 2030 for 13 lower-income member states, €23.2 billion disbursed) and, from 2026, the Social Climate Fund (€86.7 billion to 2032 including national co-financing). Add the €19.3 billion Just Transition Fund, Horizon Europe's roughly €15 billion climate-energy-mobility cluster, the Connecting Europe Facility's €5.8 billion for energy and €5.4 billion under LIFE — plus the European Investment Bank, which signed €57 billion of green financing in 2025 alone, and the €38.8 billion (2024) to €43 billion (2025) a year of ETS auction revenue that member states must spend on climate.
+
+**What is the EU Innovation Fund?**
+
+The EU's main grant programme for first-of-a-kind clean-technology projects, financed not from the budget but from the sale of emissions allowances under the EU carbon market — which makes its size move with the carbon price (roughly €40 billion expected for 2020–2030). It runs annual competitive calls: €1.1 billion (2020), €1.8 billion (2021), €3.6 billion (2022), €4.2 billion signed for 77 projects (2023) and €2.7 billion for 54 projects (2024), plus dedicated pots — €852 million for six battery-cell factories in 2025 and the European Hydrogen Bank auctions, which have awarded €720 million, €992 million and €1.09 billion in fixed premiums to renewable-hydrogen producers since 2024. The 2025 call (€2.9 billion, with €1 billion ring-fenced for cleantech manufacturing) drew 358 applications and reports in late 2026. Since February 2025 the Innovation Fund is also the seed of the €100 billion Industrial Decarbonisation Bank, and the Commission proposes to fold it into the European Competitiveness Fund from 2028.
+
+**What is the Just Transition Fund?**
+
+A €19.3 billion fund (2021–2027, €10.9 billion of it from NextGenerationEU) that pays for retraining, diversification, land rehabilitation and clean-energy projects in the roughly 100 coal, lignite, peat, oil-shale and carbon-intensive territories most exposed to the climate transition — from Silesia and Bełchatów in Poland to Western Macedonia, the Jiu Valley, Ida-Viru, Asturias, Lusatia and Sulcis. Poland (€3.85 billion), Germany (€2.5 billion), Romania (€2.1 billion), Czechia (€1.6 billion) and Bulgaria (€1.2 billion) are the biggest recipients. It is the first pillar of the Just Transition Mechanism, alongside an InvestEU scheme and a public-sector loan facility. Its weakness is speed: by March 2025 only €735 million had actually been paid out, and analysts fear the 2028–34 budget proposal, which merges it into national plans, will dilute it further.
+
+**Why did Northvolt fail, and what does it mean for Europe's gigafactories?**
+
+Northvolt raised about $15 billion to become Europe's battery champion and filed for bankruptcy in Sweden on 12 March 2025 after years of production problems at its Skellefteå plant, a lost BMW contract and a market in which Chinese cells cost a fraction of European ones — BloombergNEF's 2025 survey put average pack prices at $108/kWh and LFP packs at $81. Its Swedish assets were bought by California's Lyten, which completed the deal in February 2026, is restarting Skellefteå with first shipments due in the second half of 2026 and plans to open the Heide site in Germany in 2028. The wider lesson is being learned across the continent: ACC cancelled its German and Italian plants in February 2026 while ramping Billy-Berclau, Volkswagen's PowerCo only started Salzgitter in December 2025 and pushed Valencia to mid-2027, and Europe's gigafactory pipeline shrank 8% between 2023 and 2026 — the only major region to lose capacity. The plants actually being built in Europe today are increasingly Chinese- or Korean-owned: CATL in Debrecen, BYD in Szeged, LG in Wrocław, Samsung SDI and SK On in Hungary.
+
+**Is Europe's green transition dependent on China?**
+
+On hardware, yes. The EU imports the overwhelming majority of its solar modules, around 80% of its new PV systems use Chinese inverters (Huawei alone accounts for 115 GW), Chinese companies dominate the battery cells going into European cars, and China refines 60–90% of the lithium, cobalt, graphite and rare earths behind them. The dependence has become a security question: in 2025 undocumented communication devices were found in Chinese inverters, China restricted rare-earth exports to European carmakers and turbine makers, and in 2026 the UK blocked a £1.5 billion Mingyang turbine factory. The EU's answers are the Net-Zero Industry Act's 40% domestic-manufacturing benchmark for 2030, the Industrial Accelerator Act's 'Made in Europe' rules proposed in March 2026, the Commission's May 2026 guidance denying EU funds to projects using high-risk-supplier inverters, and a price-undertaking deal that replaced most EV tariffs in 2026. Where Europe is not dependent is wind, grids and heat pumps — the machines its own companies still lead.
+
+**Need a deep-dive report on the green transition supply chain?**
+
+That's exactly what we do. We produce commissioned deep-dive reports on the green transition and the strategic minerals behind it, covering angles such as mine-to-megawatt supply-chain mapping for a given technology, EU funding and state-aid tracking (Innovation Fund, Hydrogen Bank, RRF, Just Transition Fund, IPCEIs) by country or sector, manufacturing-concentration and import-dependence analysis, gigafactory and offtake pipelines, and the security exposure of grid hardware. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
+
+## LithiumWatch — Tracking the Global Lithium Supply Chain
+
+URL: https://mineral.watch/lithium/
+
+Open data visualisation tracking the global lithium supply chain: hard-rock mines, brine operations, converters, the China refining chokepoint, the price whipsaw and the battery boom. Built on USGS, IEA, BGS and price-agency data.
+
+Last updated: 2026-09-04
+
+### Dataset
+
+LithiumWatch — Global Lithium Supply Chain Data
+
+Hard-rock mines, brine operations and converters, production and reserves data, prices, trade flows and refining concentration for the global lithium supply chain.
+
+- Temporal coverage: 2018/2026
+- Variables: Mine production, Reserves, Chemical conversion capacity, Prices, Trade flows, Companies
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/data/lithium.json (Lithium — imports, exports by country, 1974–2024)
+- Download: https://mineral.watch/map_data/data/lithium-minerals.json (Lithium minerals — production by country, 1974–2024)
+- Sources: USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Lithium); IEA Global Critical Minerals Outlook 2025 and Global EV Outlook 2026; British Geological Survey, World Mineral Statistics; Benchmark Mineral Intelligence and Fastmarkets price assessments; Guangzhou Futures Exchange; Company disclosures and government announcements
+
+### Questions and answers
+
+**Is the world running out of lithium?**
+
+No. USGS puts global reserves at 37 million tonnes of lithium — about 127 years of production at the 2025 rate — and identified resources at roughly 150 million tonnes. The constraint is not geology but timing and processing: demand is growing so fast that supply has swung from shortage to glut and back within five years, and almost every tonne must pass through a conversion plant, about 70% of which are in China.
+
+**Which country produces the most lithium?**
+
+Australia mined about 92,000 of the world's 290,000 tonnes of lithium content in 2025, ahead of China (62,000 t) and Chile (56,000 t), according to USGS estimates. But the leverage sits one step downstream: China converts roughly 70% of the world's lithium into battery-grade chemicals and makes about 85% of cathode active material.
+
+**Why did lithium prices crash and then rebound?**
+
+The 2021–22 EV boom caught supply flat-footed and pushed battery-grade lithium carbonate to an average of $63,700 per tonne in 2022. The wave of new mines it financed then flooded the market: prices fell about 85% to a $9,000 average in 2025, forcing curtailments across Australia, Canada and China. When CATL's giant Jianxiawo mine lost its permit in August 2025 just as EV and storage demand surged, futures more than doubled, topping ¥200,000 (~$29,500) per tonne in 2026 before restarts cooled the rally back to roughly $18,000–23,000.
+
+**What is lithium used for?**
+
+Batteries take 88% of world supply (USGS, 2025) — electric vehicles above all, plus grid storage, phones, laptops and power tools. The rest goes to ceramics and glass (4%), lubricating greases (2%), air treatment, casting fluxes and pharmaceuticals. No commercial battery chemistry with comparable energy density exists without lithium, though sodium-ion is emerging at the cheap end.
+
+**Hard rock or brine — where does lithium actually come from?**
+
+About two thirds of mined lithium comes from hard rock — spodumene ore in Australia, Africa, Brazil, Canada and China — which is fast to build but costlier to run, and almost all of it ships to China for conversion. Most of the rest is pumped from salt-flat brines in Chile, Argentina and China, which sit at the bottom of the cost curve but take 12–18 months of pond evaporation. Direct lithium extraction (DLE), which pulls lithium from brine in hours, is the technology both worlds are betting on.
+
+**Why does a single Chinese mine move the world lithium price?**
+
+CATL's Jianxiawo lepidolite mine in Jiangxi supplies roughly 3–6% of world lithium and sits near the top of the cost curve, making it the market's swing producer. When its permit lapsed in August 2025, Guangzhou futures more than doubled; when a new permit landed on 29 June 2026 and the mine restarted, prices gave back much of the rally. Since carbonate futures listed in 2023, positioning around this one mine has amplified every headline.
+
+**Need a deep-dive report on lithium?**
+
+That's exactly what we do. We produce commissioned deep-dive reports on lithium, covering angles such as mine-to-chemical supply-chain mapping across Australia, Latin America and Africa's new hard-rock belt, China's grip on conversion and cathode material, price-cycle and cost-curve analysis, hard-rock versus brine economics and the outlook for direct lithium extraction, and what chemistry shifts like LFP, LMFP and sodium-ion mean for demand. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
+
+## ManganeseWatch — Tracking the Global Manganese Supply Chain
+
+URL: https://mineral.watch/manganese/
+
+Open data visualisation tracking the global manganese supply chain: the mines of the Kalahari, Gabon and Groote Eylandt, China's refining chokepoint, the steel backbone, the battery pivot and the deep-sea nodule race. Built on USGS, IEA, BGS and price-agency data.
+
+Last updated: 2026-09-04
+
+### Dataset
+
+ManganeseWatch — Global Manganese Supply Chain Data
+
+Mines, ferroalloy smelters and battery-grade refineries, production and reserves data, prices, trade flows and refining concentration for the global manganese supply chain.
+
+- Temporal coverage: 2018/2026
+- Variables: Mine production, Reserves, Refining capacity, Prices, Trade flows, Companies
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/data/manganese.json (Manganese — imports, exports by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/manganese-ore.json (Manganese ore — production by country, 1970–2024)
+- Sources: USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Manganese); IEA Global Critical Minerals Outlook 2025; British Geological Survey, World Mineral Statistics; CRU Group and Fastmarkets price assessments; Company disclosures and government announcements
+
+### Questions and answers
+
+**What is manganese used for?**
+
+About 90% of manganese goes into steelmaking, where it removes oxygen and sulfur from molten iron and hardens the finished steel — USGS states flatly that manganese has no satisfactory substitute in its major applications. The rest goes into aluminium alloys (every beverage can), batteries (alkaline cells and, increasingly, lithium-ion cathodes), fertilisers, animal feed and water treatment. Batteries are the fastest-growing use: demand from that segment is projected to grow around eightfold this decade.
+
+**Which country produces the most manganese?**
+
+South Africa mined about 7.6 million of the world's 20 million tonnes of manganese content in 2025 (USGS), from the Kalahari Manganese Field — which also holds roughly 70% of the world's identified resources. Gabon came second at about 5 million tonnes and Ghana leapt to third at about 2 million after doubling output in a year. But the leverage sits downstream: China refines more than 90% of the world's manganese metal and about 95% of battery-grade manganese sulphate.
+
+**Is the world running out of manganese?**
+
+No. USGS puts reserves at about 1.8 billion tonnes of manganese content — roughly 90 years at the 2025 mining rate — before counting the billions of tonnes lying in polymetallic nodules on the Pacific seabed. The risk is not geology but structure: ore is cheap and abundant, so almost nobody outside China has built the refineries that turn it into battery-grade product, and 100% of US consumption is imported.
+
+**Why did the manganese price spike in 2024?**
+
+In March 2024, Cyclone Megan destroyed the export wharf at South32's GEMCO mine on Groote Eylandt, Australia — roughly a tenth of world supply and a much larger share of high-grade ore. Panic buying drove 44%-grade ore from about $4 to nearly $9 per dmtu by August. Then China's steel slump caught up: port stocks swelled to about 6 million tonnes and prices collapsed below $4 by October. GEMCO resumed exports in May 2025; the 2025 average was $4.50/dmtu.
+
+**What is manganese's role in batteries?**
+
+Manganese has powered alkaline batteries for a century, and in lithium-ion it is the cheap, stable ingredient in NMC cathodes. The next wave leans on it harder: LMFP and lithium-manganese-rich (LMR) chemistries promise near-nickel energy at LFP-like cost — GM and LG Energy Solution plan LMR production for US electric trucks by 2028, and Chinese cathode makers are scaling LMFP. Every one of those routes runs through high-purity manganese sulphate, about 95% of which is refined in China.
+
+**What are manganese nodules?**
+
+Potato-sized lumps on the abyssal Pacific seafloor that are roughly 30% manganese, plus nickel, cobalt and copper. The Clarion-Clipperton Zone alone holds billions of tonnes. After a 2025 US executive order opened a national permitting route, The Metals Company applied to NOAA for the first commercial recovery permit; NOAA found the application compliant in May 2026 and published it for comment that August, with a decision expected by early 2027 — over the objections of the International Seabed Authority, which says international waters are not America's to license.
+
+**Need a deep-dive report on manganese?**
+
+That's exactly what we do. We produce commissioned deep-dive reports on manganese, covering angles such as ore-to-sulphate supply-chain mapping, mine supply and export logistics from South Africa, Gabon, Ghana and Australia, China's grip on battery-grade refining, what LMFP and LMR chemistries mean for future demand, and steel-market dynamics alongside the seabed-nodule question. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
+
+## NickelWatch — Tracking the Global Nickel Supply Chain
+
+URL: https://mineral.watch/nickel/
+
+Open data visualisation tracking the global nickel supply chain: Indonesia's two-thirds grip on mining, the Chinese-built smelter parks, the class-1/class-2 divide, the 2022 LME squeeze, the quota machine and the battery chemistry war. Built on USGS, INSG, IEA, BGS and price-agency data.
+
+Last updated: 2026-09-04
+
+### Dataset
+
+NickelWatch — Global Nickel Supply Chain Data
+
+Mines, smelter parks, HPAL plants and refineries, production and reserves data, prices, trade flows, ore quotas and refining concentration for the global nickel supply chain.
+
+- Temporal coverage: 2018/2026
+- Variables: Mine production, Reserves, Refining capacity, Prices, Trade flows, Ore quotas, Companies
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/data/nickel.json (Nickel — imports, exports by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/nickel-mine.json (Nickel, mine — production by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/nickel-smelter-refinery.json (Nickel, smelter/refinery — production by country, 1977–2024)
+- Sources: USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Nickel); International Nickel Study Group (INSG), press releases and World Nickel Factbook; IEA Global Critical Minerals Outlook 2026; British Geological Survey, World Mineral Statistics; LME, SMM and Fastmarkets price data; Company disclosures and government announcements
+
+### Questions and answers
+
+**What is nickel used for?**
+
+Mostly to make steel stainless: about 64% of the world's nickel goes into stainless steel, the 300-series kitchens, hospitals and chemical plants are built from (Wood Mackenzie, 2024). Batteries take roughly 15% — the nickel-rich NMC and NCA cathodes in longer-range EVs — with the rest split between non-ferrous alloys, electroplating and alloy steels. The strategic sliver is superalloys: nickel-based alloys make up 40–50% of a modern jet engine's weight, with no substitute at any price.
+
+**Which country produces the most nickel?**
+
+Indonesia, by an enormous margin: about 2.6 million of the world's 3.9 million tonnes in 2025 (USGS) — roughly two-thirds of global mine supply, up from around 5% a decade ago. The Philippines is a distant second at about 270,000 tonnes, much of its ore now shipped to Indonesian plants. Downstream the grip tightens differently: Indonesia and China together produced about 76% of the world's refined nickel in 2025 (IEA), and Chinese groups own roughly three-quarters of Indonesia's refining capacity.
+
+**What happened in the 2022 LME nickel squeeze?**
+
+On 8 March 2022, LME nickel jumped 250% in two days and traded past $100,000 a tonne as a huge short position held by Tsingshan — the world's biggest nickel producer — collided with Russia-invasion supply fears. The LME suspended trading for more than a week and retroactively cancelled about 9,000 trades worth roughly $12 billion. Hedge funds sued and lost; the UK regulator later fined the exchange £9.2 million — its first-ever enforcement action against an exchange. Volumes only recovered to pre-crisis levels in 2024.
+
+**What is the difference between class-1 and class-2 nickel?**
+
+Class-1 is refined metal of at least 99.8% purity — the cathode and briquettes the LME contract actually delivers — and makes up only about a quarter of supply. Class-2 is the rest: nickel pig iron and ferronickel, iron-nickel alloys that go straight into stainless steel. NPI alone was over half of world supply in 2025 (INSG). The boundary is blurring: Indonesian plants now convert NPI to matte and laterite ore to MHP, intermediates that Chinese refineries turn into battery-grade sulphate — and increasingly into new class-1 metal that has flooded LME warehouses.
+
+**Why did Western nickel mines shut down?**
+
+Five consecutive years of Indonesian-driven surplus crushed the price from about $25,800 a tonne (2022 average) to about $15,000 in 2025 — below the cost of most non-Indonesian supply. In 2024 alone, BHP suspended its entire Nickel West division, First Quantum halted Ravensthorpe, Wyloo closed its Kambalda mines and Glencore walked away from Koniambo in New Caledonia after sinking $9 billion. USGS data shows Australian output fell 54% in 2025. Most restarts are judged to need sustained prices above $18,000–20,000 a tonne.
+
+**Do EV batteries still need nickel?**
+
+The long-range ones do: nickel-rich NMC and NCA cathodes still deliver the highest energy density, and solid-state designs pair with high-nickel cathodes too. But nickel-free LFP became the world's dominant EV chemistry in 2025 (IEA), and battery nickel demand actually dipped slightly that year (INSG). The IEA still projects batteries growing from roughly 15% of nickel demand today to about 30% by 2035 — while advising forecasters to revise nickel demand estimates down as LFP spreads.
+
+**Is the world running out of nickel?**
+
+No. USGS puts reserves above 140 million tonnes — around 35 years at the 2025 mining rate — with identified resources over 350 million tonnes on land and an estimated 4.5 billion tonnes more in seabed deposits. The real anxieties are concentration and depletion of the best ore: two-thirds of mine supply comes from one archipelago whose quota decisions now set the world price, and Indonesian officials have warned their high-grade saprolite could run short within a couple of decades at the current smelting rate.
+
+**Need a deep-dive report on nickel?**
+
+That's exactly what we do. We produce commissioned deep-dive reports on nickel, covering angles such as mine-to-refinery supply-chain mapping, Indonesia's quota and royalty regime, the class-1/class-2 divide and what it means for batteries versus stainless, the LME's post-squeeze credibility, Western restart economics and the seabed-nodule wildcard. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
+
+## Oil & Gas Watch — Tracking the World's Oil and Gas Chokepoints, Flows and Power
+
+URL: https://mineral.watch/oil-gas/
+
+Open data visualisation tracking global oil and gas: the 2026 Strait of Hormuz closure and the largest supply disruption in oil-market history, the Gulf shut-in ledger, pipeline bypasses, the LNG shock, sanctions and the shadow fleet, OPEC+, prices and the companies that move energy. Built on EIA, IEA, OPEC, BGS, Energy Institute and tanker-tracking data — for energy businesses, geopolitics researchers and think tanks.
+
+Last updated: 2026-09-04
+
+### Dataset
+
+Oil & Gas Watch — Global Oil and Gas Flows, Chokepoints and Supply Data
+
+Fields and basins, export terminals, refineries and LNG plants, maritime chokepoints, production and reserves data, prices, shut-in estimates, LNG trade, sanctions and company tracking for the global oil and gas system.
+
+- Temporal coverage: 1970/2026
+- Variables: Crude oil production, Natural gas production, Proved reserves, Chokepoint transit volumes, Shut-in production, LNG exports and imports, Prices, Trade flows, Companies
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/data/petroleum-crude.json (Petroleum, crude — production, imports, exports by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/natural-gas.json (Natural gas — production by country, 1970–2024)
+- Sources: U.S. Energy Information Administration, Short-Term Energy Outlook (August 2026) and International Energy Statistics; U.S. Energy Information Administration, World Oil Transit Chokepoints (updated March 2026); IEA Oil Market Report (August 2026), Gas Market Report and World Energy Investment 2026; OPEC Annual Statistical Bulletin 2026 and Monthly Oil Market Report; Energy Institute Statistical Review of World Energy 2026; British Geological Survey, World Mineral Statistics (crude petroleum and natural gas series, 1970–2024); Kpler, Vortexa and Centre for Research on Energy and Clean Air (CREA) tanker-tracking and export analyses; Company disclosures and government announcements
+
+### Questions and answers
+
+**Why does the Strait of Hormuz matter so much for oil and gas?**
+
+Because roughly one in five barrels the world burns passed through it. In the first half of 2025 about 20.9 million barrels a day of crude and products transited the strait (EIA) — around 15 mb/d of crude and condensate plus 5.5 mb/d of refined products — along with about a fifth of the world's LNG, almost all of it from Qatar, and nearly 30% of seaborne LPG. Some 84% of that oil went to Asia. When Iran shut the strait to normal commercial traffic on 2 March 2026, transits fell from about 100 ships a day to a handful, EIA estimates flows dropped to 4.9 mb/d in the second quarter, and the IEA called it the largest supply disruption in the history of the oil market.
+
+**Which country produces the most oil?**
+
+The United States, by a wide margin: about 13.6 million barrels a day of crude oil and condensate in 2025 — a record for any country — with EIA forecasting 13.8 mb/d in 2026 and 14.2 mb/d in 2027. Russia (about 9.9 mb/d) and Saudi Arabia (about 9.5 mb/d) follow; together the top three pump nearly 40% of the world's crude and the top five about half. In 2026 the ranking is being scrambled by the Hormuz closure: Saudi output fell to 7.3 mb/d in June against a quota near 10.3 mb/d, then rebounded to about 11 mb/d in August as the East-West pipeline ran at a record 7 mb/d, while Kuwait exported no crude at all in April.
+
+**Who holds the world's oil and gas reserves?**
+
+Proved crude reserves are concentrated in a handful of states: OPEC's 2026 Annual Statistical Bulletin puts Venezuela first at about 304 billion barrels, Saudi Arabia at 267 billion and Iran at 209 billion, followed by Canada (about 163 billion including oil sands), Iraq, the UAE, Kuwait and Russia. The world total is roughly 1.6–1.7 trillion barrels — about 47 years of consumption at 2025 rates. Gas is even more concentrated: Russia, Iran and Qatar hold about half of the world's proved reserves, and the Iran–Qatar field they share (South Pars/North Dome) is the largest gas reservoir on Earth — which is why the March 2026 strikes on both sides of it shook the LNG market.
+
+**What happened to oil prices in 2026?**
+
+They went vertical. Brent opened the year near $61, touched $116 on 9 March within a week of the Hormuz closure and settled above $118 at the end of March. On 7 April physical Dated Brent was assessed at $144.42 a barrel — the highest since the benchmark began in 1987, a whisker below the 2008 futures record. The June truce sent Brent down to $69 on 2 July; renewed tanker attacks and the Houthi blockade of Saudi Arabia pushed it back to $105 on 23 July; by 2 September it traded near $89.5, about 24% above pre-war. EIA's August outlook expects Brent to average $87 in 2026 and fall to $69 in 2027 as shut-in Gulf production returns — with about 0.6 mb/d still disrupted through the end of 2027.
+
+**Where does the world's LNG come from, and why is it so tight in 2026?**
+
+Three exporters — the United States, Qatar and Australia — supplied 63% of a record 437 million tonnes of LNG traded in 2025, and the US alone shipped 111 million tonnes, the first country ever above 100. Qatar was about a fifth of world supply and every one of its cargoes sails through Hormuz. Iranian missiles hit Ras Laffan on 18–19 March 2026, knocking out about 17% of Qatar's export capacity (12.8 million tonnes a year) for an estimated three to five years, and QatarEnergy has declared force majeure on contracts running into November 2026. The result: Asian spot LNG hit $23.39 per MMBtu on 28 August, a four-year high, European TTF gas climbed back above €70/MWh, EU storage sat 15 bcm below the five-year average in late June, and Pakistan, Bangladesh and India saw cargoes cancelled — while Henry Hub in the US stayed below $3.
+
+**Can pipelines bypass the Strait of Hormuz?**
+
+Partly. Saudi Arabia's East-West Petroline can carry 7 million barrels a day from the Gulf fields to Yanbu on the Red Sea, and Aramco ran it at that all-time record in 2026 — Yanbu crude exports hit about 5 mb/d in March. The UAE's ADCOP line moves up to 1.5 mb/d to Fujairah on the Gulf of Oman, and Iraq's Kirkuk–Ceyhan line to Türkiye has a nominal 1.6 mb/d but carried only 200,000–250,000 b/d, with plans to reach 770,000. That is roughly 9 mb/d of bypass against 20 mb/d of normal Hormuz flow — and the Red Sea route itself became a target when the Houthis declared a naval blockade on Saudi Arabia on 20 July 2026 and struck the Jizan refinery. Kuwait, Qatar, Bahrain and Iran have no bypass at all. Abu Dhabi is fast-tracking a new West-East pipeline for early 2027.
+
+**Is Russia winning or losing from the 2026 oil shock?**
+
+Both. Higher prices and Asian refiners scrambling for non-Gulf barrels lifted Russian fossil-fuel export revenue to about €683 million a day in July 2026 (CREA); Urals crude briefly sold at a $7–8 premium to Brent in April–May, seaborne crude exports hit a post-invasion record of 4.13 mb/d in June, and India bought a record 2.8 mb/d of Russian crude in July. But the discount had reopened to about $21 a barrel by July, the G7 price cap sits at $44.10, Rosneft and Lukoil have been under direct US sanctions since October 2025, about 53% of seaborne crude moves on sanctioned shadow tankers, and Ukrainian drone strikes have cut Russian output for months and idled the Tuapse and CPC terminals for weeks at a time.
+
+**Need a deep-dive report on oil and gas?**
+
+That's exactly what we do. We produce commissioned deep-dive reports for energy companies, traders, insurers, geopolitics researchers and think tanks, covering angles such as chokepoint and flow analysis, Gulf shut-in and bypass scenarios, sanctions and shadow-fleet tracking, LNG contract and capacity mapping, country and basin deep-dives and the exposure of specific companies or importing economies. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
+
+## RareEarthWatch — Tracking the Global Rare Earth Supply Chain
+
+URL: https://mineral.watch/rare-earths/
+
+Open data visualisation tracking the global rare earth supply chain: mines, separation plants, magnet factories, export controls and prices. Built on USGS, IEA and trade data.
+
+Last updated: 2026-09-04
+
+### Dataset
+
+RareEarthWatch — Global Rare Earth Supply Chain Data
+
+Mines, separation and refining plants, magnet factories, production and reserves data, export controls and prices for the global rare earth supply chain.
+
+- Temporal coverage: 2018/2026
+- Variables: Mine production, Reserves, Separation capacity, Magnet capacity, Prices, Export controls, Companies
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/data/rare-earths.json (Rare earths — imports, exports by country, 1975–2024)
+- Download: https://mineral.watch/map_data/data/rare-earth-minerals.json (Rare earth minerals — production by country, 1975–2024)
+- Download: https://mineral.watch/map_data/data/rare-earth-oxides.json (Rare earth oxides — production by country, 1992–2024)
+- Sources: USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Rare Earths; Rare Earths, Heavy); IEA Global Critical Minerals Outlook 2025; Argus Media / Asian Metal price assessments (via USGS); Company disclosures and government announcements
+
+### Questions and answers
+
+**Are rare earths actually rare?**
+
+No — cerium is about as abundant in the Earth's crust as copper. What is rare is finding them concentrated enough to mine economically, and the industrial capacity to separate 17 chemically near-identical elements from each other. The whole world mined only about 390,000 tonnes of rare-earth oxide in 2025.
+
+**Who produces the most rare earths?**
+
+China mined about 270,000 of the world's 390,000 tonnes of rare-earth oxide in 2025 — roughly 69% — according to USGS estimates. Much of the rest, including Myanmar's heavy-rare-earth output, is still refined in China.
+
+**Why does China dominate rare earth refining?**
+
+The IEA estimates China performed about 91% of the world's rare earth refining and made about 94% of sintered NdFeB magnets in 2024. Decades of state investment, tolerance of the radioactive and chemical waste from separation, the scale of Bayan Obo, and a 2023 ban on exporting separation and magnet-making technology all entrench the position.
+
+**What are rare earths used for?**
+
+The leading global use is permanent magnets — NdFeB magnets in EV motors, wind turbines, electronics and defence systems. Other uses include catalysts, polishing, phosphors, lasers, fibre optics and medical imaging.
+
+**What did China's 2025 rare earth export controls do?**
+
+In April 2025 China imposed export licences on samarium, gadolinium, terbium, dysprosium, lutetium, scandium and yttrium and on magnets containing them, briefly halting car production lines worldwide. An October 2025 expansion was suspended for one year in November, but the April controls remain, and outside China dysprosium and terbium have traded at four to five times Chinese domestic prices.
+
+**Need a deep-dive report on rare earths?**
+
+That's exactly what we do. We produce commissioned deep-dive reports on rare earths, covering angles such as mine-to-magnet supply-chain mapping, exposure to China's export controls element by element, heavy versus light rare-earth availability, the ex-China buildout of separation and magnet capacity, and what it all means for autos, wind, electronics and defence programmes. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
+
+## Mined vs Refined — Strategic Mineral Supply-Chain Map | mineral.watch
+
+URL: https://mineral.watch/supply-chain/
+
+Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024. Data from the British Geological Survey.
+
+Last updated: 2026-09-04
+
+### Dataset
+
+Mined vs refined — where strategic minerals are mined and where they are processed, 1970–2024
+
+Paired country-level series of mine-stage and refined/smelter-stage production for cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024, compiled by mineral.watch from BGS World Mineral Statistics to show how supply-chain concentration shifts from the mine to the refinery. Mine-stage figures for cobalt, copper and nickel are metal content; refined figures are gross tonnes.
+
+- Temporal coverage: 1970/2024
+- Variables: Mine production, Refined production, Smelter production, Top-3 country share
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/data/cobalt-mine.json (Cobalt, mine — production by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/cobalt-refined.json (Cobalt, refined — production by country, 1972–2024)
+- Download: https://mineral.watch/map_data/data/copper-mine.json (Copper, mine — production by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/copper-smelter.json (Copper, smelter — production by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/copper-refined.json (Copper, refined — production by country, 1976–2024)
+- Download: https://mineral.watch/map_data/data/nickel-mine.json (Nickel, mine — production by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/nickel-smelter-refinery.json (Nickel, smelter/refinery — production by country, 1977–2024)
+- Download: https://mineral.watch/map_data/data/lithium-minerals.json (Lithium minerals — production by country, 1974–2024)
+- Download: https://mineral.watch/map_data/data/graphite.json (Graphite — production, imports, exports by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/rare-earth-minerals.json (Rare earth minerals — production by country, 1975–2024)
+- Download: https://mineral.watch/map_data/data/rare-earth-oxides.json (Rare earth oxides — production by country, 1992–2024)
+- Download: https://mineral.watch/map_data/data/manganese-ore.json (Manganese ore — production by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/antimony-mine.json (Antimony, mine — production by country, 1970–2024)
+- Based on: https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/
+
+## UraniumWatch — Tracking the Global Uranium & Nuclear Fuel Supply Chain
+
+URL: https://mineral.watch/uranium/
+
+Open data visualisation tracking the global uranium supply chain: mines, conversion and enrichment plants, prices, the Russian enrichment chokepoint and the nuclear revival. Built on WNA, IAEA, EIA and BGS data.
+
+Last updated: 2026-09-04
+
+### Dataset
+
+UraniumWatch — Global Uranium Supply Chain Data
+
+Mines, conversion and enrichment plants, production and resources data, reactor requirements, prices and policy timeline for the global uranium and nuclear fuel supply chain.
+
+- Temporal coverage: 1970/2026
+- Variables: Mine production, Uranium resources, Enrichment capacity, Conversion capacity, Reactor requirements, Prices, Companies
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/data/uranium.json (Uranium — production by country, 1970–2024)
+- Sources: World Nuclear Association — World Uranium Mining Production and World Nuclear Fuel Report 2025; IAEA Power Reactor Information System (PRIS); NEA/IAEA Uranium Resources, Production and Demand (Red Book); US EIA — Uranium Marketing Annual and Domestic Uranium Production reports; British Geological Survey — World Mineral Statistics; UxC and TradeTech price indicators as published by Cameco; company and government disclosures
+
+### Questions and answers
+
+**Is the world running out of uranium?**
+
+No. Identified recoverable resources are around 6 million tonnes of uranium — roughly ninety years at current mining rates, with far more available at higher prices and in unconventional sources. The squeeze is about timing, not endowment: existing mines deplete significantly by the mid-2030s, a new mine takes ten to twenty years from discovery to production, and the World Nuclear Association projects reactor requirements will more than double to about 150,000 tonnes a year by 2040.
+
+**Which country produces the most uranium?**
+
+Kazakhstan mined about 25,800 of the world's roughly 62,000 tonnes of uranium in 2025 — around 41% — ahead of Canada (~13,400 t) and Namibia. But mining is only half the story: Russia controls about 43% of the world's enrichment capacity, the step every kilogram of reactor fuel must pass through.
+
+**Why is enrichment the chokepoint if uranium mining is spread across five continents?**
+
+Four companies — Rosatom, Urenco, CNNC and Orano — operate virtually all commercial enrichment capacity, and Rosatom alone holds about 43% of it. US utilities still bought 26% of their enrichment from Russia in 2025, even though a US import ban takes full effect in 2028 when waivers expire. That cliff triggered a $2.7 billion US enrichment programme and the largest Western capacity buildout in decades — but new centrifuge plants take years to come online.
+
+**What did the US ban on Russian uranium do?**
+
+The Prohibiting Russian Uranium Imports Act, signed in May 2024, banned Russian enriched uranium from August 2024 but allows waivers until 1 January 2028. Russia answered in November 2024 with its own restrictions on enriched-uranium exports to the US. The ban unlocked $2.7 billion for domestic enrichment, awarded in January 2026 to Centrus, General Matter, Orano and Global Laser Enrichment — yet Russian material still covered about a quarter of US enrichment purchases in 2025.
+
+**What is driving uranium demand?**
+
+A reactor fleet that is growing again: 441 operable reactors (~404 GWe) with 79 under construction, 37 of them in China. AI data-centre power deals — Microsoft's Three Mile Island restart contract, Meta-Constellation, Amazon-X-energy, Google-Kairos, together more than 9 GW — turned big tech into a nuclear buyer, more than thirty countries have pledged to triple nuclear capacity by 2050, and the World Bank lifted its decades-old ban on financing nuclear power in June 2025.
+
+**Why did uranium prices spike in 2024 — and where are they now?**
+
+Spot uranium hit about $106 per pound in early February 2024 — a sixteen-year high — after Kazatomprom warned that sulfuric-acid shortages would hit production, capping a run driven by supply cuts, the Sprott Physical Uranium Trust and post-2022 energy security fears. It fell back to $64 by March 2025, then recovered to about $90 by August 2026. The long-term contract price, where most uranium actually trades, kept climbing to a record $95.50 per pound — and enrichment and conversion prices set all-time records too.
+
+**Need a deep-dive report on uranium?**
+
+That's exactly what we do. We produce commissioned deep-dive reports on uranium, covering angles such as mine supply and the mid-2030s depletion question, enrichment and conversion chokepoints, exposure to Russian material ahead of the 2028 waiver cliff, demand from reactor buildouts, restarts and big-tech power deals, and how spot and long-term contract prices behave. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
