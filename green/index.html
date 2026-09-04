@@ -217,6 +217,10 @@ nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
 .hero h1{font-size:clamp(1.9rem,6.5vw,3.2rem);letter-spacing:-.02em;margin-bottom:14px}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero p{color:var(--muted);max-width:560px;font-size:1rem}
+.hero-row{display:flex;align-items:center;gap:48px}
+.hero-copy{flex:1;min-width:0}
+.hero-art{display:none;flex:none;width:360px;animation:hero-float 9s ease-in-out infinite}
+@media(min-width:920px){.hero-art{display:block}}
 .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
 .stat b{display:block;font-size:1.45rem;color:var(--accent);letter-spacing:-.01em}
@@ -448,9 +452,80 @@ footer .legal a{text-decoration:underline}
   <div class="hero-tint" aria-hidden="true"></div>
   <div class="hero-scrim" aria-hidden="true"></div>
   <div class="hero">
-  <div class="kicker">Open data · green transition</div>
-  <h1>Who builds the <em>machines of net zero</em> — and who pays?</h1>
-  <p>The green transition is the biggest industrial build-out of the century. In 2025 the world installed a record 664 GW of solar and 165 GW of wind, sold more than 20 million electric cars, and put nearly twice as much money into clean energy as into oil, gas and coal. But the machines doing the work are made in one country: China holds roughly 85% of the world's solar-manufacturing capacity, over 80% of battery-cell output and 60% of wind-turbine and electrolyser production — and its factories now make far more than the world can install, at prices no rival can match. Europe deploys but does not build, and is spending hundreds of billions of euros of public money — from the carbon-market-funded Innovation Fund to the €650bn recovery facility — to change that before the money runs out. This dashboard tracks where the machines are made, which minerals they eat, where the EU's green money goes and who is left holding the overcapacity — using open data from the IEA, IRENA, GWEC, SolarPower Europe, BloombergNEF and the European Commission.</p>
+  <div class="hero-row">
+    <div class="hero-copy">
+      <div class="kicker">Open data · green transition</div>
+      <h1>Who builds the <em>machines of net zero</em> — and who pays?</h1>
+      <p>The green transition is the biggest industrial build-out of the century. In 2025 the world installed a record 664 GW of solar and 165 GW of wind, sold more than 20 million electric cars, and put nearly twice as much money into clean energy as into oil, gas and coal. But the machines doing the work are made in one country: China holds roughly 85% of the world's solar-manufacturing capacity, over 80% of battery-cell output and 60% of wind-turbine and electrolyser production — and its factories now make far more than the world can install, at prices no rival can match. Europe deploys but does not build, and is spending hundreds of billions of euros of public money — from the carbon-market-funded Innovation Fund to the €650bn recovery facility — to change that before the money runs out. This dashboard tracks where the machines are made, which minerals they eat, where the EU's green money goes and who is left holding the overcapacity — using open data from the IEA, IRENA, GWEC, SolarPower Europe, BloombergNEF and the European Commission.</p>
+    </div>
+    <div class="hero-art net-art" aria-hidden="true">
+      <svg viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- orbits -->
+        <circle class="orbit o1" cx="180" cy="180" r="148"/>
+        <circle class="orbit o2" cx="180" cy="180" r="170"/>
+        <circle cx="180" cy="180" r="159" fill="none" stroke="var(--accent)" stroke-width=".6" opacity=".55"/>
+        <!-- network threads to satellites -->
+        <path class="web d3" pathLength="1" d="M180 30 L139 122"/>
+        <path class="web d3" pathLength="1" d="M180 30 L221 122"/>
+        <path class="web d4" pathLength="1" d="M64 66 L139 122"/>
+        <path class="web d4" pathLength="1" d="M64 66 L92 170"/>
+        <path class="web d4" pathLength="1" d="M298 54 L221 122"/>
+        <path class="web d5" pathLength="1" d="M298 54 L332 116"/>
+        <path class="web d5" pathLength="1" d="M332 116 L268 170"/>
+        <path class="web d5" pathLength="1" d="M324 224 L268 170"/>
+        <path class="web d5" pathLength="1" d="M324 224 L276 306"/>
+        <path class="web d6" pathLength="1" d="M276 306 L180 272"/>
+        <path class="web d6" pathLength="1" d="M84 300 L180 272"/>
+        <path class="web d6" pathLength="1" d="M84 300 L92 170"/>
+        <path class="web d6" pathLength="1" d="M28 204 L92 170"/>
+        <path class="web d6" pathLength="1" d="M28 204 L64 66"/>
+        <!-- diamond facets -->
+        <path class="edge d1" pathLength="1" d="M139 122 H221"/>
+        <path class="edge d1" pathLength="1" d="M139 122 L92 170"/>
+        <path class="edge d1" pathLength="1" d="M221 122 L268 170"/>
+        <path class="edge d2" pathLength="1" d="M92 170 H268"/>
+        <path class="edge d2" pathLength="1" d="M92 170 L180 272"/>
+        <path class="edge d2" pathLength="1" d="M268 170 L180 272"/>
+        <path class="edge d3" pathLength="1" d="M139 122 L180 170"/>
+        <path class="edge d3" pathLength="1" d="M221 122 L180 170"/>
+        <path class="edge d3" pathLength="1" d="M180 170 V272"/>
+        <!-- diamond nodes -->
+        <circle class="node" cx="139" cy="122" r="3.5"/>
+        <circle class="node" cx="221" cy="122" r="3.5"/>
+        <circle class="node" cx="92" cy="170" r="3.5"/>
+        <circle class="node" cx="268" cy="170" r="3.5"/>
+        <circle class="node" cx="180" cy="272" r="3.5"/>
+        <!-- satellite nodes -->
+        <circle class="sat" cx="180" cy="30" r="2.5"/>
+        <circle class="sat b2" cx="64" cy="66" r="2.5"/>
+        <circle class="sat b3" cx="298" cy="54" r="2.5"/>
+        <circle class="sat b2" cx="332" cy="116" r="2.5"/>
+        <circle class="sat b3" cx="324" cy="224" r="2.5"/>
+        <circle class="sat" cx="276" cy="306" r="2.5"/>
+        <circle class="sat b2" cx="84" cy="300" r="2.5"/>
+        <circle class="sat b3" cx="28" cy="204" r="2.5"/>
+        <!-- centre: pulsing accent core -->
+        <circle cx="180" cy="170" r="6" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".6">
+          <animate attributeName="r" values="6;20" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".6;0" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="180" cy="170" r="5" fill="var(--accent)"/>
+        <!-- signals travelling along the network -->
+        <circle r="1.8" fill="var(--accent)">
+          <animateMotion path="M64 66 L139 122 L180 170" dur="5s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="5s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.8" fill="var(--accent2)">
+          <animateMotion path="M298 54 L221 122 L180 170" dur="6.5s" begin="3.4s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6.5s" begin="3.4s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="1.8" fill="var(--accent2)">
+          <animateMotion path="M180 272 L268 170 L332 116" dur="7.5s" begin="4.2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="7.5s" begin="4.2s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
   <div class="stats">
     <div class="stat"><b data-count="2.2" data-prefix="$" data-suffix=" tn">0</b><span>expected to flow into clean energy in 2026 — almost twice the $1.2 tn going to oil, gas and coal (IEA)</span></div>
     <div class="stat"><b data-count="85" data-prefix="~" data-suffix="%">0</b><span>of the world's solar-manufacturing capacity is in China — along with over 80% of battery-cell output (IEA)</span></div>
