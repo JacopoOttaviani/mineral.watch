@@ -153,16 +153,40 @@ h2{font-size:1.5rem;margin-bottom:10px}
 /* nav */
 nav{position:sticky;top:0;z-index:1100;background:rgba(13,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;gap:8px;padding:10px var(--pad);max-width:1100px;margin:0 auto}
-.nav-links{display:flex;align-items:center;gap:8px;flex:1;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.nav-links::-webkit-scrollbar{display:none}
 .brand{font-weight:800;font-size:.95rem;white-space:nowrap;margin-right:6px;flex:none}
 .brand span{color:var(--accent)}
 nav a.link{color:var(--muted);text-decoration:none;font-size:.8rem;padding:6px 10px;border-radius:99px;white-space:nowrap;flex:none}
 nav a.link:hover,nav a.link.active{color:var(--txt);background:var(--card)}
+nav a.back{padding-left:0}
+nav a.back:hover{background:none;color:var(--txt)}
+/* current section, fed by the scroll-spy */
+.nav-here{flex:1;min-width:0;color:var(--muted);font-size:.8rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-left:4px}
+.nav-here:not(:empty)::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:8px;vertical-align:1px}
 nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto;flex:none;position:relative;overflow:hidden;z-index:0}
 nav a.cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
 nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
-@media(prefers-reduced-motion:reduce){nav a.cta::before{transition:none}}
+/* hamburger toggle */
+.nav-toggle{flex:none;display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--txt);border:1px solid var(--line);border-radius:99px;padding:6px 12px 6px 10px;font:inherit;font-size:.8rem;font-weight:600;line-height:1.55;cursor:pointer}
+.nav-toggle:hover,nav.open .nav-toggle{background:var(--card);border-color:var(--muted)}
+.nav-toggle:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+.nav-burger{position:relative;width:16px;height:12px;flex:none}
+.nav-burger i{position:absolute;left:0;width:16px;height:2px;border-radius:2px;background:currentColor;transition:transform .25s ease,opacity .2s ease,top .25s ease}
+.nav-burger i:nth-child(1){top:0}.nav-burger i:nth-child(2){top:5px}.nav-burger i:nth-child(3){top:10px}
+nav.open .nav-burger i:nth-child(1){top:5px;transform:rotate(45deg)}
+nav.open .nav-burger i:nth-child(2){opacity:0}
+nav.open .nav-burger i:nth-child(3){top:5px;transform:rotate(-45deg)}
+/* section menu panel */
+.nav-menu{display:none;position:absolute;left:0;right:0;top:100%;background:rgba(13,17,23,.97);backdrop-filter:blur(14px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:0 28px 48px -28px rgba(0,0,0,.8);max-height:calc(100vh - 56px);overflow-y:auto}
+nav.open .nav-menu{display:block;animation:navMenuIn .18s ease}
+@keyframes navMenuIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.nav-menu-grid{max-width:1100px;margin:0 auto;padding:10px var(--pad) 18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:2px 10px;counter-reset:navsec}
+.nav-menu-kicker{grid-column:1/-1;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;font-weight:700;padding:6px 10px 8px}
+nav .nav-menu a.link{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;font-size:.86rem;white-space:normal;counter-increment:navsec}
+nav .nav-menu a.link::before{content:counter(navsec,decimal-leading-zero);flex:none;font-size:.68rem;font-weight:700;letter-spacing:.06em;font-variant-numeric:tabular-nums;color:var(--accent);opacity:.7}
+nav .nav-menu a.link:hover::before,nav .nav-menu a.link.active::before{opacity:1}
+@media(max-width:639px){nav a.back span{display:none}.nav-toggle-txt{display:none}.nav-toggle{padding:10px 9px}}
+@media(max-width:559px){.nav-here{display:none}}
+@media(prefers-reduced-motion:reduce){nav a.cta::before{transition:none}nav.open .nav-menu{animation:none}.nav-burger i{transition:none}}
 .research-cta{display:inline-block;background:var(--accent);color:var(--bg);font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:99px;text-decoration:none;position:relative;overflow:hidden;z-index:0}
 .research-cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
 .research-cta:hover::before,.research-cta:focus-visible::before{transform:translateX(0)}
@@ -366,26 +390,31 @@ footer .legal a{text-decoration:underline}
 
 <nav>
   <div class="nav-inner">
-    <a class="link" href="../" style="padding-left:0">← mineral.watch</a>
+    <a class="link back" href="../" aria-label="Back to mineral.watch">←<span> mineral.watch</span></a>
     <div class="brand">Antimony<span>Watch</span></div>
-    <div class="nav-links">
-    <a class="link" href="#map-sec">Map</a>
-    <a class="link" href="#forms-sec">The metal</a>
-    <a class="link" href="#journey-sec">Journey</a>
-    <a class="link" href="#production-sec">Production</a>
-    <a class="link" href="#refining-sec">Smelting</a>
-    <a class="link" href="#demand-sec">Demand</a>
-    <a class="link" href="#timeline-sec">Timeline</a>
-    <a class="link" href="#trade-sec">Trade</a>
-    <a class="link" href="#china-sec">China</a>
-    <a class="link" href="#military-sec">Military</a>
-    <a class="link" href="#invest-sec">Investment</a>
-    <a class="link" href="#companies-sec">Companies</a>
-    <a class="link" href="#sources-sec">Data</a>
-    <a class="link" href="#faq-sec">FAQ</a>
-    <a class="link" href="#research-sec">Research</a>
-    </div>
+    <span class="nav-here" aria-hidden="true"></span>
     <a class="cta" href="#research-sec">Hire us</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Section menu"><span class="nav-burger" aria-hidden="true"><i></i><i></i><i></i></span><span class="nav-toggle-txt">Sections</span></button>
+  </div>
+  <div class="nav-menu" id="nav-menu">
+    <div class="nav-menu-grid">
+      <div class="nav-menu-kicker">On this page</div>
+      <a class="link" href="#map-sec">Map</a>
+      <a class="link" href="#forms-sec">The metal</a>
+      <a class="link" href="#journey-sec">Journey</a>
+      <a class="link" href="#production-sec">Production</a>
+      <a class="link" href="#refining-sec">Smelting</a>
+      <a class="link" href="#demand-sec">Demand</a>
+      <a class="link" href="#timeline-sec">Timeline</a>
+      <a class="link" href="#trade-sec">Trade</a>
+      <a class="link" href="#china-sec">China</a>
+      <a class="link" href="#military-sec">Military</a>
+      <a class="link" href="#invest-sec">Investment</a>
+      <a class="link" href="#companies-sec">Companies</a>
+      <a class="link" href="#sources-sec">Data</a>
+      <a class="link" href="#faq-sec">FAQ</a>
+      <a class="link" href="#research-sec">Research</a>
+    </div>
   </div>
 </nav>
 
@@ -1274,10 +1303,23 @@ io2.observe(document.getElementById("chinaBars"));
 /* nav active state */
 const secs=[...document.querySelectorAll("section[id],header")];
 const navLinks=[...document.querySelectorAll("nav a.link")];
+const navHere=document.querySelector(".nav-here");
 const io3=new IntersectionObserver(es=>es.forEach(e=>{
-  if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}
+  if(e.isIntersecting){
+    navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));
+    const cur=navLinks.find(a=>a.classList.contains("active"));
+    if(navHere)navHere.textContent=cur?cur.textContent.trim():"";
+  }
 }),{rootMargin:"-40% 0px -55% 0px"});
 secs.forEach(s=>io3.observe(s));
+
+/* nav section menu (hamburger) */
+const navEl=document.querySelector("nav"),navToggle=navEl.querySelector(".nav-toggle");
+const setNav=open=>{navEl.classList.toggle("open",open);navToggle.setAttribute("aria-expanded",String(open));};
+navToggle.addEventListener("click",()=>setNav(!navEl.classList.contains("open")));
+navEl.querySelectorAll(".nav-menu a").forEach(a=>a.addEventListener("click",()=>setNav(false)));
+document.addEventListener("click",e=>{if(navEl.classList.contains("open")&&!navEl.contains(e.target))setNav(false);});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&navEl.classList.contains("open")){setNav(false);navToggle.focus();}});
 </script>
 <script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
