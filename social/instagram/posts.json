@@ -1,0 +1,370 @@
+{
+  "account": "https://instagram.com/mineralwatch",
+  "format": "1080x1350 PNG (4:5)",
+  "generated": "2026-09-01",
+  "posts": [
+    {
+      "order": 1,
+      "date": "2026-09-04",
+      "time": "12:00",
+      "type": "single",
+      "slug": "launch",
+      "title": "mineral.watch is now on Instagram",
+      "link": "https://mineral.watch",
+      "media": [
+        {
+          "file": "01-launch/post.png",
+          "alt": "mineral.watch wordmark and tagline over a fan of nine coloured ribbons, one per tracked mineral."
+        }
+      ],
+      "caption": "mineral.watch is now on Instagram.\n\nWho mines it, who refines it, and where the chokepoints are. We cross-reference open data from USGS, BGS, UN Comtrade and the IEA on the minerals powering batteries, magnets, chips and defence: graphite, lithium, cobalt, nickel, rare earths, copper, manganese, uranium and antimony.\n\nNine interactive dashboards, one supply-chain map, every figure cited and dated. Independent of any government, mining company or trade body.\n\nFollow for one chart at a time. Visit mineral.watch (link in bio).",
+      "first_comment": "#criticalminerals #strategicminerals #rareearths #supplychain #opendata #dataviz #energytransition #mining #geopolitics #batteries #mineralwatch"
+    },
+    {
+      "order": 2,
+      "date": "2026-09-07",
+      "time": "12:00",
+      "type": "carousel",
+      "slug": "nine-minerals",
+      "title": "Nine minerals, nine chokepoints",
+      "link": "https://mineral.watch",
+      "media": [
+        {
+          "file": "02-nine-minerals/slide-01.png",
+          "alt": "Cover: Nine minerals, nine chokepoints, with a grid of nine element symbols."
+        },
+        {
+          "file": "02-nine-minerals/slide-02.png",
+          "alt": "Graphite: 82% of the world's graphite was mined in China in 2025."
+        },
+        {
+          "file": "02-nine-minerals/slide-03.png",
+          "alt": "Lithium: 88% of lithium goes into batteries."
+        },
+        {
+          "file": "02-nine-minerals/slide-04.png",
+          "alt": "Cobalt: 73% of the world's cobalt was mined in the DR Congo in 2025."
+        },
+        {
+          "file": "02-nine-minerals/slide-05.png",
+          "alt": "Nickel: 66% of the world's nickel was mined in Indonesia in 2025."
+        },
+        {
+          "file": "02-nine-minerals/slide-06.png",
+          "alt": "Rare earths: 94% of sintered NdFeB magnets are made in China."
+        },
+        {
+          "file": "02-nine-minerals/slide-07.png",
+          "alt": "Copper: $0/t is the 2026 benchmark treatment charge for copper concentrate."
+        },
+        {
+          "file": "02-nine-minerals/slide-08.png",
+          "alt": "Manganese: 95% of battery-grade manganese sulphate is refined in China."
+        },
+        {
+          "file": "02-nine-minerals/slide-09.png",
+          "alt": "Uranium: 43% of the world's enrichment capacity is Russian."
+        },
+        {
+          "file": "02-nine-minerals/slide-10.png",
+          "alt": "Antimony: >85% of antimony is mined in China, Russia and Tajikistan."
+        },
+        {
+          "file": "02-nine-minerals/slide-11.png",
+          "alt": "Closing slide listing the nine dashboards with their mineral.watch URLs."
+        }
+      ],
+      "caption": "Nine minerals. Nine chokepoints. One number for each.\n\nGraphite: China mined 82% of the world's supply in 2025.\nLithium: 88% of it goes into batteries; China converts ~70% of battery-grade chemicals.\nCobalt: 73% mined in the DR Congo, ~79% refined in China.\nNickel: Indonesia mined 66% of the world's total.\nRare earths: 94% of sintered NdFeB magnets are made in China.\nCopper: the 2026 benchmark treatment charge settled at $0/t, the lowest on record.\nManganese: China mines ~4% of the ore and refines ~95% of battery-grade sulphate.\nUranium: Russia holds 43% of enrichment capacity.\nAntimony: China, Russia and Tajikistan mine more than 85%.\n\nSources: USGS Mineral Commodity Summaries 2026, IEA, Cobalt Institute, WNA, EIA. Each mineral has its own interactive dashboard with maps, charts and timelines at mineral.watch (link in bio).",
+      "first_comment": "#criticalminerals #rareearths #cobalt #lithium #nickel #graphite #copper #manganese #uranium #antimony #supplychain #energytransition #opendata #mineralwatch"
+    },
+    {
+      "order": 3,
+      "date": "2026-09-09",
+      "time": "12:00",
+      "type": "single",
+      "slug": "us-import-reliance",
+      "title": "How much of it does the US import?",
+      "link": "https://mineral.watch",
+      "media": [
+        {
+          "file": "03-us-import-reliance/post.png",
+          "alt": "Bar chart of US net import reliance in 2025: graphite and manganese 100%, antimony 85%, cobalt 79%, rare earths 67%, copper 57%, lithium over 50%, nickel 41%."
+        }
+      ],
+      "caption": "How much of it does the US import?\n\nUS net import reliance in 2025, per USGS:\nGraphite 100%\nManganese 100%\nAntimony ~85%\nCobalt 79%\nRare earths 67% (heavy rare earths: 100%)\nRefined copper 57%\nLithium >50%\nNickel 41% (nearly 100% excluding scrap)\n\nThere has been no US manganese mine since 1970 and no antimony mine since 2016. Refined copper, uranium and nickel were all added to or confirmed on the US critical minerals list in late 2025.\n\nSource: USGS Mineral Commodity Summaries 2026. Country-by-country dashboards at mineral.watch (link in bio).",
+      "first_comment": "#criticalminerals #supplychain #usgs #graphite #manganese #antimony #cobalt #rareearths #copper #lithium #nickel #geopolitics #opendata #mineralwatch"
+    },
+    {
+      "order": 4,
+      "date": "2026-09-11",
+      "time": "12:00",
+      "type": "single",
+      "slug": "cobalt-drc",
+      "title": "Cobalt: 73% from one country",
+      "link": "https://mineral.watch/cobalt",
+      "media": [
+        {
+          "file": "04-cobalt-drc/post.png",
+          "alt": "Cobalt post: 73% of world cobalt mined in the DR Congo in 2025, 14% in Indonesia; stacked share bar and two stat tiles."
+        }
+      ],
+      "caption": "73% of the world's cobalt was mined in one country in 2025. About 79% of it was refined in another.\n\nDR Congo: ~230,000 t of a record ~310,000 t world total (USGS). Indonesia: ~44,000 t and rising. China: ~79% of the ~240,000 t of refined cobalt (Cobalt Institute).\n\nSince February 2025 the DRC has first banned, then capped cobalt exports: 96,600 t a year for 2026 and 2027, roughly half of 2024 volumes. CMOC alone mined 117,549 t in 2025 against a 2026 quota of 31,200 t. The rest is stockpiled in-country.\n\nMeanwhile cobalt-free LFP passed 55% of global EV battery deployments.\n\nMap of mines and refineries, price charts and the full quota timeline: mineral.watch/cobalt (link in bio).",
+      "first_comment": "#cobalt #drc #criticalminerals #batteries #evbattery #supplychain #mining #indonesia #energytransition #opendata #mineralwatch"
+    },
+    {
+      "order": 5,
+      "date": "2026-09-14",
+      "time": "12:00",
+      "type": "single",
+      "slug": "mine-vs-refinery",
+      "title": "The risk is at the refinery",
+      "link": "https://mineral.watch/supply-chain",
+      "media": [
+        {
+          "file": "05-mine-vs-refinery/post.png",
+          "alt": "Dumbbell chart: China’s share of mine output vs refining for manganese (4% to 95%), lithium (21% to 70%), rare earths (69% to 91%) and graphite (82% to 90%)."
+        }
+      ],
+      "caption": "The supply-chain risk isn't at the mine. It's at the refinery.\n\nChina's share of world mine output vs its share of processing:\nManganese: ~4% mined, ~95% of battery-grade sulphate refined\nLithium: ~21% mined, ~70% of battery-grade chemicals converted\nRare earths: ~69% mined, ~91% refined and separated\nGraphite: ~82% mined, ~90% of battery-grade material refined\n\nDiversifying mines does little if the ore still has to go to the same smelters. Our supply-chain map compares mine production against refined output country by country for seven minerals.\n\nSources: USGS Mineral Commodity Summaries 2026, IEA. Explore the map at mineral.watch/supply-chain (link in bio).",
+      "first_comment": "#criticalminerals #supplychain #refining #china #manganese #lithium #rareearths #graphite #energytransition #geopolitics #dataviz #mineralwatch"
+    },
+    {
+      "order": 6,
+      "date": "2026-09-16",
+      "time": "12:00",
+      "type": "single",
+      "slug": "lithium-price",
+      "title": "Lithium: from $63,700 to $9,000 and back up",
+      "link": "https://mineral.watch/lithium",
+      "media": [
+        {
+          "file": "06-lithium-price/post.png",
+          "alt": "Column chart of battery-grade lithium carbonate prices: $11,700 in 2021, $63,700 in 2022, $39,000, $11,800, $9,000 in 2025, and an $18,000 to $23,000 spot range in August 2026."
+        }
+      ],
+      "caption": "Lithium: from $63,700 to $9,000 and back up.\n\nBattery-grade lithium carbonate, annual average (USGS/Benchmark):\n2021: $11,700/t\n2022: $63,700/t\n2023: $39,000/t\n2024: $11,800/t\n2025: $9,000/t\nAugust 2026 spot: ~$18,000–23,000/t after Guangzhou futures briefly topped ¥200,000.\n\nThe swing producer of this cycle was a single mine. CATL's Jianxiawo lepidolite operation (~3–6% of world supply) was suspended in August 2025 when its permit lapsed, and restarted on 29 June 2026.\n\nWorld mine output still grew 31% in 2025 to ~290,000 t of lithium content. Australia ~32%, then China, Chile, Zimbabwe and Argentina.\n\nFull price history, map of mines, brines and converters: mineral.watch/lithium (link in bio).",
+      "first_comment": "#lithium #batteries #evbattery #criticalminerals #commodities #energytransition #mining #supplychain #dataviz #opendata #mineralwatch"
+    },
+    {
+      "order": 7,
+      "date": "2026-09-18",
+      "time": "12:00",
+      "type": "carousel",
+      "slug": "antimony-export-controls",
+      "title": "Antimony: how one export licence doubled a price",
+      "link": "https://mineral.watch/antimony",
+      "media": [
+        {
+          "file": "07-antimony-export-controls/slide-01.png",
+          "alt": "Cover: How one export licence doubled a price, with the antimony symbol Sb."
+        },
+        {
+          "file": "07-antimony-export-controls/slide-02.png",
+          "alt": "15 August 2024: China announces dual-use export licensing for antimony."
+        },
+        {
+          "file": "07-antimony-export-controls/slide-03.png",
+          "alt": "3 December 2024: an outright ban on exports to the US; imports from China fall 97%."
+        },
+        {
+          "file": "07-antimony-export-controls/slide-04.png",
+          "alt": "Spring 2025: the antimony price peaks near $60,000 per tonne."
+        },
+        {
+          "file": "07-antimony-export-controls/slide-05.png",
+          "alt": "9 to 10 November 2025: the US-specific ban is suspended; prices remain about double pre-control levels."
+        },
+        {
+          "file": "07-antimony-export-controls/slide-06.png",
+          "alt": "The rebuild: Perpetua Stibnite, US Antimony Thompson Falls, Larvotto Hillgrove, Nyrstar Port Pirie."
+        },
+        {
+          "file": "07-antimony-export-controls/slide-07.png",
+          "alt": "Closing slide: antimony dashboard, with reserves, output, import reliance and end-use stats."
+        }
+      ],
+      "caption": "How one export licence doubled a price. Swipe for the antimony timeline.\n\n15 Aug 2024: China announces dual-use export licensing for antimony (effective 15 Sep).\n3 Dec 2024: outright ban on exports to the US. US imports from China fall ~97% between August and December.\nSpring 2025: prices peak near $60,000/t, from ~$12,000–14,000/t in early 2024.\n9–10 Nov 2025: the US-specific ban is suspended until 27 Nov 2026. Licensing still applies to everyone. By June 2026 prices sit at $25,000–31,000/t, still about double.\n\nThe rebuild: Perpetua's Stibnite project in Idaho ($2.9B EXIM loan, production 2029), US Antimony's Thompson Falls smelter, Larvotto's Hillgrove mine in Australia (first production due end-August 2026) and Nyrstar's Port Pirie smelter.\n\nWhy it matters: antimony goes into flame retardants, lead-acid batteries, solar glass, ammunition primers and infrared detectors. Reserves are ~2 Mt, under two decades at current mining rates.\n\nSources: USGS Mineral Commodity Summaries 2026, MOFCOM, company disclosures. Full dashboard: mineral.watch/antimony (link in bio).",
+      "first_comment": "#antimony #criticalminerals #exportcontrols #china #defence #supplychain #mining #geopolitics #commodities #opendata #mineralwatch"
+    },
+    {
+      "order": 8,
+      "date": "2026-09-21",
+      "time": "12:00",
+      "type": "single",
+      "slug": "graphite-anode",
+      "title": "Graphite: 50 kg in every EV",
+      "link": "https://mineral.watch/graphite",
+      "media": [
+        {
+          "file": "08-graphite-anode/post.png",
+          "alt": "Graphite post: about 50 kg of graphite in every EV battery; China 82% of mine output, about 90% of battery-grade refining; US import reliance 100%."
+        }
+      ],
+      "caption": "The biggest material in an EV battery isn't lithium. It's graphite: roughly 50 kg per car.\n\nChina mined ~82% of the world's ~1.8 Mt of natural graphite in 2025 (USGS) and refines ~90% of battery-grade graphite, including ~95% of spherical graphite for anodes (IEA). US net import reliance: 100%.\n\nWorld reserves are ~310 Mt, so this is not a scarcity story. It is a processing story: the anode-grade purification and coating steps sit almost entirely in one country.\n\nMap of mines, processing and anode plants, plus the refining explainer: mineral.watch/graphite (link in bio).",
+      "first_comment": "#graphite #batteries #evbattery #anode #criticalminerals #supplychain #china #energytransition #mining #opendata #mineralwatch"
+    },
+    {
+      "order": 9,
+      "date": "2026-09-23",
+      "time": "12:00",
+      "type": "carousel",
+      "slug": "nickel-lme",
+      "title": "The day nickel broke the LME",
+      "link": "https://mineral.watch/nickel",
+      "media": [
+        {
+          "file": "09-nickel-lme/slide-01.png",
+          "alt": "Cover: The day nickel broke the LME, with the nickel symbol Ni."
+        },
+        {
+          "file": "09-nickel-lme/slide-02.png",
+          "alt": "8 March 2022: nickel passes $100,000 per tonne as a giant short unwinds."
+        },
+        {
+          "file": "09-nickel-lme/slide-03.png",
+          "alt": "About $12 billion of trades, roughly 9,000 deals, cancelled by the LME."
+        },
+        {
+          "file": "09-nickel-lme/slide-04.png",
+          "alt": "The LME suspends nickel trading for more than a week."
+        },
+        {
+          "file": "09-nickel-lme/slide-05.png",
+          "alt": "March 2025: the FCA fines the LME 9.2 million pounds."
+        },
+        {
+          "file": "09-nickel-lme/slide-06.png",
+          "alt": "Nickel in 2026: Indonesia 66% of mine output, LME about $16,800 per tonne, INSG forecasts a 32,000 tonne deficit."
+        },
+        {
+          "file": "09-nickel-lme/slide-07.png",
+          "alt": "Closing slide: nickel dashboard with refining concentration and the Western supply cull."
+        }
+      ],
+      "caption": "The day nickel broke the LME. Swipe for the story.\n\n8 March 2022: nickel passes $100,000/t as Tsingshan's giant short position unwinds. The 2021 average had been $18,476/t.\nThe LME cancels ~9,000 trades worth ~$12bn and suspends trading for more than a week.\nMarch 2025: the FCA fines the LME £9.2M, its first enforcement action against an exchange.\n\nFour years on, the market belongs to Indonesia: 66% of world mine output in 2025, and with China ~76% of refining. Australia's output fell 54% in one year; BHP's Nickel West is suspended and Koniambo's furnaces have been cold since August 2024.\n\nLME cash sits near $16,800/t (Aug 2026). INSG has flipped its 2026 forecast to a 32,000 t deficit, the first since 2021, on Indonesia's quota cuts.\n\nSources: LME, FCA, USGS Mineral Commodity Summaries 2026, INSG, IEA. Full dashboard: mineral.watch/nickel (link in bio).",
+      "first_comment": "#nickel #lme #commodities #criticalminerals #indonesia #stainlesssteel #batteries #supplychain #mining #markets #opendata #mineralwatch"
+    },
+    {
+      "order": 10,
+      "date": "2026-09-25",
+      "time": "12:00",
+      "type": "single",
+      "slug": "manganese-4-vs-95",
+      "title": "Manganese: 4% mined, 95% refined",
+      "link": "https://mineral.watch/manganese",
+      "media": [
+        {
+          "file": "10-manganese-4-vs-95/post.png",
+          "alt": "Manganese post: China mines about 4% of the world’s manganese ore but refines about 95% of battery-grade manganese sulphate."
+        }
+      ],
+      "caption": "4% vs 95%.\n\nChina mines only ~4% of the world's manganese ore. It refines ~60% of manganese ferroalloys, >90% of electrolytic manganese metal and ~95% of the battery-grade manganese sulphate that new LMR cathodes need (IEA).\n\nThe ore comes from South Africa (~38% of 2025 output), Gabon, Ghana and Australia. Gabon bans raw ore exports from 2029. The US has had no manganese mine since 1970 and imports 100% of what it uses.\n\n~90% of manganese still goes into steel, where USGS says it has no satisfactory substitute.\n\nMap of mines, smelters and refineries, plus the price and quota timeline: mineral.watch/manganese (link in bio).",
+      "first_comment": "#manganese #criticalminerals #steel #batteries #southafrica #gabon #china #supplychain #mining #opendata #mineralwatch"
+    },
+    {
+      "order": 11,
+      "date": "2026-09-28",
+      "time": "12:00",
+      "type": "single",
+      "slug": "rare-earths-17",
+      "title": "Rare earths: 17 elements, 7 under export control",
+      "link": "https://mineral.watch/rare-earths",
+      "media": [
+        {
+          "file": "11-rare-earths-17/post.png",
+          "alt": "Grid of the 17 rare earth elements with samarium, gadolinium, terbium, dysprosium, lutetium, scandium and yttrium highlighted as export-controlled; China 91% of refining, 94% of magnets."
+        }
+      ],
+      "caption": "17 elements. 7 under export control.\n\nSince April 2025 China requires licences to export samarium, gadolinium, terbium, dysprosium, lutetium, scandium and yttrium, and the magnets that contain them. An October 2025 expansion was suspended for one year in November 2025.\n\nWhy it bites: China handles ~91% of the world's rare earth refining and separation and makes ~94% of sintered NdFeB magnets (IEA). It mined ~69% of the ~390,000 t of rare-earth oxides produced in 2025 (USGS). US import reliance: 67% overall, 100% for heavy rare earths.\n\nThe 17 elements explained, the map of mines, separation plants and magnet factories, and the 2010–2026 export-controls timeline: mineral.watch/rare-earths (link in bio).",
+      "first_comment": "#rareearths #neodymium #dysprosium #magnets #criticalminerals #exportcontrols #china #supplychain #defence #energytransition #opendata #mineralwatch"
+    },
+    {
+      "order": 12,
+      "date": "2026-09-30",
+      "time": "12:00",
+      "type": "single",
+      "slug": "copper-zero-tc",
+      "title": "Copper: a $0 treatment charge",
+      "link": "https://mineral.watch/copper",
+      "media": [
+        {
+          "file": "12-copper-zero-tc/post.png",
+          "alt": "Copper post: the 2026 benchmark treatment charge is $0 per tonne, down from $21.25 in 2025; China 48% of refined output; IEA sees a 30% supply gap by 2035."
+        }
+      ],
+      "caption": "$0. That is the 2026 benchmark treatment charge for copper concentrate, down from $21.25/t in 2025 and the lowest on record.\n\nTreatment charges are what miners pay smelters to turn concentrate into metal. When they hit zero, smelters are working for free, because there are too many smelters (China holds ~50% of world capacity) chasing too little concentrate.\n\nThe mine side is tight too: Cobre Panama closed, Grasberg and El Teniente disrupted, and the IEA projects existing and announced mines will cover only ~70% of copper demand by 2035. LME copper hit a record $14,527.50/t on 29 January 2026.\n\nWorld mine output 2025: ~23 Mt (Chile ~23%). Refined output: ~29 Mt, of which China ~48% (USGS).\n\nMap of mines, smelters and disrupted operations, plus the 2023–2026 timeline: mineral.watch/copper (link in bio).",
+      "first_comment": "#copper #commodities #criticalminerals #smelting #chile #china #supplychain #energytransition #mining #markets #opendata #mineralwatch"
+    },
+    {
+      "order": 13,
+      "date": "2026-10-02",
+      "time": "12:00",
+      "type": "single",
+      "slug": "uranium-enrichment",
+      "title": "Uranium: the Russian enrichment chokepoint",
+      "link": "https://mineral.watch/uranium",
+      "media": [
+        {
+          "file": "13-uranium-enrichment/post.png",
+          "alt": "Uranium post: 43% of world enrichment capacity is Russian, shown as a meter; US utilities bought 26% from Russia in 2025; waivers end 1 January 2028; 79 reactors under construction."
+        }
+      ],
+      "caption": "43% of the world's uranium enrichment capacity is Russian.\n\nRosatom controls 27.1M of ~62.9M SWU of global enrichment capacity (WNA 2025). US utilities still bought 26% of their enrichment from Russia in 2025 (EIA). The US ban on Russian enriched uranium allows waivers only until 1 January 2028.\n\nThe mine side is concentrated too: Kazakhstan produced ~41% of world uranium in 2025, ahead of Canada and Namibia. Mine output covered ~90% of reactor requirements.\n\nDemand is heading the other way. 441 reactors are operable and 79 under construction, 37 of them in China. Announced US tech-company nuclear deals exceed 9.8 GW. Spot uranium sits near $90/lb, with the long-term price at a record $95.50/lb.\n\nThe ore-to-fuel-rod chain explained, the map and the price charts: mineral.watch/uranium (link in bio).",
+      "first_comment": "#uranium #nuclear #nuclearenergy #enrichment #kazakhstan #russia #criticalminerals #energysecurity #supplychain #opendata #mineralwatch"
+    },
+    {
+      "order": 14,
+      "date": "2026-10-05",
+      "time": "12:00",
+      "type": "carousel",
+      "slug": "how-we-work",
+      "title": "How mineral.watch works",
+      "link": "https://mineral.watch",
+      "media": [
+        {
+          "file": "14-how-we-work/slide-01.png",
+          "alt": "Cover: Open intelligence on strategic minerals, how mineral.watch works, with the nine-ribbon plume."
+        },
+        {
+          "file": "14-how-we-work/slide-02.png",
+          "alt": "Sources: USGS, BGS, UN Comtrade, IEA, WNA, IAEA, NEA Red Book, US EIA."
+        },
+        {
+          "file": "14-how-we-work/slide-03.png",
+          "alt": "Independence: not affiliated with any government, mining company or trade body."
+        },
+        {
+          "file": "14-how-we-work/slide-04.png",
+          "alt": "Maps and dashboards: interactive world maps for nine minerals plus a supply-chain comparison map."
+        },
+        {
+          "file": "14-how-we-work/slide-05.png",
+          "alt": "Reuse: content under CC BY-NC-SA 4.0, code under AGPL-3.0, attribution format shown."
+        },
+        {
+          "file": "14-how-we-work/slide-06.png",
+          "alt": "Closing slide: corrections and data tips to hello@mineral.watch."
+        }
+      ],
+      "caption": "How mineral.watch works. Swipe through.\n\n1. Sources. Every figure is cited and dated: USGS Mineral Commodity Summaries, BGS World Mineral Statistics, UN Comtrade, IEA Critical Minerals, plus WNA, IAEA, the NEA Red Book and US EIA for uranium. Estimates are flagged as estimates.\n\n2. Independence. No affiliation with any government, mining company or trade body, and no commercial position in the minerals we cover.\n\n3. Maps and dashboards. Interactive world maps of mines, smelters and refineries for nine minerals, and a supply-chain map that compares where ore is mined with where it is refined.\n\n4. Reuse. Editorial content and compiled datasets are CC BY-NC-SA 4.0; the code is AGPL-3.0. Quote us with attribution: Source: mineral.watch.\n\n5. Corrections and data tips: hello@mineral.watch.\n\nVisit mineral.watch (link in bio).",
+      "first_comment": "#opendata #datajournalism #criticalminerals #transparency #dataviz #usgs #supplychain #mining #research #mineralwatch"
+    },
+    {
+      "order": 15,
+      "date": "2026-10-07",
+      "time": "12:00",
+      "type": "single",
+      "slug": "hire-us",
+      "title": "Custom research: hire us",
+      "link": "https://mineral.watch",
+      "media": [
+        {
+          "file": "15-hire-us/post.png",
+          "alt": "Call to action: Need a source-cited report on a mineral supply chain? Hire us at hello@mineral.watch."
+        }
+      ],
+      "caption": "Need a source-cited report on a mineral supply chain?\n\nWe do ad hoc, data-driven research on production, reserves, trade flows, refining concentration and prices, built on the same open sources as our dashboards (USGS, BGS, UN Comtrade, IEA) and delivered with every figure cited and dated.\n\nFor newsrooms, analysts, NGOs, procurement and policy teams.\n\nWrite to hello@mineral.watch, or subscribe at mineral.watch to be notified when a dashboard's data refreshes (link in bio).",
+      "first_comment": "#criticalminerals #research #supplychain #duediligence #datajournalism #mining #energytransition #geopolitics #consulting #mineralwatch"
+    }
+  ]
+}
