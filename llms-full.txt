@@ -332,7 +332,7 @@ URL: https://mineral.watch/data/
 
 Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 11 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
 
-Last updated: 2026-09-04
+Last updated: 2026-09-05
 
 ### Dataset
 
@@ -626,7 +626,7 @@ URL: https://mineral.watch/oil-gas/
 
 Open data visualisation tracking global oil and gas: the 2026 Strait of Hormuz closure and the largest supply disruption in oil-market history, the Gulf shut-in ledger, pipeline bypasses, the LNG shock, sanctions and the shadow fleet, OPEC+, prices and the companies that move energy. Built on EIA, IEA, OPEC, BGS, Energy Institute and tanker-tracking data — for energy businesses, geopolitics researchers and think tanks.
 
-Last updated: 2026-09-04
+Last updated: 2026-09-05
 
 ### Dataset
 
