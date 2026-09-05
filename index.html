@@ -569,7 +569,7 @@ nav a.cta:focus-visible::before,.btn:focus-visible::before{transform:translateX(
 .fchart-src{font-size:.66rem;color:var(--muted);margin-top:8px}
 
 /* minerals grid */
-.energy-stats{display:grid;gap:10px;align-self:center}.estat{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px}.estat b{display:block;color:#ff8c2e;font-size:1.2rem;letter-spacing:-.01em;line-height:1.2}.estat span{font-size:.76rem;color:var(--muted)}
+.energy-stats{display:grid;gap:10px;align-self:center}.estat{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px}.estat b{display:block;color:var(--accent);font-size:1.2rem;letter-spacing:-.01em;line-height:1.2}.estat span{font-size:.76rem;color:var(--muted)}
 .mgrid{display:grid;grid-template-columns:1fr;gap:14px}
 .mcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;position:relative;text-decoration:none;color:var(--ink);display:block;transition:.15s}
 a.mcard:hover{border-color:var(--accent);transform:translateY(-2px)}
@@ -985,34 +985,47 @@ footer .legal a{text-decoration:underline}
       <h3>Antimony</h3>
       <p>The small metal with outsized leverage: export bans, a fivefold price spike and a defence supply chain scrambling for sources — mapped and charted.</p>
     </a>
-    <a class="mcard" href="/green/">
-      <span class="tag live">Live</span>
-      <span class="sym">⚡</span>
-      <h3>Green transition</h3>
-      <p>The machines that eat the minerals — solar, batteries, wind, electrolysers: who builds them, China's manufacturing grip, and where the EU's green money goes. A cross-cutting dashboard.</p>
-    </a>
-    <a class="mcard" href="/oil-gas/">
-      <span class="tag live">Live</span>
-      <span class="sym">⛽</span>
-      <h3>Oil &amp; gas</h3>
-      <p>The biggest commodity markets on Earth, mapped the same way: the 2026 Hormuz closure and Gulf shut-ins, LNG, sanctions and the shadow fleet, OPEC+, prices and the companies that move energy. Beyond minerals.</p>
-    </a>
   </div>
 </section>
 
 <section id="energy">
-  <div class="feature" style="--accent:#ff8c2e">
-    <div>
-      <div class="kicker">New · beyond minerals</div>
-      <h2 class="serif">Oil &amp; Gas Watch: who controls the flow?</h2>
-      <p>The same open-data approach, applied to the biggest commodity markets on Earth: the 2026 Strait of Hormuz closure and the Gulf shut-in ledger, pipeline bypasses, the LNG shock, sanctions and the shadow fleet, OPEC+, prices and the companies that move energy — built for energy businesses, geopolitics researchers and think tanks, on EIA, IEA, OPEC, Energy Institute and BGS data.</p>
-      <a class="btn primary" href="/oil-gas/">Open the oil &amp; gas dashboard</a>
+  <div class="kicker">Beyond minerals</div>
+  <h2 class="serif">The same approach, applied to energy</h2>
+  <p class="lede">Two cross-cutting dashboards take the mineral.watch method — open data, maps, chokepoints, money and the companies that move it — to the markets the minerals feed: the oil and gas system that still runs the world, and the clean-energy machines being built to replace it.</p>
+  <div class="fcar" aria-roledescription="carousel" aria-label="Beyond minerals dashboards">
+    <div class="fcar-track" id="bcarTrack" tabindex="0" aria-label="Beyond minerals dashboards — scroll horizontally">
+      <div class="fcar-slide" data-name="Oil &amp; gas" role="group" aria-roledescription="slide" aria-label="Oil and gas — 1 of 2" style="--accent:#ff8c2e">
+        <div class="feature">
+          <div>
+            <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
+            <h2 class="serif">Oil &amp; Gas Watch: who controls the flow?</h2>
+            <p>The same open-data approach, applied to the biggest commodity markets on Earth: the 2026 Strait of Hormuz closure and the Gulf shut-in ledger, pipeline bypasses, the LNG shock, sanctions and the shadow fleet, OPEC+, prices and the companies that move energy — built for energy businesses, geopolitics researchers and think tanks, on EIA, IEA, OPEC, Energy Institute and BGS data.</p>
+            <a class="btn primary" href="/oil-gas/">Open the oil &amp; gas dashboard →</a>
+          </div>
+          <div class="energy-stats">
+            <div class="estat"><b>20.9 → 4.9 mb/d</b><span>oil through the Strait of Hormuz: early 2025 vs the second quarter of 2026 (EIA)</span></div>
+            <div class="estat"><b>$144.42</b><span>Dated Brent on 7 April 2026 — the highest physical price ever assessed (Platts)</span></div>
+            <div class="estat"><b>400 million barrels</b><span>released by IEA members from 11 March 2026 — the largest emergency action ever</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fcar-slide" data-name="Green transition" role="group" aria-roledescription="slide" aria-label="Green transition — 2 of 2" style="--accent:#62e86a">
+        <div class="feature">
+          <div>
+            <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
+            <h2 class="serif">Green Watch: who builds the machines of net zero — and who pays?</h2>
+            <p>The clean-energy supply chain, mapped the same way: solar, battery, wind and electrolyser factories, EU-funded flagships and stalled gigafactories, deployment and investment charts, China's manufacturing grip, the minerals the machines eat — and a fund-by-fund guide to Europe's green money, from the Innovation Fund to the recovery facility.</p>
+            <a class="btn primary" href="/green/">Open the green transition dashboard →</a>
+          </div>
+          <div class="energy-stats">
+            <div class="estat"><b>$2.2 tn vs $1.2 tn</b><span>clean-energy versus fossil-fuel investment expected worldwide in 2026 (IEA)</span></div>
+            <div class="estat"><b>~85%</b><span>of the world's solar-manufacturing capacity is in China — with over 80% of battery-cell output (IEA)</span></div>
+            <div class="estat"><b>~€270 bn</b><span>of the EU's €650 bn recovery facility went to climate measures — and it stops paying on 31 December 2026</span></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="energy-stats">
-      <div class="estat"><b>20.9 → 4.9 mb/d</b><span>oil through the Strait of Hormuz: early 2025 vs the second quarter of 2026 (EIA)</span></div>
-      <div class="estat"><b>$144.42</b><span>Dated Brent on 7 April 2026 — the highest physical price ever assessed (Platts)</span></div>
-      <div class="estat"><b>400 million barrels</b><span>released by IEA members from 11 March 2026 — the largest emergency action ever</span></div>
-    </div>
+    <div class="fcar-dots" id="bcarDots"></div>
   </div>
 </section>
 
@@ -1558,40 +1571,45 @@ const featObserver = new IntersectionObserver(entries => {
 }, { threshold: .3 });
 Object.keys(featDraw).forEach(id => featObserver.observe(document.getElementById(id)));
 
-/* featured dashboards carousel: pagination dots */
-const fcarTrack = document.getElementById("fcarTrack");
-const fcarSlides = [...fcarTrack.children];
-const fcarDotsBox = document.getElementById("fcarDots");
-const fcarDots = fcarSlides.map((s, i) => {
-  const b = document.createElement("button");
-  b.type = "button";
-  b.className = "fcar-dot";
-  b.setAttribute("aria-label", `Show ${s.dataset.name} (${i+1} of ${fcarSlides.length})`);
-  b.style.setProperty("--da", getComputedStyle(s).getPropertyValue("--accent"));
-  b.addEventListener("click", () =>
-    fcarTrack.scrollTo({ left: s.offsetLeft - fcarSlides[0].offsetLeft, behavior: "smooth" }));
-  fcarDotsBox.appendChild(b);
-  return b;
-});
-function fcarSetDot(i){
-  fcarDots.forEach((d, j) => {
-    d.classList.toggle("on", j === i);
-    if(j === i) d.setAttribute("aria-current", "true");
-    else d.removeAttribute("aria-current");
+/* carousels (featured dashboards + beyond minerals): pagination dots + lazy chart draw */
+function initCarousel(trackId, dotsId){
+  const track = document.getElementById(trackId);
+  const dotsBox = document.getElementById(dotsId);
+  if(!track || !dotsBox) return;
+  const slides = [...track.children];
+  const dots = slides.map((s, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "fcar-dot";
+    b.setAttribute("aria-label", `Show ${s.dataset.name} (${i+1} of ${slides.length})`);
+    b.style.setProperty("--da", getComputedStyle(s).getPropertyValue("--accent"));
+    b.addEventListener("click", () =>
+      track.scrollTo({ left: s.offsetLeft - slides[0].offsetLeft, behavior: "smooth" }));
+    dotsBox.appendChild(b);
+    return b;
   });
-  const c = fcarSlides[i].querySelector("canvas");
-  if(c && featDraw[c.id] && !featDrawn.has(c.id)){ featDrawn.add(c.id); featDraw[c.id](c); }
+  function setDot(i){
+    dots.forEach((d, j) => {
+      d.classList.toggle("on", j === i);
+      if(j === i) d.setAttribute("aria-current", "true");
+      else d.removeAttribute("aria-current");
+    });
+    const c = slides[i].querySelector("canvas");
+    if(c && featDraw[c.id] && !featDrawn.has(c.id)){ featDrawn.add(c.id); featDraw[c.id](c); }
+  }
+  setDot(0);
+  let raf = null;
+  track.addEventListener("scroll", () => {
+    if(raf) return;
+    raf = requestAnimationFrame(() => {
+      raf = null;
+      const step = slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : 1;
+      setDot(Math.max(0, Math.min(slides.length - 1, Math.round(track.scrollLeft / step))));
+    });
+  }, { passive: true });
 }
-fcarSetDot(0);
-let fcarRaf = null;
-fcarTrack.addEventListener("scroll", () => {
-  if(fcarRaf) return;
-  fcarRaf = requestAnimationFrame(() => {
-    fcarRaf = null;
-    const step = fcarSlides.length > 1 ? fcarSlides[1].offsetLeft - fcarSlides[0].offsetLeft : 1;
-    fcarSetDot(Math.max(0, Math.min(fcarSlides.length - 1, Math.round(fcarTrack.scrollLeft / step))));
-  });
-}, { passive: true });
+initCarousel("fcarTrack", "fcarDots");
+initCarousel("bcarTrack", "bcarDots");
 
 window.addEventListener("message", e => {
   if (e.origin !== window.location.origin) return;
