@@ -54,7 +54,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-04",
+      "dateModified": "2026-09-05",
       "about": [
         {
           "@type": "Thing",
@@ -160,7 +160,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-04",
+      "dateModified": "2026-09-05",
       "keywords": [
         "oil",
         "crude oil",
@@ -469,6 +469,9 @@ nav .nav-menu a.link:hover::before,nav .nav-menu a.link.active::before{opacity:1
 .card h3{font-size:.95rem;margin-bottom:4px}
 .card .sub{font-size:.74rem;color:var(--muted);margin-bottom:12px}
 .chartbox{position:relative;height:280px}
+.split{display:grid;gap:16px;margin-top:4px}
+.split .chartbox{height:300px}
+@media(min-width:720px){.split{grid-template-columns:1.05fr 1fr;align-items:stretch}.split .chartbox{height:auto;min-height:300px}.split .chartbox canvas{position:absolute;inset:0}}
 .src{font-size:.68rem;color:var(--muted);margin-top:10px}
 
 /* chokepoint section */
@@ -864,16 +867,24 @@ footer .legal a{text-decoration:underline}
       <div class="chartbox"><canvas id="chLngExp"></canvas></div>
       <div class="src">Sources: EIA Today in Energy (global LNG trade 2025; US 15.1 Bcf/d, Qatar 10.6 Bcf/d; top three 63%); Kpler via TradeArabia (436.98 Mt, +6.3%); other countries approximate from GIIGNL/IGU. The US supplied 93% of 2025 export growth and shipped 111 Mt — the first country ever above 100 Mt in a year. EIA sees US exports at 17.4 Bcf/d in 2026 and 18.6 in 2027.</div>
     </div>
-    <div class="card">
-      <h3>Who bought it</h3>
-      <div class="sub">LNG imports by market, 2025, million tonnes (Kpler basis, approximate)</div>
-      <div class="chartbox"><canvas id="chLngImp"></canvas></div>
-      <div class="src">Sources: Kpler via Baird Maritime / TradeArabia (Europe 126.2 Mt, +26.1 Mt; Asia Pacific 168.7 Mt, −9.2 Mt); SunSirs / customs data (Japan 67.4 Mt, South Korea 48.7 Mt; China −16%, India −11% year on year). Europe drove all the growth in 2025 as it replaced Russian pipeline gas; in 2026 it is competing with Asia for the same cargoes Qatar can no longer send.</div>
+    <div class="card" style="grid-column:1/-1">
+      <h3>Who bought it — and who is losing cargoes now</h3>
+      <div class="sub">LNG imports by market, 2025, million tonnes (Kpler basis, approximate) — and what each buyer faces in 2026</div>
+      <div class="split">
+        <div class="chartbox"><canvas id="chLngImp"></canvas></div>
+        <div class="mini-grid" style="grid-template-columns:1fr">
+          <div class="mini"><h4><span class="mi">🇪🇺</span>Europe · 126 Mt, +26 Mt</h4><p>Took every tonne of 2025's growth as it replaced Russian pipeline gas — then entered 2026 with storage 15 bcm below the five-year average and Qatar's cancellations landing on Italy and Belgium. It now outbids Asia for cargoes at TTF above €70/MWh.</p></div>
+          <div class="mini"><h4><span class="mi">🇯🇵</span>Japan &amp; South Korea · 67 and 49 Mt</h4><p>Steady volumes on long-term portfolios. Japan, with little Qatari LNG, is the best-insulated big buyer; Korea's KOGAS is among those served force-majeure notices and Korean Air went into "emergency mode" on fuel costs.</p></div>
+          <div class="mini"><h4><span class="mi">🇨🇳</span>China &amp; India · down 16% and 11%</h4><p>Asia Pacific's imports fell 9.2 Mt in 2025 as China leaned on pipelines and coal and India balked at spot prices. In 2026 both are again bidding at the margin — China's LNG buyers hold Qatari contracts under force majeure; India's cancellations run into October.</p></div>
+          <div class="mini"><h4><span class="mi">🇵🇰</span>The marginal buyers</h4><p>Pakistan and Bangladesh, the most Qatar-dependent importers, face cargo cancellations through October; the Philippines declared an energy emergency on 24 March and Bangladesh ordered shopping centres shut by early evening. Spot LNG at $23.39/MMBtu is a price they cannot pay.</p></div>
+        </div>
+      </div>
+      <div class="src">Sources: Kpler via Baird Maritime / TradeArabia (Europe 126.2 Mt, +26.1 Mt; Asia Pacific 168.7 Mt, −9.2 Mt); SunSirs / customs data (Japan 67.4 Mt, South Korea 48.7 Mt; China −16%, India −11% year on year); QatarEnergy force-majeure notices via Bloomberg, CNBC and Euronews; Energy Aspects (EU storage); Platts JKM via Global LNG Hub.</div>
     </div>
-    <div class="card">
+    <div class="card" style="grid-column:1/-1">
       <h3>Three gas markets, three realities</h3>
       <div class="sub">What the Ras Laffan strikes and the Hormuz closure did to each region</div>
-      <div class="mini-grid" style="grid-template-columns:1fr">
+      <div class="mini-grid">
         <div class="mini"><h4><span class="mi">🇶🇦</span>The Qatar hole</h4><p>Missile strikes on 18–19 March damaged two LNG trains and a gas-to-liquids plant, knocking out ~17% of Qatar's capacity (12.8 Mt/yr) for an estimated three to five years and, by QatarEnergy's own count, $20 billion a year of revenue. Force majeure notices to buyers in China, South Korea, Italy, Belgium, Pakistan and Bangladesh now run into November 2026; Edison alone has lost 29 cargoes. The 110 Mt/yr North Field East expansion has slipped to a fourth-quarter 2026 start.</p></div>
         <div class="mini"><h4><span class="mi">🌏</span>Asia pays the spot price</h4><p>Asian spot LNG (JKM) hit $23.39/MMBtu on 28 August, a four-year high, after a 140% jump in the days following the Ras Laffan attack. Pakistan and Bangladesh — the most Qatar-dependent buyers — face cancellations through October; the Philippines declared an energy emergency on 24 March; Bangladesh ordered shopping centres shut by early evening. Japan, with a wide contract portfolio and little Qatari LNG, is the best insulated.</p></div>
         <div class="mini"><h4><span class="mi">🇪🇺</span>Europe refills at any price</h4><p>EU storage stood at 50 bcm (46% full) on 23 June — 15 bcm below the five-year average — and TTF has climbed back above €70/MWh, its highest since January 2023, as Europe outbids Asia for cargoes. The regulatory clock is also running: the EU's stepwise ban ends Russian LNG imports from 1 January 2027 and pipeline gas by 30 September 2027, while Hungary and Slovakia still draw on TurkStream.</p></div>
