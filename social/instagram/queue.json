@@ -1,40 +1,15 @@
 {
   "account": "https://instagram.com/mineralwatch",
-  "generated": "2026-09-04",
+  "generated": "2026-09-07",
   "published": [
     "01-launch",
     "02-nine-minerals",
     "03-us-import-reliance",
+    "minerals/cobalt",
     "minerals/lithium"
   ],
   "rule": "publish queue[0] whose caption first line is not already on the account",
   "queue": [
-    {
-      "id": "minerals/cobalt",
-      "set": "minerals",
-      "type": "carousel",
-      "title": "Cobalt: whose hands power the battery age?",
-      "link": "https://mineral.watch/cobalt",
-      "media": [
-        "https://mineral.watch/social/instagram/minerals/cobalt/slide-01.jpg",
-        "https://mineral.watch/social/instagram/minerals/cobalt/slide-02.jpg",
-        "https://mineral.watch/social/instagram/minerals/cobalt/slide-03.jpg",
-        "https://mineral.watch/social/instagram/minerals/cobalt/slide-04.jpg"
-      ],
-      "alt": [
-        "Cobalt: Whose hands power the battery age? Duotone photo of a cobalt mining site.",
-        "Cobalt: 73% of the world’s cobalt was mined in the DR Congo in 2025.",
-        "Cobalt: ~79% of the world’s refined cobalt came from China in 2025.",
-        "Cobalt, why it matters: Since October 2025 the DRC caps exports at 96,600 t a year, about half of 2024 volumes. Some 150,000–250,000 artisanal m"
-      ],
-      "caption": "Cobalt: whose hands power the battery age?\n\nNearly all cobalt is a by-product. Most of it comes from one country.\n\n73% of the world’s cobalt was mined in the DR Congo in 2025. (USGS MCS 2026)\n~79% of the world’s refined cobalt came from China in 2025. (Cobalt Institute)\n\nSince October 2025 the DRC caps exports at 96,600 t a year, about half of 2024 volumes. Some 150,000–250,000 artisanal miners dig cobalt by hand. Cobalt-free LFP batteries already power more than half of new EVs.\n\nInteractive map of mines, smelters and refineries, production and price charts, and the full timeline: mineral.watch/cobalt (link in bio).\n\nPhoto: artisanal cobalt miners, DRC — IIED via Wikimedia Commons, CC BY 2.5",
-      "first_comment": "#cobalt #drc #criticalminerals #batteries #evbattery #supplychain #mining #indonesia #energytransition #mineralwatch",
-      "accent": "#5b8aff",
-      "photo_credit": "Photo: artisanal cobalt miners, DRC — IIED via Wikimedia Commons, CC BY 2.5",
-      "story": "https://mineral.watch/social/instagram/stories/minerals-cobalt.jpg",
-      "story_file": "stories/minerals-cobalt.jpg",
-      "story_link": "https://mineral.watch/cobalt"
-    },
     {
       "id": "04-cobalt-drc",
       "set": "launch",
