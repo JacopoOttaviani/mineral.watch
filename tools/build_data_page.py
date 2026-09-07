@@ -307,6 +307,14 @@ footer a:hover{{color:var(--accent)}}
   h1{{font-size:2.6rem}}
 }}
 @media(min-width:1000px){{.dgrid{{grid-template-columns:1fr 1fr 1fr}}}}
+/* instagram */
+.nav-ig{{flex:none;margin-left:auto;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:99px;color:var(--muted);border:1px solid var(--line);text-decoration:none;transition:color .15s ease,border-color .15s ease,background .15s ease}}
+.nav-ig:hover,.nav-ig:focus-visible{{color:var(--accent);border-color:var(--accent);background:var(--card)}}
+.nav-ig:focus-visible{{outline:2px solid var(--accent);outline-offset:2px}}
+.nav-ig svg{{width:15px;height:15px}}
+@media(max-width:379px){{.nav-ig{{display:none}}}}
+footer a.ig{{display:inline-flex;align-items:center;gap:5px;vertical-align:-3px}}
+footer a.ig svg{{width:13px;height:13px}}
 </style>
 </head>
 <body>
@@ -319,6 +327,7 @@ footer a:hover{{color:var(--accent)}}
     <a class="link" href="/green/">Green transition</a>
     <a class="link" href="/explorer/">Explorer</a>
     <a class="link" href="/terms/">Licensing</a>
+    <a class="nav-ig" href="https://www.instagram.com/mineralwatch/" target="_blank" rel="noopener" aria-label="mineral.watch on Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
   </div>
 </nav>
 
@@ -402,7 +411,7 @@ footer a:hover{{color:var(--accent)}}
 </main>
 
 <footer>
-  <a href="/">mineral.watch</a> · open data &amp; intelligence on minerals, oil &amp; gas and the green transition · sources: USGS, BGS, UN Comtrade, IEA, EIA
+  <a href="/">mineral.watch</a> · open data &amp; intelligence on minerals, oil &amp; gas and the green transition · sources: USGS, BGS, UN Comtrade, IEA, EIA · <a class="ig" href="https://www.instagram.com/mineralwatch/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a>
   <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="{CC}" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/data/">Open data</a> · <a href="/terms/">Terms &amp; licensing</a></span>
 </footer>
 

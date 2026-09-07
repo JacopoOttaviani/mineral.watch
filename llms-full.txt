@@ -176,7 +176,7 @@ URL: https://mineral.watch/antimony/
 
 Open data visualisation tracking the global antimony supply chain: China's mines and smelters, the 2024 export ban, the fivefold price spike, Tajikistan's rise and the West's scramble to rebuild a supply chain it abandoned — built on USGS, BGS, trade and price-agency data.
 
-Last updated: 2026-09-04
+Last updated: 2026-09-07
 
 ### Dataset
 
@@ -227,7 +227,7 @@ URL: https://mineral.watch/cobalt/
 
 Open data visualisation tracking the global cobalt supply chain: the DRC's industrial mines and artisanal diggers, Indonesia's rise, China's refining grip, the export-quota gamble and the battery industry's escape attempt. Built on USGS, Cobalt Institute, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-04
+Last updated: 2026-09-07
 
 ### Dataset
 
@@ -279,7 +279,7 @@ URL: https://mineral.watch/copper/
 
 Open data visualisation tracking the global copper supply chain: mines, smelters, refineries, tariffs, the smelting chokepoint and record prices. Built on USGS, ICSG, IEA and BGS data.
 
-Last updated: 2026-09-04
+Last updated: 2026-09-07
 
 ### Dataset
 
@@ -332,7 +332,7 @@ URL: https://mineral.watch/data/
 
 Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 11 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
 
-Last updated: 2026-09-05
+Last updated: 2026-09-07
 
 ### Dataset
 
@@ -348,7 +348,7 @@ URL: https://mineral.watch/explorer/
 
 Interactive world map of mineral production, imports and exports for 111 commodities, 1970–2024, with a supply-concentration view. Data from the British Geological Survey.
 
-Last updated: 2026-09-04
+Last updated: 2026-09-07
 
 ### Dataset
 
@@ -369,7 +369,7 @@ URL: https://mineral.watch/graphite/
 
 Open data visualisation tracking the global graphite supply chain: mines, trade flows, processing hubs and prices. Built on USGS, BGS, UN Comtrade and IEA data.
 
-Last updated: 2026-09-04
+Last updated: 2026-09-07
 
 ### Dataset
 
@@ -411,7 +411,7 @@ URL: https://mineral.watch/green/
 
 Open data visualisation tracking the green transition's supply chain: who builds the world's solar modules, battery cells, wind turbines and electrolysers, which minerals they consume, China's ~80% manufacturing grip, Europe's gigafactory reckoning and where the EU's green money goes — Innovation Fund, Recovery and Resilience Facility, Just Transition Fund, Modernisation Fund, Hydrogen Bank and more. Built on IEA, IRENA, GWEC, BNEF and European Commission data.
 
-Last updated: 2026-09-04
+Last updated: 2026-09-07
 
 ### Dataset
 
@@ -468,7 +468,7 @@ URL: https://mineral.watch/lithium/
 
 Open data visualisation tracking the global lithium supply chain: hard-rock mines, brine operations, converters, the China refining chokepoint, the price whipsaw and the battery boom. Built on USGS, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-04
+Last updated: 2026-09-07
 
 ### Dataset
 
@@ -519,7 +519,7 @@ URL: https://mineral.watch/manganese/
 
 Open data visualisation tracking the global manganese supply chain: the mines of the Kalahari, Gabon and Groote Eylandt, China's refining chokepoint, the steel backbone, the battery pivot and the deep-sea nodule race. Built on USGS, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-04
+Last updated: 2026-09-07
 
 ### Dataset
 
@@ -570,7 +570,7 @@ URL: https://mineral.watch/nickel/
 
 Open data visualisation tracking the global nickel supply chain: Indonesia's two-thirds grip on mining, the Chinese-built smelter parks, the class-1/class-2 divide, the 2022 LME squeeze, the quota machine and the battery chemistry war. Built on USGS, INSG, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-04
+Last updated: 2026-09-07
 
 ### Dataset
 
@@ -626,7 +626,7 @@ URL: https://mineral.watch/oil-gas/
 
 Open data visualisation tracking global oil and gas: the 2026 Strait of Hormuz closure and the largest supply disruption in oil-market history, the Gulf shut-in ledger, pipeline bypasses, the LNG shock, sanctions and the shadow fleet, OPEC+, prices and the companies that move energy. Built on EIA, IEA, OPEC, BGS, Energy Institute and tanker-tracking data — for energy businesses, geopolitics researchers and think tanks.
 
-Last updated: 2026-09-05
+Last updated: 2026-09-07
 
 ### Dataset
 
@@ -681,7 +681,7 @@ URL: https://mineral.watch/rare-earths/
 
 Open data visualisation tracking the global rare earth supply chain: mines, separation plants, magnet factories, export controls and prices. Built on USGS, IEA and trade data.
 
-Last updated: 2026-09-04
+Last updated: 2026-09-07
 
 ### Dataset
 
@@ -729,7 +729,7 @@ URL: https://mineral.watch/supply-chain/
 
 Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024. Data from the British Geological Survey.
 
-Last updated: 2026-09-04
+Last updated: 2026-09-07
 
 ### Dataset
 
@@ -761,7 +761,7 @@ URL: https://mineral.watch/uranium/
 
 Open data visualisation tracking the global uranium supply chain: mines, conversion and enrichment plants, prices, the Russian enrichment chokepoint and the nuclear revival. Built on WNA, IAEA, EIA and BGS data.
 
-Last updated: 2026-09-04
+Last updated: 2026-09-07
 
 ### Dataset
 
