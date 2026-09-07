@@ -294,7 +294,7 @@ nav a.back:hover{background:none;color:var(--txt)}
 /* current section, fed by the scroll-spy */
 .nav-here{flex:1;min-width:0;color:var(--muted);font-size:.8rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-left:4px}
 .nav-here:not(:empty)::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:8px;vertical-align:1px}
-nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;margin-left:auto;flex:none;position:relative;overflow:hidden;z-index:0}
+nav a.cta{background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;font-size:.8rem;padding:7px 14px;border-radius:99px;white-space:nowrap;flex:none;position:relative;overflow:hidden;z-index:0}
 nav a.cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--txt);transform:translateX(-101%);transition:transform .35s cubic-bezier(.65,0,.35,1)}
 nav a.cta:hover::before,nav a.cta:focus-visible::before{transform:translateX(0)}
 /* hamburger toggle */
@@ -522,7 +522,7 @@ footer .legal a{text-decoration:underline}
 .nav-ig:hover,.nav-ig:focus-visible{color:var(--accent);border-color:var(--accent);background:var(--card)}
 .nav-ig:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .nav-ig svg{width:15px;height:15px}
-@media(max-width:379px){.nav-ig{display:none}}
+@media(max-width:379px){.nav-ig{display:none}.nav-toggle{margin-left:auto}}
 footer a.ig{display:inline-flex;align-items:center;gap:5px;vertical-align:-3px}
 footer a.ig svg{width:13px;height:13px}
 </style>
@@ -535,8 +535,8 @@ footer a.ig svg{width:13px;height:13px}
     <div class="brand">Cobalt</div>
     <span class="nav-here" aria-hidden="true"></span>
     <a class="nav-ig" href="https://www.instagram.com/mineralwatch/" target="_blank" rel="noopener" aria-label="mineral.watch on Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
-    <a class="cta" href="#research-sec">Hire us</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Section menu"><span class="nav-burger" aria-hidden="true"><i></i><i></i><i></i></span><span class="nav-toggle-txt">Sections</span></button>
+    <a class="cta" href="#research-sec">Hire us</a>
   </div>
   <div class="nav-menu" id="nav-menu">
     <div class="nav-menu-grid">
