@@ -1,0 +1,61 @@
+name: Instagram daily post
+
+# Publishes the next queued mineral.watch Instagram post (+ first comment + Story) through the
+# Instagram Graph API. Same publisher as the claude.ai routine, but GitHub-hosted runners have
+# unrestricted egress. Fires three times a day; tools/ig_publish_next.py posts at the first run
+# at or after the account's best hour and exits without posting on the other runs (and whenever
+# something was already published in the last 20 hours).
+#
+# One-off setup (repo → Settings → Secrets and variables → Actions):
+#   IG_ACCESS_TOKEN  long-lived Instagram Graph API user token (instagram_content_publish,
+#                    instagram_manage_comments, instagram_manage_insights)
+#   IG_USER_ID       the Instagram professional account id
+# Run by hand: Actions → "Instagram daily post" → Run workflow (tick "dry run" to only preview).
+
+on:
+  schedule:
+    - cron: '0 9,11,13 * * *'   # 11:00, 13:00, 15:00 Europe/Rome in summer (UTC+2)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (show what would be posted, publish nothing)'
+        type: boolean
+        default: false
+
+concurrency:
+  group: instagram-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_TZ: Europe/Rome
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check secrets
+        id: secrets
+        run: |
+          if [ -z "$IG_ACCESS_TOKEN" ] || [ -z "$IG_USER_ID" ]; then
+            echo "::warning::IG_ACCESS_TOKEN / IG_USER_ID are not set as repository secrets; skipping (nothing published)."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Publish next queued post
+        if: steps.secrets.outputs.ready == 'true'
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python3 tools/ig_publish_next.py --respect-best-hour
+          else
+            python3 tools/ig_publish_next.py --live --respect-best-hour
+          fi
