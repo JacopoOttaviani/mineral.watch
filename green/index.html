@@ -54,7 +54,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-09-08",
       "about": [
         {
           "@type": "Thing",
@@ -151,7 +151,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-09-08",
       "keywords": [
         "energy transition",
         "clean energy supply chain",
@@ -287,6 +287,7 @@
 }
 </script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
 <style>
 :root{
   --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
@@ -1162,6 +1163,8 @@ footer a.ig svg{width:13px;height:13px}
   <span class="legal">© 2026 mineral.watch · Content &amp; data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a> · Code <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="license">AGPL-3.0</a> · <a href="/data/">Open data</a> · <a href="/terms/">Terms &amp; licensing</a></span>
 </footer>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="../assets/mw-cluster.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
 <script>
 /* ============ DATA (curated from IEA, IRENA, GWEC, BNEF, European Commission, company disclosures) ============ */
@@ -1452,20 +1455,24 @@ L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_D
 }).addTo(map);
 map.on("click",()=>map.scrollWheelZoom.enable());
 
-const groups = {make:L.layerGroup().addTo(map), eu:L.layerGroup().addTo(map),
-                dis:L.layerGroup().addTo(map), dev:L.layerGroup().addTo(map)};
+const groups = {make:[], eu:[],
+                dis:[], dev:[]};
 const TYCOL={make:col("--mine"),eu:col("--proc"),dis:col("--dis"),dev:col("--dev")};
 const TYNAME={make:"OPERATING FACTORY",eu:"EU-FUNDED / JUST TRANSITION",dis:"STALLED / CANCELLED",dev:"UNDER CONSTRUCTION / RESTARTING"};
 
+/* overlapping markers collapse into a donut per category (assets/mw-cluster.js) */
+const cluster = MW.clusterGroup({radius:40,noun:"sites",order:Object.keys(TYCOL)}).addTo(map);
 DATA.sites.forEach(s=>{
   const c=TYCOL[s.ty];
-  L.circleMarker(s.ll,{radius:4+s.sz*2.4,color:c,weight:1.5,fillColor:c,fillOpacity:.35})
-   .bindPopup(`<span class="pp-tag" style="background:${c}22;color:${c}">${TYNAME[s.ty]}</span><br><b>${s.n}</b> · ${s.c}<br>${s.d}`)
-   .addTo(groups[s.ty]);
+  groups[s.ty].push(
+    L.circleMarker(s.ll,{radius:4+s.sz*2.4,color:c,weight:1.5,fillColor:c,fillOpacity:.35,
+                         bubblingMouseEvents:false,mwCat:s.ty,mwCol:c,mwLabel:TYNAME[s.ty]})
+   .bindPopup(`<span class="pp-tag" style="background:${c}22;color:${c}">${TYNAME[s.ty]}</span><br><b>${s.n}</b> · ${s.c}<br>${s.d}`));
 });
+cluster.addLayers(Object.values(groups).flat());
 document.querySelectorAll(".chip[data-layer]").forEach(ch=>ch.addEventListener("click",()=>{
   const g=groups[ch.dataset.layer];
-  if(ch.classList.toggle("on")) map.addLayer(g); else map.removeLayer(g);
+  if(ch.classList.toggle("on")) cluster.addLayers(g); else cluster.removeLayers(g);
 }));
 
 /* ============ MACHINES GRID ============ */

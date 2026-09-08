@@ -45,7 +45,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-09-08",
       "breadcrumb": {
         "@id": "https://mineral.watch/supply-chain/#breadcrumb"
       },
@@ -306,6 +306,7 @@
 }
 </script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
 <style>
 :root{
   --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
@@ -497,6 +498,8 @@ footer a.ig svg{width:13px;height:13px}
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="../assets/mw-cluster.js"></script>
 <script>
 (function(){
   "use strict";
@@ -579,14 +582,17 @@ footer a.ig svg{width:13px;height:13px}
     return m;
   }
   const map = makeMap("map");
-  const layerMine = L.featureGroup().addTo(map);   // added first: refined draws on top
-  const layerRef  = L.featureGroup().addTo(map);
+  /* overlapping bubbles collapse into a donut split mined / refined (assets/mw-cluster.js) */
+  const cluster = MW.clusterGroup({radius:40, noun:"countries", order:["mine","ref"]}).addTo(map);
+  const layerMine = [];   // added first: refined draws on top
+  const layerRef  = [];
   let showMine = true, showRef = true;
 
   function applyLayers(){
     const hasRef = !!currentMineral.refined;
-    if (showMine) map.addLayer(layerMine); else map.removeLayer(layerMine);
-    if (showRef && hasRef) map.addLayer(layerRef); else map.removeLayer(layerRef);
+    cluster.clearLayers();
+    if (showMine) cluster.addLayers(layerMine);
+    if (showRef && hasRef) cluster.addLayers(layerRef);
   }
 
   function showError(err){
@@ -637,7 +643,8 @@ footer a.ig svg{width:13px;height:13px}
   }
 
   function drawStage(layer, stage, color, entries, total){
-    layer.clearLayers();
+    layer.length = 0;
+    const cat = layer === layerMine ? "mine" : "ref";
     const maxQty = maxCache[stage.slug] || 1;
     entries.forEach(([iso3, qty]) => {
       const c = countries[iso3];
@@ -650,9 +657,10 @@ footer a.ig svg{width:13px;height:13px}
         Share of world total: <span class="pp-share">${fmtPct(share)}</span>
         ${sparklineSVG(stage.slug, iso3)}
       `;
-      L.circleMarker([c.lat, c.lon], {
-        radius, weight:1.2, color, fillColor:color, fillOpacity:.55
-      }).bindPopup(popupHtml).addTo(layer);
+      layer.push(L.circleMarker([c.lat, c.lon], {
+        radius, weight:1.2, color, fillColor:color, fillOpacity:.55, bubblingMouseEvents:false,
+        mwCat:cat, mwCol:color, mwLabel:stage.label
+      }).bindPopup(popupHtml));
     });
   }
 
@@ -745,7 +753,7 @@ footer a.ig svg{width:13px;height:13px}
       el("refTop3").textContent = refEntries.length ? fmtPct(top3Share(refEntries, refTotal)) : "–";
       renderChokepoint(mineEntries, mineTotal, refEntries, refTotal, refStage);
     } else {
-      layerRef.clearLayers();
+      layerRef.length = 0;
       refBtn.setAttribute("disabled", "");
       el("refSub").textContent = `${m.name} · no refined-stage country series in BGS`;
       el("refNone").innerHTML = m.noRefined;

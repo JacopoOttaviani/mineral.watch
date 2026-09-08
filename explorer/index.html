@@ -44,7 +44,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-09-08",
       "breadcrumb": {
         "@id": "https://mineral.watch/explorer/#breadcrumb"
       },
@@ -147,6 +147,7 @@
 }
 </script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
 <style>
 :root{
   --bg:#0d1117;--bg2:#151b23;--card:#1a222c;--line:#2b3644;
@@ -310,6 +311,8 @@ footer a.ig svg{width:13px;height:13px}
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="../assets/mw-cluster.js"></script>
 <script>
 (function(){
   "use strict";
@@ -341,16 +344,18 @@ footer a.ig svg{width:13px;height:13px}
   L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {
     maxZoom: 6, minZoom: 1
   }).addTo(map);
-  const markerLayer = L.featureGroup().addTo(map);
+  /* overlapping bubbles collapse into a donut per concentration bucket (assets/mw-cluster.js) */
+  const markerLayer = MW.clusterGroup({radius:40, noun:"countries", order:CONC_BUCKETS.map(b => b.label).concat(["all"])}).addTo(map);
 
   const el = id => document.getElementById(id);
   const fmtNum = n => new Intl.NumberFormat("en", {notation:"compact", maximumFractionDigits:1}).format(n);
   const fmtPct = n => (n*100).toFixed(n < 0.01 ? 2 : 1) + "%";
 
-  function concColor(share){
-    for (const b of CONC_BUCKETS) if (share < b.max) return b.color;
-    return CONC_BUCKETS[CONC_BUCKETS.length-1].color;
+  function concBucket(share){
+    for (const b of CONC_BUCKETS) if (share < b.max) return b;
+    return CONC_BUCKETS[CONC_BUCKETS.length-1];
   }
+  function concColor(share){ return concBucket(share).color; }
 
   function sparklineSVG(series){
     if (series.length < 2) return "";
@@ -421,11 +426,13 @@ footer a.ig svg{width:13px;height:13px}
 
     entries.sort((a,b) => b[1]-a[1]);
 
+    const bubbles = [];
     entries.forEach(([iso3, qty]) => {
       const c = countries[iso3];
       const share = total > 0 ? qty/total : 0;
       const radius = RMIN + (RMAX-RMIN) * Math.sqrt(qty/maxQty);
-      const color = currentView === "concentration" ? concColor(share) : "#c8ff6b";
+      const bucket = currentView === "concentration" ? concBucket(share) : null;
+      const color = bucket ? bucket.color : "#c8ff6b";
 
       const series = [];
       const byYear = commodityData[currentStat] || {};
@@ -442,10 +449,13 @@ footer a.ig svg{width:13px;height:13px}
         ${sparklineSVG(series)}
       `;
 
-      L.circleMarker([c.lat, c.lon], {
-        radius, weight: 1.2, color, fillColor: color, fillOpacity: 0.55
-      }).bindPopup(popupHtml).addTo(markerLayer);
+      bubbles.push(L.circleMarker([c.lat, c.lon], {
+        radius, weight: 1.2, color, fillColor: color, fillOpacity: 0.55, bubblingMouseEvents: false,
+        mwCat: bucket ? bucket.label : "all", mwCol: color,
+        mwLabel: bucket ? bucket.label + " of world total" : "Countries"
+      }).bindPopup(popupHtml));
     });
+    markerLayer.addLayers(bubbles);
 
     renderLegend(maxQty);
     renderPanel(entries, total, commodityName, unitFor(commodityName, currentStat));
