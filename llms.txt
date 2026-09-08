@@ -50,6 +50,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - China's April 2025 export controls cover Sm, Gd, Tb, Dy, Lu, Sc and Y and magnets containing them; the October 2025 expansion was suspended for one year in November 2025.
 - World copper mine production, 2025 (USGS estimate): ~23 Mt; Chile ~5.3 Mt (~23%), DR Congo ~3.2 Mt, Peru ~2.7 Mt.
 - World refined copper production, 2025 (USGS estimate): ~29 Mt, of which China ~14 Mt (~48%). China holds ~50% of world smelting capacity (IEA) and consumes ~56% of refined copper.
+- DR Congo is the world's No. 2 refined-copper producer (~2.8 Mt in 2025, USGS) as well as the No. 2 miner: almost all of it is SX-EW cathode electrowon at the mine site (Tenke Fungurume/Kisanfu, KCC, Sicomines, Metalkol, COMMUS, Deziwa), not smelter output. The country has only two large smelters: CNMC's Lualaba Copper Smelter (120 kt/yr blister, 2020) and Ivanhoe's 500 kt/yr Kamoa-Kakula smelter (first anodes 29 December 2025).
 - Global copper reserves (USGS 2026): ~980 Mt, of which Chile 180 Mt.
 - The 2026 copper concentrate benchmark treatment charge settled at $0/t (vs $21.25 in 2025) — the lowest on record.
 - U.S. net import reliance on refined copper (USGS, 2025): 57% of apparent consumption (up from 45% in 2024, amid tariff front-running); refined imports were a record ~1.7 Mt, 68% of them from Chile.
