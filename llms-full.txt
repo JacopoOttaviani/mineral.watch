@@ -47,11 +47,13 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - China's share of world rare earth refining and separation (IEA, 2024): ~91%; of sintered NdFeB magnet production: ~94%.
 - U.S. net import reliance on rare-earth compounds and metals (USGS, 2025): 67%; on heavy rare earths: 100%.
 - Global rare earth reserves (USGS 2026): >75 Mt REO, of which China ~44 Mt.
+- Thailand is the world's No. 5 rare earth producer on paper (~4,800 t REO in 2025, USGS): monazite/xenotime from the southern tin belt, but USGS estimates the figure from Chinese import data and part may be Myanmar material transiting Thai processors.
 - China's April 2025 export controls cover Sm, Gd, Tb, Dy, Lu, Sc and Y and magnets containing them; the October 2025 expansion was suspended for one year in November 2025.
 - World copper mine production, 2025 (USGS estimate): ~23 Mt; Chile ~5.3 Mt (~23%), DR Congo ~3.2 Mt, Peru ~2.7 Mt.
 - World refined copper production, 2025 (USGS estimate): ~29 Mt, of which China ~14 Mt (~48%). China holds ~50% of world smelting capacity (IEA) and consumes ~56% of refined copper.
 - DR Congo is the world's No. 2 refined-copper producer (~2.8 Mt in 2025, USGS) as well as the No. 2 miner: almost all of it is SX-EW cathode electrowon at the mine site (Tenke Fungurume/Kisanfu, KCC, Sicomines, Metalkol, COMMUS, Deziwa), not smelter output. The country has only two large smelters: CNMC's Lualaba Copper Smelter (120 kt/yr blister, 2020) and Ivanhoe's 500 kt/yr Kamoa-Kakula smelter (first anodes 29 December 2025).
 - Global copper reserves (USGS 2026): ~980 Mt, of which Chile 180 Mt.
+- Kazakhstan mined ~710 kt of copper in 2025 (KAZ Minerals ~370 kt from Aktogay and Bozshakol; Kazakhmys at Zhezkazgan/Balkhash); Qazaq Smelter's planned 300 kt/yr Balkhash cathode plant (2027-2030) would lift national refined output past 800 kt. Russia refined ~950 kt in 2025 (UMMC's Uralelectromed ~430 kt/yr, Russian Copper Company ~150 kt/yr, Nornickel). Australia has two copper smelters: Glencore's Mount Isa (with the 300 kt/yr Townsville refinery, kept open to end-2028 by an up-to-A$600M government package, October 2025) and BHP's Olympic Dam (~200 kt/yr cathode, expansion to 650 kt/yr proposed).
 - The 2026 copper concentrate benchmark treatment charge settled at $0/t (vs $21.25 in 2025) — the lowest on record.
 - U.S. net import reliance on refined copper (USGS, 2025): 57% of apparent consumption (up from 45% in 2024, amid tariff front-running); refined imports were a record ~1.7 Mt, 68% of them from Chile.
 - Since 1 August 2025 the US applies a 50% Section 232 tariff to semi-finished copper products; refined cathode, ores and scrap are exempt, with a phased refined-copper tariff (15% in 2027, 30% in 2028) proposed. Copper was added to the US critical minerals list on 7 November 2025.
@@ -62,6 +64,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - Lithium end uses (USGS, 2025): batteries 88%; ceramics and glass 4%; greases 2%.
 - China's share of battery-grade lithium chemical conversion (IEA estimate): ~70%; of cathode active material: ~85%; of LFP cells: >98%.
 - U.S. net import reliance on lithium (USGS, 2025): >50% of apparent consumption; import sources 2021-24: Chile 54%, Argentina 43%.
+- Argentina (~7% of world lithium-chemical conversion) converts brine to lithium carbonate at the salar itself (Fénix, Olaroz, Cauchari-Olaroz, Centenario-Ratones, Tres Quebradas, Rincon); POSCO's Güemes plant in Salta (25,000 t/yr, October 2024) is the country's first lithium hydroxide plant. Chile pumps brine at the Salar de Atacama but converts it at Salar del Carmen (SQM) and La Negra (Albemarle) near Antofagasta.
 - Battery-grade lithium carbonate annual average price (USGS/Benchmark): $11,700/t (2021), $63,700/t (2022), $39,000/t (2023), $11,800/t (2024), $9,000/t (2025); 2026 spot rebounded to ~$18,000-23,000/t by August after Guangzhou futures briefly topped ¥200,000 (~$29,500).
 - CATL's Jianxiawo lepidolite mine (~3-6% of world supply) was suspended in August 2025 when its permit lapsed and restarted after a new permit on 29 June 2026 — the price swing producer of the 2025-26 cycle.
 - Codelco-SQM's NovAndino Litio JV (created December 2025; Codelco 50%+1, SQM operating to 2031, secured to 2060) runs the Salar de Atacama and plans ~70% higher output with direct lithium extraction.
@@ -71,6 +74,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - Global manganese reserves (USGS 2026): ~1.8 billion t of manganese content (Australia 580 Mt, South Africa 550 Mt, Brazil 300 Mt, China 260 Mt); South Africa holds ~70% of identified resources.
 - Manganese end uses: ~90% steelmaking; USGS states manganese has no satisfactory substitute in its major applications. Battery demand is projected to grow >8x this decade (Benchmark).
 - China's share of manganese refining: ~60% of ferroalloys, >90% of electrolytic manganese metal, ~95% of battery-grade manganese sulphate (IEA); China mines only ~4% of world ore.
+- The only commercial-scale battery-grade manganese sulphate plants outside China are Vibrantz's Tertre plant (Belgium, ex-Erachem Comilog), Tazament's Stepnogorsk plant (Kazakhstan, Phase I 22,500 t/yr, 2024) and Japan's.
 - U.S. net import reliance on manganese (USGS): 100% — no domestic mine since 1970. Import sources (Mn contained, 2021-24): Gabon 23%, South Africa 21%, Malaysia 11%, Australia 10%.
 - Manganese ore price, 44% grade CIF China (USGS/CRU annual averages): $5.27/dmtu (2021), $5.97 (2022), $4.80 (2023), $5.53 (2024), $4.50 (2025); spiked to ~$8.97/dmtu in August 2024 after Cyclone Megan destroyed the wharf at South32's GEMCO mine (exports resumed May 2025); ~$5/dmtu in August 2026.
 - Gabon bans raw manganese ore exports from 1 January 2029; Ghana Manganese Company (90% China's TMI) plans a $450M refinery at Nsuta.
@@ -79,6 +83,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - World cobalt mine production, 2025 (USGS estimate): ~310,000 t of cobalt content, an all-time high. DR Congo ~230,000 t (~73%), Indonesia ~44,000 t (~14%), Russia ~7,700 t. Nearly all cobalt is a by-product of copper (DRC) or nickel (Indonesia, Philippines, Cuba).
 - Global cobalt reserves (USGS 2026): ~12 Mt of cobalt content (DR Congo 6 Mt, Australia 1.7 Mt); identified terrestrial resources ~25 Mt, plus an estimated 5 billion tons in seafloor polymetallic nodules (USGS wording).
 - China produced ~79% of the world's ~240,000 t of refined cobalt in 2025 (Cobalt Institute); the largest refining hub outside China is Kokkola, Finland (Umicore, permitted 16,000 t/yr).
+- Indonesia's ~44,000 t of cobalt (2025) comes from no cobalt mine: it is a by-product of nickel-laterite HPAL plants (Obi Island, Morowali, Weda Bay) leaving mostly as mixed hydroxide (MHP) for Chinese refiners; Lygend's Obi Island line (~6,000 t/yr design) is the country's first onshore cobalt-sulphate refinery.
 - Cobalt end uses (Cobalt Institute, 2024): EV batteries 43%, portable electronics 30%, superalloys 8%, hard metals 4% — batteries ~73% overall. In the US, superalloys take 51% of consumption (USGS). Demand grew 13% in 2025 to ~276,000 t.
 - DRC export controls: full cobalt export ban 22 February 2025 (ARECOMS), replaced from 16 October 2025 by quotas — 18,125 t for the rest of 2025, then 96,600 t/yr for 2026 and 2027 (87,000 t pro-rata to producers + 9,600 t state strategic quota), roughly half of 2024 export volumes. Unused quotas are forfeited to a Gécamines-managed national stockpile (June 2026 rule).
 - Cobalt prices (USGS annual averages, US spot cathode): $24.21/lb (2021), $30.78 (2022), $17.20 (2023), $16.77 (2024), ~$21 (2025). Standard grade hit a nine-year low near $10/lb in February 2025 before the ban; by August 2026 metal traded ~$25/lb, hydroxide $22-23/lb (payability ~90%+ of the metal price after touching 100% in April 2026).
@@ -89,6 +94,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - World nickel mine production, 2025 (USGS estimate): ~3.9 Mt of nickel content, an all-time high. Indonesia ~2.6 Mt (~66%), Philippines ~270,000 t, Russia ~200,000 t, Canada and New Caledonia ~140,000 t each. Australia fell 54% in one year to ~45,000 t.
 - Global nickel reserves (USGS 2026): >140 Mt of nickel content (Indonesia 62 Mt, Australia 25 Mt, Brazil 16 Mt); identified land-based resources >350 Mt, plus ~4.5 billion t estimated in seabed deposits (USGS 2022 study).
 - Indonesia and China produced ~76% of the world's refined nickel in 2025 (IEA: Indonesia 45%, China 31%); the top three refining countries held ~80%, up from 66% in 2021. China makes ~75% of battery-grade nickel sulphate; Chinese groups own ~75% of Indonesian refining capacity.
+- Indonesia is the world's No. 1 nickel refiner as well as No. 1 miner because its 2020 ore-export ban forces processing in-country: industrial parks at Morowali (IMIP), Weda Bay (IWIP), Obi Island, Konawe (VDNI/OSS/Gunbuster, ~525,000 t/yr NPI nameplate) and Pomalaa turn laterite into nickel pig iron, matte and MHP; Nickel Industries' ENC (first MHP July 2026) targets the country's first LME-grade cathode.
 - The class divide: class-1 refined metal (>=99.8%, LME-deliverable) is only ~a quarter of supply; nickel pig iron alone was ~53-54% in 2025 (INSG), with MHP and matte bridging class 2 into battery chemicals. Chinese-brand cathode reached ~70% of LME stocks in late 2025.
 - Nickel end uses (Wood Mackenzie, 2024): stainless steel 64%, batteries 15%, non-ferrous alloys 9%, electroplating 5%. Nickel-free LFP became the dominant EV battery chemistry in 2025 (IEA) and battery-sector nickel use dipped slightly (INSG); the IEA still projects batteries at ~30% of nickel demand by 2035.
 - LME cash annual averages (USGS): $18,476/t (2021), $25,815 (2022), $21,495 (2023), $16,812 (2024), ~$15,000 (2025); ~$16,800/t in August 2026 after a quota-driven rally peaked near $18,800 in May.
@@ -177,7 +183,7 @@ URL: https://mineral.watch/antimony/
 
 Open data visualisation tracking the global antimony supply chain: China's mines and smelters, the 2024 export ban, the fivefold price spike, Tajikistan's rise and the West's scramble to rebuild a supply chain it abandoned — built on USGS, BGS, trade and price-agency data.
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ### Dataset
 
@@ -228,7 +234,7 @@ URL: https://mineral.watch/cobalt/
 
 Open data visualisation tracking the global cobalt supply chain: the DRC's industrial mines and artisanal diggers, Indonesia's rise, China's refining grip, the export-quota gamble and the battery industry's escape attempt. Built on USGS, Cobalt Institute, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ### Dataset
 
@@ -349,7 +355,7 @@ URL: https://mineral.watch/explorer/
 
 Interactive world map of mineral production, imports and exports for 111 commodities, 1970–2024, with a supply-concentration view. Data from the British Geological Survey.
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ### Dataset
 
@@ -370,7 +376,7 @@ URL: https://mineral.watch/graphite/
 
 Open data visualisation tracking the global graphite supply chain: mines, trade flows, processing hubs and prices. Built on USGS, BGS, UN Comtrade and IEA data.
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ### Dataset
 
@@ -412,7 +418,7 @@ URL: https://mineral.watch/green/
 
 Open data visualisation tracking the green transition's supply chain: who builds the world's solar modules, battery cells, wind turbines and electrolysers, which minerals they consume, China's ~80% manufacturing grip, Europe's gigafactory reckoning and where the EU's green money goes — Innovation Fund, Recovery and Resilience Facility, Just Transition Fund, Modernisation Fund, Hydrogen Bank and more. Built on IEA, IRENA, GWEC, BNEF and European Commission data.
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ### Dataset
 
@@ -469,7 +475,7 @@ URL: https://mineral.watch/lithium/
 
 Open data visualisation tracking the global lithium supply chain: hard-rock mines, brine operations, converters, the China refining chokepoint, the price whipsaw and the battery boom. Built on USGS, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ### Dataset
 
@@ -520,7 +526,7 @@ URL: https://mineral.watch/manganese/
 
 Open data visualisation tracking the global manganese supply chain: the mines of the Kalahari, Gabon and Groote Eylandt, China's refining chokepoint, the steel backbone, the battery pivot and the deep-sea nodule race. Built on USGS, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ### Dataset
 
@@ -571,7 +577,7 @@ URL: https://mineral.watch/nickel/
 
 Open data visualisation tracking the global nickel supply chain: Indonesia's two-thirds grip on mining, the Chinese-built smelter parks, the class-1/class-2 divide, the 2022 LME squeeze, the quota machine and the battery chemistry war. Built on USGS, INSG, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ### Dataset
 
@@ -595,7 +601,7 @@ Mostly to make steel stainless: about 64% of the world's nickel goes into stainl
 
 **Which country produces the most nickel?**
 
-Indonesia, by an enormous margin: about 2.6 million of the world's 3.9 million tonnes in 2025 (USGS) — roughly two-thirds of global mine supply, up from around 5% a decade ago. The Philippines is a distant second at about 270,000 tonnes, much of its ore now shipped to Indonesian plants. Downstream the grip tightens differently: Indonesia and China together produced about 76% of the world's refined nickel in 2025 (IEA), and Chinese groups own roughly three-quarters of Indonesia's refining capacity.
+Indonesia, by an enormous margin: about 2.6 million of the world's 3.9 million tonnes in 2025 (USGS) — roughly two-thirds of global mine supply, up from around 5% a decade ago. The Philippines is a distant second at about 270,000 tonnes, much of its ore now shipped to Indonesian plants. Downstream the grip tightens differently: Indonesia is now the largest refiner too — 45% of the world's refined nickel in 2025, ahead of China's 31% (IEA), because the smelters were made to come to the ore — and Chinese groups own roughly three-quarters of Indonesia's refining capacity.
 
 **What happened in the 2022 LME nickel squeeze?**
 
@@ -627,7 +633,7 @@ URL: https://mineral.watch/oil-gas/
 
 Open data visualisation tracking global oil and gas: the 2026 Strait of Hormuz closure and the largest supply disruption in oil-market history, the Gulf shut-in ledger, pipeline bypasses, the LNG shock, sanctions and the shadow fleet, OPEC+, prices and the companies that move energy. Built on EIA, IEA, OPEC, BGS, Energy Institute and tanker-tracking data — for energy businesses, geopolitics researchers and think tanks.
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ### Dataset
 
@@ -682,7 +688,7 @@ URL: https://mineral.watch/rare-earths/
 
 Open data visualisation tracking the global rare earth supply chain: mines, separation plants, magnet factories, export controls and prices. Built on USGS, IEA and trade data.
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ### Dataset
 
@@ -730,7 +736,7 @@ URL: https://mineral.watch/supply-chain/
 
 Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024. Data from the British Geological Survey.
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ### Dataset
 
@@ -762,7 +768,7 @@ URL: https://mineral.watch/uranium/
 
 Open data visualisation tracking the global uranium supply chain: mines, conversion and enrichment plants, prices, the Russian enrichment chokepoint and the nuclear revival. Built on WNA, IAEA, EIA and BGS data.
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ### Dataset
 

@@ -54,7 +54,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-09-08",
       "about": [
         {
           "@type": "Thing",
@@ -134,7 +134,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-09-08",
       "keywords": [
         "cobalt",
         "cobalt hydroxide",
@@ -589,11 +589,12 @@ footer a.ig svg{width:13px;height:13px}
   </div>
   <div id="map"></div>
   <div class="legend" style="margin-top:10px">
-    <span><i style="background:var(--mine)"></i>Mine</span>
+    <span><i style="background:var(--mine)"></i>Mine / hydroxide plant</span>
     <span><i style="background:var(--proc)"></i>Refinery / plant</span>
     <span><i style="background:var(--dis)"></i>Disrupted / closed</span>
     <span><i style="background:var(--dev)"></i>Development project</span>
   </div>
+  <div class="note">Why Indonesia — the world's <b>No. 2 cobalt producer</b> (~44 kt in 2025, USGS) — has no cobalt mines on this map: its cobalt is a by-product of nickel. HPAL autoclaves on Obi Island and inside the Morowali and Weda Bay parks leach nickel laterite into mixed hydroxide (MHP) that carries the cobalt with it, so the markers there are plants rather than pits, and most of the cobalt leaves for Chinese refiners as MHP. Lygend's Obi line, which turns that hydroxide straight into battery-grade sulphate, is the country's first onshore cobalt refinery.</div>
 </section>
 
 <section id="forms-sec">
@@ -1240,6 +1241,7 @@ const DATA = {
     {n:"Nikkelverk",c:"Norway",ll:[58.14,8.01],ty:"proc",sz:1,d:"Glencore's Kristiansand refinery produces high-purity cobalt cathode from its own and third-party feed — one of the few Western sources of superalloy-grade units."},
     {n:"Niihama",c:"Japan",ll:[33.96,133.28],ty:"proc",sz:1,d:"Sumitomo Metal Mining's refinery turns Philippine mixed sulphide into cobalt for Japan's battery chain — including the NCA cathodes behind Tesla's original supply."},
     {n:"Long Harbour",c:"Canada",ll:[47.42,-53.87],ty:"proc",sz:1,d:"Vale's Newfoundland hydromet plant is ramping toward ~2,600 t/yr of refined cobalt rounds from Voisey's Bay concentrate — North America's main refined-cobalt hope until Electra arrives."},
+    {n:"Obi Island sulphate refinery (Lygend)",c:"Indonesia",ll:[-1.47,127.60],ty:"proc",sz:1,d:"Indonesia's first onshore cobalt refinery: Lygend's line at the Obi HPAL complex converts MHP into battery-grade cobalt sulphate (~6 kt/yr design) — the first cobalt refined on Indonesian soil, in a country that otherwise ships its cobalt to China as hydroxide."},
     {n:"Lubumbashi slag heap (STL)",c:"DR Congo",ll:[-11.67,27.47],ty:"proc",sz:1,d:"Gécamines' Big Hill plant reworks a century-old smelter slag heap for cobalt and copper — a state producer with its own direct export quota under the ARECOMS regime."},
     // --- disrupted & closed ---
     {n:"Idaho Cobalt Operations",c:"United States",ll:[45.13,-114.40],ty:"dis",sz:1,d:"America's only primary cobalt mine, opened by Jervois in 2022 and suspended within months at the bottom of the glut. A reported $100M federal grant for a nearby refinery (Aug 2026) may set up a restart."},

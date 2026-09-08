@@ -54,7 +54,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-09-08",
       "about": [
         {
           "@type": "Thing",
@@ -134,7 +134,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-09-08",
       "keywords": [
         "nickel",
         "nickel pig iron",
@@ -216,7 +216,7 @@
           "name": "Which country produces the most nickel?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Indonesia, by an enormous margin: about 2.6 million of the world's 3.9 million tonnes in 2025 (USGS) — roughly two-thirds of global mine supply, up from around 5% a decade ago. The Philippines is a distant second at about 270,000 tonnes, much of its ore now shipped to Indonesian plants. Downstream the grip tightens differently: Indonesia and China together produced about 76% of the world's refined nickel in 2025 (IEA), and Chinese groups own roughly three-quarters of Indonesia's refining capacity."
+            "text": "Indonesia, by an enormous margin: about 2.6 million of the world's 3.9 million tonnes in 2025 (USGS) — roughly two-thirds of global mine supply, up from around 5% a decade ago. The Philippines is a distant second at about 270,000 tonnes, much of its ore now shipped to Indonesian plants. Downstream the grip tightens differently: Indonesia is now the largest refiner too — 45% of the world's refined nickel in 2025, ahead of China's 31% (IEA), because the smelters were made to come to the ore — and Chinese groups own roughly three-quarters of Indonesia's refining capacity."
           }
         },
         {
@@ -598,11 +598,12 @@ footer a.ig svg{width:13px;height:13px}
   </div>
   <div id="map"></div>
   <div class="legend" style="margin-top:10px">
-    <span><i style="background:var(--mine)"></i>Mine / smelter park</span>
-    <span><i style="background:var(--proc)"></i>Refinery / plant</span>
+    <span><i style="background:var(--mine)"></i>Mine</span>
+    <span><i style="background:var(--proc)"></i>Smelter park / refinery</span>
     <span><i style="background:var(--dis)"></i>Disrupted / closed</span>
     <span><i style="background:var(--dev)"></i>Development project</span>
   </div>
+  <div class="note">Why Indonesia shows <b>refineries sitting on top of mines</b>: the country that digs two-thirds of the world's nickel is also its No. 1 refiner — 45% of refined output in 2025 (IEA), ahead of China's 31%. Since the 2020 ore-export ban the laterite never leaves: it goes straight into RKEF furnaces and HPAL autoclaves inside the industrial parks at Morowali, Weda Bay, Obi, Konawe and Pomalaa, so the smelter-park markers there are the plants that turn ore into nickel pig iron, matte and MHP. Most of that is intermediate product that China finishes into class-1 metal and sulphate — but LME-grade cathode is now being made on Indonesian soil too.</div>
 </section>
 
 <section id="forms-sec">
@@ -966,7 +967,7 @@ footer a.ig svg{width:13px;height:13px}
     </details>
     <details>
       <summary>Which country produces the most nickel?</summary>
-      <p>Indonesia, by an enormous margin: about 2.6 million of the world's 3.9 million tonnes in 2025 (USGS) — roughly two-thirds of global mine supply, up from around 5% a decade ago. The Philippines is a distant second at about 270,000 tonnes, much of its ore now shipped to Indonesian plants. Downstream the grip tightens differently: Indonesia and China together produced about 76% of the world's refined nickel in 2025 (IEA), and Chinese groups own roughly three-quarters of Indonesia's refining capacity.</p>
+      <p>Indonesia, by an enormous margin: about 2.6 million of the world's 3.9 million tonnes in 2025 (USGS) — roughly two-thirds of global mine supply, up from around 5% a decade ago. The Philippines is a distant second at about 270,000 tonnes, much of its ore now shipped to Indonesian plants. Downstream the grip tightens differently: Indonesia is now the largest refiner too — 45% of the world's refined nickel in 2025, ahead of China's 31% (IEA), because the smelters were made to come to the ore — and Chinese groups own roughly three-quarters of Indonesia's refining capacity.</p>
     </details>
     <details>
       <summary>What happened in the 2022 LME nickel squeeze?</summary>
@@ -1230,7 +1231,7 @@ const DATA = {
     // type: mine | proc | dis | dev ; size 1-3
     // --- mines & smelter parks (producing) ---
     {n:"Weda Bay (IWIP)",c:"Indonesia",ll:[0.48,127.90],ty:"mine",sz:3,d:"The world's largest nickel mine (Eramet/Tsingshan JV) inside Tsingshan's IWIP park on Halmahera — 42 Mwmt of ore in 2025, then a 2026 quota cut of ~70% that halted mining for weeks. Documented deforestation and pressure on the uncontacted Hongana Manyawa."},
-    {n:"Morowali (IMIP)",c:"Indonesia",ll:[-2.85,122.10],ty:"mine",sz:3,d:"The world's largest nickel-processing park: ~50 companies, US$34B invested, ~85,000 workers, RKEF, matte, HPAL and stainless lines behind a captive coal fleet. A furnace explosion at ITSS killed 21 workers in December 2023."},
+    {n:"Morowali (IMIP)",c:"Indonesia",ll:[-2.85,122.10],ty:"proc",sz:3,d:"The world's largest nickel-processing park — no mine of its own, fed by ore barged in from across Sulawesi: ~50 companies, US$34B invested, ~85,000 workers, RKEF, matte, HPAL and stainless lines behind a captive coal fleet. A furnace explosion at ITSS killed 21 workers in December 2023."},
     {n:"Obi Island (Harita/Lygend)",c:"Indonesia",ll:[-1.63,127.42],ty:"mine",sz:3,d:"Harita and Lygend's mine-to-chemical complex — Indonesia's first HPAL (2021) and first battery-grade sulphate plant (2023), heading toward ~305 kt of nickel capacity across HPAL and RKEF lines."},
     {n:"Sorowako",c:"Indonesia",ll:[-2.53,121.35],ty:"mine",sz:2,d:"PT Vale Indonesia's hydro-powered flagship has smelted matte since the 1970s — 72,000 t in 2025, among the lowest-carbon laterite nickel anywhere. A Huayou-partnered HPAL for the limonite layer is next."},
     {n:"Pomalaa",c:"Indonesia",ll:[-4.18,121.62],ty:"mine",sz:2,d:"Antam's ferronickel heartland plus the Ford-backed Vale/Huayou HPAL (~120 kt MHP) reaching mechanical completion in 2026 — the only Indonesian battery-nickel chain structured for US IRA compliance."},
@@ -1260,6 +1261,11 @@ const DATA = {
     {n:"Onsan (Korea Zinc)",c:"South Korea",ll:[35.43,129.36],ty:"proc",sz:1,d:"Korea Zinc's 42,600 t/yr 'all-in-one' nickel refinery entered commercial production in 2026 — the largest new class-1 capacity outside China and Indonesia this decade."},
     {n:"Doniambo (SLN)",c:"New Caledonia",ll:[-22.26,166.44],ty:"proc",sz:1,d:"Eramet's century-old ferronickel smelter above Nouméa harbour — its losses are financed directly by the French state, the cost of keeping New Caledonia's largest private employer alive."},
     // --- disrupted & closed ---
+    // --- Indonesia: the smelter parks and HPAL plants that make it the world's No. 1 refiner (45% of refined nickel, IEA 2025) ---
+    {n:"Weda Bay (IWIP) smelters & Huafei HPAL",c:"Indonesia",ll:[0.63,127.99],ty:"proc",sz:3,d:"Tsingshan's Indonesia Weda Bay Industrial Park on Halmahera: dozens of RKEF lines turning the mine's saprolite into nickel pig iron and matte, plus Huayou's Huafei HPAL plant leaching the limonite into MHP — a mine-to-intermediates complex that ships nothing as ore."},
+    {n:"Konawe (VDNI / OSS / Gunbuster)",c:"Indonesia",ll:[-3.83,122.42],ty:"proc",sz:2,d:"Jiangsu Delong's three-phase NPI park at Morosi, Southeast Sulawesi — ~525 kt/yr of nickel-in-NPI nameplate across VDNI (2017), Obsidian Stainless Steel (2020) and Gunbuster (2022). Gunbuster entered court-ordered debt suspension in 2025 with ~1,900 layoffs as tightened ore quotas squeezed the independents."},
+    {n:"Obi Island HPAL & sulphate plant",c:"Indonesia",ll:[-1.47,127.60],ty:"proc",sz:2,d:"Harita/Lygend's Obi complex is Indonesia's most complete chain: the country's first HPAL plant (2021), its first battery-grade nickel sulphate line (2023) and RKEF furnaces beside them, all fed by the island's own laterite."},
+    {n:"ENC (Nickel Industries, IMIP)",c:"Indonesia",ll:[-2.70,122.26],ty:"proc",sz:1,d:"Nickel Industries' Excelsior Nickel Cobalt HPAL inside the Morowali park produced its first MHP in July 2026 and is built to go further — targeting Indonesia's first LME-deliverable class-1 cathode."},
     {n:"Nickel West",c:"Australia",ll:[-27.92,120.70],ty:"dis",sz:3,d:"BHP's entire integrated division — Mt Keith, Leinster, the Kalgoorlie smelter and Kwinana refinery — suspended since October 2024 at ~US$300M/yr in care costs. Review due by February 2027; the smelter's fate came to a head in August 2026."},
     {n:"Koniambo (KNS)",c:"New Caledonia",ll:[-21.02,164.83],ty:"dis",sz:2,d:"The great write-off: US$9B invested, never a profitable year, furnaces cold since August 2024 after Glencore walked. Its 49% stake remains unsold; a €300M French fund keeps the site alive."},
     {n:"Ravensthorpe",c:"Australia",ll:[-33.58,120.40],ty:"dis",sz:1,d:"First Quantum's laterite operation, on care and maintenance since May 2024 — its second mothballing in a plant built for US$2.1B. No restart timeframe."},
