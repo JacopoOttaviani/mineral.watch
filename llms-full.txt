@@ -177,17 +177,17 @@ hello@mineral.watch — corrections, commercial licences, bulk data access, and 
 
 Each section below reproduces a page's description, its schema.org Dataset record (coverage, variables, downloads, sources) and its published questions and answers verbatim. Figures are as of the page's last update; cite mineral.watch and the primary source named.
 
-## AntimonyWatch — Tracking the Global Antimony Supply Chain
+## mineral.watch › Antimony
 
 URL: https://mineral.watch/antimony/
 
 Open data visualisation tracking the global antimony supply chain: China's mines and smelters, the 2024 export ban, the fivefold price spike, Tajikistan's rise and the West's scramble to rebuild a supply chain it abandoned — built on USGS, BGS, trade and price-agency data.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 ### Dataset
 
-AntimonyWatch — Global Antimony Supply Chain Data
+mineral.watch — Global Antimony Supply Chain Data
 
 Mines, roasters and smelters, production and reserves data, prices, trade flows, export controls and processing concentration for the global antimony supply chain.
 
@@ -228,17 +228,17 @@ Almost every round of conventional ammunition contains it: antimony hardens lead
 
 That's exactly what we do. We produce commissioned deep-dive reports on antimony, covering angles such as export-control exposure, mine-to-smelter supply-chain mapping, trade-flow and transshipment analysis, the Western project pipeline and its timelines, defence procurement and stockpiling, and price scenarios. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
 
-## CobaltWatch — Tracking the Global Cobalt Supply Chain
+## mineral.watch › Cobalt
 
 URL: https://mineral.watch/cobalt/
 
 Open data visualisation tracking the global cobalt supply chain: the DRC's industrial mines and artisanal diggers, Indonesia's rise, China's refining grip, the export-quota gamble and the battery industry's escape attempt. Built on USGS, Cobalt Institute, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 ### Dataset
 
-CobaltWatch — Global Cobalt Supply Chain Data
+mineral.watch — Global Cobalt Supply Chain Data
 
 Mines, hydroxide plants and refineries, production and reserves data, prices, trade flows, export quotas and refining concentration for the global cobalt supply chain.
 
@@ -280,17 +280,17 @@ Between about 150,000 and 250,000 people dig cobalt by hand in the DRC's artisan
 
 That's exactly what we do. We produce commissioned deep-dive reports on cobalt, covering angles such as mine-to-refinery supply-chain mapping, the DRC quota regime and its politics, Indonesia's HPAL wave, China's refining grip, battery-chemistry scenarios and what they mean for demand, artisanal-mining due diligence and the Western refinery buildout. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
 
-## CopperWatch — Tracking the Global Copper Supply Chain
+## mineral.watch › Copper
 
 URL: https://mineral.watch/copper/
 
 Open data visualisation tracking the global copper supply chain: mines, smelters, refineries, tariffs, the smelting chokepoint and record prices. Built on USGS, ICSG, IEA and BGS data.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 ### Dataset
 
-CopperWatch — Global Copper Supply Chain Data
+mineral.watch — Global Copper Supply Chain Data
 
 Mines, smelters and refineries, production and reserves data, trade flows, tariffs and prices for the global copper supply chain.
 
@@ -339,7 +339,7 @@ URL: https://mineral.watch/data/
 
 Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 11 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 ### Dataset
 
@@ -370,17 +370,17 @@ Country-level production, import and export series for 111 mineral and energy co
 - Download: https://mineral.watch/map_data/countries.json (Country names and centroids by ISO3 code)
 - Sources: British Geological Survey, World Mineral Statistics (BGS © UKRI)
 
-## GraphiteWatch — Tracking the Global Graphite Supply Chain
+## mineral.watch › Graphite
 
 URL: https://mineral.watch/graphite/
 
 Open data visualisation tracking the global graphite supply chain: mines, trade flows, processing hubs and prices. Built on USGS, BGS, UN Comtrade and IEA data.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 ### Dataset
 
-GraphiteWatch — Global Graphite Supply Chain Data
+mineral.watch — Global Graphite Supply Chain Data
 
 Mines, processing and anode plants, trade flows, production and reserves data, and prices for the global graphite supply chain.
 
@@ -469,17 +469,17 @@ On hardware, yes. The EU imports the overwhelming majority of its solar modules,
 
 That's exactly what we do. We produce commissioned deep-dive reports on the green transition and the strategic minerals behind it, covering angles such as mine-to-megawatt supply-chain mapping for a given technology, EU funding and state-aid tracking (Innovation Fund, Hydrogen Bank, RRF, Just Transition Fund, IPCEIs) by country or sector, manufacturing-concentration and import-dependence analysis, gigafactory and offtake pipelines, and the security exposure of grid hardware. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
 
-## LithiumWatch — Tracking the Global Lithium Supply Chain
+## mineral.watch › Lithium
 
 URL: https://mineral.watch/lithium/
 
 Open data visualisation tracking the global lithium supply chain: hard-rock mines, brine operations, converters, the China refining chokepoint, the price whipsaw and the battery boom. Built on USGS, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 ### Dataset
 
-LithiumWatch — Global Lithium Supply Chain Data
+mineral.watch — Global Lithium Supply Chain Data
 
 Hard-rock mines, brine operations and converters, production and reserves data, prices, trade flows and refining concentration for the global lithium supply chain.
 
@@ -520,17 +520,17 @@ CATL's Jianxiawo lepidolite mine in Jiangxi supplies roughly 3–6% of world lit
 
 That's exactly what we do. We produce commissioned deep-dive reports on lithium, covering angles such as mine-to-chemical supply-chain mapping across Australia, Latin America and Africa's new hard-rock belt, China's grip on conversion and cathode material, price-cycle and cost-curve analysis, hard-rock versus brine economics and the outlook for direct lithium extraction, and what chemistry shifts like LFP, LMFP and sodium-ion mean for demand. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
 
-## ManganeseWatch — Tracking the Global Manganese Supply Chain
+## mineral.watch › Manganese
 
 URL: https://mineral.watch/manganese/
 
 Open data visualisation tracking the global manganese supply chain: the mines of the Kalahari, Gabon and Groote Eylandt, China's refining chokepoint, the steel backbone, the battery pivot and the deep-sea nodule race. Built on USGS, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 ### Dataset
 
-ManganeseWatch — Global Manganese Supply Chain Data
+mineral.watch — Global Manganese Supply Chain Data
 
 Mines, ferroalloy smelters and battery-grade refineries, production and reserves data, prices, trade flows and refining concentration for the global manganese supply chain.
 
@@ -571,17 +571,17 @@ Potato-sized lumps on the abyssal Pacific seafloor that are roughly 30% manganes
 
 That's exactly what we do. We produce commissioned deep-dive reports on manganese, covering angles such as ore-to-sulphate supply-chain mapping, mine supply and export logistics from South Africa, Gabon, Ghana and Australia, China's grip on battery-grade refining, what LMFP and LMR chemistries mean for future demand, and steel-market dynamics alongside the seabed-nodule question. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
 
-## NickelWatch — Tracking the Global Nickel Supply Chain
+## mineral.watch › Nickel
 
 URL: https://mineral.watch/nickel/
 
 Open data visualisation tracking the global nickel supply chain: Indonesia's two-thirds grip on mining, the Chinese-built smelter parks, the class-1/class-2 divide, the 2022 LME squeeze, the quota machine and the battery chemistry war. Built on USGS, INSG, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 ### Dataset
 
-NickelWatch — Global Nickel Supply Chain Data
+mineral.watch — Global Nickel Supply Chain Data
 
 Mines, smelter parks, HPAL plants and refineries, production and reserves data, prices, trade flows, ore quotas and refining concentration for the global nickel supply chain.
 
@@ -682,17 +682,17 @@ Both. Higher prices and Asian refiners scrambling for non-Gulf barrels lifted Ru
 
 That's exactly what we do. We produce commissioned deep-dive reports for energy companies, traders, insurers, geopolitics researchers and think tanks, covering angles such as chokepoint and flow analysis, Gulf shut-in and bypass scenarios, sanctions and shadow-fleet tracking, LNG contract and capacity mapping, country and basin deep-dives and the exposure of specific companies or importing economies. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
 
-## RareEarthWatch — Tracking the Global Rare Earth Supply Chain
+## mineral.watch › Rare Earths
 
 URL: https://mineral.watch/rare-earths/
 
 Open data visualisation tracking the global rare earth supply chain: mines, separation plants, magnet factories, export controls and prices. Built on USGS, IEA and trade data.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 ### Dataset
 
-RareEarthWatch — Global Rare Earth Supply Chain Data
+mineral.watch — Global Rare Earth Supply Chain Data
 
 Mines, separation and refining plants, magnet factories, production and reserves data, export controls and prices for the global rare earth supply chain.
 
@@ -762,17 +762,17 @@ Paired country-level series of mine-stage and refined/smelter-stage production f
 - Download: https://mineral.watch/map_data/data/antimony-mine.json (Antimony, mine — production by country, 1970–2024)
 - Based on: https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/
 
-## UraniumWatch — Tracking the Global Uranium & Nuclear Fuel Supply Chain
+## mineral.watch › Uranium
 
 URL: https://mineral.watch/uranium/
 
 Open data visualisation tracking the global uranium supply chain: mines, conversion and enrichment plants, prices, the Russian enrichment chokepoint and the nuclear revival. Built on WNA, IAEA, EIA and BGS data.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 
 ### Dataset
 
-UraniumWatch — Global Uranium Supply Chain Data
+mineral.watch — Global Uranium Supply Chain Data
 
 Mines, conversion and enrichment plants, production and resources data, reactor requirements, prices and policy timeline for the global uranium and nuclear fuel supply chain.
 
