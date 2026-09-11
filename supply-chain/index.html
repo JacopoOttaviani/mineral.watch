@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Mined vs Refined — Strategic Mineral Supply-Chain Map | mineral.watch</title>
-<meta name="description" content="Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024. Data from the British Geological Survey.">
+<meta name="description" content="Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin, 1970–2024. Data from the British Geological Survey.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="mineral.watch">
 <meta name="copyright" content="© 2026 mineral.watch">
@@ -19,7 +19,7 @@
 <meta property="og:url" content="https://mineral.watch/supply-chain/">
 <meta property="og:site_name" content="mineral.watch">
 <meta property="og:title" content="Mined vs Refined — Strategic Mineral Supply-Chain Map">
-<meta property="og:description" content="Side-by-side world maps of where strategic minerals are mined and where they are refined. Cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024.">
+<meta property="og:description" content="Side-by-side world maps of where strategic minerals are mined and where they are refined. Cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin, 1970–2024.">
 <meta property="og:image" content="https://mineral.watch/brand/og-image.png?v=3">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mined vs Refined — Strategic Mineral Supply-Chain Map">
@@ -37,7 +37,7 @@
       "@id": "https://mineral.watch/supply-chain/#webpage",
       "url": "https://mineral.watch/supply-chain/",
       "name": "Mined vs Refined — Strategic Mineral Supply-Chain Map | mineral.watch",
-      "description": "Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024. Data from the British Geological Survey.",
+      "description": "Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin, 1970–2024. Data from the British Geological Survey.",
       "isPartOf": {
         "@id": "https://mineral.watch/#website"
       },
@@ -45,7 +45,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-08",
+      "dateModified": "2026-09-11",
       "breadcrumb": {
         "@id": "https://mineral.watch/supply-chain/#breadcrumb"
       },
@@ -82,7 +82,7 @@
       "@type": "Dataset",
       "@id": "https://mineral.watch/supply-chain/#dataset",
       "name": "Mined vs refined — where strategic minerals are mined and where they are processed, 1970–2024",
-      "description": "Paired country-level series of mine-stage and refined/smelter-stage production for cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024, compiled by mineral.watch from BGS World Mineral Statistics to show how supply-chain concentration shifts from the mine to the refinery. Mine-stage figures for cobalt, copper and nickel are metal content; refined figures are gross tonnes.",
+      "description": "Paired country-level series of mine-stage and refined/smelter-stage production for cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin, 1970–2024, compiled by mineral.watch from BGS World Mineral Statistics to show how supply-chain concentration shifts from the mine to the refinery. Mine-stage figures for cobalt, copper and nickel are metal content; refined figures are gross tonnes.",
       "url": "https://mineral.watch/supply-chain/",
       "creator": {
         "@id": "https://mineral.watch/#organization"
@@ -120,6 +120,7 @@
         "rare earths",
         "manganese",
         "antimony",
+        "tin",
         "open data"
       ],
       "dateModified": "2026-09-01",
@@ -233,6 +234,22 @@
           "contentUrl": "https://mineral.watch/map_data/data/antimony-mine.json",
           "encodingFormat": "application/json",
           "contentSize": "12 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Tin, mine — production by country, 1970–2024",
+          "description": "BGS World Mineral Statistics series for tin, mine: production by country (ISO3) and year; production in tonnes (metal content). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/tin-mine.json",
+          "encodingFormat": "application/json",
+          "contentSize": "17 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Tin, smelter — production by country, 1970–2024",
+          "description": "BGS World Mineral Statistics series for tin, smelter: production by country (ISO3) and year; production in tonnes (metric). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/tin-smelter.json",
+          "encodingFormat": "application/json",
+          "contentSize": "13 KB"
         }
       ],
       "about": [
@@ -298,6 +315,14 @@
           "sameAs": [
             "https://en.wikipedia.org/wiki/Antimony",
             "https://www.wikidata.org/wiki/Q871"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Tin",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Tin",
+            "https://www.wikidata.org/wiki/Q1096"
           ]
         }
       ]
@@ -552,6 +577,11 @@ footer a.ig svg{width:13px;height:13px}
       key:"antimony", name:"Antimony",
       mine:{slug:"antimony-mine", label:"Mine production", unit:"tonnes (metal content)"},
       noRefined:"BGS does not publish a country-level series for smelted antimony products (trioxide and refined metal). Roasting and smelting are heavily concentrated in China — see our <a href='../antimony/'>Antimony dashboard</a>."
+    },
+    {
+      key:"tin", name:"Tin",
+      mine:{slug:"tin-mine", label:"Mine production", unit:"tonnes (metal content)"},
+      refined:[{slug:"tin-smelter", label:"Smelter production", unit:"tonnes"}]
     }
   ];
 

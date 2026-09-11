@@ -19,7 +19,8 @@ TOP_N = 4
 # Editorial-warm palette, CVD-validated in this exact column order (dataviz skill
 # validator; adjacent-pair CVD ΔE >= 8 and normal-vision floor pass): the brand
 # lime lands on rare earths, the most concentrated chain. Nickel (emerald) and
-# antimony (orchid) sit where they clear their neighbours.
+# antimony (orchid) sit where they clear their neighbours; tin (steel blue) was
+# appended last (2026-09-11) and validated against its neighbour lithium.
 MINERALS = [
     ('Manganese',   'manganese ore',     '#c08ad6', '/manganese/'),
     ('Graphite',    'graphite',          '#e6b95e', '/graphite/'),
@@ -30,6 +31,7 @@ MINERALS = [
     ('Rare earths', 'rare earth oxides', '#c8ff6b', '/rare-earths/'),
     ('Uranium',     'uranium',           '#4cc9f0', '/uranium/'),
     ('Lithium',     'lithium minerals',  '#ff7d9c', '/lithium/'),
+    ('Tin',         'tin, mine',         '#7cc4ff', '/tin/'),
 ]
 SHORT = {'Congo, Democratic Republic': 'DR Congo'}
 
@@ -109,8 +111,8 @@ def build_svg(cls, W, H, TOP, BOT, NW, PADL, PADR, XL, XR):
 
 # Desktop variant plus a portrait mobile variant (narrower canvas, taller rows,
 # larger relative type via .sk-mobile CSS); a media query swaps between them.
-svg = (build_svg('sk-desktop', 880, 560, 30, 12, 12, 12, 12, 172, 694) + '\n    ' +
-       build_svg('sk-mobile', 400, 800, 30, 12, 10, 13, 12, 96, 288))
+svg = (build_svg('sk-desktop', 880, 620, 30, 12, 12, 12, 12, 172, 694) + '\n    ' +
+       build_svg('sk-mobile', 400, 880, 30, 12, 10, 13, 12, 96, 288))
 
 # ---- table ----
 trows = []

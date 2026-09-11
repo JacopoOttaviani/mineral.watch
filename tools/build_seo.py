@@ -27,7 +27,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://mineral.watch'
-DASHBOARDS = ['graphite', 'rare-earths', 'copper', 'uranium', 'lithium', 'manganese', 'cobalt', 'antimony', 'nickel', 'oil-gas', 'green']
+DASHBOARDS = ['graphite', 'rare-earths', 'copper', 'uranium', 'lithium', 'manganese', 'cobalt', 'antimony', 'tin', 'nickel', 'oil-gas', 'green']
 PRIORITY = {'': ('weekly', '1.0'), 'data': ('weekly', '0.8'), 'explorer': ('monthly', '0.8'), 'supply-chain': ('monthly', '0.8'), 'terms': ('yearly', '0.3')}
 LD_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.S)
 

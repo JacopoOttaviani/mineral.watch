@@ -1,6 +1,6 @@
 # mineral.watch
 
-> Independent open data and intelligence portal on the global mineral, oil and gas, and green-transition industries. Cross-references verified official statistics from USGS, BGS, UN Comtrade, the IEA, the US EIA, OPEC and the Energy Institute on production, reserves, trade flows, refining and manufacturing concentration, chokepoints, prices and policy — who produces, who refines, who ships and who depends on whom — and publishes the compiled datasets openly. Nine mineral dashboards (graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel), an oil and gas dashboard, a green-transition dashboard, a 111-commodity Mineral Explorer and an open data catalogue.
+> Independent open data and intelligence portal on the global mineral, oil and gas, and green-transition industries. Cross-references verified official statistics from USGS, BGS, UN Comtrade, the IEA, the US EIA, OPEC and the Energy Institute on production, reserves, trade flows, refining and manufacturing concentration, chokepoints, prices and policy — who produces, who refines, who ships and who depends on whom — and publishes the compiled datasets openly. Ten mineral dashboards (graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel, tin), an oil and gas dashboard, a green-transition dashboard, a 111-commodity Mineral Explorer and an open data catalogue.
 
 mineral.watch is not affiliated with any government, mining or energy company, or trade body, and holds no commercial position in the minerals, fuels or companies it covers. Corrections and data tips: hello@mineral.watch. When citing, name mineral.watch and the primary source given for the figure.
 
@@ -17,7 +17,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - [Home](https://mineral.watch/): what the portal covers (minerals, oil and gas, green transition), why supply-chain concentration matters, data sources and methodology, FAQ, research commissions.
 - [Open data catalogue](https://mineral.watch/data/): every dataset the site publishes — 110 BGS World Mineral Statistics series (1970-2024) as JSON with units, year ranges and country counts, the reference files, the curated dataset behind each dashboard, the file format, licence and citation format.
 - [Mineral Explorer](https://mineral.watch/explorer/): interactive world map of production, imports and exports for 111 mineral and energy commodities and 190 countries, 1970-2024, with volume and supply-concentration views; deep-linkable per commodity (?commodity=<slug>). Data: BGS World Mineral Statistics.
-- [Supply chain: mined vs refined](https://mineral.watch/supply-chain/): side-by-side maps of where cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony are mined and where they are refined or smelted, 1970-2024, with top-3 country shares at each stage.
+- [Supply chain: mined vs refined](https://mineral.watch/supply-chain/): side-by-side maps of where cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin are mined and where they are refined or smelted, 1970-2024, with top-3 country shares at each stage.
 - [Graphite dashboard](https://mineral.watch/graphite/): interactive world map of mines, processing and anode plants, trade flows; production and reserves charts 2018-2025; refining process explainer; China's share of mine output and battery-grade refining; military and investment implications.
 - [Rare earths dashboard](https://mineral.watch/rare-earths/): interactive world map of mines, separation plants and magnet factories; the 17 elements explained; production and reserves charts; China's export-controls timeline (2010-2026); refining and magnet concentration; military and investment implications.
 - [Copper dashboard](https://mineral.watch/copper/): interactive world map of mines, smelters/refineries, disrupted operations and development projects; the ore-to-cathode chain explained; production and reserves charts; the smelting chokepoint and treatment-charge collapse; the 2023-2026 timeline (Cobre Panama, US Section 232 tariffs, Grasberg, El Teniente, record prices); military and investment implications.
@@ -28,6 +28,8 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 
 - [Nickel dashboard](https://mineral.watch/nickel/): interactive world map of mines and smelter parks, HPAL plants, refineries, suspended operations (Nickel West, Koniambo, Moa) and development projects; the ore-to-stainless-and-battery chain explained (laterite vs sulphide, NPI, ferronickel, matte, MHP, sulphate, class-1 metal); production, reserves and price charts; Indonesia's two-thirds grip and quota machine (RKAB, HPM benchmark, royalties), the 2022 LME squeeze, the class-1/class-2 divide, the Western supply cull and New Caledonia's collapse; the 2020-2026 timeline; dual-use and investment implications.
 - [Antimony dashboard](https://mineral.watch/antimony/): interactive world map of mines and gold-antimony operations, roasters and smelters, idled assets and development projects; the stibnite-to-trioxide-and-metal chain explained (concentrate, ATO, antimonial lead, sodium antimonate, antimony trisulfide); production, reserves and price charts; China's export-controls timeline (Aug 2024 licensing, Dec 2024 US ban, Nov 2025 suspension), the smelting chokepoint, the price spike and the Western supply-chain rebuild (Perpetua/Stibnite, US Antimony, Larvotto Hillgrove, Nyrstar Port Pirie); dual-use and investment implications.
+
+- [Tin dashboard](https://mineral.watch/tin/): interactive world map of mines, smelters and refineries, disrupted and restarting operations (Man Maw, Bangka, the Kivus) and development projects (South Crofty, Martinsville, Taronga, Oropesa, Syrymbet); the cassiterite-to-ingot-to-solder chain explained (concentrate, Grade A ingot, high-purity tin, SAC305 solder, tinplate, tin chemicals, bronze, secondary tin, the 3TG conflict-minerals rules); mine and refined production, reserves, end-use and price charts; China's smelting chokepoint (~52% of refined output), Indonesia's crackdown, seized smelters and export-ban study, Myanmar's Wa State suspension and 2026 slow restart, Congo's Bisie under M23 pressure, the AI-solder demand story, the 1985-2026 timeline (ITC collapse, Dodd-Frank 3TG, Man Maw, the 2022 and 2026 records); dual-use, stockpile and investment implications; company tracker. Aimed at tin-industry businesses (miners, smelters, traders, solder and tinplate makers), geopolitics researchers and think tanks.
 
 - [Oil & gas dashboard](https://mineral.watch/oil-gas/): interactive world map of giant fields and basins, export terminals, refineries and LNG plants, the eight maritime oil chokepoints, and sites disrupted or sanctioned in 2026; the benchmark ladder explained (Dated Brent, WTI, Dubai/Oman, Urals and the price cap, WCS, official selling prices, diesel/jet/gasoline/LPG cracks, Henry Hub, TTF, JKM, the Hormuz toll, strategic stocks); production, reserves, shut-in, gas, LNG and price charts; the 2026 Strait of Hormuz closure and Gulf shut-in ledger, pipeline bypasses (Petroline, ADCOP, Kirkuk-Ceyhan), the Ras Laffan LNG outage, IEA emergency stock release, sanctions and the shadow fleet (Russia, Iran, Venezuela, Kazakhstan/CPC), OPEC+ quota unwinding, the 2014-2026 timeline; capital flows and a tracker of state producers, majors, LNG/midstream operators and traders. Aimed at energy businesses, geopolitics researchers and think tanks.
 
@@ -114,6 +116,18 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - Nyrstar's Port Pirie smelter poured Australia's first antimony metal in November 2025, ramping to 2,000 t/yr by end-2026 (potentially 5,000 t/yr by 2028). Australia's A$1.2B Critical Minerals Strategic Reserve (announced 12 January 2026) lists antimony in its first tranche, with A$185M for physical stockpiles.
 - Antimony end uses (industry estimates): flame retardants ~45% (antimony trioxide as synergist), lead-acid battery alloys ~20%, PET polymerisation catalyst, solar-glass fining (sodium antimonate — the fastest-growing use), ammunition (lead hardener, antimony trisulfide primers to MIL-A-22131 spec, tracers) and InSb infrared/night-vision detectors. The FY2024 NDAA bars Chinese antimony from US defence supply chains from 2027.
 - SPMP's Sohar roaster in Oman (~20,000 t/yr) — the largest antimony plant outside China — has been idle since early 2024 for lack of concentrate feed and was seeking a buyer or operating partner as of August 2026.
+- World tin mine production, 2025 (USGS estimate): ~290,000 t of tin content (2024: ~294,000 t), essentially flat since 2010 (BGS: 328,000 t in 2010). China ~71,000 t (~24%), Indonesia ~61,000 t, Peru ~33,000 t, Brazil ~28,000 t, DR Congo ~27,000 t, Bolivia ~15,000 t, Australia ~12,000 t, Myanmar ~12,000 t (down from 68,000 t in 2017, BGS), Vietnam ~11,000 t.
+- World refined tin production (CRU via USGS): ~371,000 t in 2025 vs consumption of ~389,000 t (+3%) — a refined deficit of ~18,000 t, up from ~8,000 t in 2024; refined output exceeds mine output by ~75,000 t/yr because of secondary (scrap) tin.
+- China's share of world refined tin production, 2024: ~52% (CRU: 194,000 t of 371,000 t; the BGS smelter series gives 51.9% as published and ~54% after excluding an apparently duplicated Singapore row identical to Malaysia's). Five of the ten largest refined producers in 2025 are Chinese (Yunnan Tin ~91,000 t, Guangxi Huaxi ~21,100 t, Yunnan Chengfeng ~19,500 t, Gejiu Kaimeng ~11,400 t, Jiangxi New Nanshan ~9,600 t = ~41% of world output); the rest of the top ten: Minsur ~32,600 t, PT Timah ~17,800 t, Malaysia Smelting Corp ~14,200 t, EM Vinto ~10,800 t, Thaisarco ~8,800 t.
+- Global tin reserves (USGS 2026): >6 Mt — Indonesia 1.4 Mt, China 1.2 Mt, Brazil 0.7 Mt, Myanmar 0.7 Mt, Australia 0.57 Mt (JORC-compliant ~0.22 Mt), Russia 0.46 Mt, Bolivia 0.4 Mt, Peru 0.15 Mt, DR Congo 0.09 Mt — roughly 20 years at current mining rates.
+- Tin end uses (ITA survey): solder ~51%, tin chemicals ~16%, tinplate ~11%, the rest lead-acid batteries, copper alloys, glass, PV ribbon and other alloys. AI servers use roughly three times the solder of conventional servers: ~6,000-8,000 t of tin a year in 2025, projected ~25,000 t by 2030 (analyst estimates via Nikkei); CITIC Futures estimates ~2,500 t of new AI-server demand in 2026. US end uses differ: chemicals 25%, tinplate 16%, alloys 12%, solder 11% (USGS).
+- Tin prices (LME): record three-month close US$53,462/t on 15 January 2026 (ITA — which attributed the spike to speculative flows rather than fundamentals); reported intraday all-time high near US$59,000/t on 2 June 2026 with prices around US$50,000-51,000/t by late June and early September 2026; previous record ~US$51,000/t in March 2022 followed by a trough below US$18,000/t in late 2022. Annual LME cash averages: 2023 ~US$25,900/t, 2024 ~US$30,200/t, 2025 ~US$34,200/t (USGS).
+- Myanmar's Man Maw mine (Wa Self-Administered Division, United Wa State Army): all mining suspended from 1 August 2023; a 30% tax-in-kind on concentrate exports from February 2024; licences paid from July 2025; a dewatering cost-sharing notice in March 2026; on 10 September 2026 the International Crisis Group reported a "slow restart" with output well below pre-suspension levels. China's imports of Myanmar tin ore and concentrate in H1 2026 (~40,000 t gross) already exceeded all of 2025; at the 2016 peak Myanmar supplied over 99% of China's tin-ore imports.
+- Indonesia: zero tin exports in January-February 2024 amid the switch to three-year RKAB work plans (reverting to annual plans from 2026) and the Rp 300 trillion (~US$18 billion) tin-corruption case (Harvey Moeis of PT Refined Bangka Tin arrested March 2024; 6.5-year sentence raised to 20 years on appeal); national refined output fell 30.7% in 2024 (ITA). President Prabowo ordered 1,000 illegal mines in Bangka Belitung closed in late September 2025; six confiscated smelters (~50% of national refined capacity, Rp 1.45 trillion) were handed to PT Timah in early October 2025; PT Timah targets 30,000 t of refined tin in 2026 (Q1 2026: 5,630 t, +82%) and up to 80,000 t eventually; on 13 February 2026 energy minister Bahlil Lahadalia said the government will study halting tin exports to force downstreaming.
+- DR Congo: Alphamin's Bisie mine (Mpama North and South, North Kivu) produced a record 18,576 t in 2025 (~6% of world supply) despite suspending operations on 13 March 2025 as M23 advanced and restarting in phases from 15 April; FY2026 guidance ~20,000 t; FY2025 EBITDA guided at US$341m. DR Congo mined ~27,000 t in 2025, six times its 2015 output (BGS).
+- United States: no tin mined since 1993 or smelted since 1989; net import reliance ~77% of apparent consumption (2025); 2025 refined imports 31,900 t — Peru 49%, Bolivia 23%, Indonesia 9%, Poland 5%; ~17,000 t recycled from scrap in 2025, with old scrap covering 22% of consumption (USGS). Nathan Trotter received US$19m under DPA Title III (late 2024), signed a letter of intent with Rwanda's Trinity Metals (May 2025) and began building a US$65m tin production facility in Martinsville, Virginia (September 2025), due to operate by late 2026. In March 2026 the Defense Logistics Agency sought information on acquiring 1,978 t of LME-grade tin and reprocessing 1,978 t of stockpile ingots affected by tin pest. On 14 January 2026 Proclamation 11001 declined, for now, to impose Section 232 tariffs on processed critical minerals.
+- Cornish Metals' South Crofty (Cornwall, closed 1998) is fully financed for restart: a US$210m senior secured Nordic bond (13.5%, six years), a £57m equity raise including £28.6m from the UK National Wealth Fund, a £52m NWF-Vision Blue shareholder facility, and a non-binding US EXIM letter of interest for up to US$225m; first tin targeted for mid-2028.
+- Tin is a '3TG' conflict mineral under s.1502 of the US Dodd-Frank Act (2010) and EU Regulation 2017/821 (applied from 2021); it is on the US and UK critical-minerals lists but was not included in the EU's 2023 critical raw materials list.
 - Green transition — deployment (2025): 664 GW of solar PV installed worldwide, +12%, global fleet >3 TW (SolarPower Europe); 165 GW of wind, +40%, of which 9.3 GW offshore and >120 GW in China (GWEC); more than 20 million electric cars sold, one in four new cars, ~55% of sales in China, 28% in Europe, <10% in the US (IEA GEVO 2026); EU solar 65.1 GW (first decline since 2016), EU wind 15.1 GW, EU battery storage 27.1 GWh, EU battery-electric car share 17.4%.
 - Green transition — investment (IEA World Energy Investment 2026): $3.4 tn total energy investment in 2026, of which $2.2 tn clean energy vs $1.2 tn oil, gas and coal; solar $365 bn, grids $550 bn, battery storage >$100 bn; China almost a third of clean-energy investment. US: $34.8 bn of clean-energy projects cancelled in 2025 (E2), ~$40 bn and 53,000 jobs by mid-2026 (EDF/Atlas) after the One Big Beautiful Bill Act (4 July 2025).
 - Green transition — manufacturing concentration (IEA ETP 2026, 2025 data): China ~85% of solar supply-chain capacity (95%+ wafers, >80% modules), >80% of battery-cell production (~85% cathode, >90% anode material), 60% of wind-turbine production capacity (Europe 19%, US 9%), ~60% of electrolyser manufacturing, 35% of heat-pump capacity (US 25%, EU 20%). CATL 39.2% and BYD 16.4% of 2025 EV-battery installations (SNE Research, 1,187 GWh total). Chinese OEMs ~70% of 2025 wind-turbine orders (215 GW, Wood Mackenzie). Battery pack price $108/kWh in 2025, LFP $81, stationary storage $70 (BNEF).
@@ -144,6 +158,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 
 - USGS National Minerals Information Center — Mineral Commodity Summaries
 - British Geological Survey — World Mineral Statistics
+- International Tin Association (refined-production reports, tin-use survey, price notes), CRU Tin Monitor via USGS Mineral Industry Surveys, London Metal Exchange prices, International Crisis Group (tin dashboard)
 - UN Comtrade — bilateral trade flows
 - IEA — Critical Minerals demand scenarios and supply-chain analysis
 - World Bank WITS
@@ -337,15 +352,15 @@ That's exactly what we do. We produce commissioned deep-dive reports on copper, 
 
 URL: https://mineral.watch/data/
 
-Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 11 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
+Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 12 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
 
-Last updated: 2026-09-09
+Last updated: 2026-09-11
 
 ### Dataset
 
 mineral.watch open data catalogue
 
-Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 11 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
+Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 12 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
 
 - Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -734,15 +749,15 @@ That's exactly what we do. We produce commissioned deep-dive reports on rare ear
 
 URL: https://mineral.watch/supply-chain/
 
-Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024. Data from the British Geological Survey.
+Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin, 1970–2024. Data from the British Geological Survey.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-11
 
 ### Dataset
 
 Mined vs refined — where strategic minerals are mined and where they are processed, 1970–2024
 
-Paired country-level series of mine-stage and refined/smelter-stage production for cobalt, copper, nickel, lithium, graphite, rare earths, manganese and antimony, 1970–2024, compiled by mineral.watch from BGS World Mineral Statistics to show how supply-chain concentration shifts from the mine to the refinery. Mine-stage figures for cobalt, copper and nickel are metal content; refined figures are gross tonnes.
+Paired country-level series of mine-stage and refined/smelter-stage production for cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin, 1970–2024, compiled by mineral.watch from BGS World Mineral Statistics to show how supply-chain concentration shifts from the mine to the refinery. Mine-stage figures for cobalt, copper and nickel are metal content; refined figures are gross tonnes.
 
 - Temporal coverage: 1970/2024
 - Variables: Mine production, Refined production, Smelter production, Top-3 country share
@@ -760,7 +775,61 @@ Paired country-level series of mine-stage and refined/smelter-stage production f
 - Download: https://mineral.watch/map_data/data/rare-earth-oxides.json (Rare earth oxides — production by country, 1992–2024)
 - Download: https://mineral.watch/map_data/data/manganese-ore.json (Manganese ore — production by country, 1970–2024)
 - Download: https://mineral.watch/map_data/data/antimony-mine.json (Antimony, mine — production by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/tin-mine.json (Tin, mine — production by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/tin-smelter.json (Tin, smelter — production by country, 1970–2024)
 - Based on: https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/
+
+## mineral.watch › Tin
+
+URL: https://mineral.watch/tin/
+
+Open data visualisation tracking the global tin supply chain: Indonesia's crackdown and export-ban plans, Myanmar's Wa State mega-mine, Congo's Bisie under M23 pressure, China's smelting grip, the 2026 price records and the AI solder boom — built on USGS, BGS, LME, CRU and ITA data, for tin-industry businesses, geopolitics researchers and think tanks.
+
+Last updated: 2026-09-11
+
+### Dataset
+
+mineral.watch — Global Tin Supply Chain Data
+
+Mines, smelters and refineries, disrupted operations and development projects, mine and refined production, reserves, prices, trade flows, end uses, export policy and smelting concentration for the global tin supply chain.
+
+- Temporal coverage: 2018/2026
+- Variables: Mine production, Refined production, Reserves, Smelting concentration, Prices, Trade flows, End uses, Companies
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/data/tin.json (Tin — imports, exports by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/tin-mine.json (Tin, mine — production by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/tin-smelter.json (Tin, smelter — production by country, 1970–2024)
+- Sources: USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Tin) and Mineral Industry Surveys, Tin in December 2025; British Geological Survey, World Mineral Statistics; International Tin Association market reports; CRU Tin Monitor via USGS; London Metal Exchange prices via USGS and market-data compilations; Company disclosures, Indonesian government statements and International Crisis Group reporting
+
+### Questions and answers
+
+**What is tin used for?**
+
+Mostly for holding electronics together: about half of all refined tin becomes solder — the lead-free tin-silver-copper alloy that joins every chip to every circuit board, from phones to AI servers. Around 16% goes into tin chemicals (PVC stabilisers, catalysts, glass coatings and the indium tin oxide in touchscreens), 11% into tinplate for food and drink cans, and the rest into lead-acid battery grids, bronze and brass, bearing alloys, pewter and the tin bath that float glass is made on. Tin is the alloying half of bronze — humanity's first strategic metal — and still has no scalable substitute in solder.
+
+**Which country produces the most tin?**
+
+China — about 71,000 of the roughly 290,000 tonnes mined worldwide in 2025 (USGS estimates), followed by Indonesia (~61,000 t), Peru (~33,000 t), Brazil (~28,000 t) and the Democratic Republic of Congo (~27,000 t); Myanmar, the No. 3 miner until its Wa State mega-mine was suspended in 2023, has fallen to around 12,000 t. Downstream the grip is tighter: China smelts roughly half of the world's refined tin (BGS and CRU data), and five of the ten largest smelters are Chinese, led by Yunnan Tin with about 91,000 t in 2025.
+
+**Why did tin hit record prices in 2026?**
+
+A market that had not grown in a decade met three supply shocks and a new source of demand at once. Myanmar's Man Maw mine — the main feedstock for Chinese smelters — was suspended by the Wa authorities in August 2023 and only began a slow restart in 2026; Indonesia's exports stalled in 2024 amid a corruption case and then fell again in 2025–26 as President Prabowo's crackdown shut illegal mines and the government floated an outright export ban; and Congo's Bisie mine evacuated for a month in 2025 as M23 advanced. Meanwhile AI servers, which use roughly three times the solder of a conventional server, turned tin into a chip-boom metal. LME tin closed at a record $53,462 a tonne on 15 January 2026 and traded at a reported intraday high near $59,000 on 2 June 2026, against a 2025 average around $34,000. The International Tin Association noted that speculative flows, not fundamentals, drove the January spike.
+
+**Is tin a conflict mineral?**
+
+Yes, by law. Tin is one of the '3TG' conflict minerals — tin, tantalum, tungsten and gold — covered by section 1502 of the US Dodd-Frank Act (2010) and the EU Conflict Minerals Regulation (in force since 2021), because artisanal cassiterite from the eastern Democratic Republic of Congo and its neighbours has financed armed groups for decades. The industry answer is bag-and-tag traceability (ITSCI, the Responsible Minerals Initiative) from mine to smelter. The issue is live again: M23's 2025 advance forced Congo's Bisie mine to halt, the industrial mine that now supplies about 6% of world tin, while Myanmar's Man Maw mine sits inside an enclave run by the United Wa State Army.
+
+**Is the world running out of tin?**
+
+Not geologically — USGS puts world reserves above 6 million tonnes, roughly twenty years of current mining, with far larger resources in Indonesia, China, Brazil, Myanmar, Australia, Russia and Bolivia. The problem is that mine output has been flat at about 280,000–300,000 tonnes a year since 2010: the big alluvial deposits of Southeast Asia are depleting, new mines take a decade to permit and finance, and a market worth a few billion dollars a year struggled for capital until prices doubled. Recycling fills part of the gap — refined production exceeds mine production by roughly 75,000 tonnes a year thanks to scrap — but CRU estimated a global refined deficit of 18,000 tonnes in 2025, more than double the year before.
+
+**Why do militaries care about tin?**
+
+Because every guided weapon, radar, radio and satellite is soldered with it, every ship turns on bronze and tin-based bearing alloys, and the United States has not mined tin since 1993 or smelted it since 1989 — importing about 77% of what it uses, mostly from Peru, Bolivia and Indonesia. Tin is on the US and UK critical-minerals lists; the Pentagon awarded Nathan Trotter $19 million under the Defense Production Act to build the first new US tin smelter in Martinsville, Virginia, due late 2026 and fed partly by Rwandan ore; and in March 2026 the Defense Logistics Agency sought information on buying 1,978 tonnes of LME-grade tin and reprocessing a similar quantity of stockpile ingots degraded by 'tin pest', the low-temperature decay that turns the metal to powder.
+
+**Need a deep-dive report on tin?**
+
+That's exactly what we do. We produce commissioned deep-dive reports for tin-industry businesses — miners, smelters, traders, solder and tinplate makers, electronics procurement teams — and for geopolitics researchers and think tanks, covering angles such as mine-to-smelter supply-chain mapping, concentrate and refined trade flows, Indonesian and Myanmar policy scenarios, conflict-minerals exposure and traceability, the Western project pipeline and its timelines, stockpiling and defence demand, and price scenarios. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
 
 ## mineral.watch › Uranium
 

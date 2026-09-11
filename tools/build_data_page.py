@@ -31,7 +31,7 @@ OUT = f'{ROOT}/data/index.html'
 STAT_ORDER = ['Production', 'Imports', 'Exports']
 
 # Dashboards in homepage order; the accent colour is read from each page.
-DASHBOARDS = ['graphite', 'lithium', 'cobalt', 'nickel', 'rare-earths', 'copper', 'manganese', 'uranium', 'antimony', 'oil-gas', 'green']
+DASHBOARDS = ['graphite', 'lithium', 'cobalt', 'nickel', 'rare-earths', 'copper', 'manganese', 'uranium', 'antimony', 'tin', 'oil-gas', 'green']
 
 
 def git_date(rel):
