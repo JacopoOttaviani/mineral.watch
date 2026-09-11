@@ -21,10 +21,10 @@ SOCIAL = f'{ROOT}/social/instagram'
 SITE = 'https://mineral.watch/social/instagram'
 
 # Published by hand from this machine (Claude in Chrome). Keep in sync when posting manually.
-PUBLISHED = {'01-launch', '02-nine-minerals', 'minerals/lithium', '03-us-import-reliance', 'minerals/cobalt'}
+PUBLISHED = {'01-launch', '02-nine-minerals', 'minerals/lithium', '03-us-import-reliance', 'minerals/cobalt', '05-mine-vs-refinery'}
 
-ORDER = ['03-us-import-reliance', 'minerals/cobalt', '04-cobalt-drc', '05-mine-vs-refinery', 'minerals/nickel',
-         '06-lithium-price', '07-antimony-export-controls', 'minerals/graphite', '08-graphite-anode', '09-nickel-lme',
+ORDER = ['03-us-import-reliance', 'minerals/cobalt', '05-mine-vs-refinery', 'minerals/nickel', '06-lithium-price',
+         '04-cobalt-drc', '07-antimony-export-controls', 'minerals/graphite', '08-graphite-anode', '09-nickel-lme',
          'minerals/copper', '10-manganese-4-vs-95', '11-rare-earths-17', 'minerals/rare-earths', '12-copper-zero-tc',
          '13-uranium-enrichment', 'minerals/manganese', '14-how-we-work', 'minerals/uranium', '15-hire-us',
          'minerals/antimony']
