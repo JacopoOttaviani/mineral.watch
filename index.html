@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZR08WNZFX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1ZR08WNZFX');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>mineral.watch — Open Data &amp; Intelligence on Minerals, Oil &amp; Gas and the Green Transition</title>
 <meta name="description" content="mineral.watch is an independent open data and intelligence portal on the global mineral, oil &amp; gas and green-transition industries: interactive dashboards on production, reserves, trade flows, refining chokepoints, prices and policy, cross-referenced from USGS, BGS, UN Comtrade, IEA, EIA and OPEC data.">
@@ -1713,6 +1722,5 @@ navEl.querySelectorAll(".nav-menu a").forEach(a=>a.addEventListener("click",()=>
 document.addEventListener("click",e=>{if(navEl.classList.contains("open")&&!navEl.contains(e.target))setNav(false);});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&navEl.classList.contains("open")){setNav(false);navToggle.focus();}});
 </script>
-<script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

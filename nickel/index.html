@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZR08WNZFX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1ZR08WNZFX');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>mineral.watch › Nickel</title>
 <meta name="description" content="Open data visualisation tracking the global nickel supply chain: Indonesia's two-thirds grip on mining, the Chinese-built smelter parks, the class-1/class-2 divide, the 2022 LME squeeze, the quota machine and the battery chemistry war. Built on USGS, INSG, IEA, BGS and price-agency data.">
@@ -1513,6 +1522,5 @@ navEl.querySelectorAll(".nav-menu a").forEach(a=>a.addEventListener("click",()=>
 document.addEventListener("click",e=>{if(navEl.classList.contains("open")&&!navEl.contains(e.target))setNav(false);});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&navEl.classList.contains("open")){setNav(false);navToggle.focus();}});
 </script>
-<script data-goatcounter="https://jacopo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
