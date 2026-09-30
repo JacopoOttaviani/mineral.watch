@@ -13,7 +13,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Mined vs Refined — Strategic Mineral Supply-Chain Map | mineral.watch</title>
-<meta name="description" content="Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin, 1970–2024. Data from the British Geological Survey.">
+<meta name="description" content="Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony, tin and tungsten, 1970–2024. Data from the British Geological Survey.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="mineral.watch">
 <meta name="copyright" content="© 2026 mineral.watch">
@@ -28,7 +28,7 @@
 <meta property="og:url" content="https://mineral.watch/supply-chain/">
 <meta property="og:site_name" content="mineral.watch">
 <meta property="og:title" content="Mined vs Refined — Strategic Mineral Supply-Chain Map">
-<meta property="og:description" content="Side-by-side world maps of where strategic minerals are mined and where they are refined. Cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin, 1970–2024.">
+<meta property="og:description" content="Side-by-side world maps of where strategic minerals are mined and where they are refined. Cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony, tin and tungsten, 1970–2024.">
 <meta property="og:image" content="https://mineral.watch/brand/og-image.png?v=3">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mined vs Refined — Strategic Mineral Supply-Chain Map">
@@ -46,7 +46,7 @@
       "@id": "https://mineral.watch/supply-chain/#webpage",
       "url": "https://mineral.watch/supply-chain/",
       "name": "Mined vs Refined — Strategic Mineral Supply-Chain Map | mineral.watch",
-      "description": "Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin, 1970–2024. Data from the British Geological Survey.",
+      "description": "Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony, tin and tungsten, 1970–2024. Data from the British Geological Survey.",
       "isPartOf": {
         "@id": "https://mineral.watch/#website"
       },
@@ -54,7 +54,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-11",
+      "dateModified": "2026-09-30",
       "breadcrumb": {
         "@id": "https://mineral.watch/supply-chain/#breadcrumb"
       },
@@ -91,7 +91,7 @@
       "@type": "Dataset",
       "@id": "https://mineral.watch/supply-chain/#dataset",
       "name": "Mined vs refined — where strategic minerals are mined and where they are processed, 1970–2024",
-      "description": "Paired country-level series of mine-stage and refined/smelter-stage production for cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin, 1970–2024, compiled by mineral.watch from BGS World Mineral Statistics to show how supply-chain concentration shifts from the mine to the refinery. Mine-stage figures for cobalt, copper and nickel are metal content; refined figures are gross tonnes.",
+      "description": "Paired country-level series of mine-stage and refined/smelter-stage production for cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony, tin and tungsten, 1970–2024, compiled by mineral.watch from BGS World Mineral Statistics to show how supply-chain concentration shifts from the mine to the refinery. Mine-stage figures for cobalt, copper and nickel are metal content; refined figures are gross tonnes.",
       "url": "https://mineral.watch/supply-chain/",
       "creator": {
         "@id": "https://mineral.watch/#organization"
@@ -130,6 +130,7 @@
         "manganese",
         "antimony",
         "tin",
+        "tungsten",
         "open data"
       ],
       "dateModified": "2026-09-01",
@@ -259,6 +260,14 @@
           "contentUrl": "https://mineral.watch/map_data/data/tin-smelter.json",
           "encodingFormat": "application/json",
           "contentSize": "13 KB"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Tungsten, mine — production by country, 1970–2024",
+          "description": "BGS World Mineral Statistics series for tungsten, mine: production by country (ISO3) and year; production in tonnes (metal content). JSON keyed as statistic → year → country.",
+          "contentUrl": "https://mineral.watch/map_data/data/tungsten-mine.json",
+          "encodingFormat": "application/json",
+          "contentSize": "16 KB"
         }
       ],
       "about": [
@@ -332,6 +341,14 @@
           "sameAs": [
             "https://en.wikipedia.org/wiki/Tin",
             "https://www.wikidata.org/wiki/Q1096"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Tungsten",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Tungsten",
+            "https://www.wikidata.org/wiki/Q743"
           ]
         }
       ]
@@ -591,6 +608,11 @@ footer a.ig svg{width:13px;height:13px}
       key:"tin", name:"Tin",
       mine:{slug:"tin-mine", label:"Mine production", unit:"tonnes (metal content)"},
       refined:[{slug:"tin-smelter", label:"Smelter production", unit:"tonnes"}]
+    },
+    {
+      key:"tungsten", name:"Tungsten",
+      mine:{slug:"tungsten-mine", label:"Mine production", unit:"tonnes (metal content)"},
+      noRefined:"BGS does not publish a country-level series for processed tungsten (ammonium paratungstate, oxides, powders and carbide). Conversion is overwhelmingly concentrated in China and has been under Chinese export licence since February 2025 — see our <a href='../tungsten/'>Tungsten dashboard</a>."
     }
   ];
 

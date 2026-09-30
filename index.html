@@ -222,6 +222,12 @@
         },
         {
           "@type": "WebPage",
+          "@id": "https://mineral.watch/tungsten/#webpage",
+          "name": "Tungsten dashboard",
+          "url": "https://mineral.watch/tungsten/"
+        },
+        {
+          "@type": "WebPage",
           "@id": "https://mineral.watch/oil-gas/#webpage",
           "name": "Oil & Gas dashboard",
           "url": "https://mineral.watch/oil-gas/"
@@ -265,7 +271,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-11",
+      "dateModified": "2026-09-30",
       "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "primaryImageOfPage": {
         "@type": "ImageObject",
@@ -279,7 +285,7 @@
       "@id": "https://mineral.watch/#dashboards",
       "name": "Open-data dashboards and tools on mineral.watch",
       "itemListOrder": "https://schema.org/ItemListUnordered",
-      "numberOfItems": 15,
+      "numberOfItems": 16,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -344,30 +350,36 @@
         {
           "@type": "ListItem",
           "position": 11,
+          "name": "Tungsten dashboard",
+          "url": "https://mineral.watch/tungsten/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
           "name": "Oil & Gas dashboard",
           "url": "https://mineral.watch/oil-gas/"
         },
         {
           "@type": "ListItem",
-          "position": 12,
+          "position": 13,
           "name": "Green transition dashboard",
           "url": "https://mineral.watch/green/"
         },
         {
           "@type": "ListItem",
-          "position": 13,
+          "position": 14,
           "name": "Mineral Explorer — 111 commodities, 1970–2024",
           "url": "https://mineral.watch/explorer/"
         },
         {
           "@type": "ListItem",
-          "position": 14,
+          "position": 15,
           "name": "Supply chain: mined vs refined",
           "url": "https://mineral.watch/supply-chain/"
         },
         {
           "@type": "ListItem",
-          "position": 15,
+          "position": 16,
           "name": "Open data catalogue",
           "url": "https://mineral.watch/data/"
         }
@@ -402,7 +414,7 @@
           "name": "Which minerals and industries does mineral.watch cover?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ten mineral dashboards are live — graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel and tin — alongside an Oil & Gas dashboard (chokepoints, flows, shut-ins, LNG, sanctions, prices and companies) and a Green transition dashboard on the clean-energy supply chain and the EU's green funds. The Mineral Explorer adds production and trade maps for 111 commodities from 1970 to 2024, with tungsten, gallium and germanium next in the pipeline."
+            "text": "Eleven mineral dashboards are live — graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel, tin and tungsten — alongside an Oil & Gas dashboard (chokepoints, flows, shut-ins, LNG, sanctions, prices and companies) and a Green transition dashboard on the clean-energy supply chain and the EU's green funds. The Mineral Explorer adds production and trade maps for 111 commodities from 1970 to 2024, with the chip metals gallium and germanium next in the pipeline."
           }
         },
         {
@@ -561,6 +573,7 @@ nav a.cta:focus-visible::before,.btn:focus-visible::before{transform:translateX(
 .f-nickel{--accent:#a3e635}
 .f-green{--accent:#62e86a}
 .f-tin{--accent:#9cc3ea}
+.f-tungsten{--accent:#f5dfa8}
 .fcar-dots{display:flex;justify-content:center;gap:10px;margin-top:18px}
 .fcar-dot{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer;transition:background .2s,transform .2s}
 .fcar-dot:hover{background:var(--muted)}
@@ -808,10 +821,25 @@ footer a.ig svg{width:13px;height:13px}
 <section id="featured">
   <div class="fcar" aria-roledescription="carousel" aria-label="Live dashboards">
     <div class="fcar-track" id="fcarTrack" tabindex="0" aria-label="Live dashboards — scroll horizontally">
-      <div class="fcar-slide f-tin" data-name="Tin" role="group" aria-roledescription="slide" aria-label="Tin — 1 of 11">
+      <div class="fcar-slide f-tungsten" data-name="Tungsten" role="group" aria-roledescription="slide" aria-label="Tungsten — 1 of 12">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live · latest</div>
+            <h2 class="serif">Tungsten: who holds the hardest metal — and who cuts the rest of us off?</h2>
+            <p>Interactive world map of mines, APT and carbide plants, restarting operations and new projects, production, reserves, export and price charts, China's February 2025 export controls and 79% grip on mine supply, Japan's cut-off, the ninefold price shock, the $2 billion US stockpile deal and the Western rebuild from Sangdong to Hemerdon to Kazakhstan — built on USGS, BGS, Fastmarkets, SMM and company data, for carbide and tool makers, defence procurement teams, geopolitics researchers and think tanks.</p>
+            <a class="btn primary" href="/tungsten/">Open the Tungsten dashboard →</a>
+          </div>
+          <div class="fchart">
+            <div class="fchart-h"><b>World mine production, 2018–2024</b><br>Tonnes of tungsten content per year — four-fifths of it Chinese, every year</div>
+            <div class="fchart-box"><canvas id="chFeatW"></canvas></div>
+            <div class="fchart-src">Source: BGS World Mineral Statistics</div>
+          </div>
+        </div>
+      </div>
+      <div class="fcar-slide f-tin" data-name="Tin" role="group" aria-roledescription="slide" aria-label="Tin — 2 of 12">
+        <div class="feature">
+          <div>
+            <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
             <h2 class="serif">Tin: who holds the chip age together?</h2>
             <p>Interactive world map of mines, smelters, disrupted operations and new projects, production, reserves and price charts, Indonesia's crackdown and export-ban plans, Myanmar's Wa State restart, Congo's Bisie, China's smelting grip and the 2026 price records — built on USGS, BGS, LME, CRU and ITA data, for tin-industry businesses, geopolitics researchers and think tanks.</p>
             <a class="btn primary" href="/tin/">Open the Tin dashboard →</a>
@@ -823,7 +851,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-green" data-name="Green transition" role="group" aria-roledescription="slide" aria-label="Green transition — 2 of 11">
+      <div class="fcar-slide f-green" data-name="Green transition" role="group" aria-roledescription="slide" aria-label="Green transition — 3 of 12">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -838,7 +866,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-nickel" data-name="Nickel" role="group" aria-roledescription="slide" aria-label="Nickel — 3 of 11">
+      <div class="fcar-slide f-nickel" data-name="Nickel" role="group" aria-roledescription="slide" aria-label="Nickel — 4 of 12">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -853,7 +881,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-antimony" data-name="Antimony" role="group" aria-roledescription="slide" aria-label="Antimony — 4 of 11">
+      <div class="fcar-slide f-antimony" data-name="Antimony" role="group" aria-roledescription="slide" aria-label="Antimony — 5 of 12">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -868,7 +896,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide" data-name="Cobalt" role="group" aria-roledescription="slide" aria-label="Cobalt — 5 of 11">
+      <div class="fcar-slide" data-name="Cobalt" role="group" aria-roledescription="slide" aria-label="Cobalt — 6 of 12">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -883,7 +911,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-manganese" data-name="Manganese" role="group" aria-roledescription="slide" aria-label="Manganese — 6 of 11">
+      <div class="fcar-slide f-manganese" data-name="Manganese" role="group" aria-roledescription="slide" aria-label="Manganese — 7 of 12">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -898,7 +926,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-lithium" data-name="Lithium" role="group" aria-roledescription="slide" aria-label="Lithium — 7 of 11">
+      <div class="fcar-slide f-lithium" data-name="Lithium" role="group" aria-roledescription="slide" aria-label="Lithium — 8 of 12">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -913,7 +941,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-uranium" data-name="Uranium" role="group" aria-roledescription="slide" aria-label="Uranium — 8 of 11">
+      <div class="fcar-slide f-uranium" data-name="Uranium" role="group" aria-roledescription="slide" aria-label="Uranium — 9 of 12">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -928,7 +956,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-copper" data-name="Copper" role="group" aria-roledescription="slide" aria-label="Copper — 9 of 11">
+      <div class="fcar-slide f-copper" data-name="Copper" role="group" aria-roledescription="slide" aria-label="Copper — 10 of 12">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -943,7 +971,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-ree" data-name="Rare earths" role="group" aria-roledescription="slide" aria-label="Rare earths — 10 of 11">
+      <div class="fcar-slide f-ree" data-name="Rare earths" role="group" aria-roledescription="slide" aria-label="Rare earths — 11 of 12">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -958,7 +986,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-graphite" data-name="Graphite" role="group" aria-roledescription="slide" aria-label="Graphite — 11 of 11">
+      <div class="fcar-slide f-graphite" data-name="Graphite" role="group" aria-roledescription="slide" aria-label="Graphite — 12 of 12">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -981,7 +1009,7 @@ footer a.ig svg{width:13px;height:13px}
 <section id="minerals">
   <div class="kicker">The minerals</div>
   <h2 class="serif">One deep-dive per mineral</h2>
-  <p class="lede">Each mineral gets its own data dashboard: production, reserves, trade flows, prices and supply-chain concentration. Graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel and tin are all live; tungsten and the chip metals gallium and germanium are next.</p>
+  <p class="lede">Each mineral gets its own data dashboard: production, reserves, trade flows, prices and supply-chain concentration. Graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel, tin and tungsten are all live; the chip metals gallium and germanium are next.</p>
   <div class="mgrid">
     <a class="mcard" href="/graphite/">
       <span class="tag live">Live</span>
@@ -1043,12 +1071,12 @@ footer a.ig svg{width:13px;height:13px}
       <h3>Tin</h3>
       <p>The solder in every circuit board: Myanmar's Wa State restart, Congo's Bisie under M23 pressure, Indonesia's crackdown and the 2026 price records — mapped and charted.</p>
     </a>
-    <div class="mcard soon">
-      <span class="tag soon">Coming soon</span>
+    <a class="mcard" href="/tungsten/">
+      <span class="tag live">Live</span>
       <span class="sym">W</span>
       <h3>Tungsten</h3>
-      <p>Armour, penetrators and every carbide cutting tool: China's grip on mine supply and conversion, the February 2025 export controls and record prices.</p>
-    </div>
+      <p>Armour, penetrators and every carbide cutting tool: China's export controls and 79% grip on mine supply, Japan's cut-off, the ninefold price shock and the Western rebuild — mapped and charted.</p>
+    </a>
     <div class="mcard soon">
       <span class="tag soon">Coming soon</span>
       <span class="sym">Ga&#183;Ge</span>
@@ -1092,7 +1120,7 @@ footer a.ig svg{width:13px;height:13px}
 <section id="supply-chain">
   <div class="kicker">Interactive map</div>
   <h2 class="serif">Where it's mined vs where it's refined</h2>
-  <p class="lede">For most strategic minerals, the supply-chain risk isn't at the mine — it's at the refinery. Pick a mineral and compare mine production against refined and smelter output, country by country, for cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin, 1970–2024.</p>
+  <p class="lede">For most strategic minerals, the supply-chain risk isn't at the mine — it's at the refinery. Pick a mineral and compare mine production against refined and smelter output, country by country, for cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony, tin and tungsten, 1970–2024.</p>
   <div class="map-embed">
     <iframe id="scEmbed" src="/supply-chain/?embed=1" title="Interactive map: where strategic minerals are mined vs refined" loading="lazy"></iframe>
   </div>
@@ -1106,242 +1134,256 @@ footer a.ig svg{width:13px;height:13px}
   <div class="sankey-card">
     <div class="sk-h"><b>Who produces what — share of world mine production, 2024</b><br>Top producers per mineral; ribbon width = that country's share of the mineral's world production.</div>
     <!-- portfolio-sankey:svg:start -->
-    <svg class="sk-desktop" viewBox="0 0 880 620" role="img" aria-label="Sankey diagram: top producer countries and their share of world mine production for 10 strategic minerals, 2024" xmlns="http://www.w3.org/2000/svg">
+    <svg class="sk-desktop" viewBox="0 0 880 680" role="img" aria-label="Sankey diagram: top producer countries and their share of world mine production for 11 strategic minerals, 2024" xmlns="http://www.w3.org/2000/svg">
     <text x="178.0" y="16" text-anchor="middle" class="sk-col">PRODUCER</text>
     <text x="700.0" y="16" text-anchor="middle" class="sk-col">MINERAL</text>
-    <path class="sk-rb" d="M184,30.0 C439.0,30.0 439.0,73.4 694,73.4 L694,96.6 C439.0,96.6 439.0,53.2 184,53.2 Z" fill="#e6b95e"><title>China → Graphite: 73.9% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,53.2 C439.0,53.2 439.0,203.6 694,203.6 L694,206.1 C439.0,206.1 439.0,55.7 184,55.7 Z" fill="#e08256"><title>China → Copper: 8.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,55.7 C439.0,55.7 439.0,247.0 694,247.0 L694,260.4 C439.0,260.4 439.0,69.1 184,69.1 Z" fill="#f0abfc"><title>China → Antimony: 42.8% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,69.1 C439.0,69.1 439.0,290.4 694,290.4 L694,313.9 C439.0,313.9 439.0,92.7 184,92.7 Z" fill="#c8ff6b"><title>China → Rare earths: 74.9% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,92.7 C439.0,92.7 439.0,420.6 694,420.6 L694,428.5 C439.0,428.5 439.0,100.5 184,100.5 Z" fill="#7cc4ff"><title>China → Tin: 25.1% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,112.5 C439.0,112.5 439.0,116.8 694,116.8 L694,120.5 C439.0,120.5 439.0,116.2 184,116.2 Z" fill="#84a5f0"><title>Indonesia → Cobalt: 11.8% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,116.2 C439.0,116.2 439.0,160.2 694,160.2 L694,179.3 C439.0,179.3 439.0,135.4 184,135.4 Z" fill="#34d399"><title>Indonesia → Nickel: 61.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,135.4 C439.0,135.4 439.0,428.5 694,428.5 L694,433.8 C439.0,433.8 439.0,140.7 184,140.7 Z" fill="#7cc4ff"><title>Indonesia → Tin: 16.9% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,152.7 C439.0,152.7 439.0,120.5 694,120.5 L694,143.9 C439.0,143.9 439.0,176.1 184,176.1 Z" fill="#84a5f0"><title>DR Congo → Cobalt: 74.6% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,176.1 C439.0,176.1 439.0,206.1 694,206.1 L694,210.5 C439.0,210.5 439.0,180.4 184,180.4 Z" fill="#e08256"><title>DR Congo → Copper: 13.8% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,192.4 C439.0,192.4 439.0,30.0 694,30.0 L694,33.9 C439.0,33.9 439.0,196.3 184,196.3 Z" fill="#c08ad6"><title>Australia → Manganese: 12.4% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,196.3 C439.0,196.3 439.0,333.8 694,333.8 L694,336.5 C439.0,336.5 439.0,199.1 184,199.1 Z" fill="#4cc9f0"><title>Australia → Uranium: 8.8% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,199.1 C439.0,199.1 439.0,377.2 694,377.2 L694,396.7 C439.0,396.7 439.0,218.6 184,218.6 Z" fill="#ff7d9c"><title>Australia → Lithium: 62.2% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,230.6 C439.0,230.6 439.0,336.5 694,336.5 L694,348.2 C439.0,348.2 439.0,242.3 184,242.3 Z" fill="#4cc9f0"><title>Kazakhstan → Uranium: 37.3% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,254.3 C439.0,254.3 439.0,33.9 694,33.9 L694,45.5 C439.0,45.5 439.0,265.9 184,265.9 Z" fill="#c08ad6"><title>South Africa → Manganese: 36.9% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,277.9 C439.0,277.9 439.0,210.5 694,210.5 L694,218.0 C439.0,218.0 439.0,285.5 184,285.5 Z" fill="#e08256"><title>Chile → Copper: 24.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,285.5 C439.0,285.5 439.0,396.7 694,396.7 L694,398.3 C439.0,398.3 439.0,287.0 184,287.0 Z" fill="#ff7d9c"><title>Chile → Lithium: 5.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,299.0 C439.0,299.0 439.0,260.4 694,260.4 L694,268.6 C439.0,268.6 439.0,307.2 184,307.2 Z" fill="#f0abfc"><title>Tajikistan → Antimony: 26.1% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,319.2 C439.0,319.2 439.0,348.2 694,348.2 L694,356.3 C439.0,356.3 439.0,327.2 184,327.2 Z" fill="#4cc9f0"><title>Canada → Uranium: 25.5% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,339.2 C439.0,339.2 439.0,398.3 694,398.3 L694,403.0 C439.0,403.0 439.0,343.9 184,343.9 Z" fill="#ff7d9c"><title>Brazil → Lithium: 14.9% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,343.9 C439.0,343.9 439.0,433.8 694,433.8 L694,436.7 C439.0,436.7 439.0,346.9 184,346.9 Z" fill="#7cc4ff"><title>Brazil → Tin: 9.4% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,358.9 C439.0,358.9 439.0,218.0 694,218.0 L694,221.8 C439.0,221.8 439.0,362.6 184,362.6 Z" fill="#e08256"><title>Peru → Copper: 11.9% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,362.6 C439.0,362.6 439.0,436.7 694,436.7 L694,440.2 C439.0,440.2 439.0,366.1 184,366.1 Z" fill="#7cc4ff"><title>Peru → Tin: 11.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,378.1 C439.0,378.1 439.0,179.3 694,179.3 L694,181.6 C439.0,181.6 439.0,380.3 184,380.3 Z" fill="#34d399"><title>Russia → Nickel: 7.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,380.3 C439.0,380.3 439.0,268.6 694,268.6 L694,273.1 C439.0,273.1 439.0,384.8 184,384.8 Z" fill="#f0abfc"><title>Russia → Antimony: 14.3% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,396.8 C439.0,396.8 439.0,403.0 694,403.0 L694,407.2 C439.0,407.2 439.0,401.0 184,401.0 Z" fill="#ff7d9c"><title>Zimbabwe → Lithium: 13.5% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,413.0 C439.0,413.0 439.0,45.5 694,45.5 L694,49.7 C439.0,49.7 439.0,417.2 184,417.2 Z" fill="#c08ad6"><title>Gabon → Manganese: 13.3% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,429.2 C439.0,429.2 439.0,313.9 694,313.9 L694,317.8 C439.0,317.8 439.0,433.0 184,433.0 Z" fill="#c8ff6b"><title>Myanmar → Rare earths: 12.3% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,445.0 C439.0,445.0 439.0,356.3 694,356.3 L694,360.0 C439.0,360.0 439.0,448.7 184,448.7 Z" fill="#4cc9f0"><title>Namibia → Uranium: 11.7% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,460.7 C439.0,460.7 439.0,49.7 694,49.7 L694,52.6 C439.0,52.6 439.0,463.7 184,463.7 Z" fill="#c08ad6"><title>Ghana → Manganese: 9.4% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,475.7 C439.0,475.7 439.0,181.6 694,181.6 L694,184.5 C439.0,184.5 439.0,478.6 184,478.6 Z" fill="#34d399"><title>Philippines → Nickel: 9.3% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,490.6 C439.0,490.6 439.0,96.6 694,96.6 L694,99.0 C439.0,99.0 439.0,492.9 184,492.9 Z" fill="#e6b95e"><title>Madagascar → Graphite: 7.5% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,504.9 C439.0,504.9 439.0,317.8 694,317.8 L694,320.1 C439.0,320.1 439.0,507.3 184,507.3 Z" fill="#c8ff6b"><title>USA → Rare earths: 7.5% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,519.3 C439.0,519.3 439.0,99.0 694,99.0 L694,100.5 C439.0,100.5 439.0,520.9 184,520.9 Z" fill="#e6b95e"><title>India → Graphite: 5.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,532.9 C439.0,532.9 439.0,273.1 694,273.1 L694,274.5 C439.0,274.5 439.0,534.3 184,534.3 Z" fill="#f0abfc"><title>Bolivia → Antimony: 4.6% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,546.3 C439.0,546.3 439.0,52.6 694,52.6 L694,61.4 C439.0,61.4 439.0,555.1 184,555.1 Z" fill="#c08ad6"><title>All other producers → Manganese: 28.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,555.1 C439.0,555.1 439.0,100.5 694,100.5 L694,104.8 C439.0,104.8 439.0,559.4 184,559.4 Z" fill="#e6b95e"><title>All other producers → Graphite: 13.7% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,559.4 C439.0,559.4 439.0,143.9 694,143.9 L694,148.2 C439.0,148.2 439.0,563.7 184,563.7 Z" fill="#84a5f0"><title>All other producers → Cobalt: 13.7% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,563.7 C439.0,563.7 439.0,184.5 694,184.5 L694,191.6 C439.0,191.6 439.0,570.8 184,570.8 Z" fill="#34d399"><title>All other producers → Nickel: 22.7% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,570.8 C439.0,570.8 439.0,221.8 694,221.8 L694,235.0 C439.0,235.0 439.0,584.0 184,584.0 Z" fill="#e08256"><title>All other producers → Copper: 42.2% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,584.0 C439.0,584.0 439.0,274.5 694,274.5 L694,278.4 C439.0,278.4 439.0,587.9 184,587.9 Z" fill="#f0abfc"><title>All other producers → Antimony: 12.3% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,587.9 C439.0,587.9 439.0,320.1 694,320.1 L694,321.8 C439.0,321.8 439.0,589.6 184,589.6 Z" fill="#c8ff6b"><title>All other producers → Rare earths: 5.4% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,589.6 C439.0,589.6 439.0,360.0 694,360.0 L694,365.2 C439.0,365.2 439.0,594.8 184,594.8 Z" fill="#4cc9f0"><title>All other producers → Uranium: 16.7% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,594.8 C439.0,594.8 439.0,407.2 694,407.2 L694,408.6 C439.0,408.6 439.0,596.2 184,596.2 Z" fill="#ff7d9c"><title>All other producers → Lithium: 4.3% of world production (2024)</title></path>
-    <path class="sk-rb" d="M184,596.2 C439.0,596.2 439.0,440.2 694,440.2 L694,452.0 C439.0,452.0 439.0,608.0 184,608.0 Z" fill="#7cc4ff"><title>All other producers → Tin: 37.6% of world production (2024)</title></path>
-    <rect x="172" y="30.0" width="12" height="70.5" rx="2" fill="#8b98a5"/>
-    <text x="164" y="65.3" dy="4" text-anchor="end" class="sk-lab">China</text>
-    <rect x="172" y="112.5" width="12" height="28.2" rx="2" fill="#8b98a5"/>
-    <text x="164" y="126.6" dy="4" text-anchor="end" class="sk-lab">Indonesia</text>
-    <rect x="172" y="152.7" width="12" height="27.7" rx="2" fill="#8b98a5"/>
-    <text x="164" y="166.6" dy="4" text-anchor="end" class="sk-lab">DR Congo</text>
-    <rect x="172" y="192.4" width="12" height="26.2" rx="2" fill="#8b98a5"/>
-    <text x="164" y="205.5" dy="4" text-anchor="end" class="sk-lab">Australia</text>
-    <rect x="172" y="230.6" width="12" height="11.7" rx="2" fill="#8b98a5"/>
-    <text x="164" y="236.5" dy="4" text-anchor="end" class="sk-lab">Kazakhstan</text>
-    <rect x="172" y="254.3" width="12" height="11.6" rx="2" fill="#8b98a5"/>
-    <text x="164" y="260.1" dy="4" text-anchor="end" class="sk-lab">South Africa</text>
-    <rect x="172" y="277.9" width="12" height="9.1" rx="2" fill="#8b98a5"/>
-    <text x="164" y="282.5" dy="4" text-anchor="end" class="sk-lab">Chile</text>
-    <rect x="172" y="299.0" width="12" height="8.2" rx="2" fill="#8b98a5"/>
-    <text x="164" y="303.1" dy="4" text-anchor="end" class="sk-lab">Tajikistan</text>
-    <rect x="172" y="319.2" width="12" height="8.0" rx="2" fill="#8b98a5"/>
-    <text x="164" y="323.2" dy="4" text-anchor="end" class="sk-lab">Canada</text>
-    <rect x="172" y="339.2" width="12" height="7.6" rx="2" fill="#8b98a5"/>
-    <text x="164" y="343.1" dy="4" text-anchor="end" class="sk-lab">Brazil</text>
-    <rect x="172" y="358.9" width="12" height="7.2" rx="2" fill="#8b98a5"/>
-    <text x="164" y="362.5" dy="4" text-anchor="end" class="sk-lab">Peru</text>
-    <rect x="172" y="378.1" width="12" height="6.7" rx="2" fill="#8b98a5"/>
-    <text x="164" y="381.4" dy="4" text-anchor="end" class="sk-lab">Russia</text>
-    <rect x="172" y="396.8" width="12" height="4.2" rx="2" fill="#8b98a5"/>
-    <text x="164" y="398.9" dy="4" text-anchor="end" class="sk-lab">Zimbabwe</text>
-    <rect x="172" y="413.0" width="12" height="4.2" rx="2" fill="#8b98a5"/>
-    <text x="164" y="415.1" dy="4" text-anchor="end" class="sk-lab">Gabon</text>
-    <rect x="172" y="429.2" width="12" height="3.9" rx="2" fill="#8b98a5"/>
-    <text x="164" y="431.1" dy="4" text-anchor="end" class="sk-lab">Myanmar</text>
-    <rect x="172" y="445.0" width="12" height="3.7" rx="2" fill="#8b98a5"/>
-    <text x="164" y="446.9" dy="4" text-anchor="end" class="sk-lab">Namibia</text>
-    <rect x="172" y="460.7" width="12" height="2.9" rx="2" fill="#8b98a5"/>
-    <text x="164" y="462.2" dy="4" text-anchor="end" class="sk-lab">Ghana</text>
-    <rect x="172" y="475.7" width="12" height="2.9" rx="2" fill="#8b98a5"/>
-    <text x="164" y="477.1" dy="4" text-anchor="end" class="sk-lab">Philippines</text>
-    <rect x="172" y="490.6" width="12" height="2.4" rx="2" fill="#8b98a5"/>
-    <text x="164" y="491.8" dy="4" text-anchor="end" class="sk-lab">Madagascar</text>
-    <rect x="172" y="504.9" width="12" height="2.4" rx="2" fill="#8b98a5"/>
-    <text x="164" y="506.1" dy="4" text-anchor="end" class="sk-lab">USA</text>
-    <rect x="172" y="519.3" width="12" height="1.6" rx="2" fill="#8b98a5"/>
-    <text x="164" y="520.1" dy="4" text-anchor="end" class="sk-lab">India</text>
-    <rect x="172" y="532.9" width="12" height="1.5" rx="2" fill="#8b98a5"/>
-    <text x="164" y="533.6" dy="4" text-anchor="end" class="sk-lab">Bolivia</text>
-    <rect x="172" y="546.3" width="12" height="61.7" rx="2" fill="#8b98a5"/>
-    <text x="164" y="577.1" dy="4" text-anchor="end" class="sk-lab">All others</text>
-    <rect x="694" y="30.0" width="12" height="31.4" rx="2" fill="#c08ad6"/>
-    <a href="/manganese/"><text x="714" y="45.7" dy="4" text-anchor="start" class="sk-min">Manganese</text></a>
-    <rect x="694" y="73.4" width="12" height="31.4" rx="2" fill="#e6b95e"/>
-    <a href="/graphite/"><text x="714" y="89.1" dy="4" text-anchor="start" class="sk-min">Graphite</text></a>
-    <rect x="694" y="116.8" width="12" height="31.4" rx="2" fill="#84a5f0"/>
-    <a href="/cobalt/"><text x="714" y="132.5" dy="4" text-anchor="start" class="sk-min">Cobalt</text></a>
-    <rect x="694" y="160.2" width="12" height="31.4" rx="2" fill="#34d399"/>
-    <a href="/nickel/"><text x="714" y="175.9" dy="4" text-anchor="start" class="sk-min">Nickel</text></a>
-    <rect x="694" y="203.6" width="12" height="31.4" rx="2" fill="#e08256"/>
-    <a href="/copper/"><text x="714" y="219.3" dy="4" text-anchor="start" class="sk-min">Copper</text></a>
-    <rect x="694" y="247.0" width="12" height="31.4" rx="2" fill="#f0abfc"/>
-    <a href="/antimony/"><text x="714" y="262.7" dy="4" text-anchor="start" class="sk-min">Antimony</text></a>
-    <rect x="694" y="290.4" width="12" height="31.4" rx="2" fill="#c8ff6b"/>
-    <a href="/rare-earths/"><text x="714" y="306.1" dy="4" text-anchor="start" class="sk-min">Rare earths</text></a>
-    <rect x="694" y="333.8" width="12" height="31.4" rx="2" fill="#4cc9f0"/>
-    <a href="/uranium/"><text x="714" y="349.5" dy="4" text-anchor="start" class="sk-min">Uranium</text></a>
-    <rect x="694" y="377.2" width="12" height="31.4" rx="2" fill="#ff7d9c"/>
-    <a href="/lithium/"><text x="714" y="392.9" dy="4" text-anchor="start" class="sk-min">Lithium</text></a>
-    <rect x="694" y="420.6" width="12" height="31.4" rx="2" fill="#7cc4ff"/>
-    <a href="/tin/"><text x="714" y="436.3" dy="4" text-anchor="start" class="sk-min">Tin</text></a>
+    <path class="sk-rb" d="M184,30.0 C439.0,30.0 439.0,74.9 694,74.9 L694,99.2 C439.0,99.2 439.0,54.3 184,54.3 Z" fill="#e6b95e"><title>China → Graphite: 73.9% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,54.3 C439.0,54.3 439.0,209.6 694,209.6 L694,212.3 C439.0,212.3 439.0,57.0 184,57.0 Z" fill="#e08256"><title>China → Copper: 8.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,57.0 C439.0,57.0 439.0,254.5 694,254.5 L694,268.6 C439.0,268.6 439.0,71.0 184,71.0 Z" fill="#f0abfc"><title>China → Antimony: 42.8% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,71.0 C439.0,71.0 439.0,299.5 694,299.5 L694,324.1 C439.0,324.1 439.0,95.7 184,95.7 Z" fill="#c8ff6b"><title>China → Rare earths: 74.9% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,95.7 C439.0,95.7 439.0,434.2 694,434.2 L694,442.4 C439.0,442.4 439.0,103.9 184,103.9 Z" fill="#7cc4ff"><title>China → Tin: 25.1% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,103.9 C439.0,103.9 439.0,479.1 694,479.1 L694,504.7 C439.0,504.7 439.0,129.5 184,129.5 Z" fill="#ffb86b"><title>China → Tungsten: 77.8% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,141.5 C439.0,141.5 439.0,119.8 694,119.8 L694,123.7 C439.0,123.7 439.0,145.4 184,145.4 Z" fill="#84a5f0"><title>Indonesia → Cobalt: 11.8% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,145.4 C439.0,145.4 439.0,164.7 694,164.7 L694,184.8 C439.0,184.8 439.0,165.5 184,165.5 Z" fill="#34d399"><title>Indonesia → Nickel: 61.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,165.5 C439.0,165.5 439.0,442.4 694,442.4 L694,448.0 C439.0,448.0 439.0,171.0 184,171.0 Z" fill="#7cc4ff"><title>Indonesia → Tin: 16.9% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,183.0 C439.0,183.0 439.0,123.7 694,123.7 L694,148.2 C439.0,148.2 439.0,207.6 184,207.6 Z" fill="#84a5f0"><title>DR Congo → Cobalt: 74.6% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,207.6 C439.0,207.6 439.0,212.3 694,212.3 L694,216.8 C439.0,216.8 439.0,212.1 184,212.1 Z" fill="#e08256"><title>DR Congo → Copper: 13.8% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,224.1 C439.0,224.1 439.0,30.0 694,30.0 L694,34.1 C439.0,34.1 439.0,228.2 184,228.2 Z" fill="#c08ad6"><title>Australia → Manganese: 12.4% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,228.2 C439.0,228.2 439.0,344.4 694,344.4 L694,347.2 C439.0,347.2 439.0,231.1 184,231.1 Z" fill="#4cc9f0"><title>Australia → Uranium: 8.8% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,231.1 C439.0,231.1 439.0,389.3 694,389.3 L694,409.8 C439.0,409.8 439.0,251.6 184,251.6 Z" fill="#ff7d9c"><title>Australia → Lithium: 62.2% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,263.6 C439.0,263.6 439.0,347.2 694,347.2 L694,359.5 C439.0,359.5 439.0,275.8 184,275.8 Z" fill="#4cc9f0"><title>Kazakhstan → Uranium: 37.3% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,287.8 C439.0,287.8 439.0,34.1 694,34.1 L694,46.2 C439.0,46.2 439.0,300.0 184,300.0 Z" fill="#c08ad6"><title>South Africa → Manganese: 36.9% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,312.0 C439.0,312.0 439.0,216.8 694,216.8 L694,224.7 C439.0,224.7 439.0,319.9 184,319.9 Z" fill="#e08256"><title>Chile → Copper: 24.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,319.9 C439.0,319.9 439.0,409.8 694,409.8 L694,411.4 C439.0,411.4 439.0,321.5 184,321.5 Z" fill="#ff7d9c"><title>Chile → Lithium: 5.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,333.5 C439.0,333.5 439.0,268.6 694,268.6 L694,277.2 C439.0,277.2 439.0,342.1 184,342.1 Z" fill="#f0abfc"><title>Tajikistan → Antimony: 26.1% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,354.1 C439.0,354.1 439.0,359.5 694,359.5 L694,367.9 C439.0,367.9 439.0,362.5 184,362.5 Z" fill="#4cc9f0"><title>Canada → Uranium: 25.5% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,374.5 C439.0,374.5 439.0,411.4 694,411.4 L694,416.3 C439.0,416.3 439.0,379.4 184,379.4 Z" fill="#ff7d9c"><title>Brazil → Lithium: 14.9% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,379.4 C439.0,379.4 439.0,448.0 694,448.0 L694,451.1 C439.0,451.1 439.0,382.5 184,382.5 Z" fill="#7cc4ff"><title>Brazil → Tin: 9.4% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,394.5 C439.0,394.5 439.0,224.7 694,224.7 L694,228.7 C439.0,228.7 439.0,398.5 184,398.5 Z" fill="#e08256"><title>Peru → Copper: 11.9% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,398.5 C439.0,398.5 439.0,451.1 694,451.1 L694,454.7 C439.0,454.7 439.0,402.1 184,402.1 Z" fill="#7cc4ff"><title>Peru → Tin: 11.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,414.1 C439.0,414.1 439.0,184.8 694,184.8 L694,187.1 C439.0,187.1 439.0,416.4 184,416.4 Z" fill="#34d399"><title>Russia → Nickel: 7.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,416.4 C439.0,416.4 439.0,277.2 694,277.2 L694,281.9 C439.0,281.9 439.0,421.1 184,421.1 Z" fill="#f0abfc"><title>Russia → Antimony: 14.3% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,433.1 C439.0,433.1 439.0,416.3 694,416.3 L694,420.8 C439.0,420.8 439.0,437.5 184,437.5 Z" fill="#ff7d9c"><title>Zimbabwe → Lithium: 13.5% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,449.5 C439.0,449.5 439.0,46.2 694,46.2 L694,50.6 C439.0,50.6 439.0,453.9 184,453.9 Z" fill="#c08ad6"><title>Gabon → Manganese: 13.3% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,465.9 C439.0,465.9 439.0,324.1 694,324.1 L694,328.1 C439.0,328.1 439.0,469.9 184,469.9 Z" fill="#c8ff6b"><title>Myanmar → Rare earths: 12.3% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,481.9 C439.0,481.9 439.0,367.9 694,367.9 L694,371.8 C439.0,371.8 439.0,485.8 184,485.8 Z" fill="#4cc9f0"><title>Namibia → Uranium: 11.7% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,497.8 C439.0,497.8 439.0,50.6 694,50.6 L694,53.7 C439.0,53.7 439.0,500.9 184,500.9 Z" fill="#c08ad6"><title>Ghana → Manganese: 9.4% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,512.9 C439.0,512.9 439.0,187.1 694,187.1 L694,190.2 C439.0,190.2 439.0,516.0 184,516.0 Z" fill="#34d399"><title>Philippines → Nickel: 9.3% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,528.0 C439.0,528.0 439.0,99.2 694,99.2 L694,101.7 C439.0,101.7 439.0,530.4 184,530.4 Z" fill="#e6b95e"><title>Madagascar → Graphite: 7.5% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,542.4 C439.0,542.4 439.0,328.1 694,328.1 L694,330.6 C439.0,330.6 439.0,544.9 184,544.9 Z" fill="#c8ff6b"><title>USA → Rare earths: 7.5% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,556.9 C439.0,556.9 439.0,504.7 694,504.7 L694,507.0 C439.0,507.0 439.0,559.2 184,559.2 Z" fill="#ffb86b"><title>Vietnam → Tungsten: 7.1% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,571.2 C439.0,571.2 439.0,101.7 694,101.7 L694,103.3 C439.0,103.3 439.0,572.9 184,572.9 Z" fill="#e6b95e"><title>India → Graphite: 5.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,584.9 C439.0,584.9 439.0,281.9 694,281.9 L694,283.4 C439.0,283.4 439.0,586.4 184,586.4 Z" fill="#f0abfc"><title>Bolivia → Antimony: 4.6% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,598.4 C439.0,598.4 439.0,53.7 694,53.7 L694,62.9 C439.0,62.9 439.0,607.6 184,607.6 Z" fill="#c08ad6"><title>All other producers → Manganese: 28.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,607.6 C439.0,607.6 439.0,103.3 694,103.3 L694,107.8 C439.0,107.8 439.0,612.1 184,612.1 Z" fill="#e6b95e"><title>All other producers → Graphite: 13.7% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,612.1 C439.0,612.1 439.0,148.2 694,148.2 L694,152.7 C439.0,152.7 439.0,616.6 184,616.6 Z" fill="#84a5f0"><title>All other producers → Cobalt: 13.7% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,616.6 C439.0,616.6 439.0,190.2 694,190.2 L694,197.6 C439.0,197.6 439.0,624.0 184,624.0 Z" fill="#34d399"><title>All other producers → Nickel: 22.7% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,624.0 C439.0,624.0 439.0,228.7 694,228.7 L694,242.5 C439.0,242.5 439.0,637.9 184,637.9 Z" fill="#e08256"><title>All other producers → Copper: 42.2% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,637.9 C439.0,637.9 439.0,283.4 694,283.4 L694,287.5 C439.0,287.5 439.0,642.0 184,642.0 Z" fill="#f0abfc"><title>All other producers → Antimony: 12.3% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,642.0 C439.0,642.0 439.0,330.6 694,330.6 L694,332.4 C439.0,332.4 439.0,643.7 184,643.7 Z" fill="#c8ff6b"><title>All other producers → Rare earths: 5.4% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,643.7 C439.0,643.7 439.0,371.8 694,371.8 L694,377.3 C439.0,377.3 439.0,649.2 184,649.2 Z" fill="#4cc9f0"><title>All other producers → Uranium: 16.7% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,649.2 C439.0,649.2 439.0,420.8 694,420.8 L694,422.2 C439.0,422.2 439.0,650.7 184,650.7 Z" fill="#ff7d9c"><title>All other producers → Lithium: 4.3% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,650.7 C439.0,650.7 439.0,454.7 694,454.7 L694,467.1 C439.0,467.1 439.0,663.0 184,663.0 Z" fill="#7cc4ff"><title>All other producers → Tin: 37.6% of world production (2024)</title></path>
+    <path class="sk-rb" d="M184,663.0 C439.0,663.0 439.0,507.0 694,507.0 L694,512.0 C439.0,512.0 439.0,668.0 184,668.0 Z" fill="#ffb86b"><title>All other producers → Tungsten: 15.1% of world production (2024)</title></path>
+    <rect x="172" y="30.0" width="12" height="99.5" rx="2" fill="#8b98a5"/>
+    <text x="164" y="79.8" dy="4" text-anchor="end" class="sk-lab">China</text>
+    <rect x="172" y="141.5" width="12" height="29.5" rx="2" fill="#8b98a5"/>
+    <text x="164" y="156.3" dy="4" text-anchor="end" class="sk-lab">Indonesia</text>
+    <rect x="172" y="183.0" width="12" height="29.1" rx="2" fill="#8b98a5"/>
+    <text x="164" y="197.6" dy="4" text-anchor="end" class="sk-lab">DR Congo</text>
+    <rect x="172" y="224.1" width="12" height="27.4" rx="2" fill="#8b98a5"/>
+    <text x="164" y="237.8" dy="4" text-anchor="end" class="sk-lab">Australia</text>
+    <rect x="172" y="263.6" width="12" height="12.3" rx="2" fill="#8b98a5"/>
+    <text x="164" y="269.7" dy="4" text-anchor="end" class="sk-lab">Kazakhstan</text>
+    <rect x="172" y="287.8" width="12" height="12.2" rx="2" fill="#8b98a5"/>
+    <text x="164" y="293.9" dy="4" text-anchor="end" class="sk-lab">South Africa</text>
+    <rect x="172" y="312.0" width="12" height="9.5" rx="2" fill="#8b98a5"/>
+    <text x="164" y="316.7" dy="4" text-anchor="end" class="sk-lab">Chile</text>
+    <rect x="172" y="333.5" width="12" height="8.6" rx="2" fill="#8b98a5"/>
+    <text x="164" y="337.8" dy="4" text-anchor="end" class="sk-lab">Tajikistan</text>
+    <rect x="172" y="354.1" width="12" height="8.4" rx="2" fill="#8b98a5"/>
+    <text x="164" y="358.3" dy="4" text-anchor="end" class="sk-lab">Canada</text>
+    <rect x="172" y="374.5" width="12" height="8.0" rx="2" fill="#8b98a5"/>
+    <text x="164" y="378.5" dy="4" text-anchor="end" class="sk-lab">Brazil</text>
+    <rect x="172" y="394.5" width="12" height="7.5" rx="2" fill="#8b98a5"/>
+    <text x="164" y="398.3" dy="4" text-anchor="end" class="sk-lab">Peru</text>
+    <rect x="172" y="414.1" width="12" height="7.0" rx="2" fill="#8b98a5"/>
+    <text x="164" y="417.6" dy="4" text-anchor="end" class="sk-lab">Russia</text>
+    <rect x="172" y="433.1" width="12" height="4.4" rx="2" fill="#8b98a5"/>
+    <text x="164" y="435.3" dy="4" text-anchor="end" class="sk-lab">Zimbabwe</text>
+    <rect x="172" y="449.5" width="12" height="4.4" rx="2" fill="#8b98a5"/>
+    <text x="164" y="451.7" dy="4" text-anchor="end" class="sk-lab">Gabon</text>
+    <rect x="172" y="465.9" width="12" height="4.1" rx="2" fill="#8b98a5"/>
+    <text x="164" y="467.9" dy="4" text-anchor="end" class="sk-lab">Myanmar</text>
+    <rect x="172" y="481.9" width="12" height="3.9" rx="2" fill="#8b98a5"/>
+    <text x="164" y="483.9" dy="4" text-anchor="end" class="sk-lab">Namibia</text>
+    <rect x="172" y="497.8" width="12" height="3.1" rx="2" fill="#8b98a5"/>
+    <text x="164" y="499.4" dy="4" text-anchor="end" class="sk-lab">Ghana</text>
+    <rect x="172" y="512.9" width="12" height="3.1" rx="2" fill="#8b98a5"/>
+    <text x="164" y="514.4" dy="4" text-anchor="end" class="sk-lab">Philippines</text>
+    <rect x="172" y="528.0" width="12" height="2.5" rx="2" fill="#8b98a5"/>
+    <text x="164" y="529.2" dy="4" text-anchor="end" class="sk-lab">Madagascar</text>
+    <rect x="172" y="542.4" width="12" height="2.5" rx="2" fill="#8b98a5"/>
+    <text x="164" y="543.7" dy="4" text-anchor="end" class="sk-lab">USA</text>
+    <rect x="172" y="556.9" width="12" height="2.3" rx="2" fill="#8b98a5"/>
+    <text x="164" y="558.1" dy="4" text-anchor="end" class="sk-lab">Vietnam</text>
+    <rect x="172" y="571.2" width="12" height="1.6" rx="2" fill="#8b98a5"/>
+    <text x="164" y="572.0" dy="4" text-anchor="end" class="sk-lab">India</text>
+    <rect x="172" y="584.9" width="12" height="1.5" rx="2" fill="#8b98a5"/>
+    <text x="164" y="585.6" dy="4" text-anchor="end" class="sk-lab">Bolivia</text>
+    <rect x="172" y="598.4" width="12" height="69.6" rx="2" fill="#8b98a5"/>
+    <text x="164" y="633.2" dy="4" text-anchor="end" class="sk-lab">All others</text>
+    <rect x="694" y="30.0" width="12" height="32.9" rx="2" fill="#c08ad6"/>
+    <a href="/manganese/"><text x="714" y="46.5" dy="4" text-anchor="start" class="sk-min">Manganese</text></a>
+    <rect x="694" y="74.9" width="12" height="32.9" rx="2" fill="#e6b95e"/>
+    <a href="/graphite/"><text x="714" y="91.4" dy="4" text-anchor="start" class="sk-min">Graphite</text></a>
+    <rect x="694" y="119.8" width="12" height="32.9" rx="2" fill="#84a5f0"/>
+    <a href="/cobalt/"><text x="714" y="136.3" dy="4" text-anchor="start" class="sk-min">Cobalt</text></a>
+    <rect x="694" y="164.7" width="12" height="32.9" rx="2" fill="#34d399"/>
+    <a href="/nickel/"><text x="714" y="181.2" dy="4" text-anchor="start" class="sk-min">Nickel</text></a>
+    <rect x="694" y="209.6" width="12" height="32.9" rx="2" fill="#e08256"/>
+    <a href="/copper/"><text x="714" y="226.1" dy="4" text-anchor="start" class="sk-min">Copper</text></a>
+    <rect x="694" y="254.5" width="12" height="32.9" rx="2" fill="#f0abfc"/>
+    <a href="/antimony/"><text x="714" y="271.0" dy="4" text-anchor="start" class="sk-min">Antimony</text></a>
+    <rect x="694" y="299.5" width="12" height="32.9" rx="2" fill="#c8ff6b"/>
+    <a href="/rare-earths/"><text x="714" y="315.9" dy="4" text-anchor="start" class="sk-min">Rare earths</text></a>
+    <rect x="694" y="344.4" width="12" height="32.9" rx="2" fill="#4cc9f0"/>
+    <a href="/uranium/"><text x="714" y="360.8" dy="4" text-anchor="start" class="sk-min">Uranium</text></a>
+    <rect x="694" y="389.3" width="12" height="32.9" rx="2" fill="#ff7d9c"/>
+    <a href="/lithium/"><text x="714" y="405.7" dy="4" text-anchor="start" class="sk-min">Lithium</text></a>
+    <rect x="694" y="434.2" width="12" height="32.9" rx="2" fill="#7cc4ff"/>
+    <a href="/tin/"><text x="714" y="450.6" dy="4" text-anchor="start" class="sk-min">Tin</text></a>
+    <rect x="694" y="479.1" width="12" height="32.9" rx="2" fill="#ffb86b"/>
+    <a href="/tungsten/"><text x="714" y="495.5" dy="4" text-anchor="start" class="sk-min">Tungsten</text></a>
     </svg>
-    <svg class="sk-mobile" viewBox="0 0 400 880" role="img" aria-label="Sankey diagram: top producer countries and their share of world mine production for 10 strategic minerals, 2024" xmlns="http://www.w3.org/2000/svg">
+    <svg class="sk-mobile" viewBox="0 0 400 960" role="img" aria-label="Sankey diagram: top producer countries and their share of world mine production for 11 strategic minerals, 2024" xmlns="http://www.w3.org/2000/svg">
     <text x="101.0" y="16" text-anchor="middle" class="sk-col">PRODUCER</text>
     <text x="293.0" y="16" text-anchor="middle" class="sk-col">MINERAL</text>
-    <path class="sk-rb" d="M106,30.0 C197.0,30.0 197.0,97.2 288,97.2 L288,138.0 C197.0,138.0 197.0,70.8 106,70.8 Z" fill="#e6b95e"><title>China → Graphite: 73.9% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,70.8 C197.0,70.8 197.0,298.8 288,298.8 L288,303.2 C197.0,303.2 197.0,75.2 106,75.2 Z" fill="#e08256"><title>China → Copper: 8.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,75.2 C197.0,75.2 197.0,366.0 288,366.0 L288,389.6 C197.0,389.6 197.0,98.8 106,98.8 Z" fill="#f0abfc"><title>China → Antimony: 42.8% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,98.8 C197.0,98.8 197.0,433.2 288,433.2 L288,474.5 C197.0,474.5 197.0,140.1 106,140.1 Z" fill="#c8ff6b"><title>China → Rare earths: 74.9% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,140.1 C197.0,140.1 197.0,634.8 288,634.8 L288,648.7 C197.0,648.7 197.0,154.0 106,154.0 Z" fill="#7cc4ff"><title>China → Tin: 25.1% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,167.0 C197.0,167.0 197.0,164.4 288,164.4 L288,170.9 C197.0,170.9 197.0,173.5 106,173.5 Z" fill="#84a5f0"><title>Indonesia → Cobalt: 11.8% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,173.5 C197.0,173.5 197.0,231.6 288,231.6 L288,265.3 C197.0,265.3 197.0,207.1 106,207.1 Z" fill="#34d399"><title>Indonesia → Nickel: 61.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,207.1 C197.0,207.1 197.0,648.7 288,648.7 L288,658.0 C197.0,658.0 197.0,216.5 106,216.5 Z" fill="#7cc4ff"><title>Indonesia → Tin: 16.9% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,229.5 C197.0,229.5 197.0,170.9 288,170.9 L288,212.1 C197.0,212.1 197.0,270.7 106,270.7 Z" fill="#84a5f0"><title>DR Congo → Cobalt: 74.6% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,270.7 C197.0,270.7 197.0,303.2 288,303.2 L288,310.8 C197.0,310.8 197.0,278.3 106,278.3 Z" fill="#e08256"><title>DR Congo → Copper: 13.8% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,291.3 C197.0,291.3 197.0,30.0 288,30.0 L288,36.8 C197.0,36.8 197.0,298.1 106,298.1 Z" fill="#c08ad6"><title>Australia → Manganese: 12.4% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,298.1 C197.0,298.1 197.0,500.4 288,500.4 L288,505.2 C197.0,505.2 197.0,302.9 106,302.9 Z" fill="#4cc9f0"><title>Australia → Uranium: 8.8% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,302.9 C197.0,302.9 197.0,567.6 288,567.6 L288,601.9 C197.0,601.9 197.0,337.3 106,337.3 Z" fill="#ff7d9c"><title>Australia → Lithium: 62.2% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,350.3 C197.0,350.3 197.0,505.2 288,505.2 L288,525.8 C197.0,525.8 197.0,370.8 106,370.8 Z" fill="#4cc9f0"><title>Kazakhstan → Uranium: 37.3% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,383.8 C197.0,383.8 197.0,36.8 288,36.8 L288,57.2 C197.0,57.2 197.0,404.2 106,404.2 Z" fill="#c08ad6"><title>South Africa → Manganese: 36.9% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,417.2 C197.0,417.2 197.0,310.8 288,310.8 L288,324.1 C197.0,324.1 197.0,430.5 106,430.5 Z" fill="#e08256"><title>Chile → Copper: 24.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,430.5 C197.0,430.5 197.0,601.9 288,601.9 L288,604.7 C197.0,604.7 197.0,433.3 106,433.3 Z" fill="#ff7d9c"><title>Chile → Lithium: 5.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,446.3 C197.0,446.3 197.0,389.6 288,389.6 L288,404.0 C197.0,404.0 197.0,460.7 106,460.7 Z" fill="#f0abfc"><title>Tajikistan → Antimony: 26.1% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,473.7 C197.0,473.7 197.0,525.8 288,525.8 L288,539.9 C197.0,539.9 197.0,487.8 106,487.8 Z" fill="#4cc9f0"><title>Canada → Uranium: 25.5% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,500.8 C197.0,500.8 197.0,604.7 288,604.7 L288,612.9 C197.0,612.9 197.0,509.0 106,509.0 Z" fill="#ff7d9c"><title>Brazil → Lithium: 14.9% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,509.0 C197.0,509.0 197.0,658.0 288,658.0 L288,663.2 C197.0,663.2 197.0,514.2 106,514.2 Z" fill="#7cc4ff"><title>Brazil → Tin: 9.4% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,527.2 C197.0,527.2 197.0,324.1 288,324.1 L288,330.7 C197.0,330.7 197.0,533.8 106,533.8 Z" fill="#e08256"><title>Peru → Copper: 11.9% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,533.8 C197.0,533.8 197.0,663.2 288,663.2 L288,669.2 C197.0,669.2 197.0,539.8 106,539.8 Z" fill="#7cc4ff"><title>Peru → Tin: 11.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,552.8 C197.0,552.8 197.0,265.3 288,265.3 L288,269.1 C197.0,269.1 197.0,556.7 106,556.7 Z" fill="#34d399"><title>Russia → Nickel: 7.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,556.7 C197.0,556.7 197.0,404.0 288,404.0 L288,411.9 C197.0,411.9 197.0,564.6 106,564.6 Z" fill="#f0abfc"><title>Russia → Antimony: 14.3% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,577.6 C197.0,577.6 197.0,612.9 288,612.9 L288,620.4 C197.0,620.4 197.0,585.1 106,585.1 Z" fill="#ff7d9c"><title>Zimbabwe → Lithium: 13.5% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,598.1 C197.0,598.1 197.0,57.2 288,57.2 L288,64.6 C197.0,64.6 197.0,605.4 106,605.4 Z" fill="#c08ad6"><title>Gabon → Manganese: 13.3% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,618.4 C197.0,618.4 197.0,474.5 288,474.5 L288,481.3 C197.0,481.3 197.0,625.2 106,625.2 Z" fill="#c8ff6b"><title>Myanmar → Rare earths: 12.3% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,638.2 C197.0,638.2 197.0,539.9 288,539.9 L288,546.4 C197.0,546.4 197.0,644.7 106,644.7 Z" fill="#4cc9f0"><title>Namibia → Uranium: 11.7% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,657.7 C197.0,657.7 197.0,64.6 288,64.6 L288,69.8 C197.0,69.8 197.0,662.9 106,662.9 Z" fill="#c08ad6"><title>Ghana → Manganese: 9.4% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,675.9 C197.0,675.9 197.0,269.1 288,269.1 L288,274.3 C197.0,274.3 197.0,681.0 106,681.0 Z" fill="#34d399"><title>Philippines → Nickel: 9.3% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,694.0 C197.0,694.0 197.0,138.0 288,138.0 L288,142.1 C197.0,142.1 197.0,698.1 106,698.1 Z" fill="#e6b95e"><title>Madagascar → Graphite: 7.5% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,711.1 C197.0,711.1 197.0,481.3 288,481.3 L288,485.4 C197.0,485.4 197.0,715.2 106,715.2 Z" fill="#c8ff6b"><title>USA → Rare earths: 7.5% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,728.2 C197.0,728.2 197.0,142.1 288,142.1 L288,144.9 C197.0,144.9 197.0,731.0 106,731.0 Z" fill="#e6b95e"><title>India → Graphite: 5.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,744.0 C197.0,744.0 197.0,411.9 288,411.9 L288,414.4 C197.0,414.4 197.0,746.5 106,746.5 Z" fill="#f0abfc"><title>Bolivia → Antimony: 4.6% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,759.5 C197.0,759.5 197.0,69.8 288,69.8 L288,85.2 C197.0,85.2 197.0,775.0 106,775.0 Z" fill="#c08ad6"><title>All other producers → Manganese: 28.0% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,775.0 C197.0,775.0 197.0,144.9 288,144.9 L288,152.4 C197.0,152.4 197.0,782.5 106,782.5 Z" fill="#e6b95e"><title>All other producers → Graphite: 13.7% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,782.5 C197.0,782.5 197.0,212.1 288,212.1 L288,219.6 C197.0,219.6 197.0,790.0 106,790.0 Z" fill="#84a5f0"><title>All other producers → Cobalt: 13.7% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,790.0 C197.0,790.0 197.0,274.3 288,274.3 L288,286.8 C197.0,286.8 197.0,802.6 106,802.6 Z" fill="#34d399"><title>All other producers → Nickel: 22.7% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,802.6 C197.0,802.6 197.0,330.7 288,330.7 L288,354.0 C197.0,354.0 197.0,825.9 106,825.9 Z" fill="#e08256"><title>All other producers → Copper: 42.2% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,825.9 C197.0,825.9 197.0,414.4 288,414.4 L288,421.2 C197.0,421.2 197.0,832.7 106,832.7 Z" fill="#f0abfc"><title>All other producers → Antimony: 12.3% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,832.7 C197.0,832.7 197.0,485.4 288,485.4 L288,488.4 C197.0,488.4 197.0,835.6 106,835.6 Z" fill="#c8ff6b"><title>All other producers → Rare earths: 5.4% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,835.6 C197.0,835.6 197.0,546.4 288,546.4 L288,555.6 C197.0,555.6 197.0,844.8 106,844.8 Z" fill="#4cc9f0"><title>All other producers → Uranium: 16.7% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,844.8 C197.0,844.8 197.0,620.4 288,620.4 L288,622.8 C197.0,622.8 197.0,847.2 106,847.2 Z" fill="#ff7d9c"><title>All other producers → Lithium: 4.3% of world production (2024)</title></path>
-    <path class="sk-rb" d="M106,847.2 C197.0,847.2 197.0,669.2 288,669.2 L288,690.0 C197.0,690.0 197.0,868.0 106,868.0 Z" fill="#7cc4ff"><title>All other producers → Tin: 37.6% of world production (2024)</title></path>
-    <rect x="96" y="30.0" width="10" height="124.0" rx="2" fill="#8b98a5"/>
-    <text x="88" y="92.0" dy="4" text-anchor="end" class="sk-lab">China</text>
-    <rect x="96" y="167.0" width="10" height="49.5" rx="2" fill="#8b98a5"/>
-    <text x="88" y="191.7" dy="4" text-anchor="end" class="sk-lab">Indonesia</text>
-    <rect x="96" y="229.5" width="10" height="48.8" rx="2" fill="#8b98a5"/>
-    <text x="88" y="253.9" dy="4" text-anchor="end" class="sk-lab">DR Congo</text>
-    <rect x="96" y="291.3" width="10" height="46.0" rx="2" fill="#8b98a5"/>
-    <text x="88" y="314.3" dy="4" text-anchor="end" class="sk-lab">Australia</text>
-    <rect x="96" y="350.3" width="10" height="20.6" rx="2" fill="#8b98a5"/>
-    <text x="88" y="360.6" dy="4" text-anchor="end" class="sk-lab">Kazakhstan</text>
-    <rect x="96" y="383.8" width="10" height="20.4" rx="2" fill="#8b98a5"/>
-    <text x="88" y="394.0" dy="4" text-anchor="end" class="sk-lab">South Africa</text>
-    <rect x="96" y="417.2" width="10" height="16.0" rx="2" fill="#8b98a5"/>
-    <text x="88" y="425.2" dy="4" text-anchor="end" class="sk-lab">Chile</text>
-    <rect x="96" y="446.3" width="10" height="14.4" rx="2" fill="#8b98a5"/>
-    <text x="88" y="453.5" dy="4" text-anchor="end" class="sk-lab">Tajikistan</text>
-    <rect x="96" y="473.7" width="10" height="14.1" rx="2" fill="#8b98a5"/>
-    <text x="88" y="480.7" dy="4" text-anchor="end" class="sk-lab">Canada</text>
-    <rect x="96" y="500.8" width="10" height="13.4" rx="2" fill="#8b98a5"/>
-    <text x="88" y="507.5" dy="4" text-anchor="end" class="sk-lab">Brazil</text>
-    <rect x="96" y="527.2" width="10" height="12.6" rx="2" fill="#8b98a5"/>
-    <text x="88" y="533.5" dy="4" text-anchor="end" class="sk-lab">Peru</text>
-    <rect x="96" y="552.8" width="10" height="11.8" rx="2" fill="#8b98a5"/>
-    <text x="88" y="558.7" dy="4" text-anchor="end" class="sk-lab">Russia</text>
-    <rect x="96" y="577.6" width="10" height="7.5" rx="2" fill="#8b98a5"/>
-    <text x="88" y="581.3" dy="4" text-anchor="end" class="sk-lab">Zimbabwe</text>
-    <rect x="96" y="598.1" width="10" height="7.3" rx="2" fill="#8b98a5"/>
-    <text x="88" y="601.7" dy="4" text-anchor="end" class="sk-lab">Gabon</text>
-    <rect x="96" y="618.4" width="10" height="6.8" rx="2" fill="#8b98a5"/>
-    <text x="88" y="621.8" dy="4" text-anchor="end" class="sk-lab">Myanmar</text>
-    <rect x="96" y="638.2" width="10" height="6.5" rx="2" fill="#8b98a5"/>
-    <text x="88" y="641.4" dy="4" text-anchor="end" class="sk-lab">Namibia</text>
-    <rect x="96" y="657.7" width="10" height="5.2" rx="2" fill="#8b98a5"/>
-    <text x="88" y="660.3" dy="4" text-anchor="end" class="sk-lab">Ghana</text>
-    <rect x="96" y="675.9" width="10" height="5.1" rx="2" fill="#8b98a5"/>
-    <text x="88" y="678.4" dy="4" text-anchor="end" class="sk-lab">Philippines</text>
-    <rect x="96" y="694.0" width="10" height="4.1" rx="2" fill="#8b98a5"/>
-    <text x="88" y="696.0" dy="4" text-anchor="end" class="sk-lab">Madagascar</text>
-    <rect x="96" y="711.1" width="10" height="4.1" rx="2" fill="#8b98a5"/>
-    <text x="88" y="713.2" dy="4" text-anchor="end" class="sk-lab">USA</text>
-    <rect x="96" y="728.2" width="10" height="2.7" rx="2" fill="#8b98a5"/>
-    <text x="88" y="729.6" dy="4" text-anchor="end" class="sk-lab">India</text>
-    <rect x="96" y="744.0" width="10" height="2.5" rx="2" fill="#8b98a5"/>
-    <text x="88" y="745.3" dy="4" text-anchor="end" class="sk-lab">Bolivia</text>
-    <rect x="96" y="759.5" width="10" height="108.5" rx="2" fill="#8b98a5"/>
-    <text x="88" y="813.8" dy="4" text-anchor="end" class="sk-lab">All others</text>
-    <rect x="288" y="30.0" width="10" height="55.2" rx="2" fill="#c08ad6"/>
-    <a href="/manganese/"><text x="306" y="57.6" dy="4" text-anchor="start" class="sk-min">Manganese</text></a>
-    <rect x="288" y="97.2" width="10" height="55.2" rx="2" fill="#e6b95e"/>
-    <a href="/graphite/"><text x="306" y="124.8" dy="4" text-anchor="start" class="sk-min">Graphite</text></a>
-    <rect x="288" y="164.4" width="10" height="55.2" rx="2" fill="#84a5f0"/>
-    <a href="/cobalt/"><text x="306" y="192.0" dy="4" text-anchor="start" class="sk-min">Cobalt</text></a>
-    <rect x="288" y="231.6" width="10" height="55.2" rx="2" fill="#34d399"/>
-    <a href="/nickel/"><text x="306" y="259.2" dy="4" text-anchor="start" class="sk-min">Nickel</text></a>
-    <rect x="288" y="298.8" width="10" height="55.2" rx="2" fill="#e08256"/>
-    <a href="/copper/"><text x="306" y="326.4" dy="4" text-anchor="start" class="sk-min">Copper</text></a>
-    <rect x="288" y="366.0" width="10" height="55.2" rx="2" fill="#f0abfc"/>
-    <a href="/antimony/"><text x="306" y="393.6" dy="4" text-anchor="start" class="sk-min">Antimony</text></a>
-    <rect x="288" y="433.2" width="10" height="55.2" rx="2" fill="#c8ff6b"/>
-    <a href="/rare-earths/"><text x="306" y="460.8" dy="4" text-anchor="start" class="sk-min">Rare earths</text></a>
-    <rect x="288" y="500.4" width="10" height="55.2" rx="2" fill="#4cc9f0"/>
-    <a href="/uranium/"><text x="306" y="528.0" dy="4" text-anchor="start" class="sk-min">Uranium</text></a>
-    <rect x="288" y="567.6" width="10" height="55.2" rx="2" fill="#ff7d9c"/>
-    <a href="/lithium/"><text x="306" y="595.2" dy="4" text-anchor="start" class="sk-min">Lithium</text></a>
-    <rect x="288" y="634.8" width="10" height="55.2" rx="2" fill="#7cc4ff"/>
-    <a href="/tin/"><text x="306" y="662.4" dy="4" text-anchor="start" class="sk-min">Tin</text></a>
+    <path class="sk-rb" d="M106,30.0 C197.0,30.0 197.0,98.3 288,98.3 L288,139.8 C197.0,139.8 197.0,71.6 106,71.6 Z" fill="#e6b95e"><title>China → Graphite: 73.9% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,71.6 C197.0,71.6 197.0,303.1 288,303.1 L288,307.6 C197.0,307.6 197.0,76.1 106,76.1 Z" fill="#e08256"><title>China → Copper: 8.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,76.1 C197.0,76.1 197.0,371.4 288,371.4 L288,395.4 C197.0,395.4 197.0,100.2 106,100.2 Z" fill="#f0abfc"><title>China → Antimony: 42.8% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,100.2 C197.0,100.2 197.0,439.6 288,439.6 L288,481.8 C197.0,481.8 197.0,142.3 106,142.3 Z" fill="#c8ff6b"><title>China → Rare earths: 74.9% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,142.3 C197.0,142.3 197.0,644.5 288,644.5 L288,658.6 C197.0,658.6 197.0,156.4 106,156.4 Z" fill="#7cc4ff"><title>China → Tin: 25.1% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,156.4 C197.0,156.4 197.0,712.7 288,712.7 L288,756.5 C197.0,756.5 197.0,200.2 106,200.2 Z" fill="#ffb86b"><title>China → Tungsten: 77.8% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,213.2 C197.0,213.2 197.0,166.5 288,166.5 L288,173.2 C197.0,173.2 197.0,219.8 106,219.8 Z" fill="#84a5f0"><title>Indonesia → Cobalt: 11.8% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,219.8 C197.0,219.8 197.0,234.8 288,234.8 L288,269.1 C197.0,269.1 197.0,254.1 106,254.1 Z" fill="#34d399"><title>Indonesia → Nickel: 61.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,254.1 C197.0,254.1 197.0,658.6 288,658.6 L288,668.1 C197.0,668.1 197.0,263.7 106,263.7 Z" fill="#7cc4ff"><title>Indonesia → Tin: 16.9% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,276.7 C197.0,276.7 197.0,173.2 288,173.2 L288,215.1 C197.0,215.1 197.0,318.6 106,318.6 Z" fill="#84a5f0"><title>DR Congo → Cobalt: 74.6% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,318.6 C197.0,318.6 197.0,307.6 288,307.6 L288,315.4 C197.0,315.4 197.0,326.4 106,326.4 Z" fill="#e08256"><title>DR Congo → Copper: 13.8% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,339.4 C197.0,339.4 197.0,30.0 288,30.0 L288,37.0 C197.0,37.0 197.0,346.3 106,346.3 Z" fill="#c08ad6"><title>Australia → Manganese: 12.4% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,346.3 C197.0,346.3 197.0,507.9 288,507.9 L288,512.8 C197.0,512.8 197.0,351.3 106,351.3 Z" fill="#4cc9f0"><title>Australia → Uranium: 8.8% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,351.3 C197.0,351.3 197.0,576.2 288,576.2 L288,611.2 C197.0,611.2 197.0,386.3 106,386.3 Z" fill="#ff7d9c"><title>Australia → Lithium: 62.2% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,399.3 C197.0,399.3 197.0,512.8 288,512.8 L288,533.8 C197.0,533.8 197.0,420.2 106,420.2 Z" fill="#4cc9f0"><title>Kazakhstan → Uranium: 37.3% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,433.2 C197.0,433.2 197.0,37.0 288,37.0 L288,57.8 C197.0,57.8 197.0,454.0 106,454.0 Z" fill="#c08ad6"><title>South Africa → Manganese: 36.9% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,467.0 C197.0,467.0 197.0,315.4 288,315.4 L288,328.9 C197.0,328.9 197.0,480.6 106,480.6 Z" fill="#e08256"><title>Chile → Copper: 24.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,480.6 C197.0,480.6 197.0,611.2 288,611.2 L288,614.0 C197.0,614.0 197.0,483.4 106,483.4 Z" fill="#ff7d9c"><title>Chile → Lithium: 5.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,496.4 C197.0,496.4 197.0,395.4 288,395.4 L288,410.1 C197.0,410.1 197.0,511.1 106,511.1 Z" fill="#f0abfc"><title>Tajikistan → Antimony: 26.1% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,524.1 C197.0,524.1 197.0,533.8 288,533.8 L288,548.2 C197.0,548.2 197.0,538.4 106,538.4 Z" fill="#4cc9f0"><title>Canada → Uranium: 25.5% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,551.4 C197.0,551.4 197.0,614.0 288,614.0 L288,622.4 C197.0,622.4 197.0,559.8 106,559.8 Z" fill="#ff7d9c"><title>Brazil → Lithium: 14.9% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,559.8 C197.0,559.8 197.0,668.1 288,668.1 L288,673.4 C197.0,673.4 197.0,565.1 106,565.1 Z" fill="#7cc4ff"><title>Brazil → Tin: 9.4% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,578.1 C197.0,578.1 197.0,328.9 288,328.9 L288,335.6 C197.0,335.6 197.0,584.8 106,584.8 Z" fill="#e08256"><title>Peru → Copper: 11.9% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,584.8 C197.0,584.8 197.0,673.4 288,673.4 L288,679.6 C197.0,679.6 197.0,591.0 106,591.0 Z" fill="#7cc4ff"><title>Peru → Tin: 11.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,604.0 C197.0,604.0 197.0,269.1 288,269.1 L288,273.1 C197.0,273.1 197.0,608.0 106,608.0 Z" fill="#34d399"><title>Russia → Nickel: 7.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,608.0 C197.0,608.0 197.0,410.1 288,410.1 L288,418.1 C197.0,418.1 197.0,616.0 106,616.0 Z" fill="#f0abfc"><title>Russia → Antimony: 14.3% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,629.0 C197.0,629.0 197.0,622.4 288,622.4 L288,630.0 C197.0,630.0 197.0,636.6 106,636.6 Z" fill="#ff7d9c"><title>Zimbabwe → Lithium: 13.5% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,649.6 C197.0,649.6 197.0,57.8 288,57.8 L288,65.2 C197.0,65.2 197.0,657.1 106,657.1 Z" fill="#c08ad6"><title>Gabon → Manganese: 13.3% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,670.1 C197.0,670.1 197.0,481.8 288,481.8 L288,488.7 C197.0,488.7 197.0,677.0 106,677.0 Z" fill="#c8ff6b"><title>Myanmar → Rare earths: 12.3% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,690.0 C197.0,690.0 197.0,548.2 288,548.2 L288,554.8 C197.0,554.8 197.0,696.6 106,696.6 Z" fill="#4cc9f0"><title>Namibia → Uranium: 11.7% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,709.6 C197.0,709.6 197.0,65.2 288,65.2 L288,70.5 C197.0,70.5 197.0,714.9 106,714.9 Z" fill="#c08ad6"><title>Ghana → Manganese: 9.4% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,727.9 C197.0,727.9 197.0,273.1 288,273.1 L288,278.3 C197.0,278.3 197.0,733.1 106,733.1 Z" fill="#34d399"><title>Philippines → Nickel: 9.3% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,746.1 C197.0,746.1 197.0,139.8 288,139.8 L288,144.1 C197.0,144.1 197.0,750.3 106,750.3 Z" fill="#e6b95e"><title>Madagascar → Graphite: 7.5% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,763.3 C197.0,763.3 197.0,488.7 288,488.7 L288,492.9 C197.0,492.9 197.0,767.6 106,767.6 Z" fill="#c8ff6b"><title>USA → Rare earths: 7.5% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,780.6 C197.0,780.6 197.0,756.5 288,756.5 L288,760.5 C197.0,760.5 197.0,784.6 106,784.6 Z" fill="#ffb86b"><title>Vietnam → Tungsten: 7.1% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,797.6 C197.0,797.6 197.0,144.1 288,144.1 L288,146.9 C197.0,146.9 197.0,800.4 106,800.4 Z" fill="#e6b95e"><title>India → Graphite: 5.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,813.4 C197.0,813.4 197.0,418.1 288,418.1 L288,420.7 C197.0,420.7 197.0,815.9 106,815.9 Z" fill="#f0abfc"><title>Bolivia → Antimony: 4.6% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,828.9 C197.0,828.9 197.0,70.5 288,70.5 L288,86.3 C197.0,86.3 197.0,844.7 106,844.7 Z" fill="#c08ad6"><title>All other producers → Manganese: 28.0% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,844.7 C197.0,844.7 197.0,146.9 288,146.9 L288,154.5 C197.0,154.5 197.0,852.4 106,852.4 Z" fill="#e6b95e"><title>All other producers → Graphite: 13.7% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,852.4 C197.0,852.4 197.0,215.1 288,215.1 L288,222.8 C197.0,222.8 197.0,860.1 106,860.1 Z" fill="#84a5f0"><title>All other producers → Cobalt: 13.7% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,860.1 C197.0,860.1 197.0,278.3 288,278.3 L288,291.1 C197.0,291.1 197.0,872.8 106,872.8 Z" fill="#34d399"><title>All other producers → Nickel: 22.7% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,872.8 C197.0,872.8 197.0,335.6 288,335.6 L288,359.4 C197.0,359.4 197.0,896.6 106,896.6 Z" fill="#e08256"><title>All other producers → Copper: 42.2% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,896.6 C197.0,896.6 197.0,420.7 288,420.7 L288,427.6 C197.0,427.6 197.0,903.5 106,903.5 Z" fill="#f0abfc"><title>All other producers → Antimony: 12.3% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,903.5 C197.0,903.5 197.0,492.9 288,492.9 L288,495.9 C197.0,495.9 197.0,906.5 106,906.5 Z" fill="#c8ff6b"><title>All other producers → Rare earths: 5.4% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,906.5 C197.0,906.5 197.0,554.8 288,554.8 L288,564.2 C197.0,564.2 197.0,915.9 106,915.9 Z" fill="#4cc9f0"><title>All other producers → Uranium: 16.7% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,915.9 C197.0,915.9 197.0,630.0 288,630.0 L288,632.5 C197.0,632.5 197.0,918.4 106,918.4 Z" fill="#ff7d9c"><title>All other producers → Lithium: 4.3% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,918.4 C197.0,918.4 197.0,679.6 288,679.6 L288,700.7 C197.0,700.7 197.0,939.5 106,939.5 Z" fill="#7cc4ff"><title>All other producers → Tin: 37.6% of world production (2024)</title></path>
+    <path class="sk-rb" d="M106,939.5 C197.0,939.5 197.0,760.5 288,760.5 L288,769.0 C197.0,769.0 197.0,948.0 106,948.0 Z" fill="#ffb86b"><title>All other producers → Tungsten: 15.1% of world production (2024)</title></path>
+    <rect x="96" y="30.0" width="10" height="170.2" rx="2" fill="#8b98a5"/>
+    <text x="88" y="115.1" dy="4" text-anchor="end" class="sk-lab">China</text>
+    <rect x="96" y="213.2" width="10" height="50.5" rx="2" fill="#8b98a5"/>
+    <text x="88" y="238.4" dy="4" text-anchor="end" class="sk-lab">Indonesia</text>
+    <rect x="96" y="276.7" width="10" height="49.7" rx="2" fill="#8b98a5"/>
+    <text x="88" y="301.5" dy="4" text-anchor="end" class="sk-lab">DR Congo</text>
+    <rect x="96" y="339.4" width="10" height="46.9" rx="2" fill="#8b98a5"/>
+    <text x="88" y="362.8" dy="4" text-anchor="end" class="sk-lab">Australia</text>
+    <rect x="96" y="399.3" width="10" height="21.0" rx="2" fill="#8b98a5"/>
+    <text x="88" y="409.8" dy="4" text-anchor="end" class="sk-lab">Kazakhstan</text>
+    <rect x="96" y="433.2" width="10" height="20.8" rx="2" fill="#8b98a5"/>
+    <text x="88" y="443.6" dy="4" text-anchor="end" class="sk-lab">South Africa</text>
+    <rect x="96" y="467.0" width="10" height="16.3" rx="2" fill="#8b98a5"/>
+    <text x="88" y="475.2" dy="4" text-anchor="end" class="sk-lab">Chile</text>
+    <rect x="96" y="496.4" width="10" height="14.7" rx="2" fill="#8b98a5"/>
+    <text x="88" y="503.7" dy="4" text-anchor="end" class="sk-lab">Tajikistan</text>
+    <rect x="96" y="524.1" width="10" height="14.4" rx="2" fill="#8b98a5"/>
+    <text x="88" y="531.3" dy="4" text-anchor="end" class="sk-lab">Canada</text>
+    <rect x="96" y="551.4" width="10" height="13.7" rx="2" fill="#8b98a5"/>
+    <text x="88" y="558.3" dy="4" text-anchor="end" class="sk-lab">Brazil</text>
+    <rect x="96" y="578.1" width="10" height="12.9" rx="2" fill="#8b98a5"/>
+    <text x="88" y="584.6" dy="4" text-anchor="end" class="sk-lab">Peru</text>
+    <rect x="96" y="604.0" width="10" height="12.0" rx="2" fill="#8b98a5"/>
+    <text x="88" y="610.0" dy="4" text-anchor="end" class="sk-lab">Russia</text>
+    <rect x="96" y="629.0" width="10" height="7.6" rx="2" fill="#8b98a5"/>
+    <text x="88" y="632.8" dy="4" text-anchor="end" class="sk-lab">Zimbabwe</text>
+    <rect x="96" y="649.6" width="10" height="7.5" rx="2" fill="#8b98a5"/>
+    <text x="88" y="653.3" dy="4" text-anchor="end" class="sk-lab">Gabon</text>
+    <rect x="96" y="670.1" width="10" height="6.9" rx="2" fill="#8b98a5"/>
+    <text x="88" y="673.6" dy="4" text-anchor="end" class="sk-lab">Myanmar</text>
+    <rect x="96" y="690.0" width="10" height="6.6" rx="2" fill="#8b98a5"/>
+    <text x="88" y="693.3" dy="4" text-anchor="end" class="sk-lab">Namibia</text>
+    <rect x="96" y="709.6" width="10" height="5.3" rx="2" fill="#8b98a5"/>
+    <text x="88" y="712.3" dy="4" text-anchor="end" class="sk-lab">Ghana</text>
+    <rect x="96" y="727.9" width="10" height="5.2" rx="2" fill="#8b98a5"/>
+    <text x="88" y="730.5" dy="4" text-anchor="end" class="sk-lab">Philippines</text>
+    <rect x="96" y="746.1" width="10" height="4.2" rx="2" fill="#8b98a5"/>
+    <text x="88" y="748.2" dy="4" text-anchor="end" class="sk-lab">Madagascar</text>
+    <rect x="96" y="763.3" width="10" height="4.2" rx="2" fill="#8b98a5"/>
+    <text x="88" y="765.4" dy="4" text-anchor="end" class="sk-lab">USA</text>
+    <rect x="96" y="780.6" width="10" height="4.0" rx="2" fill="#8b98a5"/>
+    <text x="88" y="782.6" dy="4" text-anchor="end" class="sk-lab">Vietnam</text>
+    <rect x="96" y="797.6" width="10" height="2.8" rx="2" fill="#8b98a5"/>
+    <text x="88" y="799.0" dy="4" text-anchor="end" class="sk-lab">India</text>
+    <rect x="96" y="813.4" width="10" height="2.6" rx="2" fill="#8b98a5"/>
+    <text x="88" y="814.6" dy="4" text-anchor="end" class="sk-lab">Bolivia</text>
+    <rect x="96" y="828.9" width="10" height="119.1" rx="2" fill="#8b98a5"/>
+    <text x="88" y="888.5" dy="4" text-anchor="end" class="sk-lab">All others</text>
+    <rect x="288" y="30.0" width="10" height="56.3" rx="2" fill="#c08ad6"/>
+    <a href="/manganese/"><text x="306" y="58.1" dy="4" text-anchor="start" class="sk-min">Manganese</text></a>
+    <rect x="288" y="98.3" width="10" height="56.3" rx="2" fill="#e6b95e"/>
+    <a href="/graphite/"><text x="306" y="126.4" dy="4" text-anchor="start" class="sk-min">Graphite</text></a>
+    <rect x="288" y="166.5" width="10" height="56.3" rx="2" fill="#84a5f0"/>
+    <a href="/cobalt/"><text x="306" y="194.7" dy="4" text-anchor="start" class="sk-min">Cobalt</text></a>
+    <rect x="288" y="234.8" width="10" height="56.3" rx="2" fill="#34d399"/>
+    <a href="/nickel/"><text x="306" y="263.0" dy="4" text-anchor="start" class="sk-min">Nickel</text></a>
+    <rect x="288" y="303.1" width="10" height="56.3" rx="2" fill="#e08256"/>
+    <a href="/copper/"><text x="306" y="331.2" dy="4" text-anchor="start" class="sk-min">Copper</text></a>
+    <rect x="288" y="371.4" width="10" height="56.3" rx="2" fill="#f0abfc"/>
+    <a href="/antimony/"><text x="306" y="399.5" dy="4" text-anchor="start" class="sk-min">Antimony</text></a>
+    <rect x="288" y="439.6" width="10" height="56.3" rx="2" fill="#c8ff6b"/>
+    <a href="/rare-earths/"><text x="306" y="467.8" dy="4" text-anchor="start" class="sk-min">Rare earths</text></a>
+    <rect x="288" y="507.9" width="10" height="56.3" rx="2" fill="#4cc9f0"/>
+    <a href="/uranium/"><text x="306" y="536.0" dy="4" text-anchor="start" class="sk-min">Uranium</text></a>
+    <rect x="288" y="576.2" width="10" height="56.3" rx="2" fill="#ff7d9c"/>
+    <a href="/lithium/"><text x="306" y="604.3" dy="4" text-anchor="start" class="sk-min">Lithium</text></a>
+    <rect x="288" y="644.5" width="10" height="56.3" rx="2" fill="#7cc4ff"/>
+    <a href="/tin/"><text x="306" y="672.6" dy="4" text-anchor="start" class="sk-min">Tin</text></a>
+    <rect x="288" y="712.7" width="10" height="56.3" rx="2" fill="#ffb86b"/>
+    <a href="/tungsten/"><text x="306" y="740.9" dy="4" text-anchor="start" class="sk-min">Tungsten</text></a>
     </svg>
     <!-- portfolio-sankey:svg:end -->
     <div class="sk-src">Source: BGS World Mineral Statistics, 2024 · Hover a ribbon for the exact share · Mineral names link to each dashboard</div>
     <details class="sk-data">
       <summary>View the data behind this chart</summary>
       <!-- portfolio-sankey:table:start -->
-    <table><thead><tr><th>Mineral</th><th>Producer</th><th>Share of world mine production, 2024</th></tr></thead><tbody><tr><td rowspan="5"><b>Manganese</b></td><td>South Africa</td><td>36.9%</td></tr><tr><td>Gabon</td><td>13.3%</td></tr><tr><td>Australia</td><td>12.4%</td></tr><tr><td>Ghana</td><td>9.4%</td></tr><tr><td>All others</td><td>28.0%</td></tr><tr><td rowspan="4"><b>Graphite</b></td><td>China</td><td>73.9%</td></tr><tr><td>Madagascar</td><td>7.5%</td></tr><tr><td>India</td><td>5.0%</td></tr><tr><td>All others</td><td>13.7%</td></tr><tr><td rowspan="3"><b>Cobalt</b></td><td>DR Congo</td><td>74.6%</td></tr><tr><td>Indonesia</td><td>11.8%</td></tr><tr><td>All others</td><td>13.7%</td></tr><tr><td rowspan="4"><b>Nickel</b></td><td>Indonesia</td><td>61.0%</td></tr><tr><td>Philippines</td><td>9.3%</td></tr><tr><td>Russia</td><td>7.0%</td></tr><tr><td>All others</td><td>22.7%</td></tr><tr><td rowspan="5"><b>Copper</b></td><td>Chile</td><td>24.0%</td></tr><tr><td>DR Congo</td><td>13.8%</td></tr><tr><td>Peru</td><td>11.9%</td></tr><tr><td>China</td><td>8.0%</td></tr><tr><td>All others</td><td>42.2%</td></tr><tr><td rowspan="5"><b>Antimony</b></td><td>China</td><td>42.8%</td></tr><tr><td>Tajikistan</td><td>26.1%</td></tr><tr><td>Russia</td><td>14.3%</td></tr><tr><td>Bolivia</td><td>4.6%</td></tr><tr><td>All others</td><td>12.3%</td></tr><tr><td rowspan="4"><b>Rare earths</b></td><td>China</td><td>74.9%</td></tr><tr><td>Myanmar</td><td>12.3%</td></tr><tr><td>USA</td><td>7.5%</td></tr><tr><td>All others</td><td>5.4%</td></tr><tr><td rowspan="5"><b>Uranium</b></td><td>Kazakhstan</td><td>37.3%</td></tr><tr><td>Canada</td><td>25.5%</td></tr><tr><td>Namibia</td><td>11.7%</td></tr><tr><td>Australia</td><td>8.8%</td></tr><tr><td>All others</td><td>16.7%</td></tr><tr><td rowspan="5"><b>Lithium</b></td><td>Australia</td><td>62.2%</td></tr><tr><td>Brazil</td><td>14.9%</td></tr><tr><td>Zimbabwe</td><td>13.5%</td></tr><tr><td>Chile</td><td>5.0%</td></tr><tr><td>All others</td><td>4.3%</td></tr><tr><td rowspan="5"><b>Tin</b></td><td>China</td><td>25.1%</td></tr><tr><td>Indonesia</td><td>16.9%</td></tr><tr><td>Peru</td><td>11.0%</td></tr><tr><td>Brazil</td><td>9.4%</td></tr><tr><td>All others</td><td>37.6%</td></tr></tbody></table>
+    <table><thead><tr><th>Mineral</th><th>Producer</th><th>Share of world mine production, 2024</th></tr></thead><tbody><tr><td rowspan="5"><b>Manganese</b></td><td>South Africa</td><td>36.9%</td></tr><tr><td>Gabon</td><td>13.3%</td></tr><tr><td>Australia</td><td>12.4%</td></tr><tr><td>Ghana</td><td>9.4%</td></tr><tr><td>All others</td><td>28.0%</td></tr><tr><td rowspan="4"><b>Graphite</b></td><td>China</td><td>73.9%</td></tr><tr><td>Madagascar</td><td>7.5%</td></tr><tr><td>India</td><td>5.0%</td></tr><tr><td>All others</td><td>13.7%</td></tr><tr><td rowspan="3"><b>Cobalt</b></td><td>DR Congo</td><td>74.6%</td></tr><tr><td>Indonesia</td><td>11.8%</td></tr><tr><td>All others</td><td>13.7%</td></tr><tr><td rowspan="4"><b>Nickel</b></td><td>Indonesia</td><td>61.0%</td></tr><tr><td>Philippines</td><td>9.3%</td></tr><tr><td>Russia</td><td>7.0%</td></tr><tr><td>All others</td><td>22.7%</td></tr><tr><td rowspan="5"><b>Copper</b></td><td>Chile</td><td>24.0%</td></tr><tr><td>DR Congo</td><td>13.8%</td></tr><tr><td>Peru</td><td>11.9%</td></tr><tr><td>China</td><td>8.0%</td></tr><tr><td>All others</td><td>42.2%</td></tr><tr><td rowspan="5"><b>Antimony</b></td><td>China</td><td>42.8%</td></tr><tr><td>Tajikistan</td><td>26.1%</td></tr><tr><td>Russia</td><td>14.3%</td></tr><tr><td>Bolivia</td><td>4.6%</td></tr><tr><td>All others</td><td>12.3%</td></tr><tr><td rowspan="4"><b>Rare earths</b></td><td>China</td><td>74.9%</td></tr><tr><td>Myanmar</td><td>12.3%</td></tr><tr><td>USA</td><td>7.5%</td></tr><tr><td>All others</td><td>5.4%</td></tr><tr><td rowspan="5"><b>Uranium</b></td><td>Kazakhstan</td><td>37.3%</td></tr><tr><td>Canada</td><td>25.5%</td></tr><tr><td>Namibia</td><td>11.7%</td></tr><tr><td>Australia</td><td>8.8%</td></tr><tr><td>All others</td><td>16.7%</td></tr><tr><td rowspan="5"><b>Lithium</b></td><td>Australia</td><td>62.2%</td></tr><tr><td>Brazil</td><td>14.9%</td></tr><tr><td>Zimbabwe</td><td>13.5%</td></tr><tr><td>Chile</td><td>5.0%</td></tr><tr><td>All others</td><td>4.3%</td></tr><tr><td rowspan="5"><b>Tin</b></td><td>China</td><td>25.1%</td></tr><tr><td>Indonesia</td><td>16.9%</td></tr><tr><td>Peru</td><td>11.0%</td></tr><tr><td>Brazil</td><td>9.4%</td></tr><tr><td>All others</td><td>37.6%</td></tr><tr><td rowspan="3"><b>Tungsten</b></td><td>China</td><td>77.8%</td></tr><tr><td>Vietnam</td><td>7.1%</td></tr><tr><td>All others</td><td>15.1%</td></tr></tbody></table>
     <!-- portfolio-sankey:table:end -->
     </details>
   </div>
@@ -1448,7 +1490,7 @@ footer a.ig svg{width:13px;height:13px}
     </details>
     <details>
       <summary>Which minerals and industries does mineral.watch cover?</summary>
-      <p>Ten mineral dashboards are live — graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel and tin — alongside an Oil &amp; Gas dashboard (chokepoints, flows, shut-ins, LNG, sanctions, prices and companies) and a Green transition dashboard on the clean-energy supply chain and the EU's green funds. The Mineral Explorer adds production and trade maps for 111 commodities from 1970 to 2024, with tungsten, gallium and germanium next in the pipeline.</p>
+      <p>Eleven mineral dashboards are live — graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel, tin and tungsten — alongside an Oil &amp; Gas dashboard (chokepoints, flows, shut-ins, LNG, sanctions, prices and companies) and a Green transition dashboard on the clean-energy supply chain and the EU's green funds. The Mineral Explorer adds production and trade maps for 111 commodities from 1970 to 2024, with the chip metals gallium and germanium next in the pipeline.</p>
     </details>
     <details>
       <summary>Can I download the data behind mineral.watch?</summary>
@@ -1531,6 +1573,8 @@ const liTrend = [[2018,95],[2019,86],[2020,82.5],[2021,107], // kt lithium conte
   [2022,146],[2023,204],[2024,222],[2025,290]];
 const coTrend = [[2018,153.6],[2019,119.1],[2020,130.2],[2021,133.8], // kt cobalt content (BGS 2018–2024)
   [2022,165.7],[2023,203.1],[2024,268.5]];
+const wTrend = [[2018,81768],[2019,89989],[2020,85908],[2021,83548], // tonnes tungsten content (BGS 2018–2024)
+  [2022,82160],[2023,82338],[2024,75816]];
 const snTrend = [[2018,325403],[2019,319861],[2020,294289],[2021,278614], // tonnes tin content (BGS 2018–2024)
   [2022,285575],[2023,308297],[2024,294722]];
 const sbTrend = [[2018,173841],[2019,128547],[2020,124715],[2021,100284], // tonnes antimony content (BGS 2018–2024)
@@ -1574,6 +1618,12 @@ function slideAccent(el){
     .getPropertyValue("--accent").trim();
 }
 const featDraw = {
+  chFeatW(el){
+    const a = slideAccent(el);
+    featLine(el, wTrend.map(d=>d[0]), [
+      { data:wTrend.map(d=>d[1]), borderColor:a, backgroundColor:a+"22", fill:true, tension:0, pointRadius:3, pointBackgroundColor:a }
+    ], { min:0, max:100000, ticks:{ callback:v=>fmt(v) } }, v=>fmt(v)+" W", false);
+  },
   chFeatSn(el){
     const a = slideAccent(el);
     featLine(el, snTrend.map(d=>d[0]), [

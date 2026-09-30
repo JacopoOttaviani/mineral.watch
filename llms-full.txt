@@ -1,6 +1,6 @@
 # mineral.watch
 
-> Independent open data and intelligence portal on the global mineral, oil and gas, and green-transition industries. Cross-references verified official statistics from USGS, BGS, UN Comtrade, the IEA, the US EIA, OPEC and the Energy Institute on production, reserves, trade flows, refining and manufacturing concentration, chokepoints, prices and policy — who produces, who refines, who ships and who depends on whom — and publishes the compiled datasets openly. Ten mineral dashboards (graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel, tin), an oil and gas dashboard, a green-transition dashboard, a 111-commodity Mineral Explorer and an open data catalogue.
+> Independent open data and intelligence portal on the global mineral, oil and gas, and green-transition industries. Cross-references verified official statistics from USGS, BGS, UN Comtrade, the IEA, the US EIA, OPEC and the Energy Institute on production, reserves, trade flows, refining and manufacturing concentration, chokepoints, prices and policy — who produces, who refines, who ships and who depends on whom — and publishes the compiled datasets openly. Eleven mineral dashboards (graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel, tin, tungsten), an oil and gas dashboard, a green-transition dashboard, a 111-commodity Mineral Explorer and an open data catalogue.
 
 mineral.watch is not affiliated with any government, mining or energy company, or trade body, and holds no commercial position in the minerals, fuels or companies it covers. Corrections and data tips: hello@mineral.watch. When citing, name mineral.watch and the primary source given for the figure.
 
@@ -17,7 +17,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - [Home](https://mineral.watch/): what the portal covers (minerals, oil and gas, green transition), why supply-chain concentration matters, data sources and methodology, FAQ, research commissions.
 - [Open data catalogue](https://mineral.watch/data/): every dataset the site publishes — 110 BGS World Mineral Statistics series (1970-2024) as JSON with units, year ranges and country counts, the reference files, the curated dataset behind each dashboard, the file format, licence and citation format.
 - [Mineral Explorer](https://mineral.watch/explorer/): interactive world map of production, imports and exports for 111 mineral and energy commodities and 190 countries, 1970-2024, with volume and supply-concentration views; deep-linkable per commodity (?commodity=<slug>). Data: BGS World Mineral Statistics.
-- [Supply chain: mined vs refined](https://mineral.watch/supply-chain/): side-by-side maps of where cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin are mined and where they are refined or smelted, 1970-2024, with top-3 country shares at each stage.
+- [Supply chain: mined vs refined](https://mineral.watch/supply-chain/): side-by-side maps of where cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony, tin and tungsten are mined and where they are refined or smelted, 1970-2024, with top-3 country shares at each stage.
 - [Graphite dashboard](https://mineral.watch/graphite/): interactive world map of mines, processing and anode plants, trade flows; production and reserves charts 2018-2025; refining process explainer; China's share of mine output and battery-grade refining; military and investment implications.
 - [Rare earths dashboard](https://mineral.watch/rare-earths/): interactive world map of mines, separation plants and magnet factories; the 17 elements explained; production and reserves charts; China's export-controls timeline (2010-2026); refining and magnet concentration; military and investment implications.
 - [Copper dashboard](https://mineral.watch/copper/): interactive world map of mines, smelters/refineries, disrupted operations and development projects; the ore-to-cathode chain explained; production and reserves charts; the smelting chokepoint and treatment-charge collapse; the 2023-2026 timeline (Cobre Panama, US Section 232 tariffs, Grasberg, El Teniente, record prices); military and investment implications.
@@ -30,6 +30,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - [Antimony dashboard](https://mineral.watch/antimony/): interactive world map of mines and gold-antimony operations, roasters and smelters, idled assets and development projects; the stibnite-to-trioxide-and-metal chain explained (concentrate, ATO, antimonial lead, sodium antimonate, antimony trisulfide); production, reserves and price charts; China's export-controls timeline (Aug 2024 licensing, Dec 2024 US ban, Nov 2025 suspension), the smelting chokepoint, the price spike and the Western supply-chain rebuild (Perpetua/Stibnite, US Antimony, Larvotto Hillgrove, Nyrstar Port Pirie); dual-use and investment implications.
 
 - [Tin dashboard](https://mineral.watch/tin/): interactive world map of mines, smelters and refineries, disrupted and restarting operations (Man Maw, Bangka, the Kivus) and development projects (South Crofty, Martinsville, Taronga, Oropesa, Syrymbet); the cassiterite-to-ingot-to-solder chain explained (concentrate, Grade A ingot, high-purity tin, SAC305 solder, tinplate, tin chemicals, bronze, secondary tin, the 3TG conflict-minerals rules); mine and refined production, reserves, end-use and price charts; China's smelting chokepoint (~52% of refined output), Indonesia's crackdown, seized smelters and export-ban study, Myanmar's Wa State suspension and 2026 slow restart, Congo's Bisie under M23 pressure, the AI-solder demand story, the 1985-2026 timeline (ITC collapse, Dodd-Frank 3TG, Man Maw, the 2022 and 2026 records); dual-use, stockpile and investment implications; company tracker. Aimed at tin-industry businesses (miners, smelters, traders, solder and tinplate makers), geopolitics researchers and think tanks.
+- [Tungsten dashboard](https://mineral.watch/tungsten/): interactive world map of scheelite and wolframite mines, APT, powder and carbide plants, idled and restarting operations (Hemerdon, Tyrnyauz, Cantung, La Parrilla) and development projects (Northern Katpar and Upper Kairakty, Mactung, Sisson, Pilot Mountain, Springer, IMA, Zhuxi, Aksoran); the ore-to-APT-to-carbide chain explained (concentrate and the metric ton unit, ammonium paratungstate, tungsten oxide, metal and carbide powders, cemented carbide, tungsten heavy alloy, tool steels and ferrotungsten, mill products, the 3TG conflict-minerals rules, secondary tungsten); mine production, reserves, China export-volume, end-use, US import-source and price charts; China's 4 February 2025 export controls, the 58,000 t 2025 mining quota, the 15 licensed exporters for 2026-27 and the 6 January 2026 dual-use ban on Japan; the APT price shock (~$331/mtu at the start of 2025 to a ~$3,185 peak in April 2026); the $2 billion US Defense Logistics Agency stockpile contract and $450 million Pentagon investment in Elmet (14 September 2026); the Western rebuild (Sangdong commercial from September 2026, Hemerdon first ore 11 September 2026, Boguty, Kazakhstan's $1.6 billion US-backed giants); the 1783-2026 timeline; dual-use, stockpile and investment implications; company tracker. Aimed at tungsten-industry businesses (miners, APT and carbide producers, cutting-tool and hardmetal makers, defence and aerospace procurement), geopolitics researchers and think tanks.
 
 - [Oil & gas dashboard](https://mineral.watch/oil-gas/): interactive world map of giant fields and basins, export terminals, refineries and LNG plants, the eight maritime oil chokepoints, and sites disrupted or sanctioned in 2026; the benchmark ladder explained (Dated Brent, WTI, Dubai/Oman, Urals and the price cap, WCS, official selling prices, diesel/jet/gasoline/LPG cracks, Henry Hub, TTF, JKM, the Hormuz toll, strategic stocks); production, reserves, shut-in, gas, LNG and price charts; the 2026 Strait of Hormuz closure and Gulf shut-in ledger, pipeline bypasses (Petroline, ADCOP, Kirkuk-Ceyhan), the Ras Laffan LNG outage, IEA emergency stock release, sanctions and the shadow fleet (Russia, Iran, Venezuela, Kazakhstan/CPC), OPEC+ quota unwinding, the 2014-2026 timeline; capital flows and a tracker of state producers, majors, LNG/midstream operators and traders. Aimed at energy businesses, geopolitics researchers and think tanks.
 
@@ -128,6 +129,20 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - United States: no tin mined since 1993 or smelted since 1989; net import reliance ~77% of apparent consumption (2025); 2025 refined imports 31,900 t — Peru 49%, Bolivia 23%, Indonesia 9%, Poland 5%; ~17,000 t recycled from scrap in 2025, with old scrap covering 22% of consumption (USGS). Nathan Trotter received US$19m under DPA Title III (late 2024), signed a letter of intent with Rwanda's Trinity Metals (May 2025) and began building a US$65m tin production facility in Martinsville, Virginia (September 2025), due to operate by late 2026. In March 2026 the Defense Logistics Agency sought information on acquiring 1,978 t of LME-grade tin and reprocessing 1,978 t of stockpile ingots affected by tin pest. On 14 January 2026 Proclamation 11001 declined, for now, to impose Section 232 tariffs on processed critical minerals.
 - Cornish Metals' South Crofty (Cornwall, closed 1998) is fully financed for restart: a US$210m senior secured Nordic bond (13.5%, six years), a £57m equity raise including £28.6m from the UK National Wealth Fund, a £52m NWF-Vision Blue shareholder facility, and a non-binding US EXIM letter of interest for up to US$225m; first tin targeted for mid-2028.
 - Tin is a '3TG' conflict mineral under s.1502 of the US Dodd-Frank Act (2010) and EU Regulation 2017/821 (applied from 2021); it is on the US and UK critical-minerals lists but was not included in the EU's 2023 critical raw materials list.
+- World tungsten mine production, 2025 (USGS estimate): ~85,000 t of tungsten content (2024: ~82,000 t). China ~67,000 t (~79%), Vietnam ~3,000 t, Kazakhstan ~2,400 t (all from the Boguty mine, started November 2024), Russia ~2,000 t, North Korea ~2,000 t, Bolivia ~1,700 t, Rwanda ~1,300 t, Australia ~1,000 t, Austria ~840 t, Spain ~800 t, Portugal ~700 t. BGS puts China at 59,000 t of a 75,800 t world total for 2024 (78%); the two agencies differ by ~8,000 t on Chinese output.
+- Global tungsten reserves (USGS 2026): >4.7 Mt of tungsten content — China 2.5 Mt (~53%), Australia 570,000 t (220,000 t JORC-compliant), Russia 400,000 t, Vietnam 170,000 t, Spain 66,000 t, North Korea 29,000 t, Austria 10,000 t, Portugal 3,400 t, other 950,000 t. Kazakhstan's Northern Katpar and Upper Kairakty alone hold 410,000 t of WO3 in JORC reserves (1.4 Mt of resources). China's Zhuxi deposit (Jiangxi, ~2.86 Mt WO3 by Chinese surveys) is the largest ever found.
+- China's tungsten export controls: dual-use export licensing on tungsten, tellurium, bismuth, molybdenum and indium items announced by MOFCOM and customs on 4 February 2025, effective immediately (retaliation for the US 10% tariff); first-batch 2025 mining quota 58,000 t of 65% WO3 concentrate (-4,000 t, -6.45%; Jiangxi 21,300 t, Hunan 15,530 t, Henan 7,050 t); only 15 companies licensed to export tungsten in 2026-27 (December 2025); dual-use exports to Japanese military end users banned from 6 January 2026 (2026 Catalogue of Dual-Use Items, after PM Takaichi's Taiwan remarks). The November 2025 Trump-Xi truce left tungsten licensing untouched. The US raised Section 301 tariffs on Chinese tungsten products to 50% at the end of 2024.
+- China's tungsten exports (CTIA / customs via SMM): all tungsten products 15,514.7 t in 2025 (-19.7%; 13,095.7 t of metal content, -20.0%); APT + tungsten powder + carbide powder 3,877 t (-41.7%); APT 782 t in 2024 vs 243 t in January-November 2025 (~57%, 138 t, to Japan); APT exports zero in January-February 2026; tungsten metal exports 1,495.3 t in January-February 2026 (-27.8%), tungsten powder -61.2%; Chinese tungsten-ore imports surged as domestic mines could not feed the plants.
+- Tungsten prices (ammonium paratungstate 88.5% WO3, cif Rotterdam, per metric ton unit = 10 kg WO3 = 7.93 kg W): ~$331 at the start of 2025 and ~$675 at the end (Argus via USGS); ~$850 on 12 December 2025 (SMM); $900-940 in January 2026 and $1,650-1,900 by mid-February (Fastmarkets); peak ~$3,185 in April 2026 (SMM, +~350% year-to-date, +~900% in twelve months); $2,500-2,800 in late June (Fastmarkets); $2,900-3,100 on 10 September 2026 (SMM). Rotterdam 65% concentrate averaged $252/mtu in 2024 and $380 in 2025, rising from $266 to $551 over 2025 (USGS). Ferro-tungsten $200-210/kg W in February 2026 vs $45-46 a year earlier (Fastmarkets). Tungsten has no exchange contract.
+- Tungsten end uses (ITIA): cemented carbide ~65%, steels and superalloys ~14%, mill products and heavy alloys ~12%, chemicals and other ~9%; ~60% cemented carbide in the United States (USGS). Roughly a third of world supply is recycled scrap. USGS lists no substitute without a loss of performance.
+- United States: no tungsten mined since 2015; seven companies convert concentrate, APT, oxide or scrap to powders; net import reliance >50% of apparent consumption; import sources 2021-24: China (incl. Hong Kong) 26%, Germany 14%, Bolivia 8%, Vietnam 8%; 2025 imports ~1,700 t of ores and concentrates and ~10,000 t of other forms; FY2025 stockpile plan listed 2,041 t of potential tungsten acquisitions. From 1 January 2027, under 10 U.S.C. 4872, defence contractors may not deliver tungsten heavy alloy or powder melted or produced in China, Russia, North Korea or Iran. Defense Production Act Title III awards: Fireweed's Mactung US$15.8m (December 2024), Northcliff's Sisson US$15m, Guardian Metal's Pilot Mountain US$6.2m.
+- Elmet Group (Nasdaq: ELMT; Lewiston, Maine; $120.4m IPO on 22 April 2026): on 14 September 2026 Elmet Technologies won a US Defense Logistics Agency IDIQ stockpile contract with a $2 billion ceiling and $150 million guaranteed for tungsten ores, concentrates and sodium tungstate (base period to 30 August 2031, option to 2033), and the Department of War committed $450 million of redeemable preferred equity ($200m at closing, warrants over 19.9%, board seat); >$165m of new plant in Lewiston (ME), Coldwater (MI) and Euclid (OH); ~$150m for the Springer Tungsten Complex JV (Imlay, Nevada) with Blue Moon Metals and EQ Resources; on 24 September 2026 Elmet agreed to buy 4.99% of Masan High-Tech Materials for $124.75m (valuing it at ~$2.5bn) with an eight-year supply deal for ~1,250 t/yr of WO3-equivalent.
+- Almonty Industries' Sangdong mine (Yeongwol, Korea; Nasdaq: ALM, TSX: AII): first ore December 2025, processing from July 2026, mining-facility certificates 17 September 2026, Phase 1 commercially operational 21 September 2026; Phase 1 ~230,000 mtu WO3/yr (~1,800 t W), Phase 2 doubling from 2027; amended July 2026 offtake with Global Tungsten & Powders (Plansee) for >90% of Phase 1 — 4.41 million mtu over 21 years, minimum 210,000 mtu/yr after ramp-up; 40 t/month of tungsten oxide contracted to US defence contractor Tungsten Parts Wyoming; KfW IPEX letter of intent for up to $50m for a downstream oxide plant; Q1 2026 sales C$25.4m (vs C$7.9m).
+- Tungsten West's Hemerdon mine (Devon, UK; AIM: TUN; failed under Wolf Minerals in October 2018): first ore through the rebuilt plant 11 September 2026; phase-1 fines gravity restart Q3 2026, full commissioning Q1 2027; steady-state target 332,000 mtu WO3/yr (3,320 t WO3, the largest tungsten mine in the West); financing: US$25m bridge loan (Gregory Coffey), US$85m debt package under diligence, proposed up to GBP71m from the UK National Wealth Fund (GBP36m equity at 36p, GBP25m debt facility, GBP10m accordion).
+- Kazakhstan: Boguty (Almaty region; China's Jiaxin International via Aral Kegen / Zhetisu Tungsten; ~$300m) started November 2024, planned 3.3 Mt of ore in 2025 and 4.95 Mt by 2027, record revenue ~$136m in 2025; Northern Katpar and Upper Kairakty (Shet district, Karagandy; Cove Capital 70% / Tau-Ken Samruk 30%): 410,000 t WO3 JORC reserves, 1.4 Mt resources, ~12,000 t/yr of tungsten in APT planned (~5,000 + ~7,000), >=$1.1bn capex, US EXIM letter of interest $900m and DFC $700m, definitive feasibility study July 2026 to end-2027, announced as a Kazakhstan-US joint venture in October 2025; Aksoran (Esil-Mining) development 2027, production 2028.
+- Japan (cut off from Chinese APT in February 2026): imports of controlled tungsten products in April 2026 were 50% below the 2025 monthly average and 63% below April 2024; Sumitomo Electric (about 30% of raw material from China) stopped Chinese procurement by May 2026, raised cutting-tool prices up to 60% and is building a ~$100m recycling plant for early 2028 (+~50% capacity); Mitsubishi Materials tripled some tungsten prices in June 2026, is investing ~$64m in recycling (+40% at H.C. Starck Goslar, bought from Masan for $134.5m in December 2024) and plans to double Akita capacity by 2028-29; US tungsten-scrap exports to Japan rose 24-fold in January-March 2026; Singapore became Japan's largest supplier by April 2026.
+- Other producers and projects: EQ Resources (ASX: EQR; Mt Carbine, Queensland and Barruecopardo, Spain) produced 118,946 mtu in FY2026 (-29%) on record sales of A$160m (+142%), a record A$79m quarter and 14,255 mtu in July 2026; Group 6 Metals (ASX: G6M; Dolphin, King Island) processed a record 77,953 t of ore in the June 2026 quarter (21,297 mtu WO3), began underground mining and signed a A$110-120m three-year HMR Drilling contract after a A$7.5m Tasmanian government loan in May 2025; Guardian Metal's Pilot Mountain PFS (30 June 2026): 15,916 t WO3 over 8 years, US$1.058bn after-tax free cash flow, one-year payback, first production Q4 2028; Fireweed's Mactung feasibility study due 2027; Russia's Tyrnyauz (Elbrusmetal / Rostec; ~37% of Russian reserves; 50bn roubles) drilling in 2025, mining targeted ~2028; CMOC's Sandaozhuang produced 7,114 t of tungsten in 2025; Xiamen Tungsten: 46.469bn yuan revenue in 2025 (+31.4%), 12,000 t smelting capacity; four groups (Minmetals, CMOC, Xiamen Tungsten, Jiangxi Tungsten) ~45% of Chinese output.
+- Tungsten is a '3TG' conflict mineral under s.1502 of the US Dodd-Frank Act (2010) and EU Regulation 2017/821; Rwanda's Nyakabingo (Trinity Metals) is Africa's largest tungsten mine. Tungsten is on the US critical minerals list, a strategic raw material under the EU Critical Raw Materials Act, and on the UK, Japanese and Korean lists.
 - Green transition — deployment (2025): 664 GW of solar PV installed worldwide, +12%, global fleet >3 TW (SolarPower Europe); 165 GW of wind, +40%, of which 9.3 GW offshore and >120 GW in China (GWEC); more than 20 million electric cars sold, one in four new cars, ~55% of sales in China, 28% in Europe, <10% in the US (IEA GEVO 2026); EU solar 65.1 GW (first decline since 2016), EU wind 15.1 GW, EU battery storage 27.1 GWh, EU battery-electric car share 17.4%.
 - Green transition — investment (IEA World Energy Investment 2026): $3.4 tn total energy investment in 2026, of which $2.2 tn clean energy vs $1.2 tn oil, gas and coal; solar $365 bn, grids $550 bn, battery storage >$100 bn; China almost a third of clean-energy investment. US: $34.8 bn of clean-energy projects cancelled in 2025 (E2), ~$40 bn and 53,000 jobs by mid-2026 (EDF/Atlas) after the One Big Beautiful Bill Act (4 July 2025).
 - Green transition — manufacturing concentration (IEA ETP 2026, 2025 data): China ~85% of solar supply-chain capacity (95%+ wafers, >80% modules), >80% of battery-cell production (~85% cathode, >90% anode material), 60% of wind-turbine production capacity (Europe 19%, US 9%), ~60% of electrolyser manufacturing, 35% of heat-pump capacity (US 25%, EU 20%). CATL 39.2% and BYD 16.4% of 2025 EV-battery installations (SNE Research, 1,187 GWh total). Chinese OEMs ~70% of 2025 wind-turbine orders (215 GW, Wood Mackenzie). Battery pack price $108/kWh in 2025, LFP $81, stationary storage $70 (BNEF).
@@ -159,6 +174,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - USGS National Minerals Information Center — Mineral Commodity Summaries
 - British Geological Survey — World Mineral Statistics
 - International Tin Association (refined-production reports, tin-use survey, price notes), CRU Tin Monitor via USGS Mineral Industry Surveys, London Metal Exchange prices, International Crisis Group (tin dashboard)
+- International Tungsten Industry Association (end uses, recycling), China Tungsten Industry Association and Chinese customs data via SMM (export volumes, mining quotas), Fastmarkets, SMM and Argus (via USGS) APT and concentrate price assessments, Chinese MOFCOM export-control announcements, US Defense Logistics Agency notices, company disclosures (tungsten dashboard)
 - UN Comtrade — bilateral trade flows
 - IEA — Critical Minerals demand scenarios and supply-chain analysis
 - World Bank WITS
@@ -198,7 +214,7 @@ URL: https://mineral.watch/antimony/
 
 Open data visualisation tracking the global antimony supply chain: China's mines and smelters, the 2024 export ban, the fivefold price spike, Tajikistan's rise and the West's scramble to rebuild a supply chain it abandoned — built on USGS, BGS, trade and price-agency data.
 
-Last updated: 2026-09-09
+Last updated: 2026-09-29
 
 ### Dataset
 
@@ -249,7 +265,7 @@ URL: https://mineral.watch/cobalt/
 
 Open data visualisation tracking the global cobalt supply chain: the DRC's industrial mines and artisanal diggers, Indonesia's rise, China's refining grip, the export-quota gamble and the battery industry's escape attempt. Built on USGS, Cobalt Institute, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-09
+Last updated: 2026-09-29
 
 ### Dataset
 
@@ -301,7 +317,7 @@ URL: https://mineral.watch/copper/
 
 Open data visualisation tracking the global copper supply chain: mines, smelters, refineries, tariffs, the smelting chokepoint and record prices. Built on USGS, ICSG, IEA and BGS data.
 
-Last updated: 2026-09-09
+Last updated: 2026-09-29
 
 ### Dataset
 
@@ -352,15 +368,15 @@ That's exactly what we do. We produce commissioned deep-dive reports on copper, 
 
 URL: https://mineral.watch/data/
 
-Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 12 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
+Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 13 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
 
-Last updated: 2026-09-11
+Last updated: 2026-09-30
 
 ### Dataset
 
 mineral.watch open data catalogue
 
-Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 12 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
+Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 13 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
 
 - Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -370,7 +386,7 @@ URL: https://mineral.watch/explorer/
 
 Interactive world map of mineral production, imports and exports for 111 commodities, 1970–2024, with a supply-concentration view. Data from the British Geological Survey.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-29
 
 ### Dataset
 
@@ -391,7 +407,7 @@ URL: https://mineral.watch/graphite/
 
 Open data visualisation tracking the global graphite supply chain: mines, trade flows, processing hubs and prices. Built on USGS, BGS, UN Comtrade and IEA data.
 
-Last updated: 2026-09-09
+Last updated: 2026-09-29
 
 ### Dataset
 
@@ -433,7 +449,7 @@ URL: https://mineral.watch/green/
 
 Open data visualisation tracking the green transition's supply chain: who builds the world's solar modules, battery cells, wind turbines and electrolysers, which minerals they consume, China's ~80% manufacturing grip, Europe's gigafactory reckoning and where the EU's green money goes — Innovation Fund, Recovery and Resilience Facility, Just Transition Fund, Modernisation Fund, Hydrogen Bank and more. Built on IEA, IRENA, GWEC, BNEF and European Commission data.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-29
 
 ### Dataset
 
@@ -490,7 +506,7 @@ URL: https://mineral.watch/lithium/
 
 Open data visualisation tracking the global lithium supply chain: hard-rock mines, brine operations, converters, the China refining chokepoint, the price whipsaw and the battery boom. Built on USGS, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-09
+Last updated: 2026-09-29
 
 ### Dataset
 
@@ -541,7 +557,7 @@ URL: https://mineral.watch/manganese/
 
 Open data visualisation tracking the global manganese supply chain: the mines of the Kalahari, Gabon and Groote Eylandt, China's refining chokepoint, the steel backbone, the battery pivot and the deep-sea nodule race. Built on USGS, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-09
+Last updated: 2026-09-29
 
 ### Dataset
 
@@ -592,7 +608,7 @@ URL: https://mineral.watch/nickel/
 
 Open data visualisation tracking the global nickel supply chain: Indonesia's two-thirds grip on mining, the Chinese-built smelter parks, the class-1/class-2 divide, the 2022 LME squeeze, the quota machine and the battery chemistry war. Built on USGS, INSG, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-09
+Last updated: 2026-09-29
 
 ### Dataset
 
@@ -648,7 +664,7 @@ URL: https://mineral.watch/oil-gas/
 
 Open data visualisation tracking global oil and gas: the 2026 Strait of Hormuz closure and the largest supply disruption in oil-market history, the Gulf shut-in ledger, pipeline bypasses, the LNG shock, sanctions and the shadow fleet, OPEC+, prices and the companies that move energy. Built on EIA, IEA, OPEC, BGS, Energy Institute and tanker-tracking data — for energy businesses, geopolitics researchers and think tanks.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-29
 
 ### Dataset
 
@@ -703,7 +719,7 @@ URL: https://mineral.watch/rare-earths/
 
 Open data visualisation tracking the global rare earth supply chain: mines, separation plants, magnet factories, export controls and prices. Built on USGS, IEA and trade data.
 
-Last updated: 2026-09-09
+Last updated: 2026-09-29
 
 ### Dataset
 
@@ -749,15 +765,15 @@ That's exactly what we do. We produce commissioned deep-dive reports on rare ear
 
 URL: https://mineral.watch/supply-chain/
 
-Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin, 1970–2024. Data from the British Geological Survey.
+Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony, tin and tungsten, 1970–2024. Data from the British Geological Survey.
 
-Last updated: 2026-09-11
+Last updated: 2026-09-30
 
 ### Dataset
 
 Mined vs refined — where strategic minerals are mined and where they are processed, 1970–2024
 
-Paired country-level series of mine-stage and refined/smelter-stage production for cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony and tin, 1970–2024, compiled by mineral.watch from BGS World Mineral Statistics to show how supply-chain concentration shifts from the mine to the refinery. Mine-stage figures for cobalt, copper and nickel are metal content; refined figures are gross tonnes.
+Paired country-level series of mine-stage and refined/smelter-stage production for cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony, tin and tungsten, 1970–2024, compiled by mineral.watch from BGS World Mineral Statistics to show how supply-chain concentration shifts from the mine to the refinery. Mine-stage figures for cobalt, copper and nickel are metal content; refined figures are gross tonnes.
 
 - Temporal coverage: 1970/2024
 - Variables: Mine production, Refined production, Smelter production, Top-3 country share
@@ -777,6 +793,7 @@ Paired country-level series of mine-stage and refined/smelter-stage production f
 - Download: https://mineral.watch/map_data/data/antimony-mine.json (Antimony, mine — production by country, 1970–2024)
 - Download: https://mineral.watch/map_data/data/tin-mine.json (Tin, mine — production by country, 1970–2024)
 - Download: https://mineral.watch/map_data/data/tin-smelter.json (Tin, smelter — production by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/tungsten-mine.json (Tungsten, mine — production by country, 1970–2024)
 - Based on: https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/
 
 ## mineral.watch › Tin
@@ -785,7 +802,7 @@ URL: https://mineral.watch/tin/
 
 Open data visualisation tracking the global tin supply chain: Indonesia's crackdown and export-ban plans, Myanmar's Wa State mega-mine, Congo's Bisie under M23 pressure, China's smelting grip, the 2026 price records and the AI solder boom — built on USGS, BGS, LME, CRU and ITA data, for tin-industry businesses, geopolitics researchers and think tanks.
 
-Last updated: 2026-09-11
+Last updated: 2026-09-29
 
 ### Dataset
 
@@ -831,13 +848,64 @@ Because every guided weapon, radar, radio and satellite is soldered with it, eve
 
 That's exactly what we do. We produce commissioned deep-dive reports for tin-industry businesses — miners, smelters, traders, solder and tinplate makers, electronics procurement teams — and for geopolitics researchers and think tanks, covering angles such as mine-to-smelter supply-chain mapping, concentrate and refined trade flows, Indonesian and Myanmar policy scenarios, conflict-minerals exposure and traceability, the Western project pipeline and its timelines, stockpiling and defence demand, and price scenarios. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
 
+## mineral.watch › Tungsten
+
+URL: https://mineral.watch/tungsten/
+
+Open data visualisation tracking the global tungsten supply chain: China's export controls and 79% grip on mine supply, the 2026 price shock (APT up roughly ninefold), Japan's cut-off, the $2 billion US stockpile contract, and the new mines in Korea, Devon and Kazakhstan — built on USGS, BGS, Fastmarkets, SMM and company data, for carbide and tool makers, defence procurement teams, geopolitics researchers and think tanks.
+
+Last updated: 2026-09-30
+
+### Dataset
+
+mineral.watch — Global Tungsten Supply Chain Data
+
+Mines, APT, oxide and carbide plants, restarting operations and development projects, mine production, reserves, China's export volumes and quotas, prices, US import sources, end uses, defence procurement rules and processing concentration for the global tungsten supply chain.
+
+- Temporal coverage: 2014/2026
+- Variables: Mine production, Reserves, Export volumes, Mining quotas, Processing concentration, Prices, Import sources, End uses, Companies
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/data/tungsten-mine.json (Tungsten, mine — production by country, 1970–2024)
+- Download: https://mineral.watch/map_data/data/tungsten.json (Tungsten — imports, exports by country, 1970–2024)
+- Sources: USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Tungsten); British Geological Survey, World Mineral Statistics; International Tungsten Industry Association (end uses); China Tungsten Industry Association and Chinese customs data via SMM (export volumes); Fastmarkets, Shanghai Metals Market and Argus (via USGS) ammonium paratungstate and concentrate price assessments; Company disclosures (Almonty, Elmet Group, EQ Resources, Group 6 Metals, Tungsten West, Guardian Metal, Fireweed Metals, Masan High-Tech Materials, Jiaxin International, CMOC, Xiamen Tungsten), Chinese Ministry of Commerce announcements, US Defense Logistics Agency notices
+
+### Questions and answers
+
+**What is tungsten used for?**
+
+Mostly for cutting, drilling and wearing things down: about two-thirds of the world's tungsten becomes cemented carbide — tungsten carbide grains bonded with cobalt — the hardmetal in machining inserts, drill bits, mining picks, road-milling teeth and oil-well tools (ITIA). Around 14% goes into tool steels, high-speed steels and superalloys, 12% into mill products such as wire, filaments, electrodes, heat shields and the heavy alloys used for counterweights, radiation shielding and armour-piercing penetrators, and the rest into chemicals and catalysts. Tungsten has the highest melting point of any metal (3,422 °C) and is as dense as gold (19.3 g/cm³), which is why the incandescent light bulb, the tank shell and the semiconductor fab all depend on it — and why USGS lists no substitute that does not cost performance.
+
+**Which country produces the most tungsten?**
+
+China — about 67,000 of the roughly 85,000 tonnes of tungsten mined worldwide in 2025 (USGS estimates), or 79%, with a distant field behind it: Vietnam (~3,000 t), Kazakhstan (~2,400 t, all from the new Boguty mine), Russia and North Korea (~2,000 t each), Bolivia (~1,700 t), Rwanda (~1,300 t), Australia (~1,000 t), Austria, Spain and Portugal (700–840 t each). China also holds about 2.5 of the world's 4.7 million tonnes of reserves, hosts the biggest deposits (Zhuxi, Dahutang, Shizhuyuan), and converts more than four-fifths of the world's tungsten into APT, oxides, powders and carbide — the Ganzhou cluster in Jiangxi and Xiamen Tungsten in Fujian are the industry's centre of gravity. The United States has not mined tungsten since 2015.
+
+**Why did tungsten prices rise ninefold in 2025–26?**
+
+Because the country that mines four-fifths of it stopped exporting freely. On 4 February 2025, hours after a US tariff took effect, China's Ministry of Commerce put tungsten under dual-use export licensing; exports of APT collapsed from 782 tonnes in 2024 to 243 in the first eleven months of 2025 and to zero in early 2026, and Beijing cut its first-batch mining quota to 58,000 tonnes and named only 15 companies allowed to export in 2026–27. Rotterdam APT, the industry benchmark, went from about $331 per metric ton unit at the start of 2025 to $675 by year-end (USGS), $900–940 in January 2026, $1,650–1,900 by mid-February and a peak near $3,185 in April, and was still $2,900–3,100 in September 2026 (SMM, Fastmarkets) — roughly nine times the pre-control level. Ferro-tungsten went from $45 to $200 a kilo. On the other side, defence demand for penetrators and drone warheads rose with the wars in Ukraine and the Gulf, Western governments started stockpiling, and the new mines that could answer — Sangdong in Korea, Hemerdon in Devon, Kazakhstan's giant deposits — are only now reaching first production.
+
+**What did China's tungsten export controls actually do?**
+
+They turned a commodity into a licence. The 4 February 2025 announcement (with tellurium, bismuth, molybdenum and indium) requires every exporter of tungsten items — APT, oxides, powders, carbide, alloys — to obtain a State Council licence under the Export Control Law, and licences have been granted slowly and selectively: total exports of tungsten products fell 19.7% in 2025 to 15,515 tonnes, controlled intermediates (APT, tungsten powder, carbide powder) fell 41.7%, and in December 2025 Beijing limited export rights for 2026–27 to 15 named companies. In January 2026 it went further, banning dual-use exports to Japan altogether after Prime Minister Takaichi's Taiwan remarks; Chinese shipments of APT to Japan — 57% of all Chinese APT exports in 2025 — stopped in February. Sumitomo Electric raised cutting-tool prices by up to 60% and Mitsubishi Materials tripled some tungsten prices. The November 2025 Trump–Xi truce, which suspended China's October rare-earth measures and its antimony ban on the United States, left the tungsten licensing regime untouched.
+
+**Is tungsten a conflict mineral?**
+
+Yes, by law. Tungsten is the second T in the 3TG — tin, tantalum, tungsten and gold — covered by section 1502 of the US Dodd-Frank Act (2010) and the EU Conflict Minerals Regulation (applied since 2021), because wolframite from the eastern Democratic Republic of Congo and its neighbours financed armed groups. Every listed company that uses tungsten must trace it to a conformant smelter, and Rwanda's Nyakabingo mine — Africa's largest tungsten producer, run by Trinity Metals — ships under bag-and-tag traceability. The other conflict dimension is newer: tungsten is on the critical-minerals lists of the United States, the EU (a strategic raw material under the Critical Raw Materials Act), the UK, Japan and Korea, and from 1 January 2027 US defence contractors may no longer deliver tungsten heavy alloy or powder melted or produced in China, Russia, North Korea or Iran.
+
+**Why do militaries care about tungsten?**
+
+Because it is what armour-piercing ammunition is made of, and the West buys it from the country it is arming against. Tungsten heavy alloy — 90–97% tungsten with nickel and iron — is the non-radioactive alternative to depleted uranium in tank penetrators, tungsten carbide cores make small-arms rounds pierce body armour, tungsten fragments and cubes fill missile, artillery and drone warheads, and tungsten sits in every jet engine, radar, shaped charge and hypersonic leading edge. The United States has had no tungsten mine since 2015 and imports more than half of what it uses, a quarter of it from China. The response in 2025–26: Defense Production Act awards to Pilot Mountain, Mactung and Sisson; the $2 billion Defense Logistics Agency stockpile contract and $450 million equity investment in Elmet Technologies announced on 14 September 2026; the Kazakhstan–US joint venture on Northern Katpar and Upper Kairakty; and Almonty's Sangdong, whose oxide is contracted to a US defence supplier at 40 tonnes a month. Japan, cut off entirely in February 2026, is the case study in what happens without them.
+
+**Need a deep-dive report on tungsten?**
+
+That's exactly what we do. We produce commissioned deep-dive reports for the tungsten industry — miners, APT and carbide producers, cutting-tool and hardmetal makers, defence and aerospace procurement teams, metals traders — and for geopolitics researchers and think tanks, covering angles such as mine-to-carbide supply-chain mapping, Chinese quota and licence scenarios, export-control exposure by product and HS code, stockpile and defence-procurement rules, the Western project pipeline and its timelines, recycling economics and price scenarios. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
+
 ## mineral.watch › Uranium
 
 URL: https://mineral.watch/uranium/
 
 Open data visualisation tracking the global uranium supply chain: mines, conversion and enrichment plants, prices, the Russian enrichment chokepoint and the nuclear revival. Built on WNA, IAEA, EIA and BGS data.
 
-Last updated: 2026-09-09
+Last updated: 2026-09-29
 
 ### Dataset
 
