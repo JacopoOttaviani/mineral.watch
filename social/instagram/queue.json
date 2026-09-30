@@ -1,42 +1,17 @@
 {
   "account": "https://instagram.com/mineralwatch",
-  "generated": "2026-09-11",
+  "generated": "2026-09-30",
   "published": [
     "01-launch",
     "02-nine-minerals",
     "03-us-import-reliance",
     "05-mine-vs-refinery",
     "minerals/cobalt",
-    "minerals/lithium"
+    "minerals/lithium",
+    "minerals/nickel"
   ],
   "rule": "publish queue[0] whose caption first line is not already on the account",
   "queue": [
-    {
-      "id": "minerals/nickel",
-      "set": "minerals",
-      "type": "carousel",
-      "title": "Nickel: who cornered the metal of the stainless age?",
-      "link": "https://mineral.watch/nickel",
-      "media": [
-        "https://mineral.watch/social/instagram/minerals/nickel/slide-01.jpg",
-        "https://mineral.watch/social/instagram/minerals/nickel/slide-02.jpg",
-        "https://mineral.watch/social/instagram/minerals/nickel/slide-03.jpg",
-        "https://mineral.watch/social/instagram/minerals/nickel/slide-04.jpg"
-      ],
-      "alt": [
-        "Nickel: Who cornered the metal of the stainless age? Duotone photo of a nickel mining site.",
-        "Nickel: 66% of the world’s nickel was mined in Indonesia in 2025.",
-        "Nickel: $100,000 /t: where nickel traded on 8 March 2022, before the LME cancelled the market.",
-        "Nickel, why it matters: Indonesia and China refined ~76% of the world’s nickel in 2025. Class-1 metal is only about a quarter of supply. Western"
-      ],
-      "caption": "Nickel: who cornered the metal of the stainless age?\n\nStainless steel, batteries, and a market that broke in 2022.\n\n66% of the world’s nickel was mined in Indonesia in 2025. (USGS MCS 2026)\n$100,000 /t: where nickel traded on 8 March 2022, before the LME cancelled the market. (LME)\n\nIndonesia and China refined ~76% of the world’s nickel in 2025. Class-1 metal is only about a quarter of supply. Western mines are closing: BHP’s Nickel West is suspended and Koniambo’s furnaces have been cold since August 2024.\n\nInteractive map of mines, smelters and refineries, production and price charts, and the full timeline: mineral.watch/nickel (link in bio).\n\nPhoto: nickel-ore mining, North Kolaka, Sulawesi — Marwan Mohamad via Wikimedia Commons, CC BY-SA 4.0",
-      "first_comment": "#nickel #lme #indonesia #stainlesssteel #batteries #criticalminerals #commodities #supplychain #mining #mineralwatch",
-      "accent": "#a3e635",
-      "photo_credit": "Photo: nickel-ore mining, North Kolaka, Sulawesi — Marwan Mohamad via Wikimedia Commons, CC BY-SA 4.0",
-      "story": "https://mineral.watch/social/instagram/stories/minerals-nickel.jpg",
-      "story_file": "stories/minerals-nickel.jpg",
-      "story_link": "https://mineral.watch/nickel"
-    },
     {
       "id": "06-lithium-price",
       "set": "launch",
