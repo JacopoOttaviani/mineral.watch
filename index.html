@@ -228,6 +228,12 @@
         },
         {
           "@type": "WebPage",
+          "@id": "https://mineral.watch/gallium-germanium/#webpage",
+          "name": "Gallium & germanium dashboard",
+          "url": "https://mineral.watch/gallium-germanium/"
+        },
+        {
+          "@type": "WebPage",
           "@id": "https://mineral.watch/oil-gas/#webpage",
           "name": "Oil & Gas dashboard",
           "url": "https://mineral.watch/oil-gas/"
@@ -271,7 +277,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-30",
+      "dateModified": "2026-10-08",
       "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "primaryImageOfPage": {
         "@type": "ImageObject",
@@ -285,7 +291,7 @@
       "@id": "https://mineral.watch/#dashboards",
       "name": "Open-data dashboards and tools on mineral.watch",
       "itemListOrder": "https://schema.org/ItemListUnordered",
-      "numberOfItems": 16,
+      "numberOfItems": 17,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -356,30 +362,36 @@
         {
           "@type": "ListItem",
           "position": 12,
+          "name": "Gallium & germanium dashboard",
+          "url": "https://mineral.watch/gallium-germanium/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
           "name": "Oil & Gas dashboard",
           "url": "https://mineral.watch/oil-gas/"
         },
         {
           "@type": "ListItem",
-          "position": 13,
+          "position": 14,
           "name": "Green transition dashboard",
           "url": "https://mineral.watch/green/"
         },
         {
           "@type": "ListItem",
-          "position": 14,
+          "position": 15,
           "name": "Mineral Explorer — 111 commodities, 1970–2024",
           "url": "https://mineral.watch/explorer/"
         },
         {
           "@type": "ListItem",
-          "position": 15,
+          "position": 16,
           "name": "Supply chain: mined vs refined",
           "url": "https://mineral.watch/supply-chain/"
         },
         {
           "@type": "ListItem",
-          "position": 16,
+          "position": 17,
           "name": "Open data catalogue",
           "url": "https://mineral.watch/data/"
         }
@@ -414,7 +426,7 @@
           "name": "Which minerals and industries does mineral.watch cover?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Eleven mineral dashboards are live — graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel, tin and tungsten — alongside an Oil & Gas dashboard (chokepoints, flows, shut-ins, LNG, sanctions, prices and companies) and a Green transition dashboard on the clean-energy supply chain and the EU's green funds. The Mineral Explorer adds production and trade maps for 111 commodities from 1970 to 2024, with the chip metals gallium and germanium next in the pipeline."
+            "text": "Twelve mineral dashboards are live — graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel, tin, tungsten and the chip metals gallium and germanium — alongside an Oil & Gas dashboard (chokepoints, flows, shut-ins, LNG, sanctions, prices and companies) and a Green transition dashboard on the clean-energy supply chain and the EU's green funds. The Mineral Explorer adds production and trade maps for 111 commodities from 1970 to 2024."
           }
         },
         {
@@ -574,6 +586,7 @@ nav a.cta:focus-visible::before,.btn:focus-visible::before{transform:translateX(
 .f-green{--accent:#62e86a}
 .f-tin{--accent:#9cc3ea}
 .f-tungsten{--accent:#f5dfa8}
+.f-gage{--accent:#ff5e57}
 .fcar-dots{display:flex;justify-content:center;gap:10px;margin-top:18px}
 .fcar-dot{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer;transition:background .2s,transform .2s}
 .fcar-dot:hover{background:var(--muted)}
@@ -821,10 +834,25 @@ footer a.ig svg{width:13px;height:13px}
 <section id="featured">
   <div class="fcar" aria-roledescription="carousel" aria-label="Live dashboards">
     <div class="fcar-track" id="fcarTrack" tabindex="0" aria-label="Live dashboards — scroll horizontally">
-      <div class="fcar-slide f-tungsten" data-name="Tungsten" role="group" aria-roledescription="slide" aria-label="Tungsten — 1 of 12">
+      <div class="fcar-slide f-gage" data-name="Gallium &amp; germanium" role="group" aria-roledescription="slide" aria-label="Gallium and germanium — 1 of 13">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live · latest</div>
+            <h2 class="serif">Gallium &amp; germanium: who makes the chip metals — and who can switch them off?</h2>
+            <p>Interactive world map of the alumina refineries, zinc smelters and coal plants that yield the two metals, the refiners and wafer, fibre and optics plants, the closed Western plants and the new projects from Wagerup to Trail to Greece; production, export, end-use and price charts; China's 99% grip on primary gallium, the July 2023 licences, the December 2024 US ban and its 27 November 2026 cliff, the two-tier price and the Western rebuild — built on USGS, BGS, S&amp;P Global, IEA, Chinese customs and company data, for semiconductor, photonics and defence buyers, geopolitics researchers and think tanks.</p>
+            <a class="btn primary" href="/gallium-germanium/">Open the Gallium &amp; germanium dashboard →</a>
+          </div>
+          <div class="fchart">
+            <div class="fchart-h"><b>World primary gallium production, 2018–2024</b><br>Tonnes per year — doubled in six years, every added tonne Chinese</div>
+            <div class="fchart-box"><canvas id="chFeatGaGe"></canvas></div>
+            <div class="fchart-src">Source: BGS World Mineral Statistics</div>
+          </div>
+        </div>
+      </div>
+      <div class="fcar-slide f-tungsten" data-name="Tungsten" role="group" aria-roledescription="slide" aria-label="Tungsten — 2 of 13">
+        <div class="feature">
+          <div>
+            <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
             <h2 class="serif">Tungsten: who holds the hardest metal — and who cuts the rest of us off?</h2>
             <p>Interactive world map of mines, APT and carbide plants, restarting operations and new projects, production, reserves, export and price charts, China's February 2025 export controls and 79% grip on mine supply, Japan's cut-off, the ninefold price shock, the $2 billion US stockpile deal and the Western rebuild from Sangdong to Hemerdon to Kazakhstan — built on USGS, BGS, Fastmarkets, SMM and company data, for carbide and tool makers, defence procurement teams, geopolitics researchers and think tanks.</p>
             <a class="btn primary" href="/tungsten/">Open the Tungsten dashboard →</a>
@@ -836,7 +864,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-tin" data-name="Tin" role="group" aria-roledescription="slide" aria-label="Tin — 2 of 12">
+      <div class="fcar-slide f-tin" data-name="Tin" role="group" aria-roledescription="slide" aria-label="Tin — 3 of 13">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -851,7 +879,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-green" data-name="Green transition" role="group" aria-roledescription="slide" aria-label="Green transition — 3 of 12">
+      <div class="fcar-slide f-green" data-name="Green transition" role="group" aria-roledescription="slide" aria-label="Green transition — 4 of 13">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -866,7 +894,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-nickel" data-name="Nickel" role="group" aria-roledescription="slide" aria-label="Nickel — 4 of 12">
+      <div class="fcar-slide f-nickel" data-name="Nickel" role="group" aria-roledescription="slide" aria-label="Nickel — 5 of 13">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -881,7 +909,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-antimony" data-name="Antimony" role="group" aria-roledescription="slide" aria-label="Antimony — 5 of 12">
+      <div class="fcar-slide f-antimony" data-name="Antimony" role="group" aria-roledescription="slide" aria-label="Antimony — 6 of 13">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -896,7 +924,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide" data-name="Cobalt" role="group" aria-roledescription="slide" aria-label="Cobalt — 6 of 12">
+      <div class="fcar-slide" data-name="Cobalt" role="group" aria-roledescription="slide" aria-label="Cobalt — 7 of 13">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -911,7 +939,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-manganese" data-name="Manganese" role="group" aria-roledescription="slide" aria-label="Manganese — 7 of 12">
+      <div class="fcar-slide f-manganese" data-name="Manganese" role="group" aria-roledescription="slide" aria-label="Manganese — 8 of 13">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -926,7 +954,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-lithium" data-name="Lithium" role="group" aria-roledescription="slide" aria-label="Lithium — 8 of 12">
+      <div class="fcar-slide f-lithium" data-name="Lithium" role="group" aria-roledescription="slide" aria-label="Lithium — 9 of 13">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -941,7 +969,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-uranium" data-name="Uranium" role="group" aria-roledescription="slide" aria-label="Uranium — 9 of 12">
+      <div class="fcar-slide f-uranium" data-name="Uranium" role="group" aria-roledescription="slide" aria-label="Uranium — 10 of 13">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -956,7 +984,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-copper" data-name="Copper" role="group" aria-roledescription="slide" aria-label="Copper — 10 of 12">
+      <div class="fcar-slide f-copper" data-name="Copper" role="group" aria-roledescription="slide" aria-label="Copper — 11 of 13">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -971,7 +999,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-ree" data-name="Rare earths" role="group" aria-roledescription="slide" aria-label="Rare earths — 11 of 12">
+      <div class="fcar-slide f-ree" data-name="Rare earths" role="group" aria-roledescription="slide" aria-label="Rare earths — 12 of 13">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -986,7 +1014,7 @@ footer a.ig svg{width:13px;height:13px}
           </div>
         </div>
       </div>
-      <div class="fcar-slide f-graphite" data-name="Graphite" role="group" aria-roledescription="slide" aria-label="Graphite — 12 of 12">
+      <div class="fcar-slide f-graphite" data-name="Graphite" role="group" aria-roledescription="slide" aria-label="Graphite — 13 of 13">
         <div class="feature">
           <div>
             <div class="kicker"><span class="status-dot" aria-hidden="true"></span>Now live</div>
@@ -1009,7 +1037,7 @@ footer a.ig svg{width:13px;height:13px}
 <section id="minerals">
   <div class="kicker">The minerals</div>
   <h2 class="serif">One deep-dive per mineral</h2>
-  <p class="lede">Each mineral gets its own data dashboard: production, reserves, trade flows, prices and supply-chain concentration. Graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel, tin and tungsten are all live; the chip metals gallium and germanium are next.</p>
+  <p class="lede">Each mineral gets its own data dashboard: production, reserves, trade flows, prices and supply-chain concentration. Graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel, tin, tungsten and the chip metals gallium and germanium are all live.</p>
   <div class="mgrid">
     <a class="mcard" href="/graphite/">
       <span class="tag live">Live</span>
@@ -1077,12 +1105,12 @@ footer a.ig svg{width:13px;height:13px}
       <h3>Tungsten</h3>
       <p>Armour, penetrators and every carbide cutting tool: China's export controls and 79% grip on mine supply, Japan's cut-off, the ninefold price shock and the Western rebuild — mapped and charted.</p>
     </a>
-    <div class="mcard soon">
-      <span class="tag soon">Coming soon</span>
+    <a class="mcard" href="/gallium-germanium/">
+      <span class="tag live">Live</span>
       <span class="sym">Ga&#183;Ge</span>
       <h3>Gallium &amp; germanium</h3>
-      <p>The chip metals China banned outright: byproducts of alumina and zinc that no price signal can conjure, behind radar, night vision, fibre optics and AI power electronics.</p>
-    </div>
+      <p>The chip metals China banned outright: byproducts of alumina and zinc that no price signal can conjure — China's 99% grip on gallium, the US ban and its 27 November 2026 cliff, the two-tier price, and the radar, night-vision, fibre and AI power-electronics uses — mapped and charted.</p>
+    </a>
   </div>
 </section>
 
@@ -1490,7 +1518,7 @@ footer a.ig svg{width:13px;height:13px}
     </details>
     <details>
       <summary>Which minerals and industries does mineral.watch cover?</summary>
-      <p>Eleven mineral dashboards are live — graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel, tin and tungsten — alongside an Oil &amp; Gas dashboard (chokepoints, flows, shut-ins, LNG, sanctions, prices and companies) and a Green transition dashboard on the clean-energy supply chain and the EU's green funds. The Mineral Explorer adds production and trade maps for 111 commodities from 1970 to 2024, with the chip metals gallium and germanium next in the pipeline.</p>
+      <p>Twelve mineral dashboards are live — graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel, tin, tungsten and the chip metals gallium and germanium — alongside an Oil &amp; Gas dashboard (chokepoints, flows, shut-ins, LNG, sanctions, prices and companies) and a Green transition dashboard on the clean-energy supply chain and the EU's green funds. The Mineral Explorer adds production and trade maps for 111 commodities from 1970 to 2024.</p>
     </details>
     <details>
       <summary>Can I download the data behind mineral.watch?</summary>
@@ -1573,6 +1601,8 @@ const liTrend = [[2018,95],[2019,86],[2020,82.5],[2021,107], // kt lithium conte
   [2022,146],[2023,204],[2024,222],[2025,290]];
 const coTrend = [[2018,153.6],[2019,119.1],[2020,130.2],[2021,133.8], // kt cobalt content (BGS 2018–2024)
   [2022,165.7],[2023,203.1],[2024,268.5]];
+const gaTrend = [[2018,427],[2019,384],[2020,358],[2021,445], // tonnes primary gallium (BGS 2018–2024)
+  [2022,621],[2023,643],[2024,769]];
 const wTrend = [[2018,81768],[2019,89989],[2020,85908],[2021,83548], // tonnes tungsten content (BGS 2018–2024)
   [2022,82160],[2023,82338],[2024,75816]];
 const snTrend = [[2018,325403],[2019,319861],[2020,294289],[2021,278614], // tonnes tin content (BGS 2018–2024)
@@ -1618,6 +1648,12 @@ function slideAccent(el){
     .getPropertyValue("--accent").trim();
 }
 const featDraw = {
+  chFeatGaGe(el){
+    const a = slideAccent(el);
+    featLine(el, gaTrend.map(d=>d[0]), [
+      { data:gaTrend.map(d=>d[1]), borderColor:a, backgroundColor:a+"22", fill:true, tension:0, pointRadius:3, pointBackgroundColor:a }
+    ], { min:0, max:1000, ticks:{ callback:v=>v+" t" } }, v=>v.toLocaleString("en-US")+" t Ga", false);
+  },
   chFeatW(el){
     const a = slideAccent(el);
     featLine(el, wTrend.map(d=>d[0]), [

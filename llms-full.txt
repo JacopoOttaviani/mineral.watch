@@ -1,6 +1,6 @@
 # mineral.watch
 
-> Independent open data and intelligence portal on the global mineral, oil and gas, and green-transition industries. Cross-references verified official statistics from USGS, BGS, UN Comtrade, the IEA, the US EIA, OPEC and the Energy Institute on production, reserves, trade flows, refining and manufacturing concentration, chokepoints, prices and policy — who produces, who refines, who ships and who depends on whom — and publishes the compiled datasets openly. Eleven mineral dashboards (graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel, tin, tungsten), an oil and gas dashboard, a green-transition dashboard, a 111-commodity Mineral Explorer and an open data catalogue.
+> Independent open data and intelligence portal on the global mineral, oil and gas, and green-transition industries. Cross-references verified official statistics from USGS, BGS, UN Comtrade, the IEA, the US EIA, OPEC and the Energy Institute on production, reserves, trade flows, refining and manufacturing concentration, chokepoints, prices and policy — who produces, who refines, who ships and who depends on whom — and publishes the compiled datasets openly. Twelve mineral dashboards (graphite, rare earths, copper, uranium, lithium, manganese, cobalt, antimony, nickel, tin, tungsten, gallium and germanium), an oil and gas dashboard, a green-transition dashboard, a 111-commodity Mineral Explorer and an open data catalogue.
 
 mineral.watch is not affiliated with any government, mining or energy company, or trade body, and holds no commercial position in the minerals, fuels or companies it covers. Corrections and data tips: hello@mineral.watch. When citing, name mineral.watch and the primary source given for the figure.
 
@@ -31,6 +31,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 
 - [Tin dashboard](https://mineral.watch/tin/): interactive world map of mines, smelters and refineries, disrupted and restarting operations (Man Maw, Bangka, the Kivus) and development projects (South Crofty, Martinsville, Taronga, Oropesa, Syrymbet); the cassiterite-to-ingot-to-solder chain explained (concentrate, Grade A ingot, high-purity tin, SAC305 solder, tinplate, tin chemicals, bronze, secondary tin, the 3TG conflict-minerals rules); mine and refined production, reserves, end-use and price charts; China's smelting chokepoint (~52% of refined output), Indonesia's crackdown, seized smelters and export-ban study, Myanmar's Wa State suspension and 2026 slow restart, Congo's Bisie under M23 pressure, the AI-solder demand story, the 1985-2026 timeline (ITC collapse, Dodd-Frank 3TG, Man Maw, the 2022 and 2026 records); dual-use, stockpile and investment implications; company tracker. Aimed at tin-industry businesses (miners, smelters, traders, solder and tinplate makers), geopolitics researchers and think tanks.
 - [Tungsten dashboard](https://mineral.watch/tungsten/): interactive world map of scheelite and wolframite mines, APT, powder and carbide plants, idled and restarting operations (Hemerdon, Tyrnyauz, Cantung, La Parrilla) and development projects (Northern Katpar and Upper Kairakty, Mactung, Sisson, Pilot Mountain, Springer, IMA, Zhuxi, Aksoran); the ore-to-APT-to-carbide chain explained (concentrate and the metric ton unit, ammonium paratungstate, tungsten oxide, metal and carbide powders, cemented carbide, tungsten heavy alloy, tool steels and ferrotungsten, mill products, the 3TG conflict-minerals rules, secondary tungsten); mine production, reserves, China export-volume, end-use, US import-source and price charts; China's 4 February 2025 export controls, the 58,000 t 2025 mining quota, the 15 licensed exporters for 2026-27 and the 6 January 2026 dual-use ban on Japan; the APT price shock (~$331/mtu at the start of 2025 to a ~$3,185 peak in April 2026); the $2 billion US Defense Logistics Agency stockpile contract and $450 million Pentagon investment in Elmet (14 September 2026); the Western rebuild (Sangdong commercial from September 2026, Hemerdon first ore 11 September 2026, Boguty, Kazakhstan's $1.6 billion US-backed giants); the 1783-2026 timeline; dual-use, stockpile and investment implications; company tracker. Aimed at tungsten-industry businesses (miners, APT and carbide producers, cutting-tool and hardmetal makers, defence and aerospace procurement), geopolitics researchers and think tanks.
+- [Gallium & germanium dashboard](https://mineral.watch/gallium-germanium/): interactive world map of the alumina refineries, zinc smelters and coal plants that yield gallium and germanium as byproducts (Chalco's Henan, Shandong, Shanxi and Guangxi refineries, Yunnan's Lincang and Qujing, Inner Mongolia, Zhuzhou, Pikalevo, Trail, Big Hill in Lubumbashi), high-purity refiners and wafer, fibre and infrared-optics plants (Vital Materials, Umicore Olen and Quapaw, PPM Pure Metals, 5N Plus, Indium Corporation, Neo, AXT, Freiberger, IQE, Corning), closed plants (Ingal Stade, Zaporizhzhia, Ajka) and new projects (Alcoa Wagerup, Metlen Agios Nikolaos, Rio Tinto-Indium Vaudreuil, Teck Trail expansion, Korea Zinc Clarksville and Onsan, ERG Pavlodar, ElementUSA Gramercy, ReElement); the Bayer-liquor-and-zinc-residue-to-wafer chain explained (crude 4N gallium, 6N-8N high-purity gallium, trimethylgallium, germanium tetrachloride and dioxide, GaAs, GaN, germanium wafers, infrared optics, germanium-doped fibre, secondary metal); primary production and capacity, BGS trend, China export-volume and destination, end-use, Europe germanium price and two-tier price charts; China's 3 July 2023 export licences, the 3 December 2024 ban on the United States, its 9 November 2025 suspension until 27 November 2026 and the 6 January 2026 Japan measure; the US Section 232 proclamation, Project Vault and Defense Production Act awards; the 1875-2026 timeline; dual-use and investment implications; company tracker. Aimed at the chip-metal chain (alumina and zinc producers, refiners, compound-semiconductor, LED, RF, fibre-optic, infrared-optics and space-solar manufacturers, defence and aerospace procurement), geopolitics researchers and think tanks.
 
 - [Oil & gas dashboard](https://mineral.watch/oil-gas/): interactive world map of giant fields and basins, export terminals, refineries and LNG plants, the eight maritime oil chokepoints, and sites disrupted or sanctioned in 2026; the benchmark ladder explained (Dated Brent, WTI, Dubai/Oman, Urals and the price cap, WCS, official selling prices, diesel/jet/gasoline/LPG cracks, Henry Hub, TTF, JKM, the Hormuz toll, strategic stocks); production, reserves, shut-in, gas, LNG and price charts; the 2026 Strait of Hormuz closure and Gulf shut-in ledger, pipeline bypasses (Petroline, ADCOP, Kirkuk-Ceyhan), the Ras Laffan LNG outage, IEA emergency stock release, sanctions and the shadow fleet (Russia, Iran, Venezuela, Kazakhstan/CPC), OPEC+ quota unwinding, the 2014-2026 timeline; capital flows and a tracker of state producers, majors, LNG/midstream operators and traders. Aimed at energy businesses, geopolitics researchers and think tanks.
 
@@ -143,6 +144,15 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - Japan (cut off from Chinese APT in February 2026): imports of controlled tungsten products in April 2026 were 50% below the 2025 monthly average and 63% below April 2024; Sumitomo Electric (about 30% of raw material from China) stopped Chinese procurement by May 2026, raised cutting-tool prices up to 60% and is building a ~$100m recycling plant for early 2028 (+~50% capacity); Mitsubishi Materials tripled some tungsten prices in June 2026, is investing ~$64m in recycling (+40% at H.C. Starck Goslar, bought from Masan for $134.5m in December 2024) and plans to double Akita capacity by 2028-29; US tungsten-scrap exports to Japan rose 24-fold in January-March 2026; Singapore became Japan's largest supplier by April 2026.
 - Other producers and projects: EQ Resources (ASX: EQR; Mt Carbine, Queensland and Barruecopardo, Spain) produced 118,946 mtu in FY2026 (-29%) on record sales of A$160m (+142%), a record A$79m quarter and 14,255 mtu in July 2026; Group 6 Metals (ASX: G6M; Dolphin, King Island) processed a record 77,953 t of ore in the June 2026 quarter (21,297 mtu WO3), began underground mining and signed a A$110-120m three-year HMR Drilling contract after a A$7.5m Tasmanian government loan in May 2025; Guardian Metal's Pilot Mountain PFS (30 June 2026): 15,916 t WO3 over 8 years, US$1.058bn after-tax free cash flow, one-year payback, first production Q4 2028; Fireweed's Mactung feasibility study due 2027; Russia's Tyrnyauz (Elbrusmetal / Rostec; ~37% of Russian reserves; 50bn roubles) drilling in 2025, mining targeted ~2028; CMOC's Sandaozhuang produced 7,114 t of tungsten in 2025; Xiamen Tungsten: 46.469bn yuan revenue in 2025 (+31.4%), 12,000 t smelting capacity; four groups (Minmetals, CMOC, Xiamen Tungsten, Jiangxi Tungsten) ~45% of Chinese output.
 - Tungsten is a '3TG' conflict mineral under s.1502 of the US Dodd-Frank Act (2010) and EU Regulation 2017/821; Rwanda's Nyakabingo (Trinity Metals) is Africa's largest tungsten mine. Tungsten is on the US critical minerals list, a strategic raw material under the EU Critical Raw Materials Act, and on the UK, Japanese and Korean lists.
+- World primary gallium production, 2025 (USGS estimate): ~900 t of low-purity (4N) metal (2024: 848 t, revised up from 760 t). China ~900 t (~99%; 98% in the 2024 edition), Russia ~6 t (Rusal Pikalevo), Japan ~3 t (Dowa, largely recycled); plants in Germany (Ingal Stade, closed 2016), Hungary, Kazakhstan, Korea and Ukraine idle. Capacity ~1,700 t, of which China ~1,600 t (~94%). World high-purity refining capacity ~340 t/yr and secondary capacity ~280 t/yr (USGS 2025); S&P Global puts China at 62% of high-purity refining capacity and demand at ~1,000 t in 2025 rising to ~1,740 t by 2030. BGS: world 769 t in 2024 (China 750 t), up from 351 t in 2014.
+- World germanium production: no USGS world total. S&P Global (August 2026): China ~91% of production, ex-China capacity ~31 t, recycling ~39 t/yr, demand ~343 t in 2025 rising to ~408 t by 2030. Industry estimate 2024: ~230 t - China ~145 t (~63%), Belgium (Umicore Olen) and Canada (Teck Trail) 12-15 t each, Russia 10-15 t, United States 7-9 t, Japan 5-8 t, Germany 2-3 t. BGS: China 200 t in 2023 and 2024 (world series 212 t, excluding Belgium and Canada). Yunnan Lincang Xinyuan Germanium: 47.6 t/yr ingot capacity plus a 75 t expansion; Yunnan Chihong ~10 t/yr; Inner Mongolia coal-germanium 20-30 t/yr.
+- Gallium end uses, 2025 (S&P Global): semiconductors (GaAs and GaN for RF, power, LEDs, ICs) ~61%, NdFeB magnets ~36%, other (CIGS solar, medical) ~3%; United States: integrated circuits 73%, optoelectronics 26% (USGS). Germanium end uses, 2025 (S&P Global, ~343 t): fibre optics ~40%, infrared and night-vision optics ~25%, solar cells (germanium wafers for satellite multi-junction cells) and electronics ~24%, metallurgy and chemicals ~6%, PET catalysts ~5%. About 77 kg of gallium per THAAD battery (CSIS). Gallium melts at 29.8 C; germanium made the first transistor (Bell Labs, December 1947); GaAs the first practical LED (1962); the blue GaN LED won the 2014 Nobel Prize in Physics.
+- China's gallium and germanium export controls: MOFCOM/GAC Announcement 2023 No. 23 (3 July 2023) - export licensing for gallium and germanium items (metal, oxides, chlorides, arsenide, nitride, antimonide, etc.) from 1 August 2023; Announcement 2024 No. 46 (3 December 2024) - in principle no export licences for gallium, germanium, antimony and superhard materials to the United States, and a ban on dual-use exports to US military end users; Announcement 2025 No. 72 (9 November 2025, after the Trump-Xi meeting in Busan on 30 October) - article 2 of No. 46 suspended until 27 November 2026 (licensing and the military-end-user ban remain); Announcement 2026 No. 1 (6 January 2026) - ban on dual-use exports to Japanese military end users (gallium and germanium exports to Japan zero in January-February 2026; a licensed ~6 t of gallium shipped in May). As of 8 October 2026 no extension of the suspension has been announced.
+- China's export volumes (Chinese customs): gallium ~44,800 kg in 2023 and 69,440 kg in 2024 (+55%); germanium 29,389 kg in 2024 (-30%). Germanium metal, January-September: 36,656 kg (2023), 18,787 kg (2024), 7,520 kg (2025); 2025 buyers Russia 28%, Belgium 26%, Germany 26%, Japan 18% (USGS MCS 2026). 2026 monthly gallium exports (Tradium): ~6,000 kg January, ~5,000 February, 5,350 March, 3 kg April, 6,200 May, 200 June, 7,200 July, 350 August (~25 t January-August); germanium ~7.8 t January-August, Russia the largest buyer. Full-year 2025 gallium exports are disputed (CSIS: unwrought shipments -94%; trade-press tallies of all forms ~62,600 kg). CSIS: one 3 kg gallium shipment from China to the United States in all of 2025.
+- Prices: gallium metal US import unit value $277/kg (2021), $432 (2022), $365 (2023), $439 (2024), ~$580 (2025) (USGS MCS 2026); Rotterdam 4N $470-550/kg on 6 December 2024 (Fastmarkets); Western spot record ~$1,850/kg in April 2026, +200% since January 2025 (CSIS); Strategic Metals Invest 4N quotation $1,723 (January 2026), $2,102 (1 April), $2,828 (7 October 2026); China domestic 4N (SMM) ~$247 (3 March 2026), $289 (1 July), ~$229 (30 September 2026). Germanium metal 99.999% Europe annual averages (Argus via USGS): $1,236 (2019), $1,046, $1,187, $1,294, $1,392 (2023), $1,991 (2024), ~$4,100 (2025); Europe metal $3,150 (January 2025) to $5,380 (October 2025); Rotterdam $8,000-10,000/kg in April 2026 (Fastmarkets); SMM China 5N ingot ~$3,586/kg and Western in-warehouse ~$6,355-6,405/kg (30 September 2026); Strategic Metals Invest 5N $9,939 (7 October 2026). Germanium dioxide Europe: $883 (2023), $1,281 (2024), ~$2,500 (2025); China FOB ~$2,665 (4 October 2026). IEA GCMO 2026: European prices ~5x China's for gallium and ~3x for germanium. Neither metal has an exchange contract; S&P Global reference prices launched August 2026 (USTR statement 7 August 2026).
+- United States: no primary gallium production since 1987; net import reliance 100% (gallium) and >50% (germanium); gallium metal imports ~25 t in 2025 (2x 2024) at $580/kg unit value; germanium metal imports -67% to ~7 t, germanium dioxide +55% to ~17 t; MFN tariffs 3% (gallium metal) and 2.6% (germanium metal); Defense Logistics Agency held ~14,000 kg of germanium metal at end-2022 and no gallium in the National Defense Stockpile. Section 232 critical-minerals proclamation of 14 January 2026: no tariffs or quotas, negotiations on price floors and offtakes. Project Vault stockpile (~$12 billion) announced 2 February 2026. Defense Production Act Title III awards: Lattice Materials $18.5m (26 September 2025, infrared optics, Bozeman), ElementUSA $29.9m (20 November 2025, gallium from Atalco's Gramercy, Louisiana alumina refinery, ~50 t/yr concept), 5N Plus $18.1m (15 December 2025, germanium wafers, St George, Utah, >20 t/yr), Umicore Quapaw $11.8m (30 January 2026, germanium tetrachloride, Oklahoma), ReElement $25m (13 July 2026, gallium and germanium refining, Marion, Indiana); Department of War US$174m in Alcoa's Wagerup gallium plant.
+- Western projects: Alcoa Wagerup (Western Australia) - final investment decision 14 July 2026, 100 t/yr of gallium from 2027, US$174m from the US Department of War, equity from the JAGA venture of Sojitz and JOGMEC (Japan), Australian government backing; Metlen Agios Nikolaos (Viotia, Greece) - ~EUR300m approved as a strategic investment 15 May 2026, EUR90m from the EIB, 50 t/yr from 2027 and full output in 2028, US offtake signed 29 July 2026; Teck Trail (British Columbia) - C$850m plan to double germanium and antimony output and add gallium recovery, C$400m from the Canada Growth Fund (7 July 2026); Rio Tinto-Indium Corporation gallium pilot at the Vaudreuil alumina refinery, Jonquiere, Quebec - construction from 2 March 2026, 4 t/yr, first metal 2027, 40 t/yr option; Korea Zinc 'Crucible' smelter, Clarksville, Tennessee (US$7.4bn, JPMorgan-backed) - ~54 t/yr gallium and ~44 t/yr germanium from 2030; Korea Zinc Onsan gallium line 15.5 t/yr, trial production H1 2028; ERG Pavlodar (Kazakhstan) gallium restart 15 t/yr in Q4 2026 with Mitsubishi offtake; Gecamines/STL Big Hill (Lubumbashi, DRC) - first germanium concentrate export to Umicore October 2024, Belgian state guarantee 10 July 2026; studies at Ivanhoe Kipushi, Amaroq Black Angel (Greenland), Nyrstar Hobart; Umicore Olen is an EU CRMA strategic project (25 March 2025). Combined new Western gallium capacity announced to date: ~300 t/yr by 2028-30.
+- Gallium and germanium are strategic raw materials under the EU Critical Raw Materials Act; gallium was shortlisted for the EU's first RESourceEU pilot stockpile (May 2026), germanium under consideration; both are on the US critical minerals list and in the 60 minerals covered by Project Vault; Japan (second-largest gallium consumer) co-finances Alcoa's Wagerup plant and buys ERG's Kazakh gallium after the January 2026 cut-off.
 - Green transition — deployment (2025): 664 GW of solar PV installed worldwide, +12%, global fleet >3 TW (SolarPower Europe); 165 GW of wind, +40%, of which 9.3 GW offshore and >120 GW in China (GWEC); more than 20 million electric cars sold, one in four new cars, ~55% of sales in China, 28% in Europe, <10% in the US (IEA GEVO 2026); EU solar 65.1 GW (first decline since 2016), EU wind 15.1 GW, EU battery storage 27.1 GWh, EU battery-electric car share 17.4%.
 - Green transition — investment (IEA World Energy Investment 2026): $3.4 tn total energy investment in 2026, of which $2.2 tn clean energy vs $1.2 tn oil, gas and coal; solar $365 bn, grids $550 bn, battery storage >$100 bn; China almost a third of clean-energy investment. US: $34.8 bn of clean-energy projects cancelled in 2025 (E2), ~$40 bn and 53,000 jobs by mid-2026 (EDF/Atlas) after the One Big Beautiful Bill Act (4 July 2025).
 - Green transition — manufacturing concentration (IEA ETP 2026, 2025 data): China ~85% of solar supply-chain capacity (95%+ wafers, >80% modules), >80% of battery-cell production (~85% cathode, >90% anode material), 60% of wind-turbine production capacity (Europe 19%, US 9%), ~60% of electrolyser manufacturing, 35% of heat-pump capacity (US 25%, EU 20%). CATL 39.2% and BYD 16.4% of 2025 EV-battery installations (SNE Research, 1,187 GWh total). Chinese OEMs ~70% of 2025 wind-turbine orders (215 GW, Wood Mackenzie). Battery pack price $108/kWh in 2025, LFP $81, stationary storage $70 (BNEF).
@@ -175,6 +185,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - British Geological Survey — World Mineral Statistics
 - International Tin Association (refined-production reports, tin-use survey, price notes), CRU Tin Monitor via USGS Mineral Industry Surveys, London Metal Exchange prices, International Crisis Group (tin dashboard)
 - International Tungsten Industry Association (end uses, recycling), China Tungsten Industry Association and Chinese customs data via SMM (export volumes, mining quotas), Fastmarkets, SMM and Argus (via USGS) APT and concentrate price assessments, Chinese MOFCOM export-control announcements, US Defense Logistics Agency notices, company disclosures (tungsten dashboard)
+- S&P Global Commodity Insights Critical Mineral Market Reports (gallium, germanium: demand, shares, reference prices), IEA Global Critical Minerals Outlook 2026, Chinese MOFCOM/GAC export-control announcements and customs statistics via USGS, rawmaterials.net, Tradium and SMM, Argus and Fastmarkets price assessments via USGS, SMM and Strategic Metals Invest quotations, CSIS and the Payne Institute, US Department of War Defense Production Act notices, White House and USTR statements, European Commission (CRMA strategic projects, RESourceEU), company disclosures (gallium & germanium dashboard)
 - UN Comtrade — bilateral trade flows
 - IEA — Critical Minerals demand scenarios and supply-chain analysis
 - World Bank WITS
@@ -214,7 +225,7 @@ URL: https://mineral.watch/antimony/
 
 Open data visualisation tracking the global antimony supply chain: China's mines and smelters, the 2024 export ban, the fivefold price spike, Tajikistan's rise and the West's scramble to rebuild a supply chain it abandoned — built on USGS, BGS, trade and price-agency data.
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ### Dataset
 
@@ -265,7 +276,7 @@ URL: https://mineral.watch/cobalt/
 
 Open data visualisation tracking the global cobalt supply chain: the DRC's industrial mines and artisanal diggers, Indonesia's rise, China's refining grip, the export-quota gamble and the battery industry's escape attempt. Built on USGS, Cobalt Institute, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ### Dataset
 
@@ -317,7 +328,7 @@ URL: https://mineral.watch/copper/
 
 Open data visualisation tracking the global copper supply chain: mines, smelters, refineries, tariffs, the smelting chokepoint and record prices. Built on USGS, ICSG, IEA and BGS data.
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ### Dataset
 
@@ -368,15 +379,15 @@ That's exactly what we do. We produce commissioned deep-dive reports on copper, 
 
 URL: https://mineral.watch/data/
 
-Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 13 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
+Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 14 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
 
-Last updated: 2026-09-30
+Last updated: 2026-10-08
 
 ### Dataset
 
 mineral.watch open data catalogue
 
-Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 13 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
+Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 14 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
 
 - Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -386,7 +397,7 @@ URL: https://mineral.watch/explorer/
 
 Interactive world map of mineral production, imports and exports for 111 commodities, 1970–2024, with a supply-concentration view. Data from the British Geological Survey.
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ### Dataset
 
@@ -401,13 +412,64 @@ Country-level production, import and export series for 111 mineral and energy co
 - Download: https://mineral.watch/map_data/countries.json (Country names and centroids by ISO3 code)
 - Sources: British Geological Survey, World Mineral Statistics (BGS © UKRI)
 
+## mineral.watch › Gallium & Germanium
+
+URL: https://mineral.watch/gallium-germanium/
+
+Open data visualisation tracking the global gallium and germanium supply chains: China's 99% grip on primary gallium and ~91% of germanium, the July 2023 export licences, the December 2024 ban on the United States and its suspension until 27 November 2026, the two-tier price (Western germanium up roughly sixfold, gallium ten times China's domestic price), the radar, night-vision, fibre-optic, LED and AI power-electronics uses, and the Western recovery projects from Wagerup to Trail to Greece — built on USGS, BGS, S&P Global, IEA, Chinese customs and company data, for semiconductor, photonics and defence buyers, geopolitics researchers and think tanks.
+
+Last updated: 2026-10-08
+
+### Dataset
+
+mineral.watch — Global Gallium and Germanium Supply Chain Data
+
+Alumina refineries, zinc smelters and coal plants that yield gallium and germanium as byproducts, high-purity refiners, precursor, wafer, fibre and infrared-optics plants, closed plants and development projects; primary production and capacity by country, China's export volumes and destinations, prices in China and the West, US imports and import reliance, end uses, export-control measures, stockpile and Defense Production Act awards, and processing concentration for the global gallium and germanium supply chains.
+
+- Temporal coverage: 2014/2026
+- Variables: Primary production, Production capacity, Export volumes, Export destinations, Processing concentration, Prices, Imports, End uses, Companies
+- Licence: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- Download: https://mineral.watch/map_data/data/gallium-primary.json (Gallium, primary — production by country, 2007–2024)
+- Download: https://mineral.watch/map_data/data/germanium-metal.json (Germanium metal — production by country, 1982–2024)
+- Sources: USGS National Minerals Information Center, Mineral Commodity Summaries 2026 (Gallium; Germanium) and earlier editions; British Geological Survey, World Mineral Statistics; S&P Global Commodity Insights, Critical Mineral Market Reports — Gallium and Germanium (August 2026); IEA Global Critical Minerals Outlook 2026; Chinese Ministry of Commerce and General Administration of Customs announcements (2023 No. 23, 2024 No. 46, 2025 No. 72, 2026 No. 1) and customs statistics via SMM, Tradium and rawmaterials.net; Argus and Fastmarkets price assessments via USGS; SMM and Strategic Metals Invest quotations; Company disclosures (Alcoa, Metlen, Teck, Rio Tinto, Indium Corporation, Korea Zinc, Umicore, ERG, 5N Plus, Gécamines/STL, Chalco, Yunnan Germanium), US Department of War Defense Production Act notices, White House proclamations, CSIS and the Payne Institute
+
+### Questions and answers
+
+**What are gallium and germanium used for?**
+
+For the parts of electronics that silicon cannot do. Gallium goes into compound semiconductors — gallium arsenide for the radio-frequency chips in every phone and satellite link, gallium nitride for 5G base stations, AESA radars, fast chargers and the power electronics of electric cars and AI data centres, and the LEDs that lit the world after the 2014 Nobel-winning blue GaN diode; S&P Global puts semiconductors at about 61% of 2025 demand, and a surprising 36% goes into neodymium-iron-boron magnets, where a little gallium improves heat resistance. Germanium is the dopant in the core of almost every optical fibre (about 40% of demand), the lens and window material of thermal-imaging and night-vision optics (25%), the wafer under the multi-junction solar cells that power most satellites, and a catalyst for PET plastic. Both are byproducts: gallium of refining bauxite into alumina, germanium of smelting zinc and, in China, of burning germanium-rich coal.
+
+**Which country produces the most gallium and germanium?**
+
+China, by a margin that has no equal among the critical minerals. USGS estimates world primary gallium production at about 900 tonnes in 2025, of which China made 900 — 99% — with Russia (6 t) and Japan (3 t) the only other producers and the plants of Germany, Hungary, Kazakhstan, Korea and Ukraine idle. China's capacity is about 1,600 of the world's 1,700 tonnes, so it runs at little more than half. For germanium USGS publishes no world total; S&P Global attributes about 91% of production to China, while industry counts that include Western refiners put 2024 output near 230 tonnes with China at 145 (63%), Belgium's Umicore and Canada's Teck at 12–15 each, Russia 10–15, the United States 7–9. BGS records China at 200 tonnes in 2024. The difference is where you count: at the furnace, China dominates almost totally; at the refinery, Olen and Trail still matter.
+
+**What did China's gallium and germanium export controls do?**
+
+They were the first shot in the critical-minerals trade war, and the model for everything since. On 3 July 2023 the Ministry of Commerce and customs administration put gallium and germanium items — metal, oxides, arsenide, nitride, trichloride and more — under export licensing from 1 August 2023, days after the Netherlands and Japan tightened chip-tool exports. Exports stopped for two months, then resumed to licensed buyers: 2024 gallium exports actually rose 55% to 69 tonnes while germanium fell 30% to 29 tonnes. On 3 December 2024, the day after new US chip sanctions, Beijing banned exports of gallium, germanium, antimony and superhard materials to the United States outright and prohibited dual-use sales to US military end users; Chinese germanium-metal exports to all buyers fell from 36.7 tonnes in January–September 2023 to 7.5 tonnes in the same months of 2025, and a single 3 kg gallium shipment reached the United States in all of 2025. On 9 November 2025, after the Trump–Xi meeting in Busan, China suspended the US ban until 27 November 2026 — the licensing regime and the military-end-user ban stayed — and on 6 January 2026 it added a ban on dual-use exports to Japanese military end users. Monthly shipments in 2026 have swung between near zero and a few tonnes, licence by licence.
+
+**What happens on 27 November 2026?**
+
+China's suspension of its December 2024 ban on gallium, germanium, antimony and superhard-material exports to the United States expires. Announcement 2025 No. 72 of 9 November 2025 suspended article 2 of the ban for one year as part of the Busan truce; as of early October 2026 no extension has been announced, and Beijing has tied the post-November terms to the state of trade consultations. Even while suspended, the ban made little practical difference: every export still needs a licence, dual-use sales to US military end users remain prohibited, US gallium-metal imports in 2025 came from Japan, Germany and Canada rather than China, and Western prices have kept rising. What the date decides is whether a US civilian buyer can legally receive Chinese gallium at all in 2027 — and whether the price gap between a Chinese domestic kilo and a Rotterdam kilo, already five- to tenfold, gets wider.
+
+**Why are gallium and germanium so much more expensive outside China?**
+
+Because the controls split one market into two. Inside China gallium is abundant — capacity of 1,600 tonnes against 900 of output — and the domestic 4N price has drifted between about $230 and $290 a kilo through 2026 (SMM). Outside China every kilo needs a licence, and the Western spot price went from roughly $600 in January 2025 to a record near $1,850 in April 2026 (CSIS) and above $2,800 by October (Strategic Metals Invest) — the IEA puts the European price at about five times the Chinese one. Germanium went the same way: the European annual average (Argus via USGS) rose from $1,392 a kilo in 2023 to $1,991 in 2024 and about $4,100 in 2025, Rotterdam metal traded at $8,000–10,000 in April 2026 (Fastmarkets), and in October 2026 a Chinese 5N ingot cost about $3,600 against $6,400–9,900 in Western warehouses. Neither metal has an exchange contract; every price is an assessment of a thin trade, which is why the USTR welcomed S&P Global's new reference prices in August 2026 and why Western projects are being financed on a price China could undercut tomorrow.
+
+**Why do militaries care about gallium and germanium?**
+
+Because they are the materials of seeing and sensing: gallium nitride is the transmit-receive module of every modern AESA radar and electronic-warfare jammer — CSIS counts about 77 kg of gallium per THAAD battery — and gallium arsenide the amplifier of military satellite links and guided weapons; germanium is the lens, window and dome of thermal-imaging and night-vision sights, missile seekers and targeting pods, and the wafer under the triple-junction solar cells of reconnaissance and communications satellites. The United States has not produced primary gallium since 1987, imports 100% of what it uses, and more than half its germanium; the Defense Logistics Agency held about 14,000 kg of germanium metal at the end of 2022 and no gallium at all. The response since 2025: Defense Production Act awards to Lattice Materials ($18.5 million), ElementUSA ($29.9 million), 5N Plus ($18.1 million), Umicore's Oklahoma plant ($11.8 million) and ReElement ($25 million), $174 million of Department of War money for Alcoa's gallium plant in Western Australia, the $12 billion 'Project Vault' stockpile announced in February 2026, and a Section 232 proclamation in January 2026 that chose price floors and offtakes over tariffs. The EU lists both as strategic raw materials and has shortlisted gallium for its first pilot stockpile; Japan, cut off in January 2026, is paying for Alcoa's plant through Sojitz and JOGMEC.
+
+**Need a deep-dive report on gallium or germanium?**
+
+That's exactly what we do. We produce commissioned deep-dive reports for the chip-metal chain — alumina and zinc producers, gallium and germanium refiners, compound-semiconductor, LED, RF, fibre-optic, infrared-optics and space-solar manufacturers, defence and aerospace procurement teams, metals traders — and for geopolitics researchers and think tanks, covering angles such as byproduct-to-wafer supply-chain mapping, Chinese licence and export scenarios, export-control exposure by product and HS code, the two-tier price and offtake structures, stockpile and Defense Production Act rules, the Western project pipeline and its timelines, recycling economics and demand scenarios. Every report is source-cited — charts, maps and citations included — and built on the same open, verified data behind this dashboard. Email hello@mineral.watch with a short note on what you need and we'll come back with a scoped proposal.
+
 ## mineral.watch › Graphite
 
 URL: https://mineral.watch/graphite/
 
 Open data visualisation tracking the global graphite supply chain: mines, trade flows, processing hubs and prices. Built on USGS, BGS, UN Comtrade and IEA data.
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ### Dataset
 
@@ -449,7 +511,7 @@ URL: https://mineral.watch/green/
 
 Open data visualisation tracking the green transition's supply chain: who builds the world's solar modules, battery cells, wind turbines and electrolysers, which minerals they consume, China's ~80% manufacturing grip, Europe's gigafactory reckoning and where the EU's green money goes — Innovation Fund, Recovery and Resilience Facility, Just Transition Fund, Modernisation Fund, Hydrogen Bank and more. Built on IEA, IRENA, GWEC, BNEF and European Commission data.
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ### Dataset
 
@@ -506,7 +568,7 @@ URL: https://mineral.watch/lithium/
 
 Open data visualisation tracking the global lithium supply chain: hard-rock mines, brine operations, converters, the China refining chokepoint, the price whipsaw and the battery boom. Built on USGS, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ### Dataset
 
@@ -557,7 +619,7 @@ URL: https://mineral.watch/manganese/
 
 Open data visualisation tracking the global manganese supply chain: the mines of the Kalahari, Gabon and Groote Eylandt, China's refining chokepoint, the steel backbone, the battery pivot and the deep-sea nodule race. Built on USGS, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ### Dataset
 
@@ -608,7 +670,7 @@ URL: https://mineral.watch/nickel/
 
 Open data visualisation tracking the global nickel supply chain: Indonesia's two-thirds grip on mining, the Chinese-built smelter parks, the class-1/class-2 divide, the 2022 LME squeeze, the quota machine and the battery chemistry war. Built on USGS, INSG, IEA, BGS and price-agency data.
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ### Dataset
 
@@ -664,7 +726,7 @@ URL: https://mineral.watch/oil-gas/
 
 Open data visualisation tracking global oil and gas: the 2026 Strait of Hormuz closure and the largest supply disruption in oil-market history, the Gulf shut-in ledger, pipeline bypasses, the LNG shock, sanctions and the shadow fleet, OPEC+, prices and the companies that move energy. Built on EIA, IEA, OPEC, BGS, Energy Institute and tanker-tracking data — for energy businesses, geopolitics researchers and think tanks.
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ### Dataset
 
@@ -719,7 +781,7 @@ URL: https://mineral.watch/rare-earths/
 
 Open data visualisation tracking the global rare earth supply chain: mines, separation plants, magnet factories, export controls and prices. Built on USGS, IEA and trade data.
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ### Dataset
 
@@ -802,7 +864,7 @@ URL: https://mineral.watch/tin/
 
 Open data visualisation tracking the global tin supply chain: Indonesia's crackdown and export-ban plans, Myanmar's Wa State mega-mine, Congo's Bisie under M23 pressure, China's smelting grip, the 2026 price records and the AI solder boom — built on USGS, BGS, LME, CRU and ITA data, for tin-industry businesses, geopolitics researchers and think tanks.
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ### Dataset
 
@@ -905,7 +967,7 @@ URL: https://mineral.watch/uranium/
 
 Open data visualisation tracking the global uranium supply chain: mines, conversion and enrichment plants, prices, the Russian enrichment chokepoint and the nuclear revival. Built on WNA, IAEA, EIA and BGS data.
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ### Dataset
 
