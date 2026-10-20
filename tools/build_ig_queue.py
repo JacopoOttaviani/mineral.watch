@@ -21,16 +21,17 @@ SOCIAL = f'{ROOT}/social/instagram'
 SITE = 'https://mineral.watch/social/instagram'
 
 # Published by hand from this machine (Claude in Chrome). Keep in sync when posting manually.
-PUBLISHED = {'01-launch', '02-nine-minerals', 'minerals/lithium', '03-us-import-reliance', 'minerals/cobalt', '05-mine-vs-refinery', 'minerals/nickel'}
+PUBLISHED = {'01-launch', '02-nine-minerals', 'minerals/lithium', '03-us-import-reliance', 'minerals/cobalt', '05-mine-vs-refinery', 'minerals/nickel',
+             '16-gallium-germanium'}  # 16 posted by hand 2026-10-20
 
-ORDER = ['03-us-import-reliance', 'minerals/cobalt', '05-mine-vs-refinery', 'minerals/nickel', '06-lithium-price',
+ORDER = ['16-gallium-germanium', '03-us-import-reliance', 'minerals/cobalt', '05-mine-vs-refinery', 'minerals/nickel', '06-lithium-price',
          '04-cobalt-drc', '07-antimony-export-controls', 'minerals/graphite', '08-graphite-anode', '09-nickel-lme',
          'minerals/copper', '10-manganese-4-vs-95', '11-rare-earths-17', 'minerals/rare-earths', '12-copper-zero-tc',
          '13-uranium-enrichment', 'minerals/manganese', '14-how-we-work', 'minerals/uranium', '15-hire-us',
          'minerals/antimony']
 
 ACCENTS = {'graphite': '#fbbf24', 'lithium': '#fb7185', 'cobalt': '#5b8aff', 'nickel': '#a3e635', 'rare-earths': '#a78bfa',
-           'copper': '#e8926a', 'manganese': '#e879f9', 'uranium': '#22d3ee', 'antimony': '#34d399'}
+           'copper': '#e8926a', 'manganese': '#e879f9', 'uranium': '#22d3ee', 'antimony': '#34d399', 'gallium-germanium': '#ff5e57'}
 
 
 def accent_for(item_id):
