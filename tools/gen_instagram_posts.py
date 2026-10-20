@@ -986,6 +986,41 @@ Write to hello@mineral.watch, or subscribe at mineral.watch to be notified when 
          'mineral.watch')
 
 
+# ---- 16 gallium & germanium launch -------------------------------------------
+GAGE_ACCENT = '#ff5e57'   # the gallium & germanium dashboard accent ("LED red")
+
+
+def p16():
+    a = GAGE_ACCENT
+    body = (kicker('Gallium & germanium · new dashboard') +
+            '<div class="hero">99%</div>'
+            '<div class="herolabel">of the world’s primary gallium is made in China. '
+            '<span>900 of ~900 tonnes in 2025. No other critical mineral is this concentrated.</span></div>'
+            f'<div class="kpis">{kpi("~91%", "of germanium production is Chinese; neither metal is mined, both are byproducts of alumina and zinc")}'
+            f'{kpi("27 Nov 2026", "China’s ban on exports to the US is suspended only until this date")}'
+            f'{kpi("~6×", "rise in the European germanium price, 2023 to April 2026")}</div>')
+    html = frame(body, a, pill='Ga · Ge · chip metals', visit_path='gallium-germanium',
+                 src='USGS MCS 2026 · S&P Global · MOFCOM · Fastmarkets', wm='Ga')
+    post('gallium-germanium', 'Gallium & germanium: the chip metals, 99% Chinese', 'single',
+         [(html, 'Gallium and germanium post: 99% of the world’s primary gallium is made in China; about 91% of germanium; China’s export ban on the US is suspended until 27 November 2026; the European germanium price rose about sixfold from 2023 to April 2026.')],
+         '''
+New dashboard: gallium and germanium, the chip metals.
+
+99% of the world's primary gallium is made in China: 900 of ~900 tonnes in 2025 (USGS). Germanium is close behind at ~91% of production (S&P Global). Neither is mined. Gallium is skimmed from the liquor of alumina refineries, germanium from zinc smelters and, in China, from germanium-rich coal.
+
+Gallium nitride is the radar, the 5G base station, the LED and the power stage of the AI data centre. Germanium is the core of every optical fibre, the lens of every thermal sight and the wafer under most satellites' solar cells.
+
+China licensed exports in August 2023, banned them to the US in December 2024, and on 9 November 2025 suspended that ban until 27 November 2026. The market split in two: European germanium went from $1,392/kg in 2023 to $8,000–10,000 in April 2026 (Argus via USGS, Fastmarkets); Western gallium trades at five to ten times China's domestic price.
+
+The rebuild: Alcoa's 100 t/yr plant in Western Australia (FID July 2026), Metlen in Greece, Teck's Trail expansion, Rio Tinto's Quebec pilot, Korea Zinc in Tennessee.
+
+Map, charts, timeline and company tracker: mineral.watch/gallium-germanium (link in bio).
+''',
+         ['#gallium', '#germanium', '#semiconductors', '#GaN', '#criticalminerals', '#exportcontrols', '#china', '#chips',
+          '#fibreoptics', '#defence', '#supplychain', '#opendata', '#mineralwatch'],
+         'mineral.watch/gallium-germanium')
+
+
 # ---------------------------------------------------------------- render
 def render(html, out_png, tmp):
     page = f'{tmp}/slide.html'
@@ -1024,7 +1059,7 @@ def contact_sheet(covers, path):
 
 def main():
     only = {int(a) for a in sys.argv[1:] if a.isdigit()}
-    for build in (p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11, p12, p13, p14, p15):
+    for build in (p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11, p12, p13, p14, p15, p16):
         build()
     os.makedirs(OUT, exist_ok=True)
     dates = schedule_dates(dt.date(2026, 9, 4), len(POSTS))

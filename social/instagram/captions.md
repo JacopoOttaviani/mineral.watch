@@ -1,6 +1,6 @@
 # mineral.watch · Instagram launch set
 
-15 posts, 1080×1350 (4:5). Suggested cadence: Mon/Wed/Fri at 12:00 from 2026-09-04 to 2026-10-07. Set the profile link to https://mineral.watch. Paste the hashtags as the first comment.
+16 posts, 1080×1350 (4:5). Suggested cadence: Mon/Wed/Fri at 12:00 from 2026-09-04 to 2026-10-09. Set the profile link to https://mineral.watch. Paste the hashtags as the first comment.
 
 ## 01 · mineral.watch is now on Instagram
 
@@ -482,4 +482,35 @@ Write to hello@mineral.watch, or subscribe at mineral.watch to be notified when 
 **Alt text**
 
 1. Call to action: Need a source-cited report on a mineral supply chain? Hire us at hello@mineral.watch.
+
+## 16 · Gallium & germanium: the chip metals, 99% Chinese
+
+- **Date:** 2026-10-09 · **Type:** single (1 image) · **Link:** https://mineral.watch/gallium-germanium
+- **Files:** `16-gallium-germanium/post.png`
+
+**Caption**
+
+```
+New dashboard: gallium and germanium, the chip metals.
+
+99% of the world's primary gallium is made in China: 900 of ~900 tonnes in 2025 (USGS). Germanium is close behind at ~91% of production (S&P Global). Neither is mined. Gallium is skimmed from the liquor of alumina refineries, germanium from zinc smelters and, in China, from germanium-rich coal.
+
+Gallium nitride is the radar, the 5G base station, the LED and the power stage of the AI data centre. Germanium is the core of every optical fibre, the lens of every thermal sight and the wafer under most satellites' solar cells.
+
+China licensed exports in August 2023, banned them to the US in December 2024, and on 9 November 2025 suspended that ban until 27 November 2026. The market split in two: European germanium went from $1,392/kg in 2023 to $8,000–10,000 in April 2026 (Argus via USGS, Fastmarkets); Western gallium trades at five to ten times China's domestic price.
+
+The rebuild: Alcoa's 100 t/yr plant in Western Australia (FID July 2026), Metlen in Greece, Teck's Trail expansion, Rio Tinto's Quebec pilot, Korea Zinc in Tennessee.
+
+Map, charts, timeline and company tracker: mineral.watch/gallium-germanium (link in bio).
+```
+
+**First comment**
+
+```
+#gallium #germanium #semiconductors #GaN #criticalminerals #exportcontrols #china #chips #fibreoptics #defence #supplychain #opendata #mineralwatch
+```
+
+**Alt text**
+
+1. Gallium and germanium post: 99% of the world’s primary gallium is made in China; about 91% of germanium; China’s export ban on the US is suspended until 27 November 2026; the European germanium price rose about sixfold from 2023 to April 2026.
 
