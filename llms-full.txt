@@ -169,7 +169,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - Africa (OECD 2026) — production shares, 2024 (USGS MCS 2025 basis; the dashboards carry newer 2025 figures): DR Congo ~76% of mined cobalt; South Africa, Gabon, Ghana and Côte d'Ivoire 66% of manganese, with Gabon at 23.2% of output but 3.6% of reserves (read as under-exploration); Zimbabwe 9.3% of lithium; Madagascar 5.5%, Mozambique 4.6% and Tanzania 1.5% of graphite; Africa ~3% of nickel (BGS) and ~5% of nickel reserves; DR Congo and Zambia ~10% of copper reserves.
 - Africa (OECD 2026) — 2040 projections (authors' calculations from the IEA Critical Minerals Data Explorer): DR Congo remains the No. 2 copper supplier at ~14%, behind Chile's 26%; Mozambique and Madagascar supply ~23% of graphite, making Africa No. 2 after China (announced-pledges scenario); Zimbabwe's lithium share slips from 9% to ~6%; no African country becomes a top nickel producer or a significant cobalt or lithium refiner.
 - Africa (OECD 2026) — export restrictions on unprocessed minerals: bans in Tanzania (copper and nickel, March 2017), Zimbabwe (raw lithium, December 2022; concentrates from 2027), Namibia (critical minerals except uranium, June 2023), Ghana (raw lithium, June 2023), DR Congo (cobalt, February 2025, a price-support measure converted to quotas in October 2025), Malawi (all raw minerals including graphite, October 2025) and Gabon (manganese, planned from 2029); levies in Zambia (15% on unprocessed mineral exports, waivers often granted) and a proposed 25% South African export tax on raw chrome. Ghana set a 10% lithium royalty.
-- Africa (OECD 2026) — investment and governance: Africa's share of global exploration spending fell from 16% (2004) to 10.4% (2024) although it hosts ~20% of new discoveries at a cost per significant discovery ~30% below the world average ($154m vs $219m); Australian and Canadian juniors provide over 50% of African exploration budgets, Chinese firms ~3%. Chinese companies rank fifth in African mine ownership (behind US, Australian, Canadian and UK firms) but hold stakes in 29 of the ~40 active copper-cobalt properties in DR Congo and spent ~$4.5 billion on African lithium mines in 2022-23. Many mineral-rich African states collect only ~40% of potential mineral revenues; mining averages 8.8% of GDP and over half of export revenues in 15 mineral-rich sub-Saharan economies; at least 10 million people work in artisanal and small-scale mining in sub-Saharan Africa.
+- Africa (OECD 2026) — investment and governance: Africa's share of global exploration spending fell from 16% (2004) to 10.4% (2024) although it hosts ~20% of new discoveries at a cost per significant discovery ~30% below the world average ($154m vs $219m); Australian and Canadian juniors provide over 50% of African exploration budgets, Chinese firms ~3%. Chinese companies rank fifth in African mine ownership (behind US, Australian, Canadian and UK firms) but hold stakes in 29 of the ~40 active copper-cobalt properties in DR Congo and spent ~$4.5 billion on African lithium mines in 2022-23. Many mineral-rich African states collect only ~40% of potential mineral revenues; mining averages 8.8% of GDP and over half of export revenues in 15 mineral-rich sub-Saharan economies; at least 10 million people work in artisanal and small-scale mining in sub-Saharan Africa. EU: only 4 of the 60 CRMA strategic projects are in Africa, and the European Court of Auditors found in February 2026 that the EU is not on course to meet the Act's objectives.
 - Green transition — deployment (2025): 664 GW of solar PV installed worldwide, +12%, global fleet >3 TW (SolarPower Europe); 165 GW of wind, +40%, of which 9.3 GW offshore and >120 GW in China (GWEC); more than 20 million electric cars sold, one in four new cars, ~55% of sales in China, 28% in Europe, <10% in the US (IEA GEVO 2026); EU solar 65.1 GW (first decline since 2016), EU wind 15.1 GW, EU battery storage 27.1 GWh, EU battery-electric car share 17.4%.
 - Green transition — investment (IEA World Energy Investment 2026): $3.4 tn total energy investment in 2026, of which $2.2 tn clean energy vs $1.2 tn oil, gas and coal; solar $365 bn, grids $550 bn, battery storage >$100 bn; China almost a third of clean-energy investment. US: $34.8 bn of clean-energy projects cancelled in 2025 (E2), ~$40 bn and 53,000 jobs by mid-2026 (EDF/Atlas) after the One Big Beautiful Bill Act (4 July 2025).
 - Green transition — manufacturing concentration (IEA ETP 2026, 2025 data): China ~85% of solar supply-chain capacity (95%+ wafers, >80% modules), >80% of battery-cell production (~85% cathode, >90% anode material), 60% of wind-turbine production capacity (Europe 19%, US 9%), ~60% of electrolyser manufacturing, 35% of heat-pump capacity (US 25%, EU 20%). CATL 39.2% and BYD 16.4% of 2025 EV-battery installations (SNE Research, 1,187 GWh total). Chinese OEMs ~70% of 2025 wind-turbine orders (215 GW, Wood Mackenzie). Battery pack price $108/kWh in 2025, LFP $81, stationary storage $70 (BNEF).
@@ -323,7 +323,7 @@ The Democratic Republic of the Congo mined about 230,000 of the world's 310,000 
 
 **Why did the DRC ban cobalt exports, and what are the quotas?**
 
-By early 2025 cobalt had crashed to eight-year lows around $10 per pound under a wall of new supply. On 22 February 2025 the DRC — supplier of three quarters of the world's cobalt — banned exports outright, and from 16 October 2025 replaced the ban with quotas run by the regulator ARECOMS: 18,125 tonnes for the rest of 2025, then 96,600 tonnes a year for 2026 and 2027, including 9,600 tonnes reserved for the state — roughly half of what the country exported in 2024. Prices responded violently: hydroxide rose about 300% over 2025, and standard-grade metal traded near $26 per pound in August 2026.
+By early 2025 cobalt had crashed to eight-year lows around $10 per pound under a wall of new supply. On 22 February 2025 the DRC — supplier of three quarters of the world's cobalt — banned exports outright, and from 16 October 2025 replaced the ban with quotas run by the regulator ARECOMS: 18,125 tonnes for the rest of 2025, then 96,600 tonnes a year for 2026 and 2027, including 9,600 tonnes reserved for the state — roughly half of what the country exported in 2024. Prices responded violently: hydroxide rose about 300% over 2025, and standard-grade metal traded near $26 per pound in August 2026. Cobalt is a strategic substance under the DRC's 2018 Decree 18/042, alongside coltan and germanium, which is what places its exports under ARECOMS.
 
 **Is the world running out of cobalt?**
 
@@ -335,7 +335,7 @@ Increasingly, yes — and it is the biggest force reshaping this market. Cobalt-
 
 **What about artisanal mining and child labour?**
 
-Between about 150,000 and 250,000 people dig cobalt by hand in the DRC's artisanal sector, historically supplying anywhere from a few percent to a fifth of national output depending on prices — with documented child labour and fatal accidents. Since February 2025 the state's Entreprise Générale du Cobalt has held a legal monopoly on buying and exporting artisanal cobalt, and it produced its first fully traceable cathodes in November 2025. Formalisation remains partial: initiatives such as the Fair Cobalt Alliance work on mine-site safety and school enrolment, while Amnesty International continues to document evictions and abuses around industrial mines.
+Between about 150,000 and 250,000 people dig cobalt by hand in the DRC's artisanal sector, historically supplying anywhere from a few percent to a fifth of national output depending on prices — with documented child labour and fatal accidents. Since February 2025 the state's Entreprise Générale du Cobalt has held a legal monopoly on buying and exporting artisanal cobalt, and it produced its first fully traceable cathodes in November 2025. Formalisation remains partial: initiatives such as the Fair Cobalt Alliance work on mine-site safety and school enrolment, while Amnesty International continues to document evictions and abuses around industrial mines. Across sub-Saharan Africa at least 10 million people work in artisanal and small-scale mining, and some 60 million more depend on it (World Bank figures cited by the OECD, 2026).
 
 **Need a deep-dive report on cobalt?**
 
@@ -437,7 +437,7 @@ URL: https://mineral.watch/gallium-germanium/
 
 Open data visualisation tracking the global gallium and germanium supply chains: China's 99% grip on primary gallium and ~91% of germanium, the July 2023 export licences, the December 2024 ban on the United States and its suspension until 27 November 2026, the two-tier price (Western germanium up roughly sixfold, gallium ten times China's domestic price), the radar, night-vision, fibre-optic, LED and AI power-electronics uses, and the Western recovery projects from Wagerup to Trail to Greece — built on USGS, BGS, S&P Global, IEA, Chinese customs and company data, for semiconductor, photonics and defence buyers, geopolitics researchers and think tanks.
 
-Last updated: 2026-10-08
+Last updated: 2026-10-21
 
 ### Dataset
 
@@ -530,7 +530,7 @@ URL: https://mineral.watch/green/
 
 Open data visualisation tracking the green transition's supply chain: who builds the world's solar modules, battery cells, wind turbines and electrolysers, which minerals they consume, China's ~80% manufacturing grip, Europe's gigafactory reckoning and where the EU's green money goes — Innovation Fund, Recovery and Resilience Facility, Just Transition Fund, Modernisation Fund, Hydrogen Bank and more. Built on IEA, IRENA, GWEC, BNEF and European Commission data.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-21
 
 ### Dataset
 
@@ -804,7 +804,7 @@ URL: https://mineral.watch/platinum-group-metals/
 
 Open data visualisation tracking the global platinum-group metals supply chain: South Africa's 71% of platinum and 83% of reserves, Russia's 44% of palladium, the January 2026 platinum record and 44% slump, the 1.44 million-ounce 2025 deficit turning to a 2026 surplus, palladium's first surplus in 14 years, the Russian-palladium duty fight, Zimbabwe's export ban, the Western mine closures and new projects, and the catalyst, jewellery, glass, hydrogen and defence uses — built on USGS, BGS, WPIC, Johnson Matthey and company data, for automakers, refiners, recyclers, bullion and hydrogen buyers, geopolitics researchers and think tanks.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-21
 
 ### Dataset
 
@@ -855,7 +855,7 @@ URL: https://mineral.watch/rare-earths/
 
 Open data visualisation tracking the global rare earth supply chain: mines, separation plants, magnet factories, export controls and prices. Built on USGS, IEA and trade data.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-21
 
 ### Dataset
 
@@ -939,7 +939,7 @@ URL: https://mineral.watch/tin/
 
 Open data visualisation tracking the global tin supply chain: Indonesia's crackdown and export-ban plans, Myanmar's Wa State mega-mine, Congo's Bisie under M23 pressure, China's smelting grip, the 2026 price records and the AI solder boom — built on USGS, BGS, LME, CRU and ITA data, for tin-industry businesses, geopolitics researchers and think tanks.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-21
 
 ### Dataset
 
@@ -991,7 +991,7 @@ URL: https://mineral.watch/tungsten/
 
 Open data visualisation tracking the global tungsten supply chain: China's export controls and 79% grip on mine supply, the 2026 price shock (APT up roughly ninefold), Japan's cut-off, the $2 billion US stockpile contract, and the new mines in Korea, Devon and Kazakhstan — built on USGS, BGS, Fastmarkets, SMM and company data, for carbide and tool makers, defence procurement teams, geopolitics researchers and think tanks.
 
-Last updated: 2026-09-30
+Last updated: 2026-10-21
 
 ### Dataset
 
@@ -1042,7 +1042,7 @@ URL: https://mineral.watch/uranium/
 
 Open data visualisation tracking the global uranium supply chain: mines, conversion and enrichment plants, prices, the Russian enrichment chokepoint and the nuclear revival. Built on WNA, IAEA, EIA and BGS data.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-21
 
 ### Dataset
 
