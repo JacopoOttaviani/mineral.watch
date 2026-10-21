@@ -54,7 +54,7 @@
         "@id": "https://mineral.watch/#organization"
       },
       "inLanguage": "en",
-      "dateModified": "2026-10-20",
+      "dateModified": "2026-10-21",
       "breadcrumb": {
         "@id": "https://mineral.watch/supply-chain/#breadcrumb"
       },
@@ -100,7 +100,8 @@
         "@id": "https://mineral.watch/#organization"
       },
       "isBasedOn": [
-        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+        "https://doi.org/10.1787/53e5f664-en"
       ],
       "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "isAccessibleForFree": true,
@@ -131,6 +132,7 @@
         "antimony",
         "tin",
         "tungsten",
+        "Africa",
         "open data"
       ],
       "dateModified": "2026-09-01",
@@ -394,6 +396,8 @@ nav a.link:hover{color:var(--txt);background:var(--card)}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero h1 em.cy{color:var(--accent2)}
 .hero p{color:var(--muted);max-width:720px;font-size:1rem}
+.hero p + p{margin-top:10px}
+.chokepoint .sub a{color:var(--accent2)}
 
 /* controls */
 .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
@@ -427,6 +431,11 @@ input[type=range]{flex:1 1 220px;accent-color:var(--accent)}
 .chip.layer.on.mine{border-color:var(--accent)}
 .chip.layer.on.ref{border-color:var(--accent2)}
 .chip.layer[disabled]{opacity:.4;pointer-events:none}
+.chip.bloc{margin-left:auto;display:inline-flex;align-items:center;gap:7px;font-weight:700}
+.chip.bloc .dot{width:10px;height:10px;border-radius:50%;border:2px solid var(--muted);flex:none;box-sizing:border-box}
+.chip.bloc.on{background:var(--card);border-color:var(--txt);color:var(--txt)}
+.chip.bloc.on .dot{border-color:var(--txt);background:var(--txt)}
+.chip.bloc:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
 
 /* map + side-by-side rankings */
 .mapdiv{height:56vh;min-height:420px;border-radius:var(--radius);border:1px solid var(--line);z-index:1;background:var(--bg2)}
@@ -449,6 +458,7 @@ input[type=range]{flex:1 1 220px;accent-color:var(--accent)}
 .bar-row .fill{height:100%;border-radius:99px;width:0;transition:width .5s ease}
 .bar-row .val{text-align:right;color:var(--muted);font-size:.72rem}
 .bar-row:hover .name{color:var(--accent)}
+.bar-row.bloc .name,.bar-row.bloc .rank{color:var(--txt);font-weight:700}
 .empty-msg{color:var(--muted);font-size:.82rem;padding:14px 0}
 
 .leaflet-popup-content-wrapper{background:var(--card);color:var(--txt);border-radius:10px;border:1px solid var(--line)}
@@ -494,6 +504,7 @@ footer a.ig svg{width:13px;height:13px}
   <div class="kicker">Interactive map · BGS World Mineral Statistics</div>
   <h1>Where it's <em>mined</em> vs where it's <em class="cy">refined</em></h1>
   <p>For most strategic minerals the supply-chain risk isn't at the mine — it's at the refinery. Pick a mineral and toggle the <b style="color:var(--accent)">mined</b> and <b style="color:var(--accent2)">refined</b> layers to compare, country by country, where ore comes out of the ground and where it is turned into usable material.</p>
+  <p>Take Africa: in 2024 it mined about 77% of the world's cobalt but refined under 2%, down from about 27% in 2000 when Congolese and Zambian refineries were still running (BGS). The <a href="https://doi.org/10.1787/53e5f664-en" target="_blank" rel="noopener">OECD's 2026 regional review</a> finds the same pattern across the continent's critical minerals: 24% of Africa's critical-mineral exports leave raw and 72% semi-processed. Switch on <b style="color:var(--txt)">Africa as one bloc</b> to compare its share at each stage, for any mineral and year.</p>
 </header>
 
 <section id="sc-sec">
@@ -516,6 +527,7 @@ footer a.ig svg{width:13px;height:13px}
     <button class="chip layer mine on" id="layerMineBtn"><span class="dot"></span>Mined</button>
     <button class="chip layer ref on" id="layerRefBtn"><span class="dot"></span>Refined</button>
     <span class="chip-row" id="refStageChips"></span>
+    <button class="chip bloc" id="africaBtn" type="button" aria-pressed="false" title="Sum every African country into one entry at each stage"><span class="dot"></span>Africa as one bloc</button>
   </div>
 
   <div class="mapdiv" id="map"></div>
@@ -548,6 +560,7 @@ footer a.ig svg{width:13px;height:13px}
     Mine-stage figures for cobalt, copper and nickel are metal content; refined/smelter-stage figures are gross tonnes — compare <b>shares</b> across the two layers, not absolute volumes.
     Refined output can also draw on stocks, scrap and intermediate imports, so world totals differ between stages.
     Circle position is each country's geographic centroid, not a mine or plant location.
+    <b>Africa as one bloc</b> sums every African country in the BGS series into one entry and one circle at each stage; context from <a href="https://doi.org/10.1787/53e5f664-en" target="_blank" rel="noopener">OECD (2026), <i>Critical minerals in Africa: a regional overview</i></a> (CC BY 4.0).
   </div>
 </section>
 
@@ -632,6 +645,11 @@ footer a.ig svg{width:13px;height:13px}
   // display-name overrides for ambiguous BGS country labels
   const NAME_OVERRIDES = { COD: "DR Congo" };
 
+  // "Africa as one bloc": African states (BGS ISO3 codes) summed into one entry at each stage
+  const AFRICA = new Set("DZA AGO BEN BWA BFA BDI CMR CPV CAF TCD COM COG COD CIV DJI EGY GNQ ERI SWZ ETH GAB GMB GHA GIN GNB KEN LSO LBR LBY MDG MWI MLI MRT MUS MAR MOZ NAM NER NGA RWA STP SEN SYC SLE SOM ZAF SSD SDN TZA TGO TUN UGA ZMB ZWE ESH".split(" "));
+  const AFR = "AFR", AFR_POINT = {lat:2, lon:21};
+  let africaBloc = /(?:^|[?&])africa=1(?:&|$)/.test(location.search);
+
   let countries = null;
   let currentMineral = MINERALS[0];
   let currentRefIdx = 0;            // index into mineral.refined[]
@@ -641,7 +659,8 @@ footer a.ig svg{width:13px;height:13px}
   const maxCache = {};              // slug -> max qty across years
 
   const el = id => document.getElementById(id);
-  const cname = iso3 => NAME_OVERRIDES[iso3] || countries[iso3].name;
+  const cname = iso3 => iso3 === AFR ? "Africa (all countries)" : (NAME_OVERRIDES[iso3] || countries[iso3].name);
+  const coords = iso3 => iso3 === AFR ? AFR_POINT : countries[iso3];
   const fmtNum = n => new Intl.NumberFormat("en", {notation:"compact", maximumFractionDigits:1}).format(n);
   const fmtPct = n => (n*100).toFixed(n < 0.01 ? 2 : 1) + "%";
 
@@ -698,11 +717,28 @@ footer a.ig svg{width:13px;height:13px}
       .sort((a,b) => b[1]-a[1]);
   }
 
+  function groupAfrica(entries){
+    if (!africaBloc) return entries;
+    let sum = 0; const rest = [];
+    entries.forEach(e => { if (AFRICA.has(e[0])) sum += e[1]; else rest.push(e); });
+    if (sum > 0) rest.push([AFR, sum]);
+    return rest.sort((a,b) => b[1]-a[1]);
+  }
+  const africaSum = raw => raw.reduce((s,[k,q]) => s + (AFRICA.has(k) ? q : 0), 0);
+  function africaParts(raw, total){
+    return raw.filter(([k]) => AFRICA.has(k)).slice(0,3)
+      .map(([k,q]) => `${cname(k)} ${fmtPct(total>0 ? q/total : 0)}`).join(", ");
+  }
+
   function sparklineSVG(slug, iso3){
     const byYear = dataCache[slug] || {};
     const series = [];
     Object.keys(byYear).sort().forEach(y => {
-      if (byYear[y][iso3] !== undefined) series.push(byYear[y][iso3]);
+      if (iso3 === AFR){
+        let s = 0, any = false;
+        for (const k in byYear[y]) if (AFRICA.has(k) && countries[k]) { s += byYear[y][k]; any = true; }
+        if (any) series.push(s);
+      } else if (byYear[y][iso3] !== undefined) series.push(byYear[y][iso3]);
     });
     if (series.length < 2) return "";
     const w=150,h=32,pad=2;
@@ -716,19 +752,20 @@ footer a.ig svg{width:13px;height:13px}
     return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="display:block;margin-top:6px"><polyline points="${pts}" fill="none" stroke="#4cc9f0" stroke-width="1.6"/></svg>`;
   }
 
-  function drawStage(layer, stage, color, entries, total){
+  function drawStage(layer, stage, color, entries, total, parts){
     layer.length = 0;
     const cat = layer === layerMine ? "mine" : "ref";
     const maxQty = maxCache[stage.slug] || 1;
     entries.forEach(([iso3, qty]) => {
-      const c = countries[iso3];
+      const c = coords(iso3);
       const share = total > 0 ? qty/total : 0;
-      const radius = RMIN + (RMAX-RMIN) * Math.sqrt(qty/maxQty);
+      const radius = RMIN + (RMAX-RMIN) * Math.sqrt(Math.min(qty/maxQty, 1.8));
       const popupHtml = `
         <b>${cname(iso3)}</b><br>
         ${currentMineral.name} — ${stage.label}, ${currentYear}<br>
         ${fmtNum(qty)} ${stage.unit}<br>
         Share of world total: <span class="pp-share">${fmtPct(share)}</span>
+        ${iso3 === AFR && parts ? `<br><span style="font-size:.9em">Largest: ${parts}</span>` : ""}
         ${sparklineSVG(stage.slug, iso3)}
       `;
       layer.push(L.circleMarker([c.lat, c.lon], {
@@ -744,12 +781,16 @@ footer a.ig svg{width:13px;height:13px}
       wrap.innerHTML = '<div class="empty-msg">No data for this year.</div>';
       return;
     }
-    const top = entries.slice(0,5);
-    const topQty = top[0][1];
-    wrap.innerHTML = top.map(([iso3, qty], i) => {
+    const top = entries.slice(0,5).map((e,i) => [e[0], e[1], i]);
+    if (africaBloc){
+      const ai = entries.findIndex(e => e[0] === AFR);
+      if (ai >= 5) top.push([AFR, entries[ai][1], ai]);
+    }
+    const topQty = entries[0][1];
+    wrap.innerHTML = top.map(([iso3, qty, i]) => {
       const share = total > 0 ? qty/total : 0;
       const width = (qty/topQty*100).toFixed(1);
-      return `<div class="bar-row" data-iso3="${iso3}">
+      return `<div class="bar-row${iso3 === AFR ? " bloc" : ""}" data-iso3="${iso3}">
         <div class="rank">${i+1}</div>
         <div>
           <div class="name">${cname(iso3)}</div>
@@ -760,8 +801,8 @@ footer a.ig svg{width:13px;height:13px}
     }).join("");
     [...wrap.children].forEach(row => {
       row.onclick = () => {
-        const c = countries[row.dataset.iso3];
-        if (c) map.flyTo([c.lat, c.lon], 4, {duration:.6});
+        const c = coords(row.dataset.iso3);
+        if (c) map.flyTo([c.lat, c.lon], row.dataset.iso3 === AFR ? 3 : 4, {duration:.6});
       };
     });
   }
@@ -803,15 +844,42 @@ footer a.ig svg{width:13px;height:13px}
     box.style.display = "block";
   }
 
+  function renderAfrica(mineRaw, mineTotal, refRaw, refTotal, refStage){
+    const box = el("chokepoint");
+    if (!mineRaw.length){ box.style.display = "none"; return; }
+    const mn = currentMineral.name.toLowerCase();
+    const aMine = mineTotal > 0 ? africaSum(mineRaw)/mineTotal : 0;
+    let html = aMine > 0
+      ? `In ${currentYear}, <b class="mine">Africa</b> mined <b class="mine">${fmtPct(aMine)}</b> of the world's ${mn} (${africaParts(mineRaw, mineTotal)})`
+      : `BGS records no African mine production of ${mn} in ${currentYear}`;
+    if (refStage && refRaw.length){
+      const aRef = refTotal > 0 ? africaSum(refRaw)/refTotal : 0;
+      const stg = refStage.label.toLowerCase();
+      if (aRef === 0) html += `, and no ${stg} at all.`;
+      else html += (aMine > aRef ? " but produced only " : " and produced ") + `<b class="ref">${fmtPct(aRef)}</b> of world ${stg}.`;
+      const [topIso, topQty] = refRaw[0];
+      if (!AFRICA.has(topIso)) html += ` <b class="ref">${cname(topIso)}</b> alone produced <b class="ref">${fmtPct(refTotal>0 ? topQty/refTotal : 0)}</b>.`;
+    } else if (refStage){
+      html += `. BGS has no ${refStage.label.toLowerCase()} data for ${currentYear}.`;
+    } else {
+      html += `. BGS publishes no refined-stage series for ${mn}.`;
+    }
+    el("chokeText").innerHTML = html;
+    el("chokeSub").innerHTML = 'Africa = every African country in the BGS series, summed. The <a href="https://doi.org/10.1787/53e5f664-en" target="_blank" rel="noopener">OECD\'s 2026 regional review</a> finds 24% of Africa\'s critical-mineral exports leave raw and 72% semi-processed.';
+    box.style.display = "block";
+  }
+
   function render(){
     const m = currentMineral;
-    const mineEntries = entriesFor(m.mine.slug, currentYear);
-    const mineTotal = mineEntries.reduce((s,[,q]) => s+q, 0);
+    const mineRaw = entriesFor(m.mine.slug, currentYear);
+    const mineTotal = mineRaw.reduce((s,[,q]) => s+q, 0);
+    const mineEntries = groupAfrica(mineRaw);
 
     el("mineSub").textContent = `${m.name} · ${m.mine.label} · ${currentYear} · ${m.mine.unit}`;
-    drawStage(layerMine, m.mine, "#c8ff6b", mineEntries, mineTotal);
+    drawStage(layerMine, m.mine, "#c8ff6b", mineEntries, mineTotal, africaParts(mineRaw, mineTotal));
     renderBars("mineBars", mineEntries, mineTotal, "linear-gradient(90deg,#c8ff6b,#e5ffb8)");
     el("mineTop3").textContent = mineEntries.length ? fmtPct(top3Share(mineEntries, mineTotal)) : "–";
+    el("mineTop3Label").textContent = africaBloc ? "of world mine production comes from the top 3, counting Africa as one." : "of world mine production comes from the top 3 countries.";
 
     const refStage = m.refined ? m.refined[currentRefIdx] : null;
     const refBtn = el("layerRefBtn");
@@ -819,13 +887,16 @@ footer a.ig svg{width:13px;height:13px}
       refBtn.removeAttribute("disabled");
       el("refNone").style.display = "none";
       el("refCallout").style.display = "flex";
-      const refEntries = entriesFor(refStage.slug, currentYear);
-      const refTotal = refEntries.reduce((s,[,q]) => s+q, 0);
+      const refRaw = entriesFor(refStage.slug, currentYear);
+      const refTotal = refRaw.reduce((s,[,q]) => s+q, 0);
+      const refEntries = groupAfrica(refRaw);
       el("refSub").textContent = `${m.name} · ${refStage.label} · ${currentYear} · ${refStage.unit}`;
-      drawStage(layerRef, refStage, "#4cc9f0", refEntries, refTotal);
+      drawStage(layerRef, refStage, "#4cc9f0", refEntries, refTotal, africaParts(refRaw, refTotal));
       renderBars("refBars", refEntries, refTotal, "linear-gradient(90deg,#2b7a9e,#4cc9f0)");
       el("refTop3").textContent = refEntries.length ? fmtPct(top3Share(refEntries, refTotal)) : "–";
-      renderChokepoint(mineEntries, mineTotal, refEntries, refTotal, refStage);
+      el("refTop3Label").textContent = africaBloc ? "of world refined production comes from the top 3, counting Africa as one." : "of world refined production comes from the top 3 countries.";
+      if (africaBloc) renderAfrica(mineRaw, mineTotal, refRaw, refTotal, refStage);
+      else renderChokepoint(mineEntries, mineTotal, refEntries, refTotal, refStage);
     } else {
       layerRef.length = 0;
       refBtn.setAttribute("disabled", "");
@@ -834,7 +905,8 @@ footer a.ig svg{width:13px;height:13px}
       el("refNone").style.display = "block";
       el("refCallout").style.display = "none";
       el("refBars").innerHTML = "";
-      el("chokepoint").style.display = "none";
+      if (africaBloc) renderAfrica(mineRaw, mineTotal, [], 0, null);
+      else el("chokepoint").style.display = "none";
     }
     applyLayers();
     reportHeight();
@@ -927,6 +999,20 @@ footer a.ig svg{width:13px;height:13px}
       showRef = !showRef;
       refBtn.classList.toggle("on", showRef);
       applyLayers();
+    };
+
+    const afBtn = el("africaBtn");
+    const syncAf = () => { afBtn.classList.toggle("on", africaBloc); afBtn.setAttribute("aria-pressed", String(africaBloc)); };
+    syncAf();
+    afBtn.onclick = () => {
+      africaBloc = !africaBloc;
+      syncAf();
+      try {
+        const u = new URL(location.href);
+        if (africaBloc) u.searchParams.set("africa", "1"); else u.searchParams.delete("africa");
+        history.replaceState(null, "", u);
+      } catch (e) {}
+      render();
     };
 
     el("yearSlider").oninput = () => {

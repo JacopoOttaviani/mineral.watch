@@ -17,7 +17,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - [Home](https://mineral.watch/): what the portal covers (minerals, oil and gas, green transition), why supply-chain concentration matters, data sources and methodology, FAQ, research commissions.
 - [Open data catalogue](https://mineral.watch/data/): every dataset the site publishes — 110 BGS World Mineral Statistics series (1970-2024) as JSON with units, year ranges and country counts, the reference files, the curated dataset behind each dashboard, the file format, licence and citation format.
 - [Mineral Explorer](https://mineral.watch/explorer/): interactive world map of production, imports and exports for 111 mineral and energy commodities and 190 countries, 1970-2024, with volume and supply-concentration views; deep-linkable per commodity (?commodity=<slug>). Data: BGS World Mineral Statistics.
-- [Supply chain: mined vs refined](https://mineral.watch/supply-chain/): side-by-side maps of where cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony, tin, tungsten and platinum-group metals are mined and where they are refined or smelted, 1970-2024, with top-3 country shares at each stage.
+- [Supply chain: mined vs refined](https://mineral.watch/supply-chain/): side-by-side maps of where cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony, tin, tungsten and platinum-group metals are mined and where they are refined or smelted, 1970-2024, with top-3 country shares at each stage and an "Africa as one bloc" toggle (?africa=1) that sums African countries at each stage — Africa mined ~77% of world cobalt in 2024 but refined under 2%, down from ~27% in 2000 (BGS), the raw-export pattern described in OECD (2026), Critical minerals in Africa.
 - [Graphite dashboard](https://mineral.watch/graphite/): interactive world map of mines, processing and anode plants, trade flows; production and reserves charts 2018-2025; refining process explainer; China's share of mine output and battery-grade refining; military and investment implications.
 - [Rare earths dashboard](https://mineral.watch/rare-earths/): interactive world map of mines, separation plants and magnet factories; the 17 elements explained; production and reserves charts; China's export-controls timeline (2010-2026); refining and magnet concentration; military and investment implications.
 - [Copper dashboard](https://mineral.watch/copper/): interactive world map of mines, smelters/refineries, disrupted operations and development projects; the ore-to-cathode chain explained; production and reserves charts; the smelting chokepoint and treatment-charge collapse; the 2023-2026 timeline (Cobre Panama, US Section 232 tariffs, Grasberg, El Teniente, record prices); military and investment implications.
@@ -165,6 +165,11 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - Projects: Platreef (Ivanhoe Mines, South Africa) first concentrate 18 November 2025 (sold to Northam), commercial production deferred to Q4 2026; Waterberg (Platinum Group Metals Ltd) no construction decision, Implats declined cash calls; Marathon (Generation Mining, Ontario) construction began 1 October 2026, capex C$992m, Glencore offtake; Vale 2025 platinum 98,000 oz and palladium 120,000 oz (Sudbury hit by maintenance and snowmelt inflows in Q2 2026).
 - Demand drivers: EV sales >20 million in 2025 (~25% of cars; China ~55%, Europe 28%), ~23 million / ~30% expected in 2026 (IEA); global light-gasoline vehicle output 68.7 million, flat at the 2023 peak; Chinese BEVs >10 million; the EU 2035 ICE ban is being replaced by a 90% CO2 cut keeping PHEV/REEV catalysts; 25-50% of palladium can substitute for platinum in diesel catalysts (USGS). Hydrogen: platinum 71,000 oz (2025) to 77,000 (2026f); iridium electrochemical use 100,000 to 109,000 oz as two large European PEM projects complete in 2026; a net-zero PEM build-out needs ~30% of annual iridium output (shortfall ~4.5 t by 2031, peer-reviewed estimate). Glass: platinum demand +23% to 528,000 oz in 2026 (AI low-dielectric e-glass). Ruthenium hard-disk demand at a five-year high. Jewellery: Chinese platinum fabrication +56% to 589,000 oz in 2025, then -55% in H1 2026.
 - Dual use: platinum-aluminide turbine-blade coatings, fuel nozzles and ozone converters in jet engines; platinum-rhodium gauze for nitric acid (fertiliser, explosives, propellants); ruthenium hard-disk layers; palladium multilayer ceramic capacitors; iridium crucibles and spark plugs; PEM fuel cells. The Pentagon's 2025 ~$1bn stockpile purchases targeted cobalt, antimony, tantalum and scandium, not PGMs.
+- Africa (OECD 2026) — trade: Africa exported ~$266 billion of raw and semi-processed minerals in 2023, 10.6% of world trade (UNCTAD); 24% of its critical-mineral exports leave raw and 72% semi-processed, mostly ores and concentrates (ITC). Copper exports rose 98.2% to $44 billion between 2019 and 2023; nickel exports rose 122.8% off a very low base. Source: OECD (2026), Critical minerals in Africa: a regional overview, OECD Global Relations Policy Papers 2026/7, https://doi.org/10.1787/53e5f664-en (CC BY 4.0).
+- Africa (OECD 2026) — production shares, 2024 (USGS MCS 2025 basis; the dashboards carry newer 2025 figures): DR Congo ~76% of mined cobalt; South Africa, Gabon, Ghana and Côte d'Ivoire 66% of manganese, with Gabon at 23.2% of output but 3.6% of reserves (read as under-exploration); Zimbabwe 9.3% of lithium; Madagascar 5.5%, Mozambique 4.6% and Tanzania 1.5% of graphite; Africa ~3% of nickel (BGS) and ~5% of nickel reserves; DR Congo and Zambia ~10% of copper reserves.
+- Africa (OECD 2026) — 2040 projections (authors' calculations from the IEA Critical Minerals Data Explorer): DR Congo remains the No. 2 copper supplier at ~14%, behind Chile's 26%; Mozambique and Madagascar supply ~23% of graphite, making Africa No. 2 after China (announced-pledges scenario); Zimbabwe's lithium share slips from 9% to ~6%; no African country becomes a top nickel producer or a significant cobalt or lithium refiner.
+- Africa (OECD 2026) — export restrictions on unprocessed minerals: bans in Tanzania (copper and nickel, March 2017), Zimbabwe (raw lithium, December 2022; concentrates from 2027), Namibia (critical minerals except uranium, June 2023), Ghana (raw lithium, June 2023), DR Congo (cobalt, February 2025, a price-support measure converted to quotas in October 2025), Malawi (all raw minerals including graphite, October 2025) and Gabon (manganese, planned from 2029); levies in Zambia (15% on unprocessed mineral exports, waivers often granted) and a proposed 25% South African export tax on raw chrome. Ghana set a 10% lithium royalty.
+- Africa (OECD 2026) — investment and governance: Africa's share of global exploration spending fell from 16% (2004) to 10.4% (2024) although it hosts ~20% of new discoveries at a cost per significant discovery ~30% below the world average ($154m vs $219m); Australian and Canadian juniors provide over 50% of African exploration budgets, Chinese firms ~3%. Chinese companies rank fifth in African mine ownership (behind US, Australian, Canadian and UK firms) but hold stakes in 29 of the ~40 active copper-cobalt properties in DR Congo and spent ~$4.5 billion on African lithium mines in 2022-23. Many mineral-rich African states collect only ~40% of potential mineral revenues; mining averages 8.8% of GDP and over half of export revenues in 15 mineral-rich sub-Saharan economies; at least 10 million people work in artisanal and small-scale mining in sub-Saharan Africa.
 - Green transition — deployment (2025): 664 GW of solar PV installed worldwide, +12%, global fleet >3 TW (SolarPower Europe); 165 GW of wind, +40%, of which 9.3 GW offshore and >120 GW in China (GWEC); more than 20 million electric cars sold, one in four new cars, ~55% of sales in China, 28% in Europe, <10% in the US (IEA GEVO 2026); EU solar 65.1 GW (first decline since 2016), EU wind 15.1 GW, EU battery storage 27.1 GWh, EU battery-electric car share 17.4%.
 - Green transition — investment (IEA World Energy Investment 2026): $3.4 tn total energy investment in 2026, of which $2.2 tn clean energy vs $1.2 tn oil, gas and coal; solar $365 bn, grids $550 bn, battery storage >$100 bn; China almost a third of clean-energy investment. US: $34.8 bn of clean-energy projects cancelled in 2025 (E2), ~$40 bn and 53,000 jobs by mid-2026 (EDF/Atlas) after the One Big Beautiful Bill Act (4 July 2025).
 - Green transition — manufacturing concentration (IEA ETP 2026, 2025 data): China ~85% of solar supply-chain capacity (95%+ wafers, >80% modules), >80% of battery-cell production (~85% cathode, >90% anode material), 60% of wind-turbine production capacity (Europe 19%, US 9%), ~60% of electrolyser manufacturing, 35% of heat-pump capacity (US 25%, EU 20%). CATL 39.2% and BYD 16.4% of 2025 EV-battery installations (SNE Research, 1,187 GWh total). Chinese OEMs ~70% of 2025 wind-turbine orders (215 GW, Wood Mackenzie). Battery pack price $108/kWh in 2025, LFP $81, stationary storage $70 (BNEF).
@@ -201,6 +206,7 @@ mineral.watch is not affiliated with any government, mining or energy company, o
 - World Platinum Investment Council Platinum Quarterly (Metals Focus data), Johnson Matthey PGM Market Report, Heraeus Precious Metals forecasts, Nornickel production reports, Engelhard/S&P Global Platts annual average prices via USGS, LBMA/LPPM and ICE Benchmark Administration notices, Trading Economics, Umicore, Technic, Cooksongold and Kitco quotations, Federal Register (2025 critical minerals list), USITC and Commerce Department determinations via trade press, Congressional Research Service (National Defense Stockpile), EU Regulation 2024/1252, IEA Global EV Outlook 2026, Platinum Guild International, company disclosures (platinum group metals dashboard)
 - UN Comtrade — bilateral trade flows
 - IEA — Critical Minerals demand scenarios and supply-chain analysis
+- OECD (2026), Critical minerals in Africa: a regional overview — OECD Global Relations Policy Papers 2026/7, https://doi.org/10.1787/53e5f664-en (Africa context on the cobalt, copper, graphite, lithium, manganese and nickel dashboards)
 - World Bank WITS
 - World Nuclear Association (mining, fuel cycle, World Nuclear Fuel Report), IAEA PRIS, NEA/IAEA Red Book, US EIA uranium reports (uranium dashboard)
 - IEA World Energy Investment, Energy Technology Perspectives, Global EV Outlook and Global Hydrogen Review; SolarPower Europe; GWEC; WindEurope; ACEA; EHPA; BloombergNEF; SNE Research; Wood Mackenzie; Benchmark Mineral Intelligence (green transition dashboard)
@@ -289,7 +295,7 @@ URL: https://mineral.watch/cobalt/
 
 Open data visualisation tracking the global cobalt supply chain: the DRC's industrial mines and artisanal diggers, Indonesia's rise, China's refining grip, the export-quota gamble and the battery industry's escape attempt. Built on USGS, Cobalt Institute, IEA, BGS and price-agency data.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-21
 
 ### Dataset
 
@@ -341,7 +347,7 @@ URL: https://mineral.watch/copper/
 
 Open data visualisation tracking the global copper supply chain: mines, smelters, refineries, tariffs, the smelting chokepoint and record prices. Built on USGS, ICSG, IEA and BGS data.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-21
 
 ### Dataset
 
@@ -394,7 +400,7 @@ URL: https://mineral.watch/data/
 
 Download the open data behind mineral.watch: 110 BGS World Mineral Statistics series (production, imports and exports by country, 1970–2024) as JSON, plus the curated datasets behind the 15 mineral, oil & gas and green-transition dashboards. CC BY-NC-SA 4.0.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-21
 
 ### Dataset
 
@@ -482,7 +488,7 @@ URL: https://mineral.watch/graphite/
 
 Open data visualisation tracking the global graphite supply chain: mines, trade flows, processing hubs and prices. Built on USGS, BGS, UN Comtrade and IEA data.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-21
 
 ### Dataset
 
@@ -581,7 +587,7 @@ URL: https://mineral.watch/lithium/
 
 Open data visualisation tracking the global lithium supply chain: hard-rock mines, brine operations, converters, the China refining chokepoint, the price whipsaw and the battery boom. Built on USGS, IEA, BGS and price-agency data.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-21
 
 ### Dataset
 
@@ -632,7 +638,7 @@ URL: https://mineral.watch/manganese/
 
 Open data visualisation tracking the global manganese supply chain: the mines of the Kalahari, Gabon and Groote Eylandt, China's refining chokepoint, the steel backbone, the battery pivot and the deep-sea nodule race. Built on USGS, IEA, BGS and price-agency data.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-21
 
 ### Dataset
 
@@ -683,7 +689,7 @@ URL: https://mineral.watch/nickel/
 
 Open data visualisation tracking the global nickel supply chain: Indonesia's two-thirds grip on mining, the Chinese-built smelter parks, the class-1/class-2 divide, the 2022 LME squeeze, the quota machine and the battery chemistry war. Built on USGS, INSG, IEA, BGS and price-agency data.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-21
 
 ### Dataset
 
@@ -724,6 +730,10 @@ Five consecutive years of Indonesian-driven surplus crushed the price from about
 **Do EV batteries still need nickel?**
 
 The long-range ones do: nickel-rich NMC and NCA cathodes still deliver the highest energy density, and solid-state designs pair with high-nickel cathodes too. But nickel-free LFP became the world's dominant EV chemistry in 2025 (IEA), and battery nickel demand actually dipped slightly that year (INSG). The IEA still projects batteries growing from roughly 15% of nickel demand today to about 30% by 2035 — while advising forecasters to revise nickel demand estimates down as LFP spreads.
+
+**Does Africa produce much nickel?**
+
+Very little. Africa mined about 3% of the world's nickel in 2024 — Madagascar's Ambatovy plant about 1%, South Africa about 0.7% and Côte d'Ivoire about 0.7% — and holds about 5% of reserves, according to BGS and World Bank data compiled in the OECD's 2026 review of African critical minerals. No African country ranks among the top producers, and IEA-based projections do not see one by 2040. The projects that could change that are Kabanga in Tanzania and the Selebi restart in Botswana. Source: OECD (2026).
 
 **Is the world running out of nickel?**
 
@@ -893,7 +903,7 @@ URL: https://mineral.watch/supply-chain/
 
 Side-by-side world maps of where strategic minerals are mined and where they are refined — cobalt, copper, nickel, lithium, graphite, rare earths, manganese, antimony, tin, tungsten and platinum-group metals, 1970–2024. Data from the British Geological Survey.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-21
 
 ### Dataset
 
@@ -921,7 +931,7 @@ Paired country-level series of mine-stage and refined/smelter-stage production f
 - Download: https://mineral.watch/map_data/data/tin-smelter.json (Tin, smelter — production by country, 1970–2024)
 - Download: https://mineral.watch/map_data/data/tungsten-mine.json (Tungsten, mine — production by country, 1970–2024)
 - Download: https://mineral.watch/map_data/data/platinum-group-metals-mine.json (Platinum group metals, mine — production by country, 1970–2024)
-- Based on: https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/
+- Based on: https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/, https://doi.org/10.1787/53e5f664-en
 
 ## mineral.watch › Tin
 
